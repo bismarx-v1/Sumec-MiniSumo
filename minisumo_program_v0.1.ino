@@ -12,6 +12,7 @@
 
 float svetlo;
 float vzdalenost;
+int kontrola = 0;
 
 //"vytvoreni senzoru"
 VL53L0X sensorvz;
@@ -29,10 +30,10 @@ void setup() {
   pinMode(M1p, OUTPUT);
   pinMode(M2p, OUTPUT);
 
+  pohyb();
+
 }
-void zjistovani_svetla(){
-  svetlo = intenzita_svetla.readLightLevel();
-}
+
   
 //"jed dokud neuvidis tmu"
 void pohyb(){
@@ -47,28 +48,24 @@ void pohyb(){
 }
 
 void loop() {
-  pohyb();
 
   digitalWrite(M1p, HIGH);
   digitalWrite(M2, HIGH);
-  while(vzdalenost > 770){
-    vzdalenost = sensorvz.readRangeContinuousMillimeters();
-  }
-  zjistovani_svetla(); 
-  if(svetlo < 500){
+
+  svetlo = intenzita_svetla.readLightLevel();  
+
+  while(svetlo > 500){
+    while(vzdalenost > 770){
+      vzdalenost = sensorvz.readRangeContinuousMillimeters();
+    }
+    digitalWrite(M1p, LOW);
+    digitalWrite(M2, LOW);
     
-  }
-  else{
+    
     int i=0;
     while(vzdalenost < 770){
       pole_vzdalenosti [i] = vzdalenost;
       i++;
     }
-  }
-
-
-
-
-
-  
-}
+  }  
+}  
