@@ -13,3 +13,5 @@ robot bib bub
 - [ ] model (USB, TLacitka, LEDka, atd)
 - [ ] zaukolavt vscehny 
 - [x] antistress
+- [ ] laskakit 
+- [ ] 
