@@ -1,71 +1,42 @@
-//"knihovny"
-#include <BH1750.h>
-#include <VL53L0X.h>
-#include "pole_vzdalenosti.h"
-//"motory dopredu"
-//"piny pouze prozatimni"
-#define M1 2
-#define M2 3
-//"motory dozadu"
-#define M1p 4
-#define M2p 5
+#define m1 3
+#define m2 4
 
-float svetlo;
-float vzdalenost;
-int kontrola = 0;
-
-//"vytvoreni senzoru"
-VL53L0X sensorvz;
-BH1750 intenzita_svetla;
+#define intenzita1 5
+#define intenzita2 6
+#define intenzita3 7
+#define intenzita4 8
 
 void setup() {
-  
-  //"nastaveni senzoru"
-  sensorvz.setTimeout(1);
-  intenzita_svetla.begin();
-  
-  //"nastaveni vsech motoru na vystup"
-  pinMode(M1, OUTPUT);
-  pinMode(M2, OUTPUT);
-  pinMode(M1p, OUTPUT);
-  pinMode(M2p, OUTPUT);
+  pinMode(m1, OUTPUT);
+  pinMode(m2, OUTPUT);
 
-  pohyb();
+  pinMode(intenzita1, INPUT);
+  pinMode(intenzita2, INPUT);
+  pinMode(intenzita3, INPUT);
+  pinMode(intenzita4, INPUT);
 
+  Serial.begin(9600);
 }
-
-  
-//"jed dokud neuvidis tmu"
-void pohyb(){
-  digitalWrite(M1, HIGH);
-  digitalWrite(M2, HIGH);
-  
-  while(svetlo>500){
-    zjistovani_svetla(); 
-  }
-  digitalWrite(M1, LOW);
-  digitalWrite(M2, LOW);
+int detekce_cary(){
+  int vysledek = 0;
+  vysledek = digitalRead(intenzita1)+digitalRead(intenzita2)+digitalRead(intenzita3)+digitalRead(intenzita4);
+  return(vysledek);
 }
 
 void loop() {
-
-  digitalWrite(M1p, HIGH);
-  digitalWrite(M2, HIGH);
-
-  svetlo = intenzita_svetla.readLightLevel();  
-
-  while(svetlo > 500){
-    while(vzdalenost > 770){
-      vzdalenost = sensorvz.readRangeContinuousMillimeters();
+  while(detekce_cary()==0){
+    digitalWrite(m1, HIGH);
+    digitalWrite(m2, HIGH);
+  }
+  
+  int i = 0;
+  while(detekce_cary()>0||i==1000){
+    digitalWrite(m1, HIGH); 
+    digitalWrite(m2, LOW);
+    if(detekce_cary()>0){
+      delay(1);
+      i=1;
     }
-    digitalWrite(M1p, LOW);
-    digitalWrite(M2, LOW);
-    
-    
-    int i=0;
-    while(vzdalenost < 770){
-      pole_vzdalenosti [i] = vzdalenost;
-      i++;
-    }
-  }  
-}  
+  }
+}
+
