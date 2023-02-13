@@ -3,7 +3,7 @@ robot bib bub
 
 - [ ] VL53 ma stab.
 - [ ] TO-220 pro stabilizatory
-- [ ] vypinac
+- [x] vypinac
 - [ ] IR - Ledka ovladac
 - [ ] Signalizace stavu
 - [ ] konektory
@@ -14,5 +14,5 @@ robot bib bub
 - [ ] zaukolavt vscehny 
 - [x] antistress
 - [ ] laskakit 
-- [ ]  obousměrný převodník urovní 5v 3,3v 
-
+- [ ] obousměrný převodník urovní 5v 3,3v
+- [ ] bidirectional měnič = obousměrný převodník 
