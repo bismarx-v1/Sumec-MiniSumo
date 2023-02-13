@@ -16,3 +16,4 @@ robot bib bub
 - [ ] laskakit 
 - [ ] obousměrný převodník urovní 5v 3,3v
 - [ ] bidirectional měnič = obousměrný převodník 
+- [x] logicke napajeni od VL53 - Adam S. delic napeti + rezistory
