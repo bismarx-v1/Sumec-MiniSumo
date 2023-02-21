@@ -1,22 +1,24 @@
-
 #include "Adafruit_VL53L0X.h"
 
+//"levý motor"
 #define m1 3
+//"pravý motor"
 #define m2 4
 
+//"senzory čáry"
 #define intenzita1 5
 #define intenzita2 6
 #define intenzita3 7
 #define intenzita4 8
-
+//"adresy laseru"
 #define LOX1_ADDRESS 0x30
 #define LOX2_ADDRESS 0x31
 #define LOX3_ADDRESS 0x32
-
+//"X-shat piny"
 #define SHT_LOX1 6
 #define SHT_LOX2 7
 #define SHT_LOX3 8
-
+//"zde vložit průměr ryngu"
 #define prumer_ryngu 2000
 
 Adafruit_VL53L0X lox1 = Adafruit_VL53L0X();
@@ -106,6 +108,23 @@ int detekce_protivnika(){
   }
   return(vysledek_1+vysledek_2+vysledek_3);
 }
+int zpatren;
+void utok(){
+  switch (detekce_protivnika()){
+    case 1:
+      digitalWrite(m1, HIGH);
+      digitalWrite(m2, HIGH);
+      zpatren = 1 
+    break;
+    
+    case 2:
+      while(detekce_protivnika()!=1){
+        digitalWrite(m1, LOW);
+        digitalWrite(m2, HIGH);      
+      }
+      
+  }
+}
 
 void loop() {
   int i = 0;
@@ -113,6 +132,9 @@ void loop() {
   while(detekce_cary()==0){
     digitalWrite(m1, HIGH);
     digitalWrite(m2, HIGH);
+    if(detekce_protivnika()){
+      
+    }
   }
   
   
