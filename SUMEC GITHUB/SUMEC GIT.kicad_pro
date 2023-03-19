@@ -34,9 +34,9 @@
         "other_text_thickness": 0.15,
         "other_text_upright": false,
         "pads": {
-          "drill": 1.1,
-          "height": 2.0,
-          "width": 1.905
+          "drill": 1.32,
+          "height": 1.98,
+          "width": 1.98
         },
         "silk_line_width": 0.15,
         "silk_text_italic": false,
@@ -396,7 +396,7 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "SUMEC V7.kicad_pro",
+    "filename": "SUMEC GIT.kicad_pro",
     "version": 1
   },
   "net_settings": {
