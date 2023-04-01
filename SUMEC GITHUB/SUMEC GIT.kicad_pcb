@@ -140,7 +140,7 @@
         (effects (font (size 1 1) (thickness 0.15)))
       (tstamp 77e35629-79fd-4d19-aec2-3d5f71a41fe6)
     )
-    (fp_text value "10k" (at 3.155 -1.905) (layer "F.Fab")
+    (fp_text value "10k" (at 1.155 2) (layer "F.Fab")
         (effects (font (size 1 1) (thickness 0.15)))
       (tstamp ddf5263d-fc58-4ab0-a0dc-67df431b4a71)
     )
@@ -2892,8 +2892,7 @@
       (net 7 "+3V3") (pintype "passive") (tstamp 0245dbe6-feb3-4056-b83a-f7d6f04b36d9))
     (pad "2" thru_hole circle (at 2.5 2.5 180) (size 1.9 1.9) (drill 1) (layers "*.Cu" "*.Mask")
       (net 4 "Net-(R1-Pad2)") (pintype "passive") (tstamp d8c293e7-4a44-4b7f-985e-3963674a79cf))
-    (pad "3" thru_hole rect (at 0 5 180) (size 1.9 1.9) (drill 1) (layers "*.Cu" "*.Mask")
-      (net 1 "GND") (tstamp 0f66aec8-bff7-4770-9bb6-6a3b57e17629))
+    (pad "3" thru_hole rect (at 0 5 180) (size 1.9 1.9) (drill 1) (layers "*.Cu" "*.Mask") (tstamp 0f66aec8-bff7-4770-9bb6-6a3b57e17629))
     (model "${KICAD6_3DMODEL_DIR}/Potentiometer_THT.3dshapes/Potentiometer_ACP_CA6-H2,5_Horizontal.wrl"
       (offset (xyz 0 0 0))
       (scale (xyz 1 1 1))
