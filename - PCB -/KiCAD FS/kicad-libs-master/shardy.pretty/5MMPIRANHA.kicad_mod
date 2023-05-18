@@ -1,0 +1,12 @@
+(module 5MMPIRANHA (layer F.Cu) (tedit 4E8BC059)
+  (fp_text reference D** (at 0 0) (layer F.SilkS) hide
+    (effects (font (thickness 0.3048)))
+  )
+  (fp_text value 5MMRGBLED (at 0 5.08) (layer F.SilkS) hide
+    (effects (font (thickness 0.3048)))
+  )
+  (pad 1 thru_hole circle (at 2.49936 2.49936) (size 1.778 1.778) (drill 1.143) (layers *.Cu *.Mask F.SilkS))
+  (pad 2 thru_hole circle (at -2.49936 2.49936) (size 1.778 1.778) (drill 1.143) (layers *.Cu *.Mask F.SilkS))
+  (pad 3 thru_hole circle (at -2.49936 -2.49936) (size 1.778 1.778) (drill 1.143) (layers *.Cu *.Mask F.SilkS))
+  (pad 4 thru_hole circle (at 2.49936 -2.49936) (size 1.778 1.778) (drill 1.143) (layers *.Cu *.Mask F.SilkS))
+)
