@@ -1,0 +1,126 @@
+#define m1 3
+#define m2 4
+#define m1_vzad 12
+#define m2_vzad 13
+
+//"prumer ryngu"
+#define ryng 750
+//"typ cary 0 nebo 1"
+#define cara 0
+void setup() {
+  Serial.begin(9600);  
+
+}
+
+
+//"stredový"
+int laser1;
+//"pravy"
+int laser2;
+//"levy"
+int laser3;
+
+// "vepredu"
+//"vpravo"
+int intenzita1;
+//"vlevo"
+int intenzita2;
+//"vzadu"
+//"vpravo"
+int intenzita3;
+//"vlevo"
+int intenzita4;
+
+int dalkove ovladani;
+
+int detekce_protivnika(){
+  int vysledek_1;
+  int vysledek_2;
+  int vysledek_3;
+  
+  if(laser1 < ryng){
+     vysledek_1 = 1;
+  }
+  if(laser2 < ryng){
+     vysledek_2 = 2;
+  } 
+  if(laser3 < ryng){
+     vysledek_3 = 5;
+  }
+  return(vysledek_1+vysledek_2+vysledek_3);
+}
+//"0=stop, 1=vpred, 2=vzad, 3=vpravo, 4=vlevo"
+void priprava_motoru(int smer){
+  switch(smer){
+    case 0:
+      digitalWrite(m1, LOW);
+      digitalWrite(m2, LOW);
+      digitalWrite(m1_vzad, LOW);
+      digitalWrite(m2_vzad, LOW);
+      break;
+    case 1:
+      digitalWrite(m1, HIGH);
+      digitalWrite(m2, HIGH);
+      digitalWrite(m1_vzad, LOW);
+      digitalWrite(m2_vzad, LOW);
+      break;
+    case 2:
+      digitalWrite(m1, LOW);
+      digitalWrite(m2, LOW);
+      digitalWrite(m1_vzad, HIGH);
+      digitalWrite(m2_vzad, HIGH);
+      break;
+    case 3:
+      digitalWrite(m1, HIGH);
+      digitalWrite(m2, LOW);
+      digitalWrite(m1_vzad, LOW);
+      digitalWrite(m2_vzad, HIGH);
+      break;
+    case 4: 
+      digitalWrite(m1, LOW);
+      digitalWrite(m2, HIGH);
+      digitalWrite(m1_vzad, HIGH);
+      digitalWrite(m2_vzad, LOW);
+      break;   
+  }  
+}  
+
+
+void loop() {
+  if(dalkove ovladani == 1){
+    while(intenzita1==cara || intenzita2==cara){
+      switch(detekce_protivnika()){
+        case 2:
+          while(detekce_protivnika()!=1){
+            priprava_motoru(3);
+          }
+        case 5:       
+          while(detekce_protivnika()!=1){
+            priprava_motoru(4);
+          }
+        case 3:
+          while(detekce_protivnika()!=8){
+            priprava_motoru(3);       
+          }
+          break;
+        case 6:
+          while(detekce_protivnika()!=8){
+            priprava_motoru(4);
+          }
+          break;    
+      }  
+      priprava_motoru(1);
+    }
+    
+    if(intenzita1==cara){
+      while(intenzita3!=cara){
+        priprava_motoru(4);
+      }
+    }
+     if(intenzita2!=cara){
+      while(intenzita4!=cara){
+        priprava_motoru(3);
+      }
+    }
+  }  
+}

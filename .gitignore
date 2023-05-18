@@ -1,0 +1,10 @@
+# STM32CubeIDE
+Debug/
+
+# KiCad cache files
+fp-info-cache
+fp-lib-table
+/*-backups/
+*.zip
+.gitignore.bak
+.DS_Store
