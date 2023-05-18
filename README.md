@@ -1,3 +1,3 @@
 # RoboCop
-robot bib bub
-README WIP
+README Work In Progress
+https://www.youtube.com/watch?v=a8CwpGARAsQ
