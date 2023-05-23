@@ -55,9 +55,12 @@
   (pad "4" thru_hole oval (at -2.54 -3.81) (size 1.7 1.7) (drill 1) (layers "*.Cu" "*.Mask") (tstamp a50c5e93-d728-4eef-99c4-616eba8ab1d4))
   (pad "5" thru_hole oval (at 2.54 -3.81) (size 1.7 1.7) (drill 1) (layers "*.Cu" "*.Mask") (tstamp 7a5e35bf-0f25-4cfa-92da-d7ca5a5dd91f))
   (pad "6" thru_hole oval (at 2.54 -6.35) (size 1.7 1.7) (drill 1) (layers "*.Cu" "*.Mask") (tstamp 1c7b9481-97ac-433a-aad1-9b31953f0a77))
+<<<<<<< Updated upstream
   (model "E:/GitHub/RoboCop/- 3D -/Laserový senzor/senzor.stp"
     (offset (xyz 0.5 2 13.5))
     (scale (xyz 1 1 1))
     (rotate (xyz -90 0 90))
   )
+=======
+>>>>>>> Stashed changes
 )
