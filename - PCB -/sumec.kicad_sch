@@ -20,7 +20,7 @@
     )
     (instances
       (project "sumec"
-        (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385" (page "4"))
+        (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385" (page "2"))
       )
     )
   )
@@ -37,7 +37,7 @@
     )
     (instances
       (project "sumec"
-        (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385" (page "5"))
+        (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385" (page "3"))
       )
     )
   )
@@ -54,7 +54,7 @@
     )
     (instances
       (project "sumec"
-        (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385" (page "6"))
+        (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385" (page "5"))
       )
     )
   )
@@ -74,7 +74,7 @@
     )
     (instances
       (project "sumec"
-        (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385" (page "5"))
+        (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385" (page "4"))
       )
     )
   )
