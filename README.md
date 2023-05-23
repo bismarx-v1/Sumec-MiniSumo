@@ -8,9 +8,10 @@ Tento projekt se zaměřuje na design a konstrukci mini sumo robota (10X10 cm, 5
 - TB6612FNG
 ### Motory:
 - 150 RPM, 12V x2
-
-## Senzory:
 ### Senzor čáry:
 - QRE1113 x4
 ### Laserove senzory:
 - VL53L0X x3
+# vývojová deska
+- ESP32
+- PINOUT:
