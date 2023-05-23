@@ -5,4 +5,12 @@ Tento projekt se zaměřuje na design a konstrukci mini sumo robota (10X10 cm, 5
 ### akumulátor 
 LiPo 450mAH 75C 3S
 ### H mustek
+TB6612FNG
+### Motory
+150 RPM, 12V x2
 
+## Senzory
+### senzor čáry
+QRE1113 x4
+### laserove senzory
+VL53L0X x3
