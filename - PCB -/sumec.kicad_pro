@@ -377,7 +377,7 @@
       "no_connect_dangling": "warning",
       "pin_not_connected": "error",
       "pin_not_driven": "error",
-      "pin_to_pin": "warning",
+      "pin_to_pin": "error",
       "power_pin_not_driven": "error",
       "similar_labels": "warning",
       "simulation_model_issue": "error",
@@ -473,12 +473,20 @@
       ""
     ],
     [
-      "57494284-800d-4f81-a3ed-f3ecc0ce9092",
+      "05a35bad-c108-46ad-8f95-76319a60a14f",
+      "MECHANICS"
+    ],
+    [
+      "11aa20d4-c4ff-49be-9179-c2911da50f67",
       "MCU"
     ],
     [
-      "6dc254e4-8b45-447d-a4f6-a7ae72a47c4a",
+      "cfe10bc0-4e7a-493c-9fb6-0f9ed602f83c",
       "SENSORS"
+    ],
+    [
+      "2febd48c-c6ec-477b-ac64-6fa98a41fff0",
+      "POWER SUPPLY"
     ]
   ],
   "text_variables": {}
