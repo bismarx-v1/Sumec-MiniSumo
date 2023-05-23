@@ -475,6 +475,10 @@
     [
       "57494284-800d-4f81-a3ed-f3ecc0ce9092",
       "MCU"
+    ],
+    [
+      "6dc254e4-8b45-447d-a4f6-a7ae72a47c4a",
+      "SENSORS"
     ]
   ],
   "text_variables": {}
