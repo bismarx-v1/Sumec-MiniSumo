@@ -1,5 +1,5 @@
 # SUMEC MiniSumo
-Tento projekt se zaměřuje na design a konstrukci mini sumo robota (10X10 cm, 500g).
+Tento projekt se zaměřuje na design a konstrukci Mini sumo robota (10X10 cm, 500g).
 
 ## Součástky
 ### Akumulátor:
@@ -12,6 +12,6 @@ Tento projekt se zaměřuje na design a konstrukci mini sumo robota (10X10 cm, 5
 - QRE1113 x4
 ### Laserove senzory:
 - VL53L0X x3
-# vývojová deska
+# Vývojová deska
 - ESP32
 - PINOUT:
