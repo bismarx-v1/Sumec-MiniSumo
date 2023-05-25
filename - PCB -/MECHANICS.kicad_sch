@@ -231,29 +231,26 @@
         )
       )
     )
-    (symbol "Switch:SW_MEC_5G" (pin_numbers hide) (pin_names (offset 1.016) hide) (in_bom yes) (on_board yes)
+    (symbol "Switch:SW_Push" (pin_numbers hide) (pin_names (offset 1.016) hide) (in_bom yes) (on_board yes)
       (property "Reference" "SW" (at 1.27 2.54 0)
         (effects (font (size 1.27 1.27)) (justify left))
       )
-      (property "Value" "SW_MEC_5G" (at 0 -1.524 0)
+      (property "Value" "SW_Push" (at 0 -1.524 0)
         (effects (font (size 1.27 1.27)))
       )
       (property "Footprint" "" (at 0 5.08 0)
         (effects (font (size 1.27 1.27)) hide)
       )
-      (property "Datasheet" "http://www.apem.com/int/index.php?controller=attachment&id_attachment=488" (at 0 5.08 0)
+      (property "Datasheet" "~" (at 0 5.08 0)
         (effects (font (size 1.27 1.27)) hide)
       )
       (property "ki_keywords" "switch normally-open pushbutton push-button" (at 0 0 0)
         (effects (font (size 1.27 1.27)) hide)
       )
-      (property "ki_description" "MEC 5G single pole normally-open tactile switch" (at 0 0 0)
+      (property "ki_description" "Push button switch, generic, two pins" (at 0 0 0)
         (effects (font (size 1.27 1.27)) hide)
       )
-      (property "ki_fp_filters" "SW*MEC*5G*" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (symbol "SW_MEC_5G_0_1"
+      (symbol "SW_Push_0_1"
         (circle (center -2.032 0) (radius 0.508)
           (stroke (width 0) (type default))
           (fill (type none))
@@ -279,22 +276,12 @@
           (fill (type none))
         )
         (pin passive line (at -5.08 0 0) (length 2.54)
-          (name "A" (effects (font (size 1.27 1.27))))
+          (name "1" (effects (font (size 1.27 1.27))))
           (number "1" (effects (font (size 1.27 1.27))))
         )
         (pin passive line (at 5.08 0 180) (length 2.54)
-          (name "B" (effects (font (size 1.27 1.27))))
-          (number "3" (effects (font (size 1.27 1.27))))
-        )
-      )
-      (symbol "SW_MEC_5G_1_1"
-        (pin passive line (at -5.08 0 0) (length 2.54) hide
-          (name "A" (effects (font (size 1.27 1.27))))
+          (name "2" (effects (font (size 1.27 1.27))))
           (number "2" (effects (font (size 1.27 1.27))))
-        )
-        (pin passive line (at 5.08 0 180) (length 2.54) hide
-          (name "B" (effects (font (size 1.27 1.27))))
-          (number "4" (effects (font (size 1.27 1.27))))
         )
       )
     )
@@ -465,6 +452,10 @@
     (stroke (width 0) (type default))
     (uuid 3d1e8741-33ac-465f-be71-1f2eb055f3e7)
   )
+  (wire (pts (xy 191.77 127) (xy 191.77 130.81))
+    (stroke (width 0) (type default))
+    (uuid 4260687d-b1b4-43d6-b453-e974dd2adfa8)
+  )
   (polyline (pts (xy 217.17 68.58) (xy 217.17 110.49))
     (stroke (width 0) (type default))
     (uuid 46e7c79a-0554-464b-97c2-495692bdae7a)
@@ -477,6 +468,11 @@
     (stroke (width 0) (type default))
     (uuid 4edd8005-3fd9-4fd2-8f30-a2a6ed1fa6b7)
   )
+
+  (wire (pts (xy 173.99 127) (xy 175.26 127))
+    (stroke (width 0) (type default))
+    (uuid 66941b6d-e8ab-4603-acf7-d1957740e84d)
+  )
   (polyline (pts (xy 71.12 67.31) (xy 66.04 67.31))
     (stroke (width 0) (type default))
     (uuid 7876fa04-409d-46cd-a7f8-a5280a1e05ff)
@@ -485,11 +481,6 @@
     (stroke (width 0) (type default))
     (uuid 95749ea5-95e6-4ce0-9076-e77eb5fe0d20)
   )
-
-  (wire (pts (xy 191.77 127) (xy 191.77 130.81))
-    (stroke (width 0) (type default))
-    (uuid 9a440e82-a5e8-41b5-9c3c-e741b0fad8c1)
-  )
   (polyline (pts (xy 130.81 68.58) (xy 217.17 68.58))
     (stroke (width 0) (type default))
     (uuid 9d6e4695-b540-4e2a-86b6-9ed201134c64)
@@ -497,7 +488,7 @@
 
   (wire (pts (xy 191.77 127) (xy 185.42 127))
     (stroke (width 0) (type default))
-    (uuid ac44e2af-48ec-466b-ae95-3aa3642aefa6)
+    (uuid a1527977-f222-4b57-b889-5bea399f8e7a)
   )
   (polyline (pts (xy 120.65 67.31) (xy 120.65 110.49))
     (stroke (width 0) (type default))
@@ -578,41 +569,10 @@
     )
   )
 
-  (symbol (lib_id "Switch:SW_MEC_5G") (at 180.34 127 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid 03ed1b77-9a2f-4cd3-bfd1-23cf94314d24)
-    (property "Reference" "SW2" (at 180.34 119.38 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Value" "SW_MEC_5G" (at 180.34 121.92 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "Button_Switch_THT:SW_PUSH_6mm" (at 180.34 128.27 0)
-      (effects (font (size 0.3 0.3)))
-    )
-    (property "Datasheet" "http://www.apem.com/int/index.php?controller=attachment&id_attachment=488" (at 180.34 121.92 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid c495c5e0-17a4-4ae6-aa5c-39e10eeb1599))
-    (pin "3" (uuid 9a17e7c4-e6a1-4fe3-80fb-3c29b57600ab))
-    (pin "2" (uuid 64d83b61-03ce-42aa-8b64-3ec9e8b59fd1))
-    (pin "4" (uuid 3699df74-349f-44d6-93b6-5a39b196744b))
-    (instances
-      (project "sumec"
-        (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/11aa20d4-c4ff-49be-9179-c2911da50f67"
-          (reference "SW2") (unit 1)
-        )
-        (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/05a35bad-c108-46ad-8f95-76319a60a14f"
-          (reference "SW2") (unit 1)
-        )
-      )
-    )
-  )
-
   (symbol (lib_id "power:GND") (at 191.77 148.59 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 06ee9b38-b249-4343-bdcd-ad919b9afdce)
-    (property "Reference" "#PWR030" (at 191.77 154.94 0)
+    (property "Reference" "#PWR03" (at 191.77 154.94 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 191.77 153.67 0)
@@ -628,7 +588,7 @@
     (instances
       (project "sumec"
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/05a35bad-c108-46ad-8f95-76319a60a14f"
-          (reference "#PWR030") (unit 1)
+          (reference "#PWR03") (unit 1)
         )
       )
     )
@@ -637,7 +597,7 @@
   (symbol (lib_id "Mechanical:MountingHole") (at 138.43 92.71 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 19ec920f-80ec-44d3-8f2f-a4cea109529f)
-    (property "Reference" "H2" (at 140.97 92.075 0)
+    (property "Reference" "H?" (at 140.97 92.075 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "MountingHole M3" (at 140.97 94.615 0)
@@ -652,7 +612,7 @@
     (instances
       (project "sumec"
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385"
-          (reference "H2") (unit 1)
+          (reference "H?") (unit 1)
         )
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/05a35bad-c108-46ad-8f95-76319a60a14f"
           (reference "H2") (unit 1)
@@ -661,10 +621,36 @@
     )
   )
 
+  (symbol (lib_id "Switch:SW_Push") (at 180.34 127 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid 1bccd417-3312-414b-afb7-9a3d93c77a9a)
+    (property "Reference" "SW3" (at 180.34 120.65 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Value" "SW_Push" (at 180.34 123.19 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "Button_Switch_THT:SW_PUSH_6mm" (at 180.34 121.92 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 180.34 121.92 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid dd9f982e-1d21-41b2-b201-cdadcca59b8b))
+    (pin "2" (uuid 1aa57861-6bbf-4959-b1d4-7891667d2ccf))
+    (instances
+      (project "sumec"
+        (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/05a35bad-c108-46ad-8f95-76319a60a14f"
+          (reference "SW3") (unit 1)
+        )
+      )
+    )
+  )
+
   (symbol (lib_id "Mechanical:MountingHole") (at 138.43 100.33 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 3be5a4c2-56d8-4f4a-a5d7-b466ec1db12f)
-    (property "Reference" "H3" (at 140.97 99.695 0)
+    (property "Reference" "H?" (at 140.97 99.695 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "MountingHole M3" (at 140.97 102.235 0)
@@ -679,7 +665,7 @@
     (instances
       (project "sumec"
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385"
-          (reference "H3") (unit 1)
+          (reference "H?") (unit 1)
         )
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/05a35bad-c108-46ad-8f95-76319a60a14f"
           (reference "H3") (unit 1)
@@ -688,26 +674,26 @@
     )
   )
 
-  (symbol (lib_id "power:+3V3") (at 175.26 127 90) (unit 1)
+  (symbol (lib_id "power:+3V3") (at 173.99 127 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 60a8d88e-fdb1-4b30-825c-88d8dde6ba0a)
-    (property "Reference" "#PWR031" (at 179.07 127 0)
+    (property "Reference" "#PWR02" (at 177.8 127 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Value" "+3V3" (at 171.45 127.635 90)
+    (property "Value" "+3V3" (at 170.18 127.635 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "" (at 175.26 127 0)
+    (property "Footprint" "" (at 173.99 127 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "" (at 175.26 127 0)
+    (property "Datasheet" "" (at 173.99 127 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid b91dbd36-f38f-423a-b30d-28c7d7d7f65d))
     (instances
       (project "sumec"
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/05a35bad-c108-46ad-8f95-76319a60a14f"
-          (reference "#PWR031") (unit 1)
+          (reference "#PWR02") (unit 1)
         )
       )
     )
@@ -716,7 +702,7 @@
   (symbol (lib_id "Device:R") (at 191.77 134.62 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 858b3f30-258e-4de7-bb22-6d4556cdd942)
-    (property "Reference" "R9" (at 194.31 133.985 0)
+    (property "Reference" "R1" (at 194.31 133.985 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "75 " (at 194.31 136.525 0)
@@ -733,7 +719,7 @@
     (instances
       (project "sumec"
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/05a35bad-c108-46ad-8f95-76319a60a14f"
-          (reference "R9") (unit 1)
+          (reference "R1") (unit 1)
         )
       )
     )
@@ -742,7 +728,7 @@
   (symbol (lib_id "Mechanical:MountingHole") (at 138.43 85.09 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid acf50433-5056-4683-9386-8c30922f4582)
-    (property "Reference" "H1" (at 140.97 84.455 0)
+    (property "Reference" "H?" (at 140.97 84.455 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "MountingHole M3" (at 140.97 86.995 0)
@@ -757,7 +743,7 @@
     (instances
       (project "sumec"
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385"
-          (reference "H1") (unit 1)
+          (reference "H?") (unit 1)
         )
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/05a35bad-c108-46ad-8f95-76319a60a14f"
           (reference "H1") (unit 1)
@@ -769,7 +755,7 @@
   (symbol (lib_id "power:+12V") (at 96.52 102.87 270) (mirror x) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid cadd5d69-d13f-4ab4-bd48-ea4def498acd)
-    (property "Reference" "#PWR010" (at 92.71 102.87 0)
+    (property "Reference" "#PWR?" (at 92.71 102.87 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+12V" (at 102.87 102.87 90)
@@ -785,10 +771,10 @@
     (instances
       (project "sumec"
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385"
-          (reference "#PWR010") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/05a35bad-c108-46ad-8f95-76319a60a14f"
-          (reference "#PWR010") (unit 1)
+          (reference "#PWR01") (unit 1)
         )
       )
     )
@@ -803,7 +789,7 @@
     (property "Value" "SW_SPDT" (at 87.63 105.41 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "SWITCH SPDT:SW_100SP1T1B4M2QE" (at 90.17 100.33 0)
+    (property "Footprint" "Connector_JST:JST_EH_B3B-EH-A_1x03_P2.50mm_Vertical" (at 90.17 100.33 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 90.17 100.33 0)
@@ -821,7 +807,7 @@
           (reference "SW1") (unit 1)
         )
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/2febd48c-c6ec-477b-ac64-6fa98a41fff0"
-          (reference "SW1") (unit 1)
+          (reference "SW?") (unit 1)
         )
       )
     )
@@ -830,7 +816,7 @@
   (symbol (lib_id "Device:LED") (at 191.77 143.51 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid f7de835f-43dc-4d7a-b275-55f553efb6fc)
-    (property "Reference" "D2" (at 195.58 144.4625 90)
+    (property "Reference" "D1" (at 195.58 144.4625 90)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "RLED" (at 195.58 147.0025 90)
@@ -847,7 +833,7 @@
     (instances
       (project "sumec"
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/05a35bad-c108-46ad-8f95-76319a60a14f"
-          (reference "D2") (unit 1)
+          (reference "D1") (unit 1)
         )
       )
     )

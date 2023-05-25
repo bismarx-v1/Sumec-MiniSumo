@@ -685,7 +685,7 @@
           (reference "#PWR?") (unit 1)
         )
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/11aa20d4-c4ff-49be-9179-c2911da50f67"
-          (reference "#PWR0102") (unit 1)
+          (reference "#PWR06") (unit 1)
         )
       )
     )
@@ -713,7 +713,7 @@
           (reference "#PWR?") (unit 1)
         )
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/11aa20d4-c4ff-49be-9179-c2911da50f67"
-          (reference "#PWR0103") (unit 1)
+          (reference "#PWR05") (unit 1)
         )
       )
     )
@@ -741,7 +741,7 @@
           (reference "#PWR?") (unit 1)
         )
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/11aa20d4-c4ff-49be-9179-c2911da50f67"
-          (reference "#PWR0101") (unit 1)
+          (reference "#PWR04") (unit 1)
         )
       )
     )
@@ -770,7 +770,7 @@
           (reference "D?") (unit 1)
         )
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/11aa20d4-c4ff-49be-9179-c2911da50f67"
-          (reference "D1") (unit 1)
+          (reference "D2") (unit 1)
         )
       )
     )
@@ -785,7 +785,7 @@
     (property "Value" "ESP32-DEVKIT-V1" (at 96.52 72.39 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "ESP32 DOIT DevKit:MODULE_ESP32_DEVKIT_V1 B_Cu - PADS" (at 151.13 102.87 0)
+    (property "Footprint" "sumec_library:MODULE_ESP32_DEVKIT_V1 B_Cu - PADS and no mount holes" (at 151.13 102.87 0)
       (effects (font (size 1.27 1.27)) (justify bottom) hide)
     )
     (property "Datasheet" "" (at 96.52 101.6 0)
@@ -839,7 +839,7 @@
           (reference "U?") (unit 1)
         )
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/11aa20d4-c4ff-49be-9179-c2911da50f67"
-          (reference "U12") (unit 1)
+          (reference "U1") (unit 1)
         )
       )
     )

@@ -96,55 +96,6 @@
         )
       )
     )
-    (symbol "Device:R_Trim" (pin_numbers hide) (pin_names (offset 0)) (in_bom yes) (on_board yes)
-      (property "Reference" "R" (at 2.54 -2.54 90)
-        (effects (font (size 1.27 1.27)) (justify left))
-      )
-      (property "Value" "R_Trim" (at -2.54 -0.635 90)
-        (effects (font (size 1.27 1.27)) (justify left))
-      )
-      (property "Footprint" "" (at -1.778 0 90)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "Datasheet" "~" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_keywords" "R res resistor variable potentiometer trimmer" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_description" "Trimmable resistor (preset resistor)" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_fp_filters" "R_*" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (symbol "R_Trim_0_1"
-        (rectangle (start -1.016 -2.54) (end 1.016 2.54)
-          (stroke (width 0.254) (type default))
-          (fill (type none))
-        )
-        (polyline
-          (pts
-            (xy -1.905 -1.905)
-            (xy 1.905 1.905)
-            (xy 2.54 1.27)
-            (xy 1.27 2.54)
-          )
-          (stroke (width 0) (type default))
-          (fill (type none))
-        )
-      )
-      (symbol "R_Trim_1_1"
-        (pin passive line (at 0 3.81 270) (length 1.27)
-          (name "~" (effects (font (size 1.27 1.27))))
-          (number "1" (effects (font (size 1.27 1.27))))
-        )
-        (pin passive line (at 0 -3.81 90) (length 1.27)
-          (name "~" (effects (font (size 1.27 1.27))))
-          (number "2" (effects (font (size 1.27 1.27))))
-        )
-      )
-    )
     (symbol "GND_1" (power) (pin_names (offset 0)) (in_bom yes) (on_board yes)
       (property "Reference" "#PWR" (at 0 -6.35 0)
         (effects (font (size 1.27 1.27)) hide)
@@ -927,8 +878,8 @@
     (effects (font (size 2 2)) (justify left bottom))
     (uuid 44975461-1f55-412a-b5d5-311d2b3317c1)
   )
-  (text "Miniature Reflective\nObject Sensor - QRE1113\n\nIR reflectance sensor is comprised of two parts \n- an IR emitting LED and an IR sensitive phototransistor.\n\nAnalog output\nTrimmer (500R) controls the IR LED intensity.\nA 100Ω resistor is placed in series with the LED to limit current.\nA 10kΩ resistor pulls the output pin high, \nbut when the light from the LED is reflected \nback onto the phototransistor the output will begin to go lower.\nOperating voltage: (confused by Vf and Vr WIP) - 3.3V\n\n*THT version is quite easy to break be aware of that."
-    (at 173.99 64.77 0)
+  (text "Miniature Reflective\nObject Sensor - QRE1113\n\nIR reflectance sensor is comprised of two parts \n- an IR emitting LED and an IR sensitive phototransistor.\n\nAnalog output\nA 100Ω resistor is placed in series with the LED to limit current.\nA 10kΩ resistor pulls the output pin high, \nbut when the light from the LED is reflected \nback onto the phototransistor the output will begin to go lower.\nOperating voltage: (confused by Vf and Vr WIP) - 3.3V\n\n*THT version is quite easy to break be aware of that."
+    (at 172.72 62.23 0)
     (effects (font (size 1.5 1.5) italic) (justify left bottom))
     (uuid a71d745c-3d20-4dfe-9a14-9ba4c3057f60)
   )
@@ -945,13 +896,6 @@
     (effects (font (size 1.27 1.27)) (justify left))
     (uuid 030948d4-f2c9-4b41-86b6-3d35b22c10b5)
     (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 143.51 78.858 90)
-      (effects (font (size 1.27 1.27)) (justify left) hide)
-    )
-  )
-  (global_label "TRIMMER INPUT" (shape input) (at 187.96 95.25 90) (fields_autoplaced)
-    (effects (font (size 1 1)) (justify left))
-    (uuid 29b540c0-29a3-4077-9806-c091933cde67)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 187.96 81.4382 90)
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
   )
@@ -990,13 +934,6 @@
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
   )
-  (global_label "TRIMMER INPUT" (shape input) (at 240.03 95.25 90) (fields_autoplaced)
-    (effects (font (size 1 1)) (justify left))
-    (uuid 81920b4b-eb07-40ca-9dcb-af4a678ba706)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 240.03 81.4382 90)
-      (effects (font (size 1.27 1.27)) (justify left) hide)
-    )
-  )
   (global_label "QRE1113 D" (shape input) (at 240.03 121.92 0) (fields_autoplaced)
     (effects (font (size 0.7 0.7)) (justify left))
     (uuid 835cd384-cc65-498b-b054-26ec4ccca337)
@@ -1004,25 +941,11 @@
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
   )
-  (global_label "TRIMMER INPUT" (shape input) (at 213.36 73.66 180) (fields_autoplaced)
-    (effects (font (size 1 1)) (justify right))
-    (uuid 9aadacc2-9f0e-4fa6-a5c2-ec3563f22b2f)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 199.5482 73.66 0)
-      (effects (font (size 1.27 1.27)) (justify right) hide)
-    )
-  )
   (global_label "SCL" (shape input) (at 107.95 111.76 270) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify right))
     (uuid a72ab7fa-8e4d-41a2-8165-f8a99d9524f6)
     (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 107.95 118.1734 90)
       (effects (font (size 1.27 1.27)) (justify right) hide)
-    )
-  )
-  (global_label "TRIMMER INPUT" (shape input) (at 223.52 95.25 90) (fields_autoplaced)
-    (effects (font (size 1 1)) (justify left))
-    (uuid a8b61abf-f6df-4078-bac2-4a6f0eb6ea79)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 223.52 81.4382 90)
-      (effects (font (size 1.27 1.27)) (justify left) hide)
     )
   )
   (global_label "SDA" (shape input) (at 64.77 111.76 270) (fields_autoplaced)
@@ -1074,13 +997,6 @@
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
   )
-  (global_label "TRIMMER INPUT" (shape input) (at 205.74 95.25 90) (fields_autoplaced)
-    (effects (font (size 1 1)) (justify left))
-    (uuid d4a8d64f-cb94-4e19-bc4a-b7e9d7eba48d)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 205.74 81.4382 90)
-      (effects (font (size 1.27 1.27)) (justify left) hide)
-    )
-  )
   (global_label "SDA" (shape input) (at 138.43 111.76 270) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify right))
     (uuid f91c074e-e67d-4b18-9ac3-ccf7f188bcc4)
@@ -1099,7 +1015,7 @@
   (symbol (lib_id "Device:R") (at 187.96 99.06 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 06c12902-0d52-46e7-84ad-b341c4542232)
-    (property "Reference" "R9" (at 185.42 99.06 90)
+    (property "Reference" "R?" (at 185.42 99.06 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "100" (at 190.5 99.06 90)
@@ -1116,10 +1032,10 @@
     (instances
       (project "sumec"
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385"
-          (reference "R9") (unit 1)
+          (reference "R?") (unit 1)
         )
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/cfe10bc0-4e7a-493c-9fb6-0f9ed602f83c"
-          (reference "R1") (unit 1)
+          (reference "R2") (unit 1)
         )
       )
     )
@@ -1128,7 +1044,7 @@
   (symbol (lib_id "power:GND") (at 116.84 101.6 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 104b1b15-28fc-43a9-a4ca-d535b03d139d)
-    (property "Reference" "#PWR0113" (at 123.19 101.6 0)
+    (property "Reference" "#PWR?" (at 123.19 101.6 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 120.65 101.6001 90)
@@ -1144,10 +1060,10 @@
     (instances
       (project "sumec"
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385"
-          (reference "#PWR0113") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/cfe10bc0-4e7a-493c-9fb6-0f9ed602f83c"
-          (reference "#PWR037") (unit 1)
+          (reference "#PWR010") (unit 1)
         )
       )
     )
@@ -1156,7 +1072,7 @@
   (symbol (lib_id "power:+3V3") (at 55.88 101.6 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 21d8d076-15d6-4a1d-9262-8f2bf7b25158)
-    (property "Reference" "#PWR0143" (at 59.69 101.6 0)
+    (property "Reference" "#PWR?" (at 59.69 101.6 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3V3" (at 50.8 104.14 0)
@@ -1172,10 +1088,10 @@
     (instances
       (project "sumec"
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385"
-          (reference "#PWR0143") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/cfe10bc0-4e7a-493c-9fb6-0f9ed602f83c"
-          (reference "#PWR032") (unit 1)
+          (reference "#PWR07") (unit 1)
         )
       )
     )
@@ -1184,7 +1100,7 @@
   (symbol (lib_name "GND_1") (lib_id "power:GND") (at 200.66 118.11 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 25618dd0-1fd9-4d7e-a6f5-cfc3afb7f6c4)
-    (property "Reference" "#PWR014" (at 200.66 124.46 0)
+    (property "Reference" "#PWR019" (at 200.66 124.46 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 200.66 121.92 0)
@@ -1200,7 +1116,7 @@
     (instances
       (project "sumec"
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/cfe10bc0-4e7a-493c-9fb6-0f9ed602f83c"
-          (reference "#PWR014") (unit 1)
+          (reference "#PWR019") (unit 1)
         )
       )
     )
@@ -1209,7 +1125,7 @@
   (symbol (lib_id "power:+3V3") (at 205.74 133.35 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 278a883d-fa2b-46a6-bba4-b47522072cb2)
-    (property "Reference" "#PWR014" (at 205.74 129.54 0)
+    (property "Reference" "#PWR?" (at 205.74 129.54 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3V3" (at 207.01 138.43 0)
@@ -1225,10 +1141,10 @@
     (instances
       (project "sumec"
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385"
-          (reference "#PWR014") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/cfe10bc0-4e7a-493c-9fb6-0f9ed602f83c"
-          (reference "#PWR018") (unit 1)
+          (reference "#PWR020") (unit 1)
         )
       )
     )
@@ -1237,7 +1153,7 @@
   (symbol (lib_id "power:GND") (at 78.74 101.6 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 33160eb4-5d8a-4d20-b2a0-7036e69d255e)
-    (property "Reference" "#PWR0113" (at 85.09 101.6 0)
+    (property "Reference" "#PWR?" (at 85.09 101.6 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 82.55 101.6001 90)
@@ -1253,10 +1169,66 @@
     (instances
       (project "sumec"
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385"
-          (reference "#PWR0113") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/cfe10bc0-4e7a-493c-9fb6-0f9ed602f83c"
-          (reference "#PWR033") (unit 1)
+          (reference "#PWR08") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "power:+3V3") (at 240.03 95.25 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid 34690eaa-911b-4454-b74b-d83527c39146)
+    (property "Reference" "#PWR?" (at 240.03 99.06 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "+3V3" (at 237.49 91.44 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Footprint" "" (at 240.03 95.25 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 240.03 95.25 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid ec1132fc-a32e-4b20-943e-86e680ea8227))
+    (instances
+      (project "sumec"
+        (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385"
+          (reference "#PWR?") (unit 1)
+        )
+        (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/cfe10bc0-4e7a-493c-9fb6-0f9ed602f83c"
+          (reference "#PWR037") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "power:+3V3") (at 223.52 95.25 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid 3a03b682-8bd2-469e-88f3-e482250a1208)
+    (property "Reference" "#PWR?" (at 223.52 99.06 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "+3V3" (at 220.98 91.44 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Footprint" "" (at 223.52 95.25 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 223.52 95.25 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 843124cd-88c5-4b04-9191-6e764a66e991))
+    (instances
+      (project "sumec"
+        (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385"
+          (reference "#PWR?") (unit 1)
+        )
+        (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/cfe10bc0-4e7a-493c-9fb6-0f9ed602f83c"
+          (reference "#PWR036") (unit 1)
         )
       )
     )
@@ -1265,7 +1237,7 @@
   (symbol (lib_id "Device:R") (at 240.03 129.54 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 3acd98a4-f508-4cbe-a106-312c3381c35f)
-    (property "Reference" "R4" (at 237.49 129.54 90)
+    (property "Reference" "R?" (at 237.49 129.54 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "10k" (at 242.57 129.54 90)
@@ -1282,38 +1254,10 @@
     (instances
       (project "sumec"
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385"
-          (reference "R4") (unit 1)
+          (reference "R?") (unit 1)
         )
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/cfe10bc0-4e7a-493c-9fb6-0f9ed602f83c"
-          (reference "R8") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "Sensor_Proximity:QRE1113") (at 203.2 110.49 270) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid 4ddaa7c3-d2e3-40c0-970e-6440e3995ab2)
-    (property "Reference" "U6" (at 208.28 109.22 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Value" "QRE1113" (at 198.12 106.68 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Footprint" "OptoDevice:OnSemi_CASE100AQ" (at 198.12 110.49 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "http://www.onsemi.com/pub/Collateral/QRE1113-D.PDF" (at 205.74 110.49 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 2418375c-97ab-49b1-a7f9-5f3ce10e46aa))
-    (pin "2" (uuid 552a00c0-5608-466e-b4ea-5f7ed48a8c05))
-    (pin "3" (uuid dc9ae906-1781-4396-8a5c-3b1bdef0ff4a))
-    (pin "4" (uuid 971de140-7205-4ef8-8d60-8fb4884f671f))
-    (instances
-      (project "sumec"
-        (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/cfe10bc0-4e7a-493c-9fb6-0f9ed602f83c"
-          (reference "U6") (unit 1)
+          (reference "R9") (unit 1)
         )
       )
     )
@@ -1322,7 +1266,7 @@
   (symbol (lib_id "sumec_library:GY-530_VL53L0X") (at 140.97 101.6 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 4fc7d96d-d5b9-457d-82c6-4f5a37a397bc)
-    (property "Reference" "U13" (at 130.81 109.22 0) (do_not_autoplace)
+    (property "Reference" "U4" (at 130.81 109.22 0) (do_not_autoplace)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "VL53L0X" (at 151.13 93.98 0) (do_not_autoplace)
@@ -1343,7 +1287,7 @@
     (instances
       (project "sumec"
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/cfe10bc0-4e7a-493c-9fb6-0f9ed602f83c"
-          (reference "U13") (unit 1)
+          (reference "U4") (unit 1)
         )
       )
     )
@@ -1352,7 +1296,7 @@
   (symbol (lib_id "Device:R") (at 240.03 99.06 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 53541dec-994b-4968-ab0a-9ef094fa6bca)
-    (property "Reference" "R13" (at 237.49 99.06 90)
+    (property "Reference" "R?" (at 237.49 99.06 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "100" (at 242.57 99.06 90)
@@ -1369,10 +1313,10 @@
     (instances
       (project "sumec"
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385"
-          (reference "R13") (unit 1)
+          (reference "R?") (unit 1)
         )
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/cfe10bc0-4e7a-493c-9fb6-0f9ed602f83c"
-          (reference "R4") (unit 1)
+          (reference "R8") (unit 1)
         )
       )
     )
@@ -1381,7 +1325,7 @@
   (symbol (lib_id "Interface_Optical:TSOP382xx") (at 142.24 179.07 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 53b0b0b3-adbc-4543-962a-4c6df10b3ccb)
-    (property "Reference" "U5" (at 134.62 186.69 0)
+    (property "Reference" "U?" (at 134.62 186.69 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "TSOP382xx" (at 134.62 173.99 0)
@@ -1399,10 +1343,38 @@
     (instances
       (project "sumec"
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385"
-          (reference "U5") (unit 1)
+          (reference "U?") (unit 1)
         )
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/cfe10bc0-4e7a-493c-9fb6-0f9ed602f83c"
-          (reference "U4") (unit 1)
+          (reference "U5") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "power:+3V3") (at 205.74 95.25 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid 552a106f-5156-41ad-9ad1-1d5e085ba403)
+    (property "Reference" "#PWR?" (at 205.74 99.06 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "+3V3" (at 203.2 91.44 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Footprint" "" (at 205.74 95.25 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 205.74 95.25 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid f2afc05f-ea53-4fa4-b9d4-21435e3ae9de))
+    (instances
+      (project "sumec"
+        (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385"
+          (reference "#PWR?") (unit 1)
+        )
+        (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/cfe10bc0-4e7a-493c-9fb6-0f9ed602f83c"
+          (reference "#PWR035") (unit 1)
         )
       )
     )
@@ -1411,7 +1383,7 @@
   (symbol (lib_id "Device:R") (at 187.96 129.54 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 55d17b46-0122-4aa1-bc8e-24df244ae5b5)
-    (property "Reference" "R1" (at 185.42 129.54 90)
+    (property "Reference" "R?" (at 185.42 129.54 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "10k" (at 190.5 129.54 90)
@@ -1428,10 +1400,10 @@
     (instances
       (project "sumec"
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385"
-          (reference "R1") (unit 1)
+          (reference "R?") (unit 1)
         )
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/cfe10bc0-4e7a-493c-9fb6-0f9ed602f83c"
-          (reference "R5") (unit 1)
+          (reference "R3") (unit 1)
         )
       )
     )
@@ -1440,7 +1412,7 @@
   (symbol (lib_name "GND_1") (lib_id "power:GND") (at 182.88 102.87 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 58d0d0c9-388f-4e1c-a9c4-9060a0840062)
-    (property "Reference" "#PWR09" (at 182.88 96.52 0)
+    (property "Reference" "#PWR015" (at 182.88 96.52 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 182.88 99.06 0)
@@ -1456,35 +1428,7 @@
     (instances
       (project "sumec"
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/cfe10bc0-4e7a-493c-9fb6-0f9ed602f83c"
-          (reference "#PWR09") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "Sensor_Proximity:QRE1113") (at 237.49 110.49 270) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid 5bd84c8d-5f06-4444-9596-f83b633e6939)
-    (property "Reference" "U9" (at 242.57 107.95 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Value" "QRE1113" (at 232.41 106.68 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Footprint" "OptoDevice:OnSemi_CASE100AQ" (at 232.41 110.49 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "http://www.onsemi.com/pub/Collateral/QRE1113-D.PDF" (at 240.03 110.49 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid f28d385a-7793-45c6-a61c-6466559d2e5b))
-    (pin "2" (uuid f6419d0a-9310-4015-adb1-f35283e380db))
-    (pin "3" (uuid 85c4578b-83a3-4205-81f9-274441889e27))
-    (pin "4" (uuid 3b026f46-a0e4-4fdf-89f4-d369c594a193))
-    (instances
-      (project "sumec"
-        (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/cfe10bc0-4e7a-493c-9fb6-0f9ed602f83c"
-          (reference "U9") (unit 1)
+          (reference "#PWR015") (unit 1)
         )
       )
     )
@@ -1493,7 +1437,7 @@
   (symbol (lib_name "GND_1") (lib_id "power:GND") (at 200.66 102.87 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 640fa5d1-0699-48b8-aa40-a7813f363745)
-    (property "Reference" "#PWR013" (at 200.66 96.52 0)
+    (property "Reference" "#PWR018" (at 200.66 96.52 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 200.66 99.06 0)
@@ -1509,7 +1453,7 @@
     (instances
       (project "sumec"
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/cfe10bc0-4e7a-493c-9fb6-0f9ed602f83c"
-          (reference "#PWR013") (unit 1)
+          (reference "#PWR018") (unit 1)
         )
       )
     )
@@ -1518,7 +1462,7 @@
   (symbol (lib_name "GND_1") (lib_id "power:GND") (at 182.88 118.11 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 6799b439-821e-4df6-947e-f886e072e11a)
-    (property "Reference" "#PWR011" (at 182.88 124.46 0)
+    (property "Reference" "#PWR016" (at 182.88 124.46 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 182.88 123.19 0)
@@ -1534,7 +1478,7 @@
     (instances
       (project "sumec"
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/cfe10bc0-4e7a-493c-9fb6-0f9ed602f83c"
-          (reference "#PWR011") (unit 1)
+          (reference "#PWR016") (unit 1)
         )
       )
     )
@@ -1543,7 +1487,7 @@
   (symbol (lib_name "GND_1") (lib_id "power:GND") (at 234.95 102.87 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 6e5f1c66-c946-4136-b6b0-76ae684afb59)
-    (property "Reference" "#PWR023" (at 234.95 96.52 0)
+    (property "Reference" "#PWR025" (at 234.95 96.52 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 234.95 99.06 0)
@@ -1559,7 +1503,7 @@
     (instances
       (project "sumec"
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/cfe10bc0-4e7a-493c-9fb6-0f9ed602f83c"
-          (reference "#PWR023") (unit 1)
+          (reference "#PWR025") (unit 1)
         )
       )
     )
@@ -1568,7 +1512,7 @@
   (symbol (lib_id "Device:R") (at 205.74 99.06 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 73da62c4-0587-437a-80fa-068c7c34b14c)
-    (property "Reference" "R10" (at 203.2 99.06 90)
+    (property "Reference" "R?" (at 203.2 99.06 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "100" (at 208.28 99.06 90)
@@ -1585,10 +1529,10 @@
     (instances
       (project "sumec"
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385"
-          (reference "R10") (unit 1)
+          (reference "R?") (unit 1)
         )
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/cfe10bc0-4e7a-493c-9fb6-0f9ed602f83c"
-          (reference "R2") (unit 1)
+          (reference "R4") (unit 1)
         )
       )
     )
@@ -1597,7 +1541,7 @@
   (symbol (lib_id "power:GND") (at 142.24 163.83 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 75ac797e-2bee-46b2-a00f-8b1413180dba)
-    (property "Reference" "#PWR0132" (at 142.24 157.48 0)
+    (property "Reference" "#PWR?" (at 142.24 157.48 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 142.2399 160.02 90)
@@ -1613,10 +1557,10 @@
     (instances
       (project "sumec"
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385"
-          (reference "#PWR0132") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/cfe10bc0-4e7a-493c-9fb6-0f9ed602f83c"
-          (reference "#PWR07") (unit 1)
+          (reference "#PWR012") (unit 1)
         )
       )
     )
@@ -1625,54 +1569,26 @@
   (symbol (lib_id "Sensor_Proximity:QRE1113") (at 185.42 110.49 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 7fc15e81-d9fd-4572-8b5d-f79b80b6c5d5)
-    (property "Reference" "U5" (at 190.5 109.22 0)
+    (property "Reference" "U6" (at 190.5 109.22 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "QRE1113" (at 180.34 106.68 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "OptoDevice:OnSemi_CASE100AQ" (at 180.34 110.49 0)
+    (property "Footprint" "sumec_library:OnSemi_CASE100AQ - QRE1113" (at 180.34 110.49 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "http://www.onsemi.com/pub/Collateral/QRE1113-D.PDF" (at 187.96 110.49 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid be756c0e-c47f-4e19-a9e1-4e70458f15c8))
-    (pin "2" (uuid ee696a7e-ac5f-4cf5-b5f4-42d592c8dafc))
-    (pin "3" (uuid 20571739-f02f-4658-9f5e-3720456227d4))
-    (pin "4" (uuid 06ab3874-3aef-469d-ba65-35b1f2bb01f0))
+    (pin "1" (uuid e33ce601-cb0e-4c33-aba8-3f4dea98b609))
+    (pin "2" (uuid 1c9fe1a6-2cfd-487f-8a5e-5ca544c75b1d))
+    (pin "3" (uuid a7cea012-ba55-4a3d-a6b8-db249a0d5f9f))
+    (pin "4" (uuid 273b2a30-4c18-4e48-8a1b-bc5035928eb6))
     (instances
       (project "sumec"
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/cfe10bc0-4e7a-493c-9fb6-0f9ed602f83c"
-          (reference "U5") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "Sensor_Proximity:QRE1113") (at 220.98 110.49 270) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid 868508c6-8313-4c21-a827-6ef048eecedd)
-    (property "Reference" "U8" (at 226.06 109.22 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Value" "QRE1113" (at 215.9 106.68 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Footprint" "OptoDevice:OnSemi_CASE100AQ" (at 215.9 110.49 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "http://www.onsemi.com/pub/Collateral/QRE1113-D.PDF" (at 223.52 110.49 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid abb37ba0-018c-4c97-8031-5f7c1892d38a))
-    (pin "2" (uuid 9d749d12-5359-4436-8c30-eb95e7de9e61))
-    (pin "3" (uuid 4e17b23a-affa-4fcd-8cd2-af5661e7e800))
-    (pin "4" (uuid daaa1087-bb03-4af6-a061-4408bef6f22f))
-    (instances
-      (project "sumec"
-        (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/cfe10bc0-4e7a-493c-9fb6-0f9ed602f83c"
-          (reference "U8") (unit 1)
+          (reference "U6") (unit 1)
         )
       )
     )
@@ -1681,7 +1597,7 @@
   (symbol (lib_id "power:+3V3") (at 93.98 101.6 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 8f3a570b-8a1f-4af9-bb56-080fdc7f7cd9)
-    (property "Reference" "#PWR0143" (at 97.79 101.6 0)
+    (property "Reference" "#PWR?" (at 97.79 101.6 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3V3" (at 88.9 104.14 0)
@@ -1697,10 +1613,38 @@
     (instances
       (project "sumec"
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385"
-          (reference "#PWR0143") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/cfe10bc0-4e7a-493c-9fb6-0f9ed602f83c"
-          (reference "#PWR036") (unit 1)
+          (reference "#PWR09") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Sensor_Proximity:QRE1113") (at 237.49 110.49 270) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid 9356d452-2c14-4d0a-857e-d949b4b52530)
+    (property "Reference" "U9" (at 242.57 109.22 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Value" "QRE1113" (at 232.41 106.68 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Footprint" "sumec_library:OnSemi_CASE100AQ - QRE1113" (at 232.41 110.49 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "http://www.onsemi.com/pub/Collateral/QRE1113-D.PDF" (at 240.03 110.49 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid d15fbf72-25e3-44fb-aed6-e8a73f650a0d))
+    (pin "2" (uuid 19ec9bac-fa35-4701-a23d-777f10cb1058))
+    (pin "3" (uuid ccab96ee-9168-4863-b805-1938f73582db))
+    (pin "4" (uuid 4d4fbc22-375d-491d-8699-b78f8da985c6))
+    (instances
+      (project "sumec"
+        (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/cfe10bc0-4e7a-493c-9fb6-0f9ed602f83c"
+          (reference "U9") (unit 1)
         )
       )
     )
@@ -1709,7 +1653,7 @@
   (symbol (lib_name "+3V3_1") (lib_id "power:+3V3") (at 147.32 168.91 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 97321f36-0ce6-4f28-8ab3-e4494481c95c)
-    (property "Reference" "#PWR0120" (at 147.32 172.72 0)
+    (property "Reference" "#PWR?" (at 147.32 172.72 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3V3" (at 147.32 165.354 0)
@@ -1725,10 +1669,10 @@
     (instances
       (project "sumec"
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385"
-          (reference "#PWR0120") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/cfe10bc0-4e7a-493c-9fb6-0f9ed602f83c"
-          (reference "#PWR08") (unit 1)
+          (reference "#PWR013") (unit 1)
         )
       )
     )
@@ -1737,7 +1681,7 @@
   (symbol (lib_id "power:+3V3") (at 223.52 133.35 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 9770c63b-b6df-4125-97d1-8f57161ff5d7)
-    (property "Reference" "#PWR014" (at 223.52 129.54 0)
+    (property "Reference" "#PWR?" (at 223.52 129.54 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3V3" (at 224.79 138.43 0)
@@ -1753,10 +1697,10 @@
     (instances
       (project "sumec"
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385"
-          (reference "#PWR014") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/cfe10bc0-4e7a-493c-9fb6-0f9ed602f83c"
-          (reference "#PWR022") (unit 1)
+          (reference "#PWR024") (unit 1)
         )
       )
     )
@@ -1765,7 +1709,7 @@
   (symbol (lib_name "GND_1") (lib_id "power:GND") (at 218.44 102.87 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid b0e352dd-f283-4abd-b9c4-c96b08559fa4)
-    (property "Reference" "#PWR019" (at 218.44 96.52 0)
+    (property "Reference" "#PWR021" (at 218.44 96.52 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 218.44 99.06 0)
@@ -1781,7 +1725,7 @@
     (instances
       (project "sumec"
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/cfe10bc0-4e7a-493c-9fb6-0f9ed602f83c"
-          (reference "#PWR019") (unit 1)
+          (reference "#PWR021") (unit 1)
         )
       )
     )
@@ -1790,7 +1734,7 @@
   (symbol (lib_id "power:+3V3") (at 187.96 133.35 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid b5a86014-af48-4676-8d28-5db9738d9576)
-    (property "Reference" "#PWR014" (at 187.96 129.54 0)
+    (property "Reference" "#PWR?" (at 187.96 129.54 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3V3" (at 189.23 138.43 0)
@@ -1806,10 +1750,10 @@
     (instances
       (project "sumec"
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385"
-          (reference "#PWR014") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/cfe10bc0-4e7a-493c-9fb6-0f9ed602f83c"
-          (reference "#PWR012") (unit 1)
+          (reference "#PWR017") (unit 1)
         )
       )
     )
@@ -1818,7 +1762,7 @@
   (symbol (lib_id "power:+3V3") (at 240.03 133.35 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid bd58a06f-2441-4f73-8bf0-225392856fe5)
-    (property "Reference" "#PWR014" (at 240.03 129.54 0)
+    (property "Reference" "#PWR?" (at 240.03 129.54 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3V3" (at 241.3 138.43 0)
@@ -1834,10 +1778,10 @@
     (instances
       (project "sumec"
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385"
-          (reference "#PWR014") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/cfe10bc0-4e7a-493c-9fb6-0f9ed602f83c"
-          (reference "#PWR025") (unit 1)
+          (reference "#PWR027") (unit 1)
         )
       )
     )
@@ -1846,7 +1790,7 @@
   (symbol (lib_id "sumec_library:GY-530_VL53L0X") (at 67.31 101.6 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid c5f0feae-2324-4518-bd0f-c9c40fc4588b)
-    (property "Reference" "U11" (at 57.15 109.22 0) (do_not_autoplace)
+    (property "Reference" "U2" (at 57.15 109.22 0) (do_not_autoplace)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "VL53L0X" (at 77.47 93.98 0) (do_not_autoplace)
@@ -1867,36 +1811,7 @@
     (instances
       (project "sumec"
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/cfe10bc0-4e7a-493c-9fb6-0f9ed602f83c"
-          (reference "U11") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "Device:R_Trim") (at 217.17 73.66 270) (mirror x) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid c893b69b-a195-4ac6-941a-43b8802b48f9)
-    (property "Reference" "R14" (at 217.17 76.2 90)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Value" "500" (at 217.17 69.85 90)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "Potentiometer_THT:Potentiometer_ACP_CA9-V10_Vertical" (at 217.17 75.438 90)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "~" (at 217.17 73.66 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid d8ffbba1-c118-4195-be24-5a7be6a5eb28))
-    (pin "2" (uuid 430fc6c8-2180-492f-a71c-a05db8a64c16))
-    (instances
-      (project "sumec"
-        (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385"
-          (reference "R14") (unit 1)
-        )
-        (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/cfe10bc0-4e7a-493c-9fb6-0f9ed602f83c"
-          (reference "RT1") (unit 1)
+          (reference "U2") (unit 1)
         )
       )
     )
@@ -1905,7 +1820,7 @@
   (symbol (lib_name "GND_1") (lib_id "power:GND") (at 218.44 118.11 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid c8b209c8-f4ee-454e-a719-620ebef86da2)
-    (property "Reference" "#PWR020" (at 218.44 124.46 0)
+    (property "Reference" "#PWR022" (at 218.44 124.46 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 218.44 121.92 0)
@@ -1921,35 +1836,35 @@
     (instances
       (project "sumec"
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/cfe10bc0-4e7a-493c-9fb6-0f9ed602f83c"
-          (reference "#PWR020") (unit 1)
+          (reference "#PWR022") (unit 1)
         )
       )
     )
   )
 
-  (symbol (lib_id "power:+3V3") (at 220.98 73.66 270) (unit 1)
+  (symbol (lib_id "power:+3V3") (at 187.96 95.25 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid ce09160f-2bb3-4933-992c-7ff8f7646b43)
-    (property "Reference" "#PWR014" (at 217.17 73.66 0)
+    (property "Reference" "#PWR?" (at 187.96 99.06 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Value" "+3V3" (at 224.79 71.12 0)
+    (property "Value" "+3V3" (at 185.42 91.44 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "" (at 220.98 73.66 0)
+    (property "Footprint" "" (at 187.96 95.25 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "" (at 220.98 73.66 0)
+    (property "Datasheet" "" (at 187.96 95.25 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid b2ed3af9-ff61-4663-9571-85fd5bb7b373))
     (instances
       (project "sumec"
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385"
-          (reference "#PWR014") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/cfe10bc0-4e7a-493c-9fb6-0f9ed602f83c"
-          (reference "#PWR021") (unit 1)
+          (reference "#PWR023") (unit 1)
         )
       )
     )
@@ -1958,7 +1873,7 @@
   (symbol (lib_id "Device:R") (at 223.52 129.54 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid ce6b94dc-d031-4573-a7ac-466bb54d9c3a)
-    (property "Reference" "R3" (at 220.98 129.54 90)
+    (property "Reference" "R?" (at 220.98 129.54 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "10k" (at 226.06 129.54 90)
@@ -1975,7 +1890,7 @@
     (instances
       (project "sumec"
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385"
-          (reference "R3") (unit 1)
+          (reference "R?") (unit 1)
         )
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/cfe10bc0-4e7a-493c-9fb6-0f9ed602f83c"
           (reference "R7") (unit 1)
@@ -1984,10 +1899,38 @@
     )
   )
 
+  (symbol (lib_id "Sensor_Proximity:QRE1113") (at 220.98 110.49 270) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid cf4bce60-2a69-444d-a896-f1518a11cc53)
+    (property "Reference" "U8" (at 226.06 109.22 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Value" "QRE1113" (at 215.9 106.68 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Footprint" "sumec_library:OnSemi_CASE100AQ - QRE1113" (at 215.9 110.49 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "http://www.onsemi.com/pub/Collateral/QRE1113-D.PDF" (at 223.52 110.49 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid bf09bb71-e455-4927-9ff8-31bc5feca6c6))
+    (pin "2" (uuid e296d8ca-2213-437f-966d-a9ddcb54c7e5))
+    (pin "3" (uuid 9700c391-6912-44a9-9de1-010f28f7ff32))
+    (pin "4" (uuid bb95f2bb-60f2-4938-8a24-02d018f58cc4))
+    (instances
+      (project "sumec"
+        (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/cfe10bc0-4e7a-493c-9fb6-0f9ed602f83c"
+          (reference "U8") (unit 1)
+        )
+      )
+    )
+  )
+
   (symbol (lib_id "power:+3V3") (at 129.54 101.6 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid d6f3a55c-2af2-4af3-aa71-db9f077ac894)
-    (property "Reference" "#PWR0143" (at 133.35 101.6 0)
+    (property "Reference" "#PWR?" (at 133.35 101.6 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3V3" (at 124.46 104.14 0)
@@ -2003,10 +1946,10 @@
     (instances
       (project "sumec"
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385"
-          (reference "#PWR0143") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/cfe10bc0-4e7a-493c-9fb6-0f9ed602f83c"
-          (reference "#PWR034") (unit 1)
+          (reference "#PWR011") (unit 1)
         )
       )
     )
@@ -2015,7 +1958,7 @@
   (symbol (lib_name "GND_1") (lib_id "power:GND") (at 234.95 118.11 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid d90db623-32cf-4a87-a633-845b4e26f834)
-    (property "Reference" "#PWR024" (at 234.95 124.46 0)
+    (property "Reference" "#PWR026" (at 234.95 124.46 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 234.95 121.92 0)
@@ -2031,7 +1974,7 @@
     (instances
       (project "sumec"
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/cfe10bc0-4e7a-493c-9fb6-0f9ed602f83c"
-          (reference "#PWR024") (unit 1)
+          (reference "#PWR026") (unit 1)
         )
       )
     )
@@ -2040,7 +1983,7 @@
   (symbol (lib_id "power:GND") (at 152.4 101.6 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid ddb3ded1-3bdd-4be2-b910-0789cc0a7d3f)
-    (property "Reference" "#PWR0113" (at 158.75 101.6 0)
+    (property "Reference" "#PWR?" (at 158.75 101.6 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 156.21 101.6001 90)
@@ -2056,10 +1999,10 @@
     (instances
       (project "sumec"
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385"
-          (reference "#PWR0113") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/cfe10bc0-4e7a-493c-9fb6-0f9ed602f83c"
-          (reference "#PWR035") (unit 1)
+          (reference "#PWR014") (unit 1)
         )
       )
     )
@@ -2068,7 +2011,7 @@
   (symbol (lib_id "Device:R") (at 205.74 129.54 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid df7fb0eb-dca2-4238-a763-8873bf642ac4)
-    (property "Reference" "R2" (at 203.2 129.54 90)
+    (property "Reference" "R?" (at 203.2 129.54 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "10k" (at 208.28 129.54 90)
@@ -2085,10 +2028,10 @@
     (instances
       (project "sumec"
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385"
-          (reference "R2") (unit 1)
+          (reference "R?") (unit 1)
         )
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/cfe10bc0-4e7a-493c-9fb6-0f9ed602f83c"
-          (reference "R6") (unit 1)
+          (reference "R5") (unit 1)
         )
       )
     )
@@ -2097,7 +2040,7 @@
   (symbol (lib_id "sumec_library:GY-530_VL53L0X") (at 105.41 101.6 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid f6097ef9-9a15-460e-a8f3-dc23c7dad302)
-    (property "Reference" "U14" (at 95.25 109.22 0) (do_not_autoplace)
+    (property "Reference" "U3" (at 95.25 109.22 0) (do_not_autoplace)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "VL53L0X" (at 115.57 93.98 0) (do_not_autoplace)
@@ -2118,7 +2061,7 @@
     (instances
       (project "sumec"
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/cfe10bc0-4e7a-493c-9fb6-0f9ed602f83c"
-          (reference "U14") (unit 1)
+          (reference "U3") (unit 1)
         )
       )
     )
@@ -2127,7 +2070,7 @@
   (symbol (lib_id "Device:R") (at 223.52 99.06 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid f7290884-2373-4779-a9ee-58341998d0b9)
-    (property "Reference" "R12" (at 220.98 99.06 90)
+    (property "Reference" "R?" (at 220.98 99.06 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "100" (at 226.06 99.06 90)
@@ -2144,10 +2087,38 @@
     (instances
       (project "sumec"
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385"
-          (reference "R12") (unit 1)
+          (reference "R?") (unit 1)
         )
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/cfe10bc0-4e7a-493c-9fb6-0f9ed602f83c"
-          (reference "R3") (unit 1)
+          (reference "R6") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Sensor_Proximity:QRE1113") (at 203.2 110.49 270) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid fc9666c3-20cf-4674-9e1e-0978de5ecf5b)
+    (property "Reference" "U7" (at 208.28 109.22 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Value" "QRE1113" (at 198.12 106.68 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Footprint" "sumec_library:OnSemi_CASE100AQ - QRE1113" (at 198.12 110.49 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "http://www.onsemi.com/pub/Collateral/QRE1113-D.PDF" (at 205.74 110.49 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid c098f476-76db-4b46-801e-b78a1824ec6d))
+    (pin "2" (uuid deb58a40-7123-4350-be6b-3b06dcf87fb7))
+    (pin "3" (uuid 8269c166-6e97-489f-a4b1-4664aa07d710))
+    (pin "4" (uuid 8d3fab4d-0dc3-463b-b6ea-7d437cd6d040))
+    (instances
+      (project "sumec"
+        (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/cfe10bc0-4e7a-493c-9fb6-0f9ed602f83c"
+          (reference "U7") (unit 1)
         )
       )
     )
