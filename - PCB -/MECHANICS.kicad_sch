@@ -820,6 +820,9 @@
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/05a35bad-c108-46ad-8f95-76319a60a14f"
           (reference "SW1") (unit 1)
         )
+        (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/2febd48c-c6ec-477b-ac64-6fa98a41fff0"
+          (reference "SW1") (unit 1)
+        )
       )
     )
   )
