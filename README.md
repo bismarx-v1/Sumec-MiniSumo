@@ -7,6 +7,7 @@ Akumulátor: - LiPo 450mAH 75C 3S
 H-můstek: - TB6612FNG
 
 ![image](https://github.com/Balcarj/RoboCop/assets/120202417/d428edce-0110-4f3d-872b-86517cfe1f39)
+
 Motory: - 150 RPM, 12V x2
 
 Senzor čáry: - QRE1113 x4
