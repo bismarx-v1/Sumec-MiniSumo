@@ -15,3 +15,4 @@ Tento projekt se zaměřuje na design a konstrukci Mini sumo robota (10X10 cm, 5
 # Vývojová deska
 - ESP32
 - PINOUT:
+<img width="583" alt="image" src="https://github.com/Balcarj/RoboCop/assets/120202417/0a48480b-2006-40af-a8f0-d4dc24d26c9d">
