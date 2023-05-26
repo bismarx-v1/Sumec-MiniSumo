@@ -6,7 +6,6 @@ Tento projekt se zaměřuje na design a konstrukci Mini sumo robota (10X10 cm, 5
 - LiPo 450mAH 75C 3S
 ### H-můstek:
 - TB6612FNG
-- pinout:
 ![image](https://github.com/Balcarj/RoboCop/assets/120202417/d428edce-0110-4f3d-872b-86517cfe1f39)
 ### Motory:
 - 150 RPM, 12V x2
@@ -14,7 +13,6 @@ Tento projekt se zaměřuje na design a konstrukci Mini sumo robota (10X10 cm, 5
 - QRE1113 x4
 ### Laserove senzory:
 - VL53L0X x3
-- PINOUT:
 ![image](https://github.com/Balcarj/RoboCop/assets/120202417/961efc51-b523-499f-9c7b-6f78cc3e25a9)
 ## Vývojová deska
 - ESP32
