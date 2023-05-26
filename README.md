@@ -3,6 +3,7 @@ Tento projekt se zaměřuje na design a konstrukci Mini sumo robota (10X10 cm, 5
 
 ## Součástky
 Akumulátor: - LiPo 450mAH 75C 3S
+
 H-můstek: - TB6612FNG
 
 ![image](https://github.com/Balcarj/RoboCop/assets/120202417/d428edce-0110-4f3d-872b-86517cfe1f39)
