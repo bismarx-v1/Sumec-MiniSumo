@@ -15,7 +15,7 @@ Tento projekt se zaměřuje na design a konstrukci Mini sumo robota (10X10 cm, 5
 ### Laserove senzory:
 - VL53L0X x3
 - PINOUT:
-- ![image](https://github.com/Balcarj/RoboCop/assets/120202417/961efc51-b523-499f-9c7b-6f78cc3e25a9)
+![image](https://github.com/Balcarj/RoboCop/assets/120202417/961efc51-b523-499f-9c7b-6f78cc3e25a9)
 ## Vývojová deska
 - ESP32
 - aktuální vývojová deska: ESP32 DEV KIT
