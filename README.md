@@ -34,7 +34,6 @@ Start projektu: 2022
 
 Více informací: https://docs.espressif.com/projects/esp-idf/en/v4.2/esp32/api-reference/peripherals/adc.html
 # PINOUT:
-<img width="583" alt="image" src="https://github.com/Balcarj/RoboCop/assets/120202417/0a48480b-2006-40af-a8f0-d4dc24d26c9d">
 
 ![image](https://github.com/Balcarj/RoboCop/assets/120202417/4ce2e7c0-2c51-49bb-a4e9-0d59cccc6bc7)
 
