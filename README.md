@@ -5,7 +5,7 @@ Tento projekt se zaměřuje na design a konstrukci robota pro soutěž v kategor
 
 Start projektu: 2022
 
-## Součástky
+## Součástky (BOM)
 - Akumulátor: - LiPo 450mAH, 11.1V nominalního napětí, 3S
 - H-můstek: - TB6612FNG
 - Motory: - 150 RPM, 12V x2
@@ -36,5 +36,3 @@ Více informací: https://docs.espressif.com/projects/esp-idf/en/v4.2/esp32/api-
 # PINOUT:
 
 ![image](https://github.com/Balcarj/RoboCop/assets/120202417/4ce2e7c0-2c51-49bb-a4e9-0d59cccc6bc7)
-
-
