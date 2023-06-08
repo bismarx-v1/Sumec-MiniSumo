@@ -1,4 +1,4 @@
-(footprint "MODULE_ROB-14450" (version 20221018) (generator pcbnew)
+(footprint "ROB-14450 - TB6612FNG (MOTOR DRIVER)" (version 20221018) (generator pcbnew)
   (layer "F.Cu")
   (attr through_hole)
   (fp_text reference "REF**" (at -5.5332 -11.6132) (layer "F.SilkS")
@@ -62,7 +62,7 @@
   (pad "15" thru_hole circle (at 7.62 -6.35) (size 1.98 1.98) (drill 1.32) (layers "*.Cu" "*.Mask") (tstamp 192bf350-1ba1-4b7b-99d3-7c56fff4c5cc))
   (pad "16" thru_hole circle (at 7.62 -8.89) (size 1.98 1.98) (drill 1.32) (layers "*.Cu" "*.Mask") (tstamp 5b92ef66-fa22-4c52-a1ba-bd950d34c462))
   (model "${KIPRJMOD}/libs/3D/MOTOR DRIVER.stp"
-    (offset (xyz 0 0 0.5))
+    (offset (xyz 0 0 2))
     (scale (xyz 1 1 1))
     (rotate (xyz 0 0 90))
   )
