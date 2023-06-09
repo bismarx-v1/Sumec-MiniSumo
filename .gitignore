@@ -8,3 +8,6 @@ fp-lib-table
 *.zip
 .gitignore.bak
 .DS_Store
+
+# Windows
+desktop.ini
