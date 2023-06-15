@@ -375,11 +375,6 @@
     (effects (font (size 1.27 1.27) italic) (justify left bottom))
     (uuid e903a8e8-4ecb-477f-9ca3-9ad758a57c8b)
   )
-  (text "                 ^\n(subject to change, depending on the LED)\n(different colors have different voltage drop)"
-    (at 234.95 115.57 0)
-    (effects (font (size 1 1) italic) (justify left bottom))
-    (uuid f77e8a37-5e01-4f9b-b1a3-46e5e36c71b8)
-  )
 
   (global_label "TEST PROGRAM" (shape input) (at 173.99 139.7 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27) italic) (justify left))
