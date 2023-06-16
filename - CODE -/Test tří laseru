@@ -5,9 +5,9 @@
 #define LOX2_ADDRESS 0x29
 #define LOX3_ADDRESS 0x29
 //"X-shat piny"
-#define SHT_LOX1 6
-#define SHT_LOX2 7
-#define SHT_LOX3 8
+#define SHT_LOX1 32
+#define SHT_LOX2 34
+#define SHT_LOX3 35
 
 Adafruit_VL53L0X lox1 = Adafruit_VL53L0X();
 Adafruit_VL53L0X lox2 = Adafruit_VL53L0X();
@@ -68,7 +68,10 @@ void setup() {
 }
 
 void loop() {
+  setID();
   Serial.println(measure1.RangeMilliMeter);
   Serial.println(measure2.RangeMilliMeter);
   Serial.println(measure3.RangeMilliMeter);
+  delay(1000);
+  Serial.println("======================");  
 }
