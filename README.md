@@ -14,6 +14,10 @@ Start projektu: 2022
 - Stabilizator napětí - LD1117AV33
 - Konektor k baterce: XT-30
 - IČ Přijmač - (start kodů)
+## Full BOM:
+
+<img width="336" alt="image" src="https://github.com/Balcarj/RoboCop/assets/68673534/e388c010-468c-4aef-beb7-503766794905">
+
 # TB6612FNG Pinout:
 
 ![image](https://github.com/Balcarj/RoboCop/assets/120202417/d428edce-0110-4f3d-872b-86517cfe1f39)
