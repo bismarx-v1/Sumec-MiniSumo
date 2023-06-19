@@ -1125,9 +1125,9 @@
       (stroke (width 0.1) (type solid)) (layer "F.Fab") (tstamp 9ba48b7f-172d-4088-8779-78793968f432))
     (fp_circle (center 1.27 0) (end 3.77 0)
       (stroke (width 0.1) (type solid)) (fill none) (layer "F.Fab") (tstamp 1f168ee5-12c0-444f-ba1c-8902cab201f6))
-    (pad "1" thru_hole circle (at 0 0 135) (size 1.6 1.6) (drill 0.8) (layers "*.Cu" "*.Mask")
+    (pad "1" thru_hole circle (at 0 0 135) (size 1.9 1.9) (drill 1) (layers "*.Cu" "*.Mask")
       (net 2 "GND") (pinfunction "K") (pintype "passive") (tstamp 257e21cd-7057-41f1-8563-f80f5b59c624))
-    (pad "2" thru_hole circle (at 2.54 0 135) (size 1.6 1.6) (drill 0.8) (layers "*.Cu" "*.Mask")
+    (pad "2" thru_hole circle (at 2.54 0 135) (size 1.9 1.9) (drill 1) (layers "*.Cu" "*.Mask")
       (net 4 "Net-(D1-A)") (pinfunction "A") (pintype "passive") (tstamp 9cba5519-f75a-427b-8b4d-a660ddacdf6f))
     (model "${KICAD6_3DMODEL_DIR}/LED_THT.3dshapes/LED_D5.0mm.wrl"
       (offset (xyz 0 0 0))
