@@ -100,7 +100,7 @@ void read_triple_sensors() {
 }
 
 void setup() {
-  Serial.begin(115200);
+  Serial.begin(9600);
 
   // wait until serial port opens for native USB devices
   while (! Serial) {
@@ -126,6 +126,6 @@ void setup() {
 
 void loop() {
   read_triple_sensors();
-  delay(1000);
+  delay(200);
 
 }
