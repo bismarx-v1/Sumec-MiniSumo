@@ -1,0 +1,148 @@
+--- Terminal on COM10 | 9600 8-N-1
+--- Available filters and text transformations: colorize, debug, default, direct, esp32_exception_decoder, hexlify, log2file, nocontrol, printable, send_on_enter, time
+--- More details at https://bit.ly/pio-monitor-filters
+--- Quit: Ctrl+C | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H
+pred_setup
+E (11) gpio: GPIO can only be used as input mode
+[    16][E][esp32-hal-gpio.c:130] __pinMode(): GPIO config failed
+E (12) gpio: GPIO can only be used as input mode
+[    68][E][esp32-hal-gpio.c:130] __pinMode(): GPIO config failed
+Shutdown pins inited...
+E (255) gpio: gpio_set_level(226): GPIO output gpio_num error
+E (255) gpio: gpio_set_level(226): GPIO output gpio_num error
+Both in reset mode...(pins are low)
+Starting...
+-------zacatek setID-----
+E (413) gpio: gpio_set_level(226): GPIO output gpio_num error
+E (436) gpio: gpio_set_level(226): GPIO output gpio_num error
+E (512) gpio: gpio_set_level(226): GPIO output gpio_num error
+E (567) gpio: gpio_set_level(226): GPIO output gpio_num error
+E (643) gpio: gpio_set_level(226): GPIO output gpio_num error
+E (699) gpio: gpio_set_level(226): GPIO output gpio_num error
+pred_1senzor
+[  1904][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[  2910][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[  3927][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[  4928][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[  5929][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[  6930][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[  7931][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[  8932][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[  9933][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[ 10934][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[ 11935][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[ 12936][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[ 13937][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[ 14938][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[ 15939][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[ 16940][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[ 17940][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+Failed to boot first VL53L0X
+po_1senzor
+E (17945) gpio: gpio_set_level(226): GPIO output gpio_num error
+pred_2senzor
+[ 19136][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[ 20138][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[ 21155][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[ 22156][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[ 23157][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[ 24158][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[ 25159][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[ 26160][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[ 27161][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[ 28162][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[ 29163][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[ 30164][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[ 31165][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[ 32166][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[ 33167][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[ 34168][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[ 35168][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+Failed to boot second VL53L0X
+po_2senzor
+E (35173) gpio: gpio_set_level(226): GPIO output gpio_num error
+pred_3senzor
+[ 36365][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[ 37367][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[ 38384][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[ 39385][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[ 40386][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[ 41387][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[ 42388][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[ 43389][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[ 44390][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[ 45391][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[ 46392][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[ 47393][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[ 48394][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[ 49395][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[ 50396][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[ 51397][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[ 52397][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+Failed to boot third VL53L0X
+po_3senzor
+--------konec setID--------
+po_setup
+[ 53521][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[ 54522][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[ 55522][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[ 56522][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[ 57522][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[ 58522][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[ 59522][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[ 60522][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[ 61522][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[ 62522][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[ 63522][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[ 64522][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[ 65522][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[ 66522][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[ 67522][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[ 68522][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[ 69522][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[ 70522][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[ 71522][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[ 72522][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[ 73522][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[ 74522][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[ 75522][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[ 76522][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[ 77522][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[ 78522][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[ 79522][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[ 80522][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[ 81522][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[ 82522][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[ 83522][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[ 84522][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[ 85522][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[ 86522][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[ 87522][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[ 88522][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[ 89522][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[ 90522][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[ 91522][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[ 92522][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[ 93522][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[ 94522][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[ 95522][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[117522][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[118522][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[119522][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[120522][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[121522][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[122522][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[123522][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[124522][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[125522][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[126522][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[127522][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[128522][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[129522][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[130522][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[131522][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[132522][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[133522][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+
+
+
