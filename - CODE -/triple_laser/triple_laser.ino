@@ -20,6 +20,8 @@ VL53L0X_RangingMeasurementData_t measure3;
 
 void setID() {
 
+  Serial.println("-------zacatek setID-----");
+
   digitalWrite(SHT_LOX1, LOW);
   digitalWrite(SHT_LOX2, LOW);
   digitalWrite(SHT_LOX3, LOW);
@@ -36,30 +38,43 @@ void setID() {
   digitalWrite(SHT_LOX3, LOW);
 
   // initing LOX1
+  Serial.println("pred_1senzor");
   if (!lox1.begin(LOX1_ADDRESS)) {
     Serial.println(F("Failed to boot first VL53L0X"));
-    while (1);
+    //while (1);
   }
   delay(10);
+
+  Serial.println("po_1senzor");
 
   // activating LOX2
   digitalWrite(SHT_LOX2, HIGH);
   delay(10);
 
+  Serial.println("pred_2senzor");
+
   //initing LOX2
   if (!lox2.begin(LOX2_ADDRESS)) {
     Serial.println(F("Failed to boot second VL53L0X"));
-    while (1);
+    //while (1);
   }
   delay(10);
+
+  Serial.println("po_2senzor");
 
   digitalWrite(SHT_LOX3, HIGH);
   delay(10);
 
+  Serial.println("pred_3senzor");
+
   if (!lox3.begin(LOX3_ADDRESS)) {
     Serial.println(F("Failed to boot third VL53L0X"));
-    while (1);
+    //while (1);
   }
+
+  Serial.println("po_3senzor");
+
+  Serial.println("--------konec setID--------");
 }
 
 void read_triple_sensors() {
@@ -102,6 +117,8 @@ void read_triple_sensors() {
 void setup() {
   Serial.begin(9600);
 
+  Serial.println("pred_setup");
+
   // wait until serial port opens for native USB devices
   while (! Serial) {
     delay(1);
@@ -122,6 +139,8 @@ void setup() {
   Serial.println(F("Starting..."));
 
   setID();
+
+  Serial.println("po_setup");
 }
 
 void loop() {
