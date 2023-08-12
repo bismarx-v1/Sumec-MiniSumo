@@ -4,6 +4,11 @@
 
   (paper "A4")
 
+  (title_block
+    (title "SUMEC THT")
+    (company "SPŠ NA PROSEKU")
+  )
+
   (lib_symbols
     (symbol "+3V3_1" (power) (pin_names (offset 0)) (in_bom yes) (on_board yes)
       (property "Reference" "#PWR" (at 0 -3.81 0)
