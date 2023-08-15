@@ -1,0 +1,30 @@
+#include <Arduino.h>
+
+#define motor_A_vpred 19
+#define motor_A_vzad 18
+#define motor_B_vpred 4
+#define motor_B_vzad 2
+
+
+void setup() {
+
+  pinMode(motor_A_vpred, OUTPUT);
+  pinMode(motor_A_vzad, OUTPUT);
+  pinMode(motor_B_vpred, OUTPUT);
+  pinMode(motor_B_vzad, OUTPUT);
+
+}
+
+void loop() {
+  digitalWrite(motor_A_vpred, 1);
+  digitalWrite(motor_B_vpred, 1);
+
+  delay(1000);
+
+  digitalWrite(motor_A_vpred, 0);
+  digitalWrite(motor_B_vpred, 0);
+  digitalWrite(motor_A_vzad, 1);
+  digitalWrite(motor_B_vzad, 1);
+
+  delay(1000);
+}
