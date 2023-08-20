@@ -1,4 +1,4 @@
-![image](https://github.com/Balcarj/RoboCop/assets/68673534/5e001415-0ed7-40f0-9e30-05038005c254)
+![logo white](https://github.com/menmenson/RoboCop/assets/68673534/b9f19d0b-9e2c-4a56-9c07-d3ff169386fd)
 
 # MiniSumo - "SUMEC"
 Tento projekt se zaměřuje na design a konstrukci robota pro soutěž v kategorii MiniSumo (10X10 cm, 500g).
