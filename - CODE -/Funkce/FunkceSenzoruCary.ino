@@ -43,8 +43,7 @@ bool LINE_Get(int LINE_Sensor, int LINE_Threshold) {  //input funkce je 1 = pred
           
         }
         else {
-          Serial.println("Error Line 47 wrong input. ERROR ERROR ERROR ERROR ERROR ERROR ERROR ERROR ERROR ERROR ")
-          return false;
+          
         }
       }
     }
