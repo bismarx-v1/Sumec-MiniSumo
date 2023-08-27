@@ -1,0 +1,314 @@
+#include <Arduino.h>
+#include "Wire.h"
+#include <VL53L0X.h>
+
+#define MOTORS_LeftSpeed 5
+#define MOTORS_LeftBackward 18
+#define MOTORS_LeftForward 19
+#define MOTORS_RightSpeed 15
+#define MOTORS_RightBackward 2
+#define MOTORS_RightForward 4
+#define MOTORS_STBY 23
+
+
+
+//"LASER_" defines
+VL53L0X sensorLeft;
+VL53L0X sensorRight;
+VL53L0X sensorFront;
+
+int LASER_DistLeft;
+int LASER_DistRight;
+int LASER_DistFront;
+
+
+
+//defines for demo
+#define Button 13
+#define led 14
+int Sensor1 = 0;
+int Sensor2 = 0;
+int Sensor3 = 0;
+int SensorRange = 300;  //|sensor range setting||sensor range setting||sensor range setting||sensor range setting||sensor range setting|
+int Sensor = 0;
+int ButtonDown = 0;
+
+
+
+//MOTORS_Setup
+void MOTORS_Setup() {
+  ledcSetup(0, 5000, 8);
+  ledcSetup(1, 5000, 8);
+  pinMode(MOTORS_LeftBackward, OUTPUT);
+  pinMode(MOTORS_LeftForward, OUTPUT);
+  pinMode(MOTORS_RightBackward, OUTPUT);
+  pinMode(MOTORS_RightForward, OUTPUT);
+  pinMode(MOTORS_STBY, OUTPUT);
+  ledcAttachPin(MOTORS_LeftSpeed, 0);
+  ledcAttachPin(MOTORS_RightSpeed, 1);
+}
+
+
+
+//LASER_Setup
+void LASER_Setup() {
+  #define LASER_PinLeft 25
+  #define LASER_PinRight 27
+  #define LASER_PinFront 26
+
+  pinMode(LASER_PinRight, OUTPUT);
+  pinMode(LASER_PinLeft, OUTPUT);
+  pinMode(LASER_PinFront, OUTPUT);
+  digitalWrite(LASER_PinRight, LOW);
+  digitalWrite(LASER_PinLeft, LOW);
+  digitalWrite(LASER_PinFront, LOW);
+
+  delay(500);
+  Wire.begin();
+
+  digitalWrite(LASER_PinRight, HIGH);
+  delay(150);
+  sensorLeft.init(true);
+  delay(100);
+  sensorLeft.setAddress((uint8_t)01);
+
+  digitalWrite(LASER_PinLeft, HIGH);
+  delay(150);
+  sensorRight.init(true);
+  delay(100);
+  sensorRight.setAddress((uint8_t)02);
+
+  digitalWrite(LASER_PinFront, HIGH);
+  delay(150);
+  sensorFront.init(true);
+  delay(100);
+  sensorFront.setAddress((uint8_t)03);
+
+  sensorLeft.startContinuous();
+  sensorRight.startContinuous();
+  sensorFront.startContinuous();
+
+}
+
+
+
+//LASER_Get
+bool LASER_Get(int LASER_Sensor, int LASER_Thereshold) {
+  if(LASER_Sensor==1) {
+    LASER_DistLeft=sensorLeft.readRangeContinuousMillimeters();
+    if(LASER_DistLeft<LASER_Thereshold) {
+      return true;
+    }
+    else {
+      return false;
+    }
+  }
+
+  if(LASER_Sensor==2) {
+    LASER_DistRight=sensorRight.readRangeContinuousMillimeters();
+    if(LASER_DistRight<LASER_Thereshold) {
+      return true;
+    }
+    else {
+      return false;
+    }
+  }
+
+  if(LASER_Sensor==3) {
+    LASER_DistFront=sensorFront.readRangeContinuousMillimeters();
+    if(LASER_DistFront<LASER_Thereshold) {
+      return true;
+    }
+    else {
+      return false;
+    }
+  }
+}
+
+
+
+//MOTORS_Brake
+void MOTORS_Brake() {
+  digitalWrite(MOTORS_LeftForward,LOW);
+  digitalWrite(MOTORS_RightForward,LOW);
+  digitalWrite(MOTORS_LeftBackward,LOW);
+  digitalWrite(MOTORS_RightBackward,LOW);
+  ledcWrite(0, 255);
+  ledcWrite(1, 255);
+  digitalWrite(MOTORS_STBY, HIGH);
+}
+
+
+
+//MOTORS_Go
+void MOTORS_Go(int MOTORS_SpeedLeft, int MOTORS_SpeedRight) {//speed is from -255 to 255
+  if(MOTORS_SpeedLeft < -255) {
+    MOTORS_SpeedLeft = -255;
+  }
+  else {
+    if(MOTORS_SpeedLeft > 255) {
+      MOTORS_SpeedLeft = 255;
+    }
+    else {
+      if(MOTORS_SpeedLeft < 0) {
+        digitalWrite(MOTORS_LeftForward,LOW);
+        digitalWrite(MOTORS_LeftBackward,HIGH);
+      }
+      else {
+        if(MOTORS_SpeedLeft > 0) {
+          digitalWrite(MOTORS_LeftForward,HIGH);
+          digitalWrite(MOTORS_LeftBackward,LOW);
+        }
+        else {
+          digitalWrite(MOTORS_LeftForward,LOW);
+          digitalWrite(MOTORS_LeftBackward,LOW);
+          MOTORS_SpeedLeft = 255;
+        }
+      }
+    }
+  }
+  
+  if(MOTORS_SpeedRight < -255) {
+    MOTORS_SpeedRight = -255;
+  }
+  else {
+    if(MOTORS_SpeedRight > 255) {
+      MOTORS_SpeedRight = 255;
+    }
+    else {
+      if(MOTORS_SpeedRight < 0) {
+        digitalWrite(MOTORS_RightForward,LOW);
+        digitalWrite(MOTORS_RightBackward,HIGH);
+      }
+      else {
+        if(MOTORS_SpeedRight > 0) {
+          digitalWrite(MOTORS_RightForward,HIGH);
+          digitalWrite(MOTORS_RightBackward,LOW);
+        }
+        else {
+          digitalWrite(MOTORS_RightForward,LOW);
+          digitalWrite(MOTORS_RightBackward,LOW);
+          MOTORS_SpeedRight = 255;
+        }
+      }
+    }
+  }
+  if(MOTORS_SpeedLeft < 0) {
+    MOTORS_SpeedLeft = MOTORS_SpeedLeft*-1;
+  }
+  
+  if(MOTORS_SpeedRight < 0) {
+    MOTORS_SpeedRight = MOTORS_SpeedRight*-1;
+  }
+  
+  ledcWrite(0, MOTORS_SpeedLeft);
+  ledcWrite(1, MOTORS_SpeedRight);
+  digitalWrite(MOTORS_STBY, HIGH);
+  return;
+}
+
+bool LINE_Get(int LINE_Sensor, int LINE_Threshold) {  //input funkce je 1 = predni levy, 2 = predni pravy, 3 = zadni levy, 4 = zadni pravy
+                              //return: true = bila, false = cerna
+  if(LINE_Sensor==1) {
+    if(analogRead(32)<LINE_Threshold){  //pin leveho predniho senzoru cary (z pohledu sumce)
+      return true;
+    }
+    else {
+      return false;
+    }
+    
+  }
+
+  else {
+    if(LINE_Sensor==2) {
+      if(analogRead(33)<LINE_Threshold){  //pin praveho predniho senzoru cary (z pohledu sumce)
+        return true;
+      }
+      else {
+        return false;
+      }
+      
+    }
+    
+    else {
+      if(LINE_Sensor==3) {
+        if(analogRead(34)<LINE_Threshold){  //pin leveho zadniho senzoru cary (z pohledu sumce)
+          return true;
+        }
+        else {
+          return false;
+        }
+        
+      }
+      
+      else {
+        if(LINE_Sensor==4) {
+          if(analogRead(35)<LINE_Threshold){  //pin praveho zadniho senzoru cary (z pohledu sumce)
+            return true;
+          }
+          else {
+            return false;
+          }
+          
+        }
+        else {
+          
+        }
+      }
+    }
+  }
+}
+
+int Range = 300;
+
+//void setup()
+void setup() {
+  MOTORS_Setup();
+  LASER_Setup();
+  pinMode(led, OUTPUT);
+  Serial.begin(9600);
+
+  while(LASER_Get(1, Range) == 0 && LASER_Get(2, Range) == 0 && LASER_Get(3, Range) == 0){
+
+    MOTORS_Go(-255, 255);
+
+  }
+
+}
+
+
+
+
+//void loop
+void loop() {
+  Serial.println(LINE_Get(1, 3700));
+  if(LINE_Get(1, 3700) == 0){
+    
+    if(LASER_Get(1, Range) == 1){
+      Serial.println("vpravo");
+      MOTORS_Go(255, -255);
+    }
+
+    if(LASER_Get(2, Range) == 1){
+      Serial.println("vlevo");
+      MOTORS_Go(-255, 255);
+    }
+
+    if(LASER_Get(3, Range) == 1){
+      Serial.println("ok");
+      MOTORS_Go(255, 255);
+    }
+
+    if(LASER_Get(3, Range) == 0 && LASER_Get(2, Range) == 0 && LASER_Get(1, Range) == 0){
+      Serial.println("stop");
+      MOTORS_Go(255, 255);
+    }
+  }
+
+  else{
+    MOTORS_Go(-255, 255);
+    delay(600);
+    
+  }
+
+}
