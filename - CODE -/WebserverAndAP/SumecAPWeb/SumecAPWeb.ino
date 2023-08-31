@@ -206,11 +206,13 @@ void loop() {	/*|void loop() core 1||void loop() core 1||void loop() core 1||voi
 	*/
 	
 	/*	examples of setting the values shown on the webserver
+ 	//LASER_DistLeft LASER_DistRight LASER_DistFront	//these might be usefull
 	Global_Dist_Range = String(random(100, 501));	//used for displaying what threshold is used in measuring the distance - replace random with a function - KEEP THE String()
 	Global_Dist_Left = String(random(10, 501));		//used for displaying the distance optained from the left laser sensor - replace random with a function - KEEP THE String()
 	Global_Dist_Front = String(random(10, 501));	///used for displaying the distance optained from the front laser sensor - replace random with a function - KEEP THE String()
 	Global_Dist_Right = String(random(10, 501));	///used for displaying the distance optained from the right laser sensor - replace random with a function - KEEP THE String()
-	
+
+ 	//analogRead(32) analogRead(33) analogRead(34) analogRead(35)	//these might be usefull
 	Global_Line_Thre = String(random(100, 5001));	//used for displaying what threshold is used in sensing the line - replace random with a function - KEEP THE String()
 	Global_Line_FL = String(random(10, 5001));		//used for displaying what value the front left line sensor - replace random with a function - KEEP THE String()
 	Global_Line_FR = String(random(10, 5001));		//used for displaying what value the front right line sensor - replace random with a function - KEEP THE String()
