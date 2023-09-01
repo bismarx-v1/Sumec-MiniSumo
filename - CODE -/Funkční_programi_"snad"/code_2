@@ -259,7 +259,7 @@ bool LINE_Get(int LINE_Sensor, int LINE_Threshold) {  //input funkce je 1 = pred
   }
 }
 
-int Range = 300;
+int Range = 150;
 int cas_zaznam = millis();
 
 int stop = 1;
@@ -271,8 +271,8 @@ void setup() {
   pinMode(led, OUTPUT);
   Serial.begin(9600);
 
-  //while(LASER_Get(1, Range) == 0 && LASER_Get(2, Range) == 0 && LASER_Get(3, Range) == 0){
-    //MOTORS_Go(-255/2*-1, 255/2*-1);
+  while(LASER_Get(1, Range) == 0 && LASER_Get(2, Range) == 0 && LASER_Get(3, Range) == 0){
+    MOTORS_Go(-255/2*-1, 255/2*-1);
 
     //if(millis() - cas_zaznam == 2000){
       //cas_zaznam = millis();
@@ -282,7 +282,7 @@ void setup() {
     //while(stop == 0){
       //MOTORS_Go(0, 0);
     //}
- //}
+ }
 
 }
 
@@ -292,37 +292,37 @@ void setup() {
 //void loop
 void loop() {
   Serial.println(LINE_Get(1, 3700));
-  if(LINE_Get(1, 3700) == 0 && LINE_Get(2, 3700) == 0){
+  if(LINE_Get(1, 1000) == 0 && LINE_Get(2, 1000) == 0){
     
-    while(LASER_Get(3, Range) == 0 && LASER_Get(2, Range) == 0 && LASER_Get(1, Range) == 1){
+    if(LASER_Get(3, Range) == 0 && LASER_Get(2, Range) == 0 && LASER_Get(1, Range) == 1){
       Serial.println("vpravo");
-      MOTORS_Go(255/2*-1, -255/2*-1);
+      MOTORS_Go(255/4*-1, -255/4*-1);
     }
 
-    while(LASER_Get(3, Range) == 0 && LASER_Get(2, Range) == 1 && LASER_Get(1, Range) == 0){
+    if(LASER_Get(3, Range) == 0 && LASER_Get(2, Range) == 1 && LASER_Get(1, Range) == 0){
       Serial.println("vlevo");
-      MOTORS_Go(-255/2*-1, 255/2*-1);
+      MOTORS_Go(-255/4*-1, 255/4*-1);
     }
 
-    while(LASER_Get(3, Range) == 1 && LASER_Get(2, Range) == 0 && LASER_Get(1, Range) == 0){
+    if(LASER_Get(3, Range) == 1 && LASER_Get(2, Range) == 0 && LASER_Get(1, Range) == 0){
       Serial.println("ok");
       MOTORS_Go(255/2*-1, 255/2*-1);
     }
 
-    while(LASER_Get(3, Range) == 0 && LASER_Get(2, Range) == 0 && LASER_Get(1, Range) == 0){
+    if(LASER_Get(3, Range) == 0 && LASER_Get(2, Range) == 0 && LASER_Get(1, Range) == 0){
       Serial.println("stop");
       MOTORS_Go(255/2*-1, 255/2*-1);
     }
 
-    while(LASER_Get(3, Range) == 1 && LASER_Get(2, Range) == 0 && LASER_Get(1, Range) == 1){
+    if(LASER_Get(3, Range) == 1 && LASER_Get(2, Range) == 0 && LASER_Get(1, Range) == 1){
       MOTORS_Go(100/2*-1, 255/2*-1);
     }
 
-    while(LASER_Get(3, Range) == 1 && LASER_Get(2, Range) == 1 && LASER_Get(1, Range) == 0){
+    if(LASER_Get(3, Range) == 1 && LASER_Get(2, Range) == 1 && LASER_Get(1, Range) == 0){
       MOTORS_Go(255/2*-1, 100/2*-1);
     }
 
-    while(LASER_Get(3, Range) == 1 && LASER_Get(2, Range) == 1 && LASER_Get(1, Range) == 1){
+    if(LASER_Get(3, Range) == 1 && LASER_Get(2, Range) == 1 && LASER_Get(1, Range) == 1){
       MOTORS_Go(255/2*-1, 255/2*-1);
     }
   }
