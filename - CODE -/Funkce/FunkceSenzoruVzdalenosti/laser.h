@@ -1,87 +1,85 @@
 #include <Wire.h>
 #include <VL53L0X.h>
 
+VL53L0X LASER_SensorLeft;
+VL53L0X LASER_SensorRight;
+VL53L0X LASER_SensorFront;
 
+#define LASER_PinLeft 25
+#define LASER_PinRight 27
+#define LASER_PinFront 26
 
-VL53L0X sensorLeft;
-VL53L0X sensorRight;
-VL53L0X sensorFront;
+int LASER_DistLeft = 0;
+int LASER_DistRight = 0;
+int LASER_DistFront = 0;
 
-int LASER_DistLeft;
-int LASER_DistRight;
-int LASER_DistFront;
-
-int Range = 300;
 
 
 
 void LASER_Setup() {
-  #define LASER_PinLeft 25
-  #define LASER_PinRight 27
-  #define LASER_PinFront 26
+	
 
-  pinMode(LASER_PinRight, OUTPUT);
-  pinMode(LASER_PinLeft, OUTPUT);
-  pinMode(LASER_PinFront, OUTPUT);
-  digitalWrite(LASER_PinRight, LOW);
-  digitalWrite(LASER_PinLeft, LOW);
-  digitalWrite(LASER_PinFront, LOW);
+	Wire.begin();
 
-  delay(500);
-  Wire.begin();
+	pinMode(LASER_PinRight, OUTPUT);
+	pinMode(LASER_PinLeft, OUTPUT);
+	pinMode(LASER_PinFront, OUTPUT);
+	digitalWrite(LASER_PinRight, LOW);
+	digitalWrite(LASER_PinLeft, LOW);
+	digitalWrite(LASER_PinFront, LOW);
+	delay(500);
 
-  digitalWrite(LASER_PinRight, HIGH);
-  delay(150);
-  sensorLeft.init(true);
-  delay(100);
-  sensorLeft.setAddress((uint8_t)01);
+	digitalWrite(LASER_PinRight, HIGH);
+	delay(150);
+	LASER_SensorLeft.init(true);
+	delay(100);
+	LASER_SensorLeft.setAddress((uint8_t)01);
 
-  digitalWrite(LASER_PinLeft, HIGH);
-  delay(150);
-  sensorRight.init(true);
-  delay(100);
-  sensorRight.setAddress((uint8_t)02);
+	digitalWrite(LASER_PinLeft, HIGH);
+	delay(150);
+	LASER_SensorRight.init(true);
+	delay(100);
+	LASER_SensorRight.setAddress((uint8_t)02);
 
-  digitalWrite(LASER_PinFront, HIGH);
-  delay(150);
-  sensorFront.init(true);
-  delay(100);
-  sensorFront.setAddress((uint8_t)03);
+	digitalWrite(LASER_PinFront, HIGH);delay(150);
+	LASER_SensorFront.init(true);
+	delay(100);
+	LASER_SensorFront.setAddress((uint8_t)03);
 
-  sensorLeft.startContinuous();
-  sensorRight.startContinuous();
-  sensorFront.startContinuous();
-
+	LASER_SensorLeft.startContinuous();
+	LASER_SensorRight.startContinuous();
+	LASER_SensorFront.startContinuous();
 }
 
-bool LASER_Get(int LASER_Sensor, int LASER_Thereshold) {
-  if(LASER_Sensor==1) {
-    LASER_DistLeft=sensorLeft.readRangeContinuousMillimeters();
-    if(LASER_DistLeft<LASER_Thereshold) {
-      return true;
-    }
-    else {
-      return false;
-    }
-  }
-
-  if(LASER_Sensor==2) {
-    LASER_DistRight=sensorRight.readRangeContinuousMillimeters();
-    if(LASER_DistRight<LASER_Thereshold) {
-      return true;
-    }
-    else {
-      return false;
-    }
-  }
-
-  if(LASER_Sensor==3) {
-    LASER_DistFront=sensorFront.readRangeContinuousMillimeters();
-    if(LASER_DistFront<LASER_Thereshold) {
-      return true;
-    }
-    else {
-      return false;
-    }
-  }
+int LASER_Get(int LASER_Sensor, int LASER_Thereshold, int LASER_Mode) {
+	return LASER_SensorLeft.readRangeContinuousMillimeters();
+	
+	if(LASER_Sensor==1) {
+		if(LASER_Mode==0) {
+			return (LASER_SensorLeft.readRangeContinuousMillimeters() <= LASER_Thereshold ? 1: 0);
+		} else if(LASER_Mode==1) {
+			return LASER_SensorLeft.readRangeContinuousMillimeters();
+		} else {
+			return 0;
+		}
+	} else if(LASER_Sensor==2) {
+		if(LASER_Mode==0) {
+			return (LASER_SensorRight.readRangeContinuousMillimeters() <= LASER_Thereshold ? 1: 0);
+		} else if(LASER_Mode==1) {
+			return LASER_SensorRight.readRangeContinuousMillimeters();
+		} else {
+			return 0;
+		}
+	} else if(LASER_Sensor==3) {
+		if(LASER_Mode==0) {
+			return (LASER_SensorFront.readRangeContinuousMillimeters() <= LASER_Thereshold ? 1: 0);
+		} else if(LASER_Mode==1) {
+			return LASER_SensorFront.readRangeContinuousMillimeters();
+		} else {
+			return 0;
+		}
+	} else {
+		return 0;
+	}
+	
 }
