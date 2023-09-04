@@ -32,10 +32,11 @@ void setup() {
   while(LASER_Get(1, Range) == 0 && LASER_Get(2, Range) == 0 && LASER_Get(3, Range) == 0){
     MOTORS_Go(-255/2*-1, 255/2*-1);
 
-    //if(millis() - cas_zaznam == 2000){
-      //cas_zaznam = millis();
-      //Range = Range + 100;
-    //}
+    /*
+    if(millis() - cas_zaznam == 2000){
+      cas_zaznam = millis();
+      Range = Range + 100;
+    }*/
 
     while(stop == 0){
       MOTORS_Go(0, 0);
