@@ -52,7 +52,6 @@ void LASER_Setup() {
 }
 
 int LASER_Get(int LASER_Sensor, int LASER_Thereshold, int LASER_Mode) {
-	return LASER_SensorLeft.readRangeContinuousMillimeters();
 	
 	if(LASER_Sensor==1) {
 		if(LASER_Mode==0) {
