@@ -1,0 +1,110 @@
+#include <Arduino.h>
+#include "Wire.h"
+#include <VL53L0X.h>
+#include "motors.h"
+#include "line.h"
+#include "laser.h"
+
+
+//defines for demo
+#define Button 13
+#define led 14
+int Sensor1 = 0;
+int Sensor2 = 0;
+int Sensor3 = 0;
+int SensorRange = 300;  //|sensor range setting||sensor range setting||sensor range setting||sensor range setting||sensor range setting|
+int Sensor = 0;
+int ButtonDown = 0;
+
+
+int Range = 150;
+int cas_zaznam = millis();
+
+int stop = 1;
+
+//void setup()
+void setup() {
+  MOTORS_Setup();
+  LASER_Setup();
+  pinMode(led, OUTPUT);
+  Serial.begin(9600);
+
+  while(LASER_Get(1, Range) == 0 && LASER_Get(2, Range) == 0 && LASER_Get(3, Range) == 0){
+    MOTORS_Go(-255/2*-1, 255/2*-1);
+
+    //if(millis() - cas_zaznam == 2000){
+      //cas_zaznam = millis();
+      //Range = Range + 100;
+    //}
+
+    while(stop == 0){
+      MOTORS_Go(0, 0);
+    }
+ }
+
+}
+
+
+//void loop
+void loop() {
+  Serial.println(LINE_Get(1, 3700));
+  if(LINE_Get(1, 1000) == 0 && LINE_Get(2, 1000) == 0){
+    
+    //třídící proměná
+    int laser_number = 0;
+    
+    //třídění laserů pomocí proměné
+   
+    if(LASER_Get(3, Range) == 1 ){   // přední laser
+      laser_number + 1;
+ 
+    }
+
+
+    if(LASER_Get(2, Range) == 1 ){   // levý laser
+      laser_number + 3;
+ 
+    }
+
+    
+    if(LASER_Get(1, Range) == 1 ){   // pravý laser
+      laser_number + 5;
+ 
+    }
+
+    Serial.println(LASER_Get(3, Range));
+
+    // rozpohybování Sumce pomocí proměné "laser_number" vzniklé po třídění  
+    switch(laser_number){
+
+      case 1:
+        MOTORS_Go(255/2*-1, 255/2*-1);
+      break;
+
+      case 3:
+        MOTORS_Go(-255/2*-1, 255/2*-1);
+      break;
+
+      case 5:
+        MOTORS_Go(255/2*-1, -255/2*-1);
+      break;
+
+      case 4:
+        MOTORS_Go(255/2*-1, 100/2*-1);
+      break;
+
+      case 6:
+        MOTORS_Go(100/2*-1, 255/2*-1);
+      break;
+
+      case 9:
+        MOTORS_Go(255/2*-1, 255/2*-1);
+      break;
+    }
+    
+    
+    while(stop == 0){
+      MOTORS_Go(0, 0);
+    }
+  }
+}
