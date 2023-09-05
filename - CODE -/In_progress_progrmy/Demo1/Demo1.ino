@@ -1,7 +1,10 @@
-#include <Arduino.h>
-#include "Wire.h"
+//"LASER_" imports
+#include <Wire.h>
 #include <VL53L0X.h>
 
+
+
+//"MOTORS_" defines
 #define MOTORS_LeftSpeed 5
 #define MOTORS_LeftBackward 18
 #define MOTORS_LeftForward 19
@@ -207,135 +210,225 @@ void MOTORS_Go(int MOTORS_SpeedLeft, int MOTORS_SpeedRight) {//speed is from -25
   return;
 }
 
-bool LINE_Get(int LINE_Sensor, int LINE_Threshold) {  //input funkce je 1 = predni levy, 2 = predni pravy, 3 = zadni levy, 4 = zadni pravy
-                              //return: true = bila, false = cerna
-  if(LINE_Sensor==1) {
-    if(analogRead(32)<LINE_Threshold){  //pin leveho predniho senzoru cary (z pohledu sumce)
-      return true;
-    }
-    else {
-      return false;
-    }
-    
-  }
 
-  else {
-    if(LINE_Sensor==2) {
-      if(analogRead(33)<LINE_Threshold){  //pin praveho predniho senzoru cary (z pohledu sumce)
-        return true;
-      }
-      else {
-        return false;
-      }
-      
-    }
-    
-    else {
-      if(LINE_Sensor==3) {
-        if(analogRead(34)<LINE_Threshold){  //pin leveho zadniho senzoru cary (z pohledu sumce)
-          return true;
-        }
-        else {
-          return false;
-        }
-        
-      }
-      
-      else {
-        if(LINE_Sensor==4) {
-          if(analogRead(35)<LINE_Threshold){  //pin praveho zadniho senzoru cary (z pohledu sumce)
-            return true;
-          }
-          else {
-            return false;
-          }
-          
-        }
-        else {
-          
-        }
-      }
-    }
-  }
-}
-
-int Range = 150;
-int cas_zaznam = millis();
-
-int stop = 1;
 
 //void setup()
 void setup() {
   MOTORS_Setup();
   LASER_Setup();
   pinMode(led, OUTPUT);
-  Serial.begin(9600);
-
-  while(LASER_Get(1, Range) == 0 && LASER_Get(2, Range) == 0 && LASER_Get(3, Range) == 0){
-    MOTORS_Go(-255/2*-1, 255/2*-1);
-
-    //if(millis() - cas_zaznam == 2000){
-      //cas_zaznam = millis();
-      //Range = Range + 100;
-    //}
-
-    //while(stop == 0){
-      //MOTORS_Go(0, 0);
-    //}
- }
 
 }
 
 
 
-
 //void loop
 void loop() {
-  Serial.println(LINE_Get(1, 3700));
-  if(LINE_Get(1, 1000) == 0 && LINE_Get(2, 1000) == 0){
+  while(digitalRead(Button)!=1) { //wait for button pressed
+    delay(1);
+  }
+  
+  while(digitalRead(Button)==1) { //wait for button released
+    delay(1);
+  }
+
+  digitalWrite(led, HIGH);  //led flash 1
+  delay(200);
+  digitalWrite(led, LOW);
+  delay(800);
+
+  digitalWrite(led, HIGH);  //led flash 2
+  delay(200);
+  digitalWrite(led, LOW);
+  delay(800);
+
+  digitalWrite(led, HIGH);  //led flash 3
+  delay(200);
+  digitalWrite(led, LOW);
+  delay(800);
+
+
+  Sensor1 = LASER_Get(1, SensorRange); //get all sensors
+  Sensor2 = LASER_Get(2, SensorRange);
+  Sensor3 = LASER_Get(3, SensorRange);
+  if(Sensor1==1) {
+    Sensor = 1;
+  }
     
-    if(LASER_Get(3, Range) == 0 && LASER_Get(2, Range) == 0 && LASER_Get(1, Range) == 1){
-      Serial.println("vpravo");
-      MOTORS_Go(255/4*-1, -255/4*-1);
+  else {
+    if(Sensor2==1) {
+      Sensor = 1;
     }
-
-    if(LASER_Get(3, Range) == 0 && LASER_Get(2, Range) == 1 && LASER_Get(1, Range) == 0){
-      Serial.println("vlevo");
-      MOTORS_Go(-255/4*-1, 255/4*-1);
-    }
-
-    if(LASER_Get(3, Range) == 1 && LASER_Get(2, Range) == 0 && LASER_Get(1, Range) == 0){
-      Serial.println("ok");
-      MOTORS_Go(255/2*-1, 255/2*-1);
-      delay(100);
-    }
-
-    if(LASER_Get(3, Range) == 0 && LASER_Get(2, Range) == 0 && LASER_Get(1, Range) == 0){
-      Serial.println("stop");
-      MOTORS_Go(255/2*-1, 255/2*-1);
-    }
-
-    if(LASER_Get(3, Range) == 1 && LASER_Get(2, Range) == 0 && LASER_Get(1, Range) == 1){
-      MOTORS_Go(100/2*-1, 255/2*-1);
-    }
-
-    if(LASER_Get(3, Range) == 1 && LASER_Get(2, Range) == 1 && LASER_Get(1, Range) == 0){
-      MOTORS_Go(255/2*-1, 100/2*-1);
-    }
-
-    if(LASER_Get(3, Range) == 1 && LASER_Get(2, Range) == 1 && LASER_Get(1, Range) == 1){
-      MOTORS_Go(255/2*-1, 255/2*-1);
-    }
-  }
-
-  else{
-    MOTORS_Go(-255/2*-1, 255/2*-1);
-    delay(600);
     
+    else {
+      if(Sensor3==1) {
+       Sensor = 1;
+      }
+      
+      else {
+        Sensor = 0;
+      }
+    }
+  }
+  
+  while(Sensor==0) { //rotate left until any sensor triggers
+    MOTORS_Go(-25, 25);
+    Sensor1 = LASER_Get(1, SensorRange);
+    Sensor2 = LASER_Get(2, SensorRange);
+    Sensor3 = LASER_Get(3, SensorRange);
+    
+    if(Sensor1==1) {
+      Sensor = 1;
+    }
+    
+    else {
+      if(Sensor2==1) {
+        Sensor = 1;
+      }
+      
+      else {
+        if(Sensor3==1) {
+         Sensor = 1;
+        }
+        
+        else {
+          Sensor = 0;
+        }
+      }
+    }
+  }
+  
+  
+  MOTORS_Brake();
+  
+  digitalWrite(led, HIGH);  //led flash
+  delay(500);
+  digitalWrite(led, LOW);
+  delay(500);
+  
+  Sensor1 = LASER_Get(1, SensorRange);
+  Sensor2 = LASER_Get(2, SensorRange);
+  Sensor3 = LASER_Get(3, SensorRange);
+
+  
+  if(Sensor1==1) {  //if right sensor
+    while(Sensor3==0) { //rotate right until front sensor triggers
+      MOTORS_Go(15, -15);
+      Sensor1 = LASER_Get(1, SensorRange);
+      Sensor3 = LASER_Get(3, SensorRange);
+    }
+  }
+  
+  if(Sensor2==1) {  //if left sensor
+    while(Sensor3==0) { //rotate left until front sensor triggers
+      MOTORS_Go(-15, 15);
+      Sensor2 = LASER_Get(2, SensorRange);
+      Sensor3 = LASER_Get(3, SensorRange);
+    }
   }
 
-  while(stop == 0){
-    MOTORS_Go(0, 0);
-  }
+  //sumec is now rotated towards the target
 
+  digitalWrite(led, HIGH);  //led flash
+  delay(50);
+  digitalWrite(led, LOW);
+  delay(50);
+  digitalWrite(led, HIGH);  //led flash
+  delay(50);
+  digitalWrite(led, LOW);
+  delay(50);
+  digitalWrite(led, HIGH);  //led flash
+  delay(50);
+  digitalWrite(led, LOW);
+  delay(50);
+  MOTORS_Brake();
+  
+  ButtonDown = digitalRead(Button);
+  while(ButtonDown==0) {  //the main loop, stop by holding the debug button
+    ButtonDown = digitalRead(Button);
+    digitalWrite(led, HIGH);  //led flash
+    delay(200);
+    digitalWrite(led, LOW);
+    delay(200);
+    digitalWrite(led, HIGH);  //led flash
+    delay(200);
+    digitalWrite(led, LOW);
+    delay(200);
+    
+    MOTORS_Brake();
+    Sensor1 = LASER_Get(1, SensorRange);
+    Sensor2 = LASER_Get(2, SensorRange);
+    Sensor3 = LASER_Get(3, SensorRange);
+    if(Sensor1==1) {
+      Sensor=1;
+      }
+      
+    else {
+      if(Sensor2==1) {
+      Sensor=1;
+      }
+      
+      else {
+        if(Sensor3==1) {
+          Sensor=1;
+        }
+        
+        else {
+          Sensor=0;
+        }
+      }
+    }
+            
+    if(Sensor3==1) {  //target is still centred
+      MOTORS_Go(50, 50);
+    }
+
+    else {  //ok so target is not centred in front of sumec
+      if(Sensor1==1) {  //so the target is a little to the right
+        while(Sensor3==0) {
+          MOTORS_Go(15, -25);
+          Sensor3 = LASER_Get(3, SensorRange);
+        }
+        delay(600);
+      }
+      
+      else {  //then the target must be a little to the left
+        if(Sensor2==1) {
+          while(Sensor3==0) {
+            MOTORS_Go(-25, 15);
+            Sensor3 = LASER_Get(3, SensorRange);
+          }
+          delay(600);
+        }
+
+        else {  //target is lost
+          while(Sensor==0) { //rotate left until any sensor triggers
+            MOTORS_Go(-25, 25);
+            Sensor1 = LASER_Get(1, SensorRange);
+            Sensor2 = LASER_Get(2, SensorRange);
+            Sensor3 = LASER_Get(3, SensorRange);
+            if(Sensor1==1) {
+              Sensor=1;
+              }
+              
+            else {
+              if(Sensor2==1) {
+              Sensor=1;
+              }
+              
+              else {
+                if(Sensor3==1) {
+                  Sensor=1;
+                }
+                
+                else {
+                  Sensor=0;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
