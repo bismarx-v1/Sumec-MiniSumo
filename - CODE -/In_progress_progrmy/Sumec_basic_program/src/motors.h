@@ -1,5 +1,3 @@
-#include <Arduino.h>
-
 //important #defines
 #define MOTORS_LeftSpeed 5
 #define MOTORS_LeftBackward 18

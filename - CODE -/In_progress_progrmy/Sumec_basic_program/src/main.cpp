@@ -17,7 +17,7 @@ int Sensor = 0;
 int ButtonDown = 0;
 
 
-int Range = 150;
+int Range = 300;
 int cas_zaznam = millis();
 
 int stop = 1;
@@ -29,7 +29,7 @@ void setup() {
   pinMode(led, OUTPUT);
   Serial.begin(9600);
 
-  while(LASER_Get(1, Range) == 0 && LASER_Get(2, Range) == 0 && LASER_Get(3, Range) == 0){
+  while(LASER_Get(1, Range, 0) == 0 || LASER_Get(2, Range, 0) == 0 || LASER_Get(3, Range, 0) == 0){
     MOTORS_Go(-255/2*-1, 255/2*-1);
 
     //if(millis() - cas_zaznam == 2000){
@@ -44,35 +44,39 @@ void setup() {
 
 }
 
-
+int laser_number;
 //void loop
 void loop() {
-  Serial.println(LINE_Get(1, 3700));
-  if(LINE_Get(1, 1000) == 0 && LINE_Get(2, 1000) == 0){
+
+  
+
+  if(LINE_Get(1, 1000, 0) == 0 && LINE_Get(2, 1000, 0) == 0){
     
     //třídící proměná
-    int laser_number = 0;
+    laser_number = 0;
     
     //třídění laserů pomocí proměné
-   
-    if(LASER_Get(3, Range) == 1 ){   // přední laser
-      laser_number + 1;
- 
+
+    if(LASER_Get(3, Range, 0) == 1 ){   // přední laser
+      laser_number = laser_number + 1;
+      Serial.println(laser_number);
     }
 
 
-    if(LASER_Get(2, Range) == 1 ){   // levý laser
-      laser_number + 3;
- 
+    if(LASER_Get(2, Range, 0) == 1 ){   // levý laser
+      laser_number = laser_number + 3;
+      Serial.println(laser_number);
     }
 
     
-    if(LASER_Get(1, Range) == 1 ){   // pravý laser
-      laser_number + 5;
- 
+    if(LASER_Get(1, Range, 0) == 1 ){   // pravý laser
+      laser_number = laser_number + 5;
+      Serial.println(laser_number);
     }
 
-    Serial.println(LASER_Get(3, Range));
+
+
+    //Serial.println(laser_number);
 
     // rozpohybování Sumce pomocí proměné "laser_number" vzniklé po třídění  
     switch(laser_number){
@@ -105,6 +109,13 @@ void loop() {
     
     while(stop == 0){
       MOTORS_Go(0, 0);
+      
     }
   }
+
+  else{
+    MOTORS_Go(255/2*-1, -255/2*-1);
+    delay(600);   
+  }
+
 }
