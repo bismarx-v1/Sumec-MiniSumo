@@ -17,8 +17,8 @@ int Sensor = 0;
 int ButtonDown = 0;
 
 
-int Range = 300;
-int cas_zaznam = millis();
+int Range = 150;
+int cas_zaznam = 0;
 
 int stop = 1;
 
@@ -29,7 +29,7 @@ void setup() {
   pinMode(led, OUTPUT);
   Serial.begin(9600);
 
-  while(LASER_Get(1, Range, 0) == 0 || LASER_Get(2, Range, 0) == 0 || LASER_Get(3, Range, 0) == 0){
+  while(LASER_Get(1, Range, 0) == 0 && LASER_Get(2, Range, 0) == 0 && LASER_Get(3, Range, 0) == 0){
     MOTORS_Go(-255/2*-1, 255/2*-1);
 
     //if(millis() - cas_zaznam == 2000){
@@ -57,32 +57,44 @@ void loop() {
     
     //třídění laserů pomocí proměné
 
-    if(LASER_Get(3, Range, 0) == 1 ){   // přední laser
-      laser_number = laser_number + 1;
-      Serial.println(laser_number);
+    Serial.println(LASER_Get(1, Range, 0));
+
+    if(cas_zaznam == 0){
+      if(LASER_Get(3, Range, 0) == 1 ){   // přední laser
+        laser_number = laser_number + 1;
+        //Serial.println(laser_number);
+        digitalWrite(led, HIGH);
+      }
+
+
+      if(LASER_Get(2, Range, 0) == 1 ){   // levý laser
+        laser_number = laser_number + 3;
+        //Serial.println(laser_number);
+        digitalWrite(led, HIGH);
+      }
+
+      
+      if(LASER_Get(1, Range, 0) == 1 ){   // pravý laser
+        laser_number = laser_number + 5;
+        //Serial.println(laser_number);
+        digitalWrite(led, HIGH);
+      }
+
+      if(laser_number == 0 ){
+        digitalWrite(led, LOW);
+      }
     }
-
-
-    if(LASER_Get(2, Range, 0) == 1 ){   // levý laser
-      laser_number = laser_number + 3;
-      Serial.println(laser_number);
-    }
-
-    
-    if(LASER_Get(1, Range, 0) == 1 ){   // pravý laser
-      laser_number = laser_number + 5;
-      Serial.println(laser_number);
-    }
-
-
 
     //Serial.println(laser_number);
 
     // rozpohybování Sumce pomocí proměné "laser_number" vzniklé po třídění  
     switch(laser_number){
 
+      case 0:
+        MOTORS_Go(255*-1, 255*-1);
       case 1:
-        MOTORS_Go(255/2*-1, 255/2*-1);
+        MOTORS_Go(255*-1, 255*-1);
+        delay(30); 
       break;
 
       case 3:
@@ -94,15 +106,15 @@ void loop() {
       break;
 
       case 4:
-        MOTORS_Go(255/2*-1, 100/2*-1);
+        MOTORS_Go(255*-1, 100*-1);
       break;
 
       case 6:
-        MOTORS_Go(100/2*-1, 255/2*-1);
+        MOTORS_Go(100*-1, 255*-1);
       break;
 
       case 9:
-        MOTORS_Go(255/2*-1, 255/2*-1);
+        MOTORS_Go(255*-1, 255*-1);
       break;
     }
     
@@ -111,11 +123,26 @@ void loop() {
       MOTORS_Go(0, 0);
       
     }
+    if(cas_zaznam > 0){
+    delay(1);
+    cas_zaznam = cas_zaznam - 1;
+    }
+
+
   }
 
-  else{
+
+
+  if(LINE_Get(1, 1000, 0) == 1){
     MOTORS_Go(255/2*-1, -255/2*-1);
-    delay(600);   
+    delay(500);
+    cas_zaznam = 10;   
+  }
+
+  if(LINE_Get(2, 1000, 0) == 1){
+    MOTORS_Go(-255/2*-1, 255/2*-1);
+    delay(500);
+    cas_zaznam = 10;   
   }
 
 }
