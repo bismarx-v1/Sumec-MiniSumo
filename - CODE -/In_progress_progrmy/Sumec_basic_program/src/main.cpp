@@ -45,104 +45,109 @@ void setup() {
 }
 
 int laser_number;
+int Global_ModeSelectvar;
+int hodnota_cary = 1000;
 //void loop
 void loop() {
 
-  
+  switch(Global_ModeSelectvar){
 
-  if(LINE_Get(1, 1000, 0) == 0 && LINE_Get(2, 1000, 0) == 0){
-    
-    //třídící proměná
-    laser_number = 0;
-    
-    //třídění laserů pomocí proměné
-
-    Serial.println(LASER_Get(1, Range, 0));
-
-    if(cas_zaznam == 0){
-      if(LASER_Get(3, Range, 0) == 1 ){   // přední laser
-        laser_number = laser_number + 1;
-        //Serial.println(laser_number);
-        digitalWrite(led, HIGH);
-      }
-
-
-      if(LASER_Get(2, Range, 0) == 1 ){   // levý laser
-        laser_number = laser_number + 3;
-        //Serial.println(laser_number);
-        digitalWrite(led, HIGH);
-      }
-
+  case 0:
+    if(LINE_Get(1, hodnota_cary, 0) == 0 && LINE_Get(2, hodnota_cary, 0) == 0){
       
-      if(LASER_Get(1, Range, 0) == 1 ){   // pravý laser
-        laser_number = laser_number + 5;
-        //Serial.println(laser_number);
-        digitalWrite(led, HIGH);
-      }
-
-      if(laser_number == 0 ){
-        digitalWrite(led, LOW);
-      }
-    }
-
-    //Serial.println(laser_number);
-
-    // rozpohybování Sumce pomocí proměné "laser_number" vzniklé po třídění  
-    switch(laser_number){
-
-      case 0:
-        MOTORS_Go(255*-1, 255*-1);
-      case 1:
-        MOTORS_Go(255*-1, 255*-1);
-        delay(30); 
-      break;
-
-      case 3:
-        MOTORS_Go(-255/2*-1, 255/2*-1);
-      break;
-
-      case 5:
-        MOTORS_Go(255/2*-1, -255/2*-1);
-      break;
-
-      case 4:
-        MOTORS_Go(255*-1, 100*-1);
-      break;
-
-      case 6:
-        MOTORS_Go(100*-1, 255*-1);
-      break;
-
-      case 9:
-        MOTORS_Go(255*-1, 255*-1);
-      break;
-    }
-    
-    
-    while(stop == 0){
-      MOTORS_Go(0, 0);
+      //třídící proměná
+      laser_number = 0;
       
+      //třídění laserů pomocí proměné
+
+      Serial.println(LASER_Get(1, Range, 0));
+
+      if(cas_zaznam == 0){
+        if(LASER_Get(3, Range, 0) == 1 ){   // přední laser
+          laser_number = laser_number + 1;
+          //Serial.println(laser_number);
+          digitalWrite(led, HIGH);
+        }
+
+
+        if(LASER_Get(2, Range, 0) == 1 ){   // levý laser
+          laser_number = laser_number + 3;
+          //Serial.println(laser_number);
+          digitalWrite(led, HIGH);
+        }
+
+        
+        if(LASER_Get(1, Range, 0) == 1 ){   // pravý laser
+          laser_number = laser_number + 5;
+          //Serial.println(laser_number);
+          digitalWrite(led, HIGH);
+        }
+
+        if(laser_number == 0 ){
+          digitalWrite(led, LOW);
+        }
+      }
+
+      //Serial.println(laser_number);
+
+      // rozpohybování Sumce pomocí proměné "laser_number" vzniklé po třídění  
+      switch(laser_number){
+
+        case 0:
+          MOTORS_Go(255*-1, 255*-1);
+        case 1:
+          MOTORS_Go(255*-1, 255*-1);
+          delay(30); 
+        break;
+
+        case 3:
+          MOTORS_Go(-255/2*-1, 255/2*-1);
+        break;
+
+        case 5:
+          MOTORS_Go(255/2*-1, -255/2*-1);
+        break;
+
+        case 4:
+          MOTORS_Go(255*-1, 100*-1);
+        break;
+
+        case 6:
+          MOTORS_Go(100*-1, 255*-1);
+        break;
+
+        case 9:
+          MOTORS_Go(255*-1, 255*-1);
+        break;
+      }
+      
+      
+      while(stop == 0){
+        MOTORS_Go(0, 0);
+        
+      }
+      if(cas_zaznam > 0){
+      delay(1);
+      cas_zaznam = cas_zaznam - 1;
+      }
+
+
     }
-    if(cas_zaznam > 0){
-    delay(1);
-    cas_zaznam = cas_zaznam - 1;
+
+
+
+    if(LINE_Get(1, hodnota_cary, 0) == 1){
+      MOTORS_Go(255/2*-1, -255/2*-1);
+      delay(500);
+      cas_zaznam = 10;   
     }
 
-
-  }
-
-
-
-  if(LINE_Get(1, 1000, 0) == 1){
-    MOTORS_Go(255/2*-1, -255/2*-1);
-    delay(500);
-    cas_zaznam = 10;   
-  }
-
-  if(LINE_Get(2, 1000, 0) == 1){
-    MOTORS_Go(-255/2*-1, 255/2*-1);
-    delay(500);
-    cas_zaznam = 10;   
+    if(LINE_Get(2, hodnota_cary, 0) == 1){
+      MOTORS_Go(-255/2*-1, 255/2*-1);
+      delay(500);
+      cas_zaznam = 10;   
+    }
+    break;
   }
 
 }
