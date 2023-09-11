@@ -45,7 +45,9 @@ void setup() {
 }
 
 int laser_number;
+// promněná určující mód programu
 int Global_ModeSelectvar;
+// určuje zdali je barva spíš bílá nebo černá
 int hodnota_cary = 1000;
 //void loop
 void loop() {
@@ -121,11 +123,12 @@ void loop() {
         break;
       }
       
-      
+      // možnost zastavení programu pomocí stop proměné
       while(stop == 0){
         MOTORS_Go(0, 0);
         
       }
+
       if(cas_zaznam > 0){
       delay(1);
       cas_zaznam = cas_zaznam - 1;
@@ -135,13 +138,13 @@ void loop() {
     }
 
 
-
+    //dotek bílé čáry levím senzorem
     if(LINE_Get(1, hodnota_cary, 0) == 1){
       MOTORS_Go(255/2*-1, -255/2*-1);
       delay(500);
       cas_zaznam = 10;   
     }
-
+    //dotek bílé čáry pravým senzorem
     if(LINE_Get(2, hodnota_cary, 0) == 1){
       MOTORS_Go(-255/2*-1, 255/2*-1);
       delay(500);
