@@ -31897,7 +31897,7 @@
   (symbol (lib_id "Device:R") (at 323.85 125.73 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 35457a71-3e2f-481f-9d26-2654f10ab177)
-    (property "Reference" "R12" (at 323.85 120.65 90)
+    (property "Reference" "R12.boot1" (at 323.85 120.65 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "470" (at 323.85 123.19 90)
@@ -31914,7 +31914,7 @@
     (instances
       (project "sumec"
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/11aa20d4-c4ff-49be-9179-c2911da50f67"
-          (reference "R12") (unit 1)
+          (reference "R12.boot1") (unit 1)
         )
       )
     )
@@ -32005,7 +32005,7 @@
   (symbol (lib_id "Device:C") (at 312.42 132.08 270) (mirror x) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 3f410094-eee1-4c18-bd4c-c05deba2801a)
-    (property "Reference" "C?" (at 311.15 128.27 90)
+    (property "Reference" "C?" (at 308.61 128.27 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "1nF" (at 311.15 135.89 90)
@@ -32028,7 +32028,7 @@
           (reference "C2") (unit 1)
         )
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/11aa20d4-c4ff-49be-9179-c2911da50f67"
-          (reference "C6") (unit 1)
+          (reference "C6.boot1") (unit 1)
         )
       )
     )
@@ -32172,7 +32172,7 @@
   (symbol (lib_id "Device:R") (at 340.36 125.73 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 8294c73d-eabd-400a-ab7d-da2b584e603a)
-    (property "Reference" "R24" (at 340.36 120.65 90)
+    (property "Reference" "R24.boot1" (at 340.36 120.65 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "5k" (at 340.36 123.19 90)
@@ -32189,7 +32189,7 @@
     (instances
       (project "sumec"
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/11aa20d4-c4ff-49be-9179-c2911da50f67"
-          (reference "R24") (unit 1)
+          (reference "R24.boot1") (unit 1)
         )
       )
     )
@@ -32386,7 +32386,7 @@
   (symbol (lib_id "Device:R") (at 360.68 125.73 90) (mirror x) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid a889e757-5fd5-483e-a556-fcda799bb6bf)
-    (property "Reference" "R10" (at 363.22 120.65 90)
+    (property "Reference" "R10.boot1" (at 363.22 120.65 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "12k" (at 363.22 123.19 90)
@@ -32403,7 +32403,7 @@
     (instances
       (project "sumec"
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/11aa20d4-c4ff-49be-9179-c2911da50f67"
-          (reference "R10") (unit 1)
+          (reference "R10.boot1") (unit 1)
         )
       )
     )
