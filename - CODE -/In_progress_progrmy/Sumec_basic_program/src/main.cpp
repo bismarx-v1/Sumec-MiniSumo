@@ -4,6 +4,7 @@
 #include "motors.h"
 #include "line.h"
 #include "laser.h"
+#include "IR.h"
 
 
 //defines for demo
@@ -19,6 +20,7 @@ int ButtonDown = 0;
 
 int Range = 150;
 int cas_zaznam = 0;
+int IRzaznam = 0;
 
 int stop = 1;
 
@@ -29,7 +31,16 @@ void setup() {
   pinMode(led, OUTPUT);
   Serial.begin(9600);
 
-  while(LASER_Get(1, Range, 0) == 0 && LASER_Get(2, Range, 0) == 0 && LASER_Get(3, Range, 0) == 0){
+  //Serial.println(analogRead(IR_IRPin));
+  if(IRzaznam == 0){
+    while(analogRead(IR_IRPin)!=0){
+      MOTORS_Go(0, 0);
+      Serial.println(millis());
+      IRzaznam++;
+    } 
+  }
+  
+ /* while(LASER_Get(1, Range, 0) == 0 && LASER_Get(2, Range, 0) == 0 && LASER_Get(3, Range, 0) == 0){
     MOTORS_Go(-255/2*-1, 255/2*-1);
 
     //if(millis() - cas_zaznam == 2000){
@@ -37,21 +48,22 @@ void setup() {
       //Range = Range + 100;
     //}
 
-    while(stop == 0){
-      MOTORS_Go(0, 0);
-    }
+   //IR_Wait();
  }
+*/
 
+ //Serial.println(analogRead(39));
 }
 
 int laser_number;
 // promněná určující mód programu
-int Global_ModeSelectvar;
+int Global_ModeSelectvar = 0;
 // určuje zdali je barva spíš bílá nebo černá
 int hodnota_cary = 1000;
 //void loop
 void loop() {
 
+    
   switch(Global_ModeSelectvar){
 
   case 0:
@@ -61,8 +73,6 @@ void loop() {
       laser_number = 0;
       
       //třídění laserů pomocí proměné
-
-      Serial.println(LASER_Get(1, Range, 0));
 
       if(cas_zaznam == 0){
         if(LASER_Get(3, Range, 0) == 1 ){   // přední laser
