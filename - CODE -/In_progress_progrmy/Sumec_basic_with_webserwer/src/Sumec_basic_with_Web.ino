@@ -4,6 +4,29 @@
 #include <WebSocketsServer.h>
 #include <ArduinoJson.h>
 #include <Arduino.h>
+#include "IR.h"
+#include "motors.h"
+#include "line.h"
+#include "laser.h"
+
+
+
+#define Button 13
+#define led 14
+int Sensor1 = 0;
+int Sensor2 = 0;
+int Sensor3 = 0;
+int SensorRange = 300;  //|sensor range setting||sensor range setting||sensor range setting||sensor range setting||sensor range setting|
+int Sensor = 0;
+int ButtonDown = 0;
+
+
+int Range = 150;
+int cas_zaznam = 0;
+int IRzaznam = 0;
+
+int stop = 1;
+
 /*|End of imports||End of imports||End of imports||End of imports||End of imports||End of imports||End of imports|*/
 /*|Webserver and AP stuff||Webserver and AP stuff||Webserver and AP stuff||Webserver and AP stuff||Webserver and AP stuff||Webserver and AP stuff||Webserver and AP stuff||Webserver and AP stuff||Webserver and AP stuff|*/
 TaskHandle_t Task1;
@@ -183,15 +206,23 @@ void setup() {
 void loop() {	/*|void loop() core 1||void loop() core 1||void loop() core 1||void loop() core 1||void loop() core 1||void loop() core 1||void loop() core 1||void loop() core 1|*/
 	
 	/*|===Add all void loop() code===||===Add all void loop() code===||===Add all void loop() code===||===Add all void loop() code===||===Add all void loop() code===||===Add all void loop() code===||===Add all void loop() code===||===Add all void loop() code===||===Add all void loop() code===||===Add all void loop() code===||===Add all void loop() code===|*/
-	switch(Global_ModeSelectvar){
+	
+	int laser_number;
+	// promněná určující mód programu
+	int Global_ModeSelectvar = 0;
+	// určuje zdali je barva spíš bílá nebo černá
+	int hodnota_cary = 1000;
+	
+	
+  switch(Global_ModeSelectvar){
 
-  case 0:
-    if(LINE_Get(1, hodnota_cary, 0) == 0 && LINE_Get(2, hodnota_cary, 0) == 0){
+    case 0:
+      if(LINE_Get(1, hodnota_cary, 0) == 0 && LINE_Get(2, hodnota_cary, 0) == 0){
       
-      //třídící proměná
-      laser_number = 0;
+        //třídící proměná
+        laser_number = 0;
       
-      //třídění laserů pomocí proměné
+        //třídění laserů pomocí proměné
 
       if(cas_zaznam == 0){
         if(LASER_Get(3, Range, 0) == 1 ){   // přední laser
@@ -282,7 +313,7 @@ void loop() {	/*|void loop() core 1||void loop() core 1||void loop() core 1||voi
     break;
   }
 
-}
+
 	/*|===Add all void loop() code===||===Add all void loop() code===||===Add all void loop() code===||===Add all void loop() code===||===Add all void loop() code===||===Add all void loop() code===||===Add all void loop() code===||===Add all void loop() code===||===Add all void loop() code===||===Add all void loop() code===||===Add all void loop() code===|*/
 	
 	
