@@ -1,4 +1,5 @@
 /*|Start of imports||Start of imports||Start of imports||Start of imports||Start of imports||Start of imports|*/
+#include "laser.h"
 #include <WiFi.h>
 #include <WebServer.h>
 #include <WebSocketsServer.h>
@@ -7,7 +8,7 @@
 #include "IR.h"
 #include "motors.h"
 #include "line.h"
-#include "laser.h"
+
 
 
 
