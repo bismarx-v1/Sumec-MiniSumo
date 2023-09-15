@@ -18,7 +18,7 @@ int Sensor = 0;
 int ButtonDown = 0;
 
 
-int Range = 150;
+int Range = 300;
 int cas_zaznam = 0;
 int IRzaznam = 0;
 
@@ -40,17 +40,10 @@ void setup() {
     } 
   }
   
- /* while(LASER_Get(1, Range, 0) == 0 && LASER_Get(2, Range, 0) == 0 && LASER_Get(3, Range, 0) == 0){
+  for(int i=0; i++; i==2000){
     MOTORS_Go(-255/2*-1, 255/2*-1);
-
-    //if(millis() - cas_zaznam == 2000){
-      //cas_zaznam = millis();
-      //Range = Range + 100;
-    //}
-
-   //IR_Wait();
- }
-*/
+    delay(1);
+  }
 
  //Serial.println(analogRead(39));
 }
@@ -107,29 +100,41 @@ void loop() {
 
         case 0:
           MOTORS_Go(255*-1, 255*-1);
+          Serial.println("dopředu");
         case 1:
           MOTORS_Go(255*-1, 255*-1);
-          delay(30); 
+          Serial.println("dopředu"); 
         break;
 
         case 3:
-          MOTORS_Go(-255/2*-1, 255/2*-1);
+          while(LASER_Get(3, Range, 0) == 0){
+            MOTORS_Go(-255/2*-1, 255/2*-1);
+            Serial.println("strana1");
+          }
         break;
 
         case 5:
-          MOTORS_Go(255/2*-1, -255/2*-1);
+          while(LASER_Get(3, Range, 0) == 0){
+            MOTORS_Go(255/2*-1, -255/2*-1);
+            Serial.println("strana2");
+          }
         break;
 
         case 4:
-          MOTORS_Go(255*-1, 100*-1);
+          MOTORS_Go(255*-1, 200*-1);
+          Serial.println("šikmo1");
+          delay(100);
         break;
 
         case 6:
-          MOTORS_Go(100*-1, 255*-1);
+          MOTORS_Go(200*-1, 255*-1);
+          Serial.println("šikmo2");
+          delay(100);
         break;
 
         case 9:
           MOTORS_Go(255*-1, 255*-1);
+          Serial.println("dopředu");
         break;
       }
       
