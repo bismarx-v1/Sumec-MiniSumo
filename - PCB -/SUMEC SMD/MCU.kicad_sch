@@ -32785,7 +32785,7 @@
     (property "Reference" "C?" (at 153.67 123.19 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "0,1uF" (at 151.13 115.57 0)
+    (property "Value" "0,1uF.usb" (at 151.13 115.57 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Footprint" "Capacitor_SMD:C_1206_3216Metric" (at 157.48 121.6152 0)

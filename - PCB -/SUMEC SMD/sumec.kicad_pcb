@@ -182,7 +182,7 @@
 
   (footprint "Diode_SMD:D_SOD-523" (layer "F.Cu")
     (tstamp 00b43426-3f61-4fbb-ab07-5a4ac52b334a)
-    (at 228.595 72.615)
+    (at 281.095 72.365)
     (descr "http://www.diodes.com/datasheets/ap02001.pdf p.144")
     (tags "Diode SOD523")
     (property "Sheetfile" "MCU.kicad_sch")
@@ -250,7 +250,7 @@
 
   (footprint "Resistor_SMD:R_1206_3216Metric" (layer "F.Cu")
     (tstamp 01ed7cf4-8d54-425e-ab56-ade0f0963cf7)
-    (at 223.97 79.025)
+    (at 276.47 78.775)
     (descr "Resistor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "resistor")
     (property "Sheetfile" "MCU.kicad_sch")
@@ -304,7 +304,7 @@
 
   (footprint "Capacitor_SMD:C_1206_3216Metric" (layer "F.Cu")
     (tstamp 14878b86-9a68-4641-b93a-0177c70b55f6)
-    (at 194.25 72.05)
+    (at 246.75 71.8)
     (descr "Capacitor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "capacitor")
     (property "Sheetfile" "POWER SUPPLY.kicad_sch")
@@ -358,7 +358,7 @@
 
   (footprint "Resistor_SMD:R_1206_3216Metric" (layer "F.Cu")
     (tstamp 1755b2b8-c661-401f-8121-ededbd4e86eb)
-    (at 223.97 65.865)
+    (at 276.47 65.615)
     (descr "Resistor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "resistor")
     (property "Sheetfile" "MCU.kicad_sch")
@@ -412,7 +412,7 @@
 
   (footprint "Package_SO:SSOP-24_5.3x8.2mm_P0.65mm" (layer "F.Cu")
     (tstamp 1ccadf95-ab6b-4ac0-adc7-571bde127859)
-    (at 160.075 71.6 -90)
+    (at 212.575 71.35 -90)
     (descr "24-Lead Plastic Shrink Small Outline (SS)-5.30 mm Body [SSOP] (see Microchip Packaging Specification 00000049BS.pdf)")
     (tags "SSOP 0.65")
     (property "Sheetfile" "POWER SUPPLY.kicad_sch")
@@ -522,7 +522,7 @@
 
   (footprint "Capacitor_SMD:C_1206_3216Metric" (layer "F.Cu")
     (tstamp 1d474982-6003-41a8-b57c-24af50443fea)
-    (at 183.775 58.25)
+    (at 236.275 58)
     (descr "Capacitor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "capacitor")
     (property "Sheetfile" "POWER SUPPLY.kicad_sch")
@@ -576,7 +576,7 @@
 
   (footprint "Diode_SMD:D_1206_3216Metric" (layer "F.Cu")
     (tstamp 24d0a260-846e-4074-a8bc-487774a8434d)
-    (at 199.92 65.25)
+    (at 252.42 65)
     (descr "Diode SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: http://www.tortai-tech.com/upload/download/2011102023233369053.pdf), generated with kicad-footprint-generator")
     (tags "diode")
     (property "Sheetfile" "POWER SUPPLY.kicad_sch")
@@ -634,7 +634,7 @@
 
   (footprint "Package_TO_SOT_THT:TO-92L" (layer "F.Cu")
     (tstamp 3c9634cb-2e75-4124-8d89-5db0f5adadd6)
-    (at 107.46 73.5)
+    (at 159.96 73.25)
     (descr "TO-92L leads in-line (large body variant of TO-92), also known as TO-226, wide, drill 0.75mm (see https://www.diodes.com/assets/Package-Files/TO92L.pdf and http://www.ti.com/lit/an/snoa059/snoa059.pdf)")
     (tags "TO-92L Molded Narrow transistor")
     (property "Sheetfile" "MCU.kicad_sch")
@@ -688,7 +688,7 @@
 
   (footprint "Capacitor_SMD:C_1206_3216Metric" (layer "F.Cu")
     (tstamp 4220c3af-695a-47d4-9c90-2907f4962b81)
-    (at 218.34 82.765)
+    (at 270.84 82.515)
     (descr "Capacitor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "capacitor")
     (property "Sheetfile" "MCU.kicad_sch")
@@ -742,7 +742,7 @@
 
   (footprint "Resistor_SMD:R_1206_3216Metric" (layer "F.Cu")
     (tstamp 44995d2d-b5b5-4ceb-8668-0b277d1586e4)
-    (at 199.88 61.91)
+    (at 252.38 61.66)
     (descr "Resistor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "resistor")
     (property "Sheetfile" "POWER SUPPLY.kicad_sch")
@@ -796,7 +796,7 @@
 
   (footprint "Capacitor_SMD:C_1206_3216Metric" (layer "F.Cu")
     (tstamp 45351d8b-7d48-430e-8438-996beba75932)
-    (at 218.34 62.665)
+    (at 270.84 62.415)
     (descr "Capacitor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "capacitor")
     (property "Sheetfile" "MCU.kicad_sch")
@@ -850,7 +850,7 @@
 
   (footprint "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" (layer "F.Cu")
     (tstamp 584657fd-bf55-4722-8f42-3b7951ef1425)
-    (at 163.62 62 -90)
+    (at 216.12 61.75 -90)
     (descr "Through hole straight pin header, 1x04, 2.54mm pitch, single row")
     (tags "Through hole pin header THT 1x04 2.54mm single row")
     (property "Sheetfile" "MECHANICS.kicad_sch")
@@ -918,7 +918,7 @@
 
   (footprint "Resistor_SMD:R_1206_3216Metric" (layer "F.Cu")
     (tstamp 5ba0e87f-88d9-4554-add9-a3d360bd698a)
-    (at 223.97 72.445)
+    (at 276.47 72.195)
     (descr "Resistor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "resistor")
     (property "Sheetfile" "MCU.kicad_sch")
@@ -972,7 +972,7 @@
 
   (footprint "sumec-smd_library:GY-530 VL53L0X" (layer "F.Cu")
     (tstamp 5fff8942-70ec-4f6e-9240-be897aac54ed)
-    (at 114.452727 109.156676 45)
+    (at 166.952727 108.906676 45)
     (property "Field2" "")
     (property "Sheetfile" "SENSORS.kicad_sch")
     (property "Sheetname" "SENSORS")
@@ -1050,7 +1050,7 @@
 
   (footprint "sumec-smd_library:GY-530 VL53L0X" (layer "F.Cu")
     (tstamp 6cea7bc7-55cb-422c-9837-f82c2c9b3983)
-    (at 173.044829 97.659119 135)
+    (at 225.544829 97.409119 135)
     (property "Field2" "")
     (property "Sheetfile" "SENSORS.kicad_sch")
     (property "Sheetname" "SENSORS")
@@ -1128,7 +1128,7 @@
 
   (footprint "MountingHole:MountingHole_3.2mm_M3" (layer "F.Cu")
     (tstamp 72af5209-8329-452c-a50b-30abf3cb4a85)
-    (at 139.5 47.25)
+    (at 192 47)
     (descr "Mounting Hole 3.2mm, no annular, M3")
     (tags "mounting hole 3.2mm no annular m3")
     (property "Sheetfile" "MECHANICS.kicad_sch")
@@ -1158,7 +1158,7 @@
 
   (footprint "Diode_SMD:D_SOD-523" (layer "F.Cu")
     (tstamp 764ff3ef-ce93-469a-98ff-f7ee9a046886)
-    (at 228.595 75.065)
+    (at 281.095 74.815)
     (descr "http://www.diodes.com/datasheets/ap02001.pdf p.144")
     (tags "Diode SOD523")
     (property "Sheetfile" "MCU.kicad_sch")
@@ -1226,7 +1226,7 @@
 
   (footprint "Button_Switch_SMD:SW_SPST_B3U-1000P" (layer "F.Cu")
     (tstamp 778f9ef1-5a6d-45f5-85c5-8fcaaf03627e)
-    (at 233.29 75.465)
+    (at 285.79 75.215)
     (descr "Ultra-small-sized Tactile Switch with High Contact Reliability, Top-actuated Model, without Ground Terminal, without Boss")
     (tags "Tactile Switch")
     (property "Sheetfile" "MCU.kicad_sch")
@@ -1290,7 +1290,7 @@
 
   (footprint "Capacitor_SMD:C_1206_3216Metric" (layer "F.Cu")
     (tstamp 7c6fac82-04be-4c59-b36b-7b1009973ad3)
-    (at 169.275 73.75 180)
+    (at 221.775 73.5 180)
     (descr "Capacitor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "capacitor")
     (property "Sheetfile" "POWER SUPPLY.kicad_sch")
@@ -1344,7 +1344,7 @@
 
   (footprint "sumec-smd_library:GY-530 VL53L0X" (layer "F.Cu")
     (tstamp 80f4c272-d4ed-4f5c-8cfb-707e5f768b33)
-    (at 146.15 106.23 90)
+    (at 198.65 105.98 90)
     (property "Field2" "")
     (property "Sheetfile" "SENSORS.kicad_sch")
     (property "Sheetname" "SENSORS")
@@ -1422,7 +1422,7 @@
 
   (footprint "Package_DFN_QFN:QFN-28-1EP_5x5mm_P0.5mm_EP3.35x3.35mm" (layer "F.Cu")
     (tstamp 839de0ee-ac40-4ce2-ae6e-18a22d31797f)
-    (at 109 81.5)
+    (at 161.5 81.25)
     (descr "QFN, 28 Pin (http://ww1.microchip.com/downloads/en/PackagingSpec/00000049BQ.pdf#page=283), generated with kicad-footprint-generator ipc_noLead_generator.py")
     (tags "QFN NoLead")
     (property "Sheetfile" "MCU.kicad_sch")
@@ -1551,7 +1551,7 @@
 
   (footprint "Resistor_SMD:R_1206_3216Metric" (layer "F.Cu")
     (tstamp 84c687ce-2239-4b88-b20d-b0de7a2cc885)
-    (at 223.97 69.155)
+    (at 276.47 68.905)
     (descr "Resistor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "resistor")
     (property "Sheetfile" "MCU.kicad_sch")
@@ -1605,7 +1605,7 @@
 
   (footprint "Capacitor_SMD:C_1206_3216Metric" (layer "F.Cu")
     (tstamp 8d36ae27-eb0e-483b-a663-50be0f751b70)
-    (at 218.34 79.415)
+    (at 270.84 79.165)
     (descr "Capacitor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "capacitor")
     (property "Sheetfile" "MCU.kicad_sch")
@@ -1659,7 +1659,7 @@
 
   (footprint "Resistor_SMD:R_1206_3216Metric" (layer "F.Cu")
     (tstamp 8db25ec6-752d-4909-81e0-d4433155a9de)
-    (at 194.23 80.72)
+    (at 246.73 80.47)
     (descr "Resistor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "resistor")
     (property "Field2" "")
@@ -1714,7 +1714,7 @@
 
   (footprint "Resistor_SMD:R_1206_3216Metric" (layer "F.Cu")
     (tstamp 8e996105-6d92-4557-a56e-e65355dce2bf)
-    (at 194.23 87.3)
+    (at 246.73 87.05)
     (descr "Resistor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "resistor")
     (property "Field2" "")
@@ -1769,7 +1769,7 @@
 
   (footprint "Resistor_SMD:R_1206_3216Metric" (layer "F.Cu")
     (tstamp 972cf392-91ff-45fd-9004-b6f254e732cc)
-    (at 194.23 84.01)
+    (at 246.73 83.76)
     (descr "Resistor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "resistor")
     (property "Field2" "")
@@ -1824,7 +1824,7 @@
 
   (footprint "Package_TO_SOT_THT:TO-220-3_Vertical" (layer "F.Cu")
     (tstamp 9ef6ab9c-26f6-46ec-ba5b-ab03d51ade7a)
-    (at 174 68.67 -90)
+    (at 226.5 68.42 -90)
     (descr "TO-220-3, Vertical, RM 2.54mm, see https://www.vishay.com/docs/66542/to-220-1.pdf")
     (tags "TO-220-3 Vertical RM 2.54mm")
     (property "Sheetfile" "POWER SUPPLY.kicad_sch")
@@ -1896,7 +1896,7 @@
 
   (footprint "LOGO:some magic shit (logo)" (layer "F.Cu")
     (tstamp aaa88670-f47f-4a0d-a059-777e3a1b67f5)
-    (at 133.84911 77.112839)
+    (at 186.34911 76.862839)
     (property "Sheetfile" "sumec.kicad_sch")
     (property "Sheetname" "")
     (property "ki_description" "Resistor")
@@ -3254,7 +3254,7 @@
 
   (footprint "Button_Switch_SMD:SW_SPST_B3U-1000P" (layer "F.Cu")
     (tstamp af237177-af22-4bf0-ac83-a30a021bdf24)
-    (at 233.29 71.115)
+    (at 285.79 70.865)
     (descr "Ultra-small-sized Tactile Switch with High Contact Reliability, Top-actuated Model, without Ground Terminal, without Boss")
     (tags "Tactile Switch")
     (property "Sheetfile" "MCU.kicad_sch")
@@ -3318,7 +3318,7 @@
 
   (footprint "Capacitor_SMD:C_1206_3216Metric" (layer "F.Cu")
     (tstamp b86fc212-cc75-4418-ab6e-31e17201aead)
-    (at 218.34 66.015)
+    (at 270.84 65.765)
     (descr "Capacitor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "capacitor")
     (property "Sheetfile" "MCU.kicad_sch")
@@ -3372,7 +3372,7 @@
 
   (footprint "Resistor_SMD:R_1206_3216Metric" (layer "F.Cu")
     (tstamp bbcb1860-15a6-40ac-b333-4138d1016f2e)
-    (at 223.97 59.285)
+    (at 276.47 59.035)
     (descr "Resistor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "resistor")
     (property "Sheetfile" "MCU.kicad_sch")
@@ -3426,7 +3426,7 @@
 
   (footprint "Capacitor_SMD:C_1206_3216Metric" (layer "F.Cu")
     (tstamp bfeed379-2c53-4343-8908-39abda20fbb0)
-    (at 194.25 65.35)
+    (at 246.75 65.1)
     (descr "Capacitor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "capacitor")
     (property "Sheetfile" "POWER SUPPLY.kicad_sch")
@@ -3480,7 +3480,7 @@
 
   (footprint "Connector_PinSocket_2.54mm:PinSocket_1x03_P2.54mm_Vertical" (layer "F.Cu")
     (tstamp c38599fc-058c-4bc4-ae6d-8606d9f6f940)
-    (at 159.25 82.96)
+    (at 211.75 82.71)
     (descr "Through hole straight socket strip, 1x03, 2.54mm pitch, single row (from Kicad 4.0.7), script generated")
     (tags "Through hole socket strip THT 1x03 2.54mm single row")
     (property "Field2" "")
@@ -3547,7 +3547,7 @@
 
   (footprint "Resistor_SMD:R_1206_3216Metric" (layer "F.Cu")
     (tstamp ce638360-0a26-4de5-ab09-b0ebc997a78e)
-    (at 223.97 82.315)
+    (at 276.47 82.065)
     (descr "Resistor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "resistor")
     (property "Sheetfile" "MCU.kicad_sch")
@@ -3601,7 +3601,7 @@
 
   (footprint "Resistor_SMD:R_1206_3216Metric" (layer "F.Cu")
     (tstamp cf5df241-0534-4565-b256-df7fef50b9cf)
-    (at 223.97 75.735)
+    (at 276.47 75.485)
     (descr "Resistor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "resistor")
     (property "Sheetfile" "MCU.kicad_sch")
@@ -3655,7 +3655,7 @@
 
   (footprint "MountingHole:MountingHole_3.2mm_M3" (layer "F.Cu")
     (tstamp d0385220-50b5-40c4-baab-debfd7c7af76)
-    (at 133.25 40)
+    (at 185.75 39.75)
     (descr "Mounting Hole 3.2mm, no annular, M3")
     (tags "mounting hole 3.2mm no annular m3")
     (property "Sheetfile" "MECHANICS.kicad_sch")
@@ -3685,7 +3685,7 @@
 
   (footprint "Diode_SMD:D_SOD-523" (layer "F.Cu")
     (tstamp d1565c09-5437-4428-b6f1-2d54cbce8d38)
-    (at 228.595 77.515)
+    (at 281.095 77.265)
     (descr "http://www.diodes.com/datasheets/ap02001.pdf p.144")
     (tags "Diode SOD523")
     (property "Sheetfile" "MCU.kicad_sch")
@@ -3753,7 +3753,7 @@
 
   (footprint "Resistor_SMD:R_1206_3216Metric" (layer "F.Cu")
     (tstamp d1ddb8e2-d924-4afb-9ab4-e024158d53a6)
-    (at 194.23 90.59)
+    (at 246.73 90.34)
     (descr "Resistor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "resistor")
     (property "Field2" "")
@@ -3808,7 +3808,7 @@
 
   (footprint "Resistor_SMD:R_1206_3216Metric" (layer "F.Cu")
     (tstamp d3d968ff-96aa-4619-8984-b33c156de307)
-    (at 223.97 62.575)
+    (at 276.47 62.325)
     (descr "Resistor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "resistor")
     (property "Sheetfile" "MCU.kicad_sch")
@@ -3862,7 +3862,7 @@
 
   (footprint "Capacitor_SMD:C_1206_3216Metric" (layer "F.Cu")
     (tstamp d910ea09-c131-4748-b3b2-49b13d4d8cf1)
-    (at 194.25 68.7)
+    (at 246.75 68.45)
     (descr "Capacitor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "capacitor")
     (property "Sheetfile" "POWER SUPPLY.kicad_sch")
@@ -3916,7 +3916,7 @@
 
   (footprint "Resistor_SMD:R_1206_3216Metric" (layer "F.Cu")
     (tstamp dcee6ad2-9093-4a26-bd33-454f70e49a2a)
-    (at 199.88 58.62)
+    (at 252.38 58.37)
     (descr "Resistor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "resistor")
     (property "Sheetfile" "POWER SUPPLY.kicad_sch")
@@ -3970,7 +3970,7 @@
 
   (footprint "Diode_SMD:D_1206_3216Metric" (layer "F.Cu")
     (tstamp deed92f7-1449-437a-bcab-0d9925d2395a)
-    (at 233.21 79.335)
+    (at 285.71 79.085)
     (descr "Diode SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: http://www.tortai-tech.com/upload/download/2011102023233369053.pdf), generated with kicad-footprint-generator")
     (tags "diode")
     (property "Sheetfile" "MCU.kicad_sch")
@@ -4028,7 +4028,7 @@
 
   (footprint "Connector_JST:JST_EH_B3B-EH-A_1x03_P2.50mm_Vertical" (layer "F.Cu")
     (tstamp e5050738-9ecc-46fc-b4e4-6b2163aa4ac3)
-    (at 176.5 80.75 180)
+    (at 229 80.5 180)
     (descr "JST EH series connector, B3B-EH-A (http://www.jst-mfg.com/product/pdf/eng/eEH.pdf), generated with kicad-footprint-generator")
     (tags "connector JST EH vertical")
     (property "Sheetfile" "MECHANICS.kicad_sch")
@@ -4114,7 +4114,7 @@
 
   (footprint "Capacitor_SMD:C_1206_3216Metric" (layer "F.Cu")
     (tstamp e5e7b59d-6f83-4fea-a902-53ba4053a648)
-    (at 194.25 62)
+    (at 246.75 61.75)
     (descr "Capacitor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "capacitor")
     (property "Sheetfile" "POWER SUPPLY.kicad_sch")
@@ -4168,7 +4168,7 @@
 
   (footprint "Package_TO_SOT_THT:TO-220-3_Vertical" (layer "F.Cu")
     (tstamp e67643a6-1097-47e7-a609-7e26c4b2a25c)
-    (at 119.75 69.08 90)
+    (at 172.25 68.83 90)
     (descr "TO-220-3, Vertical, RM 2.54mm, see https://www.vishay.com/docs/66542/to-220-1.pdf")
     (tags "TO-220-3 Vertical RM 2.54mm")
     (property "Sheetfile" "POWER SUPPLY.kicad_sch")
@@ -4243,7 +4243,7 @@
 
   (footprint "MountingHole:MountingHole_3.2mm_M3" (layer "F.Cu")
     (tstamp e7a3dce9-336a-4a57-ab29-9f4293879681)
-    (at 146 40)
+    (at 198.5 39.75)
     (descr "Mounting Hole 3.2mm, no annular, M3")
     (tags "mounting hole 3.2mm no annular m3")
     (property "Sheetfile" "MECHANICS.kicad_sch")
@@ -4273,7 +4273,7 @@
 
   (footprint "Sensor_Motion:InvenSense_QFN-24_3x3mm_P0.4mm" (layer "F.Cu")
     (tstamp e8da55ae-d69c-47f2-88c7-924f16d309d6)
-    (at 151.5 57.5)
+    (at 204 57.25)
     (descr "24-Lead Plastic QFN (3mm x 3mm); Pitch 0.4mm; EP 1.7x1.54mm; for InvenSense motion sensors; keepout area marked (Package see: https://store.invensense.com/datasheets/invensense/MPU9250REV1.0.pdf; See also https://www.invensense.com/wp-content/uploads/2015/02/InvenSense-MEMS-Handling.pdf)")
     (tags "QFN 0.4")
     (property "Field2" "")
@@ -4388,10 +4388,10 @@
       (fill (thermal_gap 0.508) (thermal_bridge_width 0.508))
       (polygon
         (pts
-          (xy 150.625 56.705)
-          (xy 152.375 56.705)
-          (xy 152.375 58.295)
-          (xy 150.625 58.295)
+          (xy 203.125 56.455)
+          (xy 204.875 56.455)
+          (xy 204.875 58.045)
+          (xy 203.125 58.045)
         )
       )
     )
@@ -4404,7 +4404,7 @@
 
   (footprint "Diode_SMD:D_SOD-523" (layer "F.Cu")
     (tstamp ea034383-937d-478b-b436-5cd017db6a64)
-    (at 228.595 70.165)
+    (at 281.095 69.915)
     (descr "http://www.diodes.com/datasheets/ap02001.pdf p.144")
     (tags "Diode SOD523")
     (property "Sheetfile" "MCU.kicad_sch")
@@ -4472,7 +4472,7 @@
 
   (footprint "Package_TO_SOT_THT:TO-92L" (layer "F.Cu")
     (tstamp eb028c52-d514-4d3d-a111-06ffbc267bed)
-    (at 116 78.25 -90)
+    (at 168.5 78 -90)
     (descr "TO-92L leads in-line (large body variant of TO-92), also known as TO-226, wide, drill 0.75mm (see https://www.diodes.com/assets/Package-Files/TO92L.pdf and http://www.ti.com/lit/an/snoa059/snoa059.pdf)")
     (tags "TO-92L Molded Narrow transistor")
     (property "Sheetfile" "MCU.kicad_sch")
@@ -4526,7 +4526,7 @@
 
   (footprint "Capacitor_SMD:C_1206_3216Metric" (layer "F.Cu")
     (tstamp eb18815d-b7f6-4c14-8308-2bfe473e4d22)
-    (at 218.34 59.315)
+    (at 270.84 59.065)
     (descr "Capacitor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "capacitor")
     (property "Sheetfile" "MCU.kicad_sch")
@@ -4580,7 +4580,7 @@
 
   (footprint "sumec-smd_library:MODULE_ESP32-WROOM-32D" (layer "F.Cu")
     (tstamp eb43d973-3fd4-4f04-8f01-32b83ccb14fc)
-    (at 138.25 77.8425)
+    (at 190.75 77.5925)
     (property "Availability" "Not in stock")
     (property "Check_prices" "https://www.snapeda.com/parts/ESP32-WROOM-32/Espressif+Systems/view-part/?ref=eda")
     (property "Description" "\nBluetooth, WiFi 802.11b/g/n, Bluetooth v4.2 +EDR, Class 1, 2 and 3 Transceiver Module 2.4GHz ~ 2.5GHz Antenna Not Included, U.FL Surface Mount\n")
@@ -4782,10 +4782,10 @@
       (fill (thermal_gap 0.508) (thermal_bridge_width 0.508))
       (polygon
         (pts
-          (xy 129.25 65.0925)
-          (xy 147.25 65.0925)
-          (xy 147.25 71.3925)
-          (xy 129.25 71.3925)
+          (xy 181.75 64.8425)
+          (xy 199.75 64.8425)
+          (xy 199.75 71.1425)
+          (xy 181.75 71.1425)
         )
       )
     )
@@ -4796,10 +4796,10 @@
       (fill (thermal_gap 0.508) (thermal_bridge_width 0.508))
       (polygon
         (pts
-          (xy 129.25 65.0925)
-          (xy 147.25 65.0925)
-          (xy 147.25 71.3925)
-          (xy 129.25 71.3925)
+          (xy 181.75 64.8425)
+          (xy 199.75 64.8425)
+          (xy 199.75 71.1425)
+          (xy 181.75 71.1425)
         )
       )
     )
@@ -4812,7 +4812,7 @@
 
   (footprint "Capacitor_SMD:C_1206_3216Metric" (layer "F.Cu")
     (tstamp ebf4dc56-7562-4668-a49c-6ab7d4778125)
-    (at 218.34 69.365)
+    (at 270.84 69.115)
     (descr "Capacitor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "capacitor")
     (property "Sheetfile" "MCU.kicad_sch")
@@ -4866,7 +4866,7 @@
 
   (footprint "sumec-smd_library:MOLEX_47346-0001" (layer "F.Cu")
     (tstamp eee6a9e3-d108-4fdd-bc2d-279cc43efbf0)
-    (at 96.925 81.4875 -90)
+    (at 149.425 81.2375 -90)
     (property "Availability" "In Stock")
     (property "Check_prices" "https://www.snapeda.com/parts/USB3090-30-A/Global+Connector+Technology/view-part/?ref=eda")
     (property "Description" "\nUSB - micro AB USB 2.0 Receptacle Connector 5 Position Surface Mount, Right Angle; Through Hole, 2.35mm profile, 5 Pins, Horizontal, Bottom mount\n")
@@ -4953,7 +4953,7 @@
 
   (footprint "sumec_library:AMASS_XT30U-M_1x02_P5.0mm_Vertical" (layer "F.Cu")
     (tstamp f467fef2-0bc8-4b06-9dac-a035e7d012c6)
-    (at 176.5 91.75 90)
+    (at 229 91.5 90)
     (descr "Connector XT30 Vertical Cable Male, https://www.tme.eu/en/Document/3cbfa5cfa544d79584972dd5234a409e/XT30U%20SPEC.pdf")
     (tags "RC Connector XT30")
     (property "Arrow Part Number" "")
@@ -5046,7 +5046,7 @@
 
   (footprint "Button_Switch_SMD:SW_SPST_B3U-1000P" (layer "F.Cu")
     (tstamp f97ac165-545e-4d69-b075-928811c90dbc)
-    (at 218.44 88.615)
+    (at 270.94 88.365)
     (descr "Ultra-small-sized Tactile Switch with High Contact Reliability, Top-actuated Model, without Ground Terminal, without Boss")
     (tags "Tactile Switch")
     (property "Sheetfile" "MECHANICS.kicad_sch")
@@ -5110,7 +5110,7 @@
 
   (footprint "Capacitor_SMD:C_1206_3216Metric" (layer "F.Cu")
     (tstamp fc2e87ab-a70b-41fd-827c-b18d4ca18fe3)
-    (at 218.34 76.065)
+    (at 270.84 75.815)
     (descr "Capacitor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "capacitor")
     (property "Sheetfile" "MCU.kicad_sch")
@@ -5164,7 +5164,7 @@
 
   (footprint "Capacitor_SMD:C_1206_3216Metric" (layer "F.Cu")
     (tstamp fd94655c-1e7e-45f8-a656-ab65b746c640)
-    (at 218.34 72.715)
+    (at 270.84 72.465)
     (descr "Capacitor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "capacitor")
     (property "Sheetfile" "MCU.kicad_sch")
@@ -5218,7 +5218,7 @@
 
   (footprint "sumec-smd_library:QRE1113GR-(smd)" (layer "B.Cu")
     (tstamp 12af4cc4-f6fa-4518-ba59-36ae9a237c9c)
-    (at 99.5 105.5)
+    (at 152 105.25)
     (property "Field2" "")
     (property "Sheetfile" "SENSORS.kicad_sch")
     (property "Sheetname" "SENSORS")
@@ -5278,7 +5278,7 @@
 
   (footprint "sumec-smd_library:QRE1113GR-(smd)" (layer "B.Cu")
     (tstamp a9634278-1e89-4b23-9d25-52907182a2b0)
-    (at 176.6 105.475)
+    (at 229.1 105.225)
     (property "Field2" "")
     (property "Sheetfile" "SENSORS.kicad_sch")
     (property "Sheetname" "SENSORS")
@@ -5336,23 +5336,301 @@
       (net 1 "GND") (pintype "open_emitter") (tstamp f8970953-696f-409f-8d00-e7600308b3e7))
   )
 
-  (gr_rect (start 95.5 59.75) (end 180.5 109.75)
+  (gr_line (start 1143.349548 -302.558898) (end 1133.895508 -293.104797)
+    (stroke (width 0.224394) (type solid)) (layer "Edge.Cuts") (tstamp 028e41de-50f9-4bb9-9cd7-ff18957e33c8))
+  (gr_line (start 48.951992 64.313262) (end 52.063262 61.201992)
+    (stroke (width 0.2) (type solid)) (layer "Edge.Cuts") (tstamp 0d210783-860b-410c-aeff-0572783c4121))
+  (gr_line (start 131.265344 68.944811) (end 130.133973 70.076182)
+    (stroke (width 0.2) (type solid)) (layer "Edge.Cuts") (tstamp 0f6a638f-2804-45c0-98bb-6c3bb84f0a3f))
+  (gr_line (start 131.5 60.349) (end 128.6 60.349)
+    (stroke (width 0.2) (type solid)) (layer "Edge.Cuts") (tstamp 1125561e-8ed2-4e97-bb1e-da7dcc5e0326))
+  (gr_line (start 90.7 57.75) (end 90.7 58.75)
+    (stroke (width 0.2) (type solid)) (layer "Edge.Cuts") (tstamp 12e11af7-02dc-4519-8c3d-1c82556ea3cc))
+  (gr_line (start 1080.420715 -365.487731) (end 1143.349548 -302.558898)
+    (stroke (width 0.224394) (type solid)) (layer "Edge.Cuts") (tstamp 160bcdd7-2244-41b0-8d56-97a148e31614))
+  (gr_line (start 368.172294 -454.600631) (end 368.172294 381.031769)
+    (stroke (width 0.224394) (type solid)) (layer "Edge.Cuts") (tstamp 165784ac-af1d-44ab-82be-a5c93ca05eee))
+  (gr_line (start 804.372406 -396.106338) (end 804.372406 -387.75)
+    (stroke (width 0.224394) (type solid)) (layer "Edge.Cuts") (tstamp 17c60f0e-ff2a-486c-9ca4-deefa23a3e5e))
+  (gr_line (start 481.511314 -367.260345) (end 487.420112 -361.351531)
+    (stroke (width 0.224394) (type solid)) (layer "Edge.Cuts") (tstamp 1ae8f959-74cd-47da-a992-76070944b863))
+  (gr_line (start 368.172294 381.031769) (end 1203.804748 381.031769)
+    (stroke (width 0.224394) (type solid)) (layer "Edge.Cuts") (tstamp 1b3aa0a8-0f0e-43fe-8591-1d1a3fb39929))
+  (gr_line (start 124.936738 61.201992) (end 128.048008 64.313262)
+    (stroke (width 0.2) (type solid)) (layer "Edge.Cuts") (tstamp 1e2f6296-df9a-4923-93cb-7f8c574d69ef))
+  (gr_line (start 450.899894 -404.462677) (end 450.899894 -374.388275)
+    (stroke (width 0.224394) (type solid)) (layer "Edge.Cuts") (tstamp 203979ce-51c8-46b3-bdaa-2737a3c8c690))
+  (gr_line (start 1116.464477 -341.261566) (end 1110.555664 -335.352752)
+    (stroke (width 0.224394) (type solid)) (layer "Edge.Cuts") (tstamp 23b3643f-d8c3-4838-88ea-7572be18332f))
+  (gr_line (start 42.5 117.75) (end 42.5 55.75)
+    (stroke (width 0.2) (type solid)) (layer "Edge.Cuts") (tstamp 245e6ca6-95e7-4911-ba02-2ec48c70a36d))
+  (gr_line (start 426.666557 -374.388275) (end 426.666557 -404.462677)
+    (stroke (width 0.224394) (type solid)) (layer "Edge.Cuts") (tstamp 25b3ac0f-bb54-49a2-94d4-e9d3fb7580b5))
+  (gr_line (start 1121.077087 -374.388275) (end 1121.077087 -404.462677)
+    (stroke (width 0.224394) (type solid)) (layer "Edge.Cuts") (tstamp 262d784f-7ec0-44a1-b12d-29287524ddc9))
+  (gr_line (start 38.5 150.75) (end 138.5 150.75)
+    (stroke (width 0.2) (type solid)) (layer "Edge.Cuts") (tstamp 275d6fed-7b75-4dfc-8afe-1900f5c2bdc7))
+  (gr_line (start 50.295495 66.646714) (end 57.826182 59.116027)
+    (stroke (width 0.2) (type solid)) (layer "Edge.Cuts") (tstamp 27c1b87b-df2a-4ef7-80a3-0b35fa94d330))
+  (gr_line (start 124.229631 61.909099) (end 124.936738 61.201992)
+    (stroke (width 0.2) (type solid)) (layer "Edge.Cuts") (tstamp 29517d8d-bfeb-487c-bc16-a0869df289ad))
+  (gr_line (start 426.666557 -404.462677) (end 450.899894 -404.462677)
+    (stroke (width 0.224394) (type solid)) (layer "Edge.Cuts") (tstamp 2e6679f6-ae3e-4163-a0ef-1691edc8347a))
+  (gr_line (start 87.05 148.961981) (end 87.05 145.362981)
+    (stroke (width 0.2) (type solid)) (layer "Edge.Cuts") (tstamp 31345c61-26d0-4cb4-91df-548c1b6905c5))
+  (gr_line (start 96.25 58.75) (end 96.25 60.35)
+    (stroke (width 0.2) (type solid)) (layer "Edge.Cuts") (tstamp 35dc86f8-eadd-403a-9287-7e86d9b9ca7b))
+  (gr_line (start 712.45285 -374.388275) (end 712.45285 -404.462677)
+    (stroke (width 0.224394) (type solid)) (layer "Edge.Cuts") (tstamp 3a75b5a9-893b-4f23-98f2-bbae892b1c46))
+  (gr_line (start 38.5 50.75) (end 38.5 150.75)
+    (stroke (width 0.2) (type solid)) (layer "Edge.Cuts") (tstamp 3aacda6e-0262-48f8-9f12-949203170419))
+  (gr_line (start 1203.804748 381.031769) (end 1203.804748 -454.600631)
+    (stroke (width 0.224394) (type solid)) (layer "Edge.Cuts") (tstamp 3bbe2fc0-4291-47ef-99c7-9d46a55a919a))
+  (gr_line (start 798.105163 336.016144) (end 798.105163 366.090485)
+    (stroke (width 0.224394) (type solid)) (layer "Edge.Cuts") (tstamp 3d224414-afaf-4107-b65b-08e9de97d30a))
+  (gr_line (start 134.5 117.75) (end 42.5 117.75)
+    (stroke (width 0.2) (type solid)) (layer "Edge.Cuts") (tstamp 431345b5-5516-4629-b7e5-7268ab09802c))
+  (gr_line (start 89.95 148.961981) (end 87.05 148.961981)
+    (stroke (width 0.2) (type solid)) (layer "Edge.Cuts") (tstamp 450101c3-4f72-4e4d-8b14-6ab87407d5cd))
+  (gr_line (start 1121.077087 -404.462677) (end 1145.310425 -404.462677)
+    (stroke (width 0.224394) (type solid)) (layer "Edge.Cuts") (tstamp 4920db3b-e51f-4386-9a33-5b6439e06e85))
+  (gr_line (start 85.6 58.75) (end 96.25 58.75)
+    (stroke (width 0.2) (type solid)) (layer "Edge.Cuts") (tstamp 4c3e23c4-e386-4acd-b66b-e30e891fd4bb))
+  (gr_line (start 466.739273 -321.762542) (end 529.668121 -384.691406)
+    (stroke (width 0.224394) (type solid)) (layer "Edge.Cuts") (tstamp 504cf9e4-0cd6-484b-891b-4482f67ee05c))
+  (gr_line (start 1145.310425 -404.462677) (end 1145.310425 -374.388275)
+    (stroke (width 0.224394) (type solid)) (layer "Edge.Cuts") (tstamp 52314dee-a647-41b8-a92e-54eb821d482d))
+  (gr_line (start 457.285164 -331.216644) (end 466.739273 -321.762542)
+    (stroke (width 0.224394) (type solid)) (layer "Edge.Cuts") (tstamp 54cabce9-4db7-42fc-b508-870673e1f09e))
+  (gr_line (start 1133.895508 -293.104797) (end 1070.966675 -356.03366)
+    (stroke (width 0.224394) (type solid)) (layer "Edge.Cuts") (tstamp 555b2c86-2d04-4969-9355-99177f4095c5))
+  (gr_line (start 42.5 55.75) (end 134.5 55.75)
+    (stroke (width 0.2) (type solid)) (layer "Edge.Cuts") (tstamp 56b66afe-830b-447f-b4d9-c8d07dfe8233))
+  (gr_line (start 89.95 145.362981) (end 89.95 148.961981)
+    (stroke (width 0.2) (type solid)) (layer "Edge.Cuts") (tstamp 5d3cf7cd-5e99-4c4a-b2c3-1750a0157cc0))
+  (gr_line (start 49.659099 65.020369) (end 48.951992 64.313262)
+    (stroke (width 0.2) (type solid)) (layer "Edge.Cuts") (tstamp 65b1ffa4-218b-4da1-be28-05c6960d49d7))
+  (gr_line (start 1170.379394 105.273041) (end 401.597587 105.273041)
+    (stroke (width 0.224394) (type solid)) (layer "Edge.Cuts") (tstamp 68b75c9a-6046-49a6-a9d3-be2b0bac8e55))
+  (gr_line (start 48.4 60.349) (end 45.5 60.349)
+    (stroke (width 0.2) (type solid)) (layer "Edge.Cuts") (tstamp 6b89e6e9-c7c9-4faa-8528-2ac494d31c54))
+  (gr_line (start 82.6 56.75) (end 82.6 60.349)
+    (stroke (width 0.2) (type solid)) (layer "Edge.Cuts") (tstamp 6fb4fe84-871b-40ef-88f2-e0615017617e))
+  (gr_line (start 850.75 -387.75) (end 850.75 -374.379882)
+    (stroke (width 0.224394) (type solid)) (layer "Edge.Cuts") (tstamp 6fcf3de5-214a-4df4-8b47-78c5de6356ac))
+  (gr_line (start 96.25 60.35) (end 85.6 60.35)
+    (stroke (width 0.2) (type solid)) (layer "Edge.Cuts") (tstamp 7084fb25-cea3-477c-b260-d1275391686b))
+  (gr_line (start 529.668121 -384.691406) (end 520.21402 -394.145477)
+    (stroke (width 0.224394) (type solid)) (layer "Edge.Cuts") (tstamp 7151d086-f984-4839-952e-8d4f1fed877a))
+  (gr_line (start 138.5 150.75) (end 138.5 50.75)
+    (stroke (width 0.2) (type solid)) (layer "Edge.Cuts") (tstamp 7592e741-e9c4-4d5a-a1e6-fb24ee979820))
+  (gr_line (start 79.7 56.75) (end 82.6 56.75)
+    (stroke (width 0.2) (type solid)) (layer "Edge.Cuts") (tstamp 7837ea7a-222d-48d9-94ae-5a626c3fe74c))
+  (gr_line (start 1084.556823 -361.351531) (end 1090.465637 -367.260345)
+    (stroke (width 0.224394) (type solid)) (layer "Edge.Cuts") (tstamp 7aa33237-600e-4a7a-bc96-a8fdff38b595))
+  (gr_line (start 761.755127 -387.75) (end 850.75 -387.75)
+    (stroke (width 0.224394) (type solid)) (layer "Edge.Cuts") (tstamp 8cbb4083-5c1f-4e75-97b7-308c5e91c48b))
+  (gr_line (start 1090.465637 -367.260345) (end 1116.464477 -341.261566)
+    (stroke (width 0.224394) (type solid)) (layer "Edge.Cuts") (tstamp 905151b8-9edc-4432-86df-3b7e9fdece2a))
+  (gr_line (start 134.5 55.75) (end 134.5 117.75)
+    (stroke (width 0.2) (type solid)) (layer "Edge.Cuts") (tstamp 9317ff43-cce4-441c-afcf-9d75cc0a2bd5))
+  (gr_line (start 850.75 -374.379882) (end 761.755127 -374.379882)
+    (stroke (width 0.224394) (type solid)) (layer "Edge.Cuts") (tstamp 96615b59-66fc-40ef-a4a7-eb9a66785891))
+  (gr_line (start 455.512527 -341.261566) (end 481.511314 -367.260345)
+    (stroke (width 0.224394) (type solid)) (layer "Edge.Cuts") (tstamp 999bb902-4eb6-4d5c-98b3-7423b890f4d4))
+  (gr_line (start 87.05 145.362981) (end 89.95 145.362981)
+    (stroke (width 0.2) (type solid)) (layer "Edge.Cuts") (tstamp a0e65edb-488d-4e92-ad80-906796823969))
+  (gr_line (start 48.4 56.75) (end 48.4 60.349)
+    (stroke (width 0.2) (type solid)) (layer "Edge.Cuts") (tstamp a12e95b6-9b63-4951-9b40-e4b7fe452a61))
+  (gr_line (start 1203.804748 -454.600631) (end 368.172294 -454.600631)
+    (stroke (width 0.224394) (type solid)) (layer "Edge.Cuts") (tstamp a1dfaf50-8b98-486a-b386-ecec4720a878))
+  (gr_line (start 86.3 57.75) (end 90.7 57.75)
+    (stroke (width 0.2) (type solid)) (layer "Edge.Cuts") (tstamp a423d960-1478-4e63-aed8-dfe9b8742e60))
+  (gr_line (start 56.694811 57.984656) (end 49.164124 65.515344)
+    (stroke (width 0.2) (type solid)) (layer "Edge.Cuts") (tstamp a42c7286-f457-4cf9-863c-9d7a6850df72))
+  (gr_rect (start 162.25 117.25) (end 247.25 167.25)
     (stroke (width 0.1) (type default)) (fill none) (layer "Edge.Cuts") (tstamp a5230a82-d5ef-46f5-b120-6aea196ececa))
+  (gr_line (start 450.899894 -374.388275) (end 426.666557 -374.388275)
+    (stroke (width 0.224394) (type solid)) (layer "Edge.Cuts") (tstamp a6907a55-48f4-4771-99f4-03ef882391f1))
+  (gr_line (start 128.6 60.349) (end 128.6 56.75)
+    (stroke (width 0.2) (type solid)) (layer "Edge.Cuts") (tstamp a72d73b6-14f9-4537-a2b7-89fc36bd3072))
+  (gr_line (start 130.133973 70.076182) (end 122.603286 62.545495)
+    (stroke (width 0.2) (type solid)) (layer "Edge.Cuts") (tstamp a8a9f321-7410-4bfb-888b-8867f408a630))
+  (gr_line (start 79.7 60.349) (end 79.7 56.75)
+    (stroke (width 0.2) (type solid)) (layer "Edge.Cuts") (tstamp b2dd12b7-2eeb-4e25-b289-b5f4aae2bbb9))
+  (gr_line (start 1145.310425 -374.388275) (end 1121.077087 -374.388275)
+    (stroke (width 0.224394) (type solid)) (layer "Edge.Cuts") (tstamp b39bb9b4-5a66-4693-9d2c-70338337d3a7))
+  (gr_line (start 52.063262 61.201992) (end 52.770369 61.909099)
+    (stroke (width 0.2) (type solid)) (layer "Edge.Cuts") (tstamp b4f70cce-5ec8-47e2-b45b-6ff857feb3a4))
+  (gr_line (start 128.048008 64.313262) (end 127.340901 65.020369)
+    (stroke (width 0.2) (type solid)) (layer "Edge.Cuts") (tstamp b942291c-c12d-42c8-91d6-28c10f9fd786))
+  (gr_line (start 1070.966675 -356.03366) (end 1080.420715 -365.487731)
+    (stroke (width 0.224394) (type solid)) (layer "Edge.Cuts") (tstamp baf3ee68-71b8-4713-8cdf-f691e5569042))
+  (gr_line (start 767.604583 -396.106338) (end 804.372406 -396.106338)
+    (stroke (width 0.224394) (type solid)) (layer "Edge.Cuts") (tstamp bd94946a-a82c-4ba3-b8ac-cef6cea7d0e0))
+  (gr_line (start 761.755127 -374.379882) (end 761.755127 -387.75)
+    (stroke (width 0.224394) (type solid)) (layer "Edge.Cuts") (tstamp bffe9483-842c-4a83-be7d-23a941f5040b))
+  (gr_line (start 45.5 60.349) (end 45.5 56.75)
+    (stroke (width 0.2) (type solid)) (layer "Edge.Cuts") (tstamp c44f4d84-b5f7-4510-a507-986df17f2127))
+  (gr_line (start 82.6 60.349) (end 79.7 60.349)
+    (stroke (width 0.2) (type solid)) (layer "Edge.Cuts") (tstamp c63f97de-77f2-4546-a6f1-fc51c1bcc274))
+  (gr_line (start 712.45285 -404.462677) (end 736.686157 -404.462677)
+    (stroke (width 0.224394) (type solid)) (layer "Edge.Cuts") (tstamp c65236df-aec7-4c5e-8a74-e163dc08900c))
+  (gr_line (start 773.871795 336.016144) (end 798.105163 336.016144)
+    (stroke (width 0.224394) (type solid)) (layer "Edge.Cuts") (tstamp c6716a00-96fe-4dd4-969c-67b799a8152f))
+  (gr_line (start 767.604583 -387.75) (end 767.604583 -396.106338)
+    (stroke (width 0.224394) (type solid)) (layer "Edge.Cuts") (tstamp c7da7ea5-12c5-4708-949f-a29afa3846a5))
+  (gr_line (start 45.5 56.75) (end 48.4 56.75)
+    (stroke (width 0.2) (type solid)) (layer "Edge.Cuts") (tstamp cb7ade82-56d2-45c3-a3cd-98f242af1e88))
+  (gr_line (start 57.826182 59.116027) (end 56.694811 57.984656)
+    (stroke (width 0.2) (type solid)) (layer "Edge.Cuts") (tstamp cb7e1571-0752-49ca-9e69-3a1d1670b9b4))
+  (gr_line (start 798.105163 366.090485) (end 773.871795 366.090485)
+    (stroke (width 0.224394) (type solid)) (layer "Edge.Cuts") (tstamp cd42709d-6a5f-483f-9608-49b900fab174))
+  (gr_line (start 122.603286 62.545495) (end 123.734656 61.414124)
+    (stroke (width 0.2) (type solid)) (layer "Edge.Cuts") (tstamp ce0f9fd0-f65b-4fde-8162-1cecc71f1636))
+  (gr_line (start 1170.379394 -412.819015) (end 1170.379394 105.273041)
+    (stroke (width 0.224394) (type solid)) (layer "Edge.Cuts") (tstamp d0420f91-825e-442a-9629-fb77b130bf7e))
+  (gr_line (start 49.164124 65.515344) (end 50.295495 66.646714)
+    (stroke (width 0.2) (type solid)) (layer "Edge.Cuts") (tstamp d1d77dbe-bb98-4cae-8e70-f6f5978eee80))
+  (gr_line (start 131.5 56.75) (end 131.5 60.349)
+    (stroke (width 0.2) (type solid)) (layer "Edge.Cuts") (tstamp d6c73f3a-4dd4-43cb-afa2-b03cc6636b75))
+  (gr_line (start 138.5 50.75) (end 38.5 50.75)
+    (stroke (width 0.2) (type solid)) (layer "Edge.Cuts") (tstamp dad70da0-242e-4da0-a371-35461228ea9c))
+  (gr_line (start 128.6 56.75) (end 131.5 56.75)
+    (stroke (width 0.2) (type solid)) (layer "Edge.Cuts") (tstamp df974cbb-552f-4ea2-a794-56076dca86b7))
+  (gr_line (start 736.686157 -404.462677) (end 736.686157 -374.388275)
+    (stroke (width 0.224394) (type solid)) (layer "Edge.Cuts") (tstamp e19dc861-3cff-4ea3-ada7-d235efc7a97f))
+  (gr_line (start 85.6 60.35) (end 85.6 58.75)
+    (stroke (width 0.2) (type solid)) (layer "Edge.Cuts") (tstamp e43c061e-6e29-40bf-a90a-f0a093076884))
+  (gr_line (start 86.3 58.75) (end 86.3 57.75)
+    (stroke (width 0.2) (type solid)) (layer "Edge.Cuts") (tstamp e6c02bc5-c9d3-4889-8ff0-6d4940982f73))
+  (gr_line (start 520.21402 -394.145477) (end 457.285164 -331.216644)
+    (stroke (width 0.224394) (type solid)) (layer "Edge.Cuts") (tstamp e8157974-9135-43c1-8fba-6a6c57d8cf6d))
+  (gr_line (start 736.686157 -374.388275) (end 712.45285 -374.388275)
+    (stroke (width 0.224394) (type solid)) (layer "Edge.Cuts") (tstamp ec350384-eea1-4885-aebc-c22e7ced736a))
+  (gr_line (start 461.421341 -335.352752) (end 455.512527 -341.261566)
+    (stroke (width 0.224394) (type solid)) (layer "Edge.Cuts") (tstamp ecc7a74c-4e15-4378-8ad9-0496086496e4))
+  (gr_line (start 401.597587 105.273041) (end 401.597587 -412.819015)
+    (stroke (width 0.224394) (type solid)) (layer "Edge.Cuts") (tstamp f20ad3d5-6773-4417-8551-c473324fcf33))
+  (gr_line (start 123.734656 61.414124) (end 131.265344 68.944811)
+    (stroke (width 0.2) (type solid)) (layer "Edge.Cuts") (tstamp f27e1d15-34d0-4dbd-a0e8-9caf971d745c))
+  (gr_line (start 401.597587 -412.819015) (end 1170.379394 -412.819015)
+    (stroke (width 0.224394) (type solid)) (layer "Edge.Cuts") (tstamp f826b668-9031-43f1-96a6-10a025807608))
+  (gr_line (start 773.871795 366.090485) (end 773.871795 336.016144)
+    (stroke (width 0.224394) (type solid)) (layer "Edge.Cuts") (tstamp f9722dc7-a037-4643-8392-14a434e7b10e))
   (gr_text "QRE budeme muset dát na samostatnu plošku nebo zvětšit rozměry pcb" (at 51 18.25) (layer "F.Cu") (tstamp d01a7c27-c21e-4ce5-b47a-3b118c0a0ca3)
     (effects (font (size 3 3) (thickness 0.5) bold) (justify left bottom))
   )
 
-  (segment (start 163.62 64.88) (end 163.62 62) (width 0.508) (layer "F.Cu") (net 5) (tstamp 1f2b034f-4892-44d3-b2af-7c9c997ccc9a))
-  (segment (start 163.25 65.25) (end 163.62 64.88) (width 0.508) (layer "F.Cu") (net 5) (tstamp 8214a199-2cf0-4efe-a6ac-80d8d00df497))
-  (segment (start 163.25 68.75) (end 163.25 65.25) (width 0.508) (layer "F.Cu") (net 5) (tstamp d13fc50d-ec42-451a-98e8-e9fe74c182bc))
-  (segment (start 160.75 68.75) (end 160.75 65.25) (width 0.508) (layer "F.Cu") (net 6) (tstamp 1fadff54-69ce-4ae0-bdd1-ebd544100269))
-  (segment (start 160.75 65.25) (end 161.08 64.92) (width 0.508) (layer "F.Cu") (net 6) (tstamp 9cfca748-96d7-4648-bf5a-4a4f9215dcca))
-  (segment (start 161.08 64.92) (end 161.08 62) (width 0.508) (layer "F.Cu") (net 6) (tstamp bee8878b-04c3-4de4-9d58-f1abc6b090ad))
-  (segment (start 159.5 68.75) (end 159.5 65.25) (width 0.508) (layer "F.Cu") (net 7) (tstamp 41d50429-80ae-4b20-afce-e581697257b6))
-  (segment (start 158.54 64.29) (end 158.54 62) (width 0.508) (layer "F.Cu") (net 7) (tstamp b3bd411f-bc88-45ec-bea4-39048db2faa3))
-  (segment (start 159.5 65.25) (end 158.54 64.29) (width 0.508) (layer "F.Cu") (net 7) (tstamp b85a902b-5b40-463f-a6b1-bce0d26a09c4))
-  (segment (start 156.75 68.75) (end 156.75 65.5) (width 0.508) (layer "F.Cu") (net 8) (tstamp 7f97a1da-e6df-4487-b2c0-1887693dd365))
-  (segment (start 156.75 65.5) (end 156 64.75) (width 0.508) (layer "F.Cu") (net 8) (tstamp a6837551-1c19-46ec-ba03-d57c3928b128))
-  (segment (start 156 64.75) (end 156 62) (width 0.508) (layer "F.Cu") (net 8) (tstamp ca12e46b-fa44-434b-9ae5-c24b757985fc))
+  (segment (start 216.12 64.63) (end 216.12 61.75) (width 0.508) (layer "F.Cu") (net 5) (tstamp 1f2b034f-4892-44d3-b2af-7c9c997ccc9a))
+  (segment (start 215.75 65) (end 216.12 64.63) (width 0.508) (layer "F.Cu") (net 5) (tstamp 8214a199-2cf0-4efe-a6ac-80d8d00df497))
+  (segment (start 215.75 68.5) (end 215.75 65) (width 0.508) (layer "F.Cu") (net 5) (tstamp d13fc50d-ec42-451a-98e8-e9fe74c182bc))
+  (segment (start 213.25 68.5) (end 213.25 65) (width 0.508) (layer "F.Cu") (net 6) (tstamp 1fadff54-69ce-4ae0-bdd1-ebd544100269))
+  (segment (start 213.25 65) (end 213.58 64.67) (width 0.508) (layer "F.Cu") (net 6) (tstamp 9cfca748-96d7-4648-bf5a-4a4f9215dcca))
+  (segment (start 213.58 64.67) (end 213.58 61.75) (width 0.508) (layer "F.Cu") (net 6) (tstamp bee8878b-04c3-4de4-9d58-f1abc6b090ad))
+  (segment (start 212 68.5) (end 212 65) (width 0.508) (layer "F.Cu") (net 7) (tstamp 41d50429-80ae-4b20-afce-e581697257b6))
+  (segment (start 211.04 64.04) (end 211.04 61.75) (width 0.508) (layer "F.Cu") (net 7) (tstamp b3bd411f-bc88-45ec-bea4-39048db2faa3))
+  (segment (start 212 65) (end 211.04 64.04) (width 0.508) (layer "F.Cu") (net 7) (tstamp b85a902b-5b40-463f-a6b1-bce0d26a09c4))
+  (segment (start 209.25 68.5) (end 209.25 65.25) (width 0.508) (layer "F.Cu") (net 8) (tstamp 7f97a1da-e6df-4487-b2c0-1887693dd365))
+  (segment (start 209.25 65.25) (end 208.5 64.5) (width 0.508) (layer "F.Cu") (net 8) (tstamp a6837551-1c19-46ec-ba03-d57c3928b128))
+  (segment (start 208.5 64.5) (end 208.5 61.75) (width 0.508) (layer "F.Cu") (net 8) (tstamp ca12e46b-fa44-434b-9ae5-c24b757985fc))
 
+  (group "" (id 3433f43c-f5df-4fe3-a6bf-657e28e3bdb0)
+    (members
+      0d210783-860b-410c-aeff-0572783c4121
+      0f6a638f-2804-45c0-98bb-6c3bb84f0a3f
+      1125561e-8ed2-4e97-bb1e-da7dcc5e0326
+      12e11af7-02dc-4519-8c3d-1c82556ea3cc
+      1e2f6296-df9a-4923-93cb-7f8c574d69ef
+      245e6ca6-95e7-4911-ba02-2ec48c70a36d
+      275d6fed-7b75-4dfc-8afe-1900f5c2bdc7
+      27c1b87b-df2a-4ef7-80a3-0b35fa94d330
+      29517d8d-bfeb-487c-bc16-a0869df289ad
+      31345c61-26d0-4cb4-91df-548c1b6905c5
+      35dc86f8-eadd-403a-9287-7e86d9b9ca7b
+      3aacda6e-0262-48f8-9f12-949203170419
+      431345b5-5516-4629-b7e5-7268ab09802c
+      450101c3-4f72-4e4d-8b14-6ab87407d5cd
+      4c3e23c4-e386-4acd-b66b-e30e891fd4bb
+      56b66afe-830b-447f-b4d9-c8d07dfe8233
+      5d3cf7cd-5e99-4c4a-b2c3-1750a0157cc0
+      65b1ffa4-218b-4da1-be28-05c6960d49d7
+      6b89e6e9-c7c9-4faa-8528-2ac494d31c54
+      6fb4fe84-871b-40ef-88f2-e0615017617e
+      7084fb25-cea3-477c-b260-d1275391686b
+      7592e741-e9c4-4d5a-a1e6-fb24ee979820
+      7837ea7a-222d-48d9-94ae-5a626c3fe74c
+      9317ff43-cce4-441c-afcf-9d75cc0a2bd5
+      a0e65edb-488d-4e92-ad80-906796823969
+      a12e95b6-9b63-4951-9b40-e4b7fe452a61
+      a423d960-1478-4e63-aed8-dfe9b8742e60
+      a42c7286-f457-4cf9-863c-9d7a6850df72
+      a72d73b6-14f9-4537-a2b7-89fc36bd3072
+      a8a9f321-7410-4bfb-888b-8867f408a630
+      b2dd12b7-2eeb-4e25-b289-b5f4aae2bbb9
+      b4f70cce-5ec8-47e2-b45b-6ff857feb3a4
+      b942291c-c12d-42c8-91d6-28c10f9fd786
+      c44f4d84-b5f7-4510-a507-986df17f2127
+      c63f97de-77f2-4546-a6f1-fc51c1bcc274
+      cb7ade82-56d2-45c3-a3cd-98f242af1e88
+      cb7e1571-0752-49ca-9e69-3a1d1670b9b4
+      ce0f9fd0-f65b-4fde-8162-1cecc71f1636
+      d1d77dbe-bb98-4cae-8e70-f6f5978eee80
+      d6c73f3a-4dd4-43cb-afa2-b03cc6636b75
+      dad70da0-242e-4da0-a371-35461228ea9c
+      df974cbb-552f-4ea2-a794-56076dca86b7
+      e43c061e-6e29-40bf-a90a-f0a093076884
+      e6c02bc5-c9d3-4889-8ff0-6d4940982f73
+      f27e1d15-34d0-4dbd-a0e8-9caf971d745c
+    )
+  )
+  (group "" (id 4f6d4943-6d19-4c5c-830e-fe72174278dc)
+    (members
+      028e41de-50f9-4bb9-9cd7-ff18957e33c8
+      160bcdd7-2244-41b0-8d56-97a148e31614
+      165784ac-af1d-44ab-82be-a5c93ca05eee
+      17c60f0e-ff2a-486c-9ca4-deefa23a3e5e
+      1ae8f959-74cd-47da-a992-76070944b863
+      1b3aa0a8-0f0e-43fe-8591-1d1a3fb39929
+      203979ce-51c8-46b3-bdaa-2737a3c8c690
+      23b3643f-d8c3-4838-88ea-7572be18332f
+      25b3ac0f-bb54-49a2-94d4-e9d3fb7580b5
+      262d784f-7ec0-44a1-b12d-29287524ddc9
+      2e6679f6-ae3e-4163-a0ef-1691edc8347a
+      3a75b5a9-893b-4f23-98f2-bbae892b1c46
+      3bbe2fc0-4291-47ef-99c7-9d46a55a919a
+      3d224414-afaf-4107-b65b-08e9de97d30a
+      4920db3b-e51f-4386-9a33-5b6439e06e85
+      504cf9e4-0cd6-484b-891b-4482f67ee05c
+      52314dee-a647-41b8-a92e-54eb821d482d
+      54cabce9-4db7-42fc-b508-870673e1f09e
+      555b2c86-2d04-4969-9355-99177f4095c5
+      68b75c9a-6046-49a6-a9d3-be2b0bac8e55
+      6fcf3de5-214a-4df4-8b47-78c5de6356ac
+      7151d086-f984-4839-952e-8d4f1fed877a
+      7aa33237-600e-4a7a-bc96-a8fdff38b595
+      8cbb4083-5c1f-4e75-97b7-308c5e91c48b
+      905151b8-9edc-4432-86df-3b7e9fdece2a
+      96615b59-66fc-40ef-a4a7-eb9a66785891
+      999bb902-4eb6-4d5c-98b3-7423b890f4d4
+      a1dfaf50-8b98-486a-b386-ecec4720a878
+      a6907a55-48f4-4771-99f4-03ef882391f1
+      b39bb9b4-5a66-4693-9d2c-70338337d3a7
+      baf3ee68-71b8-4713-8cdf-f691e5569042
+      bd94946a-a82c-4ba3-b8ac-cef6cea7d0e0
+      bffe9483-842c-4a83-be7d-23a941f5040b
+      c65236df-aec7-4c5e-8a74-e163dc08900c
+      c6716a00-96fe-4dd4-969c-67b799a8152f
+      c7da7ea5-12c5-4708-949f-a29afa3846a5
+      cd42709d-6a5f-483f-9608-49b900fab174
+      d0420f91-825e-442a-9629-fb77b130bf7e
+      e19dc861-3cff-4ea3-ada7-d235efc7a97f
+      e8157974-9135-43c1-8fba-6a6c57d8cf6d
+      ec350384-eea1-4885-aebc-c22e7ced736a
+      ecc7a74c-4e15-4378-8ad9-0496086496e4
+      f20ad3d5-6773-4417-8551-c473324fcf33
+      f826b668-9031-43f1-96a6-10a025807608
+      f9722dc7-a037-4643-8392-14a434e7b10e
+    )
+  )
 )
