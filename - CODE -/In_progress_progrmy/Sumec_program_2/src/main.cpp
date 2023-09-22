@@ -1,32 +1,32 @@
 #include <Arduino.h>
-#include "Wire.h"
-#include <VL53L0X.h>
-#include "motors.h"
+#include "VL53L0X.h"
 #include "line.h"
 #include "laser.h"
+#include "motors.h"
 #include "IR.h"
 
-
-//defines for demo
-#define Button 13
 #define led 14
-int Sensor1 = 0;
-int Sensor2 = 0;
-int Sensor3 = 0;
-int SensorRange = 300;  //|sensor range setting||sensor range setting||sensor range setting||sensor range setting||sensor range setting|
-int Sensor = 0;
-int ButtonDown = 0;
 
 
-int Range = 300;
-int cas_zaznam = 0;
-int IRzaznam = 0;
+class minisumo_robot{
+  public:
+    minisumo_robot();
+    void utok();
+    void basic_utok();
+    void kalibrace();
+  
+  private:
+    int hodnota_cary = 1000;
+    int laser_number;
+    int Range = 300;
+    int cas_zaznam = 0;
+    int IRzaznam = 0;
+    int stop = 1;
 
-int stop = 1;
+};
 
-//void setup()
-void setup() {
-  MOTORS_Setup();
+minisumo_robot::minisumo_robot(){
+   MOTORS_Setup();
   LASER_Setup();
   pinMode(led, OUTPUT);
   Serial.begin(9600);
@@ -45,22 +45,14 @@ void setup() {
     delay(1);
   }
 
- //Serial.println(analogRead(39));
 }
 
-int laser_number;
-// promněná určující mód programu
-int Global_ModeSelectvar = 0;
-// určuje zdali je barva spíš bílá nebo černá
-int hodnota_cary = 1000;
-//void loop
-void loop() {
+void minisumo_robot::utok(){
 
-    
-  switch(Global_ModeSelectvar){
+}
 
-  case 0:
-    if(LINE_Get(1, hodnota_cary, 0) == 0 && LINE_Get(2, hodnota_cary, 0) == 0){
+void minisumo_robot::basic_utok(){
+  if(LINE_Get(1, hodnota_cary, 0) == 0 && LINE_Get(2, hodnota_cary, 0) == 0){
       
       //třídící proměná
       laser_number = 0;
@@ -165,11 +157,22 @@ void loop() {
       delay(500);
       cas_zaznam = 10;   
     }
-    break;
-
-    case 1:
-    // aklibrace sensoru cary
-    break;
-  }
 
 }
+
+void minisumo_robot::kalibrace(){
+
+}
+
+
+minisumo_robot sumec;
+
+void setup() {
+  // put your setup code here, to run once:
+
+}
+
+void loop() {
+  sumec.basic_utok();
+}
+
