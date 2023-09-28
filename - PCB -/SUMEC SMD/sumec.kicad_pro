@@ -604,6 +604,10 @@
     [
       "2febd48c-c6ec-477b-ac64-6fa98a41fff0",
       "POWER SUPPLY"
+    ],
+    [
+      "f1a33fea-e0cc-4aaf-be45-30cc41af4eee",
+      "EXTERNAL"
     ]
   ],
   "text_variables": {}
