@@ -22,6 +22,8 @@ class minisumo_robot{
     int cas_zaznam = 0;
     int IRzaznam = 0;
     int stop = 1;
+    int hodnota_kalibrace1;
+    int hodnota_kalibrace2;
 
 };
 
@@ -161,7 +163,12 @@ void minisumo_robot::basic_utok(){
 }
 
 void minisumo_robot::kalibrace(){
+  hodnota_cary = LINE_Get(2, hodnota_cary, 0);
+  while(hodnota_cary - LINE_Get(2, hodnota_cary, 0) == 240){
+    MOTORS_Go(255*-1, 255*-1);
+  }
 
+  hodnota_cary == LINE_Get(2, hodnota_cary, 0);
 }
 
 
