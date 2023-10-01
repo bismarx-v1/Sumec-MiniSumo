@@ -22,8 +22,7 @@ class minisumo_robot{
     int cas_zaznam = 0;
     int IRzaznam = 0;
     int stop = 1;
-    int hodnota_kalibrace1;
-    int hodnota_kalibrace2;
+
 
 };
 
