@@ -1,4 +1,5 @@
 #include <Arduino.h>
+
 #include "VL53L0X.h"
 #include "line.h"
 #include "laser.h"
@@ -22,7 +23,6 @@ class minisumo_robot{
     int cas_zaznam = 0;
     int IRzaznam = 0;
     int stop = 1;
-
 
 };
 
