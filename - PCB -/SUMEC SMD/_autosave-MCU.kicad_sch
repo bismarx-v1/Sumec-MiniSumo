@@ -2091,6 +2091,7 @@
 
   (no_connect (at 416.56 67.31) (uuid bcf85c9e-ce51-441d-bd2f-686823874df6))
   (no_connect (at 416.56 59.69) (uuid cf9d6673-50b9-4cc0-8627-6566d9177b66))
+  (no_connect (at 273.05 167.64) (uuid f38db542-4d0c-4e40-8c20-c8db114e778d))
 
   (wire (pts (xy 426.72 74.93) (xy 457.2 74.93))
     (stroke (width 0) (type default))
@@ -33550,6 +33551,11 @@
   (text "PUSH BUTTONS" (at 408.94 114.3 0)
     (effects (font (size 2 2) bold) (justify left bottom))
     (uuid afe75a95-5386-4c5c-9e8f-01a1c5c6a8d6)
+  )
+  (text "GPIO0 has an internal pullup resistor, so if it is left unconnected then it will pull high."
+    (at 41.91 80.01 0)
+    (effects (font (size 1.27 1.27)) (justify left bottom))
+    (uuid b24a476a-6555-46db-96da-1d272d3b3f49)
   )
   (text "Referenční board" (at 391.16 228.6 0)
     (effects (font (size 5 5) (thickness 1) bold italic) (justify left bottom))
