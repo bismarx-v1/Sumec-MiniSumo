@@ -1,6 +1,6 @@
 #include <Arduino.h>
+#include <VL53L0X.h>
 
-#include "VL53L0X.h"
 #include "line.h"
 #include "laser.h"
 #include "motors.h"
@@ -27,7 +27,7 @@ class minisumo_robot{
 };
 
 minisumo_robot::minisumo_robot(){
-   MOTORS_Setup();
+  MOTORS_Setup();
   LASER_Setup();
   pinMode(led, OUTPUT);
   Serial.begin(9600);
