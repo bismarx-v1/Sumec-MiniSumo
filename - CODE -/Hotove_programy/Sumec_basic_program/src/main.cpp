@@ -54,9 +54,11 @@ int laser_number;
 int Global_ModeSelectvar = 0;
 // určuje zdali je barva spíš bílá nebo černá
 int hodnota_cary = 1000;
-//hodnoty pro kalibraci
-int hodnota_cary_kalibrace;
-int tolerance_mereni = 100;    // tolerance mčření slouží k vyvážení nepřesnosti sensorů
+// hodnoty pro kalibraci
+int hodnota_cerne_kalibrace;
+int hodnota_bile_kalibrace;
+int kontrolni_hodnota_kalibrace;
+int tolerance_mereni = 100; // tolerance mčření slouží k vyvážení nepřesnosti sensorů
 // void loop
 void loop()
 {
@@ -73,7 +75,7 @@ void loop()
 
   Serial.println("global:");
   Serial.println(Global_ModeSelectvar);
-  
+
   switch (Global_ModeSelectvar)
   {
 
@@ -128,13 +130,13 @@ void loop()
         break;
 
       case 3:
-          MOTORS_Go(-255 / 2 * -1, 255 / 2 * -1);
-          Serial.println("strana1");
+        MOTORS_Go(-255 / 2 * -1, 255 / 2 * -1);
+        Serial.println("strana1");
         break;
 
       case 5:
-          MOTORS_Go(255 / 2 * -1, -255 / 2 * -1);
-          Serial.println("strana2");
+        MOTORS_Go(255 / 2 * -1, -255 / 2 * -1);
+        Serial.println("strana2");
         break;
 
       case 4:
@@ -190,16 +192,45 @@ void loop()
     MOTORS_Go(0, 0);
     delay(2000);
 
-    hodnota_cary_kalibrace = LINE_Get(2, hodnota_cary, 1);
-    Serial.println(hodnota_cary_kalibrace);
+    hodnota_cerne_kalibrace = LINE_Get(2, hodnota_cary, 1);
+    Serial.println(hodnota_cerne_kalibrace);
     delay(100);
 
-    while (hodnota_cary_kalibrace - LINE_Get(2, hodnota_cary, 1) <= hodnota_cary_kalibrace - tolerance_mereni)  
+    while (hodnota_cerne_kalibrace - LINE_Get(2, hodnota_cary, 1) <= hodnota_cerne_kalibrace - tolerance_mereni)
     {
       Serial.println(LINE_Get(2, hodnota_cary, 1));
       MOTORS_Go(255 * -1, 255 * -1);
     }
+    hodnota_bile_kalibrace = LINE_Get(2, hodnota_cary, 1);
 
+    kontrolni_hodnota_kalibrace = hodnota_cary;
+    hodnota_cary = hodnota_cerne_kalibrace / 2;
+
+    if (hodnota_bile_kalibrace > hodnota_cary) // pokud bude hraniční hodnota moc vysoká změní se hraniční hodnota na původní hodnotu
+    {
+      hodnota_cary = kontrolni_hodnota_kalibrace; // změna na původní hodnotu
+      MOTORS_Go(0,0);
+      Serial.println("kalibrace nevysla");
+      for (int i = 0; i == 10; i++)
+      {
+        digitalWrite(led, 1);
+        delay(1000);
+        digitalWrite(led, 0);
+        delay(1000);
+      }
+    }
+
+    else
+    {
+      MOTORS_Go(255,255);
+      Serial.print("Kalibrace úspěšně provedena, aktuální hraniční hodnota:");
+      Serial.println(hodnota_cary);
+
+      delay(250);
+    }
+
+    Serial.println("konec");
+    Global_ModeSelectvar = 0;
     break;
   }
 }
