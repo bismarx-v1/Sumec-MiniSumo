@@ -1590,23 +1590,6 @@
     )
   )
 
-  (sheet (at 115.57 106.68) (size 69.85 46.99)
-    (stroke (width 0.1524) (type solid) (color 0 0 0 1))
-    (fill (color 255 255 255 1.0000))
-    (uuid f1a33fea-e0cc-4aaf-be45-30cc41af4eee)
-    (property "Sheetname" "EXTERNAL" (at 132.08 133.35 0)
-      (effects (font (size 5 5) bold (color 0 0 0 1)) (justify left bottom))
-    )
-    (property "Sheetfile" "EXTERNAL.kicad_sch" (at 115.57 154.2546 0)
-      (effects (font (size 1.27 1.27) (color 0 0 0 1)) (justify left top))
-    )
-    (instances
-      (project "sumec"
-        (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385" (page "6"))
-      )
-    )
-  )
-
   (sheet_instances
     (path "/" (page "1"))
   )

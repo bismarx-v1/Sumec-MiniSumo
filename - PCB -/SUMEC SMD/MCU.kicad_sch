@@ -38104,7 +38104,7 @@
     (uuid 418aebd6-e3f9-463a-9580-42122cbb2d39)
   )
   (text "MICRO-B USB Connector" (at 355.6 156.21 0)
-    (effects (font (size 2 2)) (justify left bottom))
+    (effects (font (size 2 2) (thickness 0.4) bold italic) (justify left bottom))
     (uuid 4257251b-e907-42fa-bf6e-51f169efcdb6)
   )
   (text "USB - " (at 674.37 473.71 0)
@@ -38170,6 +38170,10 @@
     (effects (font (size 1.5 1.5) italic) (justify left bottom))
     (uuid b81d810a-5664-4b3f-8b61-dc468197e046)
   )
+  (text "USB - ESP CONNECTION" (at 355.6 163.83 0)
+    (effects (font (face "Arial Unicode MS") (size 2 2) (thickness 0.254) bold) (justify left bottom) (href "https://docs.espressif.com/projects/esp-idf/en/latest/esp32s3/get-started/establish-serial-connection.html"))
+    (uuid bd52c09b-70b0-4481-b619-925979139b95)
+  )
   (text "Referenční board" (at 509.27 454.66 0)
     (effects (font (size 5 5) (thickness 1) bold italic) (justify left bottom))
     (uuid c26fcd16-613f-4e23-a19c-7ac712c8d8d5)
@@ -38191,6 +38195,10 @@
     (at 54.61 246.38 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid e344603d-025f-43e5-8a8b-e656220e67a8)
+  )
+  (text "TF-LUNA MANUAL" (at 355.6 170.18 0)
+    (effects (font (face "Arial Unicode MS") (size 2 2) (thickness 0.254) bold) (justify left bottom) (href "https://www.waveshare.com/wiki/TF-Luna_LiDAR_Range_Sensor"))
+    (uuid e96abeff-3fbf-44ee-b415-439d0f9b3079)
   )
   (text "ESD protection" (at 449.58 184.15 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
@@ -38355,9 +38363,6 @@
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/11aa20d4-c4ff-49be-9179-c2911da50f67"
           (reference "#PWR04") (unit 1)
         )
-        (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/f1a33fea-e0cc-4aaf-be45-30cc41af4eee"
-          (reference "#PWR051") (unit 1)
-        )
       )
     )
   )
@@ -38407,9 +38412,6 @@
     (instances
       (project "sumec"
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/11aa20d4-c4ff-49be-9179-c2911da50f67"
-          (reference "#PWR037") (unit 1)
-        )
-        (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/f1a33fea-e0cc-4aaf-be45-30cc41af4eee"
           (reference "#PWR037") (unit 1)
         )
       )
@@ -38496,9 +38498,6 @@
     (instances
       (project "sumec"
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/11aa20d4-c4ff-49be-9179-c2911da50f67"
-          (reference "D1") (unit 1)
-        )
-        (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/f1a33fea-e0cc-4aaf-be45-30cc41af4eee"
           (reference "D1") (unit 1)
         )
       )
@@ -38680,9 +38679,6 @@
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/11aa20d4-c4ff-49be-9179-c2911da50f67"
           (reference "D5") (unit 1)
         )
-        (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/f1a33fea-e0cc-4aaf-be45-30cc41af4eee"
-          (reference "D5") (unit 1)
-        )
       )
     )
   )
@@ -38741,9 +38737,6 @@
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/11aa20d4-c4ff-49be-9179-c2911da50f67"
           (reference "D2") (unit 1)
         )
-        (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/f1a33fea-e0cc-4aaf-be45-30cc41af4eee"
-          (reference "D2") (unit 1)
-        )
       )
     )
   )
@@ -38768,9 +38761,6 @@
       (project "sumec"
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/11aa20d4-c4ff-49be-9179-c2911da50f67"
           (reference "#PWR01") (unit 1)
-        )
-        (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/f1a33fea-e0cc-4aaf-be45-30cc41af4eee"
-          (reference "#PWR027") (unit 1)
         )
       )
     )
@@ -38798,9 +38788,6 @@
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/11aa20d4-c4ff-49be-9179-c2911da50f67"
           (reference "SW4") (unit 1)
         )
-        (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/f1a33fea-e0cc-4aaf-be45-30cc41af4eee"
-          (reference "SW8") (unit 1)
-        )
       )
     )
   )
@@ -38826,9 +38813,6 @@
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/11aa20d4-c4ff-49be-9179-c2911da50f67"
           (reference "#PWR039") (unit 1)
         )
-        (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/f1a33fea-e0cc-4aaf-be45-30cc41af4eee"
-          (reference "#PWR044") (unit 1)
-        )
       )
     )
   )
@@ -38853,9 +38837,6 @@
     (instances
       (project "sumec"
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/11aa20d4-c4ff-49be-9179-c2911da50f67"
-          (reference "D4") (unit 1)
-        )
-        (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/f1a33fea-e0cc-4aaf-be45-30cc41af4eee"
           (reference "D4") (unit 1)
         )
       )
@@ -38889,9 +38870,6 @@
         )
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/11aa20d4-c4ff-49be-9179-c2911da50f67"
           (reference "C4") (unit 1)
-        )
-        (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/f1a33fea-e0cc-4aaf-be45-30cc41af4eee"
-          (reference "C12") (unit 1)
         )
       )
     )
@@ -38944,9 +38922,6 @@
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/11aa20d4-c4ff-49be-9179-c2911da50f67"
           (reference "D3") (unit 1)
         )
-        (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/f1a33fea-e0cc-4aaf-be45-30cc41af4eee"
-          (reference "D3") (unit 1)
-        )
       )
     )
   )
@@ -38997,9 +38972,6 @@
       (project "sumec"
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/11aa20d4-c4ff-49be-9179-c2911da50f67"
           (reference "SW2") (unit 1)
-        )
-        (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/f1a33fea-e0cc-4aaf-be45-30cc41af4eee"
-          (reference "SW7") (unit 1)
         )
       )
     )
@@ -39119,9 +39091,6 @@
         )
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/11aa20d4-c4ff-49be-9179-c2911da50f67"
           (reference "C3") (unit 1)
-        )
-        (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/f1a33fea-e0cc-4aaf-be45-30cc41af4eee"
-          (reference "C11") (unit 1)
         )
       )
     )
