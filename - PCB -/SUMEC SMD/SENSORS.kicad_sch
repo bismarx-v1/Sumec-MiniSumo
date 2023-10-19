@@ -9676,8 +9676,8 @@
     (effects (font (size 2 2)) (justify right bottom))
     (uuid 09956703-6f4f-4ab7-afe5-485f729169fb)
   )
-  (text "Time-of-Flight(ToF)\nlaser-ranging module - \n\nDistances up to\nCOMMUNICATION PROTOCOL: I²C \n"
-    (at 29.21 88.9 0)
+  (text "Time-of-Flight(ToF)\nlaser-ranging module - TF-LC02\nCOMMUNICATION PROTOCOL: I²C \n"
+    (at 29.21 85.09 0)
     (effects (font (size 1.5 1.5) italic) (justify left bottom))
     (uuid 0d28d04a-3989-44f1-a7bb-d1198a3d0dc3)
   )
@@ -9699,7 +9699,7 @@
     (uuid 8271f048-39d6-448b-a862-206fe16aa4ab)
   )
   (text "When pin 5 is connected to ground, TF-Luna enters I2C mode, then its pin 2 is use as SDA data and\npin 3 is the SCL clock sending data."
-    (at 29.21 93.98 0)
+    (at 29.21 92.71 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 881bdfa1-bc38-41ca-8e3f-3d35290ba48c)
   )
@@ -9707,6 +9707,10 @@
     (at 152.4 52.07 0)
     (effects (font (size 1.5 1.5) italic) (justify left bottom))
     (uuid a71d745c-3d20-4dfe-9a14-9ba4c3057f60)
+  )
+  (text "TF-LUNA MANUAL" (at 73.66 146.05 0)
+    (effects (font (face "Arial Unicode MS") (size 2 2) (thickness 0.254) bold) (justify left bottom) (href "https://www.waveshare.com/wiki/TF-Luna_LiDAR_Range_Sensor"))
+    (uuid ae2fd250-839c-480d-bc66-9144c935ba2e)
   )
   (text "SENZORY ČÁRÝ\n" (at 180.34 20.32 0)
     (effects (font (size 2 2)) (justify left bottom))
