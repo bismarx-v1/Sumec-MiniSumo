@@ -1502,14 +1502,14 @@
     (property "Value" "R" (at 153.67 34.29 90)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Footprint" "sumec-smd_library:logo small" (at 153.67 38.608 90)
+    (property "Footprint" "sumec-smd_library:logo even smaller" (at 153.67 38.608 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 153.67 36.83 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 435a8255-d752-4405-bb61-cf650aad9de1))
-    (pin "2" (uuid d9f1d561-4802-467b-af74-21ed2cf3d3b3))
+    (pin "1" (uuid f890d41c-71de-4483-b0c7-17d5cbf1fcf3))
+    (pin "2" (uuid c5831b2f-9a47-4735-b814-3dbf48f78aa1))
     (instances
       (project "sumec"
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385"
