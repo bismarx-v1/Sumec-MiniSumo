@@ -209,7 +209,7 @@ void loop()
     if (hodnota_bile_kalibrace > hodnota_cary) // pokud bude hraniční hodnota moc vysoká změní se hraniční hodnota na původní hodnotu
     {
       hodnota_cary = kontrolni_hodnota_kalibrace; // změna na původní hodnotu
-      MOTORS_Go(0,0);
+      MOTORS_Go(0, 0);
       Serial.println("kalibrace nevysla");
       for (int i = 0; i == 10; i++)
       {
@@ -222,7 +222,7 @@ void loop()
 
     else
     {
-      MOTORS_Go(255,255);
+      MOTORS_Go(255, 255);
       Serial.print("Kalibrace úspěšně provedena, aktuální hraniční hodnota:");
       Serial.println(hodnota_cary);
 
@@ -230,6 +230,12 @@ void loop()
     }
 
     Serial.println("konec");
+		while (analogRead(IR_IRPin) != 0)
+    {
+      MOTORS_Go(0, 0);
+      Serial.println(millis());
+      IRzaznam++;
+    }
     Global_ModeSelectvar = 0;
     break;
   }
