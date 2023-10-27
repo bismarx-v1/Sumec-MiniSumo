@@ -326,6 +326,9 @@
   (junction (at 163.83 41.91) (diameter 0) (color 0 0 0 0)
     (uuid 93754813-9bbd-49d4-b4c3-2347fd2d276d)
   )
+  (junction (at 147.32 60.96) (diameter 0) (color 0 0 0 0)
+    (uuid ddba79fd-a1c5-4853-9468-49d86c684815)
+  )
 
   (wire (pts (xy 125.73 41.91) (xy 132.08 41.91))
     (stroke (width 0) (type default))
@@ -348,6 +351,10 @@
     (uuid 2c9eb802-d4ae-42be-b9eb-f9f525a34133)
   )
 
+  (wire (pts (xy 132.08 60.96) (xy 147.32 60.96))
+    (stroke (width 0) (type default))
+    (uuid 2e9da07f-e8aa-47a1-b7e4-3edec865e8cd)
+  )
   (wire (pts (xy 132.08 41.91) (xy 139.7 41.91))
     (stroke (width 0) (type default))
     (uuid 2ff5e583-58de-436b-bbe3-27e12eea900b)
@@ -391,7 +398,7 @@
     (uuid a21ee934-3f25-4790-99f3-f1dd0be7740b)
   )
 
-  (wire (pts (xy 147.32 49.53) (xy 147.32 62.23))
+  (wire (pts (xy 147.32 49.53) (xy 147.32 60.96))
     (stroke (width 0) (type default))
     (uuid a8c43b96-4a9c-45ab-b491-0f52c139cb39)
   )
@@ -400,6 +407,10 @@
     (uuid b730eec8-4fdf-4930-b762-d95db0880229)
   )
 
+  (wire (pts (xy 147.32 60.96) (xy 147.32 62.23))
+    (stroke (width 0) (type default))
+    (uuid cd89232a-70bd-46a2-a8b8-8d1cc20927ae)
+  )
   (wire (pts (xy 170.18 41.91) (xy 163.83 41.91))
     (stroke (width 0) (type default))
     (uuid d8d50dd2-104a-405e-b005-7f2f80d8bfb0)
@@ -413,6 +424,15 @@
     (uuid ebb7a9b6-d353-4dc7-b598-38b8c459ed68)
   )
 
+  (wire (pts (xy 147.32 60.96) (xy 163.83 60.96))
+    (stroke (width 0) (type default))
+    (uuid f83b16e9-4ae1-4a32-a7b3-1ec03044c546)
+  )
+
+  (text "přidat kondenzatory?" (at 160.02 66.04 0)
+    (effects (font (size 1.27 1.27)) (justify left bottom))
+    (uuid 12e5c3cf-93c6-4e5a-9d42-894c7a759133)
+  )
   (text "Voltage stabilaser LM1084\n\nInput voltage 8,4V\nVoltage regulator - 3,3V\nOutput current - 5A"
     (at 86.36 44.45 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
@@ -432,10 +452,10 @@
     (uuid f7694083-e8b3-4d17-b863-1c0b1d1eadfd)
   )
 
-  (global_label "8V IN" (shape input) (at 176.53 116.84 0) (fields_autoplaced)
+  (global_label "VBATT" (shape input) (at 176.53 116.84 0) (fields_autoplaced)
     (effects (font (size 1 1) (color 0 0 0 1)) (justify left))
     (uuid b86317e5-574b-46d0-a4a4-19970f275c5c)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 182.9131 116.84 0)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 183.0559 116.84 0)
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
   )
@@ -474,7 +494,7 @@
     (property "Reference" "C?" (at 130.81 52.07 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "10uF.stabl" (at 143.51 52.07 0)
+    (property "Value" "10uF.stabl" (at 130.81 54.61 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Footprint" "Capacitor_THT:CP_Radial_D4.0mm_P2.00mm" (at 131.1148 53.34 0)
@@ -483,8 +503,8 @@
     (property "Datasheet" "~" (at 132.08 49.53 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 1ad6bfd5-267c-4f4c-a668-cec65c6e9932))
-    (pin "2" (uuid f2b9724a-914e-4257-b39f-9a63d98d2849))
+    (pin "1" (uuid 0b75743b-ee38-48f5-871b-f5de6728c190))
+    (pin "2" (uuid 5f3a8386-693d-4c30-90cc-064f3c871e65))
     (instances
       (project "sumec"
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385"
@@ -530,7 +550,7 @@
     (property "Reference" "C?" (at 167.64 52.07 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "10uF.stabl" (at 176.53 54.61 0)
+    (property "Value" "10uF.stabl" (at 175.26 54.61 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Footprint" "Capacitor_THT:CP_Radial_D4.0mm_P2.00mm" (at 162.8648 53.34 0)
@@ -643,34 +663,6 @@
     )
   )
 
-  (symbol (lib_id "power:GND") (at 132.08 60.96 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid b1228bdd-93bd-42e9-a0c2-3d66f51c51fb)
-    (property "Reference" "#PWR?" (at 132.08 67.31 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "GND" (at 132.08 66.04 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "" (at 132.08 60.96 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 132.08 60.96 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 8aa743a3-bffd-4565-a376-41432c6ea6f7))
-    (instances
-      (project "sumec"
-        (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385"
-          (reference "#PWR?") (unit 1)
-        )
-        (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/2febd48c-c6ec-477b-ac64-6fa98a41fff0"
-          (reference "#PWR043") (unit 1)
-        )
-      )
-    )
-  )
-
   (symbol (lib_id "power:GND") (at 182.88 119.38 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid c7ae5a68-6588-4624-95b5-453521fca85e)
@@ -694,34 +686,6 @@
         )
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/2febd48c-c6ec-477b-ac64-6fa98a41fff0"
           (reference "#PWR029") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "power:GND") (at 163.83 60.96 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid dce663c5-1ad8-4806-adb7-d1a431a74d3d)
-    (property "Reference" "#PWR?" (at 163.83 67.31 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "GND" (at 163.83 66.04 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "" (at 163.83 60.96 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 163.83 60.96 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid f4948eb3-0844-4510-b67a-bd520e97a0d4))
-    (instances
-      (project "sumec"
-        (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385"
-          (reference "#PWR?") (unit 1)
-        )
-        (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/2febd48c-c6ec-477b-ac64-6fa98a41fff0"
-          (reference "#PWR045") (unit 1)
         )
       )
     )
