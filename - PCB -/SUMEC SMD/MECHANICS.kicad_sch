@@ -722,7 +722,7 @@
   (symbol (lib_id "power:GND") (at 185.42 129.54 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 02a9d2ff-daea-4192-acd9-331ab8aec95f)
-    (property "Reference" "#PWR057" (at 191.77 129.54 0)
+    (property "Reference" "#PWR?" (at 191.77 129.54 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 189.23 130.175 90)
@@ -738,7 +738,7 @@
     (instances
       (project "sumec"
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/11aa20d4-c4ff-49be-9179-c2911da50f67"
-          (reference "#PWR057") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/05a35bad-c108-46ad-8f95-76319a60a14f"
           (reference "#PWR03") (unit 1)
@@ -783,7 +783,7 @@
     (property "Value" "MountingHole M3" (at 120.65 62.23 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "MountingHole:MountingHole_3.2mm_M3" (at 118.11 62.23 0)
+    (property "Footprint" "MountingHole:MountingHole_3.2mm_M3_ISO7380_Pad" (at 118.11 62.23 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 118.11 62.23 0)
@@ -852,7 +852,7 @@
           (reference "J1") (unit 1)
         )
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/2febd48c-c6ec-477b-ac64-6fa98a41fff0"
-          (reference "J7") (unit 1)
+          (reference "J?") (unit 1)
         )
       )
     )
@@ -867,7 +867,7 @@
     (property "Value" "MountingHole M3" (at 120.65 69.85 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "MountingHole:MountingHole_3.2mm_M3" (at 118.11 69.85 0)
+    (property "Footprint" "MountingHole:MountingHole_3.2mm_M3_ISO7380_Pad" (at 118.11 69.85 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 118.11 69.85 0)
@@ -894,7 +894,7 @@
     (property "Value" "MountingHole M3" (at 120.65 77.47 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "MountingHole:MountingHole_3.2mm_M3" (at 118.11 77.47 0)
+    (property "Footprint" "MountingHole:MountingHole_3.2mm_M3_ISO7380_Pad" (at 118.11 77.47 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 118.11 77.47 0)
@@ -965,7 +965,7 @@
   (symbol (lib_id "Connector:Conn_01x01_Pin") (at 168.91 121.92 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 74899cef-cbae-4d64-90a2-c53780221766)
-    (property "Reference" "J6" (at 166.37 121.92 0)
+    (property "Reference" "J?" (at 166.37 121.92 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "Conn_01x01_Pin" (at 169.545 123.19 0)
@@ -981,7 +981,7 @@
     (instances
       (project "sumec"
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/11aa20d4-c4ff-49be-9179-c2911da50f67"
-          (reference "J6") (unit 1)
+          (reference "J?") (unit 1)
         )
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/05a35bad-c108-46ad-8f95-76319a60a14f"
           (reference "J2") (unit 1)
@@ -1024,7 +1024,7 @@
     (property "Value" "MountingHole M3" (at 120.65 54.61 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "MountingHole:MountingHole_3.2mm_M3" (at 118.11 54.61 0)
+    (property "Footprint" "MountingHole:MountingHole_3.2mm_M3_ISO7380_Pad" (at 118.11 54.61 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 118.11 54.61 0)
@@ -1045,7 +1045,7 @@
   (symbol (lib_id "Connector_Generic:Conn_01x02") (at 180.34 64.77 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid e5ae9eda-8eec-466d-bf52-513089c329ef)
-    (property "Reference" "J8" (at 182.88 65.405 0)
+    (property "Reference" "J4" (at 182.88 65.405 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "Conn_01x02" (at 182.88 67.945 0)
@@ -1062,7 +1062,7 @@
     (instances
       (project "sumec"
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/05a35bad-c108-46ad-8f95-76319a60a14f"
-          (reference "J8") (unit 1)
+          (reference "J4") (unit 1)
         )
       )
     )

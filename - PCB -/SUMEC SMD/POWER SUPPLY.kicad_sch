@@ -595,7 +595,7 @@
           (reference "#PWR?") (unit 1)
         )
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/2febd48c-c6ec-477b-ac64-6fa98a41fff0"
-          (reference "#PWR047") (unit 1)
+          (reference "#PWR048") (unit 1)
         )
       )
     )
@@ -604,7 +604,7 @@
   (symbol (lib_id "power:+5V") (at 205.74 39.37 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 2d12be6f-e5bc-4b93-acfc-59c13c110197)
-    (property "Reference" "#PWR045" (at 205.74 43.18 0)
+    (property "Reference" "#PWR046" (at 205.74 43.18 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+5V" (at 205.74 35.56 0)
@@ -620,7 +620,7 @@
     (instances
       (project "sumec"
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/2febd48c-c6ec-477b-ac64-6fa98a41fff0"
-          (reference "#PWR045") (unit 1)
+          (reference "#PWR046") (unit 1)
         )
       )
     )
@@ -658,7 +658,7 @@
   (symbol (lib_id "Regulator_Linear:LM1084-3.3") (at 220.98 41.91 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 52d259e8-5112-4c55-a122-c91093f85c2b)
-    (property "Reference" "U9" (at 220.98 34.29 0)
+    (property "Reference" "U8" (at 220.98 34.29 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "\nLM1084IS-3.3/NOPB" (at 220.98 36.83 0)
@@ -676,7 +676,7 @@
     (instances
       (project "sumec"
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/2febd48c-c6ec-477b-ac64-6fa98a41fff0"
-          (reference "U9") (unit 1)
+          (reference "U8") (unit 1)
         )
       )
     )
@@ -762,7 +762,7 @@
           (reference "#PWR?") (unit 1)
         )
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/2febd48c-c6ec-477b-ac64-6fa98a41fff0"
-          (reference "#PWR046") (unit 1)
+          (reference "#PWR047") (unit 1)
         )
       )
     )
@@ -771,7 +771,7 @@
   (symbol (lib_id "Regulator_Linear:LM1084-3.3") (at 153.67 41.91 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 8d0ef240-3a38-4909-a96e-178acd84ff42)
-    (property "Reference" "U8" (at 153.67 35.56 0)
+    (property "Reference" "U7" (at 153.67 35.56 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "LM1084IS-5.0/NOPB" (at 153.67 38.1 0)
@@ -789,7 +789,7 @@
     (instances
       (project "sumec"
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/2febd48c-c6ec-477b-ac64-6fa98a41fff0"
-          (reference "U8") (unit 1)
+          (reference "U7") (unit 1)
         )
       )
     )
@@ -879,7 +879,7 @@
           (reference "#PWR?") (unit 1)
         )
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/2febd48c-c6ec-477b-ac64-6fa98a41fff0"
-          (reference "#PWR042") (unit 1)
+          (reference "#PWR043") (unit 1)
         )
       )
     )
@@ -907,7 +907,7 @@
           (reference "#PWR?") (unit 1)
         )
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/2febd48c-c6ec-477b-ac64-6fa98a41fff0"
-          (reference "#PWR044") (unit 1)
+          (reference "#PWR045") (unit 1)
         )
       )
     )
@@ -945,7 +945,7 @@
   (symbol (lib_id "power:+8V") (at 133.35 39.37 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid e4c81f33-2f2b-4781-acd6-74a4e8473f11)
-    (property "Reference" "#PWR041" (at 133.35 43.18 0)
+    (property "Reference" "#PWR042" (at 133.35 43.18 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+8V" (at 131.3287 35.532 0)
@@ -961,7 +961,7 @@
     (instances
       (project "sumec"
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/2febd48c-c6ec-477b-ac64-6fa98a41fff0"
-          (reference "#PWR041") (unit 1)
+          (reference "#PWR042") (unit 1)
         )
       )
     )
@@ -970,7 +970,7 @@
   (symbol (lib_id "power:+5V") (at 173.99 39.37 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid ea4f9969-e4a3-457c-880a-4470d327339d)
-    (property "Reference" "#PWR043" (at 173.99 43.18 0)
+    (property "Reference" "#PWR044" (at 173.99 43.18 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+5V" (at 173.99 35.56 0)
@@ -986,7 +986,7 @@
     (instances
       (project "sumec"
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/2febd48c-c6ec-477b-ac64-6fa98a41fff0"
-          (reference "#PWR043") (unit 1)
+          (reference "#PWR044") (unit 1)
         )
       )
     )

@@ -3742,10 +3742,6 @@
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid e344603d-025f-43e5-8a8b-e656220e67a8)
   )
-  (text "EXPLANATION" (at 238.76 344.17 0)
-    (effects (font (face "Arial Unicode MS") (size 2 2) (color 0 0 0 1)) (justify left bottom) (href "https://electronics.stackexchange.com/questions/510248/does-tb6612fng-require-additional-circuit-to-control-motor-and-why"))
-    (uuid f5639c5d-a0c3-4d4c-8a4a-33137ae24c7f)
-  )
   (text "EN=RESET, BOOT=bootloader mode" (at 354.33 223.52 0)
     (effects (font (size 2 2) (thickness 0.4) bold) (justify left bottom))
     (uuid f76c395c-33f2-42c2-ad11-8d1494a04573)
@@ -4126,7 +4122,7 @@
           (reference "C?") (unit 1)
         )
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/2febd48c-c6ec-477b-ac64-6fa98a41fff0"
-          (reference "C11") (unit 1)
+          (reference "C?") (unit 1)
         )
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/11aa20d4-c4ff-49be-9179-c2911da50f67"
           (reference "C5") (unit 1)
@@ -4138,7 +4134,7 @@
   (symbol (lib_id "Device:R") (at 477.52 208.28 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 2339a0f9-34f7-4f2d-88bb-36e834afca19)
-    (property "Reference" "R6" (at 480.06 208.28 90)
+    (property "Reference" "R7" (at 480.06 208.28 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "10k.mcu" (at 474.98 208.28 90)
@@ -4155,7 +4151,7 @@
     (instances
       (project "sumec"
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/11aa20d4-c4ff-49be-9179-c2911da50f67"
-          (reference "R6") (unit 1)
+          (reference "R7") (unit 1)
         )
       )
     )
@@ -4236,7 +4232,7 @@
   (symbol (lib_id "power:+8V") (at 234.95 312.42 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 29d64de1-44c4-4485-95ee-fc28a0991be4)
-    (property "Reference" "#PWR025" (at 238.76 312.42 0)
+    (property "Reference" "#PWR?" (at 238.76 312.42 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+8V" (at 234.95 309.88 90)
@@ -4252,10 +4248,10 @@
     (instances
       (project "sumec"
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/2febd48c-c6ec-477b-ac64-6fa98a41fff0"
-          (reference "#PWR025") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/11aa20d4-c4ff-49be-9179-c2911da50f67"
-          (reference "#PWR010") (unit 1)
+          (reference "#PWR011") (unit 1)
         )
       )
     )
@@ -4264,7 +4260,7 @@
   (symbol (lib_id "power:GND") (at 464.82 151.13 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 2bc91ce5-d067-4f1b-b04e-3767e345171b)
-    (property "Reference" "#PWR014" (at 458.47 151.13 0)
+    (property "Reference" "#PWR015" (at 458.47 151.13 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 461.01 150.495 90)
@@ -4280,7 +4276,7 @@
     (instances
       (project "sumec"
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/11aa20d4-c4ff-49be-9179-c2911da50f67"
-          (reference "#PWR014") (unit 1)
+          (reference "#PWR015") (unit 1)
         )
       )
     )
@@ -4289,7 +4285,7 @@
   (symbol (lib_id "Device:C_Polarized") (at 198.12 351.79 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 2c290a10-dd43-44c7-b7f6-1c7c79b053d7)
-    (property "Reference" "C19" (at 198.12 355.6 90)
+    (property "Reference" "C?" (at 198.12 355.6 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "1uF.hb" (at 198.12 358.14 90)
@@ -4306,7 +4302,7 @@
     (instances
       (project "sumec"
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/2febd48c-c6ec-477b-ac64-6fa98a41fff0"
-          (reference "C19") (unit 1)
+          (reference "C?") (unit 1)
         )
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/11aa20d4-c4ff-49be-9179-c2911da50f67"
           (reference "C2") (unit 1)
@@ -4318,7 +4314,7 @@
   (symbol (lib_id "power:GND") (at 508 160.02 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 2fadf260-77a2-4ba0-9d16-c31297fe5f48)
-    (property "Reference" "#PWR018" (at 508 166.37 0)
+    (property "Reference" "#PWR019" (at 508 166.37 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 507.365 163.83 90)
@@ -4334,7 +4330,7 @@
     (instances
       (project "sumec"
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/11aa20d4-c4ff-49be-9179-c2911da50f67"
-          (reference "#PWR018") (unit 1)
+          (reference "#PWR019") (unit 1)
         )
       )
     )
@@ -4343,7 +4339,7 @@
   (symbol (lib_id "power:GND") (at 490.22 224.79 0) (mirror y) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 30601ac7-13c0-4d15-9bbd-3d900b1edbdd)
-    (property "Reference" "#PWR016" (at 490.22 231.14 0)
+    (property "Reference" "#PWR017" (at 490.22 231.14 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 490.22 228.6 0)
@@ -4359,7 +4355,7 @@
     (instances
       (project "sumec"
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/11aa20d4-c4ff-49be-9179-c2911da50f67"
-          (reference "#PWR016") (unit 1)
+          (reference "#PWR017") (unit 1)
         )
       )
     )
@@ -4368,7 +4364,7 @@
   (symbol (lib_id "Driver_Motor:TB6612FNG") (at 180.34 320.04 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 36e2de02-d812-4cff-af0e-29027e5ef60e)
-    (property "Reference" "U10" (at 194.31 297.18 0)
+    (property "Reference" "U?" (at 194.31 297.18 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "TB6612FNG" (at 180.34 318.77 90)
@@ -4407,7 +4403,7 @@
     (instances
       (project "sumec"
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/2febd48c-c6ec-477b-ac64-6fa98a41fff0"
-          (reference "U10") (unit 1)
+          (reference "U?") (unit 1)
         )
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/11aa20d4-c4ff-49be-9179-c2911da50f67"
           (reference "U1") (unit 1)
@@ -4438,10 +4434,10 @@
           (reference "#PWR?") (unit 1)
         )
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/2febd48c-c6ec-477b-ac64-6fa98a41fff0"
-          (reference "#PWR034") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/11aa20d4-c4ff-49be-9179-c2911da50f67"
-          (reference "#PWR05") (unit 1)
+          (reference "#PWR06") (unit 1)
         )
       )
     )
@@ -4450,7 +4446,7 @@
   (symbol (lib_id "power:GND") (at 210.82 130.81 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 4efc1e37-39a0-49cd-9869-4d73c4f5b441)
-    (property "Reference" "#PWR09" (at 210.82 124.46 0)
+    (property "Reference" "#PWR010" (at 210.82 124.46 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 210.82 125.73 0)
@@ -4466,7 +4462,7 @@
     (instances
       (project "sumec"
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/11aa20d4-c4ff-49be-9179-c2911da50f67"
-          (reference "#PWR09") (unit 1)
+          (reference "#PWR010") (unit 1)
         )
       )
     )
@@ -4559,10 +4555,10 @@
           (reference "#PWR?") (unit 1)
         )
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/2febd48c-c6ec-477b-ac64-6fa98a41fff0"
-          (reference "#PWR055") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/11aa20d4-c4ff-49be-9179-c2911da50f67"
-          (reference "#PWR08") (unit 1)
+          (reference "#PWR09") (unit 1)
         )
       )
     )
@@ -4591,7 +4587,7 @@
           (reference "C?") (unit 1)
         )
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/2febd48c-c6ec-477b-ac64-6fa98a41fff0"
-          (reference "C2") (unit 1)
+          (reference "C?") (unit 1)
         )
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/11aa20d4-c4ff-49be-9179-c2911da50f67"
           (reference "C4") (unit 1)
@@ -4629,7 +4625,7 @@
   (symbol (lib_id "power:GND") (at 93.98 245.11 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 7f8660e2-4308-46cb-9f95-3cbffcb71030)
-    (property "Reference" "#PWR048" (at 93.98 251.46 0)
+    (property "Reference" "#PWR05" (at 93.98 251.46 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 93.98 250.19 0)
@@ -4645,7 +4641,7 @@
     (instances
       (project "sumec"
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/11aa20d4-c4ff-49be-9179-c2911da50f67"
-          (reference "#PWR048") (unit 1)
+          (reference "#PWR05") (unit 1)
         )
       )
     )
@@ -4654,7 +4650,7 @@
   (symbol (lib_id "Device:R") (at 391.16 161.29 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 807da542-1a1e-4522-be40-ecd19c6a2fca)
-    (property "Reference" "R3" (at 391.16 161.29 90)
+    (property "Reference" "R4" (at 391.16 161.29 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "0R" (at 391.16 158.75 90)
@@ -4671,7 +4667,7 @@
     (instances
       (project "sumec"
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/11aa20d4-c4ff-49be-9179-c2911da50f67"
-          (reference "R3") (unit 1)
+          (reference "R4") (unit 1)
         )
       )
     )
@@ -4699,10 +4695,10 @@
           (reference "#PWR?") (unit 1)
         )
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/2febd48c-c6ec-477b-ac64-6fa98a41fff0"
-          (reference "#PWR028") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/11aa20d4-c4ff-49be-9179-c2911da50f67"
-          (reference "#PWR015") (unit 1)
+          (reference "#PWR016") (unit 1)
         )
       )
     )
@@ -4711,7 +4707,7 @@
   (symbol (lib_id "power:GND") (at 386.08 166.37 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 8d8a614a-b6f1-4168-a5fd-86adf0424df2)
-    (property "Reference" "#PWR013" (at 386.08 172.72 0)
+    (property "Reference" "#PWR014" (at 386.08 172.72 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 385.445 170.18 90)
@@ -4727,7 +4723,7 @@
     (instances
       (project "sumec"
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/11aa20d4-c4ff-49be-9179-c2911da50f67"
-          (reference "#PWR013") (unit 1)
+          (reference "#PWR014") (unit 1)
         )
       )
     )
@@ -4736,7 +4732,7 @@
   (symbol (lib_id "Switch:SW_Push") (at 506.73 215.9 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 994c54c7-6b47-4e79-9675-d7ca117fad7b)
-    (property "Reference" "SW4" (at 506.73 209.55 0)
+    (property "Reference" "SW3" (at 506.73 209.55 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "SW_Push" (at 506.73 212.09 0)
@@ -4753,7 +4749,7 @@
     (instances
       (project "sumec"
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/11aa20d4-c4ff-49be-9179-c2911da50f67"
-          (reference "SW4") (unit 1)
+          (reference "SW3") (unit 1)
         )
       )
     )
@@ -4762,7 +4758,7 @@
   (symbol (lib_id "power:GND") (at 500.38 224.79 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 9a85e7d7-7c25-4f27-8d59-f3f23345a284)
-    (property "Reference" "#PWR017" (at 500.38 231.14 0)
+    (property "Reference" "#PWR018" (at 500.38 231.14 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 500.38 228.6 0)
@@ -4778,7 +4774,7 @@
     (instances
       (project "sumec"
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/11aa20d4-c4ff-49be-9179-c2911da50f67"
-          (reference "#PWR017") (unit 1)
+          (reference "#PWR018") (unit 1)
         )
       )
     )
@@ -4787,7 +4783,7 @@
   (symbol (lib_id "sumec_library:TYPE-C-31-M-12") (at 412.75 153.67 0) (mirror y) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 9e4167a7-1e6e-4ccd-bb02-6deb33eb5a81)
-    (property "Reference" "J4" (at 412.75 137.16 0)
+    (property "Reference" "J5" (at 412.75 137.16 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "TYPE-C-31-M-12" (at 412.75 139.7 0)
@@ -4857,7 +4853,7 @@
     (instances
       (project "sumec"
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/11aa20d4-c4ff-49be-9179-c2911da50f67"
-          (reference "J4") (unit 1)
+          (reference "J5") (unit 1)
         )
       )
     )
@@ -4886,7 +4882,7 @@
           (reference "C?") (unit 1)
         )
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/2febd48c-c6ec-477b-ac64-6fa98a41fff0"
-          (reference "C12") (unit 1)
+          (reference "C?") (unit 1)
         )
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/11aa20d4-c4ff-49be-9179-c2911da50f67"
           (reference "C6") (unit 1)
@@ -4917,10 +4913,10 @@
           (reference "#PWR?") (unit 1)
         )
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/2febd48c-c6ec-477b-ac64-6fa98a41fff0"
-          (reference "#PWR028") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/11aa20d4-c4ff-49be-9179-c2911da50f67"
-          (reference "#PWR06") (unit 1)
+          (reference "#PWR07") (unit 1)
         )
       )
     )
@@ -4949,7 +4945,7 @@
           (reference "C?") (unit 1)
         )
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/2febd48c-c6ec-477b-ac64-6fa98a41fff0"
-          (reference "C2") (unit 1)
+          (reference "C?") (unit 1)
         )
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/11aa20d4-c4ff-49be-9179-c2911da50f67"
           (reference "C8") (unit 1)
@@ -4961,7 +4957,7 @@
   (symbol (lib_id "Device:R") (at 461.01 163.83 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid b79bbf45-f541-45af-95e1-3e26ad2cd306)
-    (property "Reference" "R5" (at 458.47 161.29 90)
+    (property "Reference" "R6" (at 458.47 161.29 90)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "15R" (at 458.47 166.37 90)
@@ -4978,7 +4974,7 @@
     (instances
       (project "sumec"
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/11aa20d4-c4ff-49be-9179-c2911da50f67"
-          (reference "R5") (unit 1)
+          (reference "R6") (unit 1)
         )
       )
     )
@@ -4987,7 +4983,7 @@
   (symbol (lib_id "Diode:1N5819") (at 389.89 143.51 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid bdc96fe8-a458-4ffd-9007-5350563d505e)
-    (property "Reference" "D1" (at 389.89 138.43 0)
+    (property "Reference" "D2" (at 389.89 138.43 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "1N5819" (at 389.89 140.97 0)
@@ -5004,7 +5000,7 @@
     (instances
       (project "sumec"
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/11aa20d4-c4ff-49be-9179-c2911da50f67"
-          (reference "D1") (unit 1)
+          (reference "D2") (unit 1)
         )
       )
     )
@@ -5013,7 +5009,7 @@
   (symbol (lib_id "Device:C_Polarized") (at 198.12 345.44 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid c49d83c4-0c5d-4a7f-8a90-eb0b7498b327)
-    (property "Reference" "C18" (at 197.231 339.09 90)
+    (property "Reference" "C?" (at 197.231 339.09 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "10uF.hb" (at 198.12 341.63 90)
@@ -5030,7 +5026,7 @@
     (instances
       (project "sumec"
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/2febd48c-c6ec-477b-ac64-6fa98a41fff0"
-          (reference "C18") (unit 1)
+          (reference "C?") (unit 1)
         )
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/11aa20d4-c4ff-49be-9179-c2911da50f67"
           (reference "C1") (unit 1)
@@ -5042,7 +5038,7 @@
   (symbol (lib_id "Device:LED") (at 93.98 224.79 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid c7f34d8a-3d4b-434b-908a-4d8bf6ac9f02)
-    (property "Reference" "D2" (at 97.79 225.7425 90)
+    (property "Reference" "D1" (at 97.79 225.7425 90)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "LED" (at 97.79 228.2825 90)
@@ -5059,7 +5055,7 @@
     (instances
       (project "sumec"
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/11aa20d4-c4ff-49be-9179-c2911da50f67"
-          (reference "D2") (unit 1)
+          (reference "D1") (unit 1)
         )
       )
     )
@@ -5068,7 +5064,7 @@
   (symbol (lib_id "power:GND") (at 237.49 229.87 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid ccdbbf84-da0e-4492-aedc-cf229e60ae52)
-    (property "Reference" "#PWR011" (at 237.49 236.22 0)
+    (property "Reference" "#PWR012" (at 237.49 236.22 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 237.49 234.95 0)
@@ -5084,7 +5080,7 @@
     (instances
       (project "sumec"
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/11aa20d4-c4ff-49be-9179-c2911da50f67"
-          (reference "#PWR011") (unit 1)
+          (reference "#PWR012") (unit 1)
         )
       )
     )
@@ -5093,7 +5089,7 @@
   (symbol (lib_id "Switch:SW_Push") (at 483.87 215.9 0) (mirror y) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid cf9ea38a-a6f7-4b77-b0ed-71cc4b92aa64)
-    (property "Reference" "SW3" (at 483.87 209.55 0)
+    (property "Reference" "SW2" (at 483.87 209.55 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "SW_Push" (at 483.87 212.09 0)
@@ -5110,7 +5106,7 @@
     (instances
       (project "sumec"
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/11aa20d4-c4ff-49be-9179-c2911da50f67"
-          (reference "SW3") (unit 1)
+          (reference "SW2") (unit 1)
         )
       )
     )
@@ -5139,7 +5135,7 @@
           (reference "C?") (unit 1)
         )
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/2febd48c-c6ec-477b-ac64-6fa98a41fff0"
-          (reference "C2") (unit 1)
+          (reference "C?") (unit 1)
         )
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/11aa20d4-c4ff-49be-9179-c2911da50f67"
           (reference "C3") (unit 1)
@@ -5151,7 +5147,7 @@
   (symbol (lib_id "Device:R") (at 93.98 236.22 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid d23bc11b-f45d-44a1-bd3f-b4af8d1d489d)
-    (property "Reference" "R19" (at 96.52 235.585 0)
+    (property "Reference" "R3" (at 96.52 235.585 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "220" (at 96.52 238.125 0)
@@ -5168,7 +5164,7 @@
     (instances
       (project "sumec"
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/11aa20d4-c4ff-49be-9179-c2911da50f67"
-          (reference "R19") (unit 1)
+          (reference "R3") (unit 1)
         )
       )
     )
@@ -5220,10 +5216,10 @@
           (reference "#PWR?") (unit 1)
         )
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/2febd48c-c6ec-477b-ac64-6fa98a41fff0"
-          (reference "#PWR028") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/11aa20d4-c4ff-49be-9179-c2911da50f67"
-          (reference "#PWR07") (unit 1)
+          (reference "#PWR08") (unit 1)
         )
       )
     )
@@ -5232,7 +5228,7 @@
   (symbol (lib_id "Device:R") (at 461.01 138.43 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid d5f65078-3d59-4ef2-9124-19e3323510e8)
-    (property "Reference" "R4" (at 458.47 135.89 90)
+    (property "Reference" "R5" (at 458.47 135.89 90)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "15R" (at 458.47 140.97 90)
@@ -5249,7 +5245,7 @@
     (instances
       (project "sumec"
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/11aa20d4-c4ff-49be-9179-c2911da50f67"
-          (reference "R4") (unit 1)
+          (reference "R5") (unit 1)
         )
       )
     )
@@ -5278,7 +5274,7 @@
           (reference "C?") (unit 1)
         )
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/2febd48c-c6ec-477b-ac64-6fa98a41fff0"
-          (reference "C2") (unit 1)
+          (reference "C?") (unit 1)
         )
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/11aa20d4-c4ff-49be-9179-c2911da50f67"
           (reference "C7") (unit 1)
@@ -5309,10 +5305,10 @@
           (reference "#PWR?") (unit 1)
         )
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/2febd48c-c6ec-477b-ac64-6fa98a41fff0"
-          (reference "#PWR056") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/11aa20d4-c4ff-49be-9179-c2911da50f67"
-          (reference "#PWR012") (unit 1)
+          (reference "#PWR013") (unit 1)
         )
       )
     )
