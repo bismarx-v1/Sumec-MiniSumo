@@ -1,16 +1,13 @@
 # STM32CubeIDE
 Debug/
 
-# KiCad cache files
-fp-info-cache
-fp-lib-table
-/*-backups/
-*.zip
-.gitignore.bak
+# Apple macOS
 .DS_Store
 
 # For PCBs designed using KiCad: https://www.kicad.org/
 # Format documentation: https://kicad.org/help/file-formats/
+
+/*-backups/
 
 # Temporary files
 *.000
@@ -27,6 +24,7 @@ _autosave-*
 *-save.pro
 *-save.kicad_pcb
 fp-info-cache
+fp-lib-table
 
 # Netlist files (exported from Eeschema)
 *.net
