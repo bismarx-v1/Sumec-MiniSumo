@@ -7,7 +7,7 @@ TFLI2C tflI2C;
 int16_t  tfAddr = 0x10;
                                 // set variable to your own value
 int16_t  tfNewAddress = 0x1E;
-int16_t  tfAddr1 = 0x2A;
+int16_t  tfAddr1 = 0x1A;
 int16_t tfDist;
 
 
@@ -17,10 +17,12 @@ void setup()
     Wire.begin(11,10,400000);           // Initalize Wire library
 	delay(1000);
 	
-	Serial.println(tflI2C.Set_I2C_Addr(tfNewAddress, tfAddr));
-	delay(5000);
-	Serial.println(tflI2C.Soft_Reset(tfAddr));
-	delay(1000);
+	//Serial.println(tflI2C.Set_I2C_Addr(tfNewAddress, tfAddr));
+	//Serial.println(tflI2C.Set_I2C_Addr(tfAddr1, tfAddr));
+	//Serial.println(tflI2C.Set_I2C_Addr(tfAddr1, tfNewAddress));
+	//delay(5000);
+	//Serial.println(tflI2C.Soft_Reset(tfAddr));
+	//delay(1000);
 	
 	
 }
@@ -29,13 +31,16 @@ void loop()
 {
 	tflI2C.getData( tfDist, tfNewAddress);
 	Serial.println(tfDist);
+	tfDist = 0;
 	
 	tflI2C.getData( tfDist, tfAddr);
 	Serial.println(tfDist);
+	tfDist = 0;
 	
 	
 	tflI2C.getData( tfDist, tfAddr1);
 	Serial.println(tfDist);
+	tfDist = 0;
 	
 	tflI2C.printStatus();
 	Serial.println("\n============");
