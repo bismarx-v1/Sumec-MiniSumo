@@ -4,8 +4,11 @@
 TFLI2C tflI2C;
 
 int16_t  tfDist;    // distance in centimeters
-int16_t  tfAddr = TFL_DEF_ADR;  // Use this default I2C address or
+//int16_t  tfAddr = TFL_DEF_ADR;  // Use this default I2C address or
+int16_t  tfAddr = 0x10;
                                 // set variable to your own value
+int16_t  tfFlux;
+int16_t  tfTemp;
 
 void setup()
 {
@@ -17,9 +20,18 @@ void setup()
 
 void loop()
 {
-    tflI2C.getData( tfDist, tfAddr); 
+    tflI2C.getData( tfDist, tfFlux, tfTemp, tfAddr); 
     
-        Serial.print("Dist: ");
-        Serial.println(tfDist);          // print the data...
+        Serial.print("Dist:\t");
+        Serial.print(tfDist);          // print the data...
+		
+		Serial.print("\tFlux:\t");
+		Serial.print(tfFlux);
+		
+		Serial.print("\tTemp:\t");
+		Serial.print(tfTemp);
+		
+		Serial.print("\tAddr:\t");
+		Serial.println(tfAddr, HEX);
         delay(100);    
 }
