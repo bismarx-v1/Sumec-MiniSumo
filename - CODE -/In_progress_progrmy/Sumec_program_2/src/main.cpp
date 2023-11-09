@@ -17,9 +17,12 @@ int Sensor = 0;
 int ButtonDown = 0;
 
 int Range = 150;
-int cas_zaznam = 0;
 int IRzaznam = 0;
 int rot_hodnota = 0;
+  // časovo ledkové proměné
+int led_control = 0;
+int cas_zaznam = 0;
+int zapvyp = 1; 
 
 int stop = 1;
 
@@ -94,25 +97,22 @@ void loop()
         if (LASER_Get(3, Range, 0) == 1)
         { // přední laser
           laser_number = laser_number + 1;
-          digitalWrite(led, HIGH);
+        //  digitalWrite(led, HIGH);
         }
 
         if (LASER_Get(2, Range, 0) == 1)
         { // levý laser
           laser_number = laser_number + 3;
-          digitalWrite(led, HIGH);
+        //  digitalWrite(led, HIGH);
         }
 
         if (LASER_Get(1, Range, 0) == 1)
         { // pravý laser
           laser_number = laser_number + 5;
-          digitalWrite(led, HIGH);
+        //  digitalWrite(led, HIGH);
         }
 
-        if (laser_number == 0)
-        {
-          digitalWrite(led, LOW);
-        }
+
       }
 
       // Serial.println(laser_number);
@@ -168,12 +168,24 @@ void loop()
       {
         MOTORS_Go(0, 0);
       }
-
-      if (cas_zaznam > 0)
+      // čas ledka
+      if (cas_zaznam > 0 && zapvyp == 0)
       {
         delay(1);
-        cas_zaznam = cas_zaznam - 1;
+        digitalWrite(led, HIGH);
       }
+
+      if (cas_zaznam > 0 && zapvyp == 1)
+      {
+        delay(1);
+        digitalWrite(led, LOW);
+      }
+
+      if (led_control != zapvyp)
+      {
+        cas_zaznam = 100;
+      }
+
     }
 
     // dotek bílé čáry levím senzorem
@@ -181,14 +193,14 @@ void loop()
     {
       MOTORS_Go(255 / 2 * -1, -255 / 2 * -1);
       delay(750);
-      cas_zaznam = 10;
+//      cas_zaznam = 10;
     }
     // dotek bílé čáry pravým senzorem
     if (LINE_Get(2, hodnota_cary, 0) == 1)
     {
       MOTORS_Go(-255 / 2 * -1, 255 / 2 * -1);
       delay(750);
-      cas_zaznam = 10;
+//      cas_zaznam = 10;
     }
     break;
 
