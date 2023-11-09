@@ -9,5 +9,5 @@ void setup() {
 
 //normalni void loop()
 void loop() {
-  MOTORS_Go(255, 255);
+  MOTORS_Go(255*-1, 255*-1);
 }
