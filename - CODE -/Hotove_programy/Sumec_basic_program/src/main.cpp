@@ -16,7 +16,7 @@ int SensorRange = 300; //|sensor range setting||sensor range setting||sensor ran
 int Sensor = 0;
 int ButtonDown = 0;
 
-int Range = 300;
+int Range = 150;
 int cas_zaznam = 0;
 int IRzaznam = 0;
 

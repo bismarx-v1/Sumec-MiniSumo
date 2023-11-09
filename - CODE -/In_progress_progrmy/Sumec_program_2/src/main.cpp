@@ -1,9 +1,9 @@
 #include <Arduino.h>
+#include "Wire.h"
 #include <VL53L0X.h>
-
+#include "motors.h"
 #include "line.h"
 #include "laser.h"
-#include "motors.h"
 #include "IR.h"
 
 // defines for demo
@@ -16,9 +16,10 @@ int SensorRange = 300; //|sensor range setting||sensor range setting||sensor ran
 int Sensor = 0;
 int ButtonDown = 0;
 
-int Range = 300;
+int Range = 150;
 int cas_zaznam = 0;
 int IRzaznam = 0;
+int rot_hodnota = 0;
 
 int stop = 1;
 
@@ -59,8 +60,6 @@ int hodnota_cerne_kalibrace;
 int hodnota_bile_kalibrace;
 int kontrolni_hodnota_kalibrace;
 int tolerance_mereni = 100; // tolerance mčření slouží k vyvážení nepřesnosti sensorů
-
-int kontrola_stavu = 0;
 // void loop
 void loop()
 {
@@ -102,14 +101,12 @@ void loop()
         { // levý laser
           laser_number = laser_number + 3;
           digitalWrite(led, HIGH);
-					kontrola_stavu = 0;
         }
 
         if (LASER_Get(1, Range, 0) == 1)
         { // pravý laser
           laser_number = laser_number + 5;
           digitalWrite(led, HIGH);
-					kontrola_stavu = 0;
         }
 
         if (laser_number == 0)
@@ -126,52 +123,51 @@ void loop()
 
       case 0:
         MOTORS_Go(255 * -1, 255 * -1);
-
+        Serial.println("dopředu");
         break;
       case 1:
-
-				if(kontrola_stavu == 0)
-				{
-        delay(100);
-				}
-
-        if(LASER_Get(3, Range, 0) == 1 && LASER_Get(2, Range, 0) == 0 && LASER_Get(1, Range, 0) == 1)
-        {
-					MOTORS_Go(255 * -1, 255 * -1);
-					kontrola_stavu = 1;	
-        }
-
-
+        MOTORS_Go(255 * -1, 255 * -1);
+        Serial.println("dopředu2");
+        rot_hodnota = 1;
         break;
 
       case 3:
-        MOTORS_Go(-255 / 2 * -1, 255 / 2 * -1);
-
+          MOTORS_Go(80 * -1, 255 * -1);
+          Serial.println("strana1");
+          rot_hodnota = 1;
+          delay(50);
         break;
 
       case 5:
-        MOTORS_Go(255 / 2 * -1, -255 / 2 * -1);
-
+          MOTORS_Go(255 * -1, 80 * -1);
+          Serial.println("strana2");
+          rot_hodnota = 1;
+          delay(50);
         break;
 
       case 4:
         MOTORS_Go(255 * -1, 200 * -1);
- 
+        Serial.println("šikmo1");
         delay(100);
         break;
 
       case 6:
         MOTORS_Go(200 * -1, 255 * -1);
-
+        Serial.println("šikmo2");
         delay(100);
         break;
 
       case 9:
         MOTORS_Go(255 * -1, 255 * -1);
-
+        Serial.println("dopředu");
         break;
       }
 
+      // možnost zastavení programu pomocí stop proměné
+      while (stop == 0)
+      {
+        MOTORS_Go(0, 0);
+      }
 
       if (cas_zaznam > 0)
       {
@@ -184,14 +180,14 @@ void loop()
     if (LINE_Get(1, hodnota_cary, 0) == 1)
     {
       MOTORS_Go(255 / 2 * -1, -255 / 2 * -1);
-      delay(500);
+      delay(750);
       cas_zaznam = 10;
     }
     // dotek bílé čáry pravým senzorem
     if (LINE_Get(2, hodnota_cary, 0) == 1)
     {
       MOTORS_Go(-255 / 2 * -1, 255 / 2 * -1);
-      delay(500);
+      delay(750);
       cas_zaznam = 10;
     }
     break;
