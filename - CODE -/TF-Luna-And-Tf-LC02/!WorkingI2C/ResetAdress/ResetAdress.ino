@@ -9,7 +9,7 @@ int16_t  tfAddr = 0x1A;
 
 void setup() {
     Serial.begin(115200);  // Initalize serial port
-    Wire.begin(11,10,400000);           // Initalize Wire library
+    Wire.begin(18,17,400000);           // Initalize Wire library
 	delay(1000);
 	
 	
