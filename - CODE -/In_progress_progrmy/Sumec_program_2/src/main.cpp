@@ -25,6 +25,8 @@ int cas_zaznam = 0;
 int zapvyp = 1; 
 
 int stop = 1;
+// promněná určující mód programu
+int Global_ModeSelectvar = 0;
 
 // void setup()
 void setup()
@@ -39,8 +41,8 @@ void setup()
     while (analogRead(IR_IRPin) != 0)
     {
       MOTORS_Go(0, 0);
-      Serial.println(millis());
-      IRzaznam++;
+      Global_ModeSelectvar = analogRead(IR_IRPin);
+      Serial.println(Global_ModeSelectvar);
     }
   }
 
@@ -54,8 +56,6 @@ void setup()
 }
 
 int laser_number;
-// promněná určující mód programu
-int Global_ModeSelectvar = 0;
 // určuje zdali je barva spíš bílá nebo černá
 int hodnota_cary = 1000;
 // hodnoty pro kalibraci
@@ -67,15 +67,15 @@ int tolerance_mereni = 100; // tolerance mčření slouží k vyvážení nepře
 void loop()
 {
 
-  if (digitalRead(Button) == 1)
-  {
-    Global_ModeSelectvar = 1;
-  }
+//  if (digitalRead(Button) == 1)
+//  {
+//    Global_ModeSelectvar = 1;
+//  }
 
-  else
-  {
-    Global_ModeSelectvar = 0;
-  }
+//  else
+//  {
+//    Global_ModeSelectvar = 0;
+//  }
 
   Serial.println("global:");
   Serial.println(Global_ModeSelectvar);
@@ -83,7 +83,7 @@ void loop()
   switch (Global_ModeSelectvar)
   {
 
-  case 0:
+  case 0x07:
     if (LINE_Get(1, hodnota_cary, 0) == 0 && LINE_Get(2, hodnota_cary, 0) == 0)
     {
 
@@ -97,19 +97,16 @@ void loop()
         if (LASER_Get(3, Range, 0) == 1)
         { // přední laser
           laser_number = laser_number + 1;
-        //  digitalWrite(led, HIGH);
         }
 
         if (LASER_Get(2, Range, 0) == 1)
         { // levý laser
           laser_number = laser_number + 3;
-        //  digitalWrite(led, HIGH);
         }
 
         if (LASER_Get(1, Range, 0) == 1)
         { // pravý laser
           laser_number = laser_number + 5;
-        //  digitalWrite(led, HIGH);
         }
 
 
@@ -193,18 +190,17 @@ void loop()
     {
       MOTORS_Go(255 / 2 * -1, -255 / 2 * -1);
       delay(750);
-//      cas_zaznam = 10;
     }
     // dotek bílé čáry pravým senzorem
     if (LINE_Get(2, hodnota_cary, 0) == 1)
     {
       MOTORS_Go(-255 / 2 * -1, 255 / 2 * -1);
       delay(750);
-//      cas_zaznam = 10;
     }
     break;
+// kalibrace
+  case 0x0B:
 
-  case 1:
     Serial.println("v kalibraci");
 
     MOTORS_Go(0, 0);
