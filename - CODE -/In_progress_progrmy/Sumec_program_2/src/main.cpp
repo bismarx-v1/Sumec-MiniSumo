@@ -1,4 +1,5 @@
 #include <Arduino.h>
+#include <IRremote.h>
 #include "Wire.h"
 #include <VL53L0X.h>
 #include "motors.h"
@@ -16,7 +17,7 @@ int SensorRange = 300; //|sensor range setting||sensor range setting||sensor ran
 int Sensor = 0;
 int ButtonDown = 0;
 
-int Range = 150;
+int Range = 300;
 int IRzaznam = 0;
 int rot_hodnota = 0;
   // časovo ledkové proměné
@@ -27,24 +28,48 @@ int zapvyp = 1;
 int stop = 1;
 // promněná určující mód programu
 int Global_ModeSelectvar = 0;
+int rady = 0;
+
+IRrecv IR(39);
 
 // void setup()
 void setup()
 {
+  IR.enableIRIn();
   MOTORS_Setup();
   LASER_Setup();
   pinMode(led, OUTPUT);
   Serial.begin(9600);
 
-  if (IRzaznam == 0)
-  {
-    while (analogRead(IR_IRPin) != 0)
+    while (IRzaznam != 0xBA45FF00)
     {
       MOTORS_Go(0, 0);
-      Global_ModeSelectvar = analogRead(IR_IRPin);
-      Serial.println(Global_ModeSelectvar);
+      if(IR.decode())
+      {
+       /* if(analogRead(IR_IRPin) > 0)
+        {
+          rady = 1;  
+        }
+
+        if(analogRead(IR_IRPin) == 0)
+        {
+          rady = 0;  
+        }  
+      
+        Global_ModeSelectvar = Global_ModeSelectvar + rady;
+        Global_ModeSelectvar = Global_ModeSelectvar*10;
+
+        Serial.println("==================");
+        Serial.println(Global_ModeSelectvar);
+        Serial.println(analogRead(IR_IRPin));
+        Serial.println("==================");
+        */
+        Serial.println(IR.decodedIRData.decodedRawData, HEX);
+        IR.resume(); 
+
+        IRzaznam = IR.decodedIRData.decodedRawData, HEX;
+      }
     }
-  }
 
   for (int i = 0; i++; i == 2000)
   {
@@ -77,13 +102,11 @@ void loop()
 //    Global_ModeSelectvar = 0;
 //  }
 
-  Serial.println("global:");
-  Serial.println(Global_ModeSelectvar);
 
   switch (Global_ModeSelectvar)
   {
 
-  case 0x07:
+  case 0:
     if (LINE_Get(1, hodnota_cary, 0) == 0 && LINE_Get(2, hodnota_cary, 0) == 0)
     {
 
@@ -112,7 +135,7 @@ void loop()
 
       }
 
-      // Serial.println(laser_number);
+      Serial.println(laser_number);
 
       // rozpohybování Sumce pomocí proměné "laser_number" vzniklé po třídění
       switch (laser_number)
@@ -154,10 +177,10 @@ void loop()
         delay(100);
         break;
 
-      case 9:
+      /*case 9:
         MOTORS_Go(255 * -1, 255 * -1);
         Serial.println("dopředu");
-        break;
+        break;*/
       }
 
       // možnost zastavení programu pomocí stop proměné
@@ -170,17 +193,7 @@ void loop()
       {
         delay(1);
         digitalWrite(led, HIGH);
-      }
-
-      if (cas_zaznam > 0 && zapvyp == 1)
-      {
-        delay(1);
-        digitalWrite(led, LOW);
-      }
-
-      if (led_control != zapvyp)
-      {
-        cas_zaznam = 100;
+        cas_zaznam = cas_zaznam-1;
       }
 
     }
@@ -190,16 +203,18 @@ void loop()
     {
       MOTORS_Go(255 / 2 * -1, -255 / 2 * -1);
       delay(750);
+      cas_zaznam = 10;
     }
     // dotek bílé čáry pravým senzorem
     if (LINE_Get(2, hodnota_cary, 0) == 1)
     {
       MOTORS_Go(-255 / 2 * -1, 255 / 2 * -1);
       delay(750);
+      cas_zaznam = 10;
     }
     break;
 // kalibrace
-  case 0x0B:
+  case 1:
 
     Serial.println("v kalibraci");
 

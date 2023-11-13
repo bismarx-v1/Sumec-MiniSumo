@@ -10,7 +10,10 @@
 #define WIRE Wire
 
 void setup() {
-  WIRE.begin(11,10,400000);
+
+  pinMode(40, OUTPUT);
+
+  WIRE.begin(18,17,400000);
 
   Serial.begin(115200);
   while (!Serial)
