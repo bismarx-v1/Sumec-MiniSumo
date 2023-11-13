@@ -3,15 +3,15 @@
 
 TFLI2C tflI2C;
 
-int16_t tfAddr1 = 0x1E;
-int16_t tfAddr2 = 0x1A;
-int16_t tfAddr3 = 0x10;
+int16_t tfAddr1 = 0x11;
+int16_t tfAddr2 = 0x12;
+int16_t tfAddr3 = 0x13;
 int16_t tfDist;
 
 
 void setup() {
     Serial.begin( 115200);
-    Wire.begin(11,10,400000);
+    Wire.begin(18,17,400000);
 	delay(1000);
 	
 	tflI2C.printStatus();
@@ -20,6 +20,11 @@ void setup() {
 }
 
 void loop() {
+tflI2C.getData( tfDist, 0x10);
+	Serial.println(tfDist);
+	tfDist = 0;
+	delay(100);
+	
 	tflI2C.getData( tfDist, tfAddr1);
 	Serial.println(tfDist);
 	tfDist = 0;
