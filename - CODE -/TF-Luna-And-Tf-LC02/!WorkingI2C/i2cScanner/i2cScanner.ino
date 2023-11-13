@@ -10,18 +10,15 @@
 #define WIRE Wire
 
 void setup() {
-<<<<<<< HEAD
 
   pinMode(40, OUTPUT);
 
-=======
 	pinMode(40, OUTPUT);
 	pinMode(41, OUTPUT);
 	pinMode(42, OUTPUT);
 	digitalWrite(40, LOW);
 	digitalWrite(41, LOW);
 	digitalWrite(42, LOW);
->>>>>>> fd7afdc58fbd80746bbebdeea76158c0cdb7aa1a
   WIRE.begin(18,17,400000);
 
   Serial.begin(115200);

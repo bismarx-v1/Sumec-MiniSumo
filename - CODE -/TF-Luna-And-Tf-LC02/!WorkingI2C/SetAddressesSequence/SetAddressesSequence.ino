@@ -28,14 +28,14 @@ void setup() {
 	Serial.println(tflI2C.Save_Settings(tfAddr));
 	delay(1000);
 	Serial.println(tflI2C.Soft_Reset(tfAddr));
-	/*
+	
 	Serial.print("Add 2nd sensor");	//all sensors should be connected
 	delay(10000);
 	Serial.println(tflI2C.Set_I2C_Addr(tfNewAddress3, tfAddr));
 	delay(1000);
 	Serial.println(tflI2C.Save_Settings(tfAddr));
 	delay(1000);
-	Serial.println(tflI2C.Soft_Reset(tfAddr));*/
+	Serial.println(tflI2C.Soft_Reset(tfAddr));
 	delay(1000);
 	
 }
