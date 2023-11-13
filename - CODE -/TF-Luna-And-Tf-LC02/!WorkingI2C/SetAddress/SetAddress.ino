@@ -4,13 +4,12 @@
 TFLI2C tflI2C;
 
 int16_t  tfAddr = 0x10;
-int16_t  tfNewAddress = 0x11;
+int16_t  tfNewAddress = 0x1E;
 
 
 void setup() {
-	
     Serial.begin(115200);  // Initalize serial port
-    Wire.begin(18,17,400000);           // Initalize Wire library
+    Wire.begin(11,10,400000);           // Initalize Wire library
 	delay(1000);
 	
 	
