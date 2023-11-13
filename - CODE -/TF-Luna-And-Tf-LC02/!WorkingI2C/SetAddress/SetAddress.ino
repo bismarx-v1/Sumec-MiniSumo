@@ -8,15 +8,6 @@ int16_t  tfNewAddress = 0x11;
 
 
 void setup() {
-	pinMode(40, OUTPUT);
-	pinMode(41, OUTPUT);
-	pinMode(42, OUTPUT);
-	digitalWrite(40, LOW);
-	digitalWrite(41, LOW);
-	digitalWrite(42, LOW);
-	
-	digitalWrite(41, HIGH);
-	digitalWrite(42, HIGH);
 	
     Serial.begin(115200);  // Initalize serial port
     Wire.begin(18,17,400000);           // Initalize Wire library
