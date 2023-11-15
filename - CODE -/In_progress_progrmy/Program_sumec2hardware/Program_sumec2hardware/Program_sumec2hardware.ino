@@ -1,7 +1,10 @@
+#include <TFLI2C.h>
 #include <IRremote.h>
-#include "Wire.h"
+#include <Wire.h>
 #include "motors.h"
 #include "line.h"
+#include "IRstart.h"
+#include "TfLunaEsp32S3.h"
 
 
 
@@ -11,13 +14,10 @@
 int Sensor1 = 0;
 int Sensor2 = 0;
 int Sensor3 = 0;
-int SensorRange = 300; //|sensor range setting||sensor range setting||sensor range setting||sensor range setting||sensor range setting|
+int Range = 300; //|sensor range setting||sensor range setting||sensor range setting||sensor range setting||sensor range setting|
 int Sensor = 0;
 int ButtonDown = 0;
 
-int Range = 300;
-int IRzaznam = 0;
-int rot_hodnota = 0;
   // časovo ledkové proměné
 int led_control = 0;
 int cas_zaznam = 0;
@@ -28,46 +28,101 @@ int stop = 1;
 int Global_ModeSelectvar = 0;
 int rady = 0;
 
-IRrecv IR(39);
+//IR
+int recvPin = 39;
+int i = 0;
+IRrecv irrecv(recvPin);
+  int code;
+  int adres;
+  int comand_first;
+  int comand;
+  int DohaioID;
+  int start_control = 0;
 
 // void setup()
 void setup()
 {
-  IR.enableIRIn();
+  irrecv.enableIRIn();
   MOTORS_Setup();
-  LASER_Setup();
+  TfL_Setup();
+  TfL_SetAddrs();
   pinMode(led, OUTPUT);
   Serial.begin(9600);
 
-    while (IRzaznam != 0xBA45FF00)
-    {
-      MOTORS_Go(0, 0);
-      if(IR.decode())
+  while (start_control == 0)
+  {
+
+
+    //IR čekání
+    decode_results results;        
+
+    if (irrecv.decode(&results)) {  
+
+      code = results.value & 0x7FF;
+      comand_first = code & 0x3F;
+      comand = comand_first / 0b10;
+      adres = code / 0b1000000; 
+
+      Serial.println("");
+      Serial.print("recieved signal: ");
+      Serial.print(results.value, BIN);
+      Serial.print("    DEC: ");
+      Serial.println(results.value);
+      Serial.print("code: ");
+      Serial.print(code, BIN);
+      Serial.print("    DEC: ");
+      Serial.println(code);
+      Serial.print("adresa: ");
+      Serial.print(adres, BIN);
+      Serial.print("    DEC: ");
+      Serial.println(adres);
+      Serial.print("comand_first: ");
+      Serial.print(comand_first, BIN);
+      Serial.print("    DEC: ");
+      Serial.println(comand_first);
+      Serial.print("comand: ");
+      Serial.print(comand, BIN);
+      Serial.print("    DEC: ");
+      Serial.println(comand);
+      Serial.println("");
+      Serial.println("==========");
+      irrecv.resume();
+
+      if(adres == 0)
       {
-       /* if(analogRead(IR_IRPin) > 0)
+      Serial.println("program!");
+
+        DohaioID = comand;
+        Serial.print("DohaioID: ");
+        Serial.println(DohaioID);
+        Serial.println(" ");
+        digitalWrite(led, HIGH);
+        delay(100);
+        digitalWrite(led, LOW);
+        delay(100);
+        digitalWrite(led, HIGH);
+        delay(100);
+        digitalWrite(led, LOW);
+        delay(100);
+
+      }
+      if(adres == 3)
+      {
+        if(comand == DohaioID)
         {
-          rady = 1;  
+          Serial.println("jedeme"); 
+          start_control = 1;   
         }
 
-        if(analogRead(IR_IRPin) == 0)
+        else
         {
-          rady = 0;  
-        }  
-      
-        Global_ModeSelectvar = Global_ModeSelectvar + rady;
-        Global_ModeSelectvar = Global_ModeSelectvar*10;
-
-        Serial.println("==================");
-        Serial.println(Global_ModeSelectvar);
-        Serial.println(analogRead(IR_IRPin));
-        Serial.println("==================");
-        */
-        Serial.println(IR.decodedIRData.decodedRawData, HEX);
-        IR.resume(); 
-
-        IRzaznam = IR.decodedIRData.decodedRawData, HEX;
+          Serial.println("špatný code");    
+        }                 
       }
     }
+    //IR KONEC
+
+  }
 
   for (int i = 0; i++; i == 2000)
   {
@@ -89,17 +144,28 @@ int tolerance_mereni = 100; // tolerance mčření slouží k vyvážení nepře
 // void loop
 void loop()
 {
+  led_control = millis();
+  if(led_control % 100 < 99 && led_control % 100 > 50)
+  {
+    digitalWrite(led, LOW);
+  }
+  if(led_control % 100 > 1 && led_control % 100 < 49)
+  {
+    digitalWrite(led, HIGH);
+  }
 
-//  if (digitalRead(Button) == 1)
-//  {
-//    Global_ModeSelectvar = 1;
-//  }
+if (digitalRead(Button) == 1)
+  {
+    Global_ModeSelectvar = 1;
+  }
 
-//  else
-//  {
-//    Global_ModeSelectvar = 0;
-//  }
+  else
+  {
+    Global_ModeSelectvar = 0;
+  }
 
+  Serial.println("global:");
+  Serial.println(Global_ModeSelectvar);
 
   switch (Global_ModeSelectvar)
   {
@@ -115,25 +181,24 @@ void loop()
 
       if (cas_zaznam == 0)
       {
-        if (LASER_Get(3, Range, 0) == 1)
+        if (TfL_Get(0x12) == 1)
         { // přední laser
           laser_number = laser_number + 1;
         }
 
-        if (LASER_Get(2, Range, 0) == 1)
+        if (TfL_Get(0x11) == 1)
         { // levý laser
           laser_number = laser_number + 3;
         }
 
-        if (LASER_Get(1, Range, 0) == 1)
+        if (TfL_Get(0x13) == 1)
         { // pravý laser
           laser_number = laser_number + 5;
         }
 
-
       }
 
-      Serial.println(laser_number);
+      // Serial.println(laser_number);
 
       // rozpohybování Sumce pomocí proměné "laser_number" vzniklé po třídění
       switch (laser_number)
@@ -146,21 +211,16 @@ void loop()
       case 1:
         MOTORS_Go(255 * -1, 255 * -1);
         Serial.println("dopředu2");
-        rot_hodnota = 1;
         break;
 
       case 3:
-          MOTORS_Go(80 * -1, 255 * -1);
-          Serial.println("strana1");
-          rot_hodnota = 1;
-          delay(50);
+        MOTORS_Go(-255 / 2 * -1, 255 / 2 * -1);
+        Serial.println("strana1");
         break;
 
       case 5:
-          MOTORS_Go(255 * -1, 80 * -1);
-          Serial.println("strana2");
-          rot_hodnota = 1;
-          delay(50);
+        MOTORS_Go(255 / 2 * -1, -255 / 2 * -1);
+        Serial.println("strana2");
         break;
 
       case 4:
@@ -175,10 +235,10 @@ void loop()
         delay(100);
         break;
 
-      /*case 9:
+      case 9:
         MOTORS_Go(255 * -1, 255 * -1);
         Serial.println("dopředu");
-        break;*/
+        break;
       }
 
       // možnost zastavení programu pomocí stop proměné
@@ -186,34 +246,31 @@ void loop()
       {
         MOTORS_Go(0, 0);
       }
-      // čas ledka
-      if (cas_zaznam > 0 && zapvyp == 0)
+
+      if (cas_zaznam > 0)
       {
         delay(1);
-        digitalWrite(led, HIGH);
-        cas_zaznam = cas_zaznam-1;
+        cas_zaznam = cas_zaznam - 1;
       }
-
     }
 
     // dotek bílé čáry levím senzorem
     if (LINE_Get(1, hodnota_cary, 0) == 1)
     {
       MOTORS_Go(255 / 2 * -1, -255 / 2 * -1);
-      delay(750);
+      delay(500);
       cas_zaznam = 10;
     }
     // dotek bílé čáry pravým senzorem
     if (LINE_Get(2, hodnota_cary, 0) == 1)
     {
       MOTORS_Go(-255 / 2 * -1, 255 / 2 * -1);
-      delay(750);
+      delay(500);
       cas_zaznam = 10;
     }
     break;
-// kalibrace
-  case 1:
 
+  case 1:
     Serial.println("v kalibraci");
 
     MOTORS_Go(0, 0);
@@ -238,13 +295,6 @@ void loop()
       hodnota_cary = kontrolni_hodnota_kalibrace; // změna na původní hodnotu
       MOTORS_Go(0, 0);
       Serial.println("kalibrace nevysla");
-      for (int i = 0; i == 10; i++)
-      {
-        digitalWrite(led, 1);
-        delay(1000);
-        digitalWrite(led, 0);
-        delay(1000);
-      }
     }
 
     else
@@ -256,13 +306,7 @@ void loop()
       delay(250);
     }
 
-    Serial.println("konec");
-		while (analogRead(IR_IRPin) != 0)
-    {
-      MOTORS_Go(0, 0);
-      Serial.println(millis());
-      IRzaznam++;
-    }
+
     Global_ModeSelectvar = 0;
     break;
   }
