@@ -1,11 +1,11 @@
 #include <Arduino.h>
 #include <IRremote.h>
-#include "Wire.h"
+#include <Wire.h>
 #include <VL53L0X.h>
 #include "motors.h"
 #include "line.h"
 #include "laser.h"
-#include "IR.h"
+
 
 // defines for demo
 #define Button 13
@@ -13,7 +13,7 @@
 int Sensor1 = 0;
 int Sensor2 = 0;
 int Sensor3 = 0;
-int SensorRange = 300; //|sensor range setting||sensor range setting||sensor range setting||sensor range setting||sensor range setting|
+int Range = 300; //|sensor range setting||sensor range setting||sensor range setting||sensor range setting||sensor range setting|
 int Sensor = 0;
 int ButtonDown = 0;
 
@@ -28,32 +28,91 @@ int Global_ModeSelectvar = 0;
 int rady = 0;
 
 //IR
-IRrecv IR(39);
-decode_results results;
-int Range = 300;
-int rot_hodnota = 0;
-int IRadresa = 0;
-int IRCommand = 0;
-int startcomand = 0;
+int recvPin = 39;
+int i = 0;
+IRrecv irrecv(recvPin);
+  int code;
+  int adres;
+  int comand_first;
+  int comand;
+  int DohaioID;
+  int start_control = 0;
 
 // void setup()
 void setup()
 {
-  IR.enableIRIn();
+  irrecv.enableIRIn();
   MOTORS_Setup();
   LASER_Setup();
   pinMode(led, OUTPUT);
   Serial.begin(9600);
 
-  while (startcomand == 0)
+  while (start_control == 0)
   {
 
-    if (IR.decode(&results)) {
-      Serial.print("HEX: ");  
-      Serial.println(results.value, HEX);
-      IR.resume(); // Receive the next value
+
+    //IR čekání
+    decode_results results;        
+
+    if (irrecv.decode(&results)) {  
+
+      code = results.value & 0x7FF;
+      comand_first = code & 0x3F;
+      comand = comand_first / 0b10;
+      adres = code / 0b1000000; 
+
+      Serial.println("");
+      Serial.print("recieved signal: ");
+      Serial.print(results.value, BIN);
+      Serial.print("    DEC: ");
+      Serial.println(results.value);
+      Serial.print("code: ");
+      Serial.print(code, BIN);
+      Serial.print("    DEC: ");
+      Serial.println(code);
+      Serial.print("adresa: ");
+      Serial.print(adres, BIN);
+      Serial.print("    DEC: ");
+      Serial.println(adres);
+      Serial.print("comand_first: ");
+      Serial.print(comand_first, BIN);
+      Serial.print("    DEC: ");
+      Serial.println(comand_first);
+      Serial.print("comand: ");
+      Serial.print(comand, BIN);
+      Serial.print("    DEC: ");
+      Serial.println(comand);
+      Serial.println("");
+      Serial.println("==========");
+      irrecv.resume();
+
+      if(adres == 0)
+      {
+      Serial.println("program!");
+
+        DohaioID = comand;
+        Serial.print("DohaioID: ");
+        Serial.println(DohaioID);
+        Serial.println(" ");
+          
+
+      }
+      if(adres == 3)
+      {
+        if(comand == DohaioID)
+        {
+          Serial.println("jedeme"); 
+          start_control = 1;   
+        }
+
+        else
+        {
+          Serial.println("špatný code");    
+        }                 
+      }
     }
-    delay(10);
+    //IR KONEC
+
   }
 
   for (int i = 0; i++; i == 2000)
@@ -77,16 +136,18 @@ int tolerance_mereni = 100; // tolerance mčření slouží k vyvážení nepře
 void loop()
 {
 
-//  if (digitalRead(Button) == 1)
-//  {
-//    Global_ModeSelectvar = 1;
-//  }
+if (digitalRead(Button) == 1)
+  {
+    Global_ModeSelectvar = 1;
+  }
 
-//  else
-//  {
-//    Global_ModeSelectvar = 0;
-//  }
+  else
+  {
+    Global_ModeSelectvar = 0;
+  }
 
+  Serial.println("global:");
+  Serial.println(Global_ModeSelectvar);
 
   switch (Global_ModeSelectvar)
   {
@@ -105,22 +166,28 @@ void loop()
         if (LASER_Get(3, Range, 0) == 1)
         { // přední laser
           laser_number = laser_number + 1;
+          digitalWrite(led, HIGH);
         }
 
         if (LASER_Get(2, Range, 0) == 1)
         { // levý laser
           laser_number = laser_number + 3;
+          digitalWrite(led, HIGH);
         }
 
         if (LASER_Get(1, Range, 0) == 1)
         { // pravý laser
           laser_number = laser_number + 5;
+          digitalWrite(led, HIGH);
         }
 
-
+        if (laser_number == 0)
+        {
+          digitalWrite(led, LOW);
+        }
       }
 
-      Serial.println(laser_number);
+      // Serial.println(laser_number);
 
       // rozpohybování Sumce pomocí proměné "laser_number" vzniklé po třídění
       switch (laser_number)
@@ -133,21 +200,16 @@ void loop()
       case 1:
         MOTORS_Go(255 * -1, 255 * -1);
         Serial.println("dopředu2");
-        rot_hodnota = 1;
         break;
 
       case 3:
-          MOTORS_Go(80 * -1, 255 * -1);
-          Serial.println("strana1");
-          rot_hodnota = 1;
-          delay(50);
+        MOTORS_Go(-255 / 2 * -1, 255 / 2 * -1);
+        Serial.println("strana1");
         break;
 
       case 5:
-          MOTORS_Go(255 * -1, 80 * -1);
-          Serial.println("strana2");
-          rot_hodnota = 1;
-          delay(50);
+        MOTORS_Go(255 / 2 * -1, -255 / 2 * -1);
+        Serial.println("strana2");
         break;
 
       case 4:
@@ -162,10 +224,10 @@ void loop()
         delay(100);
         break;
 
-      /*case 9:
+      case 9:
         MOTORS_Go(255 * -1, 255 * -1);
         Serial.println("dopředu");
-        break;*/
+        break;
       }
 
       // možnost zastavení programu pomocí stop proměné
@@ -173,34 +235,31 @@ void loop()
       {
         MOTORS_Go(0, 0);
       }
-      // čas ledka
-      if (cas_zaznam > 0 && zapvyp == 0)
+
+      if (cas_zaznam > 0)
       {
         delay(1);
-        digitalWrite(led, HIGH);
-        cas_zaznam = cas_zaznam-1;
+        cas_zaznam = cas_zaznam - 1;
       }
-
     }
 
     // dotek bílé čáry levím senzorem
     if (LINE_Get(1, hodnota_cary, 0) == 1)
     {
       MOTORS_Go(255 / 2 * -1, -255 / 2 * -1);
-      delay(750);
+      delay(500);
       cas_zaznam = 10;
     }
     // dotek bílé čáry pravým senzorem
     if (LINE_Get(2, hodnota_cary, 0) == 1)
     {
       MOTORS_Go(-255 / 2 * -1, 255 / 2 * -1);
-      delay(750);
+      delay(500);
       cas_zaznam = 10;
     }
     break;
-// kalibrace
-  case 1:
 
+  case 1:
     Serial.println("v kalibraci");
 
     MOTORS_Go(0, 0);
@@ -243,13 +302,7 @@ void loop()
       delay(250);
     }
 
-    Serial.println("konec");
-		while (analogRead(IR_IRPin) != 0)
-    {
-      MOTORS_Go(0, 0);
-      Serial.println(millis());
-      IRadresa++;
-    }
+
     Global_ModeSelectvar = 0;
     break;
   }
