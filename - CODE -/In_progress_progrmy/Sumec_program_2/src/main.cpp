@@ -17,9 +17,6 @@ int SensorRange = 300; //|sensor range setting||sensor range setting||sensor ran
 int Sensor = 0;
 int ButtonDown = 0;
 
-int Range = 300;
-int IRzaznam = 0;
-int rot_hodnota = 0;
   // časovo ledkové proměné
 int led_control = 0;
 int cas_zaznam = 0;
@@ -30,7 +27,14 @@ int stop = 1;
 int Global_ModeSelectvar = 0;
 int rady = 0;
 
+//IR
 IRrecv IR(39);
+decode_results results;
+int Range = 300;
+int rot_hodnota = 0;
+int IRadresa = 0;
+int IRCommand = 0;
+int startcomand = 0;
 
 // void setup()
 void setup()
@@ -41,35 +45,16 @@ void setup()
   pinMode(led, OUTPUT);
   Serial.begin(9600);
 
-    while (IRzaznam != 0xBA45FF00)
-    {
-      MOTORS_Go(0, 0);
-      if(IR.decode())
-      {
-       /* if(analogRead(IR_IRPin) > 0)
-        {
-          rady = 1;  
-        }
+  while (startcomand == 0)
+  {
 
-        if(analogRead(IR_IRPin) == 0)
-        {
-          rady = 0;  
-        }  
-      
-        Global_ModeSelectvar = Global_ModeSelectvar + rady;
-        Global_ModeSelectvar = Global_ModeSelectvar*10;
-
-        Serial.println("==================");
-        Serial.println(Global_ModeSelectvar);
-        Serial.println(analogRead(IR_IRPin));
-        Serial.println("==================");
-        */
-        Serial.println(IR.decodedIRData.decodedRawData, HEX);
-        IR.resume(); 
-
-        IRzaznam = IR.decodedIRData.decodedRawData, HEX;
-      }
+    if (IR.decode(&results)) {
+      Serial.print("HEX: ");  
+      Serial.println(results.value, HEX);
+      IR.resume(); // Receive the next value
     }
+    delay(10);
+  }
 
   for (int i = 0; i++; i == 2000)
   {
@@ -263,7 +248,7 @@ void loop()
     {
       MOTORS_Go(0, 0);
       Serial.println(millis());
-      IRzaznam++;
+      IRadresa++;
     }
     Global_ModeSelectvar = 0;
     break;
