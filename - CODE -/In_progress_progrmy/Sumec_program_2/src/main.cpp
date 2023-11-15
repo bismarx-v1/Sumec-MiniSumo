@@ -94,7 +94,14 @@ void setup()
         Serial.print("DohaioID: ");
         Serial.println(DohaioID);
         Serial.println(" ");
-          
+        digitalWrite(led, HIGH);
+        delay(100);
+        digitalWrite(led, LOW);
+        delay(100);
+        digitalWrite(led, HIGH);
+        delay(100);
+        digitalWrite(led, LOW);
+        delay(100);
 
       }
       if(adres == 3)
@@ -135,6 +142,15 @@ int tolerance_mereni = 100; // tolerance mčření slouží k vyvážení nepře
 // void loop
 void loop()
 {
+  led_control = millis();
+  if(led_control % 100 < 99 && led_control % 100 > 50)
+  {
+    digitalWrite(led, LOW);
+  }
+  if(led_control % 100 > 1 && led_control % 100 < 49)
+  {
+    digitalWrite(led, HIGH);
+  }
 
 if (digitalRead(Button) == 1)
   {
@@ -166,25 +182,18 @@ if (digitalRead(Button) == 1)
         if (LASER_Get(3, Range, 0) == 1)
         { // přední laser
           laser_number = laser_number + 1;
-          digitalWrite(led, HIGH);
         }
 
         if (LASER_Get(2, Range, 0) == 1)
         { // levý laser
           laser_number = laser_number + 3;
-          digitalWrite(led, HIGH);
         }
 
         if (LASER_Get(1, Range, 0) == 1)
         { // pravý laser
           laser_number = laser_number + 5;
-          digitalWrite(led, HIGH);
         }
 
-        if (laser_number == 0)
-        {
-          digitalWrite(led, LOW);
-        }
       }
 
       // Serial.println(laser_number);
@@ -284,13 +293,6 @@ if (digitalRead(Button) == 1)
       hodnota_cary = kontrolni_hodnota_kalibrace; // změna na původní hodnotu
       MOTORS_Go(0, 0);
       Serial.println("kalibrace nevysla");
-      for (int i = 0; i == 10; i++)
-      {
-        digitalWrite(led, 1);
-        delay(1000);
-        digitalWrite(led, 0);
-        delay(1000);
-      }
     }
 
     else
