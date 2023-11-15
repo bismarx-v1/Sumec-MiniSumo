@@ -2,15 +2,24 @@
 
 const int LEDPin = 15;
 TaskHandle_t Task1;
+int LEDBlink = 0;
 
 void CodeForTask1(void * parameter) {	/*Code for core 0*/
 	Serial.print("Core ["); Serial.print(xPortGetCoreID()); Serial.println("] started");	//print this core
 	
 	for(;;) {	//void loop()
-		digitalWrite(LEDPin, 1);
-		delay(200);
-		digitalWrite(LEDPin, 0);
-		delay(400);
+		switch(LEDBlink) {
+			case 0:
+					digitalWrite(LEDPin, 0);
+				break;
+			
+			case 1:
+				digitalWrite(LEDPin, 1);
+				delay(200);
+				digitalWrite(LEDPin, 0);
+				delay(400);
+				break;
+		}
 	}
 }
 
@@ -30,6 +39,8 @@ void setup() {
 		0, 				/*Priority*/
 		&Task1, 		/*Task handle*/
 		0);				/*Core*/
+		
+	LEDBlink = 1;
 }
 
 
