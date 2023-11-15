@@ -10,7 +10,14 @@ int16_t tfDist;
 
 
 void setup() {
-    Serial.begin( 115200);
+	pinMode(40, OUTPUT);
+	pinMode(41, OUTPUT);
+	pinMode(42, OUTPUT);
+	digitalWrite(40, LOW);
+	digitalWrite(41, LOW);
+	digitalWrite(42, LOW);
+	
+    Serial.begin(9600);
     Wire.begin(18,17,400000);
 	delay(1000);
 	
@@ -20,7 +27,7 @@ void setup() {
 }
 
 void loop() {
-tflI2C.getData( tfDist, 0x10);
+	tflI2C.getData( tfDist, 0x10);
 	Serial.println(tfDist);
 	tfDist = 0;
 	delay(100);

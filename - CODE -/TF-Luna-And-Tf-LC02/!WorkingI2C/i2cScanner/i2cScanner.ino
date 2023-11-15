@@ -21,9 +21,8 @@ void setup() {
 	digitalWrite(42, LOW);
   WIRE.begin(18,17,400000);
 
-  Serial.begin(115200);
-  while (!Serial)
-     delay(10);
+  Serial.begin(9600);
+  delay(1000);
   Serial.println("\nI2C Scanner");
 }
 
@@ -33,6 +32,7 @@ void loop() {
   int nDevices;
 
   Serial.println("Scanning...");
+  Serial.println(millis());
 
   nDevices = 0;
   for(address = 1; address < 127; address++ ) 
