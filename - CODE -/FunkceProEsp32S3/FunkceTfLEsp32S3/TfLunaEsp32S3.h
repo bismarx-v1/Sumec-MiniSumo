@@ -85,7 +85,7 @@ void TfL_SetAddrs() {
 
 
 int TfL_Get(int TfLAddr=0x10) {
-	int tfDist = 0;
-	tflI2C.getData(tfDist, TfLAddr);
-	return tfDist
+	int TfL_Dist = 0;
+	tflI2C.getData(TfL_Dist, TfLAddr);
+	return TfL_Dist
 }
