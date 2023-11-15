@@ -1,0 +1,269 @@
+#include <IRremote.h>
+#include "Wire.h"
+#include "motors.h"
+#include "line.h"
+
+
+
+// defines for demo
+#define Button 13
+#define led 14
+int Sensor1 = 0;
+int Sensor2 = 0;
+int Sensor3 = 0;
+int SensorRange = 300; //|sensor range setting||sensor range setting||sensor range setting||sensor range setting||sensor range setting|
+int Sensor = 0;
+int ButtonDown = 0;
+
+int Range = 300;
+int IRzaznam = 0;
+int rot_hodnota = 0;
+  // časovo ledkové proměné
+int led_control = 0;
+int cas_zaznam = 0;
+int zapvyp = 1; 
+
+int stop = 1;
+// promněná určující mód programu
+int Global_ModeSelectvar = 0;
+int rady = 0;
+
+IRrecv IR(39);
+
+// void setup()
+void setup()
+{
+  IR.enableIRIn();
+  MOTORS_Setup();
+  LASER_Setup();
+  pinMode(led, OUTPUT);
+  Serial.begin(9600);
+
+    while (IRzaznam != 0xBA45FF00)
+    {
+      MOTORS_Go(0, 0);
+      if(IR.decode())
+      {
+       /* if(analogRead(IR_IRPin) > 0)
+        {
+          rady = 1;  
+        }
+
+        if(analogRead(IR_IRPin) == 0)
+        {
+          rady = 0;  
+        }  
+      
+        Global_ModeSelectvar = Global_ModeSelectvar + rady;
+        Global_ModeSelectvar = Global_ModeSelectvar*10;
+
+        Serial.println("==================");
+        Serial.println(Global_ModeSelectvar);
+        Serial.println(analogRead(IR_IRPin));
+        Serial.println("==================");
+        */
+        Serial.println(IR.decodedIRData.decodedRawData, HEX);
+        IR.resume(); 
+
+        IRzaznam = IR.decodedIRData.decodedRawData, HEX;
+      }
+    }
+
+  for (int i = 0; i++; i == 2000)
+  {
+    MOTORS_Go(-255 / 2 * -1, 255 / 2 * -1);
+    delay(1);
+  }
+
+  // Serial.println(analogRead(39));
+}
+
+int laser_number;
+// určuje zdali je barva spíš bílá nebo černá
+int hodnota_cary = 1000;
+// hodnoty pro kalibraci
+int hodnota_cerne_kalibrace;
+int hodnota_bile_kalibrace;
+int kontrolni_hodnota_kalibrace;
+int tolerance_mereni = 100; // tolerance mčření slouží k vyvážení nepřesnosti sensorů
+// void loop
+void loop()
+{
+
+//  if (digitalRead(Button) == 1)
+//  {
+//    Global_ModeSelectvar = 1;
+//  }
+
+//  else
+//  {
+//    Global_ModeSelectvar = 0;
+//  }
+
+
+  switch (Global_ModeSelectvar)
+  {
+
+  case 0:
+    if (LINE_Get(1, hodnota_cary, 0) == 0 && LINE_Get(2, hodnota_cary, 0) == 0)
+    {
+
+      // třídící proměná
+      laser_number = 0;
+
+      // třídění laserů pomocí proměné
+
+      if (cas_zaznam == 0)
+      {
+        if (LASER_Get(3, Range, 0) == 1)
+        { // přední laser
+          laser_number = laser_number + 1;
+        }
+
+        if (LASER_Get(2, Range, 0) == 1)
+        { // levý laser
+          laser_number = laser_number + 3;
+        }
+
+        if (LASER_Get(1, Range, 0) == 1)
+        { // pravý laser
+          laser_number = laser_number + 5;
+        }
+
+
+      }
+
+      Serial.println(laser_number);
+
+      // rozpohybování Sumce pomocí proměné "laser_number" vzniklé po třídění
+      switch (laser_number)
+      {
+
+      case 0:
+        MOTORS_Go(255 * -1, 255 * -1);
+        Serial.println("dopředu");
+        break;
+      case 1:
+        MOTORS_Go(255 * -1, 255 * -1);
+        Serial.println("dopředu2");
+        rot_hodnota = 1;
+        break;
+
+      case 3:
+          MOTORS_Go(80 * -1, 255 * -1);
+          Serial.println("strana1");
+          rot_hodnota = 1;
+          delay(50);
+        break;
+
+      case 5:
+          MOTORS_Go(255 * -1, 80 * -1);
+          Serial.println("strana2");
+          rot_hodnota = 1;
+          delay(50);
+        break;
+
+      case 4:
+        MOTORS_Go(255 * -1, 200 * -1);
+        Serial.println("šikmo1");
+        delay(100);
+        break;
+
+      case 6:
+        MOTORS_Go(200 * -1, 255 * -1);
+        Serial.println("šikmo2");
+        delay(100);
+        break;
+
+      /*case 9:
+        MOTORS_Go(255 * -1, 255 * -1);
+        Serial.println("dopředu");
+        break;*/
+      }
+
+      // možnost zastavení programu pomocí stop proměné
+      while (stop == 0)
+      {
+        MOTORS_Go(0, 0);
+      }
+      // čas ledka
+      if (cas_zaznam > 0 && zapvyp == 0)
+      {
+        delay(1);
+        digitalWrite(led, HIGH);
+        cas_zaznam = cas_zaznam-1;
+      }
+
+    }
+
+    // dotek bílé čáry levím senzorem
+    if (LINE_Get(1, hodnota_cary, 0) == 1)
+    {
+      MOTORS_Go(255 / 2 * -1, -255 / 2 * -1);
+      delay(750);
+      cas_zaznam = 10;
+    }
+    // dotek bílé čáry pravým senzorem
+    if (LINE_Get(2, hodnota_cary, 0) == 1)
+    {
+      MOTORS_Go(-255 / 2 * -1, 255 / 2 * -1);
+      delay(750);
+      cas_zaznam = 10;
+    }
+    break;
+// kalibrace
+  case 1:
+
+    Serial.println("v kalibraci");
+
+    MOTORS_Go(0, 0);
+    delay(2000);
+
+    hodnota_cerne_kalibrace = LINE_Get(2, hodnota_cary, 1);
+    Serial.println(hodnota_cerne_kalibrace);
+    delay(100);
+
+    while (hodnota_cerne_kalibrace - LINE_Get(2, hodnota_cary, 1) <= hodnota_cerne_kalibrace - tolerance_mereni)
+    {
+      Serial.println(LINE_Get(2, hodnota_cary, 1));
+      MOTORS_Go(255 * -1, 255 * -1);
+    }
+    hodnota_bile_kalibrace = LINE_Get(2, hodnota_cary, 1);
+
+    kontrolni_hodnota_kalibrace = hodnota_cary;
+    hodnota_cary = hodnota_cerne_kalibrace / 2;
+
+    if (hodnota_bile_kalibrace > hodnota_cary) // pokud bude hraniční hodnota moc vysoká změní se hraniční hodnota na původní hodnotu
+    {
+      hodnota_cary = kontrolni_hodnota_kalibrace; // změna na původní hodnotu
+      MOTORS_Go(0, 0);
+      Serial.println("kalibrace nevysla");
+      for (int i = 0; i == 10; i++)
+      {
+        digitalWrite(led, 1);
+        delay(1000);
+        digitalWrite(led, 0);
+        delay(1000);
+      }
+    }
+
+    else
+    {
+      MOTORS_Go(255, 255);
+      Serial.print("Kalibrace úspěšně provedena, aktuální hraniční hodnota:");
+      Serial.println(hodnota_cary);
+
+      delay(250);
+    }
+
+    Serial.println("konec");
+		while (analogRead(IR_IRPin) != 0)
+    {
+      MOTORS_Go(0, 0);
+      Serial.println(millis());
+      IRzaznam++;
+    }
+    Global_ModeSelectvar = 0;
+    break;
+  }
+}
