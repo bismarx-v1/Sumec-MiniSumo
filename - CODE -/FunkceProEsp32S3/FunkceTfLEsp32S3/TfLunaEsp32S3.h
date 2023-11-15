@@ -2,6 +2,12 @@
 #include <TFLI2C.h>
 
 TFLI2C tflI2C;
+int TfL_Succ = 0;
+
+int16_t TfL_Addr1 = 0x11;	//TfL Lib - first address (usualy left sensor)
+int16_t TfL_Addr2 = 0x12;	//TfL Lib - second address (usualy mid sensor)
+int16_t TfL_Addr3 = 0x13;	//TfL Lib - third address (usualy right sensor)
+int16_t TfL_AddrDefault = 0x10;
 
 void TfL_Setup() {
 	pinMode(40, OUTPUT);
@@ -14,7 +20,7 @@ void TfL_Setup() {
 	pinMode(15, OUTPUT);
 	
     Wire.begin(18,17,400000);
-	return
+	return;
 }
 
 void TfL_SetAddrs() {
@@ -24,7 +30,7 @@ void TfL_SetAddrs() {
 	delay(100);
 	
 	while(TfL_Succ==0) {
-		TfL_Succ = tflI2C.Set_I2C_Addr(tfNewAddress1, tfAddr);	//only left sensor should be connected
+		TfL_Succ = tflI2C.Set_I2C_Addr(TfL_Addr1, TfL_AddrDefault);	//only left sensor should be connected
 		Serial.println(TfL_Succ);
 		delay(1000);
 	}
@@ -41,7 +47,7 @@ void TfL_SetAddrs() {
 	delay(100);
 	
 	while(TfL_Succ==0) {
-		TfL_Succ = tflI2C.Set_I2C_Addr(tfNewAddress2, tfAddr);	//only left and mid sensors should be connected
+		TfL_Succ = tflI2C.Set_I2C_Addr(TfL_Addr2, TfL_AddrDefault);	//only left and mid sensors should be connected
 		Serial.println(TfL_Succ);
 		delay(1000);
 	}
@@ -58,7 +64,7 @@ void TfL_SetAddrs() {
 	delay(100);
 	
 	while(TfL_Succ==0) {
-		TfL_Succ = tflI2C.Set_I2C_Addr(tfNewAddress3, tfAddr);	//all sensors should be connected
+		TfL_Succ = tflI2C.Set_I2C_Addr(TfL_Addr3, TfL_AddrDefault);	//all sensors should be connected
 		Serial.println(TfL_Succ);
 		delay(1000);
 	}
@@ -78,7 +84,7 @@ void TfL_SetAddrs() {
 	digitalWrite(15, LOW);
 	delay(100);
 	
-	return
+	return;
 }
 
 
@@ -87,5 +93,5 @@ void TfL_SetAddrs() {
 int TfL_Get(int TfLAddr=0x10) {
 	int TfL_Dist = 0;
 	tflI2C.getData(TfL_Dist, TfLAddr);
-	return TfL_Dist
+	return TfL_Dist;
 }

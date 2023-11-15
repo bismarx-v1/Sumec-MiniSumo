@@ -1,4 +1,4 @@
-#include TfLunaEsp32S3	//TfL Lib - the lib import
+#include "TfLunaEsp32S3.h"	//TfL Lib - the lib import
 
 int16_t tfAddr1 = 0x11;	//TfL Lib - first address (usualy left sensor)
 int16_t tfAddr2 = 0x12;	//TfL Lib - second address (usualy mid sensor)
