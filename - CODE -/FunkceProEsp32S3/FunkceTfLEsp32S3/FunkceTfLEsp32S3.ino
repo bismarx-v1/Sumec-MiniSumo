@@ -6,18 +6,18 @@ int16_t tfAddr3 = 0x13;	//TfL Lib - third address (usualy right sensor)
 
 void setup() {
     Serial.begin(115200);
-	TfL_Setup()	//TfL Lib - libs setup
-	TfL_SetAddrs()	//TfL Lib - start the process for setting adresses
+	TfL_Setup();	//TfL Lib - libs setup
+	TfL_SetAddrs();	//TfL Lib - start the process for setting adresses
 }
 
 void loop() {
-	Serial.print("Left:\t"):
+	Serial.print("Left:\t");
 	Serial.println(TfL_Get(tfAddr1));	//TfL Lib - Get from sensor
 	
-	Serial.print("Mid:\t"):
+	Serial.print("Mid:\t");
 	Serial.println(TfL_Get(tfAddr2));	//TfL Lib - Get from sensor
 	
-	Serial.print("Right:\t"):
+	Serial.print("Right:\t");
 	Serial.println(TfL_Get(tfAddr3));	//TfL Lib - Get from sensor
 	Serial.println("=======================");
 	delay(100);
