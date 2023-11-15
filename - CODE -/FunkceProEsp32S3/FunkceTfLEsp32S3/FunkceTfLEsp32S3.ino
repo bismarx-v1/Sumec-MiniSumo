@@ -12,13 +12,13 @@ void setup() {
 
 void loop() {
 	Serial.print("Left:\t"):
-	Serial.println(TfL_Get(0x11));	//TfL Lib - Get from sensor
+	Serial.println(TfL_Get(tfAddr1));	//TfL Lib - Get from sensor
 	
 	Serial.print("Mid:\t"):
-	Serial.println(TfL_Get(0x12));	//TfL Lib - Get from sensor
+	Serial.println(TfL_Get(tfAddr2));	//TfL Lib - Get from sensor
 	
 	Serial.print("Right:\t"):
-	Serial.println(TfL_Get(0x13));	//TfL Lib - Get from sensor
+	Serial.println(TfL_Get(tfAddr3));	//TfL Lib - Get from sensor
 	Serial.println("=======================");
 	delay(100);
 }

@@ -7,6 +7,7 @@ int16_t  tfAddr = 0x10;			//defaultní adresa
 int16_t  tfNewAddress1 = 0x11;	//Range = <0x08; 0x77>
 int16_t  tfNewAddress2 = 0x12;
 int16_t  tfNewAddress3 = 0x13;
+int TfL_Succ = 0;
 
 
 void setup() {
@@ -17,10 +18,75 @@ void setup() {
 	digitalWrite(41, LOW);
 	digitalWrite(42, LOW);
 	
+	pinMode(15, OUTPUT);
+	
     Serial.begin(9600);  // Initalize serial port
     Wire.begin(18,17,400000);           // Initalize Wire library
-	delay(5000);	//serial lib is slow
+	delay(1000);	//serial lib is slow
 	
+	digitalWrite(15, HIGH);
+	delay(100);
+	digitalWrite(15, LOW);
+	delay(100);
+	
+	while(TfL_Succ==0) {
+		TfL_Succ = tflI2C.Set_I2C_Addr(tfNewAddress1, tfAddr);	//only left sensor should be connected
+		Serial.println(TfL_Succ);
+		delay(1000);
+	}
+	Serial.println("0x11?");
+	TfL_Succ = 0;
+	
+	digitalWrite(15, HIGH);
+	delay(100);
+	digitalWrite(15, LOW);
+	delay(100);
+	digitalWrite(15, HIGH);
+	delay(100);
+	digitalWrite(15, LOW);
+	delay(100);
+	
+	while(TfL_Succ==0) {
+		TfL_Succ = tflI2C.Set_I2C_Addr(tfNewAddress2, tfAddr);	//only left and mid sensors should be connected
+		Serial.println(TfL_Succ);
+		delay(1000);
+	}
+	Serial.println("0x12?");
+	TfL_Succ = 0;
+	
+	digitalWrite(15, HIGH);
+	delay(100);
+	digitalWrite(15, LOW);
+	delay(100);
+	digitalWrite(15, HIGH);
+	delay(100);
+	digitalWrite(15, LOW);
+	delay(100);
+	
+	while(TfL_Succ==0) {
+		TfL_Succ = tflI2C.Set_I2C_Addr(tfNewAddress3, tfAddr);	//all sensors should be connected
+		Serial.println(TfL_Succ);
+		delay(1000);
+	}
+	Serial.println("0x13?");
+	TfL_Succ = 0;
+	
+	digitalWrite(15, HIGH);
+	delay(100);
+	digitalWrite(15, LOW);
+	delay(100);
+	digitalWrite(15, HIGH);
+	delay(100);
+	digitalWrite(15, LOW);
+	delay(100);
+	digitalWrite(15, HIGH);
+	delay(100);
+	digitalWrite(15, LOW);
+	delay(100);
+	
+	
+	/*
+	delay(5000);
 	Serial.println(tflI2C.Set_I2C_Addr(tfNewAddress1, tfAddr));	//only left sensor should be connected
 	delay(1000);
 	Serial.println(tflI2C.Save_Settings(tfAddr));
@@ -30,15 +96,23 @@ void setup() {
 	Serial.print("Add 2nd sensor");	//only left and mid sensors should be connected
 	delay(5000);
 	Serial.println(tflI2C.Set_I2C_Addr(tfNewAddress2, tfAddr));
-	/*delay(1000);
+	delay(1000);
 	Serial.println(tflI2C.Save_Settings(tfAddr));
 	delay(1000);
-	Serial.println(tflI2C.Soft_Reset(tfAddr));*/
+	Serial.println(tflI2C.Soft_Reset(tfAddr));
 	
 	Serial.print("Add 3rd sensor");	//all sensors should be connected
 	delay(5000);
 	Serial.println(tflI2C.Set_I2C_Addr(tfNewAddress3, tfAddr));
-	/*delay(1000);
+	delay(1000);
+	Serial.println(tflI2C.Save_Settings(tfAddr));
+	delay(1000);
+	Serial.println(tflI2C.Soft_Reset(tfAddr));
+	
+	Serial.print("Add 1sr sensor");
+	delay(5000);
+	Serial.println(tflI2C.Set_I2C_Addr(tfNewAddress1, tfAddr));
+	delay(1000);
 	Serial.println(tflI2C.Save_Settings(tfAddr));
 	delay(1000);
 	Serial.println(tflI2C.Soft_Reset(tfAddr));*/
