@@ -29,9 +29,7 @@ int Global_ModeSelectvar = 0;
 int rady = 0;
 
 //IR
-int recvPin = 39;
-int i = 0;
-IRrecv irrecv(recvPin);
+
   int code;
   int adres;
   int comand_first;

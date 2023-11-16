@@ -14,7 +14,7 @@ void TfL_Setup() {
 	pinMode(15, OUTPUT);
 	
     Wire.begin(18,17,400000);
-	return
+	  //return
 }
 
 void TfL_SetAddrs() {
@@ -78,7 +78,7 @@ void TfL_SetAddrs() {
 	digitalWrite(15, LOW);
 	delay(100);
 	
-	return
+	//return
 }
 
 
@@ -87,5 +87,5 @@ void TfL_SetAddrs() {
 int TfL_Get(int TfLAddr=0x10) {
 	int TfL_Dist = 0;
 	tflI2C.getData(TfL_Dist, TfLAddr);
-	return TfL_Dist;
+	return(TfL_Dist);
 }
