@@ -96,7 +96,7 @@ int TfL_Get(int TfLAddr=0x10) {
 	return(TfL_Dist);
 }
 
-/*void setup()
+void setup()
 {
 
 }
@@ -104,5 +104,5 @@ int TfL_Get(int TfLAddr=0x10) {
 void loop()
 {
   
-}*/
+}
 
