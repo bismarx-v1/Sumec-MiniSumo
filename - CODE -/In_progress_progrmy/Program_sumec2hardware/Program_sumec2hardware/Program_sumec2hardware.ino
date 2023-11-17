@@ -13,7 +13,7 @@
 int Sensor1 = 0;
 int Sensor2 = 0;
 int Sensor3 = 0;
-int Range = 300; //|sensor range setting||sensor range setting||sensor range setting||sensor range setting||sensor range setting|
+int Range = 150; //|sensor range setting||sensor range setting||sensor range setting||sensor range setting||sensor range setting|
 int Sensor = 0;
 int ButtonDown = 0;
 
@@ -44,8 +44,9 @@ void setup()
   TfL_Setup();
   TfL_SetAddrs();
   pinMode(led, OUTPUT);
-  Serial.begin(9600);
+  Serial.begin(115200);
 
+  /*
   while (start_control == 0)
   {
 
@@ -117,13 +118,14 @@ void setup()
         }                 
       }
     }
-    //IR KONEC
 
   }
+  */
+  //IR KONEC
 
   for (int i = 0; i++; i == 2000)
   {
-    MOTORS_Go(-255 / 2 * -1, 255 / 2 * -1);
+    MOTORS_Go(-255 / 2, 255 / 2);
     delay(1);
   }
 
@@ -151,7 +153,7 @@ void loop()
     digitalWrite(led, HIGH);
   }
 
-if (digitalRead(Button) == 1)
+/*if (digitalRead(Button) == 1)
   {
     Global_ModeSelectvar = 1;
   }
@@ -159,36 +161,39 @@ if (digitalRead(Button) == 1)
   else
   {
     Global_ModeSelectvar = 0;
-  }
+  }*/
 
-  Serial.println("global:");
-  Serial.println(Global_ModeSelectvar);
+
 
   switch (Global_ModeSelectvar)
   {
 
   case 0:
-    if (LINE_Get(1, hodnota_cary, 0) == 0 && LINE_Get(2, hodnota_cary, 0) == 0)
-    {
+    //if (LINE_Get(1, hodnota_cary, 0) == 0 && LINE_Get(2, hodnota_cary, 0) == 0)
+    //{
 
       // třídící proměná
       laser_number = 0;
+      Serial.println("uluny");
+      Serial.println(TfL_Get(0x12));
+      Serial.println(TfL_Get(0x11));
+      Serial.println(TfL_Get(0x13));
 
       // třídění laserů pomocí proměné
 
       if (cas_zaznam == 0)
       {
-        if (TfL_Get(0x12) == 1)
+        if (TfL_Get(0x12) < Range && TfL_Get(0x12) > 0)
         { // přední laser
           laser_number = laser_number + 1;
         }
 
-        if (TfL_Get(0x11) == 1)
+        if (TfL_Get(0x11) < Range && TfL_Get(0x11) > 0)
         { // levý laser
           laser_number = laser_number + 3;
         }
 
-        if (TfL_Get(0x13) == 1)
+        if (TfL_Get(0x13) < Range && TfL_Get(0x13) > 0)
         { // pravý laser
           laser_number = laser_number + 5;
         }
@@ -202,38 +207,38 @@ if (digitalRead(Button) == 1)
       {
 
       case 0:
-        MOTORS_Go(255 * -1, 255 * -1);
+        MOTORS_Go(255, 255);
         Serial.println("dopředu");
         break;
       case 1:
-        MOTORS_Go(255 * -1, 255 * -1);
+        MOTORS_Go(255 , 255);
         Serial.println("dopředu2");
         break;
 
       case 3:
-        MOTORS_Go(-255 / 2 * -1, 255 / 2 * -1);
+        MOTORS_Go(-255 / 2, 255 / 2);
         Serial.println("strana1");
         break;
 
       case 5:
-        MOTORS_Go(255 / 2 * -1, -255 / 2 * -1);
+        MOTORS_Go(255 / 2, -255 / 2 );
         Serial.println("strana2");
         break;
 
       case 4:
-        MOTORS_Go(255 * -1, 200 * -1);
+        MOTORS_Go(255, 150);
         Serial.println("šikmo1");
         delay(100);
         break;
 
       case 6:
-        MOTORS_Go(200 * -1, 255 * -1);
+        MOTORS_Go(150, 255);
         Serial.println("šikmo2");
         delay(100);
         break;
 
       case 9:
-        MOTORS_Go(255 * -1, 255 * -1);
+        MOTORS_Go(255, 255);
         Serial.println("dopředu");
         break;
       }
@@ -249,19 +254,19 @@ if (digitalRead(Button) == 1)
         delay(1);
         cas_zaznam = cas_zaznam - 1;
       }
-    }
+    //}
 
     // dotek bílé čáry levím senzorem
     if (LINE_Get(1, hodnota_cary, 0) == 1)
     {
-      MOTORS_Go(255 / 2 * -1, -255 / 2 * -1);
+      MOTORS_Go(255 / 2, -255 / 2 );
       delay(500);
       cas_zaznam = 10;
     }
     // dotek bílé čáry pravým senzorem
     if (LINE_Get(2, hodnota_cary, 0) == 1)
     {
-      MOTORS_Go(-255 / 2 * -1, 255 / 2 * -1);
+      MOTORS_Go(-255 / 2, 255 / 2);
       delay(500);
       cas_zaznam = 10;
     }
@@ -280,7 +285,7 @@ if (digitalRead(Button) == 1)
     while (hodnota_cerne_kalibrace - LINE_Get(2, hodnota_cary, 1) <= hodnota_cerne_kalibrace - tolerance_mereni)
     {
       Serial.println(LINE_Get(2, hodnota_cary, 1));
-      MOTORS_Go(255 * -1, 255 * -1);
+      MOTORS_Go(255, 255);
     }
     hodnota_bile_kalibrace = LINE_Get(2, hodnota_cary, 1);
 

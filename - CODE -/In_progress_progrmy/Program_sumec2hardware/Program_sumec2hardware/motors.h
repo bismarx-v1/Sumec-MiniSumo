@@ -1,10 +1,10 @@
 //important #defines
-#define MOTORS_LeftSpeed 5
-#define MOTORS_LeftBackward 11
+#define MOTORS_LeftSpeed 11
+#define MOTORS_LeftBackward 9
 #define MOTORS_LeftForward 10
 #define MOTORS_RightSpeed 21
-#define MOTORS_RightBackward 13
-#define MOTORS_RightForward 14
+#define MOTORS_RightBackward 14
+#define MOTORS_RightForward 13
 #define MOTORS_STBY 12
 
 //setup function
