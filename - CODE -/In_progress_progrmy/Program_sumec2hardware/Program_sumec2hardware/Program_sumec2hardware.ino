@@ -5,11 +5,34 @@
 #include "IRstart.h"
 #include "TfLunaEsp32S3.h"
 
+//LED
+#define led 15
+const int LEDPin = 15;
+TaskHandle_t Task1;
+int LEDBlink = 0;
 
+void CodeForTask1(void * parameter) {    /*Code for core 0*/
+    Serial.print("Core ["); Serial.print(xPortGetCoreID()); Serial.println("] started");    //print this core
+    
+    for(;;) {    //void loop()
+        switch(LEDBlink) {
+            case 0:
+                    digitalWrite(LEDPin, 0);
+                break;
+            
+            case 1:
+                digitalWrite(LEDPin, 1);
+                delay(200);
+                digitalWrite(LEDPin, 0);
+                delay(200);
+                break;
+        }
+    }
+}
+//LED
 
 // defines for demo
 #define Button 13
-#define led 14
 int Sensor1 = 0;
 int Sensor2 = 0;
 int Sensor3 = 0;
@@ -39,19 +62,26 @@ int rady = 0;
 // void setup()
 void setup()
 {
+
+  xTaskCreatePinnedToCore(CodeForTask1, "Task_1", 3500, NULL, 0, &Task1, 0);                /*Core*/
+
+
+
+
+
   irrecv.enableIRIn();
   MOTORS_Setup();
   TfL_Setup();
   TfL_SetAddrs();
   pinMode(led, OUTPUT);
-  Serial.begin(115200);
+  Serial.begin(9600);
 
-  /*
+  //IR čekání
   while (start_control == 0)
   {
 
 
-    //IR čekání
+    
     decode_results results;        
 
     if (irrecv.decode(&results)) {  
@@ -120,7 +150,7 @@ void setup()
     }
 
   }
-  */
+  
   //IR KONEC
 
   for (int i = 0; i++; i == 2000)
@@ -143,15 +173,8 @@ int tolerance_mereni = 100; // tolerance mčření slouží k vyvážení nepře
 // void loop
 void loop()
 {
-  led_control = millis();
-  if(led_control % 100 < 99 && led_control % 100 > 50)
-  {
-    digitalWrite(led, LOW);
-  }
-  if(led_control % 100 > 1 && led_control % 100 < 49)
-  {
-    digitalWrite(led, HIGH);
-  }
+
+  LEDBlink = 1;
 
 /*if (digitalRead(Button) == 1)
   {
