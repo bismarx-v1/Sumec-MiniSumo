@@ -116,7 +116,7 @@ void setup()
       Serial.println("==========");
       irrecv.resume();
 
-      if(adres == 0)
+      if(adres == 11)
       {
       Serial.println("program!");
 
@@ -134,7 +134,7 @@ void setup()
         delay(100);
 
       }
-      if(adres == 3)
+      if(adres == 7)
       {
         if(comand == DohaioID)
         {
