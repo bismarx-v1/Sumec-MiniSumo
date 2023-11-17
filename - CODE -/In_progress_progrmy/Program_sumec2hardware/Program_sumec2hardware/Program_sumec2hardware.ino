@@ -22,9 +22,9 @@ void CodeForTask1(void * parameter) {    /*Code for core 0*/
             
             case 1:
                 digitalWrite(LEDPin, 1);
-                delay(200);
+                delay(100);
                 digitalWrite(LEDPin, 0);
-                delay(200);
+                delay(100);
                 break;
         }
     }
