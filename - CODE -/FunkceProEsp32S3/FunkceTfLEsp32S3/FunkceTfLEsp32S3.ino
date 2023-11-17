@@ -7,7 +7,15 @@ int16_t tfAddr3 = 0x13;	//TfL Lib - third address (usualy right sensor)
 void setup() {
     Serial.begin(115200);
 	TfL_Setup();	//TfL Lib - libs setup
+	
+	SetAddrLabel:									//|UNTESTED CODE||UNTESTED CODE||UNTESTED CODE||UNTESTED CODE|
+	
 	TfL_SetAddrs();	//TfL Lib - start the process for setting adresses
+	
+	delay(1000);									//|UNTESTED CODE||UNTESTED CODE||UNTESTED CODE||UNTESTED CODE|
+	if(TfL_IsSet()!=1) {							//|UNTESTED CODE||UNTESTED CODE||UNTESTED CODE||UNTESTED CODE|
+	goto SetAddrLabel;								//|UNTESTED CODE||UNTESTED CODE||UNTESTED CODE||UNTESTED CODE|
+	}												//|UNTESTED CODE||UNTESTED CODE||UNTESTED CODE||UNTESTED CODE|
 }
 
 void loop() {
