@@ -22,7 +22,7 @@
 int Sensor1 = 0;
 int Sensor2 = 0;
 int Sensor3 = 0;
-int Range = 50;  //|sensor range setting||sensor range setting||sensor range setting||sensor range setting||sensor range setting|
+int Range = 40;  //|sensor range setting||sensor range setting||sensor range setting||sensor range setting||sensor range setting|
 int Sensor = 0;
 int ButtonDown = 0;
 
@@ -120,7 +120,6 @@ void CodeForTask1(void* parameter) { /*Code for core 0*/
       case 0:
         digitalWrite(LEDPin, 0);
         break;
-
       case 1:
         digitalWrite(LEDPin, 1);
         delay(100);
@@ -137,15 +136,17 @@ void setup() {
 
   Serial.begin(9600);
   pinMode(tlacitko, INPUT);
-  xTaskCreatePinnedToCore(CodeForTask1, "Task_1", 3500, NULL, 0, &Task1, 0); /*Core*/
-  irrecv.enableIRIn();
+  pinMode(led, OUTPUT);
+  
   MOTORS_Setup();
+  
   TfL_Setup();
   TfL_SetAddrs();
-  pinMode(led, OUTPUT);
 
-  //IR čekání
+  irrecv.enableIRIn();
   IRstart();
+
+  xTaskCreatePinnedToCore(CodeForTask1, "Task_1", 3500, NULL, 0, &Task1, 0); /*Core*/
 }
 
 int laser_number;
