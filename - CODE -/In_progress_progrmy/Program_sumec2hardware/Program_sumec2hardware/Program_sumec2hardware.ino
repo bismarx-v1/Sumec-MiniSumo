@@ -5,50 +5,13 @@
 #include "IRstart.h"
 #include "TfLunaEsp32S3.h"
 
+#define tlacitko 2
+
 //LED
 #define led 15
 const int LEDPin = 15;
 TaskHandle_t Task1;
 int LEDBlink = 0;
-
-void CodeForTask1(void * parameter) {    /*Code for core 0*/
-    Serial.print("Core ["); Serial.print(xPortGetCoreID()); Serial.println("] started");    //print this core
-    
-    for(;;) {    //void loop()
-        switch(LEDBlink) {
-            case 0:
-                    digitalWrite(LEDPin, 0);
-                break;
-            
-            case 1:
-                digitalWrite(LEDPin, 1);
-                delay(100);
-                digitalWrite(LEDPin, 0);
-                delay(100);
-                break;
-        }
-    }
-}
-//LED
-
-// defines for demo
-#define Button 13
-int Sensor1 = 0;
-int Sensor2 = 0;
-int Sensor3 = 0;
-int Range = 150; //|sensor range setting||sensor range setting||sensor range setting||sensor range setting||sensor range setting|
-int Sensor = 0;
-int ButtonDown = 0;
-
-  // časovo ledkové proměné
-int led_control = 0;
-int cas_zaznam = 0;
-int zapvyp = 1; 
-
-int stop = 1;
-// promněná určující mód programu
-int Global_ModeSelectvar = 0;
-int rady = 0;
 
 //IR
 
@@ -59,24 +22,9 @@ int rady = 0;
   int DohaioID;
   int start_control = 0;
 
-// void setup()
-void setup()
+  
+void IRstart()
 {
-
-  xTaskCreatePinnedToCore(CodeForTask1, "Task_1", 3500, NULL, 0, &Task1, 0);                /*Core*/
-
-
-
-
-
-  irrecv.enableIRIn();
-  MOTORS_Setup();
-  TfL_Setup();
-  TfL_SetAddrs();
-  pinMode(led, OUTPUT);
-  Serial.begin(9600);
-
-  //IR čekání
   while (start_control == 0)
   {
 
@@ -116,7 +64,7 @@ void setup()
       Serial.println("==========");
       irrecv.resume();
 
-      if(adres == 11)
+      if(adres == 0)
       {
       Serial.println("program!");
 
@@ -134,7 +82,7 @@ void setup()
         delay(100);
 
       }
-      if(adres == 7)
+      if(adres == 3)
       {
         if(comand == DohaioID)
         {
@@ -150,6 +98,64 @@ void setup()
     }
 
   }
+}
+
+
+
+void CodeForTask1(void * parameter) {    /*Code for core 0*/
+    Serial.print("Core ["); Serial.print(xPortGetCoreID()); Serial.println("] started");    //print this core
+    
+    for(;;) {    //void loop()
+        switch(LEDBlink) {
+            case 0:
+                    digitalWrite(LEDPin, 0);
+                break;
+            
+            case 1:
+                digitalWrite(LEDPin, 1);
+                delay(100);
+                digitalWrite(LEDPin, 0);
+                delay(100);
+                break;
+        }
+    }
+}
+//LED
+
+// defines for demo
+#define Button 13
+int Sensor1 = 0;
+int Sensor2 = 0;
+int Sensor3 = 0;
+int Range = 10; //|sensor range setting||sensor range setting||sensor range setting||sensor range setting||sensor range setting|
+int Sensor = 0;
+int ButtonDown = 0;
+
+  // časovo ledkové proměné
+int led_control = 0;
+int cas_zaznam = 0;
+int zapvyp = 1; 
+
+int stop = 1;
+// promněná určující mód programu
+int Global_ModeSelectvar = 0;
+int rady = 0;
+
+// void setup()
+void setup()
+{
+
+  pinMode(tlacitko, INPUT);
+  xTaskCreatePinnedToCore(CodeForTask1, "Task_1", 3500, NULL, 0, &Task1, 0);                /*Core*/
+  irrecv.enableIRIn();
+  MOTORS_Setup();
+  TfL_Setup();
+  TfL_SetAddrs();
+  pinMode(led, OUTPUT);
+  Serial.begin(9600);
+
+  //IR čekání
+  IRstart();
   
   //IR KONEC
 
@@ -186,6 +192,15 @@ void loop()
     Global_ModeSelectvar = 0;
   }*/
 
+  start_control = 0;
+
+  if(digitalRead(tlacitko) == HIGH)
+  {
+    LEDBlink = 0;
+    MOTORS_Go(0, 0);
+    Serial.println("OK");
+    IRstart();
+  }
 
 
   switch (Global_ModeSelectvar)
@@ -197,10 +212,11 @@ void loop()
 
       // třídící proměná
       laser_number = 0;
-      Serial.println("uluny");
+      /*Serial.println("uluny");
       Serial.println(TfL_Get(0x12));
       Serial.println(TfL_Get(0x11));
-      Serial.println(TfL_Get(0x13));
+      Serial.println(TfL_Get(0x13));*/
+      
 
       // třídění laserů pomocí proměné
 
@@ -231,38 +247,38 @@ void loop()
 
       case 0:
         MOTORS_Go(255, 255);
-        Serial.println("dopředu");
+        //Serial.println("dopředu");
         break;
       case 1:
         MOTORS_Go(255 , 255);
-        Serial.println("dopředu2");
+        //Serial.println("dopředu2");
         break;
 
       case 3:
         MOTORS_Go(-255 / 2, 255 / 2);
-        Serial.println("strana1");
+        //Serial.println("strana1");
         break;
 
       case 5:
         MOTORS_Go(255 / 2, -255 / 2 );
-        Serial.println("strana2");
+        //Serial.println("strana2");
         break;
 
       case 4:
         MOTORS_Go(255, 150);
-        Serial.println("šikmo1");
+        //Serial.println("šikmo1");
         delay(100);
         break;
 
       case 6:
         MOTORS_Go(150, 255);
-        Serial.println("šikmo2");
+        //Serial.println("šikmo2");
         delay(100);
         break;
 
       case 9:
         MOTORS_Go(255, 255);
-        Serial.println("dopředu");
+        //Serial.println("dopředu");
         break;
       }
 

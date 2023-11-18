@@ -86,7 +86,7 @@ void setup()
       Serial.println("==========");
       irrecv.resume();
 
-      if(adres == 11)
+      if(adres == 0)
       {
       Serial.println("program!");
 
@@ -104,7 +104,7 @@ void setup()
         delay(100);
 
       }
-      if(adres == 7)
+      if(adres == 3)
       {
         if(comand == DohaioID)
         {
@@ -212,12 +212,12 @@ if (digitalRead(Button) == 1)
         break;
 
       case 3:
-        MOTORS_Go(-255 / 2 * -1, 255 / 2 * -1);
+        MOTORS_Go(70 / 2 * -1, 255 / 2 * -1);
         Serial.println("strana1");
         break;
 
       case 5:
-        MOTORS_Go(255 / 2 * -1, -255 / 2 * -1);
+        MOTORS_Go(255 / 2 * -1, 70 / 2 * -1);
         Serial.println("strana2");
         break;
 
