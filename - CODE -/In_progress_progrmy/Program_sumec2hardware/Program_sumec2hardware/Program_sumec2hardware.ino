@@ -7,7 +7,7 @@
 
 #define tlacitko 2
 #define led 15
-//#define RC5 0
+#define RC5 0
 
 #if defined (RC5)
     #define ADDR_PROGRAM  11
@@ -31,7 +31,6 @@ int led_control = 0;
 int cas_zaznam = 0;
 int zapvyp = 1;
 
-int stop = 1;
 // promněná určující mód programu
 int Global_ModeSelectvar = 0;
 int rady = 0;
@@ -149,9 +148,9 @@ void setup() {
   xTaskCreatePinnedToCore(CodeForTask1, "Task_1", 3500, NULL, 0, &Task1, 0); /*Core*/
 }
 
-int laser_number;
-// určuje zdali je barva spíš bílá nebo černá
-int hodnota_cary = 1000;
+int laser_number;  // třídící proměná
+
+int hodnota_cary = 1000;  // určuje zdali je barva spíš bílá nebo černá
 // hodnoty pro kalibraci
 int hodnota_cerne_kalibrace;
 int hodnota_bile_kalibrace;
@@ -179,8 +178,6 @@ void loop() {
       // třídící proměná
       laser_number = 0;
 
-
-
       // třídění laserů pomocí proměné
 
       if (cas_zaznam == 0) {
@@ -196,8 +193,6 @@ void loop() {
           laser_number = laser_number + 5;
         }
       }
-
-      // Serial.println(laser_number);
 
       // rozpohybování Sumce pomocí proměné "laser_number" vzniklé po třídění
       switch (laser_number) {
@@ -239,18 +234,13 @@ void loop() {
           break;
       }
 
-      // možnost zastavení programu pomocí stop proměné
-      while (stop == 0) {
-        MOTORS_Go(0, 0);
-      }
-
       if (cas_zaznam > 0) {
         delay(1);
         cas_zaznam = cas_zaznam - 1;
       }
       //}
 
-      // dotek bílé čáry levím senzorem
+      // dotek bílé čáry levým senzorem
       if (LINE_Get(1, hodnota_cary, 0) == 1) {
         MOTORS_Go(255 / 2, -255 / 2);
         delay(500);
@@ -288,16 +278,12 @@ void loop() {
         hodnota_cary = kontrolni_hodnota_kalibrace;  // změna na původní hodnotu
         MOTORS_Go(0, 0);
         Serial.println("kalibrace nevysla");
-      }
-
-      else {
+      } else {
         MOTORS_Go(255, 255);
         Serial.print("Kalibrace úspěšně provedena, aktuální hraniční hodnota:");
         Serial.println(hodnota_cary);
-
         delay(250);
       }
-
 
       Global_ModeSelectvar = 0;
       break;
