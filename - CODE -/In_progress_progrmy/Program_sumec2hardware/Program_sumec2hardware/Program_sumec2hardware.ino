@@ -2,63 +2,25 @@
 #include <Wire.h>
 #include "motors.h"
 #include "line.h"
-#include "IRstart.h"
 #include "TfLunaEsp32S3.h"
+#include "rogram_sumec2HW_promene.h"
 
-#define tlacitko 2
-#define led 15
-#define RC5 0
-
-#if defined (RC5)
-    #define ADDR_PROGRAM  11
-    #define ADDR_START    7
-#else
-    #define ADDR_PROGRAM  0
-    #define ADDR_START    3
-#endif
-
-// defines for demo
-#define Button 13
-int Sensor1 = 0;
-int Sensor2 = 0;
-int Sensor3 = 0;
-int Range = 40;  //|sensor range setting||sensor range setting||sensor range setting||sensor range setting||sensor range setting|
-int Sensor = 0;
-int ButtonDown = 0;
-
-// časovo ledkové proměné
-int led_control = 0;
-int cas_zaznam = 0;
-int zapvyp = 1;
-
-// promněná určující mód programu
-int Global_ModeSelectvar = 0;
-int rady = 0;
-const int LEDPin = 15;
-TaskHandle_t Task1;
-int LEDBlink = 0;
-
-//IR
-
-int code;
-int adres;
-int comand_first;
-int comand;
-int DohaioID;
-int start_control = 0;
 
 void IRstart() {
+  
+  //IR čekání
   while (start_control == 0) {
-    //IR čekání
+  
     decode_results results;
 
-    if (irrecv.decode(&results)) {
+    if (irrecv.decode(&results)) {  //čeká na příchozí signál 
 
-      code = results.value & 0x7FF;
-      comand_first = code & 0x3F;
-      comand = comand_first / 0b10;
-      adres = code / 0b1000000;
+      code = results.value & 0x7FF;  //z přijatého signálu vezme pouze posledních jedenást hodnot a dosadí do proměné code (BIN)
+      comand_first = code & 0x3F;    //vytažení posledních 6 hodnot (Dohayo ID)
+      comand = comand_first / 0b10;  //vyjmutí poslední hodnoty 
+      adres = code / 0b1000000;      //z přijatého signálu vezme prvních 5 hodnot (Adresa) 
 
+      //vypsání všsch hodnot z IR, nejdřívě BIN potom DEC  
       Serial.println("");
       Serial.print("recieved signal: ");
       Serial.print(results.value, BIN);
@@ -83,6 +45,7 @@ void IRstart() {
       Serial.println("");
       Serial.println("==========");
 
+      //fáze program
       if (adres == ADDR_PROGRAM) {
         DohaioID = comand;
         Serial.print("DohaioID: ");
@@ -98,6 +61,7 @@ void IRstart() {
         delay(100);
       }
 
+      //fáze startováni
       if (adres == ADDR_START) {
         if (comand == DohaioID) {
           Serial.println("jedeme");
@@ -113,6 +77,7 @@ void IRstart() {
   }
 }
 
+//LED blikání
 void CodeForTask1(void* parameter) { /*Code for core 0*/
   for (;;) {  //void loop()
     switch (LEDBlink) {
@@ -133,29 +98,23 @@ void CodeForTask1(void* parameter) { /*Code for core 0*/
 // void setup()
 void setup() {
 
-  Serial.begin(9600);
-  pinMode(tlacitko, INPUT);
-  pinMode(led, OUTPUT);
+  Serial.begin(9600); //  příprava Serialu a nastavení rychlosti Serialu
+
+  pinMode(tlacitko, INPUT);  //nastavení test tlačítka na vstup
+  pinMode(led, OUTPUT);  //nastavení kontrolní LED na výstup
   
-  MOTORS_Setup();
+  MOTORS_Setup(); //stup pro motory
   
+  //TF_luna setup a nastavení adres
   TfL_Setup();
   TfL_SetAddrs();
 
+  //čekání na IR 
   irrecv.enableIRIn();
   IRstart();
 
   xTaskCreatePinnedToCore(CodeForTask1, "Task_1", 3500, NULL, 0, &Task1, 0); /*Core*/
 }
-
-int laser_number;  // třídící proměná
-
-int hodnota_cary = 1000;  // určuje zdali je barva spíš bílá nebo černá
-// hodnoty pro kalibraci
-int hodnota_cerne_kalibrace;
-int hodnota_bile_kalibrace;
-int kontrolni_hodnota_kalibrace;
-int tolerance_mereni = 100;  // tolerance mčření slouží k vyvážení nepřesnosti sensorů
 
 void loop() {
 
@@ -169,123 +128,68 @@ void loop() {
     IRstart();
   }
 
-  switch (Global_ModeSelectvar) {
+  // třídící proměná
+  laser_number = 0;
+
+  // třídění laserů pomocí proměné
+  if (TfL_Get(0x12) < Range && TfL_Get(0x12) > 0) {  // přední laser
+    laser_number = laser_number + 1;
+  }
+
+  if (TfL_Get(0x11) < Range && TfL_Get(0x11) > 0) {  // levý laser
+    laser_number = laser_number + 3;
+  }
+
+  if (TfL_Get(0x13) < Range && TfL_Get(0x13) > 0) {  // pravý laser
+    laser_number = laser_number + 5;
+  }
+
+
+  // rozpohybování Sumce pomocí proměné "laser_number" vzniklé po třídění
+  switch (laser_number) {
 
     case 0:
-      //if (LINE_Get(1, hodnota_cary, 0) == 0 && LINE_Get(2, hodnota_cary, 0) == 0)
-      //{
-
-      // třídící proměná
-      laser_number = 0;
-
-      // třídění laserů pomocí proměné
-
-      if (cas_zaznam == 0) {
-        if (TfL_Get(0x12) < Range && TfL_Get(0x12) > 0) {  // přední laser
-          laser_number = laser_number + 1;
-        }
-
-        if (TfL_Get(0x11) < Range && TfL_Get(0x11) > 0) {  // levý laser
-          laser_number = laser_number + 3;
-        }
-
-        if (TfL_Get(0x13) < Range && TfL_Get(0x13) > 0) {  // pravý laser
-          laser_number = laser_number + 5;
-        }
-      }
-
-      // rozpohybování Sumce pomocí proměné "laser_number" vzniklé po třídění
-      switch (laser_number) {
-
-        case 0:
-          MOTORS_Go(255, 255);
-          //Serial.println("dopředu");
-          break;
-        case 1:
-          MOTORS_Go(255, 255);
-          //Serial.println("dopředu2");
-          break;
-
-        case 3:
-          MOTORS_Go(-255 / 2, 255 / 2);
-          //Serial.println("strana1");
-          break;
-
-        case 5:
-          MOTORS_Go(255 / 2, -255 / 2);
-          //Serial.println("strana2");
-          break;
-
-        case 4:
-          MOTORS_Go(255, 150);
-          //Serial.println("šikmo1");
-          delay(100);
-          break;
-
-        case 6:
-          MOTORS_Go(150, 255);
-          //Serial.println("šikmo2");
-          delay(100);
-          break;
-
-        case 9:
-          MOTORS_Go(255, 255);
-          //Serial.println("dopředu");
-          break;
-      }
-
-      if (cas_zaznam > 0) {
-        delay(1);
-        cas_zaznam = cas_zaznam - 1;
-      }
-      //}
-
-      // dotek bílé čáry levým senzorem
-      if (LINE_Get(1, hodnota_cary, 0) == 1) {
-        MOTORS_Go(255 / 2, -255 / 2);
-        delay(500);
-        cas_zaznam = 10;
-      }
-      // dotek bílé čáry pravým senzorem
-      if (LINE_Get(2, hodnota_cary, 0) == 1) {
-        MOTORS_Go(-255 / 2, 255 / 2);
-        delay(500);
-        cas_zaznam = 10;
-      }
+      MOTORS_Go(255, 255);
+      //Serial.println("dopředu");
       break;
 
     case 1:
-      Serial.println("v kalibraci");
-
-      MOTORS_Go(0, 0);
-      delay(2000);
-
-      hodnota_cerne_kalibrace = LINE_Get(2, hodnota_cary, 1);
-      Serial.println(hodnota_cerne_kalibrace);
-      delay(100);
-
-      while (hodnota_cerne_kalibrace - LINE_Get(2, hodnota_cary, 1) <= hodnota_cerne_kalibrace - tolerance_mereni) {
-        Serial.println(LINE_Get(2, hodnota_cary, 1));
-        MOTORS_Go(255, 255);
-      }
-      hodnota_bile_kalibrace = LINE_Get(2, hodnota_cary, 1);
-
-      kontrolni_hodnota_kalibrace = hodnota_cary;
-      hodnota_cary = hodnota_cerne_kalibrace / 2;
-
-      if (hodnota_bile_kalibrace > hodnota_cary)  // pokud bude hraniční hodnota moc vysoká změní se hraniční hodnota na původní hodnotu
-      {
-        hodnota_cary = kontrolni_hodnota_kalibrace;  // změna na původní hodnotu
-        MOTORS_Go(0, 0);
-        Serial.println("kalibrace nevysla");
-      } else {
-        MOTORS_Go(255, 255);
-        Serial.print("Kalibrace úspěšně provedena, aktuální hraniční hodnota:");
-        Serial.println(hodnota_cary);
-        delay(250);
-      }
-
-      Global_ModeSelectvar = 0;
+      MOTORS_Go(255, 255);
       break;
+
+    case 3:
+      MOTORS_Go(-255 / 2, 255 / 2);
+      break;
+
+    case 5:
+      MOTORS_Go(255 / 2, -255 / 2);
+      break;
+
+    case 4:
+      MOTORS_Go(255, 150);
+      delay(100);
+      break;
+
+    case 6:
+      MOTORS_Go(150, 255);
+      delay(100);
+      break;
+
+    case 9:
+      MOTORS_Go(255, 255);
+      break;
+      
+  }
+
+  // dotek bílé čáry levým senzorem
+  if (LINE_Get(1, hodnota_cary, 0) == 1) {
+    MOTORS_Go(255 / 2, -255 / 2);
+    delay(500);
+  }
+
+  // dotek bílé čáry pravým senzorem
+  if (LINE_Get(2, hodnota_cary, 0) == 1) {
+    MOTORS_Go(-255 / 2, 255 / 2);
+    delay(500);
   }
 }
