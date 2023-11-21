@@ -94,6 +94,9 @@ void CodeForTask1(void* parameter) { /*Code for core 0*/
 }
 //LED
 
+
+
+
 // void setup()
 void setup() {
 
@@ -137,10 +140,12 @@ void loop() {
 
   if (TfL_Get(0x11) < Range && TfL_Get(0x11) > 0) {  // levý laser
     laser_number = laser_number + 3;
+    KL_hodnota = 3;
   }
 
   if (TfL_Get(0x13) < Range && TfL_Get(0x13) > 0) {  // pravý laser
     laser_number = laser_number + 5;
+    KL_hodnota = 5;
   }
 
 
@@ -190,5 +195,24 @@ void loop() {
   if (LINE_Get(2, hodnota_cary, 0) == 1) {
     MOTORS_Go(-255 / 2, 255 / 2);
     delay(500);
+  }
+}
+
+//Klinč taktika
+if(millis() % 4000 == 1)
+{
+  if(TfL_Get(0x12) < 10)
+  {
+    if(KL_hodnota == 3)
+    {
+      MOTORS_Go(255, 0);
+      delay(400);
+    }
+
+    if(KL_hodnota == 5)
+    {
+      MOTORS_Go(0, 255);
+      delay(400);
+    }
   }
 }
