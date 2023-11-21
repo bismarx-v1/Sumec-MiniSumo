@@ -71,7 +71,6 @@ void IRstart() {
         }
       }
 
-      // resume IR reception
       irrecv.resume();
     }
   }
@@ -125,7 +124,7 @@ void loop() {
     LEDBlink = 0;
     MOTORS_Go(0, 0);
     Serial.println("OK");
-    IRstart();
+    //IRstart();
   }
 
   // třídící proměná

@@ -1,6 +1,6 @@
 #define tlacitko 2
 #define led 15
-#define RC5 0
+//#define RC5 0
 
 #if defined (RC5)
     #define ADDR_PROGRAM  11
