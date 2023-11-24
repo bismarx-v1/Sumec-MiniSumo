@@ -27,18 +27,100 @@ int stop = 1;
 int Global_ModeSelectvar = 0;
 int rady = 0;
 
-
+//IR
+int recvPin = 39;
+int i = 0;
+IRrecv irrecv(recvPin);
+  int code;
+  int adres;
+  int comand_first;
+  int comand;
+  int DohaioID;
+  int start_control = 0;
 
 // void setup()
 void setup()
 {
-
+  irrecv.enableIRIn();
   MOTORS_Setup();
   LASER_Setup();
   pinMode(led, OUTPUT);
   Serial.begin(9600);
 
+  while (start_control == 0)
+  {
 
+
+    //IR čekání
+    decode_results results;        
+
+    if (irrecv.decode(&results)) {  
+
+      code = results.value & 0x7FF;
+      comand_first = code & 0x3F;
+      comand = comand_first / 0b10;
+      adres = code / 0b1000000; 
+
+      Serial.println("");
+      Serial.print("recieved signal: ");
+      Serial.print(results.value, BIN);
+      Serial.print("    DEC: ");
+      Serial.println(results.value);
+      Serial.print("code: ");
+      Serial.print(code, BIN);
+      Serial.print("    DEC: ");
+      Serial.println(code);
+      Serial.print("adresa: ");
+      Serial.print(adres, BIN);
+      Serial.print("    DEC: ");
+      Serial.println(adres);
+      Serial.print("comand_first: ");
+      Serial.print(comand_first, BIN);
+      Serial.print("    DEC: ");
+      Serial.println(comand_first);
+      Serial.print("comand: ");
+      Serial.print(comand, BIN);
+      Serial.print("    DEC: ");
+      Serial.println(comand);
+      Serial.println("");
+      Serial.println("==========");
+      irrecv.resume();
+
+      if(adres == 0)
+      {
+      Serial.println("program!");
+
+        DohaioID = comand;
+        Serial.print("DohaioID: ");
+        Serial.println(DohaioID);
+        Serial.println(" ");
+        digitalWrite(led, HIGH);
+        delay(100);
+        digitalWrite(led, LOW);
+        delay(100);
+        digitalWrite(led, HIGH);
+        delay(100);
+        digitalWrite(led, LOW);
+        delay(100);
+
+      }
+      if(adres == 3)
+      {
+        if(comand == DohaioID)
+        {
+          Serial.println("jedeme"); 
+          start_control = 1;   
+        }
+
+        else
+        {
+          Serial.println("špatný code");    
+        }                 
+      }
+    }
+    //IR KONEC
+
+  }
 
   for (int i = 0; i++; i == 2000)
   {

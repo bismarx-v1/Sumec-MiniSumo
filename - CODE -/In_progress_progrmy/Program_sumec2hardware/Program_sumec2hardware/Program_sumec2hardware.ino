@@ -205,10 +205,8 @@ if(millis() % 4000 == 1)
   {
     if(KL_hodnota == 3)
     {
-      while()
-      {
-        MOTORS_Go(255, 0);
-      }
+      MOTORS_Go(255, 0);
+      delay(400);
     }
 
     if(KL_hodnota == 5)

@@ -31,4 +31,5 @@ int start_control = 0;
 IRrecv irrecv(38); //IR nastavení
 
 //Klinč taktika => promšna
+
 int KL_hodnota;
