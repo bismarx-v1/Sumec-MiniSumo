@@ -1480,7 +1480,7 @@
   )
 
   (text "ESP32-S3 Datasheet" (at 115.57 127 0)
-    (effects (font (size 5 5) (thickness 1) bold) (justify left bottom) (href "https://www.espressif.com/sites/default/files/documentation/esp32-s3_datasheet_en.pdf"))
+    (effects (font (size 5 5) (thickness 1) bold (color 0 0 0 1)) (justify left bottom) (href "https://www.espressif.com/sites/default/files/documentation/esp32-s3_datasheet_en.pdf"))
     (uuid c9abbcb1-43cc-4a6d-bb43-4b91a0066e1a)
   )
 
@@ -1490,7 +1490,7 @@
     (property "Reference" "R2" (at 153.67 35.56 90)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Value" "R" (at 153.67 38.1 90)
+    (property "Value" "~" (at 153.67 38.1 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Footprint" "sumec-smd_library:car cool smol" (at 153.67 42.418 90)
@@ -1540,7 +1540,7 @@
     (property "Reference" "R1" (at 153.67 31.75 90)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Value" "R" (at 153.67 34.29 90)
+    (property "Value" "~" (at 153.67 34.29 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Footprint" "sumec-smd_library:logo even smaller" (at 153.67 38.608 90)
