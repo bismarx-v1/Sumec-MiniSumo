@@ -93,6 +93,11 @@ void loop() {
     {
       Serial.println("nula");
     }
+
+    while(digitalRead(tlacitko) == HIGH)
+    {
+      Serial.println("jedna");
+    }
   }
 
   // třídící proměná
