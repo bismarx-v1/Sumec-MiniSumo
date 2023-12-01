@@ -72,6 +72,11 @@ void setup() {
   start();
 
   xTaskCreatePinnedToCore(CodeForTask1, "Task_1", 3500, NULL, 0, &Task1, 0); /*Core*/
+
+  delay(5000);
+  //Olomouc - Pravidla - otoceni min o 90 stupnu 
+  MOTORS_Go(255, -255);
+  delay(250);
 }
 
 void loop() {
