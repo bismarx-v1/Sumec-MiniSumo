@@ -78,6 +78,23 @@ void loop() {
 
   LEDBlink = 1;
 
+  Serial.println(digitalRead(tlacitko));
+  if (digitalRead(tlacitko) == HIGH) {
+    LEDBlink = 0;
+    MOTORS_Go(0, 0);
+    Serial.println("OK");
+
+    while(digitalRead(tlacitko) == HIGH)
+    {
+      Serial.println("jedna");
+    }
+
+    while(digitalRead(tlacitko) == LOW)
+    {
+      Serial.println("nula");
+    }
+  }
+
   // třídící proměná
   laser_number = 0;
 
