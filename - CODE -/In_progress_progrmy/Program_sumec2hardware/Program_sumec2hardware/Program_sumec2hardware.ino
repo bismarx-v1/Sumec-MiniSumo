@@ -198,23 +198,3 @@ void loop() {
   }
 }
 
-//Klinč taktika
-if(millis() % 4000 == 1)
-{
-  if(TfL_Get(0x12) < 10)
-  {
-    if(KL_hodnota == 3)
-    {
-      while()
-      {
-        MOTORS_Go(255, 0);
-      }
-    }
-
-    if(KL_hodnota == 5)
-    {
-      MOTORS_Go(0, 255);
-      delay(400);
-    }
-  }
-}

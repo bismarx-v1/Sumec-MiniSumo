@@ -38,6 +38,19 @@ void CodeForTask1(void* parameter) { /*Code for core 0*/
 }
 //LED
 
+void blikani()
+{
+  if(millis() % 200 == 0)
+  {
+    digitalWrite(LEDPin, 1);
+  }
+
+  if(millis() % 200 == 99)
+  {
+    digitalWrite(LEDPin, 0);
+  }
+}
+
 
 
 
@@ -75,12 +88,10 @@ void loop() {
 
   if (TfL_Get(0x11) < Range && TfL_Get(0x11) > 0) {  // levý laser
     laser_number = laser_number + 3;
-    KL_hodnota = 3;
   }
 
   if (TfL_Get(0x13) < Range && TfL_Get(0x13) > 0) {  // pravý laser
     laser_number = laser_number + 5;
-    KL_hodnota = 5;
   }
 
 
@@ -131,29 +142,5 @@ void loop() {
     MOTORS_Go(-255 / 2, 255 / 2);
     delay(500);
   }
-
-  //Klinč taktika
-  if(millis() % 4000 < 15)
-  {
-    if(TfL_Get(0x12) < 10)
-    {
-      if(KL_hodnota == 3)
-      {
-        MOTORS_Go(-45, -255);
-        Serial.println("klinc, otacim");
-        delay(600);
-        MOTORS_Go(-255, -255);
-        delay(300);
-      }
-
-      if(KL_hodnota == 5)
-      {
-        MOTORS_Go(-255, -45);
-        Serial.println("klinc, otacim");
-        delay(600);
-        MOTORS_Go(-255, -255);
-        delay(300);
-      }
-    }
-  }
 }
+
