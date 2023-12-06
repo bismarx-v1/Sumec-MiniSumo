@@ -59,6 +59,7 @@ void IRstart() {
         delay(100);
         digitalWrite(led, LOW);
         delay(100);
+        start_control = 1;
       }
 
       //fáze startováni
@@ -101,6 +102,7 @@ void CodeForTask1(void* parameter) { /*Code for core 0*/
 void setup() {
 
   Serial.begin(9600); //  příprava Serialu a nastavení rychlosti Serialu
+  Serial.println("OK");
 
   pinMode(tlacitko, INPUT);  //nastavení test tlačítka na vstup
   pinMode(led, OUTPUT);  //nastavení kontrolní LED na výstup
@@ -108,8 +110,8 @@ void setup() {
   MOTORS_Setup(); //stup pro motory
   
   //TF_luna setup a nastavení adres
-  TfL_Setup();
-  TfL_SetAddrs();
+  //TfL_Setup();
+  //TfL_SetAddrs();
 
   //čekání na IR 
   irrecv.enableIRIn();

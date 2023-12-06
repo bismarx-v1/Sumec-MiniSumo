@@ -6,20 +6,6 @@
 #include "rogram_sumec2HW_promene.h"
 
 
-void start() 
-{
-  
-  //čekání
-  while (start_control == 0) 
-  {
-    if(digitalRead(tlacitko) == 1)
-    {
-      start_control = 1;
-    }  
-
-  }
-}
-
 //LED blikání
 void CodeForTask1(void* parameter) { /*Code for core 0*/
   for (;;) {  //void loop()
@@ -69,11 +55,14 @@ void setup() {
   TfL_SetAddrs();
 
   //čekání 
-  start();
+  while (digitalRead(tlacitko) == 0) 
+  {
+
+  }
 
   xTaskCreatePinnedToCore(CodeForTask1, "Task_1", 3500, NULL, 0, &Task1, 0); /*Core*/
 
-  delay(5000);
+  //delay(5000);
   //Olomouc - Pravidla - otoceni min o 90 stupnu 
   MOTORS_Go(255, -255);
   delay(250);
@@ -83,7 +72,9 @@ void loop() {
 
   LEDBlink = 1;
 
-  Serial.println(digitalRead(tlacitko));
+// v případě že chcete zastavovat a rozjiždět Sumce pomocí tlačítka, odkomentujte. !Upozornění, nefunguje úplně perfeektně!+
+
+  /*Serial.println(digitalRead(tlacitko));
   if (digitalRead(tlacitko) == HIGH) {
     LEDBlink = 0;
     MOTORS_Go(0, 0);
@@ -103,7 +94,7 @@ void loop() {
     {
       Serial.println("jedna");
     }
-  }
+  }*/
 
   // třídící proměná
   laser_number = 0;
