@@ -51,18 +51,21 @@ void setup() {
   MOTORS_Setup(); //stup pro motory
   
   //TF_luna setup a nastavení adres
-  TfL_Setup();
-  TfL_SetAddrs();
+  //TfL_Setup();
+  //TfL_SetAddrs();
 
-  //čekání 
-  while (digitalRead(tlacitko) == 0) 
-  {
-
-  }
 
   xTaskCreatePinnedToCore(CodeForTask1, "Task_1", 3500, NULL, 0, &Task1, 0); /*Core*/
 
-  //delay(5000);
+  while (digitalRead(tlacitko) == 0) 
+  {
+    delay(10);
+  }
+  LEDBlink = 1;
+  delay(250);
+  LEDBlink = 0;
+
+  delay(5000-250);
   //Olomouc - Pravidla - otoceni min o 90 stupnu 
   MOTORS_Go(255, -255);
   delay(250);

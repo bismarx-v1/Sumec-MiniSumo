@@ -5,7 +5,9 @@
 #include "TfLunaEsp32S3.h"
 #include "rogram_sumec2HW_promene.h"
 
-
+/*================================IR čekání -> začátek==================================
+  !!!!!!!!!!!!!!!! zapíná se pomocí levého horního červeného tlačítka !!!!!!!!!!!!!!!!!!!!
+*/
 void IRstart() {
   
   //IR čekání
@@ -76,8 +78,9 @@ void IRstart() {
     }
   }
 }
+//================================IR čekání -> konec==================================
 
-//LED blikání
+//================================LED blikání -> začátek================================
 void CodeForTask1(void* parameter) { /*Code for core 0*/
   for (;;) {  //void loop()
     switch (LEDBlink) {
@@ -93,7 +96,7 @@ void CodeForTask1(void* parameter) { /*Code for core 0*/
     }
   }
 }
-//LED
+//================================LED blikání -> konec================================
 
 
 
@@ -120,16 +123,19 @@ void setup() {
   xTaskCreatePinnedToCore(CodeForTask1, "Task_1", 3500, NULL, 0, &Task1, 0); /*Core*/
 }
 
+//======================================setup -> konec, loop -> začátek================================================
+
 void loop() {
 
   LEDBlink = 1;
   start_control = 0;
 
+  // po stisknutí TEST tlačítka nastane čekání na IR
   if (digitalRead(tlacitko) == HIGH) {
     LEDBlink = 0;
     MOTORS_Go(0, 0);
     Serial.println("OK");
-    //IRstart();
+    IRstart();
   }
 
   // třídící proměná
@@ -156,7 +162,6 @@ void loop() {
 
     case 0:
       MOTORS_Go(255, 255);
-      //Serial.println("dopředu");
       break;
 
     case 1:
