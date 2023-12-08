@@ -105,7 +105,6 @@ void CodeForTask1(void* parameter) { /*Code for core 0*/
 void setup() {
 
   Serial.begin(9600); //  příprava Serialu a nastavení rychlosti Serialu
-  Serial.println("OK");
 
   pinMode(tlacitko, INPUT);  //nastavení test tlačítka na vstup
   pinMode(led, OUTPUT);  //nastavení kontrolní LED na výstup
@@ -119,6 +118,18 @@ void setup() {
   //čekání na IR 
   irrecv.enableIRIn();
   IRstart();
+
+  // identifikace správného zpuštění
+  LEDBlink = 1;
+  delay(250);
+  LEDBlink = 0;
+
+  // čekání na odstoupení majitelů robotů na odstoupení z ringu -> Olomouc
+  delay(5000-200);
+  //Olomouc - Pravidla - otoceni min o 90 stupnu 
+  MOTORS_Go(255, -255);
+  delay(250);
+
 
   xTaskCreatePinnedToCore(CodeForTask1, "Task_1", 3500, NULL, 0, &Task1, 0); /*Core*/
 }
@@ -134,8 +145,18 @@ void loop() {
   if (digitalRead(tlacitko) == HIGH) {
     LEDBlink = 0;
     MOTORS_Go(0, 0);
-    Serial.println("OK");
     IRstart();
+
+    // identifikace správného zpuštění
+    LEDBlink = 1;
+    delay(250);
+    LEDBlink = 0;
+
+    // čekání na odstoupení majitelů robotů na odstoupení z ringu -> Olomouc
+    delay(5000-250);
+    //Olomouc - Pravidla - otoceni min o 90 stupnu 
+    MOTORS_Go(255, -255);
+    delay(250);
   }
 
   // třídící proměná
