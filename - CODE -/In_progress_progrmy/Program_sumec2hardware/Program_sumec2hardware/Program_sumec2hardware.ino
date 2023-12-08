@@ -98,9 +98,6 @@ void CodeForTask1(void* parameter) { /*Code for core 0*/
 }
 //================================LED blikání -> konec================================
 
-
-
-
 // void setup()
 void setup() {
 
@@ -112,8 +109,8 @@ void setup() {
   MOTORS_Setup(); //stup pro motory
   
   //TF_luna setup a nastavení adres
-  //TfL_Setup();                              
-  //TfL_SetAddrs();                         
+  TfL_Setup();                              
+  TfL_SetAddrs();                         
 
   //čekání na IR 
   irrecv.enableIRIn();
@@ -167,15 +164,15 @@ void loop() {
   laser_number = 0;
 
   // třídění laserů pomocí proměné
-  if (/*TfL_Get(0x12)*/2 < Range && TfL_Get(0x12) > 0) {  // přední laser
+  if (TfL_Get(0x12) < Range && TfL_Get(0x12) > 0) {  // přední laser
     laser_number = laser_number + 1;
   }
 
-  if (/*TfL_Get(0x11)*/2 < Range && TfL_Get(0x11) > 0) {  // levý laser
+  if (TfL_Get(0x11) < Range && TfL_Get(0x11) > 0) {  // levý laser
     laser_number = laser_number + 3;
   }
 
-  if (/*TfL_Get(0x13)*/2 < Range && TfL_Get(0x13) > 0) {  // pravý laser
+  if (TfL_Get(0x13) < Range && TfL_Get(0x13) > 0) {  // pravý laser
     laser_number = laser_number + 5;
   }
 
