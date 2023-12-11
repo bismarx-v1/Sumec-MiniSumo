@@ -5,7 +5,11 @@ int16_t tfAddr2 = 0x12;	//TfL Lib - second address (usualy mid sensor)
 int16_t tfAddr3 = 0x13;	//TfL Lib - third address (usualy right sensor)
 
 void setup() {
-    Serial.begin(115200);
+	Serial.begin(115200);
+	delay(2000);
+	Serial.println(millis());
+	delay(1000);
+	
 	TfL_Setup();	//TfL Lib - libs setup
 	
 	SetAddrLabel:									//|UNTESTED CODE||UNTESTED CODE||UNTESTED CODE||UNTESTED CODE|
@@ -15,6 +19,14 @@ void setup() {
 	delay(1000);									//|UNTESTED CODE||UNTESTED CODE||UNTESTED CODE||UNTESTED CODE|
 	if(TfL_IsSet()!=1) {							//|UNTESTED CODE||UNTESTED CODE||UNTESTED CODE||UNTESTED CODE|
 		Serial.print("NotSet");
+		digitalWrite(15, HIGH);
+		delay(500);
+		digitalWrite(15, LOW);
+		delay(500);
+		digitalWrite(15, HIGH);
+		delay(500);
+		digitalWrite(15, LOW);
+		delay(500);
 		goto SetAddrLabel;							//|UNTESTED CODE||UNTESTED CODE||UNTESTED CODE||UNTESTED CODE|
 	}												//|UNTESTED CODE||UNTESTED CODE||UNTESTED CODE||UNTESTED CODE|
 }
