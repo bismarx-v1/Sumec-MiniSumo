@@ -21,8 +21,8 @@ void CodeForTask1(void * parameter) {	/*Code for core 0*/
 					break;
 				}
 			
-			case 1{
-				if(LedBlinkState != 1):
+			case 1:
+				if(LedBlinkState != 1) {
 					LedBlinkState = 1;
 					digitalWrite(LEDPin, 1);
 					delay(200);
@@ -31,7 +31,25 @@ void CodeForTask1(void * parameter) {	/*Code for core 0*/
 					break;
 				}
 				
-				else{
+				else {
+					break;
+				}
+			
+			case 2:
+				if(LedBlinkState != 2) {
+					LedBlinkState = 2;
+					digitalWrite(LEDPin, 1);
+					delay(500);
+					digitalWrite(LEDPin, 0);
+					delay(200);
+					digitalWrite(LEDPin, 1);
+					delay(200);
+					digitalWrite(LEDPin, 0);
+					delay(200);
+					break;
+				}
+				
+				else {
 					break;
 				}
 		}
@@ -60,12 +78,12 @@ void setup() {
 
 //normalni void loop()
 void loop() {
-  /*MOTORS_Go(255/2, -255/2);
+  MOTORS_Go(255/2, -255/2);
   delay(2000);
   
   MOTORS_Go(255/2, 255/2);
   delay(3000);
   
   MOTORS_Go(0, 0);
-  delay(2000);*/
+  delay(2000);
 }
