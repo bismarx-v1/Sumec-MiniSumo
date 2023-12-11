@@ -23,27 +23,56 @@ const int GlobalSpeed = 255;
 const int BackQreEnabled = 0;
 const int TfLRange = 40;
 
-void CodeForTask1(void* parameter) { /*Code for core 0*/
-	//Serial.print("Core [");
-	//Serial.print(xPortGetCoreID());
-	//Serial.println("] started");	//print this core
+int LedBlinkState = 0;
 
-	for (;;) {	//void loop()
-		switch (LEDBlink) {
+void CodeForTask1(void * parameter) {	/*Code for core 0*/
+	Serial.print("Core ["); Serial.print(xPortGetCoreID()); Serial.println("] started");	//print this core
+	
+	for(;;) {	//void loop()
+		switch(LEDBlink) {
 			case 0:
-				if (PrevLEDBlink != 0) {
+				if(LedBlinkState != 0) {
+					LedBlinkState = 0;
 					digitalWrite(LEDPin, 0);
-					
+					break;
 				}
-				break;
+				
+				else {
+					break;
+				}
+			
 			case 1:
-				digitalWrite(LEDPin, 1);
-				delay(200);
-				digitalWrite(LEDPin, 0);
-				delay(400);
-				break;
+				if(LedBlinkState != 1) {
+					LedBlinkState = 1;
+					digitalWrite(LEDPin, 1);
+					delay(200);
+					digitalWrite(LEDPin, 0);
+					delay(400);
+					break;
+				}
+				
+				else {
+					break;
+				}
+			
+			case 2:
+				if(LedBlinkState != 2) {
+					LedBlinkState = 2;
+					digitalWrite(LEDPin, 1);
+					delay(500);
+					digitalWrite(LEDPin, 0);
+					delay(200);
+					digitalWrite(LEDPin, 1);
+					delay(200);
+					digitalWrite(LEDPin, 0);
+					delay(200);
+					break;
+				}
+				
+				else {
+					break;
+				}
 		}
-		PrevLEDBlink = LEDBlink;
 	}
 }
 
@@ -103,7 +132,7 @@ void IRStart() {
 */
 
 void setup() {
-	Serial.begin(9600);
+	Serial.begin(115200);
 
 	if (ResetProgramVar == 0) {
 		//goto StartOfProgram;
@@ -125,9 +154,10 @@ void setup() {
 
 		delay(1000);						 //|UNTESTED CODE||UNTESTED CODE||UNTESTED CODE||UNTESTED CODE|
 		if (TfL_IsSet() == 0) {	//|UNTESTED CODE||UNTESTED CODE||UNTESTED CODE||UNTESTED CODE|
-			//Serial.println("goto");
+			Serial.println("goto");
 			goto SetAddrLabel;	//|UNTESTED CODE||UNTESTED CODE||UNTESTED CODE||UNTESTED CODE|
 		}
+		Serial.print("Lunas Ok");
 
 		ResetProgramVar = 1;
 
@@ -135,14 +165,17 @@ void setup() {
 	}
 	else {
 		//IRStart();
-		LEDBlink = 1;
+		LEDBlink = 2;
 	}
 }
 
 void loop() {
 	delay(10);
 	
-	if(digitalRead(2) != 0) {
+	Serial.println("START");
+	
+	if(digitalRead(2) >= 1) {
+		Serial.println("RESET");
 		ResetProgram();
 	}
 	
