@@ -3,6 +3,7 @@
 const int LEDPin = 15;
 TaskHandle_t Task1;
 int LEDBlink = 0;
+int LedBlinkState = 0;
 
 void CodeForTask1(void * parameter) {	/*Code for core 0*/
 	Serial.print("Core ["); Serial.print(xPortGetCoreID()); Serial.println("] started");	//print this core
@@ -10,19 +11,32 @@ void CodeForTask1(void * parameter) {	/*Code for core 0*/
 	for(;;) {	//void loop()
 		switch(LEDBlink) {
 			case 0:
+				if(LedBlinkState != 0) {
+					LedBlinkState = 0;
 					digitalWrite(LEDPin, 0);
-				break;
+					break;
+				}
+				
+				else {
+					break;
+				}
 			
-			case 1:
-				digitalWrite(LEDPin, 1);
-				delay(200);
-				digitalWrite(LEDPin, 0);
-				delay(400);
-				break;
+			case 1{
+				if(LedBlinkState != 1):
+					LedBlinkState = 1;
+					digitalWrite(LEDPin, 1);
+					delay(200);
+					digitalWrite(LEDPin, 0);
+					delay(400);
+					break;
+				}
+				
+				else{
+					break;
+				}
 		}
 	}
 }
-
 
 
 //normalni void setup() s funkci MOTORS_Setup()

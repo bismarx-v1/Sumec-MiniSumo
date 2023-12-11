@@ -16,8 +16,8 @@ void setup() {
 	
 	TfL_SetAddrs();	//TfL Lib - start the process for setting adresses
 	
-	delay(1000);									//|UNTESTED CODE||UNTESTED CODE||UNTESTED CODE||UNTESTED CODE|
-	if(TfL_IsSet()!=1) {							//|UNTESTED CODE||UNTESTED CODE||UNTESTED CODE||UNTESTED CODE|
+	delay(1000);
+	if(TfL_IsSet()!=1) {
 		Serial.print("NotSet");
 		digitalWrite(15, HIGH);
 		delay(500);
@@ -27,8 +27,8 @@ void setup() {
 		delay(500);
 		digitalWrite(15, LOW);
 		delay(500);
-		goto SetAddrLabel;							//|UNTESTED CODE||UNTESTED CODE||UNTESTED CODE||UNTESTED CODE|
-	}												//|UNTESTED CODE||UNTESTED CODE||UNTESTED CODE||UNTESTED CODE|
+		goto SetAddrLabel;
+	}
 }
 
 void loop() {

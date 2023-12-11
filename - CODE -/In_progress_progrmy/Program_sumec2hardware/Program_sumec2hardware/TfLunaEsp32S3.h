@@ -31,6 +31,10 @@ void TfL_SetAddrs() {
 		TfL_Succ = tflI2C.Set_I2C_Addr(TfL_Addr1, TfL_AddrDefault);	//only left sensor should be connected
 		Serial.println(TfL_Succ);
 		delay(1000);
+		digitalWrite(15, HIGH);
+		delay(10);
+		digitalWrite(15, LOW);
+		delay(10);
 	}
 	Serial.println("0x11");
 	TfL_Succ = 0;
@@ -50,6 +54,10 @@ void TfL_SetAddrs() {
 		TfL_Succ = tflI2C.Set_I2C_Addr(TfL_Addr2, TfL_AddrDefault);	//only left and mid sensors should be connected
 		Serial.println(TfL_Succ);
 		delay(1000);
+		digitalWrite(15, HIGH);
+		delay(10);
+		digitalWrite(15, LOW);
+		delay(10);
 	}
 	Serial.println("0x12");
 	TfL_Succ = 0;
@@ -69,6 +77,10 @@ void TfL_SetAddrs() {
 		TfL_Succ = tflI2C.Set_I2C_Addr(TfL_Addr3, TfL_AddrDefault);	//all sensors should be connected
 		Serial.println(TfL_Succ);
 		delay(1000);
+		digitalWrite(15, HIGH);
+		delay(10);
+		digitalWrite(15, LOW);
+		delay(10);
 	}
 	Serial.println("0x13");
 	TfL_Succ = 0;

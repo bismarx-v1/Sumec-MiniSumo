@@ -81,20 +81,57 @@ void IRstart() {
 //================================IR čekání -> konec==================================
 
 //================================LED blikání -> začátek================================
-void CodeForTask1(void* parameter) { /*Code for core 0*/
-  for (;;) {  //void loop()
-    switch (LEDBlink) {
-      case 0:
-        digitalWrite(LEDPin, 0);
-        break;
-      case 1:
-        digitalWrite(LEDPin, 1);
-        delay(100);
-        digitalWrite(LEDPin, 0);
-        delay(100);
-        break;
-    }
-  }
+int LedBlinkState = 0;
+
+void CodeForTask1(void * parameter) {	/*Code for core 0*/
+	Serial.print("Core ["); Serial.print(xPortGetCoreID()); Serial.println("] started");	//print this core
+	
+	for(;;) {	//void loop()
+		switch(LEDBlink) {
+			case 0:
+				if(LedBlinkState != 0) {
+					LedBlinkState = 0;
+					digitalWrite(LEDPin, 0);
+					break;
+				}
+				
+				else {
+					break;
+				}
+			
+			case 1:
+				if(LedBlinkState != 1) {
+					LedBlinkState = 1;
+					digitalWrite(LEDPin, 1);
+					delay(200);
+					digitalWrite(LEDPin, 0);
+					delay(400);
+					break;
+				}
+				
+				else {
+					break;
+				}
+			
+			case 2:
+				if(LedBlinkState != 2) {
+					LedBlinkState = 2;
+					digitalWrite(LEDPin, 1);
+					delay(500);
+					digitalWrite(LEDPin, 0);
+					delay(200);
+					digitalWrite(LEDPin, 1);
+					delay(200);
+					digitalWrite(LEDPin, 0);
+					delay(200);
+					break;
+				}
+				
+				else {
+					break;
+				}
+		}
+	}
 }
 //================================LED blikání -> konec================================
 
@@ -109,8 +146,22 @@ void setup() {
   MOTORS_Setup(); //stup pro motory
   
   //TF_luna setup a nastavení adres
-  TfL_Setup();                              
+  TfL_Setup();  
+  SetAddrLabel:  
   TfL_SetAddrs();                         
+  delay(1000);
+  if(TfL_IsSet()!=1) {	//zkontroluj jestli se luny pripojily
+		Serial.print("NotSet");
+		digitalWrite(15, HIGH);
+		delay(500);
+		digitalWrite(15, LOW);
+		delay(500);
+		digitalWrite(15, HIGH);
+		delay(500);
+		digitalWrite(15, LOW);
+		delay(500);
+		goto SetAddrLabel;
+	}
 
   //čekání na IR 
   irrecv.enableIRIn();
