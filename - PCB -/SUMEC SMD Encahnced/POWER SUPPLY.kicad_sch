@@ -957,7 +957,7 @@
     (property "Value" "\nLM1084IS-3.3/NOPB" (at 189.23 39.37 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "Package_TO_SOT_SMD:TO-252-3_TabPin2" (at 189.23 38.1 0)
+    (property "Footprint" "Package_TO_SOT_SMD:TO-263-3_TabPin4" (at 189.23 38.1 0)
       (effects (font (size 1.27 1.27) italic) hide)
     )
     (property "Datasheet" "http://www.ti.com/lit/ds/symlink/lm1084.pdf" (at 189.23 44.45 0)
