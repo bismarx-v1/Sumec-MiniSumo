@@ -1,0 +1,18 @@
+(module 5MMSCREWTERM (layer F.Cu) (tedit 4E3D7344)
+  (descr "Regulateur TO220 serie LM78xx")
+  (tags "TR TO220")
+  (fp_text reference P7 (at 0 -3.556) (layer F.SilkS) hide
+    (effects (font (size 1.524 1.016) (thickness 0.2032)))
+  )
+  (fp_text value POWER (at 0 3.81) (layer F.SilkS) hide
+    (effects (font (size 1.524 1.016) (thickness 0.2032)))
+  )
+  (fp_line (start -5.08 -1.905) (end -5.08 -2.54) (layer F.SilkS) (width 0.381))
+  (fp_line (start -5.08 -2.54) (end 5.08 -2.54) (layer F.SilkS) (width 0.381))
+  (fp_line (start 5.08 -2.54) (end 5.08 -1.905) (layer F.SilkS) (width 0.381))
+  (fp_line (start -5.08 1.905) (end -5.08 -1.905) (layer F.SilkS) (width 0.381))
+  (fp_line (start 5.08 -1.905) (end 5.08 1.905) (layer F.SilkS) (width 0.381))
+  (fp_line (start 5.08 1.905) (end -5.08 1.905) (layer F.SilkS) (width 0.381))
+  (pad 2 thru_hole circle (at -2.54 0 270) (size 1.778 1.778) (drill 1.016) (layers *.Cu *.Mask F.SilkS))
+  (pad 1 thru_hole rect (at 2.54 0 270) (size 1.778 1.778) (drill 1.016) (layers *.Cu *.Mask F.SilkS))
+)
