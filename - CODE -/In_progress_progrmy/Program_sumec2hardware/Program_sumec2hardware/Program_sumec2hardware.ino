@@ -190,25 +190,12 @@ void loop() {
   start_control = 0;
 
   // po stisknutí TEST tlačítka nastane čekání na IR
-  Serial.print("tlacitko: ");
-  Serial.println(digitalRead(tlacitko));
-  delay(1);
   if (digitalRead(tlacitko) >= 1) {
     Serial.println("vpohode");
     LEDBlink = 0;
     MOTORS_Go(0, 0);
     IRstart();
 
-    // identifikace správného zpuštění
-    LEDBlink = 1;
-    delay(250);
-    LEDBlink = 0;
-
-    // čekání na odstoupení majitelů robotů na odstoupení z ringu -> Olomouc
-    delay(5000-250);
-    //Olomouc - Pravidla - otoceni min o 90 stupnu 
-    MOTORS_Go(255, -255);
-    delay(250);
   }
 
   // třídící proměná
