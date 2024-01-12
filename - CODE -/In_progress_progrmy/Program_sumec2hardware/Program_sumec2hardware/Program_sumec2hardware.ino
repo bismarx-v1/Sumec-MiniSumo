@@ -12,7 +12,7 @@ void IRstart() {
   
   //IR čekání
   while (start_control == 0) {
-  
+    delay(10);
     decode_results results;
 
     if (irrecv.decode(&results)) {  //čeká na příchozí signál 
@@ -23,7 +23,8 @@ void IRstart() {
       adres = code / 0b1000000;      //z přijatého signálu vezme prvních 5 hodnot (Adresa) 
 
       //vypsání všsch hodnot z IR, nejdřívě BIN potom DEC  
-      Serial.println("");
+
+      /*Serial.println("");
       Serial.print("recieved signal: ");
       Serial.print(results.value, BIN);
       Serial.print("    DEC: ");
@@ -45,7 +46,8 @@ void IRstart() {
       Serial.print("    DEC: ");
       Serial.println(comand);
       Serial.println("");
-      Serial.println("==========");
+      Serial.println("==========");*/
+
 
       //fáze program
       if (adres == ADDR_PROGRAM) {
@@ -53,14 +55,14 @@ void IRstart() {
         Serial.print("DohaioID: ");
         Serial.println(DohaioID);
         Serial.println(" ");
-        digitalWrite(led, HIGH);
+        /*digitalWrite(led, HIGH);
         delay(100);
         digitalWrite(led, LOW);
         delay(100);
         digitalWrite(led, HIGH);
         delay(100);
         digitalWrite(led, LOW);
-        delay(100);
+        delay(100);*/
         start_control = 1;
       }
 
@@ -84,13 +86,13 @@ void IRstart() {
 int LedBlinkState = 0;
 
 void CodeForTask1(void * parameter) {	/*Code for core 0*/
-	Serial.print("Core ["); Serial.print(xPortGetCoreID()); Serial.println("] started");	//print this core
+	//Serial.print("Core ["); Serial.print(xPortGetCoreID()); Serial.println("] started");	//print this core
 	
 	for(;;) {	//void loop()
 		switch(LEDBlink) {
 			case 0:
 				if(LedBlinkState != 0) {
-					LedBlinkState = 0;
+					//LedBlinkState = 0;
 					digitalWrite(LEDPin, 0);
 					break;
 				}
@@ -101,11 +103,11 @@ void CodeForTask1(void * parameter) {	/*Code for core 0*/
 			
 			case 1:
 				if(LedBlinkState != 1) {
-					LedBlinkState = 1;
+					//LedBlinkState = 1;
 					digitalWrite(LEDPin, 1);
-					delay(200);
+					delay(100);
 					digitalWrite(LEDPin, 0);
-					delay(400);
+					delay(100);
 					break;
 				}
 				
@@ -146,12 +148,11 @@ void setup() {
   MOTORS_Setup(); //stup pro motory
   
   //TF_luna setup a nastavení adres
-  TfL_Setup();  
-  SetAddrLabel:  
-  TfL_SetAddrs();                         
-  delay(1000);
-  if(TfL_IsSet()!=1) {	//zkontroluj jestli se luny pripojily
-		Serial.print("NotSet");
+  //TfL_Setup();  
+  //SetAddrLabel:  
+  //TfL_SetAddrs();                         
+
+  /*if(TfL_IsSet()!=1) {	//zkontroluj jestli se luny pripojily
 		digitalWrite(15, HIGH);
 		delay(500);
 		digitalWrite(15, LOW);
@@ -161,22 +162,11 @@ void setup() {
 		digitalWrite(15, LOW);
 		delay(500);
 		goto SetAddrLabel;
-	}
+	}*/
 
   //čekání na IR 
   irrecv.enableIRIn();
   IRstart();
-
-  // identifikace správného zpuštění
-  LEDBlink = 1;
-  delay(250);
-  LEDBlink = 0;
-
-  // čekání na odstoupení majitelů robotů na odstoupení z ringu -> Olomouc
-  delay(5000-200);
-  //Olomouc - Pravidla - otoceni min o 90 stupnu 
-  MOTORS_Go(255, -255);
-  delay(250);
 
 
   xTaskCreatePinnedToCore(CodeForTask1, "Task_1", 3500, NULL, 0, &Task1, 0); /*Core*/
@@ -186,17 +176,18 @@ void setup() {
 
 void loop() {
 
-  LEDBlink = 1;
+  delay(10);
   start_control = 0;
 
   // po stisknutí TEST tlačítka nastane čekání na IR
   if (digitalRead(tlacitko) >= 1) {
-    Serial.println("vpohode");
     LEDBlink = 0;
     MOTORS_Go(0, 0);
     IRstart();
 
   }
+
+  LEDBlink = 1;
 
   // třídící proměná
   laser_number = 0;
