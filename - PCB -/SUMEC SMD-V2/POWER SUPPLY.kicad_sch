@@ -816,7 +816,7 @@
     (property "Value" "XT30U-F" (at 163.83 113.03 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "sumec_library:AMASS_XT30U-M_1x02_P5.0mm_Vertical" (at 157.48 121.92 0)
+    (property "Footprint" "" (at 157.48 121.92 0)
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
     (property "Datasheet" "https://www.tme.eu/Document/3cbfa5cfa544d79584972dd5234a409e/XT30U%20SPEC.pdf" (at 157.48 119.38 0)
