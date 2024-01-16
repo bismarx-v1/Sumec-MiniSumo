@@ -1,0 +1,218 @@
+START
+New loop
+2048
+sda=0, XS1=0, XS2=0
+Luna1: 	0
+Luna2: 	0
+===============	Result: ok
+
+sda=1, XS1=0, XS2=0
+Luna1: 	0
+Luna2: 	0
+===============	Result: ok
+
+sda=0, XS1=1, XS2=0
+Luna1: 	1
+Luna2: 	0
+===============	Result: NOT ok; sda
+
+sda=0, XS1=0, XS2=1
+Luna1: 	0
+Luna2: 	0
+===============	Result: ok
+
+sda=1, XS1=1, XS2=0
+Luna1: 	1
+Luna2: 	1
+===============	Result: NOT ok luna2
+
+sda=1, XS1=0, XS2=1
+Luna1: 	0
+Luna2: 	1
+===============	Result: ok
+
+sda=0, XS1=1, XS2=1
+Luna1: 	0
+Luna2: 	0
+===============	Result: ok
+
+sda=1, XS1=1, XS2=1
+Luna1: 	1
+Luna2: 	1
+===============	Result: ok
+
+New loop------------------------------------------------------------------------
+10548
+sda=0, XS1=0, XS2=0
+Luna1: 	0
+Luna2: 	0
+===============	Result: ok
+
+sda=1, XS1=0, XS2=0
+Luna1: 	0
+Luna2: 	0
+===============	Result: ok
+
+sda=0, XS1=1, XS2=0
+Luna1: 	1
+Luna2: 	0
+===============	Result: NOT ok; sda
+
+sda=0, XS1=0, XS2=1
+Luna1: 	0
+Luna2: 	0
+===============	Result: ok
+
+sda=1, XS1=1, XS2=0
+Luna1: 	1
+Luna2: 	1
+===============	Result: NOT ok; luna2
+
+sda=1, XS1=0, XS2=1
+Luna1: 	0
+Luna2: 	1
+===============	Result: ok
+
+sda=0, XS1=1, XS2=1
+Luna1: 	0
+Luna2: 	0
+===============	Result: ok
+
+sda=1, XS1=1, XS2=1
+Luna1: 	1
+Luna2: 	1
+===============	Result: ok
+
+New loop-----------------------------------------------------------------
+19048
+sda=0, XS1=0, XS2=0
+Luna1: 	0
+Luna2: 	0
+===============
+
+sda=1, XS1=0, XS2=0
+Luna1: 	0
+Luna2: 	0
+===============
+
+sda=0, XS1=1, XS2=0
+Luna1: 	1
+Luna2: 	0
+===============
+
+sda=0, XS1=0, XS2=1
+Luna1: 	0
+Luna2: 	0
+===============
+
+sda=1, XS1=1, XS2=0
+Luna1: 	1
+Luna2: 	1
+===============
+
+sda=1, XS1=0, XS2=1
+Luna1: 	0
+Luna2: 	1
+===============
+
+sda=0, XS1=1, XS2=1
+Luna1: 	0
+Luna2: 	0
+===============
+
+sda=1, XS1=1, XS2=1
+Luna1: 	1
+Luna2: 	1
+===============
+
+New loop
+27548
+sda=0, XS1=0, XS2=0
+Luna1: 	0
+Luna2: 	0
+===============
+
+sda=1, XS1=0, XS2=0
+Luna1: 	0
+Luna2: 	0
+===============
+
+sda=0, XS1=1, XS2=0
+Luna1: 	1
+Luna2: 	0
+===============
+
+sda=0, XS1=0, XS2=1
+Luna1: 	0
+Luna2: 	0
+===============
+
+sda=1, XS1=1, XS2=0
+Luna1: 	1
+Luna2: 	0
+===============
+
+sda=1, XS1=0, XS2=1
+Luna1: 	0
+Luna2: 	1
+===============
+
+sda=0, XS1=1, XS2=1
+Luna1: 	0
+Luna2: 	0
+===============
+
+sda=1, XS1=1, XS2=1
+Luna1: 	1
+Luna2: 	1
+===============
+
+New loop
+36048
+sda=0, XS1=0, XS2=0
+Luna1: 	0
+Luna2: 	0
+===============
+
+sda=1, XS1=0, XS2=0
+Luna1: 	0
+Luna2: 	0
+===============
+
+sda=0, XS1=1, XS2=0
+Luna1: 	1
+Luna2: 	0
+===============
+
+sda=0, XS1=0, XS2=1
+Luna1: 	0
+Luna2: 	0
+===============
+
+sda=1, XS1=1, XS2=0
+Luna1: 	1
+Luna2: 	0
+===============
+
+sda=1, XS1=0, XS2=1
+Luna1: 	0
+Luna2: 	1
+===============
+
+sda=0, XS1=1, XS2=1
+Luna1: 	0
+Luna2: 	0
+===============
+
+sda=1, XS1=1, XS2=1
+Luna1: 	1
+Luna2: 	1
+===============
+
+New loop
+44548
+sda=0, XS1=0, XS2=0
+Luna1: 	0
+Luna2: 	0
+===============
+
