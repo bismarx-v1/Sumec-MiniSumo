@@ -3,7 +3,7 @@ const int XShut1 = 32;
 const int XShut2 = 33;
 const int SdaLuna1 = 26;
 const int SdaLuna2 = 27;
-const int MODE = 0; //0 = analog; !0 = digital
+const int MODE = 1; //0 = analog; !0 = digital
 
 void PinsSet(int Sda, int XS1, int XS2) {
   digitalWrite(SdaBoard, Sda);
@@ -17,7 +17,9 @@ void PinsSet(int Sda, int XS1, int XS2) {
   Serial.print(XS1);
   Serial.print("\t");
   Serial.println(XS2);
+  Serial.print("\t");
   Serial.println("Luna1\tLuna2");
+  Serial.print("\t");
   if(MODE==0) {
     Serial.print(analogRead(SdaLuna1));
   } else {
