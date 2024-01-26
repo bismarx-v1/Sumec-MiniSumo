@@ -158,7 +158,7 @@ void setup() {
   IRstart();
 
 
-  xTaskCreatePinnedToCore(CodeForTask1, "Task_m", 3500, NULL, 0, &Task1, 0); /*1, 2, 7, 6*/
+  xTaskCreatePinnedToCore(CodeForTask1, "Task_1", 3500, NULL, 0, &Task1, 0); /*Core*/
 }
 
 //======================================setup -> konec, loop -> začátek================================================
