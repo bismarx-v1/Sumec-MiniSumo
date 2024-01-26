@@ -428,7 +428,7 @@
       "idf": "",
       "netlist": "",
       "specctra_dsn": "",
-      "step": "",
+      "step": "QRE MiniBoards.step",
       "vrml": ""
     },
     "page_layout_descr_file": ""
