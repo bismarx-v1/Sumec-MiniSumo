@@ -11,27 +11,14 @@ void setup() {
 	delay(1000);
 	
 	TfL_Setup();	//TfL Lib - libs setup
-	
-	SetAddrLabel:									//|UNTESTED CODE||UNTESTED CODE||UNTESTED CODE||UNTESTED CODE|
-	
-	TfL_SetAddrs();	//TfL Lib - start the process for setting adresses
-	
-	delay(1000);
-	if(TfL_IsSet()!=1) {
-		Serial.print("NotSet");
-		digitalWrite(15, HIGH);
-		delay(500);
-		digitalWrite(15, LOW);
-		delay(500);
-		digitalWrite(15, HIGH);
-		delay(500);
-		digitalWrite(15, LOW);
-		delay(500);
-		goto SetAddrLabel;
-	}
 }
 
 void loop() {
+	Serial.print(TfL_IsOnline(0x10));	//Check if there is a luna on this address; 0 if yes 1 if no; expected 1
+	Serial.print(TfL_IsOnline(0x11));	//Check if there is a luna on this address; 0 if yes 1 if no; expected 0
+	Serial.print(TfL_IsOnline(0x12));	//Check if there is a luna on this address; 0 if yes 1 if no; expected 0
+	Serial.println(TfL_IsOnline(0x13));	//Check if there is a luna on this address; 0 if yes 1 if no; expected 0
+	
 	Serial.print("Left:\t");
 	Serial.println(TfL_Get(tfAddr1));	//TfL Lib - Get from sensor
 	

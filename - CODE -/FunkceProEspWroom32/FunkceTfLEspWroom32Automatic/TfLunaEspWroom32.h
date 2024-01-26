@@ -5,8 +5,8 @@ TFLI2C tflI2C;
 int TfL_Succ = 0;
 const int XSMid = 32;  //XShutMidLuna
 const int XSRight = 33;  //XShutRightLuna
-const int Sda = 14;  //Sda
-const int Scl = ;  //Scl
+const int Sda = 21;  //Sda
+const int Scl = 22;  //Scl
 const int TestLed = 2;  //TestLed
 
 int16_t TfL_Addr1 = 0x11;	//TfL Lib - first address (usualy left sensor)
@@ -17,8 +17,8 @@ int16_t TfL_AddrDefault = 0x10;
 void TfL_Setup() {
 	pinMode(XSMid, OUTPUT);
 	pinMode(XSRight, OUTPUT);
-	digitalWrite(XSMid, LOW);
-	digitalWrite(XSRight, LOW);
+	digitalWrite(XSMid, LOW);	//xs mid initial pos
+	digitalWrite(XSRight, LOW);	//xs right initial pos
 	
 	pinMode(TestLed, OUTPUT);
 	
@@ -31,6 +31,8 @@ void TfL_SetAddrs() {
 	delay(100);
 	digitalWrite(TestLed, LOW);
 	delay(100);
+	
+	goto TEMP1;
 	
 	while(TfL_Succ==0) {
 		TfL_Succ = tflI2C.Set_I2C_Addr(TfL_Addr1, TfL_AddrDefault);	//only left sensor should be connected
@@ -53,7 +55,10 @@ void TfL_SetAddrs() {
 	digitalWrite(TestLed, LOW);
 	delay(100);
 	
+	TEMP1:
+	
 	digitalWrite(XSMid, HIGH);
+	Serial.println("XS is HIGH");
 	
 	while(TfL_Succ==0) {
 		TfL_Succ = tflI2C.Set_I2C_Addr(TfL_Addr2, TfL_AddrDefault);	//only left and mid sensors should be connected
@@ -75,6 +80,8 @@ void TfL_SetAddrs() {
 	delay(100);
 	digitalWrite(TestLed, LOW);
 	delay(100);
+	
+	goto TEMP2;
 	
 	digitalWrite(XSRight, HIGH);
 	
@@ -103,6 +110,8 @@ void TfL_SetAddrs() {
 	digitalWrite(TestLed, LOW);
 	delay(100);
 	
+	TEMP2:
+	
 	return;
 }
 
@@ -115,9 +124,11 @@ int TfL_Get(int TfLAddr=0x10) {
 int TfL_IsSet() {
 	byte error, address;
 	int A1, A2, A3;
-	A1=0;
+	//A1=0;
+	A1=1;
 	A2=0;
-	A3=0;
+	//A3=0;
+	A3=1;
 
 	for(address = 1; address < 127; address++ ) {
 		Wire.beginTransmission(address);
