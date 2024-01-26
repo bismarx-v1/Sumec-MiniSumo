@@ -8,20 +8,26 @@
 
 // Set I2C bus to use: Wire, Wire1, etc.
 #define WIRE Wire
+int OddEven = 0;
 
 void setup() {
 
   pinMode(40, OUTPUT);
 
-	pinMode(40, OUTPUT);
+	/*pinMode(40, OUTPUT);
 	pinMode(41, OUTPUT);
 	pinMode(42, OUTPUT);
 	digitalWrite(40, LOW);
 	digitalWrite(41, LOW);
-	digitalWrite(42, LOW);
-  WIRE.begin(18,17,400000);
+	digitalWrite(42, LOW);*/
+	//WIRE.begin(18,17,400000);
+	WIRE.begin(21,22,400000);
+	pinMode(32, OUTPUT);
+	digitalWrite(32, HIGH);
+	pinMode(33, OUTPUT);
+	digitalWrite(33, HIGH);
 
-  Serial.begin(9600);
+  Serial.begin(115200);
   delay(1000);
   Serial.println("\nI2C Scanner");
 }
@@ -65,6 +71,16 @@ void loop() {
     Serial.println("No I2C devices found\n");
   else
     Serial.println("done\n");
+
+	if(OddEven==1) {
+		OddEven=0;
+		Serial.println("LOW");
+	} else {
+		OddEven=1;
+		Serial.println("HIGH");
+	}
+	digitalWrite(32, OddEven);
+	digitalWrite(33, OddEven);
 
   delay(5000);           // wait 5 seconds for next scan
 }
