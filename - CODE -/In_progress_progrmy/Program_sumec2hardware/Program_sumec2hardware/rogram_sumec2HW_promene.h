@@ -30,3 +30,4 @@ int comand;
 int DohaioID;
 int start_control = 0;
 IRrecv irrecv(38); //IR nastavení
+

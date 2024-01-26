@@ -75,7 +75,6 @@ void IRstart() {
 //================================LED blikání -> začátek================================
 
 void CodeForTask1(void * parameter) {	/*Code for core 0*/
-	//Serial.print("Core ["); Serial.print(xPortGetCoreID()); Serial.println("] started");	//print this core
 	
 	for(;;) {	//void loop()
 		switch(LEDBlink) {
@@ -134,29 +133,10 @@ void setup() {
   pinMode(tlacitko, INPUT);  //nastavení test tlačítka na vstup
   pinMode(led, OUTPUT);  //nastavení kontrolní LED na výstup
   
-  MOTORS_Setup(); //stup pro motory
-  
-  //TF_luna setup a nastavení adres                                               LUNY
-  //TfL_Setup();  
-  //SetAddrLabel:  
-  //TfL_SetAddrs();                         
-
-  /*if(TfL_IsSet()!=1) {	//zkontroluj jestli se luny pripojily                   LUNY
-		digitalWrite(15, HIGH);
-		delay(500);
-		digitalWrite(15, LOW);
-		delay(500);
-		digitalWrite(15, HIGH);
-		delay(500);
-		digitalWrite(15, LOW);
-		delay(500);
-		goto SetAddrLabel;
-	}*/
-
-  //čekání na IR 
-  irrecv.enableIRIn();
-  IRstart();
-
+  MOTORS_Setup(); //stup pro motory  
+  TfL_Setup();  //stup pro luny
+  irrecv.enableIRIn();  //čekání na IR 
+  IRstart(); //čekání na IR 
 
   xTaskCreatePinnedToCore(CodeForTask1, "Task_m", 3500, NULL, 0, &Task1, 0); /*1, 2, 7, 6*/
 }
@@ -182,15 +162,15 @@ void loop() {
   laser_number = 0;
 
   // třídění laserů pomocí proměné
-  if (TfL_Get(0x12) < Range && TfL_Get(0x12) > 0) {  // přední laser
-    laser_number = laser_number + 1;
+  if (TfL_Get(TfL_Addr2) < Range && TfL_Get(0x12) > 0) {  // přední laser
+    //laser_number = laser_number + 1;
   }
 
-  if (TfL_Get(0x11) < Range && TfL_Get(0x11) > 0) {  // levý laser
+  if (TfL_Get(TfL_Addr1) < Range && TfL_Get(0x11) > 0) {  // levý laser
     laser_number = laser_number + 3;
   }
 
-  if (TfL_Get(0x13) < Range && TfL_Get(0x13) > 0) {  // pravý laser
+  if (TfL_Get(TfL_Addr3) < Range && TfL_Get(0x13) > 0) {  // pravý laser
     laser_number = laser_number + 5;
   }
 
@@ -222,6 +202,10 @@ void loop() {
     case 6:
       MOTORS_Go(150, 255);
       delay(100);
+      break;
+
+    case 8:
+      MOTORS_Go(255, 255);
       break;
 
     case 9:
