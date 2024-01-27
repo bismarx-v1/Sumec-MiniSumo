@@ -1,0 +1,14 @@
+//SET ADDRESS
+//addrReg	//newAddr
+//0x22		//0x08-0x77
+
+//SAVE
+//saveReg	//commitCode
+//0x20		//0x01
+
+//REBOOT
+//rebootReg	//rebootCode
+//0x21		//0x02
+
+//wait2Secs
+delay(2000);
