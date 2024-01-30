@@ -1418,11 +1418,6 @@
   )
 
 
-  (text "ESP32-S3 Datasheet" (at 115.57 127 0)
-    (effects (font (size 5 5) (thickness 1) bold) (justify left bottom) (href "https://www.espressif.com/sites/default/files/documentation/esp32-s3_datasheet_en.pdf"))
-    (uuid c9abbcb1-43cc-4a6d-bb43-4b91a0066e1a)
-  )
-
   (symbol (lib_id "some magic shit (logo):LOGO") (at 147.32 25.4 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid d17ab403-3a8a-4fb5-a933-2b587e2f9246)
