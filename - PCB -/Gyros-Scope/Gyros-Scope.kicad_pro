@@ -34,9 +34,9 @@
         "other_text_thickness": 0.15,
         "other_text_upright": false,
         "pads": {
-          "drill": 0.8,
-          "height": 1.6,
-          "width": 1.1
+          "drill": 0.762,
+          "height": 1.524,
+          "width": 1.524
         },
         "silk_line_width": 0.15,
         "silk_text_italic": false,
@@ -392,7 +392,7 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "QRE MiniBoards.kicad_pro",
+    "filename": "Gyros-Scope.kicad_pro",
     "version": 1
   },
   "net_settings": {
@@ -428,7 +428,7 @@
       "idf": "",
       "netlist": "",
       "specctra_dsn": "",
-      "step": "3D and Photos/QRE MiniBoards Board.step",
+      "step": "",
       "vrml": ""
     },
     "page_layout_descr_file": ""
@@ -469,7 +469,7 @@
   },
   "sheets": [
     [
-      "c0d3a82a-eb2a-4d79-a622-f18b88b35157",
+      "83cc5b05-2bca-455f-b755-d36d93e0e320",
       ""
     ]
   ],
