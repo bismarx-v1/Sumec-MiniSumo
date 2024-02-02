@@ -73,17 +73,12 @@ void setup() {
 		0);				/*Core*/
 		
 	LEDBlink = 1;
+	
+	
+	MOTORS_Go(255/2, 255/2);
 }
 
 
 //normalni void loop()
 void loop() {
-  MOTORS_Go(255/2, -255/2);
-  delay(2000);
-  
-  MOTORS_Go(255/2, 255/2);
-  delay(3000);
-  
-  MOTORS_Go(0, 0);
-  delay(2000);
 }
