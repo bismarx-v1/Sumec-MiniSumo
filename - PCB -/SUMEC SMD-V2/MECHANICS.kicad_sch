@@ -837,7 +837,7 @@
     (property "Value" "SW_DPDT_x2" (at 180.34 62.23 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "sumec-smdV2_library:Custom_SPDT_Switch" (at 180.34 67.31 0)
+    (property "Footprint" "sumec-smdV2_library:Custom_SPDT_4.8mm_Switch" (at 180.34 67.31 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 180.34 67.31 0)
