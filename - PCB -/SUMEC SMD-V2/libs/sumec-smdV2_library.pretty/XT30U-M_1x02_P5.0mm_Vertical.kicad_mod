@@ -1,4 +1,4 @@
-(footprint "AMASS_XT30U-M_1x02_P5.0mm_Vertical" (version 20221018) (generator pcbnew)
+(footprint "XT30U-M_1x02_P5.0mm_Vertical" (version 20221018) (generator pcbnew)
   (layer "F.Cu")
   (descr "Connector XT30 Vertical Cable Male, https://www.tme.eu/en/Document/3cbfa5cfa544d79584972dd5234a409e/XT30U%20SPEC.pdf")
   (tags "RC Connector XT30")
@@ -61,14 +61,9 @@
     (stroke (width 0.1) (type solid)) (layer "F.Fab") (tstamp b32caf2c-a76a-4d2a-af90-af84b33771d1))
   (pad "1" thru_hole rect (at 0 0) (size 3.8 3.8) (drill 2.7) (layers "*.Cu" "*.Mask") (tstamp 4afc9e85-8b2a-4665-901f-7a72bf53cc89))
   (pad "2" thru_hole circle (at 5 0) (size 3.8 3.8) (drill 2.7) (layers "*.Cu" "*.Mask") (tstamp 2b1ec5c7-48e3-493a-9ac8-e3d7186b6b9e))
-  (model "${KICAD6_3DMODEL_DIR}/Connector_AMASS.3dshapes/AMASS_XT30U-M_1x02_P5.0mm_Vertical.wrl"
-    (offset (xyz 0 0 0))
-    (scale (xyz 1 1 1))
-    (rotate (xyz 0 0 0))
-  )
   (model "${KIPRJMOD}/libs/3D/XT30M.stp"
-    (offset (xyz 7.5 2.7 11))
+    (offset (xyz 7.5 2.6 12))
     (scale (xyz 1 1 1))
-    (rotate (xyz 0 180 -90))
+    (rotate (xyz 0 -180 -90))
   )
 )
