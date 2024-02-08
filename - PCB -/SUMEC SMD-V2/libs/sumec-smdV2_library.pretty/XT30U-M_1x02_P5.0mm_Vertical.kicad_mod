@@ -62,7 +62,7 @@
   (pad "1" thru_hole rect (at 0 0) (size 3.8 3.8) (drill 2.7) (layers "*.Cu" "*.Mask") (tstamp 4afc9e85-8b2a-4665-901f-7a72bf53cc89))
   (pad "2" thru_hole circle (at 5 0) (size 3.8 3.8) (drill 2.7) (layers "*.Cu" "*.Mask") (tstamp 2b1ec5c7-48e3-493a-9ac8-e3d7186b6b9e))
   (model "${KIPRJMOD}/libs/3D/XT30M.stp"
-    (offset (xyz 7.5 2.6 12))
+    (offset (xyz 7.5 2.6 8.5))
     (scale (xyz 1 1 1))
     (rotate (xyz 0 -180 -90))
   )
