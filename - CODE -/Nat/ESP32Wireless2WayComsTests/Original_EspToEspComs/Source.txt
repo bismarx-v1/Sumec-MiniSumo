@@ -1,0 +1,1 @@
+https://learn.sparkfun.com/tutorials/sending-sensor-data-over-wifi/all
