@@ -706,7 +706,7 @@
     (property "Reference" "#PWR026" (at 142.24 73.66 0)
       (effects (font (face "Bahnschrift") (size 1.27 1.27)) hide)
     )
-    (property "Value" "GND" (at 134.62 76.2 90)
+    (property "Value" "GND" (at 135.89 76.2 90)
       (effects (font (face "Bahnschrift") (size 1.27 1.27)) (justify right))
     )
     (property "Footprint" "" (at 135.89 73.66 0)
