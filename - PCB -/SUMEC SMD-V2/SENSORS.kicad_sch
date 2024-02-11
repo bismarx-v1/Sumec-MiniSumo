@@ -8200,7 +8200,7 @@
     (effects (font (size 3 3) bold (color 0 0 0 1)) (justify left bottom))
     (uuid 86464206-1d19-4141-b98a-ff345eee4827)
   )
-  (text "When pin 5 is connected to ground, TF-Luna enters I2C mode, \nthen its pin 2 is used as SDA data and\npin 3 is the SCL clock sending data.\n\nAddresses are saved using Nat Simak's program."
+  (text "When pin 5 is connected to ground, TF-Luna enters I2C mode, \nthen its pin 2 is used as SDA data and\npin 3 is the SCL clock sending data.\n\nAddresses are saved using Mr_Simak program."
     (at 25.4 107.95 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 881bdfa1-bc38-41ca-8e3f-3d35290ba48c)
@@ -8341,6 +8341,9 @@
         )
       )
       (project "sumec"
+        (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385"
+          (reference "R?") (unit 1)
+        )
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/cfe10bc0-4e7a-493c-9fb6-0f9ed602f83c"
           (reference "R9") (unit 1)
         )
@@ -8371,6 +8374,9 @@
         )
       )
       (project "sumec"
+        (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385"
+          (reference "#PWR?") (unit 1)
+        )
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/cfe10bc0-4e7a-493c-9fb6-0f9ed602f83c"
           (reference "#PWR023") (unit 1)
         )
@@ -8485,6 +8491,9 @@
         )
       )
       (project "sumec"
+        (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385"
+          (reference "#PWR?") (unit 1)
+        )
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/cfe10bc0-4e7a-493c-9fb6-0f9ed602f83c"
           (reference "#PWR03") (unit 1)
         )
@@ -8495,7 +8504,7 @@
   (symbol (lib_id "Device:C_Polarized") (at 137.16 137.16 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 2dd8720d-2f32-451e-9916-a73f6d31ac04)
-    (property "Reference" "C14" (at 130.81 137.16 0)
+    (property "Reference" "C12" (at 130.81 137.16 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "10uF.shrp" (at 139.7 137.16 0)
@@ -8511,6 +8520,12 @@
     (pin "2" (uuid 11518bef-7a72-4b5c-9e1d-3eda560df7e6))
     (instances
       (project "sumec"
+        (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/2febd48c-c6ec-477b-ac64-6fa98a41fff0"
+          (reference "C12") (unit 1)
+        )
+        (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/11aa20d4-c4ff-49be-9179-c2911da50f67"
+          (reference "C3") (unit 1)
+        )
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/cfe10bc0-4e7a-493c-9fb6-0f9ed602f83c"
           (reference "C14") (unit 1)
         )
@@ -8541,6 +8556,9 @@
         )
       )
       (project "sumec"
+        (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385"
+          (reference "#PWR?") (unit 1)
+        )
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/cfe10bc0-4e7a-493c-9fb6-0f9ed602f83c"
           (reference "#PWR062") (unit 1)
         )
@@ -8572,6 +8590,9 @@
         )
       )
       (project "sumec"
+        (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385"
+          (reference "R?") (unit 1)
+        )
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/cfe10bc0-4e7a-493c-9fb6-0f9ed602f83c"
           (reference "R10") (unit 1)
         )
@@ -8632,7 +8653,7 @@
   (symbol (lib_id "power:+5V") (at 63.5 140.97 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 555fc4fd-ef72-48e6-9853-3ebce68ed297)
-    (property "Reference" "#PWR049" (at 67.31 140.97 0)
+    (property "Reference" "#PWR?" (at 67.31 140.97 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+5V" (at 59.69 141.605 90)
@@ -8647,6 +8668,9 @@
     (pin "1" (uuid 83e0c127-1f91-4eac-bce3-c9184e603ece))
     (instances
       (project "sumec"
+        (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/2febd48c-c6ec-477b-ac64-6fa98a41fff0"
+          (reference "#PWR?") (unit 1)
+        )
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/cfe10bc0-4e7a-493c-9fb6-0f9ed602f83c"
           (reference "#PWR049") (unit 1)
         )
@@ -8657,7 +8681,7 @@
   (symbol (lib_id "power:GND") (at 62.23 133.35 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 65ce9bdf-cc5c-4f93-9ac0-f28f099152cb)
-    (property "Reference" "#PWR024" (at 55.88 133.35 0)
+    (property "Reference" "#PWR?" (at 55.88 133.35 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 57.15 133.35 90)
@@ -8672,6 +8696,9 @@
     (pin "1" (uuid 66b42fc3-a15b-4bec-8971-347328419254))
     (instances
       (project "sumec"
+        (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/11aa20d4-c4ff-49be-9179-c2911da50f67"
+          (reference "#PWR?") (unit 1)
+        )
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/cfe10bc0-4e7a-493c-9fb6-0f9ed602f83c"
           (reference "#PWR024") (unit 1)
         )
@@ -8682,7 +8709,7 @@
   (symbol (lib_id "power:+5V") (at 38.1 140.97 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 677f9ccf-4a4e-488d-8c35-7c699a8d9010)
-    (property "Reference" "#PWR025" (at 41.91 140.97 0)
+    (property "Reference" "#PWR?" (at 41.91 140.97 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+5V" (at 34.29 141.605 90)
@@ -8697,6 +8724,9 @@
     (pin "1" (uuid 18694f32-75a8-41fc-bbfb-92ab7344ab90))
     (instances
       (project "sumec"
+        (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/2febd48c-c6ec-477b-ac64-6fa98a41fff0"
+          (reference "#PWR?") (unit 1)
+        )
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/cfe10bc0-4e7a-493c-9fb6-0f9ed602f83c"
           (reference "#PWR025") (unit 1)
         )
@@ -8737,7 +8767,7 @@
   (symbol (lib_id "power:GND") (at 36.83 133.35 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 77b92298-5853-4d70-8108-1edf1d159334)
-    (property "Reference" "#PWR021" (at 30.48 133.35 0)
+    (property "Reference" "#PWR?" (at 30.48 133.35 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 31.75 133.35 90)
@@ -8752,6 +8782,9 @@
     (pin "1" (uuid 309294ca-6953-4c5a-bf5a-68e93f577c64))
     (instances
       (project "sumec"
+        (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/11aa20d4-c4ff-49be-9179-c2911da50f67"
+          (reference "#PWR?") (unit 1)
+        )
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/cfe10bc0-4e7a-493c-9fb6-0f9ed602f83c"
           (reference "#PWR021") (unit 1)
         )
@@ -8762,7 +8795,7 @@
   (symbol (lib_name "+3V3_1") (lib_id "power:+3V3") (at 68.58 64.77 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 79d4a2dc-258c-4ef2-9e24-51d14fedf564)
-    (property "Reference" "#PWR029" (at 64.77 64.77 0)
+    (property "Reference" "#PWR?" (at 64.77 64.77 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3V3" (at 73.66 64.77 0)
@@ -8777,6 +8810,9 @@
     (pin "1" (uuid f1ee0993-3064-4667-9ea6-59a2166af20f))
     (instances
       (project "sumec"
+        (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385"
+          (reference "#PWR?") (unit 1)
+        )
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/cfe10bc0-4e7a-493c-9fb6-0f9ed602f83c"
           (reference "#PWR029") (unit 1)
         )
@@ -8787,7 +8823,7 @@
   (symbol (lib_id "power:+5V") (at 87.63 140.97 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 7afb387f-6336-4abb-a5e9-598b497d58b8)
-    (property "Reference" "#PWR027" (at 91.44 140.97 0)
+    (property "Reference" "#PWR?" (at 91.44 140.97 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+5V" (at 83.82 141.605 90)
@@ -8802,6 +8838,9 @@
     (pin "1" (uuid 948a5d74-c781-4b93-b505-6ff95e74e0f1))
     (instances
       (project "sumec"
+        (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/2febd48c-c6ec-477b-ac64-6fa98a41fff0"
+          (reference "#PWR?") (unit 1)
+        )
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/cfe10bc0-4e7a-493c-9fb6-0f9ed602f83c"
           (reference "#PWR027") (unit 1)
         )
@@ -8812,7 +8851,7 @@
   (symbol (lib_id "power:GND") (at 86.36 133.35 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 7d1de683-e79d-4369-af60-6f5a133f8d6f)
-    (property "Reference" "#PWR022" (at 80.01 133.35 0)
+    (property "Reference" "#PWR?" (at 80.01 133.35 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 81.28 133.35 90)
@@ -8827,6 +8866,9 @@
     (pin "1" (uuid 5d959e62-a27b-434e-9671-971d19a7a554))
     (instances
       (project "sumec"
+        (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/11aa20d4-c4ff-49be-9179-c2911da50f67"
+          (reference "#PWR?") (unit 1)
+        )
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/cfe10bc0-4e7a-493c-9fb6-0f9ed602f83c"
           (reference "#PWR022") (unit 1)
         )
@@ -8865,7 +8907,7 @@
   (symbol (lib_id "Connector:Conn_01x06_Pin") (at 97.79 135.89 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 8bd0f274-ebed-4109-9ff1-06185b167bc7)
-    (property "Reference" "J8" (at 99.06 134.62 90)
+    (property "Reference" "J?" (at 99.06 134.62 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "Conn_01x06_Pin" (at 99.06 136.525 0)
@@ -8885,6 +8927,9 @@
     (pin "6" (uuid 3365b04d-f86b-44e4-bbc3-f18e483bd2f4))
     (instances
       (project "sumec"
+        (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/11aa20d4-c4ff-49be-9179-c2911da50f67"
+          (reference "J?") (unit 1)
+        )
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/cfe10bc0-4e7a-493c-9fb6-0f9ed602f83c"
           (reference "J8") (unit 1)
         )
@@ -8895,7 +8940,7 @@
   (symbol (lib_id "Connector:Conn_01x06_Pin") (at 73.66 135.89 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 96a2ff97-d488-4f17-95cc-271b1a0b9ffe)
-    (property "Reference" "J7" (at 74.93 134.62 90)
+    (property "Reference" "J?" (at 74.93 134.62 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "Conn_01x06_Pin" (at 74.93 136.525 0)
@@ -8915,6 +8960,9 @@
     (pin "6" (uuid 4085f1a4-05c4-4628-b88f-47a3e90f1f9b))
     (instances
       (project "sumec"
+        (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/11aa20d4-c4ff-49be-9179-c2911da50f67"
+          (reference "J?") (unit 1)
+        )
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/cfe10bc0-4e7a-493c-9fb6-0f9ed602f83c"
           (reference "J7") (unit 1)
         )
@@ -8952,7 +9000,7 @@
   (symbol (lib_id "Interface_Optical:TSOP382xx") (at 53.34 59.69 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid d059dfb6-08a8-41fc-8d0f-bfaab20d1339)
-    (property "Reference" "U5" (at 45.72 52.07 0)
+    (property "Reference" "U?" (at 45.72 52.07 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "TSOP382xx" (at 58.42 52.07 0)
@@ -8969,6 +9017,9 @@
     (pin "3" (uuid 1794916c-0ba5-4b68-8acc-7c5ab2be12bf))
     (instances
       (project "sumec"
+        (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385"
+          (reference "U?") (unit 1)
+        )
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/cfe10bc0-4e7a-493c-9fb6-0f9ed602f83c"
           (reference "U5") (unit 1)
         )
@@ -8979,7 +9030,7 @@
   (symbol (lib_name "+3V3_1") (lib_id "power:+3V3") (at 147.32 133.35 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid d34e5ee0-c25b-4d0c-b31a-4e4b5664f2a9)
-    (property "Reference" "#PWR030" (at 143.51 133.35 0)
+    (property "Reference" "#PWR?" (at 143.51 133.35 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3V3" (at 147.32 130.81 90)
@@ -8994,6 +9045,9 @@
     (pin "1" (uuid 5e23629f-175d-42d2-8238-5dac5e2f14fd))
     (instances
       (project "sumec"
+        (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385"
+          (reference "#PWR?") (unit 1)
+        )
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/cfe10bc0-4e7a-493c-9fb6-0f9ed602f83c"
           (reference "#PWR030") (unit 1)
         )
@@ -9004,7 +9058,7 @@
   (symbol (lib_id "power:GND") (at 68.58 59.69 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid ea9f8825-8f39-406a-bbcd-a3321d1c3258)
-    (property "Reference" "#PWR028" (at 74.93 59.69 0)
+    (property "Reference" "#PWR?" (at 74.93 59.69 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 72.39 59.6899 90)
@@ -9019,6 +9073,9 @@
     (pin "1" (uuid c4d0c0d0-efb9-469d-a65e-3d191e1b9beb))
     (instances
       (project "sumec"
+        (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385"
+          (reference "#PWR?") (unit 1)
+        )
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/cfe10bc0-4e7a-493c-9fb6-0f9ed602f83c"
           (reference "#PWR028") (unit 1)
         )
@@ -9029,7 +9086,7 @@
   (symbol (lib_name "+3V3_1") (lib_id "power:+3V3") (at 181.61 133.35 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid f1a5728f-42de-433b-9325-4aa6002b2e47)
-    (property "Reference" "#PWR033" (at 177.8 133.35 0)
+    (property "Reference" "#PWR?" (at 177.8 133.35 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3V3" (at 181.61 130.81 90)
@@ -9044,6 +9101,9 @@
     (pin "1" (uuid 9560f20c-05b8-48c0-a584-c8c3ad32b216))
     (instances
       (project "sumec"
+        (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385"
+          (reference "#PWR?") (unit 1)
+        )
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/cfe10bc0-4e7a-493c-9fb6-0f9ed602f83c"
           (reference "#PWR033") (unit 1)
         )
@@ -9054,7 +9114,7 @@
   (symbol (lib_id "Connector:Conn_01x06_Pin") (at 49.53 135.89 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid fada48be-a56a-49a4-a770-c6d03e0d8782)
-    (property "Reference" "J6" (at 50.8 134.62 90)
+    (property "Reference" "J?" (at 50.8 134.62 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "Conn_01x06_Pin" (at 50.8 136.525 0)
@@ -9074,6 +9134,9 @@
     (pin "6" (uuid 31a6025f-9572-44c1-9f6e-49df8ff8905b))
     (instances
       (project "sumec"
+        (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/11aa20d4-c4ff-49be-9179-c2911da50f67"
+          (reference "J?") (unit 1)
+        )
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/cfe10bc0-4e7a-493c-9fb6-0f9ed602f83c"
           (reference "J6") (unit 1)
         )
@@ -9084,7 +9147,7 @@
   (symbol (lib_id "Device:C_Polarized") (at 173.99 137.16 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid fe3fe516-f1c0-4a2a-aaa2-8634846140fc)
-    (property "Reference" "C15" (at 167.64 137.16 0)
+    (property "Reference" "C12" (at 167.64 137.16 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "10uF.shrp" (at 176.53 137.16 0)
@@ -9100,6 +9163,12 @@
     (pin "2" (uuid 0b041483-6b13-49a7-b753-e5762a0d64bf))
     (instances
       (project "sumec"
+        (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/2febd48c-c6ec-477b-ac64-6fa98a41fff0"
+          (reference "C12") (unit 1)
+        )
+        (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/11aa20d4-c4ff-49be-9179-c2911da50f67"
+          (reference "C3") (unit 1)
+        )
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/cfe10bc0-4e7a-493c-9fb6-0f9ed602f83c"
           (reference "C15") (unit 1)
         )
