@@ -800,9 +800,6 @@
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/05a35bad-c108-46ad-8f95-76319a60a14f"
           (reference "J1") (unit 1)
         )
-        (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/2febd48c-c6ec-477b-ac64-6fa98a41fff0"
-          (reference "J?") (unit 1)
-        )
       )
     )
   )
@@ -865,7 +862,7 @@
   (symbol (lib_id "Connector:Conn_01x01_Pin") (at 168.91 128.27 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 74899cef-cbae-4d64-90a2-c53780221766)
-    (property "Reference" "J?" (at 166.37 128.27 0)
+    (property "Reference" "J2" (at 166.37 128.27 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "Conn_01x01_Pin" (at 169.545 129.54 0)
@@ -880,9 +877,6 @@
     (pin "1" (uuid 8eba053e-d395-4141-8106-b5a4b4d9bbee))
     (instances
       (project "sumec"
-        (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/11aa20d4-c4ff-49be-9179-c2911da50f67"
-          (reference "J?") (unit 1)
-        )
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/05a35bad-c108-46ad-8f95-76319a60a14f"
           (reference "J2") (unit 1)
         )

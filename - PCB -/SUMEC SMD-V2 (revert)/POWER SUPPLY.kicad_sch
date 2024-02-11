@@ -834,7 +834,7 @@
   (symbol (lib_id "power:+3V3") (at 234.95 123.19 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 7835245d-0202-487e-9606-82aab6dd3b18)
-    (property "Reference" "#PWR?" (at 231.14 123.19 0)
+    (property "Reference" "#PWR039" (at 231.14 123.19 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3V3" (at 238.76 123.19 90)
@@ -849,9 +849,6 @@
     (pin "1" (uuid 6984ebbb-d4f5-4d72-b34a-3e9e4ad4e36a))
     (instances
       (project "sumec"
-        (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385"
-          (reference "#PWR?") (unit 1)
-        )
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/2febd48c-c6ec-477b-ac64-6fa98a41fff0"
           (reference "#PWR039") (unit 1)
         )
@@ -967,7 +964,7 @@
   (symbol (lib_id "power:GND") (at 166.37 82.55 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid c7ae5a68-6588-4624-95b5-453521fca85e)
-    (property "Reference" "#PWR?" (at 172.72 82.55 0)
+    (property "Reference" "#PWR045" (at 172.72 82.55 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 166.37 85.09 90)
@@ -982,9 +979,6 @@
     (pin "1" (uuid 51c99477-5575-4771-be55-a3bd98e59870))
     (instances
       (project "sumec"
-        (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385"
-          (reference "#PWR?") (unit 1)
-        )
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/2febd48c-c6ec-477b-ac64-6fa98a41fff0"
           (reference "#PWR045") (unit 1)
         )
@@ -995,7 +989,7 @@
   (symbol (lib_id "power:GND") (at 143.51 139.7 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid c9c0a759-baba-4f15-a429-8dbced27d0f2)
-    (property "Reference" "#PWR?" (at 143.51 146.05 0)
+    (property "Reference" "#PWR035" (at 143.51 146.05 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 143.51 144.78 0)
@@ -1010,9 +1004,6 @@
     (pin "1" (uuid 2beadbb3-035c-4265-b5d3-748b58dcbe85))
     (instances
       (project "sumec"
-        (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385"
-          (reference "#PWR?") (unit 1)
-        )
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/2febd48c-c6ec-477b-ac64-6fa98a41fff0"
           (reference "#PWR035") (unit 1)
         )
@@ -1023,7 +1014,7 @@
   (symbol (lib_id "power:GND") (at 213.36 139.7 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid cc3df8c3-943d-4968-9e8c-49531bf00555)
-    (property "Reference" "#PWR?" (at 213.36 146.05 0)
+    (property "Reference" "#PWR038" (at 213.36 146.05 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 213.36 144.78 0)
@@ -1038,9 +1029,6 @@
     (pin "1" (uuid 26204f2e-3b15-41fb-8d83-5d9a0c648982))
     (instances
       (project "sumec"
-        (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385"
-          (reference "#PWR?") (unit 1)
-        )
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/2febd48c-c6ec-477b-ac64-6fa98a41fff0"
           (reference "#PWR038") (unit 1)
         )
