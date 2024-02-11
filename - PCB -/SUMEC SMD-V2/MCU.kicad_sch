@@ -3734,7 +3734,7 @@
   )
 
   (text "0.1-µF bypass capacitor to ground, as well as\nsufficient Bulk Capacitance rated for VM"
-    (at 66.04 317.5 0)
+    (at 77.47 363.22 0)
     (effects (font (face "Bahnschrift") (size 1.27 1.27)) (justify left bottom))
     (uuid 05ada35d-f07e-4164-9e3f-bad83b334545)
   )
@@ -3752,7 +3752,7 @@
     (uuid 2603301b-00e1-4e97-8f5e-6a381fa5cc41)
   )
   (text "Sleep mode input. Logic high to enable device. \nLogic low to enter low-power sleep mode."
-    (at 66.04 312.42 0)
+    (at 77.47 358.14 0)
     (effects (font (face "Bahnschrift") (size 1.27 1.27)) (justify left bottom))
     (uuid 32423dac-dafd-4be0-93e0-30f5d2cc17bf)
   )
@@ -3769,7 +3769,7 @@
     (effects (font (face "Bahnschrift") (size 1.27 1.27)) (justify left bottom))
     (uuid 4506bcc8-db02-4207-aecf-af0eed1ab60a)
   )
-  (text "Overcurrent protection - Current regulation" (at 66.04 322.58 0)
+  (text "Overcurrent protection - Current regulation" (at 77.47 368.3 0)
     (effects (font (face "Bahnschrift") (size 1.27 1.27)) (justify left bottom))
     (uuid 454110cc-b40c-4204-b93d-62e62431d83e)
   )
@@ -3778,7 +3778,7 @@
     (uuid 4f560b95-e2b0-468a-b05f-7be02851873d)
   )
   (text "Analog current output propotaional to load current."
-    (at 66.04 320.04 0)
+    (at 77.47 365.76 0)
     (effects (font (face "Bahnschrift") (size 1.27 1.27)) (justify left bottom))
     (uuid 5ca43475-43a3-4e11-8e49-1f17bfe11254)
   )
@@ -3795,7 +3795,7 @@
     (effects (font (face "Bahnschrift") (size 1.27 1.27)) (justify left bottom))
     (uuid 6a08e09d-c914-4e81-aa73-a9b319df40ab)
   )
-  (text "H-bridge control input mode." (at 66.04 307.34 0)
+  (text "H-bridge control input mode." (at 77.47 353.06 0)
     (effects (font (face "Bahnschrift") (size 1.27 1.27)) (justify left bottom))
     (uuid 6b4bb0e8-ad9a-43e0-bbc6-ef14a129f189)
   )
@@ -3882,7 +3882,7 @@
     (uuid ff3cbe83-c7dd-4321-88f7-7ffdf5ea6ffb)
   )
   (text "(nFault)Fault indicator output. Pulled low during a fault condition. \nConnect an external pullup resistor\nfor open-drain operation."
-    (at 66.04 302.26 0)
+    (at 77.47 347.98 0)
     (effects (font (face "Bahnschrift") (size 1.27 1.27)) (justify left bottom))
     (uuid ff8e431d-c9d5-44aa-b085-1410c24c81f1)
   )
