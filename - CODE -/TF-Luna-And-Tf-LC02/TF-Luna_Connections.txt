@@ -1,0 +1,35 @@
+=============================================================================
+┌──────┐	PCBConnector:	Back = J6
+│''''''│	Sensor:		Left
+└123456┘
+-----------------------------------------------------------------------------
+1 - SesorSupply	| 5V
+2 - SDA		| ProcessorPin_18
+3 - SCL		| ProcessorPin_17
+4 - GND		| GND
+5 - XShut1	| XS1->0R->GND; (XS2->0R->ProcessorPin_40)
+6 - [empty]	| [empty]
+
+=============================================================================
+┌──────┐	PCBConnector:	Mid = J7
+│''''''│	Sensor:		Mid
+└123456┘
+-----------------------------------------------------------------------------
+1 - SesorSupply	| 5V
+2 - SDA		| ProcessorPin_18
+3 - SCL		| ProcessorPin_17
+4 - GND		| GND
+5 - XShut2	| XS2->0R->GND; (XS2->0R->ProcessorPin_41)
+6 - [empty]	| [empty]
+
+=============================================================================
+┌──────┐	PCBConnector:	Front = J9
+│''''''│	Sensor:		Right
+└123456┘
+-----------------------------------------------------------------------------
+1 - SesorSupply	| 5V
+2 - SDA		| ProcessorPin_18
+3 - SCL		| ProcessorPin_17
+4 - GND		| GND
+5 - XShut3	| XS3->0R->GND; (XS3->ProcessorPin_42)
+6 - [empty]	| [empty]

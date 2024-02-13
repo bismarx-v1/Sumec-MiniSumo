@@ -1,13 +1,11 @@
 #include <ArduinoJson.h>
 
 
-JsonDocument doc;
-JsonDocument doc2;
 
 void setup() {
 	Serial.begin(115200);
 	delay(2000);
-	String SerialJson;
+	/*String SerialJson;
 
 	doc["sensor"] = "gps";
 	doc["time"] = round(random(10));
@@ -24,6 +22,20 @@ void setup() {
 	Serail.println("sensor2 = " + String(sensor2));
 	Serail.println("time2 = " + String(time2));
 	Serail.println("latitude2 = " + String(latitude2));
-	Serail.println("longitude2 = " + String(longitude2));
+	Serail.println("longitude2 = " + String(longitude2));*/
+	
+	StaticJsonDocument<400> doc_tx;
+	
+	String TestVal1 = "";
+
+	TestVal1 = doc_tx["Test1"] = 64;
+	Serial.println(TestVal1);
+	TestVal1 = doc_tx["Test2"] = "Test2";
+	Serial.println(TestVal1);
+	TestVal1 = doc_tx;
+	Serial.println(TestVal1);
+	
+	
+	
 
 }

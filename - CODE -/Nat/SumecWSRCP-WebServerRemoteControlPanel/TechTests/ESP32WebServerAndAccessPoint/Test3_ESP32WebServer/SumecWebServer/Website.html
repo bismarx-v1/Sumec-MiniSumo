@@ -18,7 +18,7 @@
 		<div style="margin-left:10%;">
 			<table style="width:80%;  border:2px solid;">
 				<tr>
-					<th style="padding-left:0px; width:60%;">
+					<th style="padding-left:0px; width:50%;">
 						<select name="Mode" id="Element_Select_mode" style="width:100%;">
 							<option value="0">Stop</option>
 							<option value="1">Mode1</option>
@@ -27,7 +27,7 @@
 						</select>
 					</th>
 					<th>
-						<span id="Element_Mode">[No Scripts]</span>
+						<span id="Element_Mode" style="white-space: nowrap">[No Scripts]</span>
 					</th>
 					<th style="padding-left:10px; padding-right:10px;">
 						<input type="button" id="Element_Button_Run" value="Run" style="width:100%;">
@@ -162,24 +162,24 @@
 		}
 		
 		function processCommand(event) {
-			var RecievedObj = JSON.parse(event.data);
-			console.log(RecievedObj);
-			document.getElementById('Element_Mode').innerHTML = ((RecievedObj.Mode)?"Stopped":((RecievedObj.Mode)?"Mode1":((RecievedObj.Mode)?"Mode2":((RecievedObj.Mode)?"Mode3":"SomethingWentWrong>~<"))));
+			var obj = JSON.parse(event.data);
+			console.log(obj);
+			document.getElementById('Element_Mode').innerHTML = ((obj.Mode)?"Stopped":((obj.Mode)?"Mode1":((obj.Mode)?"Mode2":((obj.Mode)?"Mode3":"SomethingWentWrong>~<"))));
 			
 			
-			document.getElementById('Element_TfL_Left').innerHTML = (RecievedObj.TfL_Left);
-			document.getElementById('Element_TfL_Mid').innerHTML = (RecievedObj.TfL_Mid);
-			document.getElementById('Element_TfL_Right').innerHTML = (RecievedObj.TfL_Right);
+			document.getElementById('Element_TfL_Left').innerHTML = (obj.TfL_Left);
+			document.getElementById('Element_TfL_Mid').innerHTML = (obj.TfL_Mid);
+			document.getElementById('Element_TfL_Right').innerHTML = (obj.TfL_Right);
 			
 			
-			document.getElementById('Element_Sharp_Left').innerHTML = ((RecievedObj.Sharp_Left)?"":"Clear");
-			document.getElementById('Element_Sharp_Right').innerHTML = ((RecievedObj.Sharp_Right)?"":"Clear");
+			document.getElementById('Element_Sharp_Left').innerHTML = ((obj.Sharp_Left)?"":"Clear");
+			document.getElementById('Element_Sharp_Right').innerHTML = ((obj.Sharp_Right)?"":"Clear");
 			
-			document.getElementById('Element_QRE_Left').innerHTML = ((RecievedObj.QRE_Left)?"Bright(Edge)":"Dim(Floor/Empty)");
-			document.getElementById('Element_QRE_Rear').innerHTML = ((RecievedObj.QRE_Rear)?"Bright(Edge)":"Dim(Floor/Empty)");
-			document.getElementById('Element_QRE_Right').innerHTML = ((RecievedObj.QRE_Right)?"Bright(Edge)":"Dim(Floor/Empty)");
+			document.getElementById('Element_QRE_Left').innerHTML = ((obj.QRE_Left)?"Bright(Edge)":"Dim(Floor/Empty)");
+			document.getElementById('Element_QRE_Rear').innerHTML = ((obj.QRE_Rear)?"Bright(Edge)":"Dim(Floor/Empty)");
+			document.getElementById('Element_QRE_Right').innerHTML = ((obj.QRE_Right)?"Bright(Edge)":"Dim(Floor/Empty)");
 			
-			document.getElementById('Element_IR').innerHTML = (num.toString(RecievedObj.IR));
+			document.getElementById('Element_IR').innerHTML = (parseInt(obj.IR).toString(16));
 		}
 		
 		window.onload = function(event) {
