@@ -663,12 +663,20 @@
   )
 
   (text "Texas Instruments \n\n2 LDO Voltage Regulators\n5A - 3.3V and 5V.\n\nLM1084IS-5.0/NOPB 5V\nLM1084IS-3.3/NOPB 3.3V\n\nUsing TO-263-3 footprint"
-    (at 69.85 135.89 0)
+    (at 68.58 134.62 0)
     (effects (font (face "Bahnschrift") (size 1.27 1.27)) (justify left bottom))
     (uuid 09e79b27-6bd9-4672-b4ee-3838de77c538)
   )
+  (text "TESTED - WORKS, INSPECTED" (at 68.58 95.25 0)
+    (effects (font (size 2 2) (thickness 0.4) bold (color 0 194 0 1)) (justify left bottom))
+    (uuid 2d2d1ba7-b12a-4be5-b20d-10df591a49f2)
+  )
+  (text "TESTED - WORKS, INSPECTED" (at 68.58 146.05 0)
+    (effects (font (size 2 2) (thickness 0.4) bold (color 0 194 0 1)) (justify left bottom))
+    (uuid 7dd14abf-d889-4e26-b899-b0720300e2d6)
+  )
   (text "XT-30 Connector (male)\n\nConnector with 2mm bullets contacts for currents up to 30 A.\nGold-plated contacts\nNon-interchangeable polarity.\nconnected with XT-30 female type connector that is wired to the battery\n\nBattery specs:\n- 2S LiPo\n- 3.7V nominal voltage on one cell\n- 8,4 in total (4,2 fully charged)\n- 400mAh \n\n1 Bought and 1 Home-made (Terrorist-like)"
-    (at 67.31 88.9 0)
+    (at 68.58 90.17 0)
     (effects (font (face "Bahnschrift") (size 1.27 1.27) italic) (justify left bottom))
     (uuid 95fe2af8-7d2e-40c3-a640-2d21523aa3ae)
   )
