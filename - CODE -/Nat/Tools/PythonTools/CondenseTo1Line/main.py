@@ -21,3 +21,4 @@ while(1):
 	
 	pyperclip.copy(str(TheFileAsString))
 	pyperclip.paste()
+	print("SUCCESS, 1line in clipboard")
