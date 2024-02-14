@@ -51,7 +51,7 @@ void SWSRCPWiFiConnect() {	//Set up an AP WiFi
 
 void SWSRCPSetup() {	//Start the webserver
 	server.on("/", []() {
-		server.send(200, "text\html", webpage);
+		server.send(200, "text/html", webpage);
 	});
 	
 	server.begin();

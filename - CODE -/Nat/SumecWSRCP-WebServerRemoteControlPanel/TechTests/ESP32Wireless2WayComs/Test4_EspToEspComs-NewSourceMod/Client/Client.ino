@@ -13,18 +13,15 @@ typedef struct struct_message {
 // Create a struct_message called myData
 struct_message myData;
 
+
+
 void setup() {
 	// Initialize Serial Monitor
 	Serial.begin(115200);
-	delay(2000);
-	Serial.print("Local Mac: ");
-	Serial.println(WiFi.macAddress());
 
 	// Set device as a Wi-Fi Station
 	WiFi.mode(WIFI_STA);
 
-
-	
 
 	// Init ESP-NOW
 	if (esp_now_init() != ESP_OK) {
@@ -48,12 +45,11 @@ void OnDataRecv(const uint8_t * mac, const uint8_t *incomingData, int len) {
 	memcpy(&myData, incomingData, sizeof(myData));
 
 	// Use this for testing in Serial Monitor if you're not seeing anything on the LCD display 
-	Serial.print("Temperature F: ");
+	Serial.print("Line1: ");
 	Serial.println(myData.a);
-	Serial.print("Humidity: ");
+	Serial.print("Line2: ");
 	Serial.println(myData.b);
-	Serial.print("Pressure: ");
+	Serial.print("Line3: ");
 	Serial.println(myData.c);
 	Serial.println();
-
 }
