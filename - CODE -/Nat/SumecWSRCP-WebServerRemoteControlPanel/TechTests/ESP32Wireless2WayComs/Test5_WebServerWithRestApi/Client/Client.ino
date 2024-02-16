@@ -9,8 +9,8 @@
 #include <WiFi.h>
 #include <HTTPClient.h>
 
-const char WIFI_SSID[] = "k7.1";
-const char WIFI_PASSWORD[] = "siMAci11";
+const char WIFI_SSID[] = "[]";
+const char WIFI_PASSWORD[] = "[]";
 
 String HOST_NAME	 = "http://192.168.0.109";
 String PATH_NAME	 = "/data";

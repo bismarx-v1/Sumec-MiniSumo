@@ -4,8 +4,8 @@
 #include <ArduinoJson.h>
 //#include <FreeRTOS.h>
 
-const char *SSID = "k7.1";
-const char *PWD = "siMAci11";
+const char *SSID = "[]";
+const char *PWD = "[]";
 
 
 
