@@ -46,7 +46,8 @@ void loop() {
 	
 	DeserializationError error = deserializeJson(jsonDocument, SWSRCPRequest("get", "get", "", HOST_NAME));
 	if(error) {
-		Serial.println("deserializeJson error");
+		Serial.print("deserializeJson error: ");
+		Serial.println(error.c_str());
 	}
 	else {	//this will run if the output was deserialized
 		const char* VarSiteRunButon = jsonDocument["Button_Run"];
@@ -131,7 +132,8 @@ void loop() {
 	
 	DeserializationError error2 = deserializeJson(jsonDocument, SWSRCPRequest("post", "post", buffer, HOST_NAME));
 	if(error2) {
-		Serial.println("deserializeJson error2");
+		Serial.print("deserializeJson error2: ");
+		Serial.println(error.c_str());
 	} else {
 		String OutMode = jsonDocument["Mode"];
 		String OutTfL_Left = jsonDocument["TfL_Left"];
