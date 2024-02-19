@@ -700,7 +700,7 @@
   (symbol (lib_id "Device:C_Polarized") (at 128.27 129.54 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 155a7118-7d42-4ab2-92fa-2951a654b9b1)
-    (property "Reference" "C10" (at 120.65 132.08 0)
+    (property "Reference" "C16" (at 120.65 132.08 0)
       (effects (font (face "Bahnschrift") (size 1.27 1.27)) (justify left))
     )
     (property "Value" "10uF.stabl" (at 114.3 134.62 0)
@@ -712,12 +712,12 @@
     (property "Datasheet" "~" (at 128.27 129.54 0)
       (effects (font (face "Bahnschrift") (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 7b393ff7-50e3-4646-a10a-546a0b535797))
-    (pin "2" (uuid e5c7855b-8cbe-4dfe-a038-b3e192bfe80d))
+    (pin "1" (uuid 1133e673-e0d6-4ea1-9c33-fb064082efa1))
+    (pin "2" (uuid 0dccdd50-9df9-4105-8f09-badf9bf0719e))
     (instances
       (project "sumec"
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/2febd48c-c6ec-477b-ac64-6fa98a41fff0"
-          (reference "C10") (unit 1)
+          (reference "C16") (unit 1)
         )
       )
     )
@@ -726,7 +726,7 @@
   (symbol (lib_id "power:+5V") (at 165.1 123.19 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 3aae563f-7d17-4516-a06c-6d83e1f274d0)
-    (property "Reference" "#PWR036" (at 161.29 123.19 0)
+    (property "Reference" "#PWR044" (at 161.29 123.19 0)
       (effects (font (face "Bahnschrift") (size 1.27 1.27)) hide)
     )
     (property "Value" "+5V" (at 168.91 123.19 90)
@@ -738,11 +738,11 @@
     (property "Datasheet" "" (at 165.1 123.19 0)
       (effects (font (face "Bahnschrift") (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 3a7a3df6-3da8-471c-b5e2-56dc54b07c43))
+    (pin "1" (uuid f45720a2-485e-459c-a222-370e10fa7c22))
     (instances
       (project "sumec"
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/2febd48c-c6ec-477b-ac64-6fa98a41fff0"
-          (reference "#PWR036") (unit 1)
+          (reference "#PWR044") (unit 1)
         )
       )
     )
@@ -802,8 +802,8 @@
     (property "SNAPEDA_PN" "XT30PW-M" (at 152.4 80.01 0)
       (effects (font (face "Bahnschrift") (size 1.27 1.27)) (justify bottom) hide)
     )
-    (pin "N" (uuid 283d1713-67f7-4105-b606-a2dcbf52f2fd))
-    (pin "P" (uuid 6d7a8598-2e13-498a-8df1-ad2b870c46b8))
+    (pin "N" (uuid e6423993-1e5b-49e6-a737-710d6970e21e))
+    (pin "P" (uuid efa6f2c2-cb64-45f4-8a6b-acd4e406f5f1))
     (instances
       (project "sumec"
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/2febd48c-c6ec-477b-ac64-6fa98a41fff0"
@@ -816,7 +816,7 @@
   (symbol (lib_id "Device:C_Polarized") (at 229.87 129.54 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 666a06a5-83ca-486d-894b-199af9b22082)
-    (property "Reference" "C13" (at 233.68 132.08 0)
+    (property "Reference" "C19" (at 233.68 132.08 0)
       (effects (font (face "Bahnschrift") (size 1.27 1.27)) (justify left))
     )
     (property "Value" "10uF.stabl" (at 233.68 134.62 0)
@@ -828,12 +828,12 @@
     (property "Datasheet" "~" (at 229.87 129.54 0)
       (effects (font (face "Bahnschrift") (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 236dad32-8302-40cd-8278-d4d36bc7c808))
-    (pin "2" (uuid d45b23ce-5556-44df-85b6-c47b45bc1f39))
+    (pin "1" (uuid 41e399e3-6dc6-4edb-bf8a-8794252ce1c0))
+    (pin "2" (uuid 46f623c5-5b71-445c-aea3-45d19d34cb99))
     (instances
       (project "sumec"
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/2febd48c-c6ec-477b-ac64-6fa98a41fff0"
-          (reference "C13") (unit 1)
+          (reference "C19") (unit 1)
         )
       )
     )
@@ -842,7 +842,7 @@
   (symbol (lib_id "power:+3V3") (at 234.95 123.19 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 7835245d-0202-487e-9606-82aab6dd3b18)
-    (property "Reference" "#PWR039" (at 231.14 123.19 0)
+    (property "Reference" "#PWR048" (at 231.14 123.19 0)
       (effects (font (face "Bahnschrift") (size 1.27 1.27)) hide)
     )
     (property "Value" "+3V3" (at 238.76 123.19 90)
@@ -854,11 +854,11 @@
     (property "Datasheet" "" (at 234.95 123.19 0)
       (effects (font (face "Bahnschrift") (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 6984ebbb-d4f5-4d72-b34a-3e9e4ad4e36a))
+    (pin "1" (uuid be62d3be-0916-4ae5-b371-64fd96774c71))
     (instances
       (project "sumec"
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/2febd48c-c6ec-477b-ac64-6fa98a41fff0"
-          (reference "#PWR039") (unit 1)
+          (reference "#PWR048") (unit 1)
         )
       )
     )
@@ -867,7 +867,7 @@
   (symbol (lib_id "Device:C_Polarized") (at 160.02 129.54 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 7beb9d25-efd7-4ce9-ba86-d195ccda2a89)
-    (property "Reference" "C11" (at 163.83 132.08 0)
+    (property "Reference" "C17" (at 163.83 132.08 0)
       (effects (font (face "Bahnschrift") (size 1.27 1.27)) (justify left))
     )
     (property "Value" "10uF.stabl" (at 163.83 134.62 0)
@@ -879,12 +879,12 @@
     (property "Datasheet" "~" (at 160.02 129.54 0)
       (effects (font (face "Bahnschrift") (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid cc53aff1-4922-4f9b-a204-c2c4c7d81ea1))
-    (pin "2" (uuid acdf43b2-4e9d-42a8-bb86-c0cc46172c0c))
+    (pin "1" (uuid 3714bddd-8329-43d7-829f-317ecd92d1cb))
+    (pin "2" (uuid 35aa4057-7953-43df-be44-dc70e273c814))
     (instances
       (project "sumec"
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/2febd48c-c6ec-477b-ac64-6fa98a41fff0"
-          (reference "C11") (unit 1)
+          (reference "C17") (unit 1)
         )
       )
     )
@@ -893,7 +893,7 @@
   (symbol (lib_id "Regulator_Linear:LM1084-3.3") (at 213.36 123.19 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 8583cf2c-1c5e-43c4-a84f-539e589e9be3)
-    (property "Reference" "U1" (at 213.36 116.84 0)
+    (property "Reference" "U5" (at 213.36 116.84 0)
       (effects (font (face "Bahnschrift") (size 1.27 1.27)))
     )
     (property "Value" "LM1084-3.3" (at 213.36 119.38 0)
@@ -905,13 +905,13 @@
     (property "Datasheet" "http://www.ti.com/lit/ds/symlink/lm1084.pdf" (at 213.36 123.19 0)
       (effects (font (face "Bahnschrift") (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 16a77357-75c9-49f2-abed-2ef23f9ca940))
-    (pin "2" (uuid 9773fe47-d782-4552-8306-cad7c9dc9090))
-    (pin "3" (uuid 1a78e568-f573-4ed4-9492-1de78c1b9875))
+    (pin "1" (uuid 1c6f465c-2441-4b13-88f8-78bf6669c08f))
+    (pin "2" (uuid 27a8d4d1-b627-4d4e-84dc-ade7ac6548ce))
+    (pin "3" (uuid 509b37db-27c0-4130-8cbc-7e54f2273729))
     (instances
       (project "sumec"
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/2febd48c-c6ec-477b-ac64-6fa98a41fff0"
-          (reference "U1") (unit 1)
+          (reference "U5") (unit 1)
         )
       )
     )
@@ -920,7 +920,7 @@
   (symbol (lib_id "power:+12V") (at 123.19 123.19 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 8e084988-c079-4186-9acb-cd3155947d79)
-    (property "Reference" "#PWR034" (at 127 123.19 0)
+    (property "Reference" "#PWR042" (at 127 123.19 0)
       (effects (font (face "Bahnschrift") (size 1.27 1.27)) hide)
     )
     (property "Value" "+12V" (at 119.38 123.825 90)
@@ -932,11 +932,11 @@
     (property "Datasheet" "" (at 123.19 123.19 0)
       (effects (font (face "Bahnschrift") (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 9a9eec5a-8b7a-4243-b22c-81aeff401516))
+    (pin "1" (uuid b77f711d-f9c8-400a-a922-2af46bd640b8))
     (instances
       (project "sumec"
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/2febd48c-c6ec-477b-ac64-6fa98a41fff0"
-          (reference "#PWR034") (unit 1)
+          (reference "#PWR042") (unit 1)
         )
       )
     )
@@ -957,9 +957,9 @@
     (property "Datasheet" "http://www.ti.com/lit/ds/symlink/lm1084.pdf" (at 143.51 123.19 0)
       (effects (font (face "Bahnschrift") (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 44952259-5fc2-4ad0-ae82-1622e7028646))
-    (pin "2" (uuid 372553a0-19bb-4dec-bb15-d46dadeb97be))
-    (pin "3" (uuid 9eb317cb-e4af-4be2-b1d7-b4bc1d43c042))
+    (pin "1" (uuid e08dff05-4080-4060-836e-78cd55b61c96))
+    (pin "2" (uuid 3b81d119-770c-4fe7-a11c-294ac54ddad9))
+    (pin "3" (uuid b7935cf0-7527-401d-ae12-00876fe70d67))
     (instances
       (project "sumec"
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/2febd48c-c6ec-477b-ac64-6fa98a41fff0"
@@ -984,7 +984,7 @@
     (property "Datasheet" "" (at 166.37 82.55 0)
       (effects (font (face "Bahnschrift") (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 51c99477-5575-4771-be55-a3bd98e59870))
+    (pin "1" (uuid 8d69a05b-30b7-476e-9605-a0123bf52a4b))
     (instances
       (project "sumec"
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/2febd48c-c6ec-477b-ac64-6fa98a41fff0"
@@ -997,7 +997,7 @@
   (symbol (lib_id "power:GND") (at 143.51 139.7 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid c9c0a759-baba-4f15-a429-8dbced27d0f2)
-    (property "Reference" "#PWR035" (at 143.51 146.05 0)
+    (property "Reference" "#PWR043" (at 143.51 146.05 0)
       (effects (font (face "Bahnschrift") (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 143.51 144.78 0)
@@ -1009,11 +1009,11 @@
     (property "Datasheet" "" (at 143.51 139.7 0)
       (effects (font (face "Bahnschrift") (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 2beadbb3-035c-4265-b5d3-748b58dcbe85))
+    (pin "1" (uuid c303714c-9614-4a16-9473-cf87abe287fd))
     (instances
       (project "sumec"
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/2febd48c-c6ec-477b-ac64-6fa98a41fff0"
-          (reference "#PWR035") (unit 1)
+          (reference "#PWR043") (unit 1)
         )
       )
     )
@@ -1022,7 +1022,7 @@
   (symbol (lib_id "power:GND") (at 213.36 139.7 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid cc3df8c3-943d-4968-9e8c-49531bf00555)
-    (property "Reference" "#PWR038" (at 213.36 146.05 0)
+    (property "Reference" "#PWR047" (at 213.36 146.05 0)
       (effects (font (face "Bahnschrift") (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 213.36 144.78 0)
@@ -1034,11 +1034,11 @@
     (property "Datasheet" "" (at 213.36 139.7 0)
       (effects (font (face "Bahnschrift") (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 26204f2e-3b15-41fb-8d83-5d9a0c648982))
+    (pin "1" (uuid a9084658-b909-4774-80ef-75b343e37611))
     (instances
       (project "sumec"
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/2febd48c-c6ec-477b-ac64-6fa98a41fff0"
-          (reference "#PWR038") (unit 1)
+          (reference "#PWR047") (unit 1)
         )
       )
     )
@@ -1047,7 +1047,7 @@
   (symbol (lib_id "Device:C_Polarized") (at 198.12 129.54 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid d2fb4064-86e7-4966-b3ff-0ba699c19056)
-    (property "Reference" "C12" (at 190.5 132.08 0)
+    (property "Reference" "C18" (at 190.5 132.08 0)
       (effects (font (face "Bahnschrift") (size 1.27 1.27)) (justify left))
     )
     (property "Value" "10uF.stabl" (at 184.15 134.62 0)
@@ -1059,12 +1059,12 @@
     (property "Datasheet" "~" (at 198.12 129.54 0)
       (effects (font (face "Bahnschrift") (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid eac00004-1cbb-49a7-9d7c-6f3585a0384d))
-    (pin "2" (uuid 56204d61-0fec-4639-89d5-441d1bac11d1))
+    (pin "1" (uuid a2c8f212-f031-4793-bb9d-563870892e29))
+    (pin "2" (uuid 1e0a3200-135b-4d8b-b7d4-e688a13d994d))
     (instances
       (project "sumec"
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/2febd48c-c6ec-477b-ac64-6fa98a41fff0"
-          (reference "C12") (unit 1)
+          (reference "C18") (unit 1)
         )
       )
     )
@@ -1073,7 +1073,7 @@
   (symbol (lib_id "power:+5V") (at 193.04 123.19 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid eb989cae-4722-4059-9ac5-05c9b109fee4)
-    (property "Reference" "#PWR037" (at 196.85 123.19 0)
+    (property "Reference" "#PWR046" (at 196.85 123.19 0)
       (effects (font (face "Bahnschrift") (size 1.27 1.27)) hide)
     )
     (property "Value" "+5V" (at 185.42 123.19 90)
@@ -1085,11 +1085,11 @@
     (property "Datasheet" "" (at 193.04 123.19 0)
       (effects (font (face "Bahnschrift") (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 663f6e48-0fd5-4c71-a036-040792c7026b))
+    (pin "1" (uuid befe6903-e70e-4328-9f71-0c116d18b50c))
     (instances
       (project "sumec"
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/2febd48c-c6ec-477b-ac64-6fa98a41fff0"
-          (reference "#PWR037") (unit 1)
+          (reference "#PWR046") (unit 1)
         )
       )
     )

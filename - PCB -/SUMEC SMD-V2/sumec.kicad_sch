@@ -1482,7 +1482,7 @@
   (symbol (lib_id "Device:R") (at 151.13 34.29 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 772cde4a-bb16-4607-8d03-4699962ad2d9)
-    (property "Reference" "R3" (at 151.13 39.37 90)
+    (property "Reference" "R20" (at 151.13 39.37 90)
       (effects (font (face "Bahnschrift") (size 1.27 1.27)) hide)
     )
     (property "Value" "R" (at 151.13 36.83 90)
@@ -1494,12 +1494,12 @@
     (property "Datasheet" "~" (at 151.13 34.29 0)
       (effects (font (face "Bahnschrift") (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 3b954a23-7a90-42ec-b2ce-2c0a16133cf8))
-    (pin "2" (uuid 56841fcf-3989-43b1-9609-41fa6921af50))
+    (pin "1" (uuid c18051ed-9975-4c6f-abf0-5bfde240c665))
+    (pin "2" (uuid d319c7c3-4bc1-418c-92da-d7e9e5050999))
     (instances
       (project "sumec"
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385"
-          (reference "R3") (unit 1)
+          (reference "R20") (unit 1)
         )
       )
     )
@@ -1508,7 +1508,7 @@
   (symbol (lib_id "Device:R") (at 151.13 38.1 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid ae56fb21-c537-462e-984f-81c64c2863f8)
-    (property "Reference" "R8" (at 151.13 43.18 90)
+    (property "Reference" "R21" (at 151.13 43.18 90)
       (effects (font (face "Bahnschrift") (size 1.27 1.27)) hide)
     )
     (property "Value" "R" (at 151.13 40.64 90)
@@ -1520,12 +1520,12 @@
     (property "Datasheet" "~" (at 151.13 38.1 0)
       (effects (font (face "Bahnschrift") (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid f983b7f6-a010-457c-9e27-1cdac7065e2c))
-    (pin "2" (uuid c5869aa8-d5d2-4fa0-9639-eee5875a2f5f))
+    (pin "1" (uuid 2bdbd9e2-4e1f-4162-9551-f381c6770ed8))
+    (pin "2" (uuid 4eaee8bb-4ffc-4421-8bf1-b23aad87720a))
     (instances
       (project "sumec"
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385"
-          (reference "R8") (unit 1)
+          (reference "R21") (unit 1)
         )
       )
     )

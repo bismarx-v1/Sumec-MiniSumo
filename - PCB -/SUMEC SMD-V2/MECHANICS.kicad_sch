@@ -719,7 +719,7 @@
   (symbol (lib_id "power:GND") (at 135.89 73.66 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 0c7749cc-bf8d-478d-b375-2c1619be0da5)
-    (property "Reference" "#PWR026" (at 142.24 73.66 0)
+    (property "Reference" "#PWR02" (at 142.24 73.66 0)
       (effects (font (face "Bahnschrift") (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 135.89 76.2 90)
@@ -731,11 +731,11 @@
     (property "Datasheet" "" (at 135.89 73.66 0)
       (effects (font (face "Bahnschrift") (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 7d4721cf-2b38-4536-a05b-25b071cbf30b))
+    (pin "1" (uuid 64251aeb-adb3-4936-9dad-cd8bc189c7e2))
     (instances
       (project "sumec"
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/05a35bad-c108-46ad-8f95-76319a60a14f"
-          (reference "#PWR026") (unit 1)
+          (reference "#PWR02") (unit 1)
         )
       )
     )
@@ -756,8 +756,8 @@
     (property "Datasheet" "~" (at 92.71 125.73 0)
       (effects (font (face "Bahnschrift") (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid dd9f982e-1d21-41b2-b201-cdadcca59b8b))
-    (pin "2" (uuid 1aa57861-6bbf-4959-b1d4-7891667d2ccf))
+    (pin "1" (uuid 42612b36-038d-4bb8-9a55-dc6f81039ee7))
+    (pin "2" (uuid b01b3aab-c264-428a-8d4a-5bed3f23b331))
     (instances
       (project "sumec"
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/05a35bad-c108-46ad-8f95-76319a60a14f"
@@ -770,7 +770,7 @@
   (symbol (lib_id "power:+12V") (at 193.04 64.77 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 22b066ab-f017-473f-bb6d-123f46a5f686)
-    (property "Reference" "#PWR06" (at 189.23 64.77 0)
+    (property "Reference" "#PWR03" (at 189.23 64.77 0)
       (effects (font (face "Bahnschrift") (size 1.27 1.27)) hide)
     )
     (property "Value" "+12V" (at 196.85 65.405 90)
@@ -782,11 +782,11 @@
     (property "Datasheet" "" (at 193.04 64.77 0)
       (effects (font (face "Bahnschrift") (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid f46980ef-494d-4d83-9258-043311e82071))
+    (pin "1" (uuid 8d464f21-b0f3-41e8-8735-e3330805e468))
     (instances
       (project "sumec"
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/05a35bad-c108-46ad-8f95-76319a60a14f"
-          (reference "#PWR06") (unit 1)
+          (reference "#PWR03") (unit 1)
         )
       )
     )
@@ -807,10 +807,10 @@
     (property "Datasheet" "~" (at 168.91 116.84 0)
       (effects (font (face "Bahnschrift") (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 4374df91-ff96-4e5d-8993-d2154ed3e218))
-    (pin "2" (uuid 77ba131c-483d-4356-bb0f-c1c367f1a308))
-    (pin "3" (uuid d3fb2e3a-a719-407a-8b83-f05b9acc9826))
-    (pin "4" (uuid d7a44025-7a6c-4baf-bd48-58f7746bde14))
+    (pin "1" (uuid 424639cd-ae52-4e91-aa84-0d0851aa975a))
+    (pin "2" (uuid cfaab89c-53fe-4fed-97cf-31693646e38d))
+    (pin "3" (uuid 442783ef-c883-4b90-80af-3e7a20a94d50))
+    (pin "4" (uuid 80e75222-f70c-4cc6-b4f5-0600ed27c915))
     (instances
       (project "sumec"
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/05a35bad-c108-46ad-8f95-76319a60a14f"
@@ -835,7 +835,7 @@
     (property "Datasheet" "" (at 83.82 130.81 0)
       (effects (font (face "Bahnschrift") (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid b91dbd36-f38f-423a-b30d-28c7d7d7f65d))
+    (pin "1" (uuid d91699ca-7bcb-46c4-ac6a-9ced5e0d6cd0))
     (instances
       (project "sumec"
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/05a35bad-c108-46ad-8f95-76319a60a14f"
@@ -848,7 +848,7 @@
   (symbol (lib_id "Switch:SW_DPDT_x2") (at 184.15 67.31 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 60c328d8-c3b2-4cdd-9061-17337d6ca1b6)
-    (property "Reference" "SW4" (at 184.15 62.23 0)
+    (property "Reference" "SW2" (at 184.15 62.23 0)
       (effects (font (face "Bahnschrift") (size 1.27 1.27)))
     )
     (property "Value" "SW_DPDT_x2" (at 184.15 62.23 0)
@@ -860,16 +860,16 @@
     (property "Datasheet" "~" (at 184.15 67.31 0)
       (effects (font (face "Bahnschrift") (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 9ae4c536-cfec-4c1c-b36a-5a652932085b))
-    (pin "2" (uuid 0b7460e4-99af-42fe-abea-e86b1427488d))
-    (pin "3" (uuid 0b25d822-23bc-4fc7-af22-f685d8a4fbf5))
-    (pin "4" (uuid da50516d-617c-4bad-8f98-9e38f21e45ec))
-    (pin "5" (uuid 7a738ba8-20a8-4f27-a131-73035ef36e6b))
-    (pin "6" (uuid 2bdb3de3-d6f5-4540-83ed-65c91e197e40))
+    (pin "1" (uuid 6af70c9b-4dbc-40c4-ab20-60b5449011f9))
+    (pin "2" (uuid ab841b42-d2de-4982-8aaa-39c9de4ec75f))
+    (pin "3" (uuid 53967c50-d7ff-48aa-82d0-0921beced9d4))
+    (pin "4" (uuid 789e8dbb-ea51-4efe-89ec-223b2a0a5a63))
+    (pin "5" (uuid 258ef418-8fea-468b-918a-9742eb084784))
+    (pin "6" (uuid f688c6d3-fdfd-4971-b26e-8ec2ce2edb0a))
     (instances
       (project "sumec"
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/05a35bad-c108-46ad-8f95-76319a60a14f"
-          (reference "SW4") (unit 1)
+          (reference "SW2") (unit 1)
         )
       )
     )
@@ -890,7 +890,7 @@
     (property "Datasheet" "~" (at 168.91 128.27 0)
       (effects (font (face "Bahnschrift") (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 8eba053e-d395-4141-8106-b5a4b4d9bbee))
+    (pin "1" (uuid 17193898-38df-4995-8b68-3f3e5069919d))
     (instances
       (project "sumec"
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/05a35bad-c108-46ad-8f95-76319a60a14f"
@@ -915,7 +915,7 @@
     (property "Datasheet" "~" (at 121.92 58.42 0)
       (effects (font (face "Bahnschrift") (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid e1ff62f2-4396-4372-9aec-70410b6c4c33))
+    (pin "1" (uuid b218a212-6b09-4a7f-89ee-ccfd518c235d))
     (instances
       (project "sumec"
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/05a35bad-c108-46ad-8f95-76319a60a14f"
@@ -940,7 +940,7 @@
     (property "Datasheet" "~" (at 121.92 66.04 0)
       (effects (font (face "Bahnschrift") (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid e2beffb0-1809-463d-9b37-fde67d5954d9))
+    (pin "1" (uuid 5d707a5f-0935-4b14-9d5b-e492a7ba4c09))
     (instances
       (project "sumec"
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/05a35bad-c108-46ad-8f95-76319a60a14f"
@@ -965,7 +965,7 @@
     (property "Datasheet" "~" (at 121.92 73.66 0)
       (effects (font (face "Bahnschrift") (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid a71649f8-2725-4e94-b913-7d2b3c1257b9))
+    (pin "1" (uuid 56299139-990c-4a25-8e56-349db8e4276a))
     (instances
       (project "sumec"
         (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385/05a35bad-c108-46ad-8f95-76319a60a14f"
