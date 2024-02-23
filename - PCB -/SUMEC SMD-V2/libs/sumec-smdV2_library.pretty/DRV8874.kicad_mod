@@ -52,7 +52,7 @@
   (pad "15" smd rect (at 2.938 -1.625 90) (size 0.45 1.475) (layers "F.Cu" "F.Paste" "F.Mask") (tstamp 85653a7a-533a-4fb8-b538-a01ede8bf118))
   (pad "16" smd rect (at 2.938 -2.275 90) (size 0.45 1.475) (layers "F.Cu" "F.Paste" "F.Mask") (tstamp e52fa644-b593-437e-a9ee-faddd4e9fb51))
   (pad "17" smd rect (at 0 0) (size 2.46 3.55) (layers "F.Cu" "F.Paste" "F.Mask") (tstamp ec264827-ccca-4fc9-87e6-8240cec62416))
-  (model "${KIPRJMOD}/libs/3D/DRV8874.stp"
+  (model "C:/Users/MenMe/GitHub/RoboCop/- PCB -/SUMEC SMD-V2/libs/3D/DRV8874.stp"
     (offset (xyz 0 0 0))
     (scale (xyz 1 1 1))
     (rotate (xyz 0 0 0))

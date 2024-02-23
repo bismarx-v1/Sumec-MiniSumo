@@ -85,7 +85,7 @@
     (solder_mask_margin 0.102) (tstamp 8845fc23-1265-4e80-9285-131d9d65e1e3))
   (pad "S2" thru_hole circle (at -5.5 0) (size 1.508 1.508) (drill 1) (layers "*.Cu" "*.Mask")
     (solder_mask_margin 0.102) (tstamp dca31047-f2fa-4a81-a262-6e5e55602273))
-  (model "${KIPRJMOD}/libs/3D/XT30PW-M.step"
+  (model "C:/Users/MenMe/GitHub/RoboCop/- PCB -/SUMEC SMD-V2/libs/3D/XT30PW-M.step"
     (offset (xyz 0 0 0))
     (scale (xyz 1 1 1))
     (rotate (xyz -90 0 0))

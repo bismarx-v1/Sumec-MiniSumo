@@ -175,8 +175,8 @@
     (solder_mask_margin 0.102) (tstamp ea31a3e2-8570-48f9-9bf2-d88ce0ecaf8f))
   (pad "S4" thru_hole oval (at 4.325 0) (size 0.9 1.7) (drill oval 0.6 1.4) (layers "*.Cu" "*.Mask")
     (solder_mask_margin 0.102) (tstamp 17c27bf9-77d3-4116-bc7f-2e469b6e6a15))
-  (model "${KIPRJMOD}/libs/3D/TYPE-C-31-M-12.step"
-    (offset (xyz 0 -0.2 0))
+  (model "C:/Users/MenMe/GitHub/RoboCop/- PCB -/SUMEC SMD-V2/libs/3D/TYPE-C-31-M-12.step"
+    (offset (xyz 0 0 0))
     (scale (xyz 1 1 1))
     (rotate (xyz -90 0 0))
   )

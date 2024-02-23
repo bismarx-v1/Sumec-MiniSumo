@@ -34,9 +34,9 @@
   (pad "1" thru_hole rect (at 0 -4.7) (size 3.4 2.2) (drill oval 2.6 1.2) (layers "*.Cu" "*.Mask") (tstamp 9d3b9236-62f6-4d31-8a03-ae50d18437ad))
   (pad "2" thru_hole roundrect (at 0 0.1) (size 3.4 2.2) (drill oval 2.6 1.2) (layers "*.Cu" "*.Mask") (roundrect_rratio 0.25) (tstamp 8a3d3eb6-754d-43c9-b120-e25d8acaa3a2))
   (pad "3" thru_hole roundrect (at 0 4.9) (size 3.4 2.2) (drill oval 2.6 1.2) (layers "*.Cu" "*.Mask") (roundrect_rratio 0.25) (tstamp a016c942-256b-4df4-9cc8-1c62f1d321b5))
-  (model "${KIPRJMOD}/libs/3D/SPDT_Switch_piano.stp"
-    (offset (xyz 0 -0.1 0))
+  (model "C:/Users/MenMe/GitHub/RoboCop/- PCB -/SUMEC SMD-V2/libs/3D/SPDT_Switch_piano.stp"
+    (offset (xyz 0 0 0))
     (scale (xyz 1 1 1))
-    (rotate (xyz 0 0 90))
+    (rotate (xyz 0 0 -90))
   )
 )
