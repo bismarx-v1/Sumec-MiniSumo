@@ -17,7 +17,7 @@ void IRstart() {
 
       //vypsání všsch hodnot z IR, nejdřívě BIN potom DEC  
 
-      /*Serial.println("");
+      Serial.println("");
       Serial.print("recieved signal: ");
       Serial.print(results.value, BIN);
       Serial.print("    DEC: ");
@@ -39,7 +39,7 @@ void IRstart() {
       Serial.print("    DEC: ");
       Serial.println(comand);
       Serial.println("");
-      Serial.println("==========");*/
+      Serial.println("==========");
 
 
       //fáze program
@@ -48,7 +48,6 @@ void IRstart() {
         Serial.print("DohaioID: ");
         Serial.println(DohaioID);
         Serial.println(" ");
-        start_control = 1;
       }
 
       //fáze startováni

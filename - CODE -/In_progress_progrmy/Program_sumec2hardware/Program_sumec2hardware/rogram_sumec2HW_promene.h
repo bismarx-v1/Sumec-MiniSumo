@@ -6,8 +6,8 @@
     #define ADDR_PROGRAM  11
     #define ADDR_START    7
 #else
-    #define ADDR_PROGRAM  31
-    #define ADDR_START    3
+    #define ADDR_PROGRAM  11
+    #define ADDR_START    7
 #endif
 
 
