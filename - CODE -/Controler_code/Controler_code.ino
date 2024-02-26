@@ -27,38 +27,68 @@ void loop() {
   if(digitalRead(Button_Program) == 1 && digitalRead(Button_Start) == 0)
   {
 
-    while(digitalRead(Button_Program) == 1)
+    // while pro čekání na odstisknutí tlačítka:
+    while(digitalRead(Button_Program) == 1) 
     {
       
     }
     
-
+    // projetí celého signálu
     for(int i=0; i<14; i++)
     {
-      digitalWrite(Led, hrany_program[i]);
-      delayMicroseconds(889);
-      Serial.print(hrany_program[i]);
+      // 1 bit: LOG.1
+      if(hrany_program[i] == 1)
+      {
+        digitalWrite(Led, LOW);       //vypne
+        delayMicroseconds(889);       //čeká polovinu bitu
+        digitalWrite(Led, HIGH);      //zapne
+        delayMicroseconds(889);       //čeká druhou polovinu bitu
+      }
+
+      // 1 bit: LOG.0
+      if(hrany_program[i] == 0)
+      {
+        digitalWrite(Led, HIGH);      //zapne 
+        delayMicroseconds(889);       //čeká polovinu bitu
+        digitalWrite(Led, LOW);       //vypne
+        delayMicroseconds(889);       //čeká druhou polovinu bitu
+      }
     }
-    Serial.println("");
+
   }
 
-  if(digitalRead(Button_Start) == 1 && digitalRead(Button_Program) == 0)
+
+
+
+  if(digitalRead(Button_Program) == 0 && digitalRead(Button_Start) == 1)
   {
 
-    while(digitalRead(Button_Start) == 1)
+    // while pro čekání na odstisknutí tlačítka:
+    while(digitalRead(Button_Start) == 1) 
     {
-
+      
     }
-
+    
+    // projetí celého signálu
     for(int i=0; i<14; i++)
     {
-      digitalWrite(Led, hrany_start[i]);
-      delayMicroseconds(889);
-      Serial.print(hrany_start[i]);
-    }
-    Serial.println("");
-  } 
-  delay(100);
-  digitalWrite(Led, LOW);
+      // 1 bit: LOG.1
+      if(hrany_start[i] == 1)
+      {
+        digitalWrite(Led, LOW);       //vypne
+        delayMicroseconds(889);       //čeká polovinu bitu
+        digitalWrite(Led, HIGH);      //zapne
+        delayMicroseconds(889);       //čeká druhou polovinu bitu
+      }
 
-}
+      // 1 bit: LOG.0
+      if(hrany_start[i] == 0)
+      {
+        digitalWrite(Led, HIGH);      //zapne 
+        delayMicroseconds(889);       //čeká polovinu bitu
+        digitalWrite(Led, LOW);       //vypne
+        delayMicroseconds(889);       //čeká druhou polovinu bitu
+      }
+    }
+
+  }
