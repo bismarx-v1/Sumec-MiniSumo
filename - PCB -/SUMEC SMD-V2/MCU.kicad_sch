@@ -5659,7 +5659,7 @@
     (property "Reference" "R3" (at 121.92 208.28 0)
       (effects (font (face "Bahnschrift") (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "530R" (at 121.92 210.82 0)
+    (property "Value" "560R" (at 121.92 210.82 0)
       (effects (font (face "Bahnschrift") (size 1.27 1.27)) (justify left))
     )
     (property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" (at 117.602 209.55 90)
