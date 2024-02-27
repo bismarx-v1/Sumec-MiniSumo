@@ -32,6 +32,8 @@ void loop() {
     {
       
     }
+
+    Serial.println("1");
     
     // projetí celého signálu
     for(int i=0; i<14; i++)
@@ -68,6 +70,8 @@ void loop() {
     {
       
     }
+
+    Serial.println("1");
     
     // projetí celého signálu
     for(int i=0; i<14; i++)
@@ -90,5 +94,5 @@ void loop() {
         delayMicroseconds(889);       //čeká druhou polovinu bitu
       }
     }
-
   }
+}
