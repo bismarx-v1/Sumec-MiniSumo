@@ -1479,6 +1479,32 @@
     (uuid ef4be2fa-226e-4892-9439-9da0fc786d72)
   )
 
+  (symbol (lib_id "Device:R") (at 151.13 41.91 270) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid 31d0b2e7-f07d-4231-a5be-44914288abd4)
+    (property "Reference" "R4" (at 151.13 46.99 90)
+      (effects (font (face "Bahnschrift") (size 1.27 1.27)) hide)
+    )
+    (property "Value" "R" (at 151.13 44.45 90)
+      (effects (font (face "Bahnschrift") (size 1.27 1.27)) hide)
+    )
+    (property "Footprint" "sumec-smdV2_library:SPS" (at 151.13 40.132 90)
+      (effects (font (face "Bahnschrift") (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 151.13 41.91 0)
+      (effects (font (face "Bahnschrift") (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 130a3713-98b3-4922-84c2-e85f32c85bce))
+    (pin "2" (uuid 958bede0-5799-4d6d-a0ef-82654fa4400d))
+    (instances
+      (project "sumec"
+        (path "/fc70a1a8-ed7c-4a0f-9b1a-f23293528385"
+          (reference "R4") (unit 1)
+        )
+      )
+    )
+  )
+
   (symbol (lib_id "Device:R") (at 151.13 34.29 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 772cde4a-bb16-4607-8d03-4699962ad2d9)
