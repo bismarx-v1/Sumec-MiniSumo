@@ -198,7 +198,7 @@ void loop() {
 	server.handleClient();
 	webSocket.loop();
 	
-	if(TimeLast+500<=millis()) {
+	if(TimeLast+200<=millis()) {
 		String jsonString = "";
 		JsonObject object = doc_site_tx.to<JsonObject>();
 		
