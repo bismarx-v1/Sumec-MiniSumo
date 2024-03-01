@@ -113,8 +113,8 @@ void CodeForTask1(void * parameter) {	/*Code for core 0*/
 				Serial.println(error.c_str());
 			}
 			else {	//this will run if the output was deserialized
-				const char* VarSiteRunButon = jsonDocument["Button_Run"];	// unused
-				const char* VarSiteSelectedMode = jsonDocument["Select_Mode"];	// unused
+				char* VarSiteRunButon = jsonDocument["Button_Run"];	// unused
+				char* VarSiteSelectedMode = jsonDocument["Select_Mode"];	// unused
 				
 				if(VarSiteSelectedMode[0] >= 48 && VarSiteSelectedMode[0] <= 57) {	//this is just for debug
 				 TypMode = VarSiteSelectedMode;
