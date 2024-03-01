@@ -6,7 +6,7 @@
     #define ADDR_PROGRAM  11
     #define ADDR_START    7
 #else
-    #define ADDR_PROGRAM  11
+    #define ADDR_PROGRAM  31
     #define ADDR_START    7
 #endif
 
@@ -41,3 +41,4 @@ const char* SWSRCP_PASSWORD = "3ac5c0cc-24bd-4d68-90b9-20d97ed3e080";	//pass to 
 String HOST_NAME = "http://192.168.1.22";	//IP of the web server
 
 int VarMode;	// sumec's mode
+char* TypMode;

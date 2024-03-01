@@ -117,7 +117,7 @@ void CodeForTask1(void * parameter) {	/*Code for core 0*/
 				const char* VarSiteSelectedMode = jsonDocument["Select_Mode"];	// unused
 				
 				if(VarSiteSelectedMode[0] >= 48 && VarSiteSelectedMode[0] <= 57) {	//this is just for debug
-					//  = VarSiteSelectedMode;
+				 TypMode = VarSiteSelectedMode;
 				}
 				
 				if(SWSRCP_DEBUG) {	// just for debug
