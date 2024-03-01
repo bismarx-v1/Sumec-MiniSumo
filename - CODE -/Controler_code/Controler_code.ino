@@ -30,9 +30,9 @@ void high()
   for(int i=0; i<16; i++)
   {
     digitalWrite(Led, HIGH);
-    delayMicroseconds(27.8);  // polovina periody
+    delayMicroseconds(27.8/2.0);  // polovina periody
     digitalWrite(Led, LOW); 
-    delayMicroseconds(27.8);  // polovina periody
+    delayMicroseconds(27.8/2.0);  // polovina periody
   } 
 }
 
