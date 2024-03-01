@@ -6,8 +6,8 @@
 
 // 1 byt = 1,778ms
 
-int hrany_program[14] {1,1,0,0,1,0,1,1,0,0,0,0,0,0};
-int hrany_start[14] {1,1,0,0,0,1,1,1,0,0,0,0,0,0};
+int hrany_program[14] {1,1,0,0,0,1,0,1,1,1,0,1,0,1};
+int hrany_start[14] {0,0,1,1,0,1,1,1,1,0,0,0,1,1};
 
 void setup() {
 
@@ -20,6 +20,24 @@ void setup() {
   pinMode(Button_Start, INPUT);
 
 }
+
+
+void high()
+{
+  // perioda = 27.8us
+  // pocet period za 889us = 32x
+
+  for(int i=0; i<16; i++)
+  {
+    digitalWrite(Led, HIGH);
+    delayMicroseconds(27.8);  // polovina periody
+    digitalWrite(Led, LOW); 
+    delayMicroseconds(27.8);  // polovina periody
+  } 
+}
+
+
+
 
 void loop() {
 
@@ -43,14 +61,14 @@ void loop() {
       {
         digitalWrite(Led, LOW);       //vypne
         delayMicroseconds(889);       //čeká polovinu bitu
-        digitalWrite(Led, HIGH);      //zapne
+        high();      //zapne
         delayMicroseconds(889);       //čeká druhou polovinu bitu
       }
 
       // 1 bit: LOG.0
       if(hrany_program[i] == 0)
       {
-        digitalWrite(Led, HIGH);      //zapne 
+        high();      //zapne 
         delayMicroseconds(889);       //čeká polovinu bitu
         digitalWrite(Led, LOW);       //vypne
         delayMicroseconds(889);       //čeká druhou polovinu bitu
@@ -81,14 +99,14 @@ void loop() {
       {
         digitalWrite(Led, LOW);       //vypne
         delayMicroseconds(889);       //čeká polovinu bitu
-        digitalWrite(Led, HIGH);      //zapne
+        high();      //zapne
         delayMicroseconds(889);       //čeká druhou polovinu bitu
       }
 
       // 1 bit: LOG.0
       if(hrany_start[i] == 0)
       {
-        digitalWrite(Led, HIGH);      //zapne 
+        high();      //zapne 
         delayMicroseconds(889);       //čeká polovinu bitu
         digitalWrite(Led, LOW);       //vypne
         delayMicroseconds(889);       //čeká druhou polovinu bitu
