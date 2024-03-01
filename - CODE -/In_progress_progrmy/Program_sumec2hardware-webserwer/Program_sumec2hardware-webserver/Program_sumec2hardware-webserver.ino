@@ -34,16 +34,16 @@ void loop() {
   start_control = 0;
 
   // po stisknutí TEST tlačítka nastane čekání na IR
-  if (digitalRead(tlacitko) >= 1 || TypMode == '0') {
-    VarMode = 0;	// set SWSRCP mode to stopped
-    TypMode = 1;
+  if (digitalRead(tlacitko) >= 1 || TypMode[0] == '0') {
+    VarMode[0] = '0';	// set SWSRCP mode to stopped
+    TypMode[0] = '1';
     LEDBlink = 0;
     MOTORS_Go(0, 0);
     IRstart();
 
   }
   
-  VarMode = 1;	// set SWSRCP mode to mode1
+  VarMode[0] = '1';	// set SWSRCP mode to mode1
   LEDBlink = 1;
 
   // třídící proměná
