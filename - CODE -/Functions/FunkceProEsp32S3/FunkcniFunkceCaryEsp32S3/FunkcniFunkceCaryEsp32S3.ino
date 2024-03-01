@@ -10,13 +10,13 @@ void loop() {	/*LINE_Get([Senzor], [Hranice Pro Bool Mod], [Mod]);*/		/*LINE_Get
 	/*Bool mod*/	/*Bool mode*/
 	/*Porovna vystup senzoru s hranici*/	/*Compares sensor output with threshold*/
 	Serial.print("left:\t");
-	Serial.println(LINE_Get(1, 3000));	/*predni levy,			bool mod*/		/*front left,	bool mode*/
+	Serial.println(LINE_Get(1, 3000, 0));	/*predni levy,			bool mod*/		/*front left,	bool mode*/
 	Serial.print("mid:\t");
-	Serial.println(LINE_Get(2, 3000));	/*predni prostredni,	bool mod*/		/*front mid,	bool mode*/
+	Serial.println(LINE_Get(2, 3000, 0));	/*predni prostredni,	bool mod*/		/*front mid,	bool mode*/
 	Serial.print("right:\t");
-	Serial.println(LINE_Get(3, 3000));	/*predni pravy,			bool mod*/		/*front right,	bool mode*/
+	Serial.println(LINE_Get(3, 3000, 0));	/*predni pravy,			bool mod*/		/*front right,	bool mode*/
 	Serial.print("rear:\t");
-	Serial.println(LINE_Get(4, 3000));	/*zadni,				bool mod*/		/*rear,			bool mode*/
+	Serial.println(LINE_Get(4, 3000, 0));	/*zadni,				bool mod*/		/*rear,			bool mode*/
 	
 	
 	/*Int mod*/		/*Int mode*/

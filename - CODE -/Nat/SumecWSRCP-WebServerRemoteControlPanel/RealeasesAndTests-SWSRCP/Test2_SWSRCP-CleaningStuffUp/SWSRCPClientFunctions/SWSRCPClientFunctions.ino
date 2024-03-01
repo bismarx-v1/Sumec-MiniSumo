@@ -25,14 +25,14 @@ void setup() {
 }
 
 void loop() {
-	//.../////////////////////////////////////
-	//..//    start of the POST process    //
-	//./////////////////////////////////////
+	//...////////////////////////////////////
+	//..//    start of the GET process    //
+	//.////////////////////////////////////
 	Serial.println("\nGET");	//debug print
 	
-	//...//////////////////////////////////
-	//..//    <POST and deserialize>    //
-	//.//////////////////////////////////
+	//.../////////////////////////////////
+	//..//    <GET and deserialize>    //
+	//./////////////////////////////////
 	// SWSRCPRequest([Mode], [Path], [Input], [Server])
 	// -used for sending data to the server
 	// -I/O
@@ -46,7 +46,7 @@ void loop() {
 	
 	DeserializationError error = deserializeJson(jsonDocument, SWSRCPRequest("get", "get", "", HOST_NAME));
 	if(error) {
-		Serial.print("deserializeJson error: ");
+		Serial.print("GET deserializeJson error: ");
 		Serial.println(error.c_str());
 	}
 	else {	//this will run if the output was deserialized
@@ -132,7 +132,7 @@ void loop() {
 	
 	DeserializationError error2 = deserializeJson(jsonDocument, SWSRCPRequest("post", "post", buffer, HOST_NAME));
 	if(error2) {
-		Serial.print("deserializeJson error2: ");
+		Serial.print("POST - deserializeJson error: ");
 		Serial.println(error.c_str());
 	} else {
 		String OutMode = jsonDocument["Mode"];

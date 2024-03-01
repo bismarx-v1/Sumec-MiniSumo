@@ -1,3 +1,4 @@
+#include "SWSRCPClientFunctions.h"
 #include <IRremote.h>
 #include <Wire.h>
 #include "motors.h"
@@ -5,7 +6,6 @@
 #include "TfLunaEsp32S3.h"
 #include "rogram_sumec2HW_promene.h"
 #include "Program_sumec2_funkce.h"
-
 //================================IR čekání -> začátek==================================
 
 
@@ -21,7 +21,8 @@ void setup() {
   TfL_Setup();  //stup pro luny
   irrecv.enableIRIn();  //čekání na IR 
   IRstart(); //čekání na IR 
-
+	
+  ConnectToAP(SWSRCP_SSID, SWSRCP_PASSWORD);	//SWSRCP	//function designed to connect to an access point. curently part of the lib.
   xTaskCreatePinnedToCore(CodeForTask1, "Task_m", 3500, NULL, 0, &Task1, 0); /*1, 2, 7, 6*/
 }
 
@@ -34,12 +35,14 @@ void loop() {
 
   // po stisknutí TEST tlačítka nastane čekání na IR
   if (digitalRead(tlacitko) >= 1) {
+    VarMode = 0;	// set SWSRCP mode to stopped
     LEDBlink = 0;
     MOTORS_Go(0, 0);
     IRstart();
 
   }
-
+  
+  VarMode = 1;	// set SWSRCP mode to mode1
   LEDBlink = 1;
 
   // třídící proměná
@@ -105,7 +108,7 @@ void loop() {
   }
 
   // dotek bílé čáry pravým senzorem
-  if (LINE_Get(2, hodnota_cary, 0) == 1) {
+  if (LINE_Get(3, hodnota_cary, 0) == 1) {
     MOTORS_Go(-255 / 2, 255 / 2);
     delay(500);
   }
