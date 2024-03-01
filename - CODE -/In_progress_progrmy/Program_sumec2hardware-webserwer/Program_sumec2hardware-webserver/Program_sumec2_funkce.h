@@ -44,6 +44,7 @@ void IRstart() {
         Serial.print("DohaioID: ");
         Serial.println(DohaioID);
         Serial.println(" ");
+        start_control = 1;                    // pozor
       }
 
       //fáze startováni

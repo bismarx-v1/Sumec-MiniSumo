@@ -40,4 +40,4 @@ const char* SWSRCP_SSID = "SWSRCP#01";	//name of the web server's access point
 const char* SWSRCP_PASSWORD = "3ac5c0cc-24bd-4d68-90b9-20d97ed3e080";	//pass to the web server's access point
 String HOST_NAME = "http://192.168.1.22";	//IP of the web server
 
-int VarMode	// sumec's mode
+int VarMode;	// sumec's mode
