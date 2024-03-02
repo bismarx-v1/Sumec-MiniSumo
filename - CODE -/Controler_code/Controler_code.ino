@@ -6,8 +6,8 @@
 
 // 1 byt = 1,778ms
 
-int hrany_program[14] {1,1,0,0,0,1,0,1,1,1,0,1,0,1};
-int hrany_start[14] {0,0,1,1,0,1,1,1,1,0,0,0,1,1};
+int hrany_program[14] {1,1,0,0,1,0,1,1,0,0,0,0,1,1};
+int hrany_start[14]   {1,1,0,0,0,1,1,1,0,0,0,0,1,1};
 
 void setup() {
 
@@ -62,14 +62,14 @@ void loop() {
         digitalWrite(Led, LOW);       //vypne
         delayMicroseconds(889);       //čeká polovinu bitu
         high();      //zapne
-        delayMicroseconds(889);       //čeká druhou polovinu bitu
+        //delayMicroseconds(889);       snad už poslední chyba
       }
 
       // 1 bit: LOG.0
       if(hrany_program[i] == 0)
       {
         high();      //zapne 
-        delayMicroseconds(889);       //čeká polovinu bitu
+        //delayMicroseconds(889);       snad už poslední chyba
         digitalWrite(Led, LOW);       //vypne
         delayMicroseconds(889);       //čeká druhou polovinu bitu
       }
@@ -100,14 +100,14 @@ void loop() {
         digitalWrite(Led, LOW);       //vypne
         delayMicroseconds(889);       //čeká polovinu bitu
         high();      //zapne
-        delayMicroseconds(889);       //čeká druhou polovinu bitu
+        //delayMicroseconds(889);       snad už poslední chyba
       }
 
       // 1 bit: LOG.0
       if(hrany_start[i] == 0)
       {
         high();      //zapne 
-        delayMicroseconds(889);       //čeká polovinu bitu
+        //delayMicroseconds(889);       snad už poslední chyba
         digitalWrite(Led, LOW);       //vypne
         delayMicroseconds(889);       //čeká druhou polovinu bitu
       }
