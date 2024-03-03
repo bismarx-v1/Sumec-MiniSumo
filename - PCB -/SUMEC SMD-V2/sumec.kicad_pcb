@@ -12212,7 +12212,7 @@
 			)
 		)
 		(property "Value" "ESP32-S3-WROOM-1"
-			(at 0 12 270)
+			(at 0 12 -90)
 			(layer "F.Fab")
 			(uuid "ad7be5cf-0ef2-49d5-a1b9-3a7c571dce71")
 			(effects
@@ -12433,7 +12433,7 @@
 			(uuid "7f5f03e8-f6ad-4450-ac57-7e33992a276f")
 		)
 		(fp_text user "Antenna Area"
-			(at 0 -12.75 270)
+			(at 0 -12.75 -90)
 			(layer "F.SilkS")
 			(uuid "8409bd59-af61-4fad-a7b4-dfc7c610f044")
 			(effects
@@ -12444,7 +12444,7 @@
 			)
 		)
 		(fp_text user "Antenna Area"
-			(at 0 -12.75 270)
+			(at 0 -12.75 -90)
 			(layer "Eco2.User")
 			(uuid "a2e76644-f104-4f56-bf0e-6aafcb4cec77")
 			(effects
