@@ -24,15 +24,15 @@ void setup() {
 
 void high()
 {
-  // perioda = 27.8us
+  // perioda = 27.77us
   // pocet period za 889us = 32x
 
-  for(int i=0; i<16; i++)
+  for(int i=0; i<32; i++)
   {
     digitalWrite(Led, HIGH);
-    delayMicroseconds(27.8/2.0);  // polovina periody
+    delayMicroseconds(27.77*0.25);  // 25% periody
     digitalWrite(Led, LOW); 
-    delayMicroseconds(27.8/2.0);  // polovina periody
+    delayMicroseconds(27.77*0.75);  // zbytek periody
   } 
 }
 

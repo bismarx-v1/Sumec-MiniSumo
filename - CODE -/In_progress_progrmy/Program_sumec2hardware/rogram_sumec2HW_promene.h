@@ -1,13 +1,13 @@
 #define tlacitko 2
 #define led 15
-//#define RC5 0
+#define RC5 1
 
 #if defined (RC5)
     #define ADDR_PROGRAM  11
     #define ADDR_START    7
 #else
-    #define ADDR_PROGRAM  11
-    #define ADDR_START    7
+    #define ADDR_PROGRAM  31
+    #define ADDR_START    5
 #endif
 
 
