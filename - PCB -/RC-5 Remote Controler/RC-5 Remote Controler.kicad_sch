@@ -2,7 +2,7 @@
 	(version 20231120)
 	(generator "eeschema")
 	(generator_version "8.0")
-	(uuid "27fccb53-199c-4659-8cda-f7853dbac730")
+	(uuid "4bd00356-cef3-482d-b273-e178df8048fd")
 	(paper "A4")
 	(lib_symbols
 		(symbol "Device:LED"
@@ -1064,6 +1064,126 @@
 				)
 			)
 		)
+		(symbol "power:+5V"
+			(power)
+			(pin_numbers hide)
+			(pin_names
+				(offset 0) hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "#PWR"
+				(at 0 -3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" "+5V"
+				(at 0 3.556 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Power symbol creates a global label with name \"+5V\""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "global power"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "+5V_0_1"
+				(polyline
+					(pts
+						(xy -0.762 1.27) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 2.54) (xy 0.762 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "+5V_1_1"
+				(pin power_in line
+					(at 0 0 90)
+					(length 0)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
 		(symbol "power:GND"
 			(power)
 			(pin_names
@@ -1162,597 +1282,712 @@
 		)
 	)
 	(junction
-		(at 129.54 104.14)
+		(at 142.24 76.2)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "1af42445-d531-4020-9337-6ef62e9544f3")
+		(uuid "0969d05e-2e14-4d8b-92c0-35050c1f0000")
 	)
 	(junction
-		(at 102.87 104.14)
+		(at 95.25 78.74)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "1ddcceba-4a35-4c52-a010-e17a6083b748")
+		(uuid "2b4bbe91-ed98-491a-97a9-81635dc8d1c9")
 	)
 	(junction
-		(at 160.02 121.92)
+		(at 163.83 111.76)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "dcbb658f-889a-4a86-97e6-2098eb208741")
+		(uuid "2d00b657-4324-47b9-b48f-32a7ad71113a")
 	)
 	(junction
-		(at 121.92 114.3)
+		(at 135.89 78.74)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "e079aecb-4d74-4767-a98b-488f00a3bd6f")
+		(uuid "2d79fc27-f4d0-4163-ad93-25acd4d69fb4")
+	)
+	(junction
+		(at 123.19 83.82)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "bca4a84f-4934-4cc6-a8d0-3bd139b59e0f")
+	)
+	(junction
+		(at 129.54 81.28)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "df03fcf8-f180-4b3b-9bd3-9de302828d04")
+	)
+	(junction
+		(at 95.25 97.79)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "dfd7f8ba-f17b-4755-91f7-3e151de704ed")
+	)
+	(junction
+		(at 95.25 87.63)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "fc103842-89b6-4404-ae04-1e7dcd99564f")
 	)
 	(no_connect
-		(at 146.05 109.22)
-		(uuid "049ad556-e736-4b81-b458-cbff4d034740")
+		(at 149.86 71.12)
+		(uuid "00d9e538-b14e-456d-965d-c79544ca0338")
 	)
 	(no_connect
-		(at 173.99 93.98)
-		(uuid "0689025d-be03-45fa-ad1b-6e44a3bf6fad")
+		(at 177.8 86.36)
+		(uuid "0347ea37-138e-4026-88e3-19dde7eace90")
 	)
 	(no_connect
-		(at 146.05 106.68)
-		(uuid "09463db7-4230-4f45-983d-258b64bca6f1")
+		(at 149.86 86.36)
+		(uuid "0f8a56ba-8bb3-437d-8c15-585bb392ffe3")
 	)
 	(no_connect
-		(at 146.05 104.14)
-		(uuid "141a075f-da21-4c5c-8756-d9165f17b0cf")
+		(at 177.8 78.74)
+		(uuid "13d38671-c211-42bb-b362-18db31a84ea0")
 	)
 	(no_connect
-		(at 146.05 81.28)
-		(uuid "1932ff54-7363-4790-a9cc-47325122576f")
+		(at 149.86 91.44)
+		(uuid "176f6efe-edee-4bc0-a817-81fc5ffb592d")
 	)
 	(no_connect
-		(at 146.05 101.6)
-		(uuid "2892a62b-8862-471f-8b1c-358451986171")
+		(at 177.8 93.98)
+		(uuid "32212993-7e07-4aaf-89ff-0e997f080a01")
 	)
 	(no_connect
-		(at 146.05 88.9)
-		(uuid "34dbe278-8914-408c-bceb-6c9bf22d25b3")
+		(at 177.8 101.6)
+		(uuid "337950a3-c9ea-46d6-9dbc-0c9b7842d815")
 	)
 	(no_connect
-		(at 146.05 78.74)
-		(uuid "3a8e6ad3-e50a-47c3-b99f-0633d2781c84")
+		(at 149.86 68.58)
+		(uuid "45460170-28d5-4c4b-ad9b-2d15b6915346")
 	)
 	(no_connect
-		(at 173.99 81.28)
-		(uuid "4199d493-7dd4-49d7-bef2-a982337ad90d")
+		(at 177.8 83.82)
+		(uuid "531cd19b-bb9b-46bd-8df5-3624171c593b")
 	)
 	(no_connect
-		(at 173.99 78.74)
-		(uuid "4257d2b0-06e1-4b85-a2f7-f2a61dbfb325")
+		(at 177.8 68.58)
+		(uuid "69b282ea-9197-4416-bd5a-7eadef45a6e9")
 	)
 	(no_connect
-		(at 173.99 109.22)
-		(uuid "511a3e91-6ee8-4ffb-8d93-960fa744ce5e")
+		(at 177.8 96.52)
+		(uuid "6bf4a1c6-74cb-4690-a20d-48082f1d2cce")
 	)
 	(no_connect
-		(at 173.99 99.06)
-		(uuid "57205c61-4b8f-40fb-8a18-ca1a4472ce82")
+		(at 149.86 99.06)
+		(uuid "6fa779b0-4848-4ddf-9aca-8b5a89d7ced3")
 	)
 	(no_connect
-		(at 146.05 96.52)
-		(uuid "5d061a94-81c4-4d37-8745-95eb84e4791c")
+		(at 177.8 91.44)
+		(uuid "88ca7978-f957-45d0-9cb2-f7eec8f27add")
 	)
 	(no_connect
-		(at 146.05 99.06)
-		(uuid "7a93cbf9-2832-478d-889a-6f96e1c2dfb5")
+		(at 177.8 99.06)
+		(uuid "8fb4d0e3-67a1-424c-be4e-f26ad8b48ad2")
 	)
 	(no_connect
-		(at 173.99 106.68)
-		(uuid "80fcd612-5a57-49f0-83cf-dfcc1a22a8d5")
+		(at 149.86 96.52)
+		(uuid "a228cb87-6bba-4417-ad06-acb3e89f0f46")
 	)
 	(no_connect
-		(at 146.05 111.76)
-		(uuid "849f63c9-2688-49f0-beb1-84da92fd529f")
+		(at 149.86 101.6)
+		(uuid "a750c828-4a9c-4702-a7cb-3304e7db17f4")
 	)
 	(no_connect
-		(at 173.99 104.14)
-		(uuid "8553a31b-64b8-47ba-822e-928b0df204a1")
+		(at 177.8 71.12)
+		(uuid "a95c93e2-edec-4c9c-967a-72f344b2541e")
 	)
 	(no_connect
-		(at 173.99 88.9)
-		(uuid "98380718-ae0a-434a-b8a5-7a739ab3bb45")
+		(at 161.29 57.15)
+		(uuid "ac3f4524-b029-4274-a3d5-7b84a08af784")
 	)
 	(no_connect
-		(at 146.05 86.36)
-		(uuid "aa5a3a44-866a-423b-a71f-60455a38fb08")
+		(at 149.86 88.9)
+		(uuid "af229706-0b45-4c7b-b18f-353308262f52")
 	)
 	(no_connect
-		(at 162.56 68.58)
-		(uuid "cb990734-b334-4177-8d6c-982a19822f6a")
+		(at 166.37 57.15)
+		(uuid "b4118f57-6562-4335-a932-1aa800d0827c")
 	)
 	(no_connect
-		(at 157.48 68.58)
-		(uuid "d074d89c-0aba-4aec-8c13-2ccef76a5f98")
+		(at 177.8 88.9)
+		(uuid "c30383ad-bc6e-4775-80f4-4a55baaec64e")
 	)
 	(no_connect
-		(at 173.99 96.52)
-		(uuid "d64c7576-69ed-4fa7-8870-b66d48d15210")
-	)
-	(no_connect
-		(at 173.99 101.6)
-		(uuid "eb633f2b-a372-4933-af53-a9ba18ac33ed")
-	)
-	(no_connect
-		(at 173.99 111.76)
-		(uuid "f1a4c594-018f-4032-9313-1ea208dc7da8")
+		(at 149.86 93.98)
+		(uuid "e7d5a3cf-a06f-4b5f-a728-93ecf6371bc2")
 	)
 	(wire
 		(pts
-			(xy 146.05 111.76) (xy 147.32 111.76)
+			(xy 149.86 88.9) (xy 151.13 88.9)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "04335b14-e1b6-4e01-8d18-23e59fb1b622")
+		(uuid "120c66d1-3921-4ec8-bfff-1f376a381654")
 	)
 	(wire
 		(pts
-			(xy 146.05 109.22) (xy 147.32 109.22)
+			(xy 177.8 71.12) (xy 176.53 71.12)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "044b68a7-5a53-4158-a0d8-dc931a5300b2")
+		(uuid "19e56188-d252-447f-9900-470aafd2e3c3")
 	)
 	(wire
 		(pts
-			(xy 146.05 86.36) (xy 147.32 86.36)
+			(xy 177.8 99.06) (xy 176.53 99.06)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "0ac8f76c-ee41-4e3d-9d3c-9d01013aa278")
+		(uuid "1b469773-a837-451f-99a6-32de9b5fcf81")
 	)
 	(wire
 		(pts
-			(xy 118.11 104.14) (xy 129.54 104.14)
+			(xy 99.06 69.85) (xy 95.25 69.85)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "0ffab5e6-ca5b-45bb-b82c-5741208298c9")
+		(uuid "1c1ac7f5-751c-43b6-bd10-4349c00deb61")
 	)
 	(wire
 		(pts
-			(xy 162.56 119.38) (xy 162.56 121.92)
+			(xy 109.22 87.63) (xy 114.3 87.63)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "15d38dca-b0c5-4917-bdf7-905928cbbfba")
+		(uuid "20c71fa9-352b-494c-9447-8647153d97b0")
 	)
 	(wire
 		(pts
-			(xy 173.99 93.98) (xy 172.72 93.98)
+			(xy 95.25 78.74) (xy 99.06 78.74)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "236c5bdb-b55a-4242-bc6f-3ab69b933397")
+		(uuid "21b84d92-f10f-485c-86ce-e7334dfd39a0")
 	)
 	(wire
 		(pts
-			(xy 173.99 88.9) (xy 172.72 88.9)
+			(xy 129.54 81.28) (xy 129.54 102.87)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "23df3843-009d-442a-a3c1-2699e136b987")
+		(uuid "28e54ac7-4400-481c-b23e-486983a1f52b")
 	)
 	(wire
 		(pts
-			(xy 173.99 96.52) (xy 172.72 96.52)
+			(xy 114.3 81.28) (xy 129.54 81.28)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "25318c20-bca1-49ef-922f-9629d2003f59")
+		(uuid "2abc59c2-1043-4aac-9083-c3e685e51049")
 	)
 	(wire
 		(pts
-			(xy 146.05 96.52) (xy 147.32 96.52)
+			(xy 109.22 69.85) (xy 114.3 69.85)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "2f31b26a-6bae-4467-b18c-a52e60aa3f7d")
+		(uuid "2f296642-9d99-4e42-beb0-597ae53b477c")
 	)
 	(wire
 		(pts
-			(xy 173.99 78.74) (xy 172.72 78.74)
+			(xy 177.8 91.44) (xy 176.53 91.44)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "3001360b-b825-4871-9953-1ce307225537")
+		(uuid "31435e93-e709-4ae9-a914-ffe63ae1eb06")
 	)
 	(wire
 		(pts
-			(xy 146.05 81.28) (xy 147.32 81.28)
+			(xy 109.22 78.74) (xy 135.89 78.74)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "32821c6c-87ce-4524-98d6-9751ebf00dfc")
+		(uuid "31976998-ea19-4f04-8d44-bfc8f90d2e38")
 	)
 	(wire
 		(pts
-			(xy 173.99 109.22) (xy 172.72 109.22)
+			(xy 163.83 111.76) (xy 163.83 116.84)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "335d5018-d318-4a48-ab3d-8c1f57b3944c")
+		(uuid "37171864-5ca3-4b24-90f2-440e8193a17e")
 	)
 	(wire
 		(pts
-			(xy 138.43 83.82) (xy 147.32 83.82)
+			(xy 124.46 73.66) (xy 128.27 73.66)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "343fe337-896e-49f4-b3c1-d42df759a065")
+		(uuid "385654c4-a01d-4e59-a1f5-b6f09c2810b1")
 	)
 	(wire
 		(pts
-			(xy 160.02 121.92) (xy 160.02 127)
+			(xy 149.86 96.52) (xy 151.13 96.52)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "3e220c80-e013-4509-a960-3569b64b1b28")
+		(uuid "39ed8a48-be49-441c-82cb-cf0f26d93060")
 	)
 	(wire
 		(pts
-			(xy 121.92 114.3) (xy 133.35 114.3)
+			(xy 116.84 83.82) (xy 123.19 83.82)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "3f0b0d1f-7fab-4cc4-92c3-afeddc6f3f78")
+		(uuid "3b8e249e-2e40-4bd1-b932-e5878117979b")
 	)
 	(wire
 		(pts
-			(xy 146.05 99.06) (xy 147.32 99.06)
+			(xy 114.3 69.85) (xy 114.3 76.2)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "4b6646eb-adb4-4e90-b3f2-cb0b6614132c")
+		(uuid "3d4457d6-429f-4a01-aaaa-fc0c2bdb7af0")
 	)
 	(wire
 		(pts
-			(xy 130.81 91.44) (xy 130.81 104.14)
+			(xy 168.91 55.88) (xy 168.91 58.42)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "52fe6d5a-1d21-489e-98fb-70709a0515c8")
+		(uuid "3f0860c4-9326-4bb0-859d-9a929c4da9cb")
 	)
 	(wire
 		(pts
-			(xy 173.99 99.06) (xy 172.72 99.06)
+			(xy 149.86 86.36) (xy 151.13 86.36)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "6064a03c-80c0-4f08-b756-05be8fe05cc5")
+		(uuid "40c4b481-756e-4c03-b69b-2f03ec0868da")
 	)
 	(wire
 		(pts
-			(xy 118.11 83.82) (xy 113.03 83.82)
+			(xy 177.8 88.9) (xy 176.53 88.9)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "66698297-fc3b-4a8f-8bcf-d56d64140e4f")
+		(uuid "475c77e5-780c-445d-aadc-52e27f19d7e5")
 	)
 	(wire
 		(pts
-			(xy 146.05 101.6) (xy 147.32 101.6)
+			(xy 109.22 97.79) (xy 116.84 97.79)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "66ca857e-6250-42cb-a23b-b93a1564c805")
+		(uuid "47a486a5-de69-4280-80b5-464c9205a1db")
 	)
 	(wire
 		(pts
-			(xy 173.99 111.76) (xy 172.72 111.76)
+			(xy 146.05 73.66) (xy 151.13 73.66)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "74d1f1cc-758b-49ad-a77b-2644a2776a5e")
+		(uuid "47f89ab9-4353-420f-9a7a-54abd9de6aa2")
 	)
 	(wire
 		(pts
-			(xy 173.99 104.14) (xy 172.72 104.14)
+			(xy 114.3 81.28) (xy 114.3 87.63)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "7a1645b3-6ce9-4da3-b37c-b32b595767ab")
+		(uuid "50ef93e1-c8c0-423a-a881-ea81235ec217")
 	)
 	(wire
 		(pts
-			(xy 146.05 106.68) (xy 147.32 106.68)
+			(xy 177.8 83.82) (xy 176.53 83.82)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "803e9d08-d90b-4dc9-9ca2-f617ce85a899")
+		(uuid "5734a8da-4d14-4723-ac8b-021d13af777b")
 	)
 	(wire
 		(pts
-			(xy 165.1 68.58) (xy 165.1 64.77)
+			(xy 149.86 93.98) (xy 151.13 93.98)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "87500153-77f9-40b3-bfad-28c6f9edd202")
+		(uuid "64aac910-8b5e-4631-b605-be29df71d03a")
 	)
 	(wire
 		(pts
-			(xy 129.54 104.14) (xy 129.54 123.19)
+			(xy 95.25 87.63) (xy 95.25 97.79)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "886c1f21-313e-406d-b8e2-da6f2d9eb799")
+		(uuid "65eff95b-a71f-4199-b725-b3bfe63ac889")
 	)
 	(wire
 		(pts
-			(xy 102.87 104.14) (xy 102.87 114.3)
+			(xy 149.86 71.12) (xy 151.13 71.12)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "9e89f21a-9ad8-4f6d-9e1d-b3fb4291d08f")
+		(uuid "66a287d5-7912-4d59-932f-17d12e15b7be")
 	)
 	(wire
 		(pts
-			(xy 129.54 104.14) (xy 130.81 104.14)
+			(xy 166.37 57.15) (xy 166.37 58.42)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "9f4b0919-3c58-48f8-a984-8a6c865b3c5d")
+		(uuid "6b6609ff-e5a6-4e48-8d33-7012d10e0851")
 	)
 	(wire
 		(pts
-			(xy 146.05 78.74) (xy 147.32 78.74)
+			(xy 123.19 83.82) (xy 123.19 102.87)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "a1374c42-d1e6-44fb-9d3f-843003d298f3")
+		(uuid "735cd940-a044-4d76-bb54-8f2f376c1c64")
 	)
 	(wire
 		(pts
-			(xy 173.99 81.28) (xy 172.72 81.28)
+			(xy 177.8 86.36) (xy 176.53 86.36)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "a64fab61-d033-4fba-856f-eec771ef43f2")
+		(uuid "73a48128-2ec6-429a-8317-ad54dd54017e")
 	)
 	(wire
 		(pts
-			(xy 173.99 106.68) (xy 172.72 106.68)
+			(xy 114.3 76.2) (xy 142.24 76.2)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "a818ca55-6e92-4c1a-b932-af7a00b65825")
+		(uuid "73b5bc94-16d7-4ebd-a3e9-844e828cf0d8")
 	)
 	(wire
 		(pts
-			(xy 102.87 114.3) (xy 107.95 114.3)
+			(xy 95.25 78.74) (xy 95.25 87.63)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "a8d79d27-2a39-417b-aca6-68860115678b")
+		(uuid "79e886a2-643d-482f-9e55-52ea0be5fb25")
 	)
 	(wire
 		(pts
-			(xy 160.02 119.38) (xy 160.02 121.92)
+			(xy 90.17 97.79) (xy 95.25 97.79)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "b04b8a64-8897-4209-802d-34e1473f70ef")
+		(uuid "7a8e6f5b-82f1-4c0d-9e61-f827a9737d19")
 	)
 	(wire
 		(pts
-			(xy 102.87 104.14) (xy 107.95 104.14)
+			(xy 129.54 81.28) (xy 151.13 81.28)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "b0c585db-54db-4d69-8804-fb8f631f060f")
+		(uuid "80afbb2c-b8de-4395-9fea-a165d8c98ecd")
 	)
 	(wire
 		(pts
-			(xy 113.03 83.82) (xy 113.03 85.09)
+			(xy 135.89 78.74) (xy 135.89 102.87)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "b7cef2cb-2b37-4922-932d-c7c0c68c25ca")
+		(uuid "84ba11a5-0e7f-41ce-907d-16c2436a7869")
 	)
 	(wire
 		(pts
-			(xy 162.56 121.92) (xy 160.02 121.92)
+			(xy 142.24 76.2) (xy 142.24 102.87)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "b81c69c2-fba2-4f95-b6d6-86bef7b1ead1")
+		(uuid "8b94eaeb-d8b6-48cc-b1b0-24b833948e02")
 	)
 	(wire
 		(pts
-			(xy 118.11 114.3) (xy 121.92 114.3)
+			(xy 177.8 78.74) (xy 176.53 78.74)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "c2e89011-8d35-458e-9c47-f02bc4e57917")
+		(uuid "8c2d02fe-e749-472c-b5c8-7163c3f39d38")
 	)
 	(wire
 		(pts
-			(xy 165.1 64.77) (xy 102.87 64.77)
+			(xy 161.29 57.15) (xy 161.29 58.42)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "c3dfdf34-ce92-4dbf-aad0-f49eb099a175")
+		(uuid "929f29c0-8b5a-4ff3-b13a-8b953a2ecd4d")
 	)
 	(wire
 		(pts
-			(xy 121.92 114.3) (xy 121.92 123.19)
+			(xy 116.84 83.82) (xy 116.84 97.79)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "cde7d85f-ffc6-43de-91c8-fe75635800f4")
+		(uuid "94cfa39c-67e2-4ccb-8d60-1ce118f0bca7")
 	)
 	(wire
 		(pts
-			(xy 125.73 83.82) (xy 130.81 83.82)
+			(xy 135.89 73.66) (xy 138.43 73.66)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "d0aab0ff-1065-46b7-94fc-93d1c8c816e1")
+		(uuid "a313b9aa-ed10-4e64-85be-bd9f3904084f")
 	)
 	(wire
 		(pts
-			(xy 133.35 93.98) (xy 147.32 93.98)
+			(xy 149.86 101.6) (xy 151.13 101.6)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "d231de52-10b0-4f30-a383-a90406fecc25")
+		(uuid "a78a2314-794a-4c1e-929f-88469034086f")
 	)
 	(wire
 		(pts
-			(xy 146.05 88.9) (xy 147.32 88.9)
+			(xy 142.24 76.2) (xy 151.13 76.2)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "d78a4f71-a204-4f17-a6e8-ece30aaa7477")
+		(uuid "a7e5837f-9788-48d2-b01d-778016375f85")
 	)
 	(wire
 		(pts
-			(xy 173.99 101.6) (xy 172.72 101.6)
+			(xy 149.86 91.44) (xy 151.13 91.44)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "d97e219d-4eb1-40d5-b165-eb73a1749b0a")
+		(uuid "a8d47679-2551-4aeb-bd1c-1b491ffd7078")
 	)
 	(wire
 		(pts
-			(xy 130.81 91.44) (xy 147.32 91.44)
+			(xy 166.37 109.22) (xy 166.37 111.76)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "e003cd32-3aae-4f53-b802-bf4a465f194a")
+		(uuid "abe46e1b-23ed-434f-8c75-c317a3c62e90")
 	)
 	(wire
 		(pts
-			(xy 146.05 104.14) (xy 147.32 104.14)
+			(xy 95.25 87.63) (xy 99.06 87.63)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "eedd52c1-4e37-4150-9a52-60e6cb294c2e")
+		(uuid "b65d9db6-d697-42da-a106-71d3269df58a")
 	)
 	(wire
 		(pts
-			(xy 102.87 64.77) (xy 102.87 104.14)
+			(xy 95.25 69.85) (xy 95.25 78.74)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "f6483451-1eb7-4cee-9e21-99da76f6ed2c")
+		(uuid "b78cf165-d665-4a58-9502-e7a2e82505c3")
 	)
 	(wire
 		(pts
-			(xy 133.35 93.98) (xy 133.35 114.3)
+			(xy 149.86 68.58) (xy 151.13 68.58)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "ff2b1d2c-b0a6-427d-8d43-da0c5c9fb164")
+		(uuid "b855ec0c-4a19-44a7-bdf3-ee651b0df1e4")
+	)
+	(wire
+		(pts
+			(xy 123.19 83.82) (xy 151.13 83.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bfff0c3c-700a-4421-ac60-636d7da659cd")
+	)
+	(wire
+		(pts
+			(xy 177.8 101.6) (xy 176.53 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c45028b8-ff88-4365-9774-893cca71030d")
+	)
+	(wire
+		(pts
+			(xy 163.83 109.22) (xy 163.83 111.76)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c7ddb5a4-e016-4a81-be26-8a0cae8b1495")
+	)
+	(wire
+		(pts
+			(xy 95.25 97.79) (xy 99.06 97.79)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c8209608-7fb0-4a2e-9df1-ec7de4c995cf")
+	)
+	(wire
+		(pts
+			(xy 135.89 78.74) (xy 151.13 78.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ce92762a-249e-4613-a934-bb812298ae52")
+	)
+	(wire
+		(pts
+			(xy 166.37 111.76) (xy 163.83 111.76)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d473ee82-9145-4837-ae04-be03307c3c4d")
+	)
+	(wire
+		(pts
+			(xy 149.86 99.06) (xy 151.13 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e35d8d88-dce1-4386-99e5-80a265a033a4")
+	)
+	(wire
+		(pts
+			(xy 177.8 68.58) (xy 176.53 68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e7c90c78-3f06-47ab-933b-6e35e45bddc6")
+	)
+	(wire
+		(pts
+			(xy 177.8 93.98) (xy 176.53 93.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "eaea9d8d-8c5e-4ae7-8fda-4417afc69249")
+	)
+	(wire
+		(pts
+			(xy 177.8 96.52) (xy 176.53 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "eb826254-8198-46e5-8c6c-1a77b8b00643")
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 121.92 127 0)
+		(at 135.89 106.68 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "09bbbda7-f760-42d1-a693-e915a10662da")
-		(property "Reference" "R1"
-			(at 124.46 126.365 0)
+		(uuid "033be23b-c035-4dbd-9583-1c2d6db14093")
+		(property "Reference" "R4"
+			(at 137.414 105.41 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1761,7 +1996,7 @@
 			)
 		)
 		(property "Value" "10k"
-			(at 124.46 128.905 0)
+			(at 137.414 107.95 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1769,8 +2004,8 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
-			(at 120.142 127 90)
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+			(at 134.112 106.68 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1779,7 +2014,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 121.92 127 0)
+			(at 135.89 106.68 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1788,7 +2023,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 121.92 127 0)
+			(at 135.89 106.68 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1797,15 +2032,84 @@
 			)
 		)
 		(pin "1"
-			(uuid "7898b997-fe70-45fd-a7a0-e685fefeec2c")
+			(uuid "60782183-4c48-401a-91a2-f990b55b8ebe")
 		)
 		(pin "2"
-			(uuid "45ec7be4-211a-4b03-a30d-843aa2fb4cc5")
+			(uuid "6a1349af-d2a1-4a03-be5c-2f69e436d102")
 		)
 		(instances
-			(project "Controler"
-				(path "/27fccb53-199c-4659-8cda-f7853dbac730"
-					(reference "R1")
+			(project "RC-5 Remote Controler"
+				(path "/4bd00356-cef3-482d-b273-e178df8048fd"
+					(reference "R4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 123.19 106.68 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "074a930b-d44b-482d-8339-bcad1b5807f8")
+		(property "Reference" "R2"
+			(at 124.714 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10k"
+			(at 124.714 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+			(at 121.412 106.68 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 123.19 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 123.19 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "524863cb-91d0-4135-a4e2-4c726cb2c997")
+		)
+		(pin "2"
+			(uuid "c471871b-c1b4-4a2e-a580-9372b90ffe5e")
+		)
+		(instances
+			(project "RC-5 Remote Controler"
+				(path "/4bd00356-cef3-482d-b273-e178df8048fd"
+					(reference "R2")
 					(unit 1)
 				)
 			)
@@ -1813,16 +2117,16 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 113.03 85.09 0)
+		(at 135.89 110.49 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "0e7de188-dff4-4a06-aaa0-25545eacee02")
-		(property "Reference" "#PWR01"
-			(at 113.03 91.44 0)
+		(uuid "1702bcc1-6e5f-4ccf-8a6e-06b06fdcff0a")
+		(property "Reference" "#PWR06"
+			(at 135.89 116.84 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1831,15 +2135,16 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 113.03 90.17 0)
+			(at 135.89 115.57 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(property "Footprint" ""
-			(at 113.03 85.09 0)
+			(at 135.89 110.49 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1848,7 +2153,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 113.03 85.09 0)
+			(at 135.89 110.49 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1857,7 +2162,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 113.03 85.09 0)
+			(at 135.89 110.49 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1866,12 +2171,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "2bf640d9-5692-423c-b037-3ae95f794fc2")
+			(uuid "b90e1fde-bac4-4496-8cdd-a77ce954d2d3")
 		)
 		(instances
-			(project "Controler"
-				(path "/27fccb53-199c-4659-8cda-f7853dbac730"
-					(reference "#PWR01")
+			(project "RC-5 Remote Controler"
+				(path "/4bd00356-cef3-482d-b273-e178df8048fd"
+					(reference "#PWR06")
 					(unit 1)
 				)
 			)
@@ -1879,16 +2184,15 @@
 	)
 	(symbol
 		(lib_id "Switch:SW_Push")
-		(at 113.03 104.14 0)
+		(at 104.14 87.63 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "1b9e95be-1893-4335-a506-98d60c3e7c54")
-		(property "Reference" "SW?"
-			(at 113.03 96.52 0)
+		(uuid "1858b250-0451-4139-aa34-d1b205eb2876")
+		(property "Reference" "SW3"
+			(at 104.14 83.058 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1896,15 +2200,16 @@
 			)
 		)
 		(property "Value" "SW_Push"
-			(at 113.03 99.06 0)
+			(at 104.14 82.55 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
-		(property "Footprint" ""
-			(at 113.03 99.06 0)
+		(property "Footprint" "Button_Switch_THT:SW_PUSH_6mm"
+			(at 104.14 82.55 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1913,7 +2218,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 113.03 99.06 0)
+			(at 104.14 82.55 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1922,7 +2227,7 @@
 			)
 		)
 		(property "Description" "Push button switch, generic, two pins"
-			(at 113.03 104.14 0)
+			(at 104.14 87.63 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1931,48 +2236,48 @@
 			)
 		)
 		(pin "1"
-			(uuid "5e85ee68-29a3-4fd3-a272-6ba85ff2a24f")
+			(uuid "3d24702f-74c8-4e7c-a76f-ea715b189e9d")
 		)
 		(pin "2"
-			(uuid "d8eb9e5c-7e0a-4b9f-8474-1560b0d17b89")
+			(uuid "b71528a7-c091-4b58-bbf7-11ff31936e1b")
 		)
 		(instances
-			(project "Controler"
-				(path "/27fccb53-199c-4659-8cda-f7853dbac730"
-					(reference "SW?")
+			(project "RC-5 Remote Controler"
+				(path "/4bd00356-cef3-482d-b273-e178df8048fd"
+					(reference "SW3")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "Device:R")
-		(at 134.62 83.82 90)
+		(lib_id "Device:LED")
+		(at 132.08 73.66 0)
+		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "25fef5c6-afed-41b7-b75d-625636508378")
-		(property "Reference" "R3"
-			(at 134.62 78.74 90)
+		(uuid "1878d6c0-5538-4fb3-b4eb-b4eb6803290a")
+		(property "Reference" "D1"
+			(at 132.08 68.58 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Value" "330R"
-			(at 134.62 81.28 90)
+		(property "Value" "LED"
+			(at 132.334 70.866 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Footprint" ""
-			(at 134.62 85.598 90)
+		(property "Footprint" "LED_THT:LED_D3.0mm_Horizontal_O3.81mm_Z6.0mm"
+			(at 132.08 73.66 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1981,7 +2286,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 134.62 83.82 0)
+			(at 132.08 73.66 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1990,7 +2295,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 134.62 83.82 0)
+			(at 132.08 73.66 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1999,32 +2304,39 @@
 			)
 		)
 		(pin "1"
-			(uuid "f0caddf3-5ada-408a-8ef5-2706bff20124")
+			(uuid "20046fbb-1eaf-4425-bb80-0823fb0ba1bc")
 		)
 		(pin "2"
-			(uuid "a96d4d84-f7eb-403f-bd32-fb70d8b60a13")
+			(uuid "b4ac0c03-38cf-4604-ba57-c4780c8a79d2")
 		)
 		(instances
-			(project "Controler"
-				(path "/27fccb53-199c-4659-8cda-f7853dbac730"
-					(reference "R3")
+			(project "RC-5 Remote Controler"
+				(path "/4bd00356-cef3-482d-b273-e178df8048fd"
+					(reference "D1")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 121.92 130.81 0)
+		(lib_id "Switch:SW_Push")
+		(at 104.14 97.79 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "409e2ff7-fb5b-44e1-8cc7-844cf8aabdef")
-		(property "Reference" "#PWR02"
-			(at 121.92 137.16 0)
+		(uuid "43636eb1-3d5c-4fff-bee3-a6f4664bbfa7")
+		(property "Reference" "SW4"
+			(at 104.14 93.218 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "SW_Push"
+			(at 104.14 92.71 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2032,8 +2344,68 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "GND"
-			(at 121.92 135.89 0)
+		(property "Footprint" "Button_Switch_THT:SW_PUSH_6mm"
+			(at 104.14 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 104.14 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Push button switch, generic, two pins"
+			(at 104.14 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "37a0c8f6-4e13-4c07-bd5e-0cc3c7e06e97")
+		)
+		(pin "2"
+			(uuid "ca35cf17-e873-4dde-a1c8-5117b807de89")
+		)
+		(instances
+			(project "RC-5 Remote Controler"
+				(path "/4bd00356-cef3-482d-b273-e178df8048fd"
+					(reference "SW4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+5V")
+		(at 90.17 97.79 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "46e1946f-3129-407b-9fc7-1e8c6a62fa91")
+		(property "Reference" "#PWR03"
+			(at 93.98 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V"
+			(at 85.852 97.79 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2041,7 +2413,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 121.92 130.81 0)
+			(at 90.17 97.79 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2050,7 +2422,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 121.92 130.81 0)
+			(at 90.17 97.79 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2058,8 +2430,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
-			(at 121.92 130.81 0)
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
+			(at 90.17 97.79 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2068,11 +2440,145 @@
 			)
 		)
 		(pin "1"
-			(uuid "7840bd05-9b79-435e-8367-7230d3df396c")
+			(uuid "7d48094d-2c2f-4226-a82a-2cbeee74cc55")
 		)
 		(instances
-			(project "Controler"
-				(path "/27fccb53-199c-4659-8cda-f7853dbac730"
+			(project "RC-5 Remote Controler"
+				(path "/4bd00356-cef3-482d-b273-e178df8048fd"
+					(reference "#PWR03")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 123.19 110.49 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "4e66ca8d-7799-4be8-b9ea-47b8be739af4")
+		(property "Reference" "#PWR04"
+			(at 123.19 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 123.19 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" ""
+			(at 123.19 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 123.19 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 123.19 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "c324acf9-a8ad-47fd-b54c-b99fe8c3725b")
+		)
+		(instances
+			(project "RC-5 Remote Controler"
+				(path "/4bd00356-cef3-482d-b273-e178df8048fd"
+					(reference "#PWR04")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 124.46 73.66 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "5224eeb2-2f32-44d9-9492-fcf811f18be0")
+		(property "Reference" "#PWR02"
+			(at 118.11 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 119.38 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" ""
+			(at 124.46 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 124.46 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 124.46 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "bbd5d5b2-e214-4602-b95c-b47b73be5f24")
+		)
+		(instances
+			(project "RC-5 Remote Controler"
+				(path "/4bd00356-cef3-482d-b273-e178df8048fd"
 					(reference "#PWR02")
 					(unit 1)
 				)
@@ -2080,16 +2586,622 @@
 		)
 	)
 	(symbol
-		(lib_id "MCU_Module:Arduino_Nano_v3.x")
-		(at 160.02 93.98 0)
+		(lib_id "power:+5V")
+		(at 168.91 55.88 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "4bb3af6b-0636-49ff-97e3-39861c31d3cf")
-		(property "Reference" "A?"
-			(at 164.7841 119.38 0)
+		(uuid "57843b14-2bd6-436d-944a-ffe06ad8b540")
+		(property "Reference" "#PWR01"
+			(at 168.91 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V"
+			(at 168.91 51.562 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 168.91 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 168.91 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
+			(at 168.91 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "905c88a7-eb10-4da8-859b-557b5547145f")
+		)
+		(instances
+			(project "RC-5 Remote Controler"
+				(path "/4bd00356-cef3-482d-b273-e178df8048fd"
+					(reference "#PWR01")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 142.24 73.66 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "5ed96905-9e2f-45fd-81bb-4bc6941c8091")
+		(property "Reference" "R1"
+			(at 142.24 68.326 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "330R"
+			(at 142.24 70.866 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+			(at 142.24 71.882 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 142.24 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 142.24 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "a8fd7f29-de81-46d4-bd94-de36b6e35296")
+		)
+		(pin "2"
+			(uuid "69a7bd6d-19be-42f4-99a0-40f62f2f4e7b")
+		)
+		(instances
+			(project "RC-5 Remote Controler"
+				(path "/4bd00356-cef3-482d-b273-e178df8048fd"
+					(reference "R1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 129.54 110.49 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "64eec87e-1e4d-46c2-86f5-7891edff074f")
+		(property "Reference" "#PWR05"
+			(at 129.54 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 129.54 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" ""
+			(at 129.54 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 129.54 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 129.54 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "5d7c9085-dc6a-4848-8e6b-f392b70ce606")
+		)
+		(instances
+			(project "RC-5 Remote Controler"
+				(path "/4bd00356-cef3-482d-b273-e178df8048fd"
+					(reference "#PWR05")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 142.24 110.49 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "6b06ec54-bc69-46b8-98d1-c854b1f900c8")
+		(property "Reference" "#PWR07"
+			(at 142.24 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 142.24 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" ""
+			(at 142.24 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 142.24 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 142.24 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "cdc25c56-76a8-4405-b9d2-4b153eaec28a")
+		)
+		(instances
+			(project "RC-5 Remote Controler"
+				(path "/4bd00356-cef3-482d-b273-e178df8048fd"
+					(reference "#PWR07")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 129.54 106.68 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "6c4f5908-11d3-4e76-86a7-97d92d063470")
+		(property "Reference" "R3"
+			(at 131.064 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10k"
+			(at 131.064 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+			(at 127.762 106.68 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 129.54 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 129.54 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "a6599332-5075-4612-b680-23b2e78e4567")
+		)
+		(pin "2"
+			(uuid "9d52ff1c-dedf-466c-98a2-bf0d5f85da69")
+		)
+		(instances
+			(project "RC-5 Remote Controler"
+				(path "/4bd00356-cef3-482d-b273-e178df8048fd"
+					(reference "R3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Switch:SW_Push")
+		(at 104.14 78.74 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "88ceb4a1-9797-4f1e-a018-2dac5d43fe29")
+		(property "Reference" "SW2"
+			(at 104.14 73.914 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "SW_Push"
+			(at 104.14 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Button_Switch_THT:SW_PUSH_6mm"
+			(at 104.14 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 104.14 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Push button switch, generic, two pins"
+			(at 104.14 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "c52755c4-6c18-4811-91f9-98a41ca05e23")
+		)
+		(pin "2"
+			(uuid "10b7cea5-ea11-486a-9ee5-e6d47e90375e")
+		)
+		(instances
+			(project "RC-5 Remote Controler"
+				(path "/4bd00356-cef3-482d-b273-e178df8048fd"
+					(reference "SW2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Switch:SW_Push")
+		(at 104.14 69.85 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "98951e1a-fb5a-4ae1-a5e3-5f254ee59d4b")
+		(property "Reference" "SW1"
+			(at 104.14 65.024 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "SW_Push"
+			(at 104.14 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Button_Switch_THT:SW_PUSH_6mm"
+			(at 104.14 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 104.14 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Push button switch, generic, two pins"
+			(at 104.14 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "a5798717-3734-4ccc-a95f-55b4d58275c1")
+		)
+		(pin "2"
+			(uuid "2ec8c642-b345-4d50-9e3b-f2efcd041b7a")
+		)
+		(instances
+			(project "RC-5 Remote Controler"
+				(path "/4bd00356-cef3-482d-b273-e178df8048fd"
+					(reference "SW1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 142.24 106.68 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "a631fb94-9296-4359-afe6-85a12283ffc8")
+		(property "Reference" "R5"
+			(at 143.764 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10k"
+			(at 143.764 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+			(at 140.462 106.68 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 142.24 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 142.24 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "1ff1b668-20c6-4faa-8bfd-b3b799e96e76")
+		)
+		(pin "2"
+			(uuid "92d86d0f-1d25-491e-97f9-032616db354c")
+		)
+		(instances
+			(project "RC-5 Remote Controler"
+				(path "/4bd00356-cef3-482d-b273-e178df8048fd"
+					(reference "R5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 163.83 116.84 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "b2636387-7581-4523-80a6-122156d0b423")
+		(property "Reference" "#PWR08"
+			(at 163.83 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 163.83 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 163.83 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 163.83 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 163.83 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "92a65623-bed6-454e-aa5e-e858391dd5d6")
+		)
+		(instances
+			(project "RC-5 Remote Controler"
+				(path "/4bd00356-cef3-482d-b273-e178df8048fd"
+					(reference "#PWR08")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "MCU_Module:Arduino_Nano_v3.x")
+		(at 163.83 83.82 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "be7ac58a-2fb0-42da-9d61-185f5079419a")
+		(property "Reference" "A1"
+			(at 168.5941 109.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2098,7 +3210,7 @@
 			)
 		)
 		(property "Value" "Arduino_Nano_v3.x"
-			(at 169.164 67.564 0)
+			(at 172.974 57.404 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2107,7 +3219,7 @@
 			)
 		)
 		(property "Footprint" "Module:Arduino_Nano"
-			(at 160.02 93.98 0)
+			(at 163.83 83.82 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2117,7 +3229,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.mouser.com/pdfdocs/Gravitech_Arduino_Nano3_0.pdf"
-			(at 160.02 93.98 0)
+			(at 163.83 83.82 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2126,7 +3238,7 @@
 			)
 		)
 		(property "Description" "Arduino Nano v3.x"
-			(at 160.02 93.98 0)
+			(at 163.83 83.82 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2135,437 +3247,99 @@
 			)
 		)
 		(pin "28"
-			(uuid "4e814cdf-ca4b-49ad-b687-465ad0252152")
+			(uuid "384691b4-54d9-4dce-a0d9-79a233a881d2")
 		)
 		(pin "29"
-			(uuid "af3e1428-4932-416d-8e25-5670ff2ab513")
+			(uuid "f30163ad-5e70-46ac-9f87-da2dabf1561c")
 		)
 		(pin "25"
-			(uuid "a7df2d09-6352-464a-abab-2baa39ea3f4e")
+			(uuid "0c67926a-b271-436c-b389-b2678b861434")
 		)
 		(pin "2"
-			(uuid "4df76f00-52ae-4417-86f5-e2cbc3f41de4")
+			(uuid "293f0b67-8410-476a-8925-d4652a3d7f6c")
 		)
 		(pin "22"
-			(uuid "ac58058b-4744-4bf1-a70b-73316d65e245")
+			(uuid "cd92de48-a664-4585-91f5-dd5aec23419e")
 		)
 		(pin "11"
-			(uuid "1f9ebfe6-1901-4383-afb0-e6d1c5b5b9ba")
+			(uuid "5f2bb168-a877-4071-bfac-e239de36de6e")
 		)
 		(pin "15"
-			(uuid "9eaa5a67-c7c2-4356-a836-66942ec28edf")
+			(uuid "0e049062-929b-428f-b279-5a32345279a7")
 		)
 		(pin "14"
-			(uuid "2466eeef-4ee9-4936-95f1-172afc6f5c10")
+			(uuid "e00b6c8c-e7e5-4bd3-b45a-46afe63dce8c")
 		)
 		(pin "30"
-			(uuid "50a6dc76-2545-42a9-950f-d28df01d8021")
+			(uuid "3e2eb5d2-7f2c-48df-add0-7d53fca8195e")
 		)
 		(pin "5"
-			(uuid "6839090e-58cf-4b3a-8994-7d99f5d235d3")
+			(uuid "7d16adc1-afad-4396-9d0a-8b1112230a0f")
 		)
 		(pin "18"
-			(uuid "a1721562-7762-433c-8c85-8499b688dbbb")
+			(uuid "d4baca2d-0696-4e42-b018-a49e84cc5e5e")
 		)
 		(pin "24"
-			(uuid "abebf527-891d-4569-97f6-eb32e0296d1c")
+			(uuid "f9f4b503-d6bf-413a-b94e-f75f16889c29")
 		)
 		(pin "4"
-			(uuid "fb32556f-531f-4fc8-9ddb-37f292358204")
+			(uuid "8e229e35-e7dd-4ccf-bfdd-6b9e21425902")
 		)
 		(pin "12"
-			(uuid "df8e3a16-a028-48e6-bcf7-95c1365ca57e")
+			(uuid "014aef57-ab7a-4998-913e-193e7122421f")
 		)
 		(pin "13"
-			(uuid "f35e621b-d737-4207-8415-e3dbdf7fb09a")
+			(uuid "cd253a90-9961-4631-ae0a-8757d2d1dc32")
 		)
 		(pin "1"
-			(uuid "756dd245-17bc-48e9-8b34-c0519d9b13d2")
+			(uuid "89210601-ed74-4464-ab45-3c7d5b8e5b31")
 		)
 		(pin "7"
-			(uuid "a85bff75-337a-4e10-ab27-b543002a34bb")
+			(uuid "9aaa2a51-8d3d-4f41-adf0-1f0b62d8a481")
 		)
 		(pin "10"
-			(uuid "0941d015-2e12-46e4-9956-e25fe56da408")
+			(uuid "8419b548-a8a8-41a2-8724-b94270b95663")
 		)
 		(pin "19"
-			(uuid "67982cfa-32f8-4024-b42f-548efdcfd503")
+			(uuid "a2bfd63e-adac-46d4-b745-8a91727b0e8d")
 		)
 		(pin "21"
-			(uuid "0a2a09eb-b05f-4ea0-8e59-ef0b1a9c0332")
+			(uuid "09de1de5-05dd-40e1-8e86-3bdf7fd9824c")
 		)
 		(pin "23"
-			(uuid "1a44af2e-1280-490d-be47-1f7c6b660f9a")
+			(uuid "a4f2d0d1-bf6a-486b-999a-4a475c2f5d6f")
 		)
 		(pin "6"
-			(uuid "d76d5242-b87a-4a33-a265-258144884f82")
+			(uuid "b201bf35-fa31-41ca-a4da-094572f3032d")
 		)
 		(pin "8"
-			(uuid "eee7f181-d2c2-4538-b1ab-580881b59461")
+			(uuid "b0279fc2-634b-4478-8cbe-c8ee17089e3d")
 		)
 		(pin "27"
-			(uuid "79daf572-435d-4c72-a2f4-345eb4eb2b4f")
+			(uuid "7c7f4a28-e424-4f5f-8bda-239250f5b100")
 		)
 		(pin "3"
-			(uuid "888ee050-e5f1-4d77-a074-8438a033d0a8")
+			(uuid "a381ee6a-f332-46f8-887b-a5c86e7e1464")
 		)
 		(pin "20"
-			(uuid "07673d5a-1cb2-4d7c-b4d6-85a716692b94")
+			(uuid "afe9a12b-aa81-43f9-97b7-d0df2ec87b49")
 		)
 		(pin "26"
-			(uuid "cd9959f7-3f6e-433f-8e76-8e13dc13ba11")
+			(uuid "14d1846c-8ce3-494a-9984-9cf2792833c3")
 		)
 		(pin "17"
-			(uuid "9647e18d-dafd-4d46-856b-15c56246d8c0")
+			(uuid "8d65cb8a-c08e-4d30-993f-5c1a1f617a43")
 		)
 		(pin "16"
-			(uuid "62772733-7a99-4df0-902c-8b7728140207")
+			(uuid "a25bfcd9-f7db-482d-890b-cdaa2cb5de8e")
 		)
 		(pin "9"
-			(uuid "9fdc8210-c07c-4c9d-8745-e4dcf559b976")
+			(uuid "fde2d745-49a1-4457-a839-e14f696701e0")
 		)
 		(instances
-			(project "Controler"
-				(path "/27fccb53-199c-4659-8cda-f7853dbac730"
-					(reference "A?")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 129.54 130.81 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "95fa2f3d-aeee-41aa-a4af-7391e902b72b")
-		(property "Reference" "#PWR03"
-			(at 129.54 137.16 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 129.54 135.89 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 129.54 130.81 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 129.54 130.81 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 129.54 130.81 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "ca41213f-cd12-433e-921e-78de6c9de610")
-		)
-		(instances
-			(project "Controler"
-				(path "/27fccb53-199c-4659-8cda-f7853dbac730"
-					(reference "#PWR03")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Switch:SW_Push")
-		(at 113.03 114.3 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "c441e314-21b6-4268-98a0-0eb7dcc9fa9b")
-		(property "Reference" "SW?"
-			(at 113.03 106.68 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "SW_Push"
-			(at 113.03 109.22 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 113.03 109.22 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 113.03 109.22 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Push button switch, generic, two pins"
-			(at 113.03 114.3 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "10c409f2-175d-4ec3-bb0b-7cdbfd015b74")
-		)
-		(pin "2"
-			(uuid "b5c17333-a7ab-4a7c-b92b-e8bd7feef4e8")
-		)
-		(instances
-			(project "Controler"
-				(path "/27fccb53-199c-4659-8cda-f7853dbac730"
-					(reference "SW?")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 160.02 127 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "d3068ec8-5b45-4410-8a36-7a0641751895")
-		(property "Reference" "#PWR04"
-			(at 160.02 133.35 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 160.02 132.08 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 160.02 127 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 160.02 127 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 160.02 127 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "c8244eaa-ece1-43cf-99e3-5c68f550f945")
-		)
-		(instances
-			(project "Controler"
-				(path "/27fccb53-199c-4659-8cda-f7853dbac730"
-					(reference "#PWR04")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:LED")
-		(at 121.92 83.82 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "fa961c04-9c94-4ea0-924c-581ff7e02099")
-		(property "Reference" "D1"
-			(at 120.3325 78.74 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "LED"
-			(at 120.3325 81.28 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 121.92 83.82 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 121.92 83.82 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 121.92 83.82 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "4584bb49-be94-42d0-87b9-20aaf219ec9c")
-		)
-		(pin "2"
-			(uuid "37342137-7ae3-4371-8a3b-9b51aafdaa4f")
-		)
-		(instances
-			(project "Controler"
-				(path "/27fccb53-199c-4659-8cda-f7853dbac730"
-					(reference "D1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 129.54 127 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "fe6e3305-6c77-469f-97ad-d86d27e6fadf")
-		(property "Reference" "R2"
-			(at 132.08 126.365 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "10k"
-			(at 132.08 128.905 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 127.762 127 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 129.54 127 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 129.54 127 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "80825652-e814-4b01-9e02-c495548f4eae")
-		)
-		(pin "2"
-			(uuid "5737ba69-0507-4d33-a22c-fc7fc2d149e7")
-		)
-		(instances
-			(project "Controler"
-				(path "/27fccb53-199c-4659-8cda-f7853dbac730"
-					(reference "R2")
+			(project "RC-5 Remote Controler"
+				(path "/4bd00356-cef3-482d-b273-e178df8048fd"
+					(reference "A1")
 					(unit 1)
 				)
 			)
