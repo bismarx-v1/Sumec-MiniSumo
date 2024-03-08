@@ -50,15 +50,15 @@ void loop() {
   laser_number = 0;
 
   // třídění laserů pomocí proměné
-  if (TfL_Get(TfL_Addr2) < Range && TfL_Get(0x12) > 0) {  // přední laser
+  if (TfL_Get(TfL_Addr2) < Range && TfL_Get(TfL_Addr2) > 0) {  // přední laser
     //laser_number = laser_number + 1;
   }
 
-  if (TfL_Get(TfL_Addr1) < Range && TfL_Get(0x11) > 0) {  // levý laser
+  if (TfL_Get(TfL_Addr1) < Range && TfL_Get(TfL_Addr1) > 0) {  // levý laser
     laser_number = laser_number + 3;
   }
 
-  if (TfL_Get(TfL_Addr3) < Range && TfL_Get(0x13) > 0) {  // pravý laser
+  if (TfL_Get(TfL_Addr3) < Range && TfL_Get(TfL_Addr3) > 0) {  // pravý laser
     laser_number = laser_number + 5;
   }
 
@@ -113,5 +113,12 @@ void loop() {
     MOTORS_Go(-255 / 2, 255 / 2);
     delay(500);
   }
-}
 
+  /*if(VarMode[0] == '2')
+  {
+    if(TfL_Get(TfL_Addr2) < 4)
+    {
+      scas = millis();
+    }
+  }*/
+}

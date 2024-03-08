@@ -14,6 +14,7 @@ void IRstart() {
 
       //vypsání všsch hodnot z IR, nejdřívě BIN potom DEC  
 
+      /*
       Serial.println("");
       Serial.print("recieved signal: ");
       Serial.print(results.value, BIN);
@@ -37,7 +38,7 @@ void IRstart() {
       Serial.println(comand);
       Serial.println("");
       Serial.println("==========");
-
+      */
 
       //fáze program
       if (adres == ADDR_PROGRAM) {
