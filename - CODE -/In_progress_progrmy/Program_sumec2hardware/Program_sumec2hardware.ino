@@ -98,23 +98,40 @@ void loop() {
       
   }
 
+  
+
   // dotek bílé čáry levým senzorem
   if (LINE_Get(1, hodnota_cary, 0) == 1) {
     MOTORS_Go(255 / 2, -255 / 2);
-    delay(500);
+    delay(cas_otaceni);
+
+    // při kolmém střetu s čárou
+    if(LINE_Get(2, hodnota_cary, 0) == 1)
+    {
+      delay(200);
+    }
 
     qre_number = 1;   // rozdeleni pro operace okolo hranic ringu
     cas_dotek = millis();
   }
 
+
   // dotek bílé čáry pravým senzorem
   if (LINE_Get(2, hodnota_cary, 0) == 1) {
     MOTORS_Go(-255 / 2, 255 / 2);
-    delay(500);
+    delay(cas_otaceni);
+
+    // při kolmém střetu s čárou
+    if(LINE_Get(1, hodnota_cary, 0) == 1)
+    {
+      delay(200);
+    }
 
     qre_number = 2;   // rozdeleni pro operace okolo hranic ringu
     cas_dotek = millis();
   }
+
+
 
 
   // nove vylepseni:
@@ -133,6 +150,6 @@ void loop() {
       delay(500);
     }
   }
-  
+
 }
 

@@ -22,6 +22,7 @@ int LedBlinkState = 0;
 int qre_number = 0;
 int hodnota_cary = 1000;  // určuje zdali je barva spíš bílá nebo černá
 int cas_dotek = 0;
+int cas_otaceni = 500;
 
 int stret_vzdalenost = 15;    // vzdalenost pri stretu
 int Range = 40;  //hodnota zpozorovani nepritele
