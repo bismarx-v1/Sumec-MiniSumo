@@ -46,15 +46,15 @@ void loop() {
   laser_number = 0;
 
   // třídění laserů pomocí proměné
-  if (TfL_Get(TfL_Addr2) < Range && TfL_Get(0x12) > 0) {  // přední laser
+  if (TfL_Get(TfL_Addr2) < Range && TfL_Get(TfL_Addr2) > 0) {  // přední laser
     //laser_number = laser_number + 1;
   }
 
-  if (TfL_Get(TfL_Addr1) < Range && TfL_Get(0x11) > 0) {  // levý laser
+  if (TfL_Get(TfL_Addr1) < Range && TfL_Get(TfL_Addr1) > 0) {  // levý laser
     laser_number = laser_number + 3;
   }
 
-  if (TfL_Get(TfL_Addr3) < Range && TfL_Get(0x13) > 0) {  // pravý laser
+  if (TfL_Get(TfL_Addr3) < Range && TfL_Get(TfL_Addr3) > 0) {  // pravý laser
     laser_number = laser_number + 5;
   }
 
@@ -102,12 +102,37 @@ void loop() {
   if (LINE_Get(1, hodnota_cary, 0) == 1) {
     MOTORS_Go(255 / 2, -255 / 2);
     delay(500);
+
+    qre_number = 1;   // rozdeleni pro operace okolo hranic ringu
+    cas_dotek = millis();
   }
 
   // dotek bílé čáry pravým senzorem
   if (LINE_Get(2, hodnota_cary, 0) == 1) {
     MOTORS_Go(-255 / 2, 255 / 2);
     delay(500);
+
+    qre_number = 2;   // rozdeleni pro operace okolo hranic ringu
+    cas_dotek = millis();
   }
+
+
+  // nove vylepseni:
+
+  if(cas_dotek-millis()<=300 && qre_number!=0 && TfL_Get(TfL_Addr2) < stret_vzdalenost)
+  {
+    if(qre_number == 1)
+    {
+      MOTORS_Go(-255, 0);
+      delay(500);
+    }
+
+    if(qre_number == 2)
+    {
+      MOTORS_Go(-255, 0);
+      delay(500);
+    }
+  }
+  
 }
 

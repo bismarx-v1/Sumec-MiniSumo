@@ -17,10 +17,15 @@
 const int LEDPin = 15;
 TaskHandle_t Task1;
 int LEDBlink = 0;
-int Range = 40;  //sensor range setting
-int hodnota_cary = 1000;  // určuje zdali je barva spíš bílá nebo černá
-int laser_number;  // třídící proměná TF_lun
 int LedBlinkState = 0;
+
+int qre_number = 0;
+int hodnota_cary = 1000;  // určuje zdali je barva spíš bílá nebo černá
+int cas_dotek = 0;
+
+int stret_vzdalenost = 15;    // vzdalenost pri stretu
+int Range = 40;  //hodnota zpozorovani nepritele
+int laser_number = 0;  // třídící proměná TF_lun
 
 //IR proměné a nastavení:
 int code;
