@@ -1,42 +1,37 @@
-![logo white](https://github.com/menmenson/RoboCop/assets/68673534/b9f19d0b-9e2c-4a56-9c07-d3ff169386fd)
+# MiniSumo "SUMEC" Robot Project
 
-# MiniSumo - "SUMEC"
-Tento projekt se zaměřuje na design a konstrukci robota pro soutěž v kategorii MiniSumo (10X10 cm, 500g).
+## Description
+This GitHub repository contains the code and documentation about student-built MiniSumo robot "SUMEC". MiniSumo robots are small autonomous robots designed to compete in MiniSumo competitions, where they attempt to push their opponents out of a ring.
+## Contents
+- **-CODE-:** Contains the source code for the MiniSumo robot, including firmware for microcontrollers, sensor libraries, and control algorithms.
+- **-DOCS-:** Includes robot documentation, rules for specific tournaments, and extras.
+- **-3D-:** Provides CAD files for the mechanical components of the robot, such as the chassis and sensor mounts.
+- **-PCB-:** Includes PCB files, we are using KiCAD for PCB designing.
 
-Start projektu: 2022
+## Getting Started
+1. Clone or download the repository to your local machine.
+2. Review the documentation to understand the components required and the assembly process.
+3. Assemble the mechanical components of the robot according to the provided CAD files.
+4. Set up the electronic components, including microcontrollers, sensors, and actuators.
+5. Program the robot using the provided codebase or develop your own algorithms.
+6. Test the robot in a controlled environment to ensure proper functionality.
+7. Participate in MiniSumo competitions or challenge your friends to friendly matches!
 
-## Součástky (BOM)
-- Akumulátor: - LiPo 450mAH, 11.1V nominalního napětí, 3S
-- H-můstek: - TB6612FNG
-- Motory: - 150 RPM, 12V x2
-- Senzor čáry: - QRE1113 x4
-- Laserove senzory: - VL53L0X x3
-- Stabilizator napětí - LD1117AV33
-- Konektor k baterce: XT-30
-- IČ Přijmač - (start kodů)
-## Full BOM:
+## Contributing
+Contributions to this project are welcome! If you have improvements, bug fixes, or new features to contribute, please follow these guidelines:
+- Fork the repository and create a new branch for your changes.
+- Make your changes and ensure that they adhere to the project's coding standards.
+- Test your changes thoroughly to ensure they do not introduce any regressions.
+- Submit a pull request with a clear description of the changes you've made.
 
-<img width="336" alt="image" src="https://github.com/Balcarj/RoboCop/assets/68673534/e388c010-468c-4aef-beb7-503766794905">
+## License
+This project is licensed under the [MIT License](LICENSE), which means you are free to use, modify, and distribute the code for both personal and commercial purposes. However, attribution to the original authors is appreciated.
 
-# TB6612FNG Pinout:
+## Acknowledgements
+We would like to thank all contributors and supporters of this project for their valuable contributions and feedback.
 
-![image](https://github.com/Balcarj/RoboCop/assets/120202417/d428edce-0110-4f3d-872b-86517cfe1f39)
+## Contact
+If you have any questions, suggestions, or issues regarding this project, please feel free to [contact us](menmenson09@gmail.com).
 
-# VL53L0X Pinout:
-![image](https://github.com/Balcarj/RoboCop/assets/120202417/961efc51-b523-499f-9c7b-6f78cc3e25a9)
 
-### Vývojová deska
-- ESP32
-- aktuální vývojová deska: ESP32 DevKit V1
-- Dual-core procesor s konektivitou WIFI a Bluetooth.
-### Důležite informace o ADC a WiFi:
-- ESP32 integruje dva 12bitové ADC SAR (Successive Approximation Register), které podporují celkem 18 měřicích kanálů (analogové piny). API ovladače ADC podporuje ADC1 (8 kanálů, připojených ke GPIO 32 - 39) a ADC2 (10 kanálů, připojených ke GPIO 0, 2, 4, 12 - 15 a 25 - 27). Použití ADC2 má však pro aplikaci určitá omezení:
-
-1. ADC2 je používán ovladačem Wi-Fi. Proto může aplikace používat ADC2 pouze tehdy, když není spuštěn ovladač Wi-Fi.
-
-2. Některé z pinů ADC2 se používají jako páskovací piny (GPIO 0, 2, 15), a proto je nelze volně používat. Tak je tomu v následujících oficiálních vývojových sadách (ESP32 DevKitC a ESP-WROVER-KIT).
-
-Více informací: https://docs.espressif.com/projects/esp-idf/en/v4.2/esp32/api-reference/peripherals/adc.html
-# PINOUT:
-
-![image](https://github.com/Balcarj/RoboCop/assets/120202417/4ce2e7c0-2c51-49bb-a4e9-0d59cccc6bc7)
+**Happy MiniSumo-ing!**
