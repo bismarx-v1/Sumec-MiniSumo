@@ -3,19 +3,19 @@
 ## Description
 This GitHub repository contains the code and documentation about student-built MiniSumo robot "SUMEC". MiniSumo robots are small autonomous robots designed to compete in MiniSumo competitions, where they attempt to push their opponents out of a ring.
 ## Contents
-- **-3D-:** Provides CAD files for the mechanical components of the robot, such as the chassis and sensor mounts.
-- **- CODE -:** Contains the source code for the MiniSumo robot, including firmware for microcontrollers, sensor libraries, and control algorithms.
-- **- DOCS -:** Includes robot documentation, rules for specific tournaments, and extras.
-- **- PCB -:** Includes PCB files, we are using KiCAD for PCB designing.
+- **- 3D -** Provides CAD files for the mechanical components of the robot, such as the chassis and sensor mounts.
+  
+- **- CODE -** Contains the source code for the MiniSumo robot, including firmware for microcontrollers, sensor libraries, and control algorithms.
+  
+- **- DOCS -** Includes robot documentation, rules for specific tournaments, and extras.
 
-## Getting Started
-1. Clone or download the repository to your local machine.
-2. Review the documentation to understand the components required and the assembly process.
-3. Assemble the mechanical components of the robot according to the provided CAD files.
-4. Set up the electronic components, including microcontrollers, sensors, and actuators.
-5. Program the robot using the provided codebase or develop your own algorithms.
-6. Test the robot in a controlled environment to ensure proper functionality.
-7. Participate in MiniSumo competitions or challenge your friends to friendly matches!
+- **- PCB -** Includes PCB files, we are using KiCAD for PCB designing.
+
+## Our suppliers
+Our component suppliers are: 
+
+- [Mouser Electronics](https://cz.mouser.com/?utm_id=93841169&gad_source=1)
+- 
 
 ## Contributing
 Contributions to this project are welcome! If you have improvements, bug fixes, or new features to contribute, please follow these guidelines:
