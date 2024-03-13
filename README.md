@@ -3,10 +3,10 @@
 ## Description
 This GitHub repository contains the code and documentation about student-built MiniSumo robot "SUMEC". MiniSumo robots are small autonomous robots designed to compete in MiniSumo competitions, where they attempt to push their opponents out of a ring.
 ## Contents
-- **-CODE-:** Contains the source code for the MiniSumo robot, including firmware for microcontrollers, sensor libraries, and control algorithms.
-- **-DOCS-:** Includes robot documentation, rules for specific tournaments, and extras.
 - **-3D-:** Provides CAD files for the mechanical components of the robot, such as the chassis and sensor mounts.
-- **-PCB-:** Includes PCB files, we are using KiCAD for PCB designing.
+- **- CODE -:** Contains the source code for the MiniSumo robot, including firmware for microcontrollers, sensor libraries, and control algorithms.
+- **- DOCS -:** Includes robot documentation, rules for specific tournaments, and extras.
+- **- PCB -:** Includes PCB files, we are using KiCAD for PCB designing.
 
 ## Getting Started
 1. Clone or download the repository to your local machine.
