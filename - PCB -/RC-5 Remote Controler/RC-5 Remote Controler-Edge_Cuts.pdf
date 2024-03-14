@@ -1,0 +1,496 @@
+%PDF-1.5
+%ÄÅÇÉ
+5 0 obj
+<< /Length 6 0 R /Filter /FlateDecode >>
+stream
+x⁄çOK
+¬@›œ)rÇ0…d“Ã	ózq6nºæ)Z[:S)!ﬁèóà1qöÂºU 8˚ﬁ?<«Ôq9ÅaÖWh∏B’≤ã5©$£BhPCV)∫B·⁄	Pã4±¬ô≥˚fDi†å≤„sµ¶ïÍ∞o”™˛íÑ}úŸÈŸ¸∑m˛øÁú^õÊ}ﬂ©:V
+endstream
+endobj
+6 0 obj
+144
+endobj
+18 0 obj
+[7 0 R 8 0 R 9 0 R 10 0 R 11 0 R 12 0 R 13 0 R 14 0 R 15 0 R 16 0 R 17 0 R]
+endobj
+19 0 obj
+<<
+/Type /Page
+/Parent 1 0 R
+/Resources <<
+    /ProcSet [/PDF /Text /ImageC /ImageB]
+    /Font 2 0 R
+    /XObject 3 0 R >>
+/MediaBox [0 0 841.896 595.296]
+/Contents 5 0 R
+/Annots 18 0 R>>
+endobj
+20 0 obj
+<</S /GoTo /D [19 0 R /Fit]
+>>
+endobj
+23 0 obj
+<</S /GoTo /D [19 0 R /FitR 456 452 482 347]
+>>
+endobj
+25 0 obj
+<</S /GoTo /D [19 0 R /FitR 429 460 447 269]
+>>
+endobj
+27 0 obj
+<</S /GoTo /D [19 0 R /FitR 440 402 452 211]
+>>
+endobj
+29 0 obj
+<</S /GoTo /D [19 0 R /FitR 411 402 425 211]
+>>
+endobj
+31 0 obj
+<</S /GoTo /D [19 0 R /FitR 456 405 486 301]
+>>
+endobj
+33 0 obj
+<</S /GoTo /D [19 0 R /FitR 364 435 543 298]
+>>
+endobj
+35 0 obj
+<</S /GoTo /D [19 0 R /FitR 378 452 404 347]
+>>
+endobj
+37 0 obj
+<</S /GoTo /D [19 0 R /FitR 357 301 498 267]
+>>
+endobj
+39 0 obj
+<</S /GoTo /D [19 0 R /FitR 378 405 407 301]
+>>
+endobj
+41 0 obj
+<</S /GoTo /D [19 0 R /FitR 417 460 435 269]
+>>
+endobj
+43 0 obj
+<</S /GoTo /D [19 0 R /FitR 427 431 441 240]
+>>
+endobj
+45 0 obj
+<< /BaseFont /Helvetica
+   /Type /Font
+   /Subtype /Type1
+   /Encoding /WinAnsiEncoding
+>>
+endobj
+46 0 obj
+<< /BaseFont /Helvetica-Oblique
+   /Type /Font
+   /Subtype /Type1
+   /Encoding /WinAnsiEncoding
+>>
+endobj
+47 0 obj
+<< /BaseFont /Helvetica-Bold
+   /Type /Font
+   /Subtype /Type1
+   /Encoding /WinAnsiEncoding
+>>
+endobj
+48 0 obj
+<< /BaseFont /Helvetica-BoldOblique
+   /Type /Font
+   /Subtype /Type1
+   /Encoding /WinAnsiEncoding
+>>
+endobj
+2 0 obj
+<<
+    /KicadFont 45 0 R
+    /KicadFontI 46 0 R
+    /KicadFontB 47 0 R
+    /KicadFontBI 48 0 R
+>>
+endobj
+3 0 obj
+<<
+>>
+endobj
+7 0 obj
+<<
+/Type /Annot
+/Subtype /Link
+/Rect [456.95 347.362 482.669 452.049]
+/Border [16 16 0]
+/A << /Type /Action /S /JavaScript /JS (ShM\([
+["Reference designator = SW2"],
+["Value = SW_Push"],
+["Footprint = SW_PUSH_6mm"],
+["Description = Push button switch, generic, two pins"],
+]\);) >>
+>>
+endobj
+8 0 obj
+<<
+/Type /Annot
+/Subtype /Link
+/Rect [429.539 269.523 447.784 460.439]
+/Border [16 16 0]
+/A << /Type /Action /S /JavaScript /JS (ShM\([
+["Reference designator = R4"],
+["Value = 10k"],
+["Footprint = R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"],
+]\);) >>
+>>
+endobj
+9 0 obj
+<<
+/Type /Annot
+/Subtype /Link
+/Rect [440.008 211.895 452.404 402.811]
+/Border [16 16 0]
+/A << /Type /Action /S /JavaScript /JS (ShM\([
+["Reference designator = R3"],
+["Value = 10k"],
+["Footprint = R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"],
+]\);) >>
+>>
+endobj
+10 0 obj
+<<
+/Type /Annot
+/Subtype /Link
+/Rect [411.822 211.895 425.268 402.811]
+/Border [16 16 0]
+/A << /Type /Action /S /JavaScript /JS (ShM\([
+["Reference designator = R2"],
+["Value = 10k"],
+["Footprint = R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"],
+]\);) >>
+>>
+endobj
+11 0 obj
+<<
+/Type /Annot
+/Subtype /Link
+/Rect [456.95 301.299 486.42 405.986]
+/Border [16 16 0]
+/A << /Type /Action /S /JavaScript /JS (ShM\([
+["Reference designator = SW3"],
+["Value = SW_Push"],
+["Footprint = SW_PUSH_6mm"],
+["Description = Push button switch, generic, two pins"],
+]\);) >>
+>>
+endobj
+12 0 obj
+<<
+/Type /Annot
+/Subtype /Link
+/Rect [364.881 298.825 543.453 435.209]
+/Border [16 16 0]
+/A << /Type /Action /S /JavaScript /JS (ShM\([
+["Reference designator = A1"],
+["Value = Arduino_Nano_v3.x"],
+["Footprint = Arduino_Nano"],
+["Datasheet = http://www.mouser.com/pdfdocs/Gravitech_Arduino_Nano3_0.pdf", "http://www.mouser.com/pdfdocs/Gravitech_Arduino_Nano3_0.pdf"],
+["Description = Arduino Nano v3.x"],
+]\);) >>
+>>
+endobj
+13 0 obj
+<<
+/Type /Annot
+/Subtype /Link
+/Rect [378.288 347.362 404.008 452.049]
+/Border [16 16 0]
+/A << /Type /Action /S /JavaScript /JS (ShM\([
+["Reference designator = SW1"],
+["Value = SW_Push"],
+["Footprint = SW_PUSH_6mm"],
+["Description = Push button switch, generic, two pins"],
+]\);) >>
+>>
+endobj
+14 0 obj
+<<
+/Type /Annot
+/Subtype /Link
+/Rect [357.317 267.134 498.519 301.981]
+/Border [16 16 0]
+/A << /Type /Action /S /JavaScript /JS (ShM\([
+["Reference designator = D1"],
+["Value = LED"],
+["Footprint = LED_D3.0mm_Horizontal_O3.81mm_Z6.0mm"],
+]\);) >>
+>>
+endobj
+15 0 obj
+<<
+/Type /Annot
+/Subtype /Link
+/Rect [378.288 301.299 407.759 405.986]
+/Border [16 16 0]
+/A << /Type /Action /S /JavaScript /JS (ShM\([
+["Reference designator = SW4"],
+["Value = SW_Push"],
+["Footprint = SW_PUSH_6mm"],
+["Description = Push button switch, generic, two pins"],
+]\);) >>
+>>
+endobj
+16 0 obj
+<<
+/Type /Annot
+/Subtype /Link
+/Rect [417.492 269.523 435.737 460.439]
+/Border [16 16 0]
+/A << /Type /Action /S /JavaScript /JS (ShM\([
+["Reference designator = R5"],
+["Value = 10k"],
+["Footprint = R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"],
+]\);) >>
+>>
+endobj
+17 0 obj
+<<
+/Type /Annot
+/Subtype /Link
+/Rect [427.961 240.695 441.406 431.611]
+/Border [16 16 0]
+/A << /Type /Action /S /JavaScript /JS (ShM\([
+["Reference designator = R1"],
+["Value = 330R"],
+["Footprint = R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"],
+]\);) >>
+>>
+endobj
+4 0 obj
+<< /JavaScript
+ << /Names
+    [ (JSInit) << /Type /Action /S /JavaScript /JS (
+function ShM\(aEntries\) {
+    var aParams = [];
+    for \(var i in aEntries\) {
+        aParams.push\({
+            cName: aEntries[i][0],
+            cReturn: aEntries[i][1]
+        }\)
+    }
+
+    var cChoice = app.popUpMenuEx.apply\(app, aParams\);
+    if \(cChoice != null && cChoice.substring\(0, 1\) == '#'\) this.pageNum = parseInt\(cChoice.slice\(1\)\);
+    else if \(cChoice != null && cChoice.substring\(0, 4\) == 'http'\) app.launchURL\(cChoice\);
+}
+) >> ]
+ >>
+>>
+endobj
+1 0 obj
+<<
+/Type /Pages
+/Kids [
+19 0 R
+]
+/Count 1
+>>
+endobj
+49 0 obj
+<<
+/Producer (KiCad PDF)
+/CreationDate (D:20240314131315)
+/Creator (PCBNEW)
+/Title (RC-5 Remote Controler-Edge_Cuts.pdf)
+>>
+endobj
+34 0 obj
+<<
+/Title (A1)
+/Parent 22 0 R
+/Next 38 0 R
+/A 33 0 R
+>>
+endobj
+38 0 obj
+<<
+/Title (D1)
+/Parent 22 0 R
+/Next 44 0 R
+/Prev 34 0 R
+/A 37 0 R
+>>
+endobj
+44 0 obj
+<<
+/Title (R1)
+/Parent 22 0 R
+/Next 30 0 R
+/Prev 38 0 R
+/A 43 0 R
+>>
+endobj
+30 0 obj
+<<
+/Title (R2)
+/Parent 22 0 R
+/Next 28 0 R
+/Prev 44 0 R
+/A 29 0 R
+>>
+endobj
+28 0 obj
+<<
+/Title (R3)
+/Parent 22 0 R
+/Next 26 0 R
+/Prev 30 0 R
+/A 27 0 R
+>>
+endobj
+26 0 obj
+<<
+/Title (R4)
+/Parent 22 0 R
+/Next 42 0 R
+/Prev 28 0 R
+/A 25 0 R
+>>
+endobj
+42 0 obj
+<<
+/Title (R5)
+/Parent 22 0 R
+/Next 36 0 R
+/Prev 26 0 R
+/A 41 0 R
+>>
+endobj
+36 0 obj
+<<
+/Title (SW1)
+/Parent 22 0 R
+/Next 24 0 R
+/Prev 42 0 R
+/A 35 0 R
+>>
+endobj
+24 0 obj
+<<
+/Title (SW2)
+/Parent 22 0 R
+/Next 32 0 R
+/Prev 36 0 R
+/A 23 0 R
+>>
+endobj
+32 0 obj
+<<
+/Title (SW3)
+/Parent 22 0 R
+/Next 40 0 R
+/Prev 24 0 R
+/A 31 0 R
+>>
+endobj
+40 0 obj
+<<
+/Title (SW4)
+/Parent 22 0 R
+/Prev 32 0 R
+/A 39 0 R
+>>
+endobj
+22 0 obj
+<<
+/Title (Footprints)
+/Parent 21 0 R
+/Count -11
+/First 34 0 R
+/Last 40 0 R
+/A 20 0 R
+>>
+endobj
+21 0 obj
+<<
+/Title (Page 1)
+/Parent 50 0 R
+/Count -1
+/First 22 0 R
+/Last 22 0 R
+/A 20 0 R
+>>
+endobj
+50 0 obj
+<< /Type /Outlines
+   /Count 13
+   /First 21 0 R
+   /Last 21 0 R
+>>
+endobj
+51 0 obj
+<<
+/Type /Catalog
+/Pages 1 0 R
+/Version /1.5
+/PageMode /UseOutlines
+/Outlines 50 0 R
+/Names 4 0 R
+/PageLayout /SinglePage
+>>
+endobj
+xref
+0 52
+0000000000 65535 f 
+0000005756 00000 n 
+0000001752 00000 n 
+0000001865 00000 n 
+0000005187 00000 n 
+0000000015 00000 n 
+0000000233 00000 n 
+0000001886 00000 n 
+0000002187 00000 n 
+0000002465 00000 n 
+0000002743 00000 n 
+0000003022 00000 n 
+0000003323 00000 n 
+0000003756 00000 n 
+0000004059 00000 n 
+0000004325 00000 n 
+0000004628 00000 n 
+0000004907 00000 n 
+0000000252 00000 n 
+0000000344 00000 n 
+0000000548 00000 n 
+0000006974 00000 n 
+0000006869 00000 n 
+0000000595 00000 n 
+0000006624 00000 n 
+0000000659 00000 n 
+0000006368 00000 n 
+0000000723 00000 n 
+0000006283 00000 n 
+0000000787 00000 n 
+0000006198 00000 n 
+0000000851 00000 n 
+0000006710 00000 n 
+0000000915 00000 n 
+0000005956 00000 n 
+0000000979 00000 n 
+0000006538 00000 n 
+0000001043 00000 n 
+0000006028 00000 n 
+0000001107 00000 n 
+0000006796 00000 n 
+0000001171 00000 n 
+0000006453 00000 n 
+0000001235 00000 n 
+0000006113 00000 n 
+0000001299 00000 n 
+0000001406 00000 n 
+0000001521 00000 n 
+0000001633 00000 n 
+0000005816 00000 n 
+0000007074 00000 n 
+0000007158 00000 n 
+trailer
+<< /Size 52 /Root 51 0 R /Info 49 0 R >>
+startxref
+7299
+%%EOF
