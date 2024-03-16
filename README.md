@@ -26,7 +26,7 @@ Contributions to this project are welcome! If you have improvements, bug fixes, 
 We would like to thank our school SPŠ na Proseku, our teachers, our principle, for providing resources, knowledge and top-notch equipment.
 
 ## Contact
-If you have any questions, suggestions, or issues regarding this project, please feel free to [contact us](menmenson09@gmail.com). And follow us on the social media! @sumec_minisumo_bot
+If you have any questions, suggestions, or issues regarding this project, please feel free to contact us: menmenson09@gmail.com. And follow us on the social media! @sumec_minisumo_bot
 
 
 **Sending love, from Czech Republic!**
