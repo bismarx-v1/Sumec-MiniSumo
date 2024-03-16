@@ -15,23 +15,18 @@ This GitHub repository contains the code and documentation about student-built M
 Our component suppliers are: 
 
 - [Mouser Electronics](https://cz.mouser.com/?utm_id=93841169&gad_source=1)
-- 
+- [GM Electronics](https://www.gme.cz)
+- [TME](https://www.tme.eu/cz/en/)
+- [BotLand](https://botland.cz/?gad_source=1)
 
 ## Contributing
-Contributions to this project are welcome! If you have improvements, bug fixes, or new features to contribute, please follow these guidelines:
-- Fork the repository and create a new branch for your changes.
-- Make your changes and ensure that they adhere to the project's coding standards.
-- Test your changes thoroughly to ensure they do not introduce any regressions.
-- Submit a pull request with a clear description of the changes you've made.
-
-## License
-This project is licensed under the [MIT License](LICENSE), which means you are free to use, modify, and distribute the code for both personal and commercial purposes. However, attribution to the original authors is appreciated.
+Contributions to this project are welcome! If you have improvements, bug fixes, or new features to contribute, feel free to contact us!
 
 ## Acknowledgements
-We would like to thank all contributors and supporters of this project for their valuable contributions and feedback.
+We would like to thank our school SPŠ na Proseku, our teachers, our principle, for providing resources, knowledge and top-notch equipment.
 
 ## Contact
-If you have any questions, suggestions, or issues regarding this project, please feel free to [contact us](menmenson09@gmail.com).
+If you have any questions, suggestions, or issues regarding this project, please feel free to [contact us](menmenson09@gmail.com). And follow us on the social media! @sumec_minisumo_bot
 
 
-**Happy MiniSumo-ing!**
+**Sending love, from Czech Republic!**
