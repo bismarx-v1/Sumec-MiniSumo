@@ -3,11 +3,11 @@ int LINE_Get(int LINE_Sensor, int LINE_Threshold, int LINE_Mode=0) {
 		case 1:	//Front Left
 			switch(LINE_Mode) {	//Mode
 				case 0:	//Mode 0
-					return (analogRead(5)<LINE_Threshold ? 1: 0);
+					return (analogRead(19)<LINE_Threshold ? 1: 0);
 					break;
 					
 				case 1:	//Mode 1
-					return analogRead(5);
+					return analogRead(10);
 					break;
 			}
 			break;
@@ -27,11 +27,11 @@ int LINE_Get(int LINE_Sensor, int LINE_Threshold, int LINE_Mode=0) {
 		case 3:	//Front Right
 			switch(LINE_Mode) {	//Mode
 				case 0:	//Mode 0
-					return (analogRead(6)<LINE_Threshold ? 1: 0);
+					return (analogRead(9)<LINE_Threshold ? 1: 0);
 					break;
 					
 				case 1:	//Mode 1
-					return analogRead(6);
+					return analogRead(9);
 					break;
 			}
 			break;
@@ -39,11 +39,11 @@ int LINE_Get(int LINE_Sensor, int LINE_Threshold, int LINE_Mode=0) {
 		case 4:	//Rear
 			switch(LINE_Mode) {	//Mode
 				case 0:	//Mode 0
-					return (analogRead(4)<LINE_Threshold ? 1: 0);
+					return (analogRead(8)<LINE_Threshold ? 1: 0);
 					break;
 					
 				case 1:	//Mode 1
-					return analogRead(4);
+					return analogRead(8);
 					break;
 			}
 			break;
