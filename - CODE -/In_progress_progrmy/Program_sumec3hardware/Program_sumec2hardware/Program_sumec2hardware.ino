@@ -1,8 +1,10 @@
+#include <SharpIR.h>
 #include <IRremote.h>
 #include <Wire.h>
 #include "motors.h"
 #include "line.h"
 #include "TfLunaEsp32S3.h"
+//#include "Sharp.h"
 #include "rogram_sumec2HW_promene.h"
 #include "Program_sumec2_funkce.h"
 

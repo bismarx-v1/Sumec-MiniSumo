@@ -5,7 +5,7 @@ void setup() {
 }
 
 void loop() {
-	Serial.printf("%i\n", millis());
+	Serial.println("FFF");
 	digitalWrite(47, 1);
 	digitalWrite(48, 0);
 	delay(100);
