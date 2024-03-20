@@ -13,8 +13,8 @@ const int regDataReboot = 0x02;				//data for reboot
 //..//    SETTINGS    //
 //.////////////////////
 const int regDataAddr = 0x13;				//new address somewhere from 0x08 to 0x77
-const int I2cSda = 21;						//sda pin
-const int I2cScl = 22;						//sdc pin
+const int I2cSda = 18;						//sda pin
+const int I2cScl = 17;						//sdc pin
 
 void setup() {
 	Serial.begin(115200);
