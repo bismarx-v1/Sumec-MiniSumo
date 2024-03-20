@@ -1,8 +1,8 @@
 //I2C Scanner
 #include <Wire.h>
 
-const int Sda = 21;
-const int Scl = 22;//*/		//Esp32
+const int Sda = 18;
+const int Scl = 17;//*/		//Esp32
 /*const int Sda = 18;
 const int Scl = 17;//*/		//Esp32S3
 
