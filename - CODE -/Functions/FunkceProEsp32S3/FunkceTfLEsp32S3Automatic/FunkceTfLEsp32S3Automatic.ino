@@ -14,10 +14,11 @@ void setup() {
 }
 
 void loop() {
-	Serial.print(TfL_IsOnline(0x10));	//Check if there is a luna on this address; 0 if yes 1 if no; expected 1
-	Serial.print(TfL_IsOnline(0x11));	//Check if there is a luna on this address; 0 if yes 1 if no; expected 0
-	Serial.print(TfL_IsOnline(0x12));	//Check if there is a luna on this address; 0 if yes 1 if no; expected 0
-	Serial.println(TfL_IsOnline(0x13));	//Check if there is a luna on this address; 0 if yes 1 if no; expected 0
+	Serial.print(TfL_IsOnline(0x00));	//Check if there is a luna on this address; 0 if yes 1 if no;
+	Serial.print(TfL_IsOnline(0x10));	//Check if there is a luna on this address; 0 if yes 1 if no;
+	Serial.print(TfL_IsOnline(0x11));	//Check if there is a luna on this address; 0 if yes 1 if no;
+	Serial.print(TfL_IsOnline(0x12));	//Check if there is a luna on this address; 0 if yes 1 if no;
+	Serial.println(TfL_IsOnline(0x13));	//Check if there is a luna on this address; 0 if yes 1 if no;
 	
 	Serial.print("Left:\t");
 	Serial.println(TfL_Get(tfAddr1));	//TfL Lib - Get from sensor
