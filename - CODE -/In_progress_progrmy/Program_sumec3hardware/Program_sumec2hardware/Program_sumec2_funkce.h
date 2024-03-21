@@ -53,6 +53,7 @@ void IRstart() {
         if (comand == DohaioID) {
           Serial.println("jedeme");
           start_control = 1;
+          LEDBlink = 0;
         } else {
           Serial.println("špatný code");
         }
