@@ -22,9 +22,12 @@ void setup() {
   TfL_Setup();  //stup pro luny
   irrecv.enableIRIn();  //čekání na IR 
   IRstart(); //čekání na IR
-  //digitalWrite(LEDPin, 1); 
 
-  xTaskCreatePinnedToCore(CodeForTask1, "Task_m", 3500, NULL, 0, &Task1, 0); /*1, 2, 7, 6*/
+  // Rybnik pravidla - otoceni k oponentovy
+
+    MOTORS_Go(255, -255);
+    delay(800);
+
 }
 
 //======================================setup -> konec, loop -> začátek================================================
@@ -32,10 +35,11 @@ void setup() {
 void loop() {
 
   start_control = 0;
+  //blink();
 
   // po stisknutí TEST tlačítka nastane čekání na IR
   if (digitalRead(tlacitko) >= 1) {
-    LEDBlink = 1;
+    LEDBlink = 0;
     MOTORS_Go(0, 0);
     IRstart();
 
@@ -102,23 +106,54 @@ void loop() {
 
     Serial.println("qre 1");
     MOTORS_Go(255, -255);
-    delay(cas_otaceni);
+    if(qre_stav == 1)
+    {
+      delay(cas_otaceni*2);
+      qre_stav = 0;    
+    }
+    else
+    {
+      delay(cas_otaceni); 
+      qre_stav = 1;
+      cas_dotek = millis();   
+    }
 
     //qre_number = 1;   // rozdeleni pro operace okolo hranic ringu
     //cas_dotek = millis();
   }
 
-
   // dotek bílé čáry pravým senzorem
   if (LINE_Get(3, hodnota_cary, 0) == 1) {
     
-    MOTORS_Go(-255, 255);
-    delay(cas_otaceni);
     Serial.println("qre 2");
+    MOTORS_Go(-255, 255);
+    if(qre_stav == 1)
+    {
+      delay(cas_otaceni*2);
+      qre_stav = 0;  
+    }
+    else
+    {
+      delay(cas_otaceni); 
+      qre_stav = 1;
+      cas_dotek = millis();
+    }
+
 
     //qre_number = 2;   // rozdeleni pro operace okolo hranic ringu
     //cas_dotek = millis();
   }
+
+  if(millis() - cas_dotek >= cas_otaceni+200)
+  {
+    qre_stav = 0;  
+  }
+
+  /*if(LINE_Get(3, hodnota_cary, 0) == 1 && LINE_Get(2, hodnota_cary, 0) == 1)
+  {
+    MOTORS_Go(-255, 255);
+    delay(cas_otaceni+100);
+  }*/
   
 
 
