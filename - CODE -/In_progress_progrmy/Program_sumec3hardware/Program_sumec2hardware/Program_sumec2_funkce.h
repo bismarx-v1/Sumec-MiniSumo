@@ -53,7 +53,7 @@ void IRstart() {
         if (comand == DohaioID) {
           Serial.println("jedeme");
           start_control = 1;
-          LEDBlink = 0;
+          LEDBlink = 1;
         } else {
           Serial.println("špatný code");
         }
@@ -67,9 +67,9 @@ void IRstart() {
 
 //================================LED blikání -> začátek================================
 
-void CodeForTask1(void * parameter) {	/*Code for core 0*/
+void blink()
+{
 	
-	for(;;) {	//void loop()
 		switch(LEDBlink) {
 			case 0:
 				if(LedBlinkState != 0) {
@@ -78,17 +78,22 @@ void CodeForTask1(void * parameter) {	/*Code for core 0*/
 					break;
 				}
 				
-				else {
+				else 
+        {
 					break;
 				}
 			
 			case 1:
 				if(LedBlinkState != 1) {
 					//LedBlinkState = 1;
-					digitalWrite(LEDPin, 1);
-					delay(100);
-					digitalWrite(LEDPin, 0);
-					delay(100);
+          while(millis()%400 > 200)
+          {
+					digitalWrite(LEDPin, HIGH);
+          }
+          while(millis()%400 < 200)
+          {
+					digitalWrite(LEDPin, LOW);
+          }
 					break;
 				}
 				
@@ -114,7 +119,6 @@ void CodeForTask1(void * parameter) {	/*Code for core 0*/
 					break;
 				}
 		}
-	}
 }
 //================================LED blikání -> konec================================
 

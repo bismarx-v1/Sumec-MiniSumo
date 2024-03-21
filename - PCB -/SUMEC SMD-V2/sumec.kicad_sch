@@ -1334,7 +1334,7 @@
 		)
 		(uuid "cfe10bc0-4e7a-493c-9fb6-0f9ed602f83c")
 		(property "Sheetname" "SENSORS"
-			(at 137.16 74.93 0)
+			(at 135.636 73.406 0)
 			(effects
 				(font
 					(face "Bahnschrift")
