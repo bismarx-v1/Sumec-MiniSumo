@@ -1575,7 +1575,7 @@
 	)
 	(wire
 		(pts
-			(xy 157.48 82.55) (xy 166.37 82.55)
+			(xy 157.48 82.55) (xy 165.1 82.55)
 		)
 		(stroke
 			(width 0)
@@ -2531,7 +2531,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 166.37 82.55 90)
+		(at 165.1 82.55 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2539,7 +2539,7 @@
 		(dnp no)
 		(uuid "c7ae5a68-6588-4624-95b5-453521fca85e")
 		(property "Reference" "#PWR045"
-			(at 172.72 82.55 0)
+			(at 171.45 82.55 0)
 			(effects
 				(font
 					(face "Bahnschrift")
@@ -2549,7 +2549,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 166.37 85.09 90)
+			(at 165.1 85.09 90)
 			(effects
 				(font
 					(face "Bahnschrift")
@@ -2559,7 +2559,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 166.37 82.55 0)
+			(at 165.1 82.55 0)
 			(effects
 				(font
 					(face "Bahnschrift")
@@ -2569,7 +2569,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 166.37 82.55 0)
+			(at 165.1 82.55 0)
 			(effects
 				(font
 					(face "Bahnschrift")
@@ -2579,7 +2579,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 166.37 82.55 0)
+			(at 165.1 82.55 0)
 			(effects
 				(font
 					(size 1.27 1.27)
