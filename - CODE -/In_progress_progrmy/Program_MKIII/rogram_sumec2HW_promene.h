@@ -1,5 +1,6 @@
 #define tlacitko 2
 #define led 47
+#define scharp1 35
 //#define RC5 1
 
 #if defined (RC5)
@@ -30,6 +31,9 @@ int cas_otaceni = 300;
 int stret_vzdalenost = 20;    // vzdalenost pri stretu
 int Range = 20;  //hodnota zpozorovani nepritele    -  zmenšen kvůli testování
 int laser_number = 0;  // třídící proměná TF_lun
+bool tactic = 0;
+int sharp1 = 0;
+int sharp2 = 0;     //pravy
 
 //IR proměné a nastavení:
 int code;

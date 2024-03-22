@@ -10,29 +10,17 @@
 void MOTORS_Setup() {
   pinMode(MOTORS_Left, OUTPUT);
   pinMode(MOTORS_Right, OUTPUT);
-  pinMode(MOTORS_LeftSpeed, OUTPUT);
-  pinMode(MOTORS_RightSpeed, OUTPUT);
+  ledcAttachPin(MOTORS_LeftSpeed, 0);
+  ledcAttachPin(MOTORS_RightSpeed, 1);
   pinMode(nSLEEP, OUTPUT);
+
+  MOTORS_Go(100, 255);
+
 }
-
-//brake function
-/*void MOTORS_Brake() {
-  digitalWrite(MOTORS_LeftForward, LOW);
-  digitalWrite(MOTORS_RightForward, LOW);
-  digitalWrite(MOTORS_LeftBackward, LOW);
-  digitalWrite(MOTORS_RightBackward, LOW);
-  ledcWrite(0, 255);
-  ledcWrite(1, 255);
-  digitalWrite(MOTORS_STBY, HIGH);
-}*/
-
-
 
 //universal motors function
 //ex.: MOTORS_Go([SpeedLeft], [SpeedRight]);
 //speed can be from -255 to 255
-
-
 
 void setup() {
 
@@ -44,56 +32,53 @@ void setup() {
   pinMode(MOTORS_RightSpeed, OUTPUT);
   pinMode(nSLEEP, OUTPUT);
 
-
+  Serial.begin(9600);
 }
 
 void MOTORS_Go(int MOTORS_SpeedLeft, int MOTORS_SpeedRight) 
 {
 
-  switch(MOTORS_SpeedLeft)
+  if(MOTORS_SpeedLeft > 0)
   {
-    case 255:
-      digitalWrite(MOTORS_LeftSpeed, HIGH);  //set speed for right motor
-      digitalWrite(MOTORS_Left, LOW);
-      break;
-
-    case 0:
-      digitalWrite(MOTORS_LeftSpeed, LOW);  //set speed for right motor
-      digitalWrite(MOTORS_Left, LOW);
-      break;
-
-    case -255:
-      digitalWrite(MOTORS_LeftSpeed, HIGH);  //set speed for right motor
-      digitalWrite(MOTORS_Left, HIGH);   
+    analogWrite(MOTORS_LeftSpeed, MOTORS_SpeedLeft);
+    digitalWrite(MOTORS_Left, LOW);
+  }
+  if(MOTORS_SpeedLeft == 0)
+  {
+    analogWrite(MOTORS_LeftSpeed, 0);
+    digitalWrite(MOTORS_Left, LOW);
+  }
+  if(MOTORS_SpeedLeft < 0)
+  {
+    analogWrite(MOTORS_LeftSpeed, (MOTORS_SpeedLeft*-1));
+    digitalWrite(MOTORS_Left, HIGH);
   }
 
-    switch(MOTORS_SpeedRight)
+
+  if(MOTORS_SpeedRight > 0)
   {
-    case 255:
-      digitalWrite(MOTORS_RightSpeed, HIGH);  //set speed for right motor
-      digitalWrite(MOTORS_Right, HIGH);
-      break;
-
-    case 0:
-      digitalWrite(MOTORS_RightSpeed, LOW);  //set speed for right motor
-      digitalWrite(MOTORS_Right, LOW);
-      break;
-
-    case -255:
-      digitalWrite(MOTORS_RightSpeed, HIGH);  //set speed for right motor
-      digitalWrite(MOTORS_Right, LOW);
-      break;   
+    analogWrite(MOTORS_RightSpeed, MOTORS_SpeedRight);
+    digitalWrite(MOTORS_Right, HIGH);
+  }
+  if(MOTORS_SpeedRight == 0)
+  {
+    analogWrite(MOTORS_RightSpeed, 0);
+    digitalWrite(MOTORS_Right, LOW);
+  }
+  if(MOTORS_SpeedRight < 0)
+  {
+    analogWrite(MOTORS_RightSpeed, (MOTORS_SpeedRight*-1));
+    digitalWrite(MOTORS_Right, LOW);
   }
 
-  
   digitalWrite(nSLEEP, HIGH);
+  
 }
 
 void loop() {
 
+  MOTORS_Go(100, 200);
 
-MOTORS_Go(255, 255);
-
-
+  delay(1000);
 
 }

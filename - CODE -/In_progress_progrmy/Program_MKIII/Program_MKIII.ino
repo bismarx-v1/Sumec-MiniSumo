@@ -18,6 +18,8 @@ void setup() {
 
   pinMode(tlacitko, INPUT);  //nastavení test tlačítka na vstup
   pinMode(LEDPin, OUTPUT);  //nastavení kontrolní LED na výstup
+  pinMode(scharp1, INPUT);
+
   MOTORS_Setup(); //stup pro motory  
   TfL_Setup();  //stup pro luny
   irrecv.enableIRIn();  //čekání na IR 
@@ -25,9 +27,10 @@ void setup() {
 
   // Rybnik pravidla - otoceni k oponentovy
 
-    MOTORS_Go(255, -255);
-    delay(800);
-
+    
+    //MOTORS_Go(255, -255);
+    //delay(600);
+    
 }
 
 //======================================setup -> konec, loop -> začátek================================================
@@ -51,6 +54,7 @@ void loop() {
   // třídění laserů pomocí proměné
   if (TfL_Get(TfL_Addr2) < Range && TfL_Get(TfL_Addr2) > 0) {  // přední laser
     laser_number = laser_number + 1;
+    //primar_luna = 1;
   }
 
   if (TfL_Get(TfL_Addr1) < Range && TfL_Get(TfL_Addr1) > 0) {  // levý laser
@@ -60,6 +64,8 @@ void loop() {
   if (TfL_Get(TfL_Addr3) < Range && TfL_Get(TfL_Addr3) > 0) {  // pravý laser
     laser_number = laser_number + 5;
   }
+  Serial.println("bezim");
+  delay(10);
 
   // rozpohybování Sumce pomocí proměné "laser_number" vzniklé po třídění
   switch (laser_number) {
@@ -69,7 +75,21 @@ void loop() {
       break;
 
     case 1:
-      MOTORS_Go(255, 255);  
+
+          if(tactic == 0)
+          {
+            MOTORS_Go(255, 80);
+            delay(300);
+            while(digitalRead(scharp1) != 1)
+            {
+              MOTORS_Go(255, 255);
+            }
+            delay(300);
+            MOTORS_Go(0, 255);
+            tactic = 1;
+          }
+
+
       break;
 
     case 3:
@@ -77,17 +97,17 @@ void loop() {
       break;
 
     case 5:
-      MOTORS_Go(255, -255);
+      MOTORS_Go(255 , -255);
       break;
 
     case 4:
-      MOTORS_Go(255, 0);
-      //delay(100);
+      MOTORS_Go(0, 255);
+      delay(100);
       break;
 
     case 6:
-      MOTORS_Go(0, 255);
-      //delay(100);
+      MOTORS_Go(255, 0);
+      delay(100);
       break;
 
     case 8:
@@ -99,16 +119,16 @@ void loop() {
       break;
       
   }
-
-  
+ 
   // dotek bílé čáry levým senzorem
   if (LINE_Get(2, hodnota_cary, 0) == 1) {
 
     Serial.println("qre 1");
     MOTORS_Go(255, -255);
-    if(qre_stav == 1)
+
+    if(qre_stav == 1)                            //pokud pred kratkou dobou bylo zpozorováno jiné QRE
     {
-      delay(cas_otaceni*2);
+      delay((cas_otaceni*2)-100);
       qre_stav = 0;    
     }
     else
@@ -118,8 +138,6 @@ void loop() {
       cas_dotek = millis();   
     }
 
-    //qre_number = 1;   // rozdeleni pro operace okolo hranic ringu
-    //cas_dotek = millis();
   }
 
   // dotek bílé čáry pravým senzorem
@@ -127,9 +145,10 @@ void loop() {
     
     Serial.println("qre 2");
     MOTORS_Go(-255, 255);
-    if(qre_stav == 1)
+
+    if(qre_stav == 1)                            //pokud pred kratkou dobou bylo zpozorováno jiné QRE
     {
-      delay(cas_otaceni*2);
+      delay((cas_otaceni*2)-100);
       qre_stav = 0;  
     }
     else
@@ -139,47 +158,11 @@ void loop() {
       cas_dotek = millis();
     }
 
-
-    //qre_number = 2;   // rozdeleni pro operace okolo hranic ringu
-    //cas_dotek = millis();
   }
 
-  if(millis() - cas_dotek >= cas_otaceni+200)
+  if(millis() - cas_dotek >= cas_otaceni+200)    //po uplinutí času se změní stav při detekování QRE
   {
     qre_stav = 0;  
   }
-
-  /*if(LINE_Get(3, hodnota_cary, 0) == 1 && LINE_Get(2, hodnota_cary, 0) == 1)
-  {
-    MOTORS_Go(-255, 255);
-    delay(cas_otaceni+100);
-  }*/
-  
-
-
- /*
-  // nove vylepseni:
-
-  if(millis()-cas_dotek<=(1800+cas_otaceni) && qre_number!=0 && TfL_Get(TfL_Addr1) < stret_vzdalenost || qre_stav == 1)
-  {
-    qre_stav = 1;
-    kstav = millis();
-
-    if(millis()-kstav >= 500)
-
-      qre_stav = 0;
-
-      if(qre_number == 1)
-      {
-        MOTORS_Go(255, -255);
-        delay(1000);
-      }
-
-      if(qre_number == 2)
-      {
-        MOTORS_Go(-255, 255);
-        delay(1000);
-      }
-  }*/
 }
 
