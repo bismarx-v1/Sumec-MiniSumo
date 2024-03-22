@@ -27,7 +27,7 @@ void setup() {
   // Rybnik pravidla - otoceni k oponentovy
 
     MOTORS_Go(255, -255);
-    delay(800);
+    delay(600);
 
 }
 
@@ -52,6 +52,7 @@ void loop() {
   // třídění laserů pomocí proměné
   if (TfL_Get(TfL_Addr2) < Range && TfL_Get(TfL_Addr2) > 0) {  // přední laser
     laser_number = laser_number + 1;
+    //primar_luna = 1;
   }
 
   if (TfL_Get(TfL_Addr1) < Range && TfL_Get(TfL_Addr1) > 0) {  // levý laser
@@ -61,6 +62,11 @@ void loop() {
   if (TfL_Get(TfL_Addr3) < Range && TfL_Get(TfL_Addr3) > 0) {  // pravý laser
     laser_number = laser_number + 5;
   }
+
+  /*if(TfL_Get(TfL_Addr2) < Range)
+  {
+    primar_luna = 0;
+  }*/
 
   // rozpohybování Sumce pomocí proměné "laser_number" vzniklé po třídění
   switch (laser_number) {
@@ -78,17 +84,17 @@ void loop() {
       break;
 
     case 5:
-      MOTORS_Go(255, -255);
+      MOTORS_Go(255 , -255);
       break;
 
     case 4:
-      MOTORS_Go(255, 0);
-      //delay(100);
+      MOTORS_Go(0, 255);
+      delay(100);
       break;
 
     case 6:
-      MOTORS_Go(0, 255);
-      //delay(100);
+      MOTORS_Go(255, 0);
+      delay(100);
       break;
 
     case 8:

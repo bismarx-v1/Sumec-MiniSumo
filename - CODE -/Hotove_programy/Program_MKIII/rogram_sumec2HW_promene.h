@@ -28,8 +28,9 @@ int cas_dotek = 0;
 int cas_otaceni = 300;
 
 int stret_vzdalenost = 20;    // vzdalenost pri stretu
-int Range = 20;  //hodnota zpozorovani nepritele    -  zmenšen kvůli testování
+int Range = 40;  //hodnota zpozorovani nepritele    -  zmenšen kvůli testování
 int laser_number = 0;  // třídící proměná TF_lun
+int primar_luna = 0;
 
 //IR proměné a nastavení:
 int code;

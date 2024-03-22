@@ -94,14 +94,6 @@ void loop() {
 
 MOTORS_Go(255, 255);
 
-delay(1000);
 
-MOTORS_Go(0, 0);
-
-delay(1000);
-
-MOTORS_Go(-255, -255);
-
-delay(1000);
 
 }
