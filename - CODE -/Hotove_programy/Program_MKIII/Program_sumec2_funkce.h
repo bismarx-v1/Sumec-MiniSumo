@@ -14,7 +14,7 @@ void IRstart() {
 
       //vypsání všsch hodnot z IR, nejdřívě BIN potom DEC  
 
-      /*
+      
       Serial.println("");
       Serial.print("recieved signal: ");
       Serial.print(results.value, BIN);
@@ -38,7 +38,7 @@ void IRstart() {
       Serial.println(comand);
       Serial.println("");
       Serial.println("==========");
-      */      
+      
 
       //fáze program
       if (adres == ADDR_PROGRAM) {
@@ -54,6 +54,16 @@ void IRstart() {
           Serial.println("jedeme");
           start_control = 1;
           LEDBlink = 1;
+
+          if(konec == 1)
+          {
+
+          }
+          else
+          {
+            konec = 1;
+          }
+
         } else {
           Serial.println("špatný code");
         }
@@ -64,6 +74,10 @@ void IRstart() {
   }
 }
 //================================IR čekání -> konec==================================
+
+
+
+
 
 //================================LED blikání -> začátek================================
 
@@ -86,7 +100,7 @@ void blink()
 			case 1:
 				if(LedBlinkState != 1) {
 					//LedBlinkState = 1;
-          while(millis()%400 > 200)
+          while(millis()%400 > 200)    // toto je spatne, vim o tom
           {
 					digitalWrite(LEDPin, HIGH);
           }

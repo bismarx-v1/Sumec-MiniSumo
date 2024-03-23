@@ -1,6 +1,6 @@
 #define tlacitko 2
 #define led 47
-//#define RC5 1
+#define RC5 1
 
 #if defined (RC5)
     #define ADDR_PROGRAM  11
@@ -20,7 +20,7 @@ int LEDBlink = 1;
 int LedBlinkState = 0;
 int kstav = 0;
 int Mode = 1;
-int BATERRY_MODE = 2;           //PRO UPRAVENI TIPU BATERIE 3 clanek = 2,   2 clanek = 1
+int BATERRY_MODE = 1  ;           //PRO UPRAVENI TIPU BATERIE 3 clanek = 2,   2 clanek = 1
 
 int qre_stav = 0;
 int qre_number = 0;
@@ -40,6 +40,7 @@ int comand_first;
 int comand;
 int DohaioID;
 int start_control = 0;
+int konec = 0;
 
 
 
