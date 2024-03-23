@@ -18,7 +18,6 @@ void setup() {
 
   pinMode(tlacitko, INPUT);  //nastavení test tlačítka na vstup
   pinMode(LEDPin, OUTPUT);  //nastavení kontrolní LED na výstup
-  pinMode(scharp1, INPUT);
 
   MOTORS_Setup(); //stup pro motory  
   TfL_Setup();  //stup pro luny
@@ -27,10 +26,9 @@ void setup() {
 
   // Rybnik pravidla - otoceni k oponentovy
 
-    
-    //MOTORS_Go(255, -255);
-    //delay(600);
-    
+    MOTORS_Go(255/BATERRY_MODE, -255/BATERRY_MODE);
+    delay(600);
+
 }
 
 //======================================setup -> konec, loop -> začátek================================================
@@ -41,12 +39,12 @@ void loop() {
   //blink();
 
   // po stisknutí TEST tlačítka nastane čekání na IR
-  if (digitalRead(tlacitko) >= 1) {
+  /*if (digitalRead(tlacitko) >= 1) {
     LEDBlink = 0;
     MOTORS_Go(0, 0);
     IRstart();
 
-  }
+  }*/
 
   // třídící proměná
   laser_number = 0;
@@ -64,32 +62,21 @@ void loop() {
   if (TfL_Get(TfL_Addr3) < Range && TfL_Get(TfL_Addr3) > 0) {  // pravý laser
     laser_number = laser_number + 5;
   }
-  Serial.println("bezim");
-  delay(10);
+
+  /*if(TfL_Get(TfL_Addr2) < Range)
+  {
+    primar_luna = 0;
+  }*/
 
   // rozpohybování Sumce pomocí proměné "laser_number" vzniklé po třídění
   switch (laser_number) {
 
     case 0:
-      MOTORS_Go(255, 255);
+      MOTORS_Go(255/BATERRY_MODE, 255/BATERRY_MODE);
       break;
 
     case 1:
-
-          if(tactic == 0)
-          {
-            MOTORS_Go(255, 80);
-            delay(300);
-            while(digitalRead(scharp1) != 1)
-            {
-              MOTORS_Go(255, 255);
-            }
-            delay(300);
-            MOTORS_Go(0, 255);
-            tactic = 1;
-          }
-
-
+      MOTORS_Go(255, 255);  
       break;
 
     case 3:
@@ -97,7 +84,7 @@ void loop() {
       break;
 
     case 5:
-      MOTORS_Go(255 , -255);
+      MOTORS_Go(255/BATERRY_MODE , -255/BATERRY_MODE);
       break;
 
     case 4:
@@ -111,11 +98,11 @@ void loop() {
       break;
 
     case 8:
-      MOTORS_Go(255, 255);
+      MOTORS_Go(255/BATERRY_MODE, 255/BATERRY_MODE);
       break;
 
     case 9:
-      MOTORS_Go(255, 255);
+      MOTORS_Go(255/BATERRY_MODE, 255/BATERRY_MODE);
       break;
       
   }
@@ -124,7 +111,7 @@ void loop() {
   if (LINE_Get(2, hodnota_cary, 0) == 1) {
 
     Serial.println("qre 1");
-    MOTORS_Go(255, -255);
+    MOTORS_Go(255/BATERRY_MODE, -255/BATERRY_MODE);
 
     if(qre_stav == 1)                            //pokud pred kratkou dobou bylo zpozorováno jiné QRE
     {
@@ -144,7 +131,7 @@ void loop() {
   if (LINE_Get(3, hodnota_cary, 0) == 1) {
     
     Serial.println("qre 2");
-    MOTORS_Go(-255, 255);
+    MOTORS_Go(-255/BATERRY_MODE, 255/BATERRY_MODE);
 
     if(qre_stav == 1)                            //pokud pred kratkou dobou bylo zpozorováno jiné QRE
     {

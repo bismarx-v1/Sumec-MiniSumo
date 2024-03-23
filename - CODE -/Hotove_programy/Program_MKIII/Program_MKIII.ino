@@ -26,7 +26,7 @@ void setup() {
 
   // Rybnik pravidla - otoceni k oponentovy
 
-    MOTORS_Go(255, -255);
+    MOTORS_Go(255/BATERRY_MODE, -255/BATERRY_MODE);
     delay(600);
 
 }
@@ -39,12 +39,12 @@ void loop() {
   //blink();
 
   // po stisknutí TEST tlačítka nastane čekání na IR
-  if (digitalRead(tlacitko) >= 1) {
+  /*if (digitalRead(tlacitko) >= 1) {
     LEDBlink = 0;
     MOTORS_Go(0, 0);
     IRstart();
 
-  }
+  }*/
 
   // třídící proměná
   laser_number = 0;
@@ -72,7 +72,7 @@ void loop() {
   switch (laser_number) {
 
     case 0:
-      MOTORS_Go(255, 255);
+      MOTORS_Go(255/BATERRY_MODE, 255/BATERRY_MODE);
       break;
 
     case 1:
@@ -84,7 +84,7 @@ void loop() {
       break;
 
     case 5:
-      MOTORS_Go(255 , -255);
+      MOTORS_Go(255/BATERRY_MODE , -255/BATERRY_MODE);
       break;
 
     case 4:
@@ -98,11 +98,11 @@ void loop() {
       break;
 
     case 8:
-      MOTORS_Go(255, 255);
+      MOTORS_Go(255/BATERRY_MODE, 255/BATERRY_MODE);
       break;
 
     case 9:
-      MOTORS_Go(255, 255);
+      MOTORS_Go(255/BATERRY_MODE, 255/BATERRY_MODE);
       break;
       
   }
@@ -111,7 +111,7 @@ void loop() {
   if (LINE_Get(2, hodnota_cary, 0) == 1) {
 
     Serial.println("qre 1");
-    MOTORS_Go(255, -255);
+    MOTORS_Go(255/BATERRY_MODE, -255/BATERRY_MODE);
 
     if(qre_stav == 1)                            //pokud pred kratkou dobou bylo zpozorováno jiné QRE
     {
@@ -131,7 +131,7 @@ void loop() {
   if (LINE_Get(3, hodnota_cary, 0) == 1) {
     
     Serial.println("qre 2");
-    MOTORS_Go(-255, 255);
+    MOTORS_Go(-255/BATERRY_MODE, 255/BATERRY_MODE);
 
     if(qre_stav == 1)                            //pokud pred kratkou dobou bylo zpozorováno jiné QRE
     {

@@ -38,7 +38,7 @@ void IRstart() {
       Serial.println(comand);
       Serial.println("");
       Serial.println("==========");
-      */
+      */      
 
       //fáze program
       if (adres == ADDR_PROGRAM) {

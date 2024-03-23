@@ -14,7 +14,7 @@ void MOTORS_Setup() {
   ledcAttachPin(MOTORS_RightSpeed, 1);
   pinMode(nSLEEP, OUTPUT);
 
-  MOTORS_Go(100, 255);
+
 
 }
 
@@ -22,18 +22,6 @@ void MOTORS_Setup() {
 //ex.: MOTORS_Go([SpeedLeft], [SpeedRight]);
 //speed can be from -255 to 255
 
-void setup() {
-
-  MOTORS_Setup();
-
-  pinMode(MOTORS_Left, OUTPUT);
-  pinMode(MOTORS_Right, OUTPUT);
-  pinMode(MOTORS_LeftSpeed, OUTPUT);
-  pinMode(MOTORS_RightSpeed, OUTPUT);
-  pinMode(nSLEEP, OUTPUT);
-
-  Serial.begin(9600);
-}
 
 void MOTORS_Go(int MOTORS_SpeedLeft, int MOTORS_SpeedRight) 
 {
@@ -75,10 +63,26 @@ void MOTORS_Go(int MOTORS_SpeedLeft, int MOTORS_SpeedRight)
   
 }
 
+void setup() {
+
+  MOTORS_Setup();
+
+  pinMode(MOTORS_Left, OUTPUT);
+  pinMode(MOTORS_Right, OUTPUT);
+  pinMode(MOTORS_LeftSpeed, OUTPUT);
+  pinMode(MOTORS_RightSpeed, OUTPUT);
+  pinMode(nSLEEP, OUTPUT);
+
+  MOTORS_Go(255, 255);
+
+}
+
+
+
 void loop() {
 
-  MOTORS_Go(100, 200);
+  //MOTORS_Go(255, 255);
 
-  delay(1000);
+
 
 }

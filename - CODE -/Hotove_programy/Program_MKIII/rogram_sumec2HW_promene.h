@@ -20,6 +20,7 @@ int LEDBlink = 1;
 int LedBlinkState = 0;
 int kstav = 0;
 int Mode = 1;
+int BATERRY_MODE = 2;           //PRO UPRAVENI TIPU BATERIE 3 clanek = 2,   2 clanek = 1
 
 int qre_stav = 0;
 int qre_number = 0;
