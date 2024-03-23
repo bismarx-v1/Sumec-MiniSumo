@@ -1,14 +1,14 @@
 #include "Sharp_GP2Y0D810Z0F.h"
 
-Sharp SharpLeft('L');
-Sharp SharpRight('R');
+Sharp SharpLeft('L');	// Create object for left sensor
+Sharp SharpRight('R');	// Create object for right sensor
 
 void setup() {
 	Serial.begin(115200);
 }
 
 void loop() {
-	Serial.printf("%i\n", SharpLeft.get());
-	Serial.printf("%i\n", SharpRight.get());
-	delay(100);
+	Serial.printf("Left: %i\n", SharpLeft.get());		// Get and print left value
+	Serial.printf("Right: %i\n", SharpRight.get());		// Get and print right value
+	delay(500);
 }
