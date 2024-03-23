@@ -3,7 +3,7 @@ int LINE_Get(int LINE_Sensor, int LINE_Threshold, int LINE_Mode=0) {
 		case 1:	//Front Left
 			switch(LINE_Mode) {	//Mode
 				case 0:	//Mode 0
-					return (analogRead(19)<LINE_Threshold ? 1: 0);
+					return (analogRead(10)<LINE_Threshold ? 1: 0);
 					break;
 					
 				case 1:	//Mode 1
