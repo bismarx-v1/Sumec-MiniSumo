@@ -19,6 +19,9 @@ void setup() {
   pinMode(tlacitko, INPUT);  //nastavení test tlačítka na vstup
   pinMode(LEDPin, OUTPUT);  //nastavení kontrolní LED na výstup
 
+  pinMode(scharp_L, INPUT);
+  pinMode(scharp_P, INPUT);
+
   MOTORS_Setup(); //stup pro motory  
   TfL_Setup();  //stup pro luny
   irrecv.enableIRIn();  //čekání na IR 
@@ -26,8 +29,8 @@ void setup() {
 
   // Rybnik pravidla - otoceni k oponentovy
 
-    MOTORS_Go(255/BATERRY_MODE, -255/BATERRY_MODE);
-    delay(600);
+    /*MOTORS_Go(255/BATERRY_MODE, -255/BATERRY_MODE);     !Nezapomenout odkomentovat
+    delay(600);*/
 
 }
 
@@ -38,7 +41,7 @@ void loop() {
   start_control = 0;
   //blink();
 
-  // po stisknutí TEST tlačítka nastane čekání na IR
+  // po stisknutí TEST tlačítka nastane čekání na IR - zakomentovano kvuly nahodnemu zastavovani
   /*if (digitalRead(tlacitko) >= 1) {
     LEDBlink = 0;
     MOTORS_Go(0, 0);
@@ -73,10 +76,67 @@ void loop() {
 
     case 0:
       MOTORS_Go(255/BATERRY_MODE, 255/BATERRY_MODE);
+      //tactic_stop = 0;
       break;
 
     case 1:
-      MOTORS_Go(255, 255);  
+      //MOTORS_Go(255, 255);
+      if(tactic_stop == 0)
+      {
+        if(posledni_qre == 2)
+        {
+
+          MOTORS_Go(255/BATERRY_MODE , -50/BATERRY_MODE);
+          delay(300);
+
+          while(digitalRead(scharp_L) == 1)
+          {
+            MOTORS_Go(255/BATERRY_MODE , 255/BATERRY_MODE);  
+          }
+          delay(200);
+
+          for(int i=0; i<400; i++)
+          {
+            
+            delay(1);
+            MOTORS_Go(-50/BATERRY_MODE , 255/BATERRY_MODE);
+
+            if(TfL_Get(TfL_Addr1) < Range && TfL_Get(TfL_Addr1) > 0)
+            {
+              i = 400;
+            }
+          }
+
+          tactic_stop = 1;
+
+        }
+
+        if(posledni_qre == 1)
+        {
+          MOTORS_Go(-50/BATERRY_MODE , 255/BATERRY_MODE);
+          delay(300);
+
+          while(digitalRead(scharp_P) == 1)
+          {
+            MOTORS_Go(255/BATERRY_MODE , 255/BATERRY_MODE);  
+          }
+          delay(200);
+
+          for(int i=0; i<400; i++)
+          {
+            delay(1);
+            MOTORS_Go(255/BATERRY_MODE , -50/BATERRY_MODE);
+
+            if(TfL_Get(TfL_Addr1) < Range && TfL_Get(TfL_Addr1) > 0)
+            {
+              i = 400;
+            }
+          }
+
+          tactic_stop = 1;
+        }
+      }
+
       break;
 
     case 3:
@@ -125,6 +185,8 @@ void loop() {
       cas_dotek = millis();   
     }
 
+    posledni_qre = 2;
+
   }
 
   // dotek bílé čáry pravým senzorem
@@ -144,6 +206,8 @@ void loop() {
       qre_stav = 1;
       cas_dotek = millis();
     }
+
+    posledni_qre = 1;
 
   }
 
