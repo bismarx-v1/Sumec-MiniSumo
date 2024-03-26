@@ -1,3 +1,14 @@
+/*
+* When construnctiong object use "'L'", "'R'" or "'B'" to pick wich sensor is to be used
+* 	- "'L'" means Left
+* 	- "'R'" means Right
+* 	- "'B'" means Back (Rear would be better but 'R' is taken)
+* 
+* Set threshold by using .Threshold = (uint8_t [Val]);
+* 
+* Read value by using .get() returns '1' or '0' of type uint8_t
+*/
+
 class QRE {
 	private:
 		const uint8_t Sensor_Pin[3] = {10, 9, 8};	// Pins in order: {"left", "right", "rear"}

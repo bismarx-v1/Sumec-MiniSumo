@@ -1,3 +1,10 @@
+/*
+* This lib is a bit more complex than the others
+* Bast is to first try to understand the code and than maybe ask Natani Si. for more explanation
+* 
+* Uses the Wire.h lib for reading and writing to TF-Ls
+*/
+
 #include <Wire.h>
 
 class TF_Luna {
@@ -25,7 +32,6 @@ class TF_Luna {
 		uint8_t reboot(uint8_t Address);
 		uint8_t writeAddress(uint8_t Address, uint8_t NewAddress);
 		uint8_t factoryReset(uint8_t Address);
-		
 };
 
 TF_Luna::TF_Luna(uint8_t Sda, uint8_t Scl) {

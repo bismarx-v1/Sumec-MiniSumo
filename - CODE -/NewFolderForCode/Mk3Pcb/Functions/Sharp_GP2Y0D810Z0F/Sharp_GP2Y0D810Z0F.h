@@ -1,3 +1,13 @@
+/*
+* When constructin object use "'L'" or "'R'" to pick the sensor
+* 	- "'L'" means Left
+* 	- "'R'" means Right
+* 
+* Use .get() to get sensors val. returns '1' or '0' with data-type uint8_t
+* 
+* Sensors range is 2-10cm
+*/
+
 class Sharp {
 	private:
 		const uint8_t Sensor_Pin[2] = {35, 16};	// Pins in order: {"left", "right"}

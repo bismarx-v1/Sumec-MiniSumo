@@ -30,9 +30,6 @@
 * if PH is 0 robot goes BACKWARD, 1 robot goes FORWARD
 */
 
-
-
-
 class DRV8874PWPR {
 	private:
 		const uint8_t nSleep_Pin = 11;					// nSleep pin is shared

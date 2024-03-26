@@ -8,7 +8,7 @@ void setup() {
 }
 
 void loop() {
-	Serial.printf("Left: %i\n", SharpLeft.get());		// Get and print left value
+	Serial.printf("Left: %i\t", SharpLeft.get());		// Get and print left value
 	Serial.printf("Right: %i\n", SharpRight.get());		// Get and print right value
 	delay(500);
 }
