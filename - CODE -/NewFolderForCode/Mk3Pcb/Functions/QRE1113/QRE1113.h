@@ -32,10 +32,11 @@ QRE::QRE(uint8_t SensorId) {
 	} else if(SensorId == 'B') {	// Rear sensor marked with "B" for "Back", cos "R" is taken
 		this->Sensor = Sensor_Pin[2];			// Rear sensor pin
 	}
+	
+	pinMode(Sensor, INPUT);
 }
 
 uint8_t QRE::get() {
-	Serial.printf("%i", Threshold);
 	if(analogRead(Sensor)<Threshold) {	// Returns true/false based on "sensor value" and "threshold"
 		return(1);
 	} else {

@@ -25,6 +25,8 @@ Sharp::Sharp(uint8_t SensorId) {	// Input "SensorId" when making a new object
 	} else if(SensorId == 'R') {	// Right sensor
 		this->Sensor = Sensor_Pin[1];			// Right sensor's pin
 	}
+	
+	pinMode(Sensor, INPUT);
 }
 
 uint8_t Sharp::get() {				// Func for getting sensor's data

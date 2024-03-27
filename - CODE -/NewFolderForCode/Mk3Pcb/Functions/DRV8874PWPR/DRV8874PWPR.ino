@@ -21,8 +21,8 @@ void loop() {
 	DRV8874PWPR_Obj.left(0);
 	DRV8874PWPR_Obj.right(0);
 	delay(1000);
-	DRV8874PWPR_Obj.left(-255);
-	DRV8874PWPR_Obj.right(255);
+	DRV8874PWPR_Obj.left(255);
+	DRV8874PWPR_Obj.right(-255);
 	delay(3000);
 	DRV8874PWPR_Obj.left(0);
 	DRV8874PWPR_Obj.right(0);
