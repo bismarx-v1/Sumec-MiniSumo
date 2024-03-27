@@ -71,9 +71,9 @@ void DRV8874PWPR::left(int16_t Speed) {
 	}							// </SpeedLimits>
 	
 	if(Speed>0) {			// Forward
-		digitalWrite(Driver_Pin[0][1], 1);
-	} else if(Speed<0) {	// Backward
 		digitalWrite(Driver_Pin[0][1], 0);
+	} else if(Speed<0) {	// Backward
+		digitalWrite(Driver_Pin[0][1], 1);
 	} else {				// Stop
 		
 	}
