@@ -32,6 +32,8 @@ class TF_Luna {
 		uint8_t reboot(uint8_t Address);
 		uint8_t writeAddress(uint8_t Address, uint8_t NewAddress);
 		uint8_t factoryReset(uint8_t Address);
+		void readData(uint8_t Address, uint16_t* DataArray);
+		uint8_t readOnlyDist(uint8_t Address);
 };
 
 TF_Luna::TF_Luna(uint8_t Sda, uint8_t Scl) {
@@ -85,7 +87,7 @@ uint8_t TF_Luna::factoryReset(uint8_t Address) {	// Factory reset
 	return(err);
 }
 
-void TF_Luna::ReadData(uint8_t Address, uint16_t* DataArray) {	// Read data
+void TF_Luna::readData(uint8_t Address, uint16_t* DataArray) {	// Read data
 	DataArray[0] = Read2Bytes(Address, 0x00);	// Distance (in cm)
 	DataArray[1] = Read2Bytes(Address, 0x02);	// Amplitude - don't know what this means
 	DataArray[2] = Read2Bytes(Address, 0x04);	// Temp multiply by 0.01 to get °C
@@ -93,6 +95,6 @@ void TF_Luna::ReadData(uint8_t Address, uint16_t* DataArray) {	// Read data
 	DataArray[4] = Read2Bytes(Address, 0x08);	// Error - don't know what this means
 }
 
-uint8_t TF_Luna::ReadOnlyDist(uint8_t Address) {	// Read data
+uint8_t TF_Luna::readOnlyDist(uint8_t Address) {	// Read data
 	return(Read2Bytes(Address, 0x00));	// Distance (in cm)
 }

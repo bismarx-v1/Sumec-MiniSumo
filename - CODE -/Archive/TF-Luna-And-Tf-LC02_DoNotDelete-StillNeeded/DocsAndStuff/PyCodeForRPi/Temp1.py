@@ -38,6 +38,7 @@ if __name__ == '__main__':
     # Reset Factory Defaults
 
     # TODO: test this sequence - may not need to save and reboot
+    # Note from NatSi: save and reboot is not needed
     # tf.factory_reset()
     # tf.save()
     # tf.reboot()
