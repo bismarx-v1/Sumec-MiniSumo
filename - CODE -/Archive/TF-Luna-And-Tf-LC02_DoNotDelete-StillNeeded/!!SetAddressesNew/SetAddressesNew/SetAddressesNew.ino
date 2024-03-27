@@ -2,7 +2,7 @@
 
 const int clkSpeed = 40000;					//I^2C speed
 
-const int defaultAddr = 0x10;				//default luna address
+const int AddrFrom = 0x10;				//default luna address
 const int regAddrAddr = 0x22;				//register of new address
 const int regAddrSave = 0x20;				//register of save
 const int regDataCommit = 0x01;				//data for commit
@@ -12,7 +12,7 @@ const int regDataReboot = 0x02;				//data for reboot
 //...////////////////////
 //..//    SETTINGS    //
 //.////////////////////
-const int regDataAddr = 0x13;				//new address somewhere from 0x08 to 0x77
+const int AddrTo = 0x13;				//new address somewhere from 0x08 to 0x77
 const int I2cSda = 18;						//sda pin
 const int I2cScl = 17;						//sdc pin
 
@@ -23,21 +23,21 @@ void setup() {
 	Wire.begin(I2cSda, I2cScl, clkSpeed);
 	delay(2000);
 	
-	Wire.beginTransmission(defaultAddr);	//set address
+	Wire.beginTransmission(AddrFrom);	//set address
 	Wire.write(regAddrAddr);
-	Wire.write(regDataAddr);
+	Wire.write(AddrTo);
 	Wire.endTransmission();
 	
 	delay(100);
 	
-	Wire.beginTransmission(regDataAddr);	//save
+	Wire.beginTransmission(AddrTo);	//save
 	Wire.write(regAddrSave);
 	Wire.write(regDataCommit);
 	Wire.endTransmission();
 	
 	delay(100);
 	
-	Wire.beginTransmission(regDataAddr);	//reboot
+	Wire.beginTransmission(AddrTo);	//reboot
 	Wire.write(regAddrReboot);
 	Wire.write(regDataReboot);
 	Wire.endTransmission();
