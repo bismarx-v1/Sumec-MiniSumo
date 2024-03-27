@@ -7,6 +7,8 @@
 * Set threshold by using .Threshold = (uint8_t [Val]);
 * 
 * Read value by using .get() returns '1' or '0' of type uint8_t
+* 
+* Read value by using .getRaw() returns measured voltage from 0(0V) to 4096(3V3) of type uint16_t
 */
 
 class QRE {
@@ -17,7 +19,8 @@ class QRE {
 	public:
 		QRE(uint8_t SensorId);
 		uint8_t get();
-		uint8_t Threshold = 3000;	// Default threshold
+		uint16_t getRaw();
+		uint16_t Threshold = 3000;	// Default threshold
 		
 };
 
@@ -32,9 +35,14 @@ QRE::QRE(uint8_t SensorId) {
 }
 
 uint8_t QRE::get() {
+	Serial.printf("%i", Threshold);
 	if(analogRead(Sensor)<Threshold) {	// Returns true/false based on "sensor value" and "threshold"
 		return(1);
 	} else {
 		return(0);
 	}
+}
+
+uint16_t QRE::getRaw() {
+	return(analogRead(Sensor));	// Returns measured voltage from 0(0V) to 4096(3V3)
 }
