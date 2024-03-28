@@ -34,16 +34,19 @@ class DRV8874PWPR {
 	private:
 		const uint8_t nSleep_Pin = 11;					// nSleep pin is shared
 		const uint8_t Driver_Pin[2][2] = {{14, 12}, {21, 13}};	//	Pins in order: {{"EN", "PH"}, {"EN", "PH"}}
-	public:
 		uint8_t LedcChannelLeft = 0;
-		uint8_t LedcChannelRight = 0;
-		DRV8874PWPR(uint16_t LedcFreq, uint8_t LedcRes);
+		uint8_t LedcChannelRight = 1;
+	public:
+		DRV8874PWPR(uint16_t LedcFreq, uint8_t LedcRes, uint8_t LedcChannelLeftIn, uint8_t LedcChannelRightIn);
 		void left(int16_t Speed);
 		void right(int16_t Speed);
 		
 };
 
-DRV8874PWPR::DRV8874PWPR(uint16_t LedcFreq, uint8_t LedcRes) {	// Somewhat standard values are "5000" for "LedcFreq" and "8" bits for "LedcRes"
+DRV8874PWPR::DRV8874PWPR(uint16_t LedcFreq, uint8_t LedcRes, uint8_t LedcChannelLeftIn, uint8_t LedcChannelRightIn) {	// Somewhat standard values are "5000" for "LedcFreq" and "8" bits for "LedcRes"
+	LedcChannelLeft = LedcChannelLeftIn;
+	LedcChannelRight = LedcChannelRightIn;
+	
 	/****************\
 	*    pinModes    *
 	\****************/
