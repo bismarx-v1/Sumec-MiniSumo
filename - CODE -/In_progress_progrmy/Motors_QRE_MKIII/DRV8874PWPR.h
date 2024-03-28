@@ -35,11 +35,17 @@ class DRV8874PWPR {
 		const uint8_t nSleep_Pin = 11;					// nSleep pin is shared
 		const uint8_t Driver_Pin[2][2] = {{14, 12}, {21, 13}};	//	Pins in order: {{"EN", "PH"}, {"EN", "PH"}}
 	public:
+
+    uint8_t prioryty_left;
+    uint8_t prioryty_right;
+
+    bool acceptLeft = 0;
+
 		uint8_t LedcChannelLeft = 0;
 		uint8_t LedcChannelRight = 1;
 		DRV8874PWPR(uint16_t LedcFreq, uint8_t LedcRes);
-		void left(int16_t Speed);
-		void right(int16_t Speed);
+		void left(int16_t Speed, uint8_t prioryty_left);
+		void right(int16_t Speed, uint8_t prioryty_right);
 		
 };
 
@@ -63,7 +69,12 @@ DRV8874PWPR::DRV8874PWPR(uint16_t LedcFreq, uint8_t LedcRes) {	// Somewhat stand
 	digitalWrite(nSleep_Pin, 1);	// Sets nSleep to HIGH because we never sleep
 }
 
-void DRV8874PWPR::left(int16_t Speed) {
+void DRV8874PWPR::left(int16_t Speed, uint8_t prioryty_left) {
+
+  this->prioryty_left = prioryty_left;
+
+  if(acceptLeft == 1)
+  {
 	if(Speed>255) {				// <Speed limits>
 		Speed = 255;
 	} else if(Speed<-255) {
@@ -83,9 +94,14 @@ void DRV8874PWPR::left(int16_t Speed) {
 	}
 	
 	ledcWrite(LedcChannelLeft, Speed);
+  }
 }
 
-void DRV8874PWPR::right(int16_t Speed) {
+void DRV8874PWPR::right(int16_t Speed, uint8_t prioryty_right) {
+
+  this->prioryty_right = prioryty_right;
+  if(acceptLeft == 1)
+  {
 	if(Speed>255) {				// <Speed limits>
 		Speed = 255;
 	} else if(Speed<-255) {
@@ -105,4 +121,5 @@ void DRV8874PWPR::right(int16_t Speed) {
 	}
 	
 	ledcWrite(LedcChannelRight, Speed);
+  }
 }
