@@ -45,5 +45,5 @@ uint8_t QRE::get() {
 }
 
 uint16_t QRE::getRaw() {
-	return(analogRead(Sensor));	// Returns measured voltage from 0(0V) to 4096(3V3)
+	return(analogRead(Sensor));	// Returns measured voltage from 0(0V) to 4095(3V3)
 }
