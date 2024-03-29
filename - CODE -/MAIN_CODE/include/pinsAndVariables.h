@@ -12,3 +12,14 @@
 #define QRE_left 10
 #define QRE_right 9
 #define QRE_rear 8
+
+// sharp pins:
+
+#define sharp_left 35
+#define sharp_right 16
+
+// leds pins:
+
+#define IRled 38
+#define Led_red 47
+#define Led_orange 48
