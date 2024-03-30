@@ -1,4 +1,8 @@
-last change: 29.3.2024
+last change: 30.3.2024
+
+
+- note: not yet modified classes
+
 
 - location of main code is: MAIN_CODE\src
 - location of header files is: MAIN_CODE\include 
