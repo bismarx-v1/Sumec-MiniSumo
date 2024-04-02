@@ -30,20 +30,20 @@
 * if PH is 0 robot goes BACKWARD, 1 robot goes FORWARD
 */
 
-class DRV8874PWPR {
+class H_bridge  {
 	private:
 		const uint8_t nSleep_Pin = 11;					// nSleep pin is shared
 		const uint8_t Driver_Pin[2][2] = {{14, 12}, {21, 13}};	//	Pins in order: {{"EN", "PH"}, {"EN", "PH"}}
 	public:
 		uint8_t LedcChannelLeft = 0;
 		uint8_t LedcChannelRight = 1;
-		DRV8874PWPR(uint16_t LedcFreq, uint8_t LedcRes);
+		H_bridge(uint16_t LedcFreq, uint8_t LedcRes);
 		void left(int16_t Speed);
 		void right(int16_t Speed);
 		
 };
 
-DRV8874PWPR::DRV8874PWPR(uint16_t LedcFreq, uint8_t LedcRes) {	// Somewhat standard values are "5000" for "LedcFreq" and "8" bits for "LedcRes"
+H_bridge::H_bridge(uint16_t LedcFreq, uint8_t LedcRes) {	// Somewhat standard values are "5000" for "LedcFreq" and "8" bits for "LedcRes"
 	/****************\
 	*    pinModes    *
 	\****************/
@@ -63,7 +63,7 @@ DRV8874PWPR::DRV8874PWPR(uint16_t LedcFreq, uint8_t LedcRes) {	// Somewhat stand
 	digitalWrite(nSleep_Pin, 1);	// Sets nSleep to HIGH because we never sleep
 }
 
-void DRV8874PWPR::left(int16_t Speed) {
+void H_bridge::left(int16_t Speed) {
 	if(Speed>255) {				// <Speed limits>
 		Speed = 255;
 	} else if(Speed<-255) {
@@ -85,7 +85,7 @@ void DRV8874PWPR::left(int16_t Speed) {
 	ledcWrite(LedcChannelLeft, Speed);
 }
 
-void DRV8874PWPR::right(int16_t Speed) {
+void H_bridge::right(int16_t Speed) {
 	if(Speed>255) {				// <Speed limits>
 		Speed = 255;
 	} else if(Speed<-255) {
