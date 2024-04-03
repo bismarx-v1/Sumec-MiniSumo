@@ -1,22 +1,20 @@
 #include <Arduino.h>
 #include "pinsAndVariables.h"
 #include "QRE1113.h"            //befor update
-//#include "DRV8874PWPR.h"        //befor update
+#include "DRV8874PWPR.h"        //befor update
 
 
 void setup() 
 {
-    pinMode(48, OUTPUT);
-    Serial.begin(9600);
+    pinMode(47, OUTPUT);
+    Serial.begin(115200);
 }
 
 void loop()
 {
 
-
-    /*
-    delay(100);
-    Serial.println("huh");
-    digitalWrite(48, HIGH);
-    */
+    digitalWrite(47, HIGH);
+    delay(1000);
+    digitalWrite(47, 0);
+    delay(1000);
 }
