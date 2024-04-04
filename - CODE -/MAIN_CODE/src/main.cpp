@@ -4,17 +4,86 @@
 #include "DRV8874PWPR.h"        //befor update
 
 
+// Objects
+
+//motors objects
+H_bridge Motors(5000,8);
+
+//qre objects
+QRE qreLeft('L');
+QRE qreRight('R');
+QRE qreBack('B');
+
+
+//TICKs 
+
+TICK Tick_A;
+
+
+
 void setup() 
 {
-    pinMode(47, OUTPUT);
-    Serial.begin(115200);
+    
+    Tick_A.tickTime = 100;  
 }
+
 
 void loop()
 {
+    //=========================Writeing value in sensors to variables=============
 
-    digitalWrite(47, HIGH);
-    delay(1000);
-    digitalWrite(47, 0);
-    delay(1000);
+    QREleft = qreLeft.get();
+    QREright = qreRight.get();
+    QREback = qreBack.get();
+
+    //Writeing value to TICK
+
+    Tick_A.tickNumber = Tick_managing(Tick_A.tickTime, Tick_A.tickNumber, Tick_A.lastTick);
+    Tick_A.lastTick = Tick_lastManaging(Tick_A.tickTime, Tick_A.tickNumber, Tick_A.lastTick);
+
+    //==========================Rafinering inputs==============================
+
+    if(QREleft == 1)
+    {
+        state = 1;
+
+        Tick_A.lastTick = millis();
+        Tick_A.tickNumber = 0;
+    }
+    else if(QREright == 1)
+    {
+        state = 2;
+
+        Tick_A.lastTick = millis();
+        Tick_A.tickNumber = 0;
+    }
+    else if(QREback == 1)
+    {
+        state = 0;
+    }
+    else
+    {
+        state = 0;
+    }
+
+    //===========================Procesing resoluts===============================
+
+    switch(state)
+    {
+        case 0:
+            Motors.left(255/2);
+            Motors.right(255/2);
+            break;
+        case 1:
+            Motors.left(255/2);
+            Motors.right(-255/2);
+            break;
+        case 2:
+            Motors.left(-255/2);
+            Motors.right(255/2);
+            break;
+    }
+
+
+    
 }
