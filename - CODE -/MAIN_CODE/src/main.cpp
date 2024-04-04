@@ -43,6 +43,13 @@ void loop()
 
     //==========================Rafinering inputs==============================
 
+
+    if(Tick_A.tickNumber < 8)
+    {
+        state = state;
+    }
+    else
+    {
     if(QREleft == 1)
     {
         state = 1;
@@ -65,22 +72,23 @@ void loop()
     {
         state = 0;
     }
+    }
 
     //===========================Procesing resoluts===============================
 
     switch(state)
     {
         case 0:
-            Motors.left(255/2);
-            Motors.right(255/2);
+            Motors.left(255);
+            Motors.right(255);
             break;
         case 1:
-            Motors.left(255/2);
-            Motors.right(-255/2);
+            Motors.left(255);
+            Motors.right(-255);
             break;
         case 2:
-            Motors.left(-255/2);
-            Motors.right(255/2);
+            Motors.left(-255);
+            Motors.right(255);
             break;
     }
 
