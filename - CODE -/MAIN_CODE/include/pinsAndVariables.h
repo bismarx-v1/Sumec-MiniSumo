@@ -66,6 +66,8 @@ uint8_t QREleft;
 uint8_t QREright;
 uint8_t QREback;
 
+int lastQRE = 0;
+
 int LUNAleft;
 int LUNAright;
 int LUNAmiddle;

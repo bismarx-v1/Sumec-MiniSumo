@@ -4,6 +4,7 @@
 #include "DRV8874PWPR.h"        //befor update
 
 
+
 // Objects
 
 //motors objects
@@ -24,7 +25,8 @@ TICK Tick_A;
 void setup() 
 {
     //Serial.begin(115200);
-    Tick_A.tickTime = 100;  
+    Tick_A.tickTime = 10; 
+     
 }
 
 
@@ -44,25 +46,48 @@ void loop()
     //==========================Rafinering inputs==============================
 
 
-    if(Tick_A.tickNumber < 2)
+    if(Tick_A.tickNumber < 20 && state != 1 && state != 2)
     {
         state = state;
+    }
+    else if(Tick_A.tickNumber < 20 && state == 3)
+    {
+
+    }
+    else if(Tick_A.tickNumber == 40)
+    {
+        state = 0;
+        lastQRE = 0;
     }
     else
     {
         if(QREleft == 1 && state != 2)
         {
-            state = 1;
+
+            state = 3;
+            lastQRE = 1;
+            
 
             Tick_A.lastTick = millis();
             Tick_A.tickNumber = 0;
         }
         else if(QREright == 1 && state != 1)
         {
-            state = 2;
+    
+            state = 3;
+            lastQRE = 2;
+ 
 
             Tick_A.lastTick = millis();
             Tick_A.tickNumber = 0;
+        }
+        else if(lastQRE == 1)
+        {
+            state = 1;
+        }
+        else if(lastQRE == 2)
+        {
+            state = 2;
         }
         else if(QREback == 1 )
         {
@@ -74,7 +99,7 @@ void loop()
         }
     }
 
-    //===========================Procesing resoluts===============================
+    //===========================Procesing resoluts - states===============================
 
     switch(state)
     {
@@ -89,6 +114,10 @@ void loop()
         case 2:
             Motors.left(-255);
             Motors.right(255);
+            break;
+        case 3:
+            Motors.left(-255);
+            Motors.right(-255);
             break;
     }
 
