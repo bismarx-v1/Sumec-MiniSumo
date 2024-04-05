@@ -23,7 +23,7 @@ TICK Tick_A;
 
 void setup() 
 {
-    
+    //Serial.begin(115200);
     Tick_A.tickTime = 100;  
 }
 
@@ -44,34 +44,34 @@ void loop()
     //==========================Rafinering inputs==============================
 
 
-    if(Tick_A.tickNumber < 8)
+    if(Tick_A.tickNumber < 2)
     {
         state = state;
     }
     else
     {
-    if(QREleft == 1)
-    {
-        state = 1;
+        if(QREleft == 1 && state != 2)
+        {
+            state = 1;
 
-        Tick_A.lastTick = millis();
-        Tick_A.tickNumber = 0;
-    }
-    else if(QREright == 1)
-    {
-        state = 2;
+            Tick_A.lastTick = millis();
+            Tick_A.tickNumber = 0;
+        }
+        else if(QREright == 1 && state != 1)
+        {
+            state = 2;
 
-        Tick_A.lastTick = millis();
-        Tick_A.tickNumber = 0;
-    }
-    else if(QREback == 1)
-    {
-        state = 0;
-    }
-    else
-    {
-        state = 0;
-    }
+            Tick_A.lastTick = millis();
+            Tick_A.tickNumber = 0;
+        }
+        else if(QREback == 1 )
+        {
+            state = 0;
+        }
+        else
+        {
+            state = 0;
+        }
     }
 
     //===========================Procesing resoluts===============================
@@ -91,7 +91,6 @@ void loop()
             Motors.right(255);
             break;
     }
-
 
     
 }

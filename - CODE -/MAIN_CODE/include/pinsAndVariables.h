@@ -33,30 +33,30 @@ uint8_t state;
 struct TICK
 {
     int tickTime;
-    uint32_t tickNumber = 10;
+    uint32_t tickNumber = 50;
     uint32_t lastTick = 0;
 };
 
 //function for tick number
 uint32_t Tick_managing(int time, uint32_t value, uint32_t last)
 {
-    if(last - millis() >= time)
+    if(millis() - last >= time)
     {
         value++;
     }
 
-    return(value);
+    return value;
 }
 
 //function for last tick
 uint32_t Tick_lastManaging(int time, uint32_t value, uint32_t last)
 {
-    if(last - millis() >= time)
+    if(millis() - last >= time)
     {
         last = millis();
     }
     
-    return(last);
+    return last;
 }
 
 
