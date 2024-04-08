@@ -46,48 +46,22 @@ void loop()
     //==========================Rafinering inputs==============================
 
 
-    if(Tick_A.tickNumber < 20 && state != 1 && state != 2)
+    if(state == 0)
     {
-        state = state;
-    }
-    else if(Tick_A.tickNumber < 20 && state == 3)
-    {
-
-    }
-    else if(Tick_A.tickNumber == 40)
-    {
-        state = 0;
-        lastQRE = 0;
-    }
-    else
-    {
-        if(QREleft == 1 && state != 2)
-        {
-
-            state = 3;
-            lastQRE = 1;
-            
-
-            Tick_A.lastTick = millis();
-            Tick_A.tickNumber = 0;
-        }
-        else if(QREright == 1 && state != 1)
-        {
-    
-            state = 3;
-            lastQRE = 2;
- 
-
-            Tick_A.lastTick = millis();
-            Tick_A.tickNumber = 0;
-        }
-        else if(lastQRE == 1)
+        
+        if(QREleft == 1 && QREright != 1)
         {
             state = 1;
+
+            Tick_A.lastTick = millis();
+            Tick_A.tickNumber = 0;
         }
-        else if(lastQRE == 2)
+        else if(QREright == 1 && QREleft != 1)
         {
             state = 2;
+
+            Tick_A.lastTick = millis();
+            Tick_A.tickNumber = 0;
         }
         else if(QREback == 1 )
         {
@@ -101,6 +75,8 @@ void loop()
 
     //===========================Procesing resoluts - states===============================
 
+    
+
     switch(state)
     {
         case 0:
@@ -108,17 +84,44 @@ void loop()
             Motors.right(255);
             break;
         case 1:
-            Motors.left(255);
-            Motors.right(-255);
+
+            if(Tick_A.tickNumber < 10)
+            {
+                Motors.left(-255);
+                Motors.right(-255);
+            }
+            else if(Tick_A.tickNumber < 30 )
+            {
+                Motors.left(255);
+                Motors.right(-255);
+            }
+
+            else
+            {
+                state = 0;
+
+            }
+
             break;
         case 2:
-            Motors.left(-255);
-            Motors.right(255);
+
+            if(Tick_A.tickNumber < 10)
+            {
+                Motors.left(-255);
+                Motors.right(-255);
+            }
+            else if(Tick_A.tickNumber < 30 )
+            {
+                Motors.left(-255);
+                Motors.right(255);
+            }
+            else
+            {
+                state = 0;
+            }
+
             break;
-        case 3:
-            Motors.left(-255);
-            Motors.right(-255);
-            break;
+
     }
 
     

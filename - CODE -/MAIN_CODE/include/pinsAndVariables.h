@@ -33,7 +33,7 @@ uint8_t state;
 struct TICK
 {
     int tickTime;
-    uint32_t tickNumber = 50;
+    uint32_t tickNumber = 100;
     uint32_t lastTick = 0;
 };
 
@@ -66,7 +66,7 @@ uint8_t QREleft;
 uint8_t QREright;
 uint8_t QREback;
 
-int lastQRE = 0;
+int end = 0;
 
 int LUNAleft;
 int LUNAright;
