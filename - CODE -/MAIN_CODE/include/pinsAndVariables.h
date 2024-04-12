@@ -48,3 +48,7 @@ int LUNAmiddle;
 
 bool SHARPleft;
 bool SHARPright;
+
+//using tics
+
+TICK Tick_A;
