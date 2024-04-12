@@ -1,7 +1,9 @@
 #include <Arduino.h>
+#include <IRremote.h>
 #include "pinsAndVariables.h"
 #include "QRE1113.h"            //befor update
 #include "DRV8874PWPR.h"        //befor update
+#include "RC-5.h"
 
 
 
@@ -24,8 +26,11 @@ TICK Tick_A;
 
 void setup() 
 {
-    //Serial.begin(115200);
+    Serial.begin(115200);
     Tick_A.tickTime = 10; 
+    irrecv.enableIRIn();
+
+    IRstart();
      
 }
 

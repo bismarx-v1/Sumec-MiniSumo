@@ -1,4 +1,4 @@
-last change: 2.4.2024
+last change: 12.4.2024
 
 
 - note: not yet modified classes
@@ -6,6 +6,7 @@ last change: 2.4.2024
 
 - location of main code is: MAIN_CODE\src
 - location of header files is: MAIN_CODE\include 
+- test's program located in test folder 
 
 
 - Actual pins:
