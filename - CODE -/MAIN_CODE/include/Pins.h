@@ -1,5 +1,4 @@
-
-// motors pins:
+// H-bridge pins
 
 #define PIN_MOTOR_LEFT_NSLEEP   11
 #define PIN_MOTOR_LEFT_ENABLE   14
@@ -11,19 +10,22 @@
 #define PIN_MOTOR_RIGHT_PHASE   13
 #define MOTOR_RIGHT_CHANNEL     1
 
-// QRE pins:
+// QRE sensor pins
 
 #define PIN_QRE_LEFT            10
 #define PIN_QRE_RIGHT           9
 #define PIN_QRE_REAR            8
 
-// sharp pins:
+// side Sharp sensor pins
 
-#define sharp_left 35
-#define sharp_right 16
+#define PIN_SHARP_LEFT          35
+#define PIN_SHARP_RIGHT         16
 
-// leds pins:
+// LED pins
 
-#define IRled 38
-#define Led_red 47
-#define Led_orange 48
+#define PIN_LED_RED             47
+#define PIN_LED_ORABGE          48
+
+// IR sensor pin
+
+#define PIN_IR                  38
