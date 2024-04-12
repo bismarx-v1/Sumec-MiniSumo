@@ -13,9 +13,9 @@
 
 // QRE pins:
 
-#define QRE_left 10
-#define QRE_right 9
-#define QRE_rear 8
+#define PIN_QRE_LEFT            10
+#define PIN_QRE_RIGHT           9
+#define PIN_QRE_REAR            8
 
 // sharp pins:
 
