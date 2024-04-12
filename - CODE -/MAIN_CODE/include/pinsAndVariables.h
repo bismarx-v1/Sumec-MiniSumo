@@ -1,3 +1,5 @@
+#include <Arduino.h>
+
 //============================= PROGRAM VARIABLES ===============================
 
 uint8_t state;
