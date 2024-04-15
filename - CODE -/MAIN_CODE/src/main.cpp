@@ -1,7 +1,8 @@
+
 #include <Pins.h>
-#include <pinsAndVariables.h>
+//#include <pinsAndVariables.h>
 #include <Motor.h>
-#include <QRE1113.h>
+//#include <QRE1113.h>
 
 
 //===========================Objects===============================
@@ -19,9 +20,9 @@ Motor MotorRight(PIN_MOTOR_RIGHT_NSLEEP,
 
 //QRE
 
-QRE qreLeft('L');
-QRE qreRight('R');
-QRE qreBack('B');
+//QRE qreLeft('L');
+//QRE qreRight('R');
+//QRE qreBack('B');
 
 
 
@@ -31,14 +32,17 @@ QRE qreBack('B');
 void setup() 
 {
     Serial.begin(9600);
+    Serial.println("jok");
     //irrecv.enableIRIn();
     //IRstart();
-    Tick_A.tickTime = 10; 
+    //Tick_A.tickTime = 10; 
 }
 
 void loop() {
 
-    /*
+   
+    Serial.println("ok");
+
     MotorLeft.goForward();
     MotorLeft.setSpeed(0.5);
     MotorRight.goBackward();
@@ -62,8 +66,8 @@ void loop() {
     MotorRight.stop();
 
     delay(2000);
-    */
-
+    
+   /*
    QREleft = qreLeft.get();
     QREright = qreRight.get();
     QREback = qreBack.get();
@@ -173,4 +177,5 @@ void loop() {
             break;
 
     }
+    */
 }
