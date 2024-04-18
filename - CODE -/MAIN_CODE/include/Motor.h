@@ -1,3 +1,6 @@
+#ifndef MOTOR_H
+#define MOTOR_H
+
 #include <Arduino.h>
 /*
 * Truthtable
@@ -17,6 +20,7 @@
 */
 
 #define PWM_RESOLUTION	8
+#define PWM_MAX_VALUE	(1 << (PWM_RESOLUTION)) - 1
 #define PWM_FREQUENCY	5000
 
 class Motor {
@@ -30,14 +34,19 @@ class Motor {
 		uint32_t mFrequency;
 	
 	public:
+		Motor();
 		Motor(uint8_t pinSleep, uint8_t pinEnable, uint8_t pinPhase, uint8_t channel);
 		void goForward();
 		void goBackward();
 		void stop();
 		void setSpeed(float speed);
-		void setFrequency(uint32_t frequency);
-		void setResolution(uint8_t resolution);
+		//void setFrequency(uint32_t frequency);
+		//void setResolution(uint8_t resolution);
 };
+
+Motor::Motor() {
+
+}
 
 Motor::Motor(uint8_t pinSleep, uint8_t pinEnable, uint8_t pinPhase, uint8_t channel) {
 
@@ -76,5 +85,15 @@ void Motor::stop() {
 }
 
 void Motor::setSpeed(float speed) {
-	ledcWrite(mChannel, speed*255);
+
+	// TO DO: limit setpoint to 0..1
+
+	// ledcWrite(mChannel, speed*(float)PWM_MAX_VALUE);
+
+	float s = speed*255;
+
+	ledcWrite(mChannel, s);
+
 }
+
+#endif

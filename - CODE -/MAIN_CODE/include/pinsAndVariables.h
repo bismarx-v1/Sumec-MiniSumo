@@ -2,6 +2,10 @@
 
 //============================= PROGRAM VARIABLES ===============================
 
+// using variables
+
+int Range = 30;
+
 uint8_t state;
 
 struct TICK
@@ -48,6 +52,8 @@ int LUNAmiddle;
 
 bool SHARPleft;
 bool SHARPright;
+
+
 
 //using tics
 

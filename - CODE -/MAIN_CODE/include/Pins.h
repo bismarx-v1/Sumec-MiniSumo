@@ -19,11 +19,14 @@
 
 // sharp pins:
 
-#define sharp_left 35
-#define sharp_right 16
+#define PIN_SHARP_LEFT          35
+#define PIN_SHARP_RIGHT         16
 
 // leds pins:
 
-#define IRled 38
-#define Led_red 47
-#define Led_orange 48
+#define PIN_LED_RED             47
+#define PIN_LED_ORANGE          48
+
+// IR pin:
+
+#define PIN_IR                  38
