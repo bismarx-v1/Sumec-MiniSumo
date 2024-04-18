@@ -6,8 +6,11 @@
 #include <QRE1113.h>
 #include <pinsAndVariables.h>
 #include <TfLunaEsp32S3.h>
+#include <Sharp_GP2Y0D810Z0F.h>
 
 // OBJECTs
+
+//motors objects
 Motor MotorLeft(PIN_MOTOR_LEFT_NSLEEP, PIN_MOTOR_LEFT_ENABLE, PIN_MOTOR_LEFT_PHASE, MOTOR_LEFT_CHANNEL);
 Motor MotorRight(PIN_MOTOR_RIGHT_NSLEEP, PIN_MOTOR_RIGHT_ENABLE, PIN_MOTOR_RIGHT_PHASE, MOTOR_RIGHT_CHANNEL);
 Motion Move(MotorLeft, MotorRight);
@@ -18,6 +21,11 @@ LED LEDRed(PIN_LED_RED);
 QRE qreLeft('L');
 QRE qreRight('R');
 QRE qreBack('B');
+
+//sharp objects
+
+Sharp sharpLeft('L');
+Sharp sharpRight('R');
 
 
 //TICKs 
@@ -62,6 +70,11 @@ void loop() {
         LUNAleft = TfL_Get(TfL_Addr1);
         LUNAright = TfL_Get(TfL_Addr3);
         LUNAmiddle = TfL_Get(TfL_Addr2);
+
+        //Sharps
+
+        SHARPleft = sharpLeft.get();
+        SHARPright = sharpRight.get();
 
         //Writeing value to TICK
 
@@ -180,6 +193,13 @@ void loop() {
                 state = 0;
 
                 break;
+            case 5:                     //sharp left
+
+                break;
+            case 6:                     //sharp right
+
+                break;
+
 
         }
 
