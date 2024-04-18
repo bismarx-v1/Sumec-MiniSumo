@@ -36,7 +36,7 @@ void setup() {
     //logic settings: 
 
     Tick_A.tickTime = 10; 
-
+    Tick_Sharp.tickTime = 10;
 
     //hardware settings:
 
@@ -81,6 +81,9 @@ void loop() {
         Tick_A.tickNumber = Tick_managing(Tick_A.tickTime, Tick_A.tickNumber, Tick_A.lastTick);
         Tick_A.lastTick = Tick_lastManaging(Tick_A.tickTime, Tick_A.tickNumber, Tick_A.lastTick);
 
+        Tick_Sharp.tickNumber = Tick_managing(Tick_Sharp.tickTime, Tick_Sharp.tickNumber, Tick_Sharp.lastTick);
+        Tick_Sharp.lastTick = Tick_lastManaging(Tick_Sharp.tickTime, Tick_Sharp.tickNumber, Tick_Sharp.lastTick);
+
         //==========================Rafinering inputs==============================
 
 
@@ -109,47 +112,65 @@ void loop() {
                 state = 0;
             }
             
-            else
+            else                                        //Sharp Senzors
             {
-                //LUNAs Senzors
+                           
+                if(SHARPleft == 1)
+                {
+                    state = 5;
 
-            if(QREleft != 1 && QREright != 1)
-            {
-            
-                if (LUNAmiddle < Range && LUNAmiddle > 0)
-                {
-                    state = 0;
+                    Tick_Sharp.lastTick = millis();
+                    Tick_Sharp.tickNumber = 0;
                 }
-                else if (LUNAright < Range && LUNAright > 0)
+                else if(SHARPright == 1)
                 {
-                    state = 3;
+                    state = 6;
+
+                    Tick_Sharp.lastTick = millis();
+                    Tick_Sharp.tickNumber = 0;
                 }
-                else if (LUNAleft < Range && LUNAleft > 0)
-                {
-                    state = 4;
+
+                else                                    //LUNAs Senzors
+                    {
+
+                    if (LUNAmiddle < Range && LUNAmiddle > 0)
+                    {
+                        state = 0;
+                    }
+                    else if (LUNAright < Range && LUNAright > 0)
+                    {
+                        state = 3;
+                    }
+                    else if (LUNAleft < Range && LUNAleft > 0)
+                    {
+                        state = 4;
+                    }
+                    else
+                    {
+                        state = 0;
+                    }
                 }
-                else
-                {
-                    state = 0;
-                }
-                
-            }
 
             }
         }
 
         //===========================Procesing resoluts - states===============================
 
+        //Serial.println(state);
+
         switch(state)
         {
             case 0:
                 Move.turnLeft(1.0);
+                Serial.println("nn");
+
                 break;
-            case 1:
+            case 1:                         //Left QRE
 
                 if(Tick_A.tickNumber < 15)
                 {
                     Move.turnRight(1.0);
+                    
                 }
                 else if(Tick_A.tickNumber < 30 )
                 {
@@ -165,7 +186,7 @@ void loop() {
 
 
                 break;
-            case 2:
+            case 2:                         //Right QRE
 
                 if(Tick_A.tickNumber < 15)
                 {
@@ -181,13 +202,13 @@ void loop() {
                 }
 
                 break;
-            case 3:
+            case 3:                     //Luna right
 
                 Move.goBackward(1.0);
                 state = 0;
 
                 break;
-            case 4:
+            case 4:                     //Luna left
 
                 Move.goForward(1.0);
                 state = 0;
@@ -195,8 +216,62 @@ void loop() {
                 break;
             case 5:                     //sharp left
 
+                if(QREleft != 1 && QREright != 1)
+                {
+                    if(Tick_Sharp.tickNumber < 20)
+                    {
+                        Move.goForward(1.0);
+                        Serial.println("F1111");
+                    }
+                    else if(Tick_Sharp.tickNumber < 50)
+                    {
+                        Move.turnLeft(1.0);
+                        Serial.println("F2222");
+                    }
+                    else if(Tick_Sharp.tickNumber < 80)
+                    {
+                        Move.goForward(1.0);
+                        Serial.println("F3333");
+                    }
+                    else
+                    {
+                        state = 0;
+                    }
+                }
+                else
+                {
+                    state = 0;
+                }
+
                 break;
             case 6:                     //sharp right
+
+                if(QREleft != 1 && QREright != 1)
+                {
+                    if(Tick_Sharp.tickNumber < 20)
+                    {
+                        Move.goBackward(1.0);
+                        Serial.println("F1111");
+                    }
+                    else if(Tick_Sharp.tickNumber < 50)
+                    {
+                        Move.turnLeft(1.0);
+                        Serial.println("F2222");
+                    }
+                    else if(Tick_Sharp.tickNumber < 80)
+                    {
+                        Move.goBackward(1.0);
+                        Serial.println("F1111");
+                    }
+                    else
+                    {
+                        state = 0;
+                    }
+                }
+                else
+                {
+                    state = 0;
+                }
 
                 break;
 

@@ -58,3 +58,4 @@ bool SHARPright;
 //using tics
 
 TICK Tick_A;
+TICK Tick_Sharp;
