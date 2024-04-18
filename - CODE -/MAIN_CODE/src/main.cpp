@@ -46,8 +46,143 @@ void loop() {
     if (Remote.hasDohyoID()) LEDRed.blink(500, 100);
 
     if (Remote.isStarted()) {
-        
-        Move.turnLeft(1);
+
+
+
+        //=========================Writeing value in sensors to variables=============
+
+        //QREs
+
+        QREleft = qreLeft.get();
+        QREright = qreRight.get();
+        QREback = qreBack.get();
+
+        //Lunas
+
+        LUNAleft = TfL_Get(TfL_Addr1);
+        LUNAright = TfL_Get(TfL_Addr3);
+        LUNAmiddle = TfL_Get(TfL_Addr2);
+
+        //Writeing value to TICK
+
+        Tick_A.tickNumber = Tick_managing(Tick_A.tickTime, Tick_A.tickNumber, Tick_A.lastTick);
+        Tick_A.lastTick = Tick_lastManaging(Tick_A.tickTime, Tick_A.tickNumber, Tick_A.lastTick);
+
+        //==========================Rafinering inputs==============================
+
+
+
+
+        if(state == 0)
+        {
+            // QRE = FIRST PRIORITY
+
+            if(QREleft == 1 && QREright != 1)
+            {
+                state = 1;
+
+                Tick_A.lastTick = millis();
+                Tick_A.tickNumber = 0;
+            }
+            else if(QREright == 1 && QREleft != 1)
+            {
+                state = 2;
+
+                Tick_A.lastTick = millis();
+                Tick_A.tickNumber = 0;
+            }
+            else if(QREback == 1 )
+            {
+                state = 0;
+            }
+            
+            else
+            {
+                //LUNAs Senzors
+
+            if(QREleft != 1 && QREright != 1)
+            {
+            
+                if (LUNAmiddle < Range && LUNAmiddle > 0)
+                {
+                    state = 0;
+                }
+                else if (LUNAright < Range && LUNAright > 0)
+                {
+                    state = 3;
+                }
+                else if (LUNAleft < Range && LUNAleft > 0)
+                {
+                    state = 4;
+                }
+                else
+                {
+                    state = 0;
+                }
+                
+            }
+
+            }
+        }
+
+        //===========================Procesing resoluts - states===============================
+
+        switch(state)
+        {
+            case 0:
+                Move.turnLeft(1.0);
+                break;
+            case 1:
+
+                if(Tick_A.tickNumber < 15)
+                {
+                    Move.turnRight(1.0);
+                }
+                else if(Tick_A.tickNumber < 30 )
+                {
+                    Move.goBackward(1.0);
+                }
+
+                else
+                {
+                    state = 0;
+
+                }
+
+
+
+                break;
+            case 2:
+
+                if(Tick_A.tickNumber < 15)
+                {
+                    Move.turnRight(1.0);
+                }
+                else if(Tick_A.tickNumber < 30 )
+                {
+                    Move.goForward(1.0);
+                }
+                else
+                {
+                    state = 0;
+                }
+
+                break;
+            case 3:
+
+                Move.goBackward(1.0);
+                state = 0;
+
+                break;
+            case 4:
+
+                Move.goForward(1.0);
+                state = 0;
+
+                break;
+
+        }
+
 
     }
 
