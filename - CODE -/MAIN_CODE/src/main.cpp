@@ -96,13 +96,18 @@ void loop() {
             if(QREleft == 1 && QREright != 1)
             {
                 state = 1;
+                sharpON_OFF = 0;
+                lunaON_OFF = 0;
 
                 Tick_QRE.lastTick = millis();
                 Tick_QRE.tickNumber = 0;
+
             }
             else if(QREright == 1 && QREleft != 1)
             {
                 state = 2;
+                sharpON_OFF = 0;
+                lunaON_OFF = 0;
 
                 Tick_QRE.lastTick = millis();
                 Tick_QRE.tickNumber = 0;
@@ -114,40 +119,45 @@ void loop() {
             
             else                                        //Sharp Senzors
             {
-                           
-                if(SHARPleft == 1)
-                {
-                    state = 5;
-
-                    Tick_Sharp.lastTick = millis();
-                    Tick_Sharp.tickNumber = 0;
-                }
-                else if(SHARPright == 1)
-                {
-                    state = 6;
-
-                    Tick_Sharp.lastTick = millis();
-                    Tick_Sharp.tickNumber = 0;
-                }
-
-                else                                    //LUNAs Senzors
+                if(sharpON_OFF == 1)
+                {        
+                    if(SHARPleft == 1)
                     {
+                        state = 5;
 
-                    if (LUNAmiddle < Range && LUNAmiddle > 0)
-                    {
-                        state = 7;
+                        Tick_Sharp.lastTick = millis();
+                        Tick_Sharp.tickNumber = 0;
                     }
-                    else if (LUNAright < Range && LUNAright > 0)
+                    else if(SHARPright == 1)
                     {
-                        state = 4;
+                        state = 6;
+
+                        Tick_Sharp.lastTick = millis();
+                        Tick_Sharp.tickNumber = 0;
                     }
-                    else if (LUNAleft < Range && LUNAleft > 0)
-                    {
-                        state = 3;
-                    }
-                    else
-                    {
-                        state = 0;
+
+                    else                                    //LUNAs Senzors
+                        {
+                        
+                        if(lunaON_OFF)
+                        {
+                            if (LUNAmiddle < Range && LUNAmiddle > 0)
+                            {
+                                state = 7;
+                            }
+                            else if (LUNAright < Range && LUNAright > 0)
+                            {
+                                state = 4;
+                            }
+                            else if (LUNAleft < Range && LUNAleft > 0)
+                            {
+                                state = 3;
+                            }
+                            else
+                            {
+                                state = 0;
+                            }
+                        }
                     }
                 }
             }
@@ -178,6 +188,8 @@ void loop() {
                 else
                 {
                     state = 0;
+                    sharpON_OFF = 1;
+                    lunaON_OFF = 1;
 
                 }
 
@@ -197,6 +209,8 @@ void loop() {
                 else
                 {
                     state = 0;
+                    sharpON_OFF = 1;
+                    lunaON_OFF = 1;
                 }
 
                 break;
@@ -220,9 +234,7 @@ void loop() {
 
                 break;
             case 5:                     //sharp left
-
-                if(QREleft != 1 && QREright != 1)
-                {
+                    /*        
                     if(Tick_Sharp.tickNumber < 10)
                     {
                         Move.turnLeft(1.0);
@@ -241,7 +253,11 @@ void loop() {
                     else
                     {
                         state = 0;
-                    }
+                    }           
+                */
+                if(Tick_Sharp.tickNumber < 40)
+                {
+                    Move.turnLeft(0.5, 0.5);
                 }
                 else
                 {
@@ -251,8 +267,7 @@ void loop() {
                 break;
             case 6:                     //sharp right
 
-                if(QREleft != 1 && QREright != 1)
-                {
+                /*
                     if(Tick_Sharp.tickNumber < 10)
                     {
                         Move.turnRight(1.0);
@@ -272,6 +287,10 @@ void loop() {
                     {
                         state = 0;
                     }
+                */
+                if(Tick_Sharp.tickNumber < 40)
+                {
+                    Move.turnRight(0.5, 0.5);
                 }
                 else
                 {
@@ -282,7 +301,6 @@ void loop() {
 
 
         }
-
 
     }
 

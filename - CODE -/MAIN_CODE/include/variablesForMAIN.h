@@ -7,6 +7,9 @@
 int Range = 30;   // revrite to 1      //Luna range for 0 or 1
 uint8_t state;          //variable who decides, what is in progress
 
+bool sharpON_OFF = 1;       //rafinering parameter for sharp
+bool lunaON_OFF = 1;        //rafinering parameter for luna
+
 
 // sensors
 uint8_t QREleft;

@@ -110,17 +110,17 @@ void Motion::turnRight(float speed, float turning) {
     float s = limitRange(speed, 0.0, 1.0);
     float t = limitRange(turning, 0.0, 1.0);
 
-    if (s + t > 1.0) t = 1.0 - s;
+    float d = t*(1.0 - s);
 
     mLMotor.goForward();
-    mLMotor.setSpeed(s + t);
+    mLMotor.setSpeed(s + d);
 
-    if (s - t >= 0) {
+    if (s - d >= 0) {
         mRMotor.goForward();
-        mRMotor.setSpeed(s - t);
+        mRMotor.setSpeed(s - d);
     } else {
         mRMotor.goBackward();
-        mRMotor.setSpeed(t - s);
+        mRMotor.setSpeed(d - s);
     }
 
 }
@@ -138,17 +138,17 @@ void Motion::turnLeft(float speed, float turning) {
     float s = limitRange(speed, 0.0, 1.0);
     float t = limitRange(turning, 0.0, 1.0);
 
-    if (s + t > 1.0) t = 1.0 - s;
+    float d = t*(1.0 - s);
 
     mRMotor.goForward();
-    mRMotor.setSpeed(s + t);
+    mRMotor.setSpeed(s + d);
 
-    if (s - t >= 0) {
+    if (s - d >= 0) {
         mLMotor.goForward();
-        mLMotor.setSpeed(s - t);
+        mLMotor.setSpeed(s - d);
     } else {
         mLMotor.goBackward();
-        mLMotor.setSpeed(t - s);
+        mLMotor.setSpeed(d - s);
     }
 
 }
