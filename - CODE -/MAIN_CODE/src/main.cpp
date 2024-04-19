@@ -150,7 +150,6 @@ void loop() {
                         state = 0;
                     }
                 }
-
             }
         }
 
@@ -217,17 +216,17 @@ void loop() {
 
                 if(QREleft != 1 && QREright != 1)
                 {
-                    if(Tick_Sharp.tickNumber < 20)
+                    if(Tick_Sharp.tickNumber < 10)
                     {
                         Move.turnLeft(1.0);
                         Serial.println("F1111");
                     }
-                    else if(Tick_Sharp.tickNumber < 50)
+                    else if(Tick_Sharp.tickNumber < 30)
                     {
                         Move.goForward(1.0);
                         Serial.println("F2222");
                     }
-                    else if(Tick_Sharp.tickNumber < 80)
+                    else if(Tick_Sharp.tickNumber < 70)
                     {
                         Move.turnLeft(1.0);
                         Serial.println("F3333");
@@ -247,20 +246,20 @@ void loop() {
 
                 if(QREleft != 1 && QREright != 1)
                 {
-                    if(Tick_Sharp.tickNumber < 20)
+                    if(Tick_Sharp.tickNumber < 10)
                     {
                         Move.turnRight(1.0);
                         Serial.println("F1111");
                     }
-                    else if(Tick_Sharp.tickNumber < 50)
+                    else if(Tick_Sharp.tickNumber < 30)
                     {
                         Move.goForward(1.0);
                         Serial.println("F2222");
                     }
-                    else if(Tick_Sharp.tickNumber < 80)
+                    else if(Tick_Sharp.tickNumber < 70)
                     {
                         Move.turnRight(1.0);
-                        Serial.println("F1111");
+                        Serial.println("F3333");
                     }
                     else
                     {

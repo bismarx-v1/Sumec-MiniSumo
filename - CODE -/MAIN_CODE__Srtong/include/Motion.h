@@ -87,7 +87,7 @@ void Motion::turnRight(float turning) {
 
     float t = limitRange(turning, 0.0, 1.0);
     
-    mLMotor.goBackward();
+    mLMotor.goForward();
     mLMotor.setSpeed(t);
     mRMotor.goBackward();
     mRMotor.setSpeed(t);
@@ -98,7 +98,7 @@ void Motion::turnLeft(float turning) {
 
     float t = limitRange(turning, 0.0, 1.0);
 
-    mLMotor.goForward();
+    mLMotor.goBackward();
     mLMotor.setSpeed(t);
     mRMotor.goForward();
     mRMotor.setSpeed(t);
@@ -109,7 +109,7 @@ void Motion::goForward(float speed) {
 
     float s = limitRange(speed, 0.0, 1.0);
 
-    mLMotor.goBackward();
+    mLMotor.goForward();
     mLMotor.setSpeed(s);
     mRMotor.goForward();
     mRMotor.setSpeed(s);
@@ -120,7 +120,7 @@ void Motion::goBackward(float speed) {
 
     float s = limitRange(speed, 0.0, 1.0);
 
-    mLMotor.goForward();
+    mLMotor.goBackward();
     mLMotor.setSpeed(s);
     mRMotor.goBackward();
     mRMotor.setSpeed(s);
