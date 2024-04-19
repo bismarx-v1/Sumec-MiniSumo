@@ -2,11 +2,30 @@
 
 //============================= PROGRAM VARIABLES ===============================
 
-// using variables
 
-int Range = 30;
+//Logic variables
+int Range = 30;         //Luna range for 0 or 1
+uint8_t state;          //variable who decides, what is in progress
 
-uint8_t state;
+
+// sensors
+uint8_t QREleft;
+uint8_t QREright;
+uint8_t QREback;
+
+int end = 0;
+
+int LUNAleft;
+int LUNAright;
+int LUNAmiddle;
+
+bool SHARPleft;
+bool SHARPright;
+
+
+//============================= PROGRAM VARIABLES ===============================
+
+
 
 struct TICK
 {
@@ -38,24 +57,8 @@ uint32_t Tick_lastManaging(int time, uint32_t value, uint32_t last)
 }
 
 
-// sensors
-
-uint8_t QREleft;
-uint8_t QREright;
-uint8_t QREback;
-
-int end = 0;
-
-int LUNAleft;
-int LUNAright;
-int LUNAmiddle;
-
-bool SHARPleft;
-bool SHARPright;
-
-
 
 //using tics
 
-TICK Tick_A;
+TICK Tick_QRE;
 TICK Tick_Sharp;

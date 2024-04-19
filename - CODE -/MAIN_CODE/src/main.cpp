@@ -35,7 +35,7 @@ void setup() {
     
     //logic settings: 
 
-    Tick_A.tickTime = 10; 
+    Tick_QRE.tickTime = 10; 
     Tick_Sharp.tickTime = 10;
 
     //hardware settings:
@@ -78,15 +78,15 @@ void loop() {
 
         //Writeing value to TICK
 
-        Tick_A.tickNumber = Tick_managing(Tick_A.tickTime, Tick_A.tickNumber, Tick_A.lastTick);
-        Tick_A.lastTick = Tick_lastManaging(Tick_A.tickTime, Tick_A.tickNumber, Tick_A.lastTick);
+        Tick_QRE.tickNumber = Tick_managing(Tick_QRE.tickTime, Tick_QRE.tickNumber, Tick_QRE.lastTick);
+        Tick_QRE.lastTick = Tick_lastManaging(Tick_QRE.tickTime, Tick_QRE.tickNumber, Tick_QRE.lastTick);
 
         Tick_Sharp.tickNumber = Tick_managing(Tick_Sharp.tickTime, Tick_Sharp.tickNumber, Tick_Sharp.lastTick);
         Tick_Sharp.lastTick = Tick_lastManaging(Tick_Sharp.tickTime, Tick_Sharp.tickNumber, Tick_Sharp.lastTick);
 
+
+
         //==========================Rafinering inputs==============================
-
-
 
 
         if(state == 0)
@@ -97,15 +97,15 @@ void loop() {
             {
                 state = 1;
 
-                Tick_A.lastTick = millis();
-                Tick_A.tickNumber = 0;
+                Tick_QRE.lastTick = millis();
+                Tick_QRE.tickNumber = 0;
             }
             else if(QREright == 1 && QREleft != 1)
             {
                 state = 2;
 
-                Tick_A.lastTick = millis();
-                Tick_A.tickNumber = 0;
+                Tick_QRE.lastTick = millis();
+                Tick_QRE.tickNumber = 0;
             }
             else if(QREback == 1 )
             {
@@ -167,12 +167,12 @@ void loop() {
                 break;
             case 1:                         //Left QRE
 
-                if(Tick_A.tickNumber < 15)
+                if(Tick_QRE.tickNumber < 15)
                 {
                     Move.turnRight(1.0);
                     
                 }
-                else if(Tick_A.tickNumber < 30 )
+                else if(Tick_QRE.tickNumber < 30 )
                 {
                     Move.goBackward(1.0);
                 }
@@ -188,11 +188,11 @@ void loop() {
                 break;
             case 2:                         //Right QRE
 
-                if(Tick_A.tickNumber < 15)
+                if(Tick_QRE.tickNumber < 15)
                 {
                     Move.turnRight(1.0);
                 }
-                else if(Tick_A.tickNumber < 30 )
+                else if(Tick_QRE.tickNumber < 30 )
                 {
                     Move.goForward(1.0);
                 }
