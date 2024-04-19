@@ -4,7 +4,7 @@
 #include <DohyoIR.h>
 #include <LED.h>
 #include <QRE1113.h>
-#include <pinsAndVariables.h>
+#include <variablesForMAIN.h>
 #include <TfLunaEsp32S3.h>
 #include <Sharp_GP2Y0D810Z0F.h>
 
@@ -139,11 +139,11 @@ void loop() {
                     }
                     else if (LUNAright < Range && LUNAright > 0)
                     {
-                        state = 3;
+                        state = 4;
                     }
                     else if (LUNAleft < Range && LUNAleft > 0)
                     {
-                        state = 4;
+                        state = 3;
                     }
                     else
                     {
@@ -156,12 +156,11 @@ void loop() {
 
         //===========================Procesing resoluts - states===============================
 
-        //Serial.println(state);
 
         switch(state)
         {
             case 0:
-                Move.turnLeft(1.0);
+                Move.goForward(1.0);
                 Serial.println("nn");
 
                 break;
@@ -169,12 +168,12 @@ void loop() {
 
                 if(Tick_QRE.tickNumber < 15)
                 {
-                    Move.turnRight(1.0);
+                    Move.goBackward(1.0);
                     
                 }
                 else if(Tick_QRE.tickNumber < 30 )
                 {
-                    Move.goBackward(1.0);
+                    Move.turnRight(1.0);
                 }
 
                 else
@@ -190,11 +189,11 @@ void loop() {
 
                 if(Tick_QRE.tickNumber < 15)
                 {
-                    Move.turnRight(1.0);
+                    Move.goBackward(1.0);
                 }
                 else if(Tick_QRE.tickNumber < 30 )
                 {
-                    Move.goForward(1.0);
+                    Move.turnLeft(1.0);
                 }
                 else
                 {
@@ -202,15 +201,15 @@ void loop() {
                 }
 
                 break;
-            case 3:                     //Luna right
+            case 3:                     //Luna left
 
-                Move.goBackward(1.0);
+                Move.turnLeft(1.0);
                 state = 0;
 
                 break;
-            case 4:                     //Luna left
+            case 4:                     //Luna right
 
-                Move.goForward(1.0);
+                Move.turnRight(1.0);
                 state = 0;
 
                 break;
@@ -220,17 +219,17 @@ void loop() {
                 {
                     if(Tick_Sharp.tickNumber < 20)
                     {
-                        Move.goForward(1.0);
+                        Move.turnLeft(1.0);
                         Serial.println("F1111");
                     }
                     else if(Tick_Sharp.tickNumber < 50)
                     {
-                        Move.turnLeft(1.0);
+                        Move.goForward(1.0);
                         Serial.println("F2222");
                     }
                     else if(Tick_Sharp.tickNumber < 80)
                     {
-                        Move.goForward(1.0);
+                        Move.turnLeft(1.0);
                         Serial.println("F3333");
                     }
                     else
@@ -250,17 +249,17 @@ void loop() {
                 {
                     if(Tick_Sharp.tickNumber < 20)
                     {
-                        Move.goBackward(1.0);
+                        Move.turnRight(1.0);
                         Serial.println("F1111");
                     }
                     else if(Tick_Sharp.tickNumber < 50)
                     {
-                        Move.turnLeft(1.0);
+                        Move.goForward(1.0);
                         Serial.println("F2222");
                     }
                     else if(Tick_Sharp.tickNumber < 80)
                     {
-                        Move.goBackward(1.0);
+                        Move.turnRight(1.0);
                         Serial.println("F1111");
                     }
                     else
