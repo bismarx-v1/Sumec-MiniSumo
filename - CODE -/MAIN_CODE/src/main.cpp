@@ -135,7 +135,7 @@ void loop() {
 
                     if (LUNAmiddle < Range && LUNAmiddle > 0)
                     {
-                        state = 0;
+                        state = 7;
                     }
                     else if (LUNAright < Range && LUNAright > 0)
                     {
@@ -209,6 +209,13 @@ void loop() {
             case 4:                     //Luna right
 
                 Move.turnRight(1.0);
+                state = 0;
+
+                break;
+
+            case 7:
+
+                Move.goForward(1.0);
                 state = 0;
 
                 break;
