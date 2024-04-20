@@ -2,6 +2,7 @@
 #define DOHYO_H
 
 #include <IRremote.hpp>
+#define TOLERANCE_FOR_DECODERS_MARK_OR_SPACE_MATCHING   30
 
 #define DECODE_RC5
 
@@ -23,6 +24,7 @@ class DohyoIR {
         uint8_t isStarted();
         uint8_t isStopped();
         uint8_t hasDohyoID();
+        void removeDohyoID();
 
 };
 
@@ -82,6 +84,13 @@ uint16_t DohyoIR::getDohyoID() {
 uint8_t DohyoIR::hasDohyoID() {
 
     return mGotDohyoID;
+
+}
+
+void DohyoIR::removeDohyoID() {
+
+    mGotDohyoID = 0;
+    mDohyoID = 0;
 
 }
 

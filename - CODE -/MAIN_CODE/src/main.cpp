@@ -8,8 +8,6 @@
 #include <TfLunaEsp32S3.h>
 #include <Sharp_GP2Y0D810Z0F.h>
 
-#define TOLERANCE_FOR_DECODERS_MARK_OR_SPACE_MATCHING 30
-
 // OBJECTs
 
 //motors objects
@@ -28,10 +26,6 @@ QRE qreBack('B');
 
 Sharp sharpLeft('L');
 Sharp sharpRight('R');
-
-
-//TICKs 
-
 
 void setup() {
     
@@ -53,11 +47,11 @@ void loop() {
     LEDRed.update();
     Remote.update();
 
-    if (Remote.hasDohyoID()) LEDRed.blink(500, 100);
+    if (Remote.hasDohyoID() && !Remote.isStarted()) LEDRed.blink(500, 100);
 
     if (Remote.isStarted()) {
 
-
+        LEDRed.blink(200, 200);
 
         //=========================Writeing value in sensors to variables=============
 
