@@ -54,6 +54,8 @@ void DohyoIR::update() {
                     }
                     break;
             }
+        } else {
+            IrReceiver.resume();
         }
 
     }
