@@ -1,8 +1,10 @@
 #ifndef DOHYO_H
 #define DOHYO_H
 
-#include <IRremote.hpp>
+#define RAW_BUFFER_LENGTH                               200
 #define TOLERANCE_FOR_DECODERS_MARK_OR_SPACE_MATCHING   30
+#include <IRremote.hpp>
+
 
 #define DECODE_RC5
 
