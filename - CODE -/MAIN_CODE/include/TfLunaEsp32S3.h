@@ -18,12 +18,12 @@ void TfL_Setup() {
 	pinMode(15, OUTPUT);
 	
     Wire.begin(18,17,400000);
-	return;
 }
 
 int TfL_Get(int TfLAddr) {
 	int16_t TfL_Dist = 0;
-	tflI2C.getData(TfL_Dist, TfLAddr);
+	bool res = tflI2C.getData(TfL_Dist, TfLAddr);
+	if (res == 0) TfL_Dist = 666;
 	return TfL_Dist;
 }
 
