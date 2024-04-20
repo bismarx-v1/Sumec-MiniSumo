@@ -21,6 +21,7 @@ class DohyoIR {
         void update();
         uint16_t getDohyoID();
         uint8_t isStarted();
+        uint8_t isStopped();
         uint8_t hasDohyoID();
 
 };
@@ -61,6 +62,12 @@ void DohyoIR::update() {
 uint8_t DohyoIR::isStarted() {
 
     return mStart;
+
+}
+
+uint8_t DohzoID::isStopped() {
+
+    return (mStart == 0);
 
 }
 
