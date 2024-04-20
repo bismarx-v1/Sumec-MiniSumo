@@ -45,7 +45,7 @@ void DohyoIR::update() {
 
             switch (mAddress) {
                 case 0x0B:
-                    mDohyoID = mCommand & 0xFE;
+                    if (mGotDohyoID == 0) mDohyoID = mCommand & 0xFE;
                     mGotDohyoID = 1;
                     break;
                 case 0x07:
