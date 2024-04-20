@@ -67,7 +67,7 @@ uint8_t DohyoIR::isStarted() {
 
 }
 
-uint8_t DohzoID::isStopped() {
+uint8_t DohyoID::isStopped() {
 
     return (mStart == 0);
 
