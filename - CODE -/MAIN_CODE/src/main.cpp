@@ -8,6 +8,8 @@
 #include <TfLunaEsp32S3.h>
 #include <Sharp_GP2Y0D810Z0F.h>
 
+#define TOLERANCE_FOR_DECODERS_MARK_OR_SPACE_MATCHING 30
+
 // OBJECTs
 
 //motors objects
@@ -124,6 +126,7 @@ void loop() {
                     if(SHARPleft == 1)
                     {
                         state = 5;
+                        //lunaON_OFF = 0;
 
                         Tick_Sharp.lastTick = millis();
                         Tick_Sharp.tickNumber = 0;
@@ -131,16 +134,17 @@ void loop() {
                     else if(SHARPright == 1)
                     {
                         state = 6;
+                        //lunaON_OFF = 0;
 
                         Tick_Sharp.lastTick = millis();
                         Tick_Sharp.tickNumber = 0;
                     }
 
-                    else                                    //LUNAs Senzors
-                        {
+                    //else                                    //LUNAs Senzors
+                        //{
                         
-                        if(lunaON_OFF)
-                        {
+                        //if(lunaON_OFF)
+                        //{
                             if (LUNAmiddle < Range && LUNAmiddle > 0)
                             {
                                 state = 7;
@@ -157,20 +161,25 @@ void loop() {
                             {
                                 state = 0;
                             }
-                        }
-                    }
+                        //}
+                    //}
                 }
             }
         }
 
         //===========================Procesing resoluts - states===============================
+        Serial.print(LUNAleft);
+        Serial.print("\t");
+        Serial.print(LUNAmiddle);
+        Serial.print("\t");
+        Serial.println(LUNAright);
 
 
         switch(state)
         {
             case 0:
                 Move.goForward(1.0);
-                Serial.println("nn");
+                //Serial.println("nn");
 
                 break;
             case 1:                         //Left QRE
@@ -233,72 +242,47 @@ void loop() {
                 state = 0;
 
                 break;
-            case 5:                     //sharp left
-                    /*        
-                    if(Tick_Sharp.tickNumber < 10)
-                    {
-                        Move.turnLeft(1.0);
-                        Serial.println("F1111");
-                    }
-                    else if(Tick_Sharp.tickNumber < 30)
-                    {
-                        Move.goForward(1.0);
-                        Serial.println("F2222");
-                    }
-                    else if(Tick_Sharp.tickNumber < 70)
-                    {
-                        Move.turnLeft(1.0);
-                        Serial.println("F3333");
-                    }
-                    else
-                    {
-                        state = 0;
-                    }           
-                */
-                if(Tick_Sharp.tickNumber < 40)
+            /*case 5:                     //sharp left
+                  
+                if(sharpON_OFF == 1)
                 {
-                    Move.turnLeft(0.5, 0.5);
-                }
-                else
-                {
-                    state = 0;
-                }
-
-                break;
-            case 6:                     //sharp right
-
-                /*
-                    if(Tick_Sharp.tickNumber < 10)
+                    if(Tick_Sharp.tickNumber < 20)
                     {
-                        Move.turnRight(1.0);
-                        Serial.println("F1111");
+                        Move.turnLeft(0.5, 0.5);
                     }
-                    else if(Tick_Sharp.tickNumber < 30)
+                    else if(Tick_Sharp.tickNumber < 50)
                     {
-                        Move.goForward(1.0);
-                        Serial.println("F2222");
-                    }
-                    else if(Tick_Sharp.tickNumber < 70)
-                    {
-                        Move.turnRight(1.0);
-                        Serial.println("F3333");
+                        Move.turnLeft(0.5, 0.5);
+                        lunaON_OFF = 1;
                     }
                     else
                     {
                         state = 0;
                     }
-                */
-                if(Tick_Sharp.tickNumber < 40)
-                {
-                    Move.turnRight(0.5, 0.5);
                 }
-                else
+
+            */    break;
+            /*case 6:                     //sharp right
+
+                if(sharpON_OFF == 1)
                 {
-                    state = 0;
+                    if(Tick_Sharp.tickNumber < 00)
+                    {
+                        Move.turnRight(0.5, 0.5);
+                    }
+                    else if(Tick_Sharp.tickNumber < 50)
+                    {
+                        Move.turnLeft(0.5, 0.5);
+                        lunaON_OFF = 1;
+                    }
+                    else
+                    {
+                        state = 0;
+                    }
                 }
 
                 break;
-
+            */
 
         }
 

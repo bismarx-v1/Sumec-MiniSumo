@@ -47,7 +47,7 @@ void loop() {
 
     if (Remote.isStarted()) {
         
-        Move.turnRight(0.5, 0.5);
+        Move.goForward(1.0);
 
     }
 
