@@ -2,60 +2,56 @@
 
 //============================= PROGRAM VARIABLES ===============================
 
-
-//Logic variables
-int Range = 50;   // revrite to 1      //Luna range for 0 or 1
-uint8_t state = 0;          //variable who decides, what is in progress
-float rotate_coeficient = 0;
-bool sharp_control = 1;
-bool start = 1;
-
-bool sharpON_OFF = 1;       //rafinering parameter for sharp
-bool lunaON_OFF = 1;        //rafinering parameter for luna
+// Logic variables:
+int Range = 50;     // luna range for decision, is enybodey there?
+uint8_t state = 0;      // variable who decides, what is in progress
+float rotate_coeficient = 0;    // wariable for rotating, how much is having rotating 
+bool start = 1;     // this variable determines if the start is in progress 
+bool sharpON_OFF = 1;      // rafinering parameter for sharp, Is sharp on or off
+bool lunaON_OFF = 1;       // rafinering parameter for luna, Is luna on or off
 
 
-// sensors
+// sensors:
+
+// Value of line sonzors
 uint8_t QREleft;
 uint8_t QREright;
 uint8_t QREback;
 
-int end = 0;
-
+// Value of length sonzors
 int LUNAleft;
 int LUNAright;
 int LUNAmiddle;
 
+// Value of side sonzors
 bool SHARPleft;
 bool SHARPright;
 
-
 //============================= PROGRAM VARIABLES ===============================
 
-
-
+// structure tick, who have all tick variables 
 struct TICK
 {
     int tickTime;
     uint32_t tickNumber = 100;
-    uint32_t lastTick = 0;
     uint32_t lastNumberTick = 0;
+    uint32_t lastTick = 0;
 };
 
-//function for updateing tick's
+// function for updateing tick's
 void Tick_managing(int time, uint32_t value, uint32_t last, uint32_t *return_last, uint32_t *return_value)
 {
-    if(millis() - last >= time)
+    if (millis() - last >= time)
     {
         value++;
         last = millis();
     }
 
-    *return_last =  last;
+    *return_last = last;
     *return_value = value;
-
 }
 
-//using tics
+// using tics
 
 TICK Tick_QRE;
 TICK Tick_Sharp;
