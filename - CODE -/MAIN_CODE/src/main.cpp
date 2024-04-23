@@ -134,11 +134,11 @@ void loop() {
                         Tick_Sharp.tickNumber = 0;
                     }
 
-                    //else                                    //LUNAs Senzors
-                        //{
+                    else                                    //LUNAs Senzors
+                        {
                         
-                        //if(lunaON_OFF)
-                        //{
+                        if(lunaON_OFF)
+                        {
                             if (LUNAmiddle < Range && LUNAmiddle > 0)
                             {
                                 state = 7;
@@ -155,8 +155,8 @@ void loop() {
                             {
                                 state = 0;
                             }
-                        //}
-                    //}
+                        }
+                    }
                 }
             }
         }
