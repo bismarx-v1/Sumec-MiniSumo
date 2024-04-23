@@ -82,10 +82,11 @@ void loop() {
 
         //==========================Rafinering inputs==============================
 
-
+        if(state != 0)
+        {
         if(QREleft == 1 && QREright != 1)
         {
-            state = 1;
+            state = 2;
             sharpON_OFF = 0;
             lunaON_OFF = 0;
 
@@ -95,21 +96,21 @@ void loop() {
         }
         else if(QREright == 1 && QREleft != 1)
         {
-            state = 2;
+            state = 3;
             sharpON_OFF = 0;
             lunaON_OFF = 0;
 
             Tick_QRE.lastTick = millis();
             Tick_QRE.tickNumber = 0;
         }
-        else if(state == 0)
+        else if(state == 1)
         {
             
             if(sharpON_OFF == 1)
             {        
                 if(SHARPleft == 1)
                 {
-                    state = 5;
+                    state = 6;
                     lunaON_OFF = 0;
 
                     Tick_Sharp.lastTick = millis();
@@ -117,7 +118,7 @@ void loop() {
                 }
                 else if(SHARPright == 1)
                 {
-                    state = 6;
+                    state = 7;
                     lunaON_OFF = 0;
 
                     Tick_Sharp.lastTick = millis();
@@ -131,42 +132,48 @@ void loop() {
                     {
                         if (LUNAmiddle < Range && LUNAmiddle > 0)
                         {
-                            state = 7;
+                            state = 8;
                         }
                         else if (LUNAright < Range && LUNAright > 0)
                         {
-                            state = 4;
+                            state = 5;
                         }
                         else if (LUNAleft < Range && LUNAleft > 0)
                         {
-                            state = 3;
+                            state = 4;
                         }
                         else
                         {
-                            state = 0;
+                            state = 1;
                         }
                     }
                 }
             }
         }
+        }
 
         //===========================Procesing resoluts - states===============================
-        /*
-        Serial.print(LUNAleft);
-        Serial.print("\t");
-        Serial.print(LUNAmiddle);
-        Serial.print("\t");
-        Serial.println(LUNAright);
-        */
+        
+        Serial.println(state);
+        
 
         switch(state)
         {
             case 0:
-                Move.goForward(1.0);
-                //Serial.println("nn");
+                Move.turnRight(1.0);
+
+                if(LUNAmiddle < 35 && start == 1)
+                {
+                    state = 1;
+                    start = 0;
+                }
 
                 break;
-            case 1:                         //Left QRE
+            case 1:
+                Move.goForward(1.0);
+
+                break;
+            case 2:                         //Left QRE
 
                 if(Tick_QRE.tickNumber < 15)
                 {
@@ -176,11 +183,12 @@ void loop() {
                 else if(Tick_QRE.tickNumber < 30 )
                 {
                     Move.turnRight(1.0);
+                    
                 }
 
                 else
                 {
-                    state = 0;
+                    state = 1;
                     sharpON_OFF = 1;
                     lunaON_OFF = 1;
 
@@ -189,7 +197,7 @@ void loop() {
 
 
                 break;
-            case 2:                         //Right QRE
+            case 3:                         //Right QRE
 
                 if(Tick_QRE.tickNumber < 15)
                 {
@@ -198,35 +206,36 @@ void loop() {
                 else if(Tick_QRE.tickNumber < 30 )
                 {
                     Move.turnLeft(1.0);
+
                 }
                 else
                 {
-                    state = 0;
+                    state = 1;
                     sharpON_OFF = 1;
                     lunaON_OFF = 1;
                 }
 
                 break;
-            case 3:                     //Luna left
+            case 4:                     //Luna left
 
                 Move.turnLeft(1.0);
-                state = 0;
+                state = 1;
 
                 break;
-            case 4:                     //Luna right
+            case 5:                     //Luna right
 
                 Move.turnRight(1.0);
-                state = 0;
+                state = 1;
 
                 break;
 
-            case 7:
+            case 8:
 
                 Move.goForward(1.0);
-                state = 0;
+                state = 1;
 
                 break;
-            case 5:                     //sharp left
+            case 6:                     //sharp left
                   
                 if(sharpON_OFF == 1)
                 {
@@ -246,7 +255,7 @@ void loop() {
                     else
                     {
                         lunaON_OFF = 1;
-                        state = 0;
+                        state = 1;
                     }
 
                     if(Tick_Sharp.tickNumber > Tick_Sharp.lastNumberTick)
@@ -256,7 +265,7 @@ void loop() {
                 }
 
                 break;
-            case 6:                     //sharp right
+            case 7:                     //sharp right
 
                 if(sharpON_OFF == 1)
                 {
@@ -276,7 +285,7 @@ void loop() {
                     else
                     {
                         lunaON_OFF = 1;
-                        state = 0;
+                        state = 1;
                     }
 
                     if(Tick_Sharp.tickNumber > Tick_Sharp.lastNumberTick)

@@ -5,9 +5,10 @@
 
 //Logic variables
 int Range = 50;   // revrite to 1      //Luna range for 0 or 1
-uint8_t state;          //variable who decides, what is in progress
+uint8_t state = 0;          //variable who decides, what is in progress
 float rotate_coeficient = 0;
 bool sharp_control = 1;
+bool start = 1;
 
 bool sharpON_OFF = 1;       //rafinering parameter for sharp
 bool lunaON_OFF = 1;        //rafinering parameter for luna
