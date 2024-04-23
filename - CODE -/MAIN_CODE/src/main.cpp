@@ -74,87 +74,76 @@ void loop() {
 
         //Writeing value to TICK
 
-        Tick_QRE.tickNumber = Tick_managing(Tick_QRE.tickTime, Tick_QRE.tickNumber, Tick_QRE.lastTick);
-        Tick_QRE.lastTick = Tick_lastManaging(Tick_QRE.tickTime, Tick_QRE.tickNumber, Tick_QRE.lastTick);
-
-        Tick_Sharp.tickNumber = Tick_managing(Tick_Sharp.tickTime, Tick_Sharp.tickNumber, Tick_Sharp.lastTick);
-        Tick_Sharp.lastTick = Tick_lastManaging(Tick_Sharp.tickTime, Tick_Sharp.tickNumber, Tick_Sharp.lastTick);
-
+        Tick_managing(Tick_QRE.tickTime, Tick_QRE.tickNumber, Tick_QRE.lastTick, &Tick_QRE.lastTick, &Tick_QRE.tickNumber);
+        
+        Tick_managing(Tick_Sharp.tickTime, Tick_Sharp.tickNumber, Tick_Sharp.lastTick, &Tick_Sharp.lastTick, &Tick_Sharp.tickNumber);
+        
 
 
         //==========================Rafinering inputs==============================
 
 
-        if(state == 0)
+        if(QREleft == 1 && QREright != 1)
         {
-            // QRE = FIRST PRIORITY
+            state = 1;
+            sharpON_OFF = 0;
+            lunaON_OFF = 0;
 
-            if(QREleft == 1 && QREright != 1)
-            {
-                state = 1;
-                sharpON_OFF = 0;
-                lunaON_OFF = 0;
+            Tick_QRE.lastTick = millis();
+            Tick_QRE.tickNumber = 0;
 
-                Tick_QRE.lastTick = millis();
-                Tick_QRE.tickNumber = 0;
+        }
+        else if(QREright == 1 && QREleft != 1)
+        {
+            state = 2;
+            sharpON_OFF = 0;
+            lunaON_OFF = 0;
 
-            }
-            else if(QREright == 1 && QREleft != 1)
-            {
-                state = 2;
-                sharpON_OFF = 0;
-                lunaON_OFF = 0;
-
-                Tick_QRE.lastTick = millis();
-                Tick_QRE.tickNumber = 0;
-            }
-            else if(QREback == 1 )
-            {
-                state = 0;
-            }
+            Tick_QRE.lastTick = millis();
+            Tick_QRE.tickNumber = 0;
+        }
+        else if(state == 0)
+        {
             
-            else                                        //Sharp Senzors
-            {
-                if(sharpON_OFF == 1)
-                {        
-                    if(SHARPleft == 1)
+            if(sharpON_OFF == 1)
+            {        
+                if(SHARPleft == 1)
+                {
+                    state = 5;
+                    lunaON_OFF = 0;
+
+                    Tick_Sharp.lastTick = millis();
+                    Tick_Sharp.tickNumber = 0;
+                }
+                else if(SHARPright == 1)
+                {
+                    state = 6;
+                    lunaON_OFF = 0;
+
+                    Tick_Sharp.lastTick = millis();
+                    Tick_Sharp.tickNumber = 0;
+                }
+
+                else                                    //LUNAs Senzors
                     {
-                        state = 5;
-                        //lunaON_OFF = 0;
-
-                        Tick_Sharp.lastTick = millis();
-                        Tick_Sharp.tickNumber = 0;
-                    }
-                    else if(SHARPright == 1)
-                    {
-                        state = 6;
-                        //lunaON_OFF = 0;
-
-                        Tick_Sharp.lastTick = millis();
-                        Tick_Sharp.tickNumber = 0;
-                    }
-
-                    else                                    //LUNAs Senzors
-                        {
                         
-                        if(lunaON_OFF)
+                    if(lunaON_OFF)
+                    {
+                        if (LUNAmiddle < Range && LUNAmiddle > 0)
                         {
-                            if (LUNAmiddle < Range && LUNAmiddle > 0)
-                            {
-                                state = 7;
-                            }
-                            else if (LUNAright < Range && LUNAright > 0)
-                            {
-                                state = 4;
-                            }
-                            else if (LUNAleft < Range && LUNAleft > 0)
-                            {
-                                state = 3;
-                            }
-                            else
-                            {
-                                state = 0;
-                            }
+                            state = 7;
+                        }
+                        else if (LUNAright < Range && LUNAright > 0)
+                        {
+                            state = 4;
+                        }
+                        else if (LUNAleft < Range && LUNAleft > 0)
+                        {
+                            state = 3;
+                        }
+                        else
+                        {
+                            state = 0;
                         }
                     }
                 }
@@ -162,12 +151,13 @@ void loop() {
         }
 
         //===========================Procesing resoluts - states===============================
+        /*
         Serial.print(LUNAleft);
         Serial.print("\t");
         Serial.print(LUNAmiddle);
         Serial.print("\t");
         Serial.println(LUNAright);
-
+        */
 
         switch(state)
         {
@@ -236,47 +226,67 @@ void loop() {
                 state = 0;
 
                 break;
-            /*case 5:                     //sharp left
+            case 5:                     //sharp left
                   
                 if(sharpON_OFF == 1)
                 {
                     if(Tick_Sharp.tickNumber < 20)
                     {
-                        Move.turnLeft(0.5, 0.5);
+                        Move.turnLeft(0.5, (0.5*rotate_coeficient));
                     }
                     else if(Tick_Sharp.tickNumber < 50)
                     {
-                        Move.turnLeft(0.5, 0.5);
-                        lunaON_OFF = 1;
+                        Move.turnLeft(0.5, (0.5*rotate_coeficient));
+                    }
+                    else if(Tick_Sharp.tickNumber < 60)
+                    {
+                        Move.turnLeft(1.0);
+
                     }
                     else
                     {
-                        state = 0;
-                    }
-                }
-
-            */    break;
-            /*case 6:                     //sharp right
-
-                if(sharpON_OFF == 1)
-                {
-                    if(Tick_Sharp.tickNumber < 00)
-                    {
-                        Move.turnRight(0.5, 0.5);
-                    }
-                    else if(Tick_Sharp.tickNumber < 50)
-                    {
-                        Move.turnLeft(0.5, 0.5);
                         lunaON_OFF = 1;
-                    }
-                    else
-                    {
                         state = 0;
+                    }
+
+                    if(Tick_Sharp.tickNumber > Tick_Sharp.lastNumberTick)
+                    {
+                        rotate_coeficient = rotate_coeficient + 0.02;
                     }
                 }
 
                 break;
-            */
+            case 6:                     //sharp right
+
+                if(sharpON_OFF == 1)
+                {
+                    if(Tick_Sharp.tickNumber < 20)
+                    {
+                        Move.turnRight(0.5, (0.5*rotate_coeficient));
+                    }
+                    else if(Tick_Sharp.tickNumber < 50)
+                    {
+                        Move.turnRight(0.5, (0.5*rotate_coeficient));
+                        
+                    }
+                    else if(Tick_Sharp.tickNumber < 60)
+                    {
+                        Move.turnRight(1.0);
+                    }
+                    else
+                    {
+                        lunaON_OFF = 1;
+                        state = 0;
+                    }
+
+                    if(Tick_Sharp.tickNumber > Tick_Sharp.lastNumberTick)
+                    {
+                        rotate_coeficient = rotate_coeficient + 0.02;
+                    }
+                }
+
+                break;
+            
 
         }
 
