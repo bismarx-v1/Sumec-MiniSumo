@@ -3,12 +3,12 @@
 //============================= PROGRAM VARIABLES ===============================
 
 // Logic variables:
-int Range = 50;     // luna range for decision, is enybodey there?
+int Range = 50;     // Length senzor range for decision, is enybodey there?
 uint8_t state = 0;      // variable who decides, what is in progress
 float rotate_coeficient = 0;    // wariable for rotating, how much is having rotating 
 bool start = 1;     // this variable determines if the start is in progress 
-bool sharpON_OFF = 1;      // rafinering parameter for sharp, Is sharp on or off
-bool lunaON_OFF = 1;       // rafinering parameter for luna, Is luna on or off
+bool sharpON_OFF = 1;      // rafinering parameter for side sonzors, Is side sonzor on or off
+bool lunaON_OFF = 1;       // rafinering parameter for Length senzor, Is Length senzor on or off
 
 
 // sensors:

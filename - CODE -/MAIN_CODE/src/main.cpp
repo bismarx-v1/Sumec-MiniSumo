@@ -18,6 +18,7 @@ Motion Move(MotorLeft, MotorRight);
 // IR, RC-5 and led objects
 DohyoIR Remote(PIN_IR);
 LED LEDRed(PIN_LED_RED);
+LED LEDOrange(PIN_LED_ORABGE);
 
 // Line sonzors objects
 QRE qreLeft('L');
@@ -48,6 +49,7 @@ void loop()
 
     // controling led flashing time and   
     LEDRed.update();
+    LEDOrange.update();
     Remote.update();
 
     if (Remote.hasDohyoID() && !Remote.isStarted())
@@ -56,8 +58,6 @@ void loop()
     // after start comand, running this main code
     if (Remote.isStarted())
     {
-
-        LEDRed.blink(200, 200);
 
         //=========================Writeing value in sensors to variables=============
 
@@ -163,6 +163,8 @@ void loop()
 
             if (LUNAmiddle < 35 && start == 1)
             {
+                LEDRed.blink(100, 100);
+
                 state = 1;
                 start = 0;
             }
@@ -171,8 +173,13 @@ void loop()
         case 1:
             Move.goForward(1.0);
 
+            LEDOrange.setOff();
+            LEDRed.blink(100, 100);
+
             break;
         case 2: // Line sonzor - Left
+
+            LEDRed.setOn();
 
             if (Tick_QRE.tickNumber < 15)
             {
@@ -193,6 +200,8 @@ void loop()
             break;
         case 3: // Line sonzor - Right
 
+            LEDRed.setOn();
+
             if (Tick_QRE.tickNumber < 15)
             {
                 Move.goBackward(1.0);
@@ -211,12 +220,14 @@ void loop()
             break;
         case 4: // Length senzor - left
 
+            LEDOrange.blink(100, 100);
             Move.turnLeft(1.0);
             state = 1;
 
             break;
         case 5: // Length senzor - right
 
+            LEDOrange.blink(100, 100);
             Move.turnRight(1.0);
             state = 1;
 
@@ -224,11 +235,14 @@ void loop()
 
         case 8: // Length senzor - middle
 
+            LEDOrange.blink(100, 100);
             Move.goForward(1.0);
             state = 1;
 
             break;
         case 6: // side sonzors - left
+
+            LEDOrange.setOn();
 
             if (sharpON_OFF == 1)
             {
@@ -258,6 +272,8 @@ void loop()
 
             break;
         case 7: // side sonzors - right
+
+            LEDOrange.setOn();
 
             if (sharpON_OFF == 1)
             {
