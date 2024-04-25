@@ -40,6 +40,7 @@ void setup()
 
     // hardware settings:
     TfL_Setup();
+    pinMode(button, INPUT);
     Serial.begin(115200);
     LEDRed.blink(1000);
 }
@@ -52,11 +53,23 @@ void loop()
     LEDOrange.update();
     Remote.update();
 
+    // start with button
+    if(digitalRead(button) == 1)
+    {
+        while(digitalRead(button) == 1)
+        {
+            LEDRed.setOn();
+            LEDOrange.setOn();
+        }
+        isStarted = 1;
+    }
+
+    // start with IR
     if (Remote.hasDohyoID() && !Remote.isStarted())
         LEDRed.blink(500, 100);
 
     // after start comand, running this main code
-    if (Remote.isStarted())
+    if (!Remote.isStarted() && isStarted == 1)
     {
 
         //=========================Writeing value in sensors to variables=============
@@ -153,20 +166,37 @@ void loop()
             }
         }
 
+        Serial.println(isStarted);
 
         //===========================Procesing resoluts - states===============================
 
         switch (state)
         {
         case 0:
-            Move.turnRight(1.0);
+            LEDRed.blink(100, 100);
 
-            if (LUNAmiddle < 35 && start == 1)
+            if(QREleft)
             {
-                LEDRed.blink(100, 100);
+                Range = 50;
+                Move.turnRight(1.0);
+            }
+            else if(QREright)
+            {
+                Range = 50;
+                Move.turnLeft(1.0);
+                QRE_left_started = 1;
 
+            }
+            else if(QRE_left_started == 0)
+            {
+                Move.turnRight(1.0);
+                Range = 35;
+            }
+
+            if (LUNAmiddle < Range )
+            {
                 state = 1;
-                start = 0;
+                Range = 50;
             }
 
             break;
@@ -303,5 +333,9 @@ void loop()
 
             break;
         }
+    }
+    else
+    {
+        Move.stop();
     }
 }

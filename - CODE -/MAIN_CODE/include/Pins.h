@@ -29,3 +29,7 @@
 // IR sensor pin
 
 #define PIN_IR                  38
+
+// BUTTON
+
+#define button                  2

@@ -1,4 +1,4 @@
-last change: 12.4.2024
+last change: 25.4.2024
 
 
 - note: not yet modified classes
@@ -7,6 +7,11 @@ last change: 12.4.2024
 - location of main code is: MAIN_CODE\src
 - location of header files is: MAIN_CODE\include 
 - test's program located in test folder 
+
+
+-LED signalization:
+	-RED blinking slowly => waiting to start
+	-RED  => waiting to start
 
 
 - Actual pins:

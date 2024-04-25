@@ -6,9 +6,11 @@
 int Range = 50;     // Length senzor range for decision, is enybodey there?
 uint8_t state = 0;      // variable who decides, what is in progress
 float rotate_coeficient = 0;    // wariable for rotating, how much is having rotating 
-bool start = 1;     // this variable determines if the start is in progress 
+//bool start = 0;     // this variable determines if the start is in progress 
+bool isStarted = 0;     // variable for starting with button
 bool sharpON_OFF = 1;      // rafinering parameter for side sonzors, Is side sonzor on or off
 bool lunaON_OFF = 1;       // rafinering parameter for Length senzor, Is Length senzor on or off
+bool QRE_left_started = 0;
 
 
 // sensors:
