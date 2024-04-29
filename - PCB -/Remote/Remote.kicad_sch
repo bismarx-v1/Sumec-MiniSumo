@@ -5870,6 +5870,17 @@
 		)
 		(uuid "17d21767-6032-4662-8886-cfb40cf14ed2")
 	)
+	(text "IR204-A\nI_{F} = 100 mA\nV_{F} = 1.4 V"
+		(exclude_from_sim no)
+		(at 118.872 89.662 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "3610e598-cf16-4c82-8a20-362bfb6bed0b")
+	)
 	(text "SWITCHES"
 		(exclude_from_sim no)
 		(at 86.868 172.212 0)
@@ -5908,6 +5919,17 @@
 		)
 		(uuid "8277a197-4b84-4068-b3ae-745187a5b365")
 	)
+	(text "TSUS5400\nI_{F} = 100 mA\nV_{F} = 1.7 V\n\nR_{IR} = (V_{SUPP}-V_{F})/I_{F} =\n= (3-1.7)/0.1 = 13 Ohm\n\nfor t_{p} < 100 us\nI_{F} = 1.5 A\nV_{F} = 2.2 V\n\nR_{IR} = (V_{SUPP}-V_{F})/I_{F} =\n= (3-2.2)/1.5 = 0.53 Ohm\n"
+		(exclude_from_sim no)
+		(at 118.872 52.832 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "ad26501e-0f42-4e36-9bb6-f119480cc877")
+	)
 	(text "S_LEDS"
 		(exclude_from_sim no)
 		(at 337.82 28.194 0)
@@ -5934,6 +5956,18 @@
 		)
 		(uuid "b249445c-0f2f-495e-b6b0-186d1659becb")
 	)
+	(text "ABL-16.000MHZ-B2\nC_{LOAD} = 18 pF"
+		(exclude_from_sim no)
+		(at 263.398 76.708 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+			(href "https://cz.mouser.com/datasheet/2/3/ABL-1774766.pdf")
+		)
+		(uuid "b2eb6355-2367-4426-98f9-7ea141c215c9")
+	)
 	(text "IR_LEDS"
 		(exclude_from_sim no)
 		(at 83.82 27.686 0)
@@ -5958,6 +5992,17 @@
 			)
 		)
 		(uuid "bd89da6f-3b76-4270-aa23-67bdee27059b")
+	)
+	(text "DMG6968U-7\nR_{DS(ON)} = 23 Ohm"
+		(exclude_from_sim no)
+		(at 79.502 126.238 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "f95ae1a9-e242-4929-a14a-ae4aee5e4407")
 	)
 	(label "MISO"
 		(at 217.17 214.63 90)
