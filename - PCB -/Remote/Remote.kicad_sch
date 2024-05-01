@@ -3353,150 +3353,6 @@
 				)
 			)
 		)
-		(symbol "remote_V0_04_-eagle-import:R-EU_R0805WP"
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "R"
-				(at -3.81 1.4986 0)
-				(effects
-					(font
-						(size 1.778 1.5113)
-					)
-					(justify left bottom)
-				)
-			)
-			(property "Value" ""
-				(at -3.81 -3.302 0)
-				(effects
-					(font
-						(size 1.778 1.5113)
-					)
-					(justify left bottom)
-				)
-			)
-			(property "Footprint" "remote_V0_04_:R0805WP"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "RESISTOR, European symbol"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_locked" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "R-EU_R0805WP_1_0"
-				(polyline
-					(pts
-						(xy -2.54 -0.889) (xy -2.54 0.889)
-					)
-					(stroke
-						(width 0.254)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -2.54 -0.889) (xy 2.54 -0.889)
-					)
-					(stroke
-						(width 0.254)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 2.54 -0.889) (xy 2.54 0.889)
-					)
-					(stroke
-						(width 0.254)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 2.54 0.889) (xy -2.54 0.889)
-					)
-					(stroke
-						(width 0.254)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(pin passive line
-					(at -5.08 0 0)
-					(length 2.54)
-					(name "1"
-						(effects
-							(font
-								(size 0 0)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 0 0)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 5.08 0 180)
-					(length 2.54)
-					(name "2"
-						(effects
-							(font
-								(size 0 0)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 0 0)
-							)
-						)
-					)
-				)
-			)
-		)
 	)
 	(junction
 		(at 97.79 204.47)
@@ -3527,12 +3383,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "21bdcc9a-3ea0-40c1-b23c-4d159cb79b25")
-	)
-	(junction
-		(at 109.22 55.88)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "25c1f3a2-9a1f-45f7-bc32-e7b5d6e9a509")
 	)
 	(junction
 		(at 341.63 194.31)
@@ -3577,22 +3427,10 @@
 		(uuid "621dc605-40e2-4f21-af62-2e69de24f6b6")
 	)
 	(junction
-		(at 255.27 107.95)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "651eeddd-bcdc-44b1-84b9-2280b3eb1045")
-	)
-	(junction
 		(at 252.73 82.55)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "805c0e75-0f6a-49d7-8aa3-2f726f6ee998")
-	)
-	(junction
-		(at 109.22 58.42)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "8789fd71-ffb6-4ace-a85e-2253c3e7fa85")
 	)
 	(junction
 		(at 224.79 53.34)
@@ -3605,6 +3443,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "93ba85ac-a2fa-4f84-b227-8995623ec267")
+	)
+	(junction
+		(at 255.27 107.95)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "950f19e6-04dd-447f-9825-1e803dbc2683")
 	)
 	(junction
 		(at 76.2 134.62)
@@ -3677,6 +3521,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "e835661b-5da4-450b-8428-dfcb85ec41a9")
+	)
+	(junction
+		(at 109.22 58.42)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "f2544bd4-9171-4a73-9c03-a498f93a7813")
 	)
 	(junction
 		(at 331.47 204.47)
@@ -4027,6 +3877,16 @@
 			(type solid)
 		)
 		(uuid "2a3a0adb-8405-44d5-939b-b667b12a3133")
+	)
+	(wire
+		(pts
+			(xy 255.27 106.68) (xy 255.27 107.95)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2a5ab786-9116-42c0-8128-7b8910f693fd")
 	)
 	(wire
 		(pts
@@ -4540,6 +4400,16 @@
 	)
 	(wire
 		(pts
+			(xy 255.27 107.95) (xy 264.16 107.95)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5e7c69e2-b9b4-47ed-81dc-b56b96cd11ba")
+	)
+	(wire
+		(pts
 			(xy 240.03 105.41) (xy 248.92 105.41)
 		)
 		(stroke
@@ -4617,6 +4487,16 @@
 			(type default)
 		)
 		(uuid "6208559f-2e98-40fc-b409-2140c30b6526")
+	)
+	(wire
+		(pts
+			(xy 255.27 97.79) (xy 255.27 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6251e936-ee97-4286-ace4-9c306c1759be")
 	)
 	(wire
 		(pts
@@ -4807,16 +4687,6 @@
 			(type solid)
 		)
 		(uuid "7fee81da-3120-4ca4-92aa-d23b58055dff")
-	)
-	(wire
-		(pts
-			(xy 109.22 53.34) (xy 109.22 55.88)
-		)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(uuid "80d5d082-da2f-45a9-a874-65371b64fffc")
 	)
 	(wire
 		(pts
@@ -5310,16 +5180,6 @@
 	)
 	(wire
 		(pts
-			(xy 109.22 58.42) (xy 109.22 55.88)
-		)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(uuid "c4ee8633-006f-4693-b227-b4f74be388f2")
-	)
-	(wire
-		(pts
 			(xy 78.74 198.12) (xy 74.93 198.12)
 		)
 		(stroke
@@ -5670,6 +5530,16 @@
 	)
 	(wire
 		(pts
+			(xy 109.22 53.34) (xy 109.22 58.42)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f7315351-7280-4b70-8f62-81d321024348")
+	)
+	(wire
+		(pts
 			(xy 106.68 68.58) (xy 109.22 68.58)
 		)
 		(stroke
@@ -5747,16 +5617,6 @@
 			(type solid)
 		)
 		(uuid "ff418352-ebb9-4437-bbc3-608ff3d188cb")
-	)
-	(wire
-		(pts
-			(xy 255.27 107.95) (xy 264.16 107.95)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ffdab277-7dee-4055-b895-b6e348eca4b2")
 	)
 	(rectangle
 		(start 27.305 32.385)
@@ -5836,30 +5696,9 @@
 		)
 		(uuid dfef4214-c3a5-4a52-a6ab-b6d86a665ef9)
 	)
-	(text "hm?"
-		(exclude_from_sim no)
-		(at 85.344 105.918 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-				(color 255 0 0 1)
-			)
-		)
-		(uuid "011e6624-6a84-40ad-bce2-402aced9ffa4")
-	)
-	(text "proc jako pullupy se tady pouzivaji 4.7k?\nna co je crystal oscilator?\nna co jsou 2.2R?\nproc decouple kondenzaotry maji stejnou hodnotu?\nproc nekteri kondenzatory maji 18pF?\nna co je nmos?"
-		(exclude_from_sim no)
-		(at 80.772 251.968 0)
-		(effects
-			(font
-				(size 3 3)
-			)
-		)
-		(uuid "0ea7fa71-443c-41f1-8f23-ecd6f76b7d76")
-	)
 	(text "MCU"
 		(exclude_from_sim no)
-		(at 230.886 29.464 0)
+		(at 230.632 27.432 0)
 		(effects
 			(font
 				(size 8 8)
@@ -5883,7 +5722,7 @@
 	)
 	(text "SWITCHES"
 		(exclude_from_sim no)
-		(at 86.868 172.212 0)
+		(at 87.122 171.45 0)
 		(effects
 			(font
 				(size 8 8)
@@ -5908,7 +5747,7 @@
 	)
 	(text "POWER_SUPP"
 		(exclude_from_sim no)
-		(at 338.836 171.958 0)
+		(at 338.836 171.196 0)
 		(effects
 			(font
 				(size 8 8)
@@ -5932,7 +5771,7 @@
 	)
 	(text "S_LEDS"
 		(exclude_from_sim no)
-		(at 337.82 28.194 0)
+		(at 337.82 26.924 0)
 		(effects
 			(font
 				(size 8 8)
@@ -5945,7 +5784,7 @@
 	)
 	(text "CONNECTORS"
 		(exclude_from_sim no)
-		(at 227.076 173.228 0)
+		(at 228.854 171.196 0)
 		(effects
 			(font
 				(size 8 8)
@@ -5970,7 +5809,7 @@
 	)
 	(text "IR_LEDS"
 		(exclude_from_sim no)
-		(at 83.82 27.686 0)
+		(at 83.82 26.67 0)
 		(effects
 			(font
 				(size 8 8)
@@ -6459,73 +6298,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R")
-		(at 55.88 198.12 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "108c1b1a-cf12-4cbb-a005-cb43b07930a6")
-		(property "Reference" "R2"
-			(at 55.88 200.406 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "4.7k"
-			(at 55.88 196.088 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
-			(at 55.88 196.342 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 55.88 198.12 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 55.88 198.12 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "df10d41c-bf8d-406e-99ee-0ab99e19e0f5")
-		)
-		(pin "2"
-			(uuid "8581094a-238d-4d06-9021-60503b5223fa")
-		)
-		(instances
-			(project "Remote"
-				(path "/d5f3a3bc-154f-419d-b1e3-9310b24e53c3"
-					(reference "R2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GND")
 		(at 140.97 139.7 0)
 		(unit 1)
@@ -6535,7 +6307,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "140be6b8-91e1-47b2-b212-78cc1cb8da8d")
-		(property "Reference" "#PWR011"
+		(property "Reference" "#PWR07"
 			(at 140.97 146.05 0)
 			(effects
 				(font
@@ -6585,7 +6357,74 @@
 		(instances
 			(project "Remote"
 				(path "/d5f3a3bc-154f-419d-b1e3-9310b24e53c3"
-					(reference "#PWR011")
+					(reference "#PWR07")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 123.19 205.74 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "15fdfec9-850b-4820-b1f7-76d4d1c4ac92")
+		(property "Reference" "R16"
+			(at 123.19 203.708 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "10k"
+			(at 123.19 207.772 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+			(at 123.19 207.518 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 123.19 205.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 123.19 205.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "c04d1ff7-9801-4017-a083-33cd8bd8b229")
+		)
+		(pin "2"
+			(uuid "37f8bf29-b269-4126-963b-526245493462")
+		)
+		(instances
+			(project "Remote"
+				(path "/d5f3a3bc-154f-419d-b1e3-9310b24e53c3"
+					(reference "R16")
 					(unit 1)
 				)
 			)
@@ -6658,73 +6497,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R")
-		(at 123.19 199.39 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "20cd1969-10f4-4b88-b8a7-71e652c1d99b")
-		(property "Reference" "R15"
-			(at 123.19 197.358 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "4.7k"
-			(at 123.19 201.422 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
-			(at 123.19 201.168 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 123.19 199.39 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 123.19 199.39 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "e9c537e8-9211-44d7-afdc-ed70fad74d2c")
-		)
-		(pin "2"
-			(uuid "f437c6ab-e6d6-428a-9b8a-a2d5e64ad1df")
-		)
-		(instances
-			(project "Remote"
-				(path "/d5f3a3bc-154f-419d-b1e3-9310b24e53c3"
-					(reference "R15")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GND")
 		(at 353.06 113.03 0)
 		(unit 1)
@@ -6734,7 +6506,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "2325bf71-47c1-4929-9002-8370943d6f91")
-		(property "Reference" "#PWR04"
+		(property "Reference" "#PWR019"
 			(at 353.06 119.38 0)
 			(effects
 				(font
@@ -6784,7 +6556,7 @@
 		(instances
 			(project "Remote"
 				(path "/d5f3a3bc-154f-419d-b1e3-9310b24e53c3"
-					(reference "#PWR04")
+					(reference "#PWR019")
 					(unit 1)
 				)
 			)
@@ -6920,6 +6692,73 @@
 			(project "Remote"
 				(path "/d5f3a3bc-154f-419d-b1e3-9310b24e53c3"
 					(reference "D2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 55.88 198.12 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "26eed7df-0b27-4650-a82d-a3a8a104f714")
+		(property "Reference" "R2"
+			(at 55.88 196.088 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "10k"
+			(at 55.88 200.152 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+			(at 55.88 199.898 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 55.88 198.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 55.88 198.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "0b29ad40-d917-43cd-8e1c-0acabc547f8d")
+		)
+		(pin "2"
+			(uuid "e95742e5-7b9d-47cd-b14b-07ac91e5b097")
+		)
+		(instances
+			(project "Remote"
+				(path "/d5f3a3bc-154f-419d-b1e3-9310b24e53c3"
+					(reference "R2")
 					(unit 1)
 				)
 			)
@@ -7133,73 +6972,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R")
-		(at 123.19 205.74 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "37b1e71f-b252-4c84-8cf4-cfa5c6b58f6d")
-		(property "Reference" "R16"
-			(at 123.19 203.708 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "4.7k"
-			(at 123.19 207.772 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
-			(at 123.19 207.518 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 123.19 205.74 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 123.19 205.74 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "cc54d2ee-0d91-48da-a90d-a8238320563a")
-		)
-		(pin "2"
-			(uuid "fc8cc35d-7fe8-4c45-bfbc-f966f889b0f8")
-		)
-		(instances
-			(project "Remote"
-				(path "/d5f3a3bc-154f-419d-b1e3-9310b24e53c3"
-					(reference "R16")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GND")
 		(at 78.74 187.96 0)
 		(unit 1)
@@ -7209,7 +6981,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "483c0cec-fc74-4b9e-b045-7d5f1231ee63")
-		(property "Reference" "#PWR07"
+		(property "Reference" "#PWR03"
 			(at 78.74 194.31 0)
 			(effects
 				(font
@@ -7259,7 +7031,7 @@
 		(instances
 			(project "Remote"
 				(path "/d5f3a3bc-154f-419d-b1e3-9310b24e53c3"
-					(reference "#PWR07")
+					(reference "#PWR03")
 					(unit 1)
 				)
 			)
@@ -7340,6 +7112,73 @@
 			(project "Remote"
 				(path "/d5f3a3bc-154f-419d-b1e3-9310b24e53c3"
 					(reference "J4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 123.19 199.39 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "4eb0b2c8-9735-4a43-83a8-7b477173155c")
+		(property "Reference" "R15"
+			(at 123.19 197.358 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "10k"
+			(at 123.19 201.422 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+			(at 123.19 201.168 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 123.19 199.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 123.19 199.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "48380f61-4bb5-4a40-95ab-857306e9e49c")
+		)
+		(pin "2"
+			(uuid "1c121271-7938-49d5-8cef-a8519d4f6ecd")
+		)
+		(instances
+			(project "Remote"
+				(path "/d5f3a3bc-154f-419d-b1e3-9310b24e53c3"
+					(reference "R15")
 					(unit 1)
 				)
 			)
@@ -7540,6 +7379,73 @@
 			(project "Remote"
 				(path "/d5f3a3bc-154f-419d-b1e3-9310b24e53c3"
 					(reference "R19")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 255.27 102.87 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "537fbf0f-4618-4fb0-91cd-f0244d011837")
+		(property "Reference" "R18"
+			(at 253.238 102.87 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "10k"
+			(at 257.302 102.87 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+			(at 257.048 102.87 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 255.27 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 255.27 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "2c1e7fc9-00c5-45cc-937d-be3cf542b9b2")
+		)
+		(pin "2"
+			(uuid "f397c0d1-f84e-4bc7-8682-02d7be142fa0")
+		)
+		(instances
+			(project "Remote"
+				(path "/d5f3a3bc-154f-419d-b1e3-9310b24e53c3"
+					(reference "R18")
 					(unit 1)
 				)
 			)
@@ -7894,7 +7800,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "603ba7fe-6c39-47a4-824a-80a755835683")
-		(property "Reference" "#PWR02"
+		(property "Reference" "#PWR011"
 			(at 226.06 195.58 0)
 			(effects
 				(font
@@ -7945,74 +7851,7 @@
 		(instances
 			(project "Remote"
 				(path "/d5f3a3bc-154f-419d-b1e3-9310b24e53c3"
-					(reference "#PWR02")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 66.04 129.54 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "60f72ba6-ef2d-4a8e-ae91-ea2fd7758543")
-		(property "Reference" "R5"
-			(at 68.072 129.54 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "4.7k"
-			(at 64.008 129.54 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
-			(at 64.262 129.54 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 66.04 129.54 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 66.04 129.54 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "d4157eef-4836-4186-9e15-980cfe50a60a")
-		)
-		(pin "2"
-			(uuid "f1dea160-c2d2-4114-9e9a-ee1b96f2c5b2")
-		)
-		(instances
-			(project "Remote"
-				(path "/d5f3a3bc-154f-419d-b1e3-9310b24e53c3"
-					(reference "R5")
+					(reference "#PWR011")
 					(unit 1)
 				)
 			)
@@ -8035,7 +7874,7 @@
 				)
 			)
 		)
-		(property "Value" "4.7k"
+		(property "Value" "10k"
 			(at 123.19 214.122 90)
 			(effects
 				(font
@@ -8095,7 +7934,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "660f6d4d-7515-4375-80b5-8be98db9a3fa")
-		(property "Reference" "#PWR012"
+		(property "Reference" "#PWR01"
 			(at 76.2 140.97 0)
 			(effects
 				(font
@@ -8145,7 +7984,141 @@
 		(instances
 			(project "Remote"
 				(path "/d5f3a3bc-154f-419d-b1e3-9310b24e53c3"
-					(reference "#PWR012")
+					(reference "#PWR01")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 123.19 186.69 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "6808ba3f-bba7-4450-95d9-14003979ee47")
+		(property "Reference" "R14"
+			(at 123.19 184.658 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "10k"
+			(at 123.19 188.722 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+			(at 123.19 188.468 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 123.19 186.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 123.19 186.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "7f1fca5f-5e9d-4505-9d7e-ff316a0333d3")
+		)
+		(pin "2"
+			(uuid "38f27c84-1772-4671-8f59-ba3259282337")
+		)
+		(instances
+			(project "Remote"
+				(path "/d5f3a3bc-154f-419d-b1e3-9310b24e53c3"
+					(reference "R14")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 66.04 129.54 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "6bbeae9c-ab95-42bd-992c-924f6c124485")
+		(property "Reference" "R5"
+			(at 64.008 129.54 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "10k"
+			(at 68.072 129.54 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+			(at 67.818 129.54 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 66.04 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 66.04 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "767d3457-9252-4cfb-845c-5ae0223ee727")
+		)
+		(pin "2"
+			(uuid "a6c2aefa-6a83-426e-9f0b-b57a0550b392")
+		)
+		(instances
+			(project "Remote"
+				(path "/d5f3a3bc-154f-419d-b1e3-9310b24e53c3"
+					(reference "R5")
 					(unit 1)
 				)
 			)
@@ -8161,7 +8134,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "6d9c5a37-177d-4ef6-9860-cc41e1d82fe1")
-		(property "Reference" "#PWR01"
+		(property "Reference" "#PWR08"
 			(at 196.85 203.2 0)
 			(effects
 				(font
@@ -8211,7 +8184,7 @@
 		(instances
 			(project "Remote"
 				(path "/d5f3a3bc-154f-419d-b1e3-9310b24e53c3"
-					(reference "#PWR01")
+					(reference "#PWR08")
 					(unit 1)
 				)
 			)
@@ -8361,7 +8334,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "7f1ba7ee-0611-4a49-9ecf-a04d1c416513")
-		(property "Reference" "#PWR06"
+		(property "Reference" "#PWR02"
 			(at 77.47 219.71 0)
 			(effects
 				(font
@@ -8411,7 +8384,7 @@
 		(instances
 			(project "Remote"
 				(path "/d5f3a3bc-154f-419d-b1e3-9310b24e53c3"
-					(reference "#PWR06")
+					(reference "#PWR02")
 					(unit 1)
 				)
 			)
@@ -8565,7 +8538,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "9958191b-0d34-4c97-860c-25bfc5dd1f09")
-		(property "Reference" "#PWR019"
+		(property "Reference" "#PWR015"
 			(at 257.81 205.74 0)
 			(effects
 				(font
@@ -8615,7 +8588,7 @@
 		(instances
 			(project "Remote"
 				(path "/d5f3a3bc-154f-419d-b1e3-9310b24e53c3"
-					(reference "#PWR019")
+					(reference "#PWR015")
 					(unit 1)
 				)
 			)
@@ -8630,7 +8603,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "9ff368c6-3104-4495-9c7f-3dbb44cd3470")
-		(property "Reference" "#PWR017"
+		(property "Reference" "#PWR09"
 			(at 224.79 45.72 0)
 			(effects
 				(font
@@ -8680,7 +8653,7 @@
 		(instances
 			(project "Remote"
 				(path "/d5f3a3bc-154f-419d-b1e3-9310b24e53c3"
-					(reference "#PWR017")
+					(reference "#PWR09")
 					(unit 1)
 				)
 			)
@@ -8897,7 +8870,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "a948b974-d9ca-4d08-b193-377e1455d1e5")
-		(property "Reference" "#PWR018"
+		(property "Reference" "#PWR016"
 			(at 264.16 97.79 0)
 			(effects
 				(font
@@ -8947,7 +8920,74 @@
 		(instances
 			(project "Remote"
 				(path "/d5f3a3bc-154f-419d-b1e3-9310b24e53c3"
-					(reference "#PWR018")
+					(reference "#PWR016")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 55.88 209.55 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "b03af0b0-4160-4ed7-9299-7cfea8dad04e")
+		(property "Reference" "R3"
+			(at 55.88 207.518 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "10k"
+			(at 55.88 211.582 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+			(at 55.88 211.328 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 55.88 209.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 55.88 209.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "a6d27b47-a620-4505-bd2c-da286a834c62")
+		)
+		(pin "2"
+			(uuid "d979ac18-1473-4ca1-9df1-78f1413a5907")
+		)
+		(instances
+			(project "Remote"
+				(path "/d5f3a3bc-154f-419d-b1e3-9310b24e53c3"
+					(reference "R3")
 					(unit 1)
 				)
 			)
@@ -9023,73 +9063,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R")
-		(at 123.19 186.69 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "b82f0ad1-582a-4fba-a7fd-2a268d55c7c9")
-		(property "Reference" "R13"
-			(at 123.19 184.658 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "4.7k"
-			(at 123.19 188.722 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
-			(at 123.19 188.468 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 123.19 186.69 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 123.19 186.69 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "cb969cd8-8e99-4fe4-aa3f-a4d164c6874e")
-		)
-		(pin "2"
-			(uuid "96e4d5ce-9789-465a-8fff-1e92ee33f1d5")
-		)
-		(instances
-			(project "Remote"
-				(path "/d5f3a3bc-154f-419d-b1e3-9310b24e53c3"
-					(reference "R13")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "LED:IR204A")
 		(at 104.14 78.74 0)
 		(unit 1)
@@ -9151,75 +9124,6 @@
 			(project "Remote"
 				(path "/d5f3a3bc-154f-419d-b1e3-9310b24e53c3"
 					(reference "D3")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "remote_V0_04_-eagle-import:R-EU_R0805WP")
-		(at 255.27 102.87 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "ba7e0e1a-2423-45bc-a752-fccd80f06b34")
-		(property "Reference" "R18"
-			(at 253.746 104.394 0)
-			(effects
-				(font
-					(size 1.778 1.5113)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Value" "4k7"
-			(at 258.572 104.648 0)
-			(effects
-				(font
-					(size 1.778 1.5113)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
-			(at 255.27 102.87 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 255.27 102.87 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 255.27 102.87 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "bbd709c3-9217-4ebd-ab76-55506b47c000")
-		)
-		(pin "1"
-			(uuid "4f0ff380-2276-4d7c-ad49-496bd6bed81f")
-		)
-		(instances
-			(project "Remote"
-				(path "/d5f3a3bc-154f-419d-b1e3-9310b24e53c3"
-					(reference "R18")
 					(unit 1)
 				)
 			)
@@ -9334,7 +9238,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "bf42475a-2f8f-41d7-ba72-90d285cea69b")
-		(property "Reference" "#PWR016"
+		(property "Reference" "#PWR012"
 			(at 237.49 62.23 0)
 			(effects
 				(font
@@ -9384,7 +9288,7 @@
 		(instances
 			(project "Remote"
 				(path "/d5f3a3bc-154f-419d-b1e3-9310b24e53c3"
-					(reference "#PWR016")
+					(reference "#PWR012")
 					(unit 1)
 				)
 			)
@@ -9459,89 +9363,14 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 123.19 193.04 90)
+		(at 55.88 185.42 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "c7e79afd-a9b4-45d9-9b8a-50f2bfe0b9ef")
-		(property "Reference" "R14"
-			(at 123.19 191.008 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "4.7k"
-			(at 123.19 195.072 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
-			(at 123.19 194.818 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 123.19 193.04 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 123.19 193.04 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "53de4b74-9d30-428c-b9b0-1dfb882b8b9e")
-		)
-		(pin "2"
-			(uuid "987cc9c8-11b8-4bcf-8708-5f3b2f9b8275")
-		)
-		(instances
-			(project "Remote"
-				(path "/d5f3a3bc-154f-419d-b1e3-9310b24e53c3"
-					(reference "R14")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 55.88 185.42 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "c8abde3f-3dde-4d09-9209-26af9337ac6b")
+		(uuid "c69f4999-f9b3-44c8-b5bf-46b9c54ddec6")
 		(property "Reference" "R1"
-			(at 55.88 187.452 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "4.7k"
 			(at 55.88 183.388 90)
 			(effects
 				(font
@@ -9549,8 +9378,16 @@
 				)
 			)
 		)
+		(property "Value" "10k"
+			(at 55.88 187.452 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
-			(at 55.88 183.642 90)
+			(at 55.88 187.198 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9577,10 +9414,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "74f3f909-f6ad-4199-8f15-c1315bdd1a67")
+			(uuid "335c3868-87e5-4757-b6f2-7a4e090113b3")
 		)
 		(pin "2"
-			(uuid "3a137976-3d0e-4abf-b8c8-5eceec8282ea")
+			(uuid "5d93efe2-5a07-4095-ba6a-1744a5d55fa4")
 		)
 		(instances
 			(project "Remote"
@@ -9600,7 +9437,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "c9a99551-dc32-4471-bc22-c3531c49df50")
-		(property "Reference" "#PWR03"
+		(property "Reference" "#PWR018"
 			(at 320.04 198.12 0)
 			(effects
 				(font
@@ -9650,7 +9487,7 @@
 		(instances
 			(project "Remote"
 				(path "/d5f3a3bc-154f-419d-b1e3-9310b24e53c3"
-					(reference "#PWR03")
+					(reference "#PWR018")
 					(unit 1)
 				)
 			)
@@ -9825,7 +9662,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "d1dc96b8-9dbf-4756-b871-20d218cd0393")
-		(property "Reference" "#PWR08"
+		(property "Reference" "#PWR04"
 			(at 78.74 207.01 0)
 			(effects
 				(font
@@ -9875,7 +9712,7 @@
 		(instances
 			(project "Remote"
 				(path "/d5f3a3bc-154f-419d-b1e3-9310b24e53c3"
-					(reference "#PWR08")
+					(reference "#PWR04")
 					(unit 1)
 				)
 			)
@@ -9909,7 +9746,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Battery:BatteryHolder_Keystone_2462_2xAA"
+		(property "Footprint" "Battery:BatteryHolder_Keystone_2462_2xAA - no holes"
 			(at 353.06 197.866 90)
 			(effects
 				(font
@@ -10028,7 +9865,7 @@
 		(dnp no)
 		(uuid "d3ecd3a7-95e8-4479-87c4-fa509f63f004")
 		(property "Reference" "Y1"
-			(at 253.746 86.36 90)
+			(at 254.254 86.36 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10082,73 +9919,6 @@
 			(project "Remote"
 				(path "/d5f3a3bc-154f-419d-b1e3-9310b24e53c3"
 					(reference "Y1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 55.88 209.55 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "d7abb09f-d721-4b1d-b26c-1593c04dfcc6")
-		(property "Reference" "R3"
-			(at 55.88 211.582 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "4.7k"
-			(at 55.88 207.518 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
-			(at 55.88 207.772 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 55.88 209.55 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 55.88 209.55 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "39e2df99-f53c-44d8-a1f0-0dd02872fe2c")
-		)
-		(pin "2"
-			(uuid "3b282836-4cc2-4222-a3fb-32e62b03ee7f")
-		)
-		(instances
-			(project "Remote"
-				(path "/d5f3a3bc-154f-419d-b1e3-9310b24e53c3"
-					(reference "R3")
 					(unit 1)
 				)
 			)
@@ -10425,15 +10195,15 @@
 	)
 	(symbol
 		(lib_id "power:+3V0")
-		(at 109.22 55.88 0)
+		(at 109.22 53.34 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(uuid "efdb2aac-ff68-4075-8e21-407fcd0567a5")
-		(property "Reference" "#PWR013"
-			(at 109.22 59.69 0)
+		(property "Reference" "#PWR06"
+			(at 109.22 57.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10442,7 +10212,7 @@
 			)
 		)
 		(property "Value" "+3V0"
-			(at 113.03 54.356 0)
+			(at 113.03 51.816 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10450,7 +10220,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 109.22 55.88 0)
+			(at 109.22 53.34 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10459,7 +10229,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 109.22 55.88 0)
+			(at 109.22 53.34 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10468,7 +10238,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+3V0\""
-			(at 109.22 55.88 0)
+			(at 109.22 53.34 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10482,7 +10252,7 @@
 		(instances
 			(project "Remote"
 				(path "/d5f3a3bc-154f-419d-b1e3-9310b24e53c3"
-					(reference "#PWR013")
+					(reference "#PWR06")
 					(unit 1)
 				)
 			)
@@ -10796,7 +10566,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "fa0af1bc-bc11-430a-97f7-18f01971726e")
-		(property "Reference" "#PWR015"
+		(property "Reference" "#PWR013"
 			(at 255.27 101.6 0)
 			(effects
 				(font
@@ -10846,7 +10616,7 @@
 		(instances
 			(project "Remote"
 				(path "/d5f3a3bc-154f-419d-b1e3-9310b24e53c3"
-					(reference "#PWR015")
+					(reference "#PWR013")
 					(unit 1)
 				)
 			)
@@ -10920,6 +10690,73 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:R")
+		(at 123.1837 193.1033 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "faf50d07-40c5-438f-9415-f411e9f0f607")
+		(property "Reference" "R13"
+			(at 123.1837 191.0713 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "10k"
+			(at 123.1837 195.1353 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+			(at 123.1837 194.8813 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 123.1837 193.1033 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 123.1837 193.1033 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "8f3cd7fa-13e1-429d-b4df-73807cb55240")
+		)
+		(pin "2"
+			(uuid "aba86cd1-30ab-4842-8625-2d736f322d23")
+		)
+		(instances
+			(project "Remote"
+				(path "/d5f3a3bc-154f-419d-b1e3-9310b24e53c3"
+					(reference "R13")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 314.96 200.66 0)
 		(unit 1)
@@ -10929,7 +10766,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "fdf8f3b3-d933-41f3-88e8-1faefc66ce30")
-		(property "Reference" "#PWR09"
+		(property "Reference" "#PWR017"
 			(at 314.96 207.01 0)
 			(effects
 				(font
@@ -10979,7 +10816,7 @@
 		(instances
 			(project "Remote"
 				(path "/d5f3a3bc-154f-419d-b1e3-9310b24e53c3"
-					(reference "#PWR09")
+					(reference "#PWR017")
 					(unit 1)
 				)
 			)
