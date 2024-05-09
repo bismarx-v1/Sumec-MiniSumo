@@ -56,12 +56,13 @@ void loop()
     // start with button
     if(digitalRead(button) == 1)
     {
-        while(digitalRead(button) == 1)
+        if(digitalRead(button) == 1)
         {
             LEDRed.setOn();
             LEDOrange.setOn();
         }
         isStarted = 1;
+        StartTime = millis();
     }
 
     // start with IR
@@ -166,22 +167,34 @@ void loop()
             }
         }
 
-        Serial.println(isStarted);
+        Serial.println(state);
 
         //===========================Procesing resoluts - states===============================
 
         switch (state)
         {
-        case 0:
-            LEDRed.blink(100, 100);
+        case 0: 
 
-            if(QREleft)
+            if(millis() - StartTime < 5000) // 5s delay for Jedobot
             {
+                LEDOrange.blink(100, 100);
+                Move.stop();
+            }
+            else if (LUNAmiddle < Range )
+            {
+                LEDRed.blink(100, 100);
+                state = 1;
+                Range = 35;
+            }
+            else if(QREleft)
+            {
+                LEDRed.blink(100, 100);
                 Range = 50;
                 Move.turnRight(1.0);
             }
             else if(QREright)
             {
+                LEDRed.blink(100, 100);
                 Range = 50;
                 Move.turnLeft(1.0);
                 QRE_left_started = 1;
@@ -189,20 +202,15 @@ void loop()
             }
             else if(QRE_left_started == 0)
             {
+                LEDRed.blink(100, 100);
                 Move.turnRight(1.0);
                 Range = 35;
             }
 
-            if (LUNAmiddle < Range )
-            {
-                state = 1;
-                Range = 50;
-            }
-
             break;
         case 1:
+            //Move.stop();
             Move.goForward(1.0);
-
             LEDOrange.setOff();
             LEDRed.blink(100, 100);
 
@@ -211,11 +219,11 @@ void loop()
 
             LEDRed.setOn();
 
-            if (Tick_QRE.tickNumber < 15)
+            if (Tick_QRE.tickNumber < 1)
             {
                 Move.goBackward(1.0);
             }
-            else if (Tick_QRE.tickNumber < 30)
+            else if (Tick_QRE.tickNumber < 15)
             {
                 Move.turnRight(1.0);
             }
@@ -232,11 +240,11 @@ void loop()
 
             LEDRed.setOn();
 
-            if (Tick_QRE.tickNumber < 15)
+            if (Tick_QRE.tickNumber < 1)
             {
                 Move.goBackward(1.0);
             }
-            else if (Tick_QRE.tickNumber < 30)
+            else if (Tick_QRE.tickNumber < 15)
             {
                 Move.turnLeft(1.0);
             }

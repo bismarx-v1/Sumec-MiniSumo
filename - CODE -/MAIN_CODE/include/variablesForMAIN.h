@@ -29,6 +29,9 @@ int LUNAmiddle;
 bool SHARPleft;
 bool SHARPright;
 
+// Start time
+int StartTime;
+
 //============================= PROGRAM VARIABLES ===============================
 
 // structure tick, who have all tick variables 
