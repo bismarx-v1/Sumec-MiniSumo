@@ -1,0 +1,11 @@
+{
+	"cmake.configureOnOpen": false,
+	"files.associations": {
+		"string": "cpp",
+		"string_view": "cpp",
+		"random": "cpp",
+		"cmath": "cpp",
+		"algorithm": "cpp",
+		"*.tcc": "cpp"
+	}
+}
