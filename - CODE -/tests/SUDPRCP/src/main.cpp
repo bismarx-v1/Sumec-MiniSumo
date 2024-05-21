@@ -1055,7 +1055,7 @@ void setup() {
 	Serial.begin(115200);
 
 	Test.begin(1984, 32);
-	Test.SUDPRCPCallbackSetup();
+	SUDPRCPCallbackSetup();
 
 	delay(5000);
 }
