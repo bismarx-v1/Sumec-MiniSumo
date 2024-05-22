@@ -814,7 +814,7 @@ void loop() {
 #endif
 
 //====================================================================
-#if 0	// main 2 - main test
+#if 1	// main 2 - main test
 // Check lines with "DEBUG" brfore release
 
 #include "SUDPRCP.h"
@@ -831,6 +831,7 @@ void setup() {
 	Serial.begin(115200);
 
 	Test.begin(1984, 32);
+	// on the two lines below can be seen the use of the onEvent function. It correctly can't find the two callback functions
 	WiFi.onEvent(StationConnectedToAP, ARDUINO_EVENT_WIFI_AP_STACONNECTED);			// add callback to "station connected to ap" event
 	WiFi.onEvent(StationDisconnectedFromAP, ARDUINO_EVENT_WIFI_AP_STADISCONNECTED);	// add the same callback to "station disconected from ap" event
 }
@@ -853,7 +854,7 @@ void loop() {
 #endif
 
 //====================================================================
-#if 1	// main 2 - as a class with a function pointer
+#if 0	// main 2 - as a class with a function pointer
 // Check lines with "DEBUG" brfore release
 
 #include "SUDPRCP.h"

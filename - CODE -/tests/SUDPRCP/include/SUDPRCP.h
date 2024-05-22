@@ -58,8 +58,9 @@ void SUDPRCP::begin(const uint16_t LUdpPort, uint16_t LBufferLen) {
 	AP.InitAP("SUDPRCP_U#1", "018f34a5-6daa-7729-8ed0-884b8a7c6c45", IPAddress(192,168,1,22));	// 192.168.1.22
 
 	udp.begin(UdpPort);
-
-	
+	// on the two lines below can be seen the use of the onEvent function. It can't find the onEvent method
+	WiFi.onEvent(StationConnectedToAP, ARDUINO_EVENT_WIFI_AP_STACONNECTED);			// add callback to "station connected to ap" event
+	WiFi.onEvent(StationDisconnectedFromAP, ARDUINO_EVENT_WIFI_AP_STADISCONNECTED);	// add the same callback to "station disconected from ap" event
 }
 
 /**
@@ -180,16 +181,6 @@ void SUDPRCP::CheckIfRecieved(uint8_t* ReturnSize, char* ReturnMessage, IPAddres
 		memset(ReturnMessage, 0, bufferLen);
 		ReturnIp[0] = IPAddress(0,0,0,0);
 	}
-}
-
-void SUDPRCPCallbackSetup() {
-	// DEBUG find a way to create a method pointer. focus on panel first
-
-	WiFi.onEvent(StationConnectedToAPPointer, ARDUINO_EVENT_WIFI_AP_STACONNECTED);			// add callback to "station connected to ap" event
-	WiFi.onEvent(StationDisconnectedFromAPPointer, ARDUINO_EVENT_WIFI_AP_STADISCONNECTED);	// add the same callback to "station disconected from ap" event
-
-	//WiFi.onEvent(StationConnectedToAP, ARDUINO_EVENT_WIFI_AP_STACONNECTED);			// add callback to "station connected to ap" event
-	//WiFi.onEvent(StationDisconnectedFromAP, ARDUINO_EVENT_WIFI_AP_STADISCONNECTED);	// add the same callback to "station disconected from ap" event
 }
 
 #endif
