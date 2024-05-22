@@ -4222,12 +4222,6 @@
 		(uuid "97581a28-d981-4ed6-841a-25acb78dc4f7")
 	)
 	(junction
-		(at 300.99 302.26)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "9a9f90e6-d4ef-49b1-80de-ea95ed0dded9")
-	)
-	(junction
 		(at 299.72 217.17)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -4238,6 +4232,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "abc83f2d-6f98-4bdd-91cc-b58e1e3ca79d")
+	)
+	(junction
+		(at 300.99 314.96)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "b227e86d-cdad-4bc5-b98c-58a6513b6ce6")
 	)
 	(junction
 		(at 429.26 134.62)
@@ -4270,12 +4270,6 @@
 		(uuid "da1b916a-417f-497d-b49e-1c8ad2bdd494")
 	)
 	(junction
-		(at 300.99 313.69)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "e7837f0c-40a9-4d78-b8b0-bf000f4fc5fc")
-	)
-	(junction
 		(at 299.72 227.33)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -4286,12 +4280,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "fbbf6e86-925d-4f14-ad67-40e698eae5cd")
-	)
-	(junction
-		(at 300.99 325.12)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "ffdd1bfd-e000-43ef-85a9-e77ccfeb8c3c")
 	)
 	(no_connect
 		(at 334.01 313.69)
@@ -4368,26 +4356,6 @@
 	(no_connect
 		(at 316.23 320.04)
 		(uuid "ff300d8f-cba9-4d14-b468-0a3d9d0bc861")
-	)
-	(wire
-		(pts
-			(xy 292.1 313.69) (xy 300.99 313.69)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0053dd48-1ffc-44d3-a695-a9e7de6ca538")
-	)
-	(wire
-		(pts
-			(xy 300.99 290.83) (xy 300.99 302.26)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "02347a94-6f0b-47b6-886e-107bf60a51b4")
 	)
 	(wire
 		(pts
@@ -4538,6 +4506,16 @@
 			(type default)
 		)
 		(uuid "188d5f9f-5fe0-4098-b84c-44b5a44ce8b8")
+	)
+	(wire
+		(pts
+			(xy 300.99 314.96) (xy 300.99 328.93)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "18cecbb6-388d-4a54-862f-8f043837271d")
 	)
 	(wire
 		(pts
@@ -4731,7 +4709,7 @@
 	)
 	(wire
 		(pts
-			(xy 300.99 313.69) (xy 300.99 325.12)
+			(xy 300.99 302.26) (xy 300.99 314.96)
 		)
 		(stroke
 			(width 0)
@@ -4828,16 +4806,6 @@
 			(type default)
 		)
 		(uuid "397522be-35db-4e4e-b664-6e5648429eba")
-	)
-	(wire
-		(pts
-			(xy 300.99 302.26) (xy 300.99 313.69)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3b59dac3-d5e3-422e-b407-e967ff85ee92")
 	)
 	(wire
 		(pts
@@ -4978,16 +4946,6 @@
 			(type solid)
 		)
 		(uuid "488feca2-27e4-4fdb-b6bf-f6ca49178f10")
-	)
-	(wire
-		(pts
-			(xy 300.99 328.93) (xy 300.99 325.12)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4b582df0-7b21-41ae-addf-5f1bdd651eb7")
 	)
 	(wire
 		(pts
@@ -5591,23 +5549,13 @@
 	)
 	(wire
 		(pts
-			(xy 292.1 325.12) (xy 300.99 325.12)
+			(xy 292.1 314.96) (xy 300.99 314.96)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "9932cda7-0a5f-4b99-8a72-ea9915734b04")
-	)
-	(wire
-		(pts
-			(xy 292.1 290.83) (xy 300.99 290.83)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "99faac32-c487-4292-9d10-5d9e897d5479")
 	)
 	(wire
 		(pts
@@ -7313,7 +7261,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_THT:LED_D3.0mm_Horizontal_O3.81mm_Z10.0mm"
+		(property "Footprint" "LED_THT:LED_D3.0mm_Horizontal_O3.81mm_Z10.0mm_flipped"
 			(at 161.925 96.52 0)
 			(effects
 				(font
@@ -8127,7 +8075,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_THT:LED_D3.0mm_Horizontal_O3.81mm_Z10.0mm"
+		(property "Footprint" "LED_THT:LED_D3.0mm_Horizontal_O3.81mm_Z10.0mm_flipped"
 			(at 210.82 135.255 0)
 			(effects
 				(font
@@ -9244,7 +9192,7 @@
 	)
 	(symbol
 		(lib_id "Mechanical:MountingHole_Pad")
-		(at 289.56 325.12 90)
+		(at 289.56 314.96 90)
 		(unit 1)
 		(exclude_from_sim yes)
 		(in_bom no)
@@ -9253,7 +9201,7 @@
 		(fields_autoplaced yes)
 		(uuid "9b586566-36f1-43d7-b18c-0bdaeb9cc70b")
 		(property "Reference" "H3"
-			(at 288.29 318.77 90)
+			(at 288.29 308.61 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9261,7 +9209,7 @@
 			)
 		)
 		(property "Value" "Mounting Hole M3"
-			(at 288.29 321.31 90)
+			(at 288.29 311.15 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9269,7 +9217,7 @@
 			)
 		)
 		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_ISO7380_Pad"
-			(at 289.56 325.12 0)
+			(at 289.56 314.96 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9278,7 +9226,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 289.56 325.12 0)
+			(at 289.56 314.96 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9287,7 +9235,7 @@
 			)
 		)
 		(property "Description" "Mounting Hole with connection"
-			(at 289.56 325.12 0)
+			(at 289.56 314.96 0)
 			(effects
 				(font
 					(size 1.27 1.27)
