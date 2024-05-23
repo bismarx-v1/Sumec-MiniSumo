@@ -25,9 +25,6 @@ class SUDPRCP {
 		uint8_t* bufferUint8Pointer = 0;
 		char* bufferPointer = 0;
 		
-		void GetIps();
-		void StationConnectedToAP(WiFiEvent_t event, WiFiEventInfo_t info);
-		void StationDisconnectedFromAP(WiFiEvent_t event, WiFiEventInfo_t info);
 
 	public:
 		SUDPRCP();
@@ -37,6 +34,9 @@ class SUDPRCP {
 		void begin(const uint16_t LUdpPort, const uint16_t LBufferLen);
 		void SendUdpToAll(String Message, uint8_t SendNTimes);
 		void CheckIfRecieved(uint8_t* ReturnSize, char* ReturnMessage, IPAddress* ReturnIp);
+		void GetIps();
+		void StationConnectedToAP(WiFiEvent_t event, WiFiEventInfo_t info);
+		void StationDisconnectedFromAP(WiFiEvent_t event, WiFiEventInfo_t info);
 };
 
 SUDPRCP::SUDPRCP() {}
