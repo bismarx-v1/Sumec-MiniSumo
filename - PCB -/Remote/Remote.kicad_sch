@@ -6351,6 +6351,20 @@
 		)
 		(uuid "3efde6db-1793-42e3-88bb-442985cc3905")
 	)
+	(text "10k"
+		(exclude_from_sim no)
+		(at 165.354 279.654 0)
+		(effects
+			(font
+				(face "Bahnschrift")
+				(size 2 2)
+				(thickness 0.4)
+				(bold yes)
+				(color 0 0 0 1)
+			)
+		)
+		(uuid "7efaea30-adbb-4a4a-baa5-4a0a4d623231")
+	)
 	(text "POWER_SUPP"
 		(exclude_from_sim no)
 		(at 307.086 194.056 0)
@@ -8407,7 +8421,7 @@
 				)
 			)
 		)
-		(property "Value" "200R"
+		(property "Value" "220R"
 			(at 149.86 121.666 90)
 			(effects
 				(font
@@ -8474,7 +8488,7 @@
 				)
 			)
 		)
-		(property "Value" "200R"
+		(property "Value" "220R"
 			(at 201.93 141.986 90)
 			(effects
 				(font
@@ -9983,7 +9997,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_SMD:TSOT-23_HandSoldering"
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23-3"
 			(at 168.91 116.84 0)
 			(effects
 				(font
