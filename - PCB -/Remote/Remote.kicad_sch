@@ -4282,8 +4282,8 @@
 		(uuid "fbbf6e86-925d-4f14-ad67-40e698eae5cd")
 	)
 	(no_connect
-		(at 334.01 313.69)
-		(uuid "071ea18c-e1c6-4358-90b8-1fc179bdca36")
+		(at 316.23 313.69)
+		(uuid "143169ca-f7bc-412c-858c-f368531432ea")
 	)
 	(no_connect
 		(at 316.23 307.34)
@@ -4318,6 +4318,10 @@
 		(uuid "982105ce-7ded-46b1-92ca-bdb3c919c16b")
 	)
 	(no_connect
+		(at 334.01 313.69)
+		(uuid "adbccca0-0d2a-4a24-8e0b-8cfbf2ed9310")
+	)
+	(no_connect
 		(at 334.01 307.34)
 		(uuid "adbe25e6-c448-435b-928f-447898664809")
 	)
@@ -4340,10 +4344,6 @@
 	(no_connect
 		(at 417.83 139.7)
 		(uuid "dfdbfd1e-6ba5-430c-81e9-369b43ad1c63")
-	)
-	(no_connect
-		(at 316.23 313.69)
-		(uuid "e1518a94-0c25-4ba0-90b5-17b1eca99573")
 	)
 	(no_connect
 		(at 417.83 157.48)
@@ -4499,6 +4499,16 @@
 	)
 	(wire
 		(pts
+			(xy 316.23 313.69) (xy 321.31 313.69)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "18005407-960e-4788-adea-e855c1689350")
+	)
+	(wire
+		(pts
 			(xy 157.48 311.15) (xy 170.18 311.15)
 		)
 		(stroke
@@ -4506,16 +4516,6 @@
 			(type default)
 		)
 		(uuid "188d5f9f-5fe0-4098-b84c-44b5a44ce8b8")
-	)
-	(wire
-		(pts
-			(xy 300.99 314.96) (xy 300.99 328.93)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "18cecbb6-388d-4a54-862f-8f043837271d")
 	)
 	(wire
 		(pts
@@ -5249,6 +5249,16 @@
 	)
 	(wire
 		(pts
+			(xy 334.01 313.69) (xy 328.93 313.69)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "718537c9-b91b-4945-ada5-401b50f05ccf")
+	)
+	(wire
+		(pts
 			(xy 308.61 102.87) (xy 309.88 102.87)
 		)
 		(stroke
@@ -5779,6 +5789,16 @@
 	)
 	(wire
 		(pts
+			(xy 300.99 314.96) (xy 300.99 323.85)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ba1a596b-54f9-4272-8030-606d2dae1af9")
+	)
+	(wire
+		(pts
 			(xy 316.23 320.04) (xy 321.31 320.04)
 		)
 		(stroke
@@ -5929,16 +5949,6 @@
 	)
 	(wire
 		(pts
-			(xy 316.23 313.69) (xy 321.31 313.69)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "cee73ce1-8a32-41c2-9a05-62fe9cbbaeed")
-	)
-	(wire
-		(pts
 			(xy 166.37 113.03) (xy 166.37 114.3)
 		)
 		(stroke
@@ -5946,16 +5956,6 @@
 			(type default)
 		)
 		(uuid "d2d9f59a-f322-4d4f-b717-01a1f5e1e2d7")
-	)
-	(wire
-		(pts
-			(xy 334.01 313.69) (xy 328.93 313.69)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d6557598-edb2-48a0-9cbd-c63bec273d3e")
 	)
 	(wire
 		(pts
@@ -6985,6 +6985,76 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:R")
+		(at 325.12 313.69 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "13279717-e5ba-47ea-9916-5755d16445c8")
+		(property "Reference" "R16"
+			(at 325.12 307.34 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "R"
+			(at 325.12 309.88 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "sumec-smdV2_library:SPS LOGO"
+			(at 325.12 315.468 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 325.12 313.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 325.12 313.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "8f240e3d-cfe2-4a57-8b01-edb7c19cb8b6")
+		)
+		(pin "1"
+			(uuid "af0fc59c-303e-44e5-ab09-80c96dc28426")
+		)
+		(instances
+			(project "Remote"
+				(path "/d5f3a3bc-154f-419d-b1e3-9310b24e53c3"
+					(reference "R16")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 223.52 142.24 0)
 		(unit 1)
@@ -7455,7 +7525,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 300.99 328.93 0)
+		(at 300.99 323.85 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -7464,7 +7534,7 @@
 		(fields_autoplaced yes)
 		(uuid "2c5fa6b5-4ed6-4fc2-a514-466ad9a93c73")
 		(property "Reference" "#PWR021"
-			(at 300.99 335.28 0)
+			(at 300.99 330.2 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7473,7 +7543,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 300.99 334.01 0)
+			(at 300.99 328.93 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7481,7 +7551,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 300.99 328.93 0)
+			(at 300.99 323.85 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7490,7 +7560,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 300.99 328.93 0)
+			(at 300.99 323.85 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7499,7 +7569,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 300.99 328.93 0)
+			(at 300.99 323.85 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7908,76 +7978,6 @@
 			(project "Remote"
 				(path "/d5f3a3bc-154f-419d-b1e3-9310b24e53c3"
 					(reference "#PWR04")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 325.12 313.69 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "4c2c262e-2a68-4efc-9b33-fd55d14cefd6")
-		(property "Reference" "R16"
-			(at 325.12 307.34 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "R"
-			(at 325.12 309.88 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "sumec-remote_library:nerd"
-			(at 325.12 315.468 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 325.12 313.69 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 325.12 313.69 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "3495dafc-ec07-4759-81fd-ac9cee295b33")
-		)
-		(pin "1"
-			(uuid "f5f67058-e364-4f20-a66a-05436f21c217")
-		)
-		(instances
-			(project "Remote"
-				(path "/d5f3a3bc-154f-419d-b1e3-9310b24e53c3"
-					(reference "R16")
 					(unit 1)
 				)
 			)
