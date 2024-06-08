@@ -7345,7 +7345,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_THT:LED_D3.0mm_Horizontal_O3.81mm_Z10.0mm_flipped"
+		(property "Footprint" "LED_THT:LED_D3.0mm_Horizontal_O3.81mm_Z10.0mm_flipped_no_silk"
 			(at 161.925 96.52 0)
 			(effects
 				(font
@@ -8897,7 +8897,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_THT:LED_D3.0mm_Horizontal_O3.81mm_Z10.0mm"
+		(property "Footprint" "LED_THT:LED_D3.0mm_Horizontal_O3.81mm_Z10.0mm_no_silk"
 			(at 151.765 96.52 0)
 			(effects
 				(font
@@ -9928,7 +9928,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_THT:LED_D3.0mm_Horizontal_O3.81mm_Z10.0mm"
+		(property "Footprint" "LED_THT:LED_D3.0mm_Horizontal_O3.81mm_Z10.0mm_no_silk"
 			(at 172.085 96.52 0)
 			(effects
 				(font
