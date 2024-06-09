@@ -4384,6 +4384,10 @@
 		(uuid "fbbf6e86-925d-4f14-ad67-40e698eae5cd")
 	)
 	(no_connect
+		(at 321.31 293.37)
+		(uuid "13db9891-e423-4d0e-96af-07d0aec043f3")
+	)
+	(no_connect
 		(at 321.31 280.67)
 		(uuid "143169ca-f7bc-412c-858c-f368531432ea")
 	)
@@ -4398,6 +4402,10 @@
 	(no_connect
 		(at 417.83 154.94)
 		(uuid "51cdb967-e4b4-41e3-aef1-9e15f86d1d9d")
+	)
+	(no_connect
+		(at 339.09 293.37)
+		(uuid "70157ea6-b919-44ad-bbe1-0b6cce0b6443")
 	)
 	(no_connect
 		(at 196.85 295.91)
@@ -4458,6 +4466,16 @@
 	(no_connect
 		(at 321.31 287.02)
 		(uuid "ff300d8f-cba9-4d14-b468-0a3d9d0bc861")
+	)
+	(wire
+		(pts
+			(xy 309.88 227.33) (xy 325.12 227.33)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "018e7178-1138-4dbb-ab17-c671801a829c")
 	)
 	(wire
 		(pts
@@ -4698,16 +4716,6 @@
 			(type default)
 		)
 		(uuid "22dac3c7-fcc8-4c98-9052-b34af8e3977d")
-	)
-	(wire
-		(pts
-			(xy 309.88 217.17) (xy 321.31 217.17)
-		)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(uuid "23890226-0f81-4943-95ec-2f8b264c20c5")
 	)
 	(wire
 		(pts
@@ -5451,7 +5459,7 @@
 	)
 	(wire
 		(pts
-			(xy 307.34 336.55) (xy 307.34 326.39)
+			(xy 307.34 335.28) (xy 307.34 326.39)
 		)
 		(stroke
 			(width 0)
@@ -5611,6 +5619,16 @@
 	)
 	(wire
 		(pts
+			(xy 339.09 293.37) (xy 334.01 293.37)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "91317c8e-1c17-414c-b21e-39dc293d099b")
+	)
+	(wire
+		(pts
 			(xy 196.85 232.41) (xy 196.85 236.22)
 		)
 		(stroke
@@ -5638,6 +5656,16 @@
 			(type solid)
 		)
 		(uuid "92858e4a-bda8-49f7-a5aa-813c56009c5b")
+	)
+	(wire
+		(pts
+			(xy 321.31 293.37) (xy 326.39 293.37)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "93c3d940-ad81-4cd2-91ed-5fbcb414ba4a")
 	)
 	(wire
 		(pts
@@ -5778,16 +5806,6 @@
 			(type default)
 		)
 		(uuid "a58689d0-c160-41e5-861d-fac79168f149")
-	)
-	(wire
-		(pts
-			(xy 309.88 227.33) (xy 321.31 227.33)
-		)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(uuid "a587c863-4ce1-41bb-b1de-d988177557f1")
 	)
 	(wire
 		(pts
@@ -6018,6 +6036,16 @@
 			(type default)
 		)
 		(uuid "c5d63d12-f54e-4505-b0c6-638d2edc7f5d")
+	)
+	(wire
+		(pts
+			(xy 309.88 217.17) (xy 325.12 217.17)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "c5fcb15a-36ce-4319-802a-b9e1482ecc07")
 	)
 	(wire
 		(pts
@@ -6464,6 +6492,7 @@
 		(at 182.118 92.964 0)
 		(effects
 			(font
+				(face "KiCad Font")
 				(size 1.27 1.27)
 			)
 			(justify left top)
@@ -6528,6 +6557,7 @@
 		(at 197.358 92.964 0)
 		(effects
 			(font
+				(face "KiCad Font")
 				(size 1.27 1.27)
 			)
 			(justify left top)
@@ -6590,6 +6620,7 @@
 		(at 169.672 123.698 0)
 		(effects
 			(font
+				(face "KiCad Font")
 				(size 1.27 1.27)
 			)
 			(justify left top)
@@ -7624,7 +7655,7 @@
 			)
 		)
 		(property "Value" "IR204A"
-			(at 161.29 97.663 0)
+			(at 161.798 97.536 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7804,6 +7835,76 @@
 			(project "Remote"
 				(path "/d5f3a3bc-154f-419d-b1e3-9310b24e53c3"
 					(reference "C4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 330.2 293.37 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "292a4f65-394a-4b6b-b948-d925dc444c42")
+		(property "Reference" "R18"
+			(at 330.2 287.02 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "R"
+			(at 330.2 289.56 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "sumec-smdV2_library:Logo"
+			(at 330.2 295.148 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 330.2 293.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 330.2 293.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "55aff70b-c0c4-44a6-8e0c-b3a140d35139")
+		)
+		(pin "1"
+			(uuid "69d9acd0-6606-4225-8a7e-7f0093c711f7")
+		)
+		(instances
+			(project "Remote"
+				(path "/d5f3a3bc-154f-419d-b1e3-9310b24e53c3"
+					(reference "R18")
 					(unit 1)
 				)
 			)
@@ -9176,7 +9277,7 @@
 			)
 		)
 		(property "Value" "IR204A"
-			(at 151.13 97.663 0)
+			(at 151.892 97.536 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10207,7 +10308,7 @@
 			)
 		)
 		(property "Value" "IR204A"
-			(at 171.45 97.663 0)
+			(at 171.958 97.536 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10832,7 +10933,7 @@
 	)
 	(symbol
 		(lib_id "Device:Battery")
-		(at 321.31 222.25 0)
+		(at 325.12 222.25 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -10841,7 +10942,7 @@
 		(fields_autoplaced yes)
 		(uuid "d31b2d8b-87b8-45f2-9674-f1d8dd36d0a6")
 		(property "Reference" "BT1"
-			(at 325.12 220.4084 0)
+			(at 328.93 220.4084 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10850,7 +10951,7 @@
 			)
 		)
 		(property "Value" "Battery"
-			(at 325.12 222.9484 0)
+			(at 328.93 222.9484 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10859,7 +10960,7 @@
 			)
 		)
 		(property "Footprint" "Battery:BatteryHolder_Keystone_2462_2xAA - no holes"
-			(at 321.31 220.726 90)
+			(at 325.12 220.726 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10868,7 +10969,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 321.31 220.726 90)
+			(at 325.12 220.726 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10877,7 +10978,7 @@
 			)
 		)
 		(property "Description" "Multiple-cell battery"
-			(at 321.31 222.25 0)
+			(at 325.12 222.25 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11428,7 +11529,7 @@
 	)
 	(symbol
 		(lib_id "power:+3V0")
-		(at 307.34 336.55 180)
+		(at 307.34 335.28 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -11436,7 +11537,7 @@
 		(dnp no)
 		(uuid "f64c4741-95df-4040-866d-536075c62961")
 		(property "Reference" "#PWR022"
-			(at 307.34 332.74 0)
+			(at 307.34 331.47 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11445,7 +11546,7 @@
 			)
 		)
 		(property "Value" "+3V0"
-			(at 311.404 338.328 0)
+			(at 310.134 336.042 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11453,7 +11554,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 307.34 336.55 0)
+			(at 307.34 335.28 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11462,7 +11563,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 307.34 336.55 0)
+			(at 307.34 335.28 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11471,7 +11572,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+3V0\""
-			(at 307.34 336.55 0)
+			(at 307.34 335.28 0)
 			(effects
 				(font
 					(size 1.27 1.27)
