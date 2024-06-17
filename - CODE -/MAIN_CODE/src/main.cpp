@@ -93,127 +93,44 @@ void loop()
         Tick_managing(Tick_QRE.tickTime, Tick_QRE.tickNumber, Tick_QRE.lastTick, &Tick_QRE.lastTick, &Tick_QRE.tickNumber);
         Tick_managing(Tick_Sharp.tickTime, Tick_Sharp.tickNumber, Tick_Sharp.lastTick, &Tick_Sharp.lastTick, &Tick_Sharp.tickNumber);
 
-        //==========================Rafinering inputs==============================
+        //==========================Out of line Error==============================
 
-        // if Sumec started, program continuing to main logic
-        if (state != 0)
+        switch (LINEstate)
         {
+            case 0:     //QRE
 
-            // line senzors -> first priority - Defence 
-            if (QREleft == 1 && QREright != 1)
-            {
-                state = 2;
-                sharpON_OFF = 0;
-                lunaON_OFF = 0;
 
-                Tick_QRE.lastTick = millis();
-                Tick_QRE.tickNumber = 0;
-            }
-            else if (QREright == 1 && QREleft != 1)
-            {
-                state = 3;
-                sharpON_OFF = 0;
-                lunaON_OFF = 0;
+                break;
+            case 1:     //STOP
 
-                Tick_QRE.lastTick = millis();
-                Tick_QRE.tickNumber = 0;
-            }
-            else if (state == 1)
-            {
-                // side senzors -> second priority - Defence
-                if (sharpON_OFF == 1)
-                {
-                    if (SHARPleft == 1)
-                    {
-                        state = 6;
-                        lunaON_OFF = 0;
 
-                        Tick_Sharp.lastTick = millis();
-                        Tick_Sharp.tickNumber = 0;
-                    }
-                    else if (SHARPright == 1)
-                    {
-                        state = 7;
-                        lunaON_OFF = 0;
+                break;
+            case 2:     //Go backward
 
-                        Tick_Sharp.lastTick = millis();
-                        Tick_Sharp.tickNumber = 0;
-                    }
 
-                    else // Length Senzors
-                    {
-                        // Length senzors -> thirth priority - Attack
-                        if (lunaON_OFF)
-                        {
-                            if (LUNAmiddle < Range && LUNAmiddle > 0)
-                            {
-                                state = 8;
-                            }
-                            else if (LUNAright < Range && LUNAright > 0)
-                            {
-                                state = 5;
-                            }
-                            else if (LUNAleft < Range && LUNAleft > 0)
-                            {
-                                state = 4;
-                            }
-                            else
-                            {
-                                state = 1;
-                            }
-                        }
-                    }
-                }
-            }
+                break;
+            case 3:     //STOP after backward
+
+
+                break;
+            case 4:     //Go forward
+
+
+                break;
+
         }
-
-        Serial.println(state);
-
-        //===========================Procesing resoluts - states===============================
+        
+        //===========================Normal process===============================
 
         switch (state)
         {
-        case 0: 
+        case 000:       // INIT 
 
-            if(millis() - StartTime < 5000) // 5s delay for Jedobot
-            {
-                LEDOrange.blink(100, 100);
-                Move.stop();
-            }
-            else if (LUNAmiddle < Range )
-            {
-                LEDRed.blink(100, 100);
-                state = 1;
-                Range = 35;
-            }
-            else if(QREleft)
-            {
-                LEDRed.blink(100, 100);
-                Range = 50;
-                Move.turnRight(1.0);
-            }
-            else if(QREright)
-            {
-                LEDRed.blink(100, 100);
-                Range = 50;
-                Move.turnLeft(1.0);
-                QRE_left_started = 1;
-
-            }
-            else if(QRE_left_started == 0)
-            {
-                LEDRed.blink(100, 100);
-                Move.turnRight(1.0);
-                Range = 35;
-            }
-
+            
             break;
-        case 1:
-            //Move.stop();
-            Move.goForward(1.0);
-            LEDOrange.setOff();
-            LEDRed.blink(100, 100);
-
+        case 001:       // IDLE
+            
+            
             break;
         case 2: // Line sonzor - Left
 
@@ -258,86 +175,27 @@ void loop()
             break;
         case 4: // Length senzor - left
 
-            LEDOrange.blink(100, 100);
-            Move.turnLeft(1.0);
-            state = 1;
+            
 
             break;
         case 5: // Length senzor - right
 
-            LEDOrange.blink(100, 100);
-            Move.turnRight(1.0);
-            state = 1;
-
+            
             break;
 
         case 8: // Length senzor - middle
 
-            LEDOrange.blink(100, 100);
-            Move.goForward(1.0);
-            state = 1;
+            
 
             break;
         case 6: // side sonzors - left
 
-            LEDOrange.setOn();
-
-            if (sharpON_OFF == 1)
-            {
-                if (Tick_Sharp.tickNumber < 20)
-                {
-                    Move.turnLeft(0.5, (0.5 * rotate_coeficient));
-                }
-                else if (Tick_Sharp.tickNumber < 50)
-                {
-                    Move.turnLeft(0.5, (0.5 * rotate_coeficient));
-                }
-                else if (Tick_Sharp.tickNumber < 60)
-                {
-                    Move.turnLeft(1.0);
-                }
-                else
-                {
-                    lunaON_OFF = 1;
-                    state = 1;
-                }
-
-                if (Tick_Sharp.tickNumber > Tick_Sharp.lastNumberTick)
-                {
-                    rotate_coeficient = rotate_coeficient + 0.02;
-                }
-            }
+            
 
             break;
         case 7: // side sonzors - right
 
-            LEDOrange.setOn();
-
-            if (sharpON_OFF == 1)
-            {
-                if (Tick_Sharp.tickNumber < 20)
-                {
-                    Move.turnRight(0.5, (0.5 * rotate_coeficient));
-                }
-                else if (Tick_Sharp.tickNumber < 50)
-                {
-                    Move.turnRight(0.5, (0.5 * rotate_coeficient));
-                }
-                else if (Tick_Sharp.tickNumber < 60)
-                {
-                    Move.turnRight(1.0);
-                }
-                else
-                {
-                    lunaON_OFF = 1;
-                    state = 1;
-                }
-
-                if (Tick_Sharp.tickNumber > Tick_Sharp.lastNumberTick)
-                {
-                    rotate_coeficient = rotate_coeficient + 0.02;
-                }
-            }
+           
 
             break;
         }
