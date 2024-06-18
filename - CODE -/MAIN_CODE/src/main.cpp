@@ -65,14 +65,6 @@ void loop()
         StartTime = millis();
     }
 
-    // start with IR
-    if (Remote.hasDohyoID() && !Remote.isStarted())
-        LEDRed.blink(500, 100);
-
-    // after start comand, running this main code
-    if (!Remote.isStarted() && isStarted == 1)
-    {
-
         //=========================Writeing value in sensors to variables=============
 
         // Line sonzors
@@ -99,22 +91,61 @@ void loop()
         {
             case 0:     //QRE
 
+                if(QREleft || QREright || QREback)
+                {
+                   saveState = state;   //saved last state
+                   state = 001;
+                   LINEstate++;
+
+                    Tick_QRE.lastTick = millis();
+                    Tick_QRE.tickNumber = 0;
+                }
 
                 break;
             case 1:     //STOP
 
+                Move.stop();
+
+                if(QREleft || QREright)
+                {
+                    LINEstate++;
+                }
+                else if(QREback)
+                {
+                    LINEstate = 4;
+                }
 
                 break;
             case 2:     //Go backward
 
+                if(Tick_QRE.tickNumber < 10)
+                {
+                    Move.goBackward(1.0);
+                }
+                else
+                {
+                    LINEstate = 3;
+                }
 
                 break;
             case 3:     //STOP after backward
 
+                Move.stop();
+
+                state = saveState;
+                LINEstate = 0;
 
                 break;
             case 4:     //Go forward
 
+                if(Tick_QRE.tickNumber < 10)
+                {
+                    Move.goForward(1.0);
+                }
+                else
+                {
+                    LINEstate = 3;
+                }
 
                 break;
 
@@ -126,82 +157,92 @@ void loop()
         {
         case 000:       // INIT 
 
+            if (Remote.hasDohyoID() && !Remote.isStarted())
+            LEDRed.blink(500, 100);
+
+            // after start comand, running this main code
+            if (Remote.isStarted() && isStarted == 1)
+            {
+                state = 230;
+            }
             
             break;
         case 001:       // IDLE
             
+            //nothing - program is stopped
             
             break;
-        case 2: // Line sonzor - Left
+        case 230: // Turn Right 
 
-            LEDRed.setOn();
+            Move.turnRight(1.0);
+            
+            if(LUNAleft < Range)
+                state = 260;
 
-            if (Tick_QRE.tickNumber < 1)
-            {
-                Move.goBackward(1.0);
-            }
-            else if (Tick_QRE.tickNumber < 15)
-            {
+            if(LUNAmiddle < Range)
+                state = 290;
+
+
+            if(SHARPleft || SHARPright)
+                state = 300;
+
+
+            break;
+        case 260: // Turn Left
+
+            Move.turnLeft(1.0);
+
+            if(LUNAleft > Range)    
+                state = 230;
+
+            if(LUNAmiddle < Range)
+                state = 290;
+
+            break;
+        case 290: // Go Forward
+
+            Move.goForward(1.0);
+
+            if(LUNAmiddle > Range)    
+                state = 230;
+
+
+            break;
+        case 300: // Sharp 
+
+            Move.stop();
+
+            Tick_QRE.lastTick = millis();
+            Tick_QRE.tickNumber = 0;
+
+            if(SHARPleft)
+                state = 330;
+            else if(SHARPright)
+                state = 360;
+            else
+                state = 230;
+            
+            break;
+        case 330: // Turn Right diagonaly and Turn Right 
+ 
+            if(Tick_QRE.tickNumber < 20)
+                Move.turnRight(1.0, 0.75);
+            else if(Tick_QRE.tickNumber < 30)
                 Move.turnRight(1.0);
-            }
-
             else
-            {
-                state = 1;
-                sharpON_OFF = 1;
-                lunaON_OFF = 1;
-            }
+                state = 230; // Sharp - End
 
             break;
-        case 3: // Line sonzor - Right
+        case 360: // Turn Left diagonaly and Turn Left 
 
-            LEDRed.setOn();
-
-            if (Tick_QRE.tickNumber < 1)
-            {
-                Move.goBackward(1.0);
-            }
-            else if (Tick_QRE.tickNumber < 15)
-            {
+            if(Tick_QRE.tickNumber < 20)
+                Move.turnLeft(1.0, 0.75);
+            else if(Tick_QRE.tickNumber < 30)
                 Move.turnLeft(1.0);
-            }
             else
-            {
-                state = 1;
-                sharpON_OFF = 1;
-                lunaON_OFF = 1;
-            }
-
-            break;
-        case 4: // Length senzor - left
-
-            
-
-            break;
-        case 5: // Length senzor - right
-
-            
-            break;
-
-        case 8: // Length senzor - middle
-
-            
-
-            break;
-        case 6: // side sonzors - left
-
-            
-
-            break;
-        case 7: // side sonzors - right
-
-           
+                state = 230; // Sharp - End
 
             break;
         }
-    }
-    else
-    {
-        Move.stop();
-    }
+    
 }

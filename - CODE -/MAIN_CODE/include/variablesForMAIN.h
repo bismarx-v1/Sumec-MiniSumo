@@ -4,7 +4,11 @@
 
 // Logic variables:
 int Range = 50;     // Length senzor range for decision, is enybodey there?
-uint8_t state = 0;      // variable who decides, what is in progress
+
+uint16_t state = 0;      // variable who decides, what is in progress
+uint16_t LINEstate = 0;
+uint16_t saveState;
+
 float rotate_coeficient = 0;    // wariable for rotating, how much is having rotating 
 //bool start = 0;     // this variable determines if the start is in progress 
 bool isStarted = 0;     // variable for starting with button
