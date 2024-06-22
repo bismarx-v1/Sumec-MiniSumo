@@ -59,8 +59,8 @@ void SUDPRCP::begin(const uint16_t LUdpPort, uint16_t LBufferLen) {
 
 	udp.begin(UdpPort);
 	// on the two lines below can be seen the use of the onEvent function. It can't find the onEvent method
-	WiFi.onEvent(StationConnectedToAP, ARDUINO_EVENT_WIFI_AP_STACONNECTED);			// add callback to "station connected to ap" event
-	WiFi.onEvent(StationDisconnectedFromAP, ARDUINO_EVENT_WIFI_AP_STADISCONNECTED);	// add the same callback to "station disconected from ap" event
+	//WiFi.onEvent(StationConnectedToAP, ARDUINO_EVENT_WIFI_AP_STACONNECTED);			// add callback to "station connected to ap" event
+	//WiFi.onEvent(StationDisconnectedFromAP, ARDUINO_EVENT_WIFI_AP_STADISCONNECTED);	// add the same callback to "station disconected from ap" event
 }
 
 /**

@@ -840,12 +840,12 @@ void setup() {
 
 	Test.begin(1984, 32);
 	// on the two lines below can be seen the use of the onEvent function. It can't find the two callback functions from the object
-	WiFi.onEvent(Test.StationConnectedToAP, ARDUINO_EVENT_WIFI_AP_STACONNECTED);			// add callback to "station connected to ap" event
-	WiFi.onEvent(Test.StationDisconnectedFromAP, ARDUINO_EVENT_WIFI_AP_STADISCONNECTED);	// add the same callback to "station disconected from ap" event
+	//WiFi.onEvent(Test.StationConnectedToAP, ARDUINO_EVENT_WIFI_AP_STACONNECTED);			// add callback to "station connected to ap" event
+	//WiFi.onEvent(Test.StationDisconnectedFromAP, ARDUINO_EVENT_WIFI_AP_STADISCONNECTED);	// add the same callback to "station disconected from ap" event
 	
 	// on the two lines below can be seen the use of the onEvent function. It can find the two callback functions when they aren't from the object
-	WiFi.onEvent(Test2_StationConnectedToAP, ARDUINO_EVENT_WIFI_AP_STACONNECTED);			// add callback to "station connected to ap" event
-	WiFi.onEvent(Test2_StationDisconnectedFromAP, ARDUINO_EVENT_WIFI_AP_STADISCONNECTED);	// add the same callback to "station disconected from ap" event
+	//WiFi.onEvent(Test2_StationConnectedToAP, ARDUINO_EVENT_WIFI_AP_STACONNECTED);			// add callback to "station connected to ap" event
+	//WiFi.onEvent(Test2_StationDisconnectedFromAP, ARDUINO_EVENT_WIFI_AP_STADISCONNECTED);	// add the same callback to "station disconected from ap" event
 }
 
 void loop() {

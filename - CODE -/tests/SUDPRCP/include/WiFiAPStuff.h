@@ -1,5 +1,5 @@
-#ifndef SUDPRCP_LIB
-#define SUDPRCP_LIB
+#ifndef _WIFI_AP_STUFF_
+#define _WIFI_AP_STUFF_
 
 #include <WiFi.h>
 
