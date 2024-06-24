@@ -26,8 +26,8 @@ QRE qreRight('R');
 QRE qreBack('B');
 
 // side sonzors objects
-Sharp sharpLeft('L');
-Sharp sharpRight('R');
+Sharp sharpLeft('R');
+Sharp sharpRight('L');
 
 //=================== DECLARING OBJECTs ===================
 
@@ -65,7 +65,7 @@ void loop()
         StartTime = millis();
     }
 
-        //=========================Writeing value in sensors to variables=============
+        //=========================Writeing value from sensors to variables=============
 
         // Line sonzors
         QREleft = qreLeft.get();
@@ -85,13 +85,14 @@ void loop()
         Tick_managing(Tick_QRE.tickTime, Tick_QRE.tickNumber, Tick_QRE.lastTick, &Tick_QRE.lastTick, &Tick_QRE.tickNumber);
         Tick_managing(Tick_Sharp.tickTime, Tick_Sharp.tickNumber, Tick_Sharp.lastTick, &Tick_Sharp.lastTick, &Tick_Sharp.tickNumber);
 
-        //==========================Out of line Error==============================
+        //==========================Out of line Process==============================
+
 
         switch (LINEstate)
         {
             case 0:     //QRE
 
-                if(QREleft || QREright || QREback)
+                if((QREleft || QREright || QREback) && Remote.isStarted())
                 {
                    saveState = state;   //saved last state
                    state = 001;
@@ -153,6 +154,8 @@ void loop()
         
         //===========================Normal process===============================
 
+        Serial.println(state);
+
         switch (state)
         {
         case 000:       // INIT 
@@ -161,10 +164,12 @@ void loop()
             LEDRed.blink(500, 100);
 
             // after start comand, running this main code
-            if (Remote.isStarted() && isStarted == 1)
+            if (Remote.isStarted())
             {
                 state = 230;
             }
+
+            LINEstate = 0;
             
             break;
         case 001:       // IDLE
@@ -185,7 +190,7 @@ void loop()
 
             if(SHARPleft || SHARPright)
                 state = 300;
-
+    
 
             break;
         case 260: // Turn Left
@@ -194,10 +199,10 @@ void loop()
 
             if(LUNAleft > Range)    
                 state = 230;
-
+            
             if(LUNAmiddle < Range)
                 state = 290;
-
+            
             break;
         case 290: // Go Forward
 
@@ -205,42 +210,61 @@ void loop()
 
             if(LUNAmiddle > Range)    
                 state = 230;
-
+            
 
             break;
         case 300: // Sharp 
 
-            Move.stop();
-
-            Tick_QRE.lastTick = millis();
-            Tick_QRE.tickNumber = 0;
+            Tick_Sharp.lastTick = millis();
+            Tick_Sharp.tickNumber = 0;
 
             if(SHARPleft)
                 state = 330;
             else if(SHARPright)
                 state = 360;
-            else
-                state = 230;
+            //else
+                //state = 230;
             
             break;
         case 330: // Turn Right diagonaly and Turn Right 
  
-            if(Tick_QRE.tickNumber < 20)
-                Move.turnRight(1.0, 0.75);
-            else if(Tick_QRE.tickNumber < 30)
+            if (Tick_Sharp.tickNumber < 20)
+            {
+                Move.turnRight(0.6, 0.55);
+            }
+            else if (Tick_Sharp.tickNumber < 50)
+            {
+                Move.turnRight(0.6, 0.55);
+            }
+            else if (Tick_Sharp.tickNumber < 60)
+            {
                 Move.turnRight(1.0);
+            }
             else
+            {
                 state = 230; // Sharp - End
+            }
 
             break;
         case 360: // Turn Left diagonaly and Turn Left 
 
-            if(Tick_QRE.tickNumber < 20)
-                Move.turnLeft(1.0, 0.75);
-            else if(Tick_QRE.tickNumber < 30)
+            if (Tick_Sharp.tickNumber < 20)
+            {
+                Move.turnLeft(0.6, 0.55);
+            }
+            else if (Tick_Sharp.tickNumber < 50)
+            {
+                Move.turnLeft(0.6, 0.55);
+            }
+            else if (Tick_Sharp.tickNumber < 60)
+            {
                 Move.turnLeft(1.0);
+            }
             else
+            {
                 state = 230; // Sharp - End
+            }
+            
 
             break;
         }

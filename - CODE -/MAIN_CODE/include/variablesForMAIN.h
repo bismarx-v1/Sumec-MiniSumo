@@ -3,7 +3,7 @@
 //============================= PROGRAM VARIABLES ===============================
 
 // Logic variables:
-int Range = 50;     // Length senzor range for decision, is enybodey there?
+int Range = 20;     // Length senzor range for decision, is enybodey there?
 
 uint16_t state = 0;      // variable who decides, what is in progress
 uint16_t LINEstate = 0;
