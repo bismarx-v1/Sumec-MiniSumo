@@ -1,3 +1,4 @@
+#if 0
 /**
  * This is a sincere apology to any reader
  * this code is definetly not optimalised
@@ -8,8 +9,9 @@
  * 
  * job security is my passion, i am irreplaceable
 */
-
-#define UDP_DEBUG 0	// this activates something
+#ifndef UDP_DEBUG
+#define UDP_DEBUG 0	// this activates something. needs serial
+#endif
 
 #ifndef _UDP_SR_
 #define _UDP_SR_
@@ -27,10 +29,10 @@ uint16_t PacketNum = 0;	// packet counter. range = <0; 65535> (5 digits)
 wifi_sta_list_t wifi_sta_list;
 tcpip_adapter_sta_list_t adapter_sta_list;
 uint8_t IsIP0000 = 0;
-uint16_t UdpPort = 0;
-uint8_t* bufferUint8Pointer = 0;
-char* bufferPointer = 0;
-uint16_t bufferLen = 0;
+uint16_t UdpPort = 0;	//THIS
+uint8_t* bufferUint8Pointer = 0;	//THIS
+char* bufferPointer = 0;	//THIS
+uint16_t bufferLen = 0;	//THIS
 
 /**
  *	@brief Sets the array of char*(s) udpAddressList to connected ip(s) 
@@ -63,7 +65,9 @@ void GetIps() {
 		}
 
 		if(IsIP0000 == 1) {
+			#if UDP_DEBUG	// DEBUG?
 			Serial.println("[Error - SUDPRCP] Station connected too soon. Reconnect it.");
+			#endif
 			memset(udpAddressList[i], 0, 16);	// delete 0.0.0.0
 			udpAddressList[i][0] = '#';
 		}
@@ -76,8 +80,7 @@ void GetIps() {
 */
 void StationConnectedToAP(WiFiEvent_t event, WiFiEventInfo_t info) {
 	vTaskDelay(100);
-	GetIps();
-	
+	GetIps();	
 }
 
 /**
@@ -106,6 +109,8 @@ void UDPSetup(char* APName, char* APPass, IPAddress APIp, const uint16_t LUdpPor
 	bufferLen = LBufferLen;
 	UdpPort = LUdpPort;
 
+	memset(bufferUint8Pointer, 0, bufferLen);
+
 	// APObject.InitAP("SUDPRCP_U#1", "018f34a5-6daa-7729-8ed0-884b8a7c6c45", IPAddress(192,168,1,22));	// 192.168.1.22 works fine
 	// ^That is an example of how it should look like
 	// Passwords in plaintext for decreased security
@@ -124,9 +129,9 @@ void UDPSetup(char* APName, char* APPass, IPAddress APIp, const uint16_t LUdpPor
  * @param SendNTimes Number of repeats for each device. they might not catch it the first time, i didn't have any problems with it though
 */
 void SendUdpToAll(String Message, uint8_t SendNTimes) {
-	memset(bufferUint8Pointer, 0, bufferLen);	// clear buffer
+	//memset(bufferUint8Pointer, 0, bufferLen);	// clear buffer
 	for(uint8_t i = 0; i < String(PacketNum).length(); i++) {	// set packets num
-		bufferUint8Pointer[i] = String(PacketNum)[i];
+		//bufferUint8Pointer[i] = String(PacketNum)[i];
 	}
 
 	bufferUint8Pointer[String(PacketNum).length()] = '#';	// add dividing char '#'
@@ -136,13 +141,13 @@ void SendUdpToAll(String Message, uint8_t SendNTimes) {
 	}
 	
 	for(uint8_t i2 = 0; i2 < SendNTimes; i2++) {	// send to each ip 5 times
-		for(uint8_t i = 0; i < adapter_sta_list.num; i++) {	// send to all connected ips
+		/*for(uint8_t i = 0; i < adapter_sta_list.num; i++) {	// send to all connected ips
 			if(udpAddressList[i][0] != '#') {
 				udp.beginPacket(udpAddressList[i], UdpPort);
 				udp.write(bufferUint8Pointer, bufferLen);
 				udp.endPacket();
 			}
-		}
+		}*/
 	}
 
 	if(PacketNum == 65535) {	// owerflow protection? frickin overbuild
@@ -153,9 +158,15 @@ void SendUdpToAll(String Message, uint8_t SendNTimes) {
 
 	#if UDP_DEBUG	// DEBUG?
 	Serial.print(millis());
-	Serial.print("\tSent: \t");
+	Serial.print(":\n\tSent:\t");
 	for(uint8_t i = 0; i < bufferLen; i++) {
-		Serial.printf("%c", bufferUint8Pointer[i]);
+		//Serial.printf("%c", bufferUint8Pointer[i]);
+	}
+
+	Serial.print("\n\tto:\n");
+	for(uint8_t i = 0; i < adapter_sta_list.num; i++) {
+		Serial.print("\t");
+		Serial.println(udpAddressList[i][0]);
 	}
 
 	Serial.print("\n");
@@ -185,4 +196,5 @@ void CheckIfRecieved(uint8_t* ReturnSize, char* ReturnMessage, IPAddress* Return
 	}
 }
 
+#endif
 #endif

@@ -4,6 +4,7 @@
  * fill out the fields with the data below and send a message.you should also recieve a "Test1 message every 5sec(s)".
  * check serial for the sent data and the udp app for the periodic message
 */
+#define UDP_DEBUG 1 //DEBUG
 
 #include "UDP.h"
 
@@ -17,7 +18,7 @@
 
 
 void setup() {
-	Serial.begin(250000);
+	Serial.begin(115200);
 	delay(2000);
 	Serial.println("SERIAL LOADED");
 
@@ -31,17 +32,19 @@ IPAddress ReturnIp;						// DEBUG/testing var
 #define TimePeriodSend  5000			// DEBUG/testing var
 uint64_t TimeLastSend = 0;				// DEBUG/testing var
 
-void loop() {
+void loop() {/*
 	CheckIfRecieved(&ReturnSize, ReturnMessage, &ReturnIp);
 	if(ReturnSize > 0) {
 		Serial.print("UDP recieved: ");
 		Serial.print(ReturnMessage);
 		Serial.print("\tfrom: ");
 		Serial.println(ReturnIp);
-	}
+	}*/
 	
 	if(millis()-TimePeriodSend >= TimeLastSend) {
 		TimeLastSend = millis();
 		SendUdpToAll("Test1", 5);
 	}
+	
+	delay(100);
 }
