@@ -230,13 +230,13 @@ void loop()
  
             if (Tick_Sharp.tickNumber < 20)
             {
-                Move.turnRight(0.6, 0.55);
+                Move.turnRight(0.7, 0.55);
             }
             else if (Tick_Sharp.tickNumber < 50)
             {
-                Move.turnRight(0.6, 0.55);
+                Move.turnRight(0.7, 0.55);
             }
-            else if (Tick_Sharp.tickNumber < 60)
+            else if (LUNAmiddle > Range && LUNAright > Range && LUNAleft > Range)
             {
                 Move.turnRight(1.0);
             }
@@ -250,13 +250,13 @@ void loop()
 
             if (Tick_Sharp.tickNumber < 20)
             {
-                Move.turnLeft(0.6, 0.55);
+                Move.turnLeft(0.7, 0.55);
             }
             else if (Tick_Sharp.tickNumber < 50)
             {
-                Move.turnLeft(0.6, 0.55);
+                Move.turnLeft(0.7, 0.55);
             }
-            else if (Tick_Sharp.tickNumber < 60)
+            else if (LUNAmiddle > Range && LUNAright > Range && LUNAleft > Range)
             {
                 Move.turnLeft(1.0);
             }
