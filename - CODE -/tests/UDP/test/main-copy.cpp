@@ -1,5 +1,4 @@
-#ifndef _UDP_Stuff
-#define _UDP_Stuff
+// Check lines with "DEBUG" brfore release
 
 #include <Arduino.h>
 #include <WiFiUdp.h>
@@ -9,7 +8,9 @@
 WiFiAPStuff AP;	// create my AP lib object
 WiFiUDP udp;	// create the udp lib object
 
+const uint16_t UdpPort = 1984;	// set the udp port, savva picked 1984 and i don't expect much trafic on there form our ips
 char udpAddressList[10][IP4ADDR_STRLEN_MAX];	// array for storing connected ips. built for the esp32 max of 10 devices, default max is 4 devices though
+
 
 const uint8_t bufferLen = 32;	// the max length of the packets in bytes. first 6 bytes are for inefficient packet num shenanigans (sends numbers as chars)
 char buffer[bufferLen];
@@ -22,9 +23,15 @@ tcpip_adapter_sta_list_t adapter_sta_list;
 
 uint8_t IsIP0000 = 0;
 
+char ReturnMessage[bufferLen];			// DEBUG/testing var
+IPAddress ReturnIp;						// DEBUG/testing var
+uint8_t ReturnSize;						// DEBUG/testing var
+const uint64_t TimePeriodSend = 5000;	// DEBUG/testing var
+uint64_t TimeLastSend = 0;				// DEBUG/testing var
+
 void GetIps() {	// sets the array of char*(s) udpAddressList to connected ip(s)
 	for(uint8_t i = 0; i < 10; i++) {
-		memset(udpAddressList[i], 0, 16);	// clear the char* array
+		memset(udpAddressList[i], 0, 16);		// clear the char* array
 	}
 
 	memset(&wifi_sta_list, 0, sizeof(wifi_sta_list));
@@ -70,7 +77,7 @@ void StationDisconnectedFromAP(WiFiEvent_t event, WiFiEventInfo_t info) {
 	Serial.println("------------");
 }
 
-void SendUdpToAll(String Message, uint8_t SendNTimes, uint16_t UdpPort) {
+void SendUdpToAll(String Message, uint8_t SendNTimes) {
 	memset(bufferUint8, 0, bufferLen);	// clear buffer
 	for(uint8_t i = 0; i < String(PacketNum).length(); i++) {	// set packets num
 		bufferUint8[i] = String(PacketNum)[i];
@@ -124,4 +131,33 @@ void CheckIfRecieved(uint8_t* ReturnSize, char* ReturnMessage, IPAddress* Return
 	}
 }
 
-#endif
+void setup() {
+	Serial.begin(115200);
+
+	AP.InitAP("SUDPRCP_U#1", "018f34a5-6daa-7729-8ed0-884b8a7c6c45", IPAddress(192,168,1,22));	// 192.168.1.22
+
+	udp.begin(UdpPort);
+
+	WiFi.onEvent(StationConnectedToAP, ARDUINO_EVENT_WIFI_AP_STACONNECTED);			// add callback to "station connected to ap" event
+	WiFi.onEvent(StationDisconnectedFromAP, ARDUINO_EVENT_WIFI_AP_STADISCONNECTED);	// add the same callback to "station disconected from ap" event
+
+	delay(5000);
+}
+
+void loop() {
+	
+	CheckIfRecieved(&ReturnSize, ReturnMessage, &ReturnIp);
+	if(ReturnSize > 0) {
+		Serial.print("UDP recieved: ");
+		Serial.print(ReturnMessage);
+		Serial.print("\tfrom: ");
+		Serial.println(ReturnIp);
+	}
+	
+	if(millis()-TimePeriodSend >= TimeLastSend) {
+		TimeLastSend = millis();
+		SendUdpToAll("Test1", 5);
+	}
+
+	delay(100);
+}
