@@ -957,7 +957,7 @@
 	)
 	(wire
 		(pts
-			(xy 173.99 86.36) (xy 168.91 86.36)
+			(xy 176.53 86.36) (xy 168.91 86.36)
 		)
 		(stroke
 			(width 0)
@@ -967,7 +967,7 @@
 	)
 	(wire
 		(pts
-			(xy 173.99 91.44) (xy 168.91 91.44)
+			(xy 168.91 91.44) (xy 176.53 91.44)
 		)
 		(stroke
 			(width 0)
@@ -987,7 +987,7 @@
 	)
 	(wire
 		(pts
-			(xy 173.99 93.98) (xy 168.91 93.98)
+			(xy 176.53 93.98) (xy 168.91 93.98)
 		)
 		(stroke
 			(width 0)
@@ -997,7 +997,7 @@
 	)
 	(wire
 		(pts
-			(xy 173.99 88.9) (xy 168.91 88.9)
+			(xy 176.53 88.9) (xy 168.91 88.9)
 		)
 		(stroke
 			(width 0)
@@ -1027,7 +1027,7 @@
 	)
 	(wire
 		(pts
-			(xy 173.99 99.06) (xy 168.91 99.06)
+			(xy 176.53 99.06) (xy 168.91 99.06)
 		)
 		(stroke
 			(width 0)
@@ -1037,7 +1037,7 @@
 	)
 	(wire
 		(pts
-			(xy 173.99 83.82) (xy 168.91 83.82)
+			(xy 176.53 83.82) (xy 168.91 83.82)
 		)
 		(stroke
 			(width 0)
@@ -1097,7 +1097,7 @@
 	)
 	(wire
 		(pts
-			(xy 173.99 101.6) (xy 168.91 101.6)
+			(xy 176.53 101.6) (xy 168.91 101.6)
 		)
 		(stroke
 			(width 0)
@@ -1157,7 +1157,7 @@
 	)
 	(wire
 		(pts
-			(xy 173.99 96.52) (xy 168.91 96.52)
+			(xy 176.53 96.52) (xy 168.91 96.52)
 		)
 		(stroke
 			(width 0)
@@ -1475,7 +1475,7 @@
 	)
 	(symbol
 		(lib_id "Connector:Conn_01x08_Pin")
-		(at 179.07 91.44 0)
+		(at 181.61 91.44 0)
 		(mirror y)
 		(unit 1)
 		(exclude_from_sim no)
@@ -1484,7 +1484,7 @@
 		(dnp no)
 		(uuid "73b4497a-bc25-4ff1-bea2-b7120d62559c")
 		(property "Reference" "J1"
-			(at 179.07 81.026 0)
+			(at 181.61 81.026 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1492,7 +1492,7 @@
 			)
 		)
 		(property "Value" "Conn_01x08_Pin"
-			(at 178.435 81.28 0)
+			(at 180.975 81.28 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1501,7 +1501,7 @@
 			)
 		)
 		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Vertical"
-			(at 179.07 91.44 0)
+			(at 181.61 91.44 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1510,7 +1510,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 179.07 91.44 0)
+			(at 181.61 91.44 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1519,7 +1519,7 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x08, script generated"
-			(at 179.07 91.44 0)
+			(at 181.61 91.44 0)
 			(effects
 				(font
 					(size 1.27 1.27)
