@@ -4,5 +4,11 @@
 	(generator_version "8.0")
 	(uuid "a35bb982-e162-4589-8fbb-31c9c17b2833")
 	(paper "A4")
+	(title_block
+		(title "SUMEC_MK_IV")
+		(date "2024-07-01")
+		(company "SPS NA PROSEKU")
+		(comment 1 "SAVVA POPOV")
+	)
 	(lib_symbols)
 )

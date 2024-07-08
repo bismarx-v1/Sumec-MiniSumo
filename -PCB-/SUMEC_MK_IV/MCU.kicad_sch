@@ -4,6 +4,12 @@
 	(generator_version "8.0")
 	(uuid "a35bb982-e162-4589-8fbb-31c9c17b2833")
 	(paper "A4")
+	(title_block
+		(title "SUMEC_MK_IV")
+		(date "2024-07-01")
+		(company "SPS NA PROSEKU")
+		(comment 1 "SAVVA POPOV")
+	)
 	(lib_symbols
 		(symbol "Device:C"
 			(pin_numbers hide)
@@ -4370,7 +4376,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "05259239-8695-483c-88a7-cd3379b5dda6")
-		(property "Reference" "D?"
+		(property "Reference" "D1"
 			(at -215.9 117.7925 90)
 			(effects
 				(font
@@ -4428,7 +4434,7 @@
 		(instances
 			(project "SUMEC_MK_IV"
 				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/7b93d7c5-db1a-415c-92e4-9ebec6cf195f"
-					(reference "D?")
+					(reference "D1")
 					(unit 1)
 				)
 			)
@@ -4443,7 +4449,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "15e87c40-fbb6-4d51-bf41-e1956d686c3b")
-		(property "Reference" "U?"
+		(property "Reference" "U3"
 			(at 81.28 123.19 0)
 			(effects
 				(font
@@ -4614,7 +4620,7 @@
 		(instances
 			(project ""
 				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/7b93d7c5-db1a-415c-92e4-9ebec6cf195f"
-					(reference "U?")
+					(reference "U3")
 					(unit 1)
 				)
 			)
@@ -4630,7 +4636,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "1854287c-d590-44f5-b884-74a2e7b6a905")
-		(property "Reference" "D?"
+		(property "Reference" "D3"
 			(at -182.88 117.7925 90)
 			(effects
 				(font
@@ -4688,7 +4694,7 @@
 		(instances
 			(project "SUMEC_MK_IV"
 				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/7b93d7c5-db1a-415c-92e4-9ebec6cf195f"
-					(reference "D?")
+					(reference "D3")
 					(unit 1)
 				)
 			)
@@ -4774,7 +4780,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "38259705-1b1d-4df2-8ad3-5910fcba2962")
-		(property "Reference" "C?"
+		(property "Reference" "C4"
 			(at -109.22 72.39 0)
 			(effects
 				(font
@@ -4832,7 +4838,7 @@
 		(instances
 			(project "SUMEC_MK_IV"
 				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/7b93d7c5-db1a-415c-92e4-9ebec6cf195f"
-					(reference "C?")
+					(reference "C4")
 					(unit 1)
 				)
 			)
@@ -4987,7 +4993,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "45d53574-0b39-4860-b5e5-647e8e0dcb8c")
-		(property "Reference" "R?"
+		(property "Reference" "R1"
 			(at -217.17 127 0)
 			(effects
 				(font
@@ -5045,7 +5051,7 @@
 		(instances
 			(project "SUMEC_MK_IV"
 				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/7b93d7c5-db1a-415c-92e4-9ebec6cf195f"
-					(reference "R?")
+					(reference "R1")
 					(unit 1)
 				)
 			)
@@ -5061,7 +5067,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "4e8eab20-4db2-4fab-ab2d-d26c758c5062")
-		(property "Reference" "U?"
+		(property "Reference" "U2"
 			(at -93.2941 80.01 0)
 			(effects
 				(font
@@ -5236,7 +5242,7 @@
 		(instances
 			(project "SUMEC_MK_IV"
 				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/7b93d7c5-db1a-415c-92e4-9ebec6cf195f"
-					(reference "U?")
+					(reference "U2")
 					(unit 1)
 				)
 			)
@@ -5251,7 +5257,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "647ce515-1106-4e59-aa89-6a881ba4b947")
-		(property "Reference" "R?"
+		(property "Reference" "R3"
 			(at -184.15 127 0)
 			(effects
 				(font
@@ -5309,7 +5315,7 @@
 		(instances
 			(project "SUMEC_MK_IV"
 				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/7b93d7c5-db1a-415c-92e4-9ebec6cf195f"
-					(reference "R?")
+					(reference "R3")
 					(unit 1)
 				)
 			)
@@ -5534,7 +5540,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "bc5fe2df-b640-40b8-8f11-9687fa31378b")
-		(property "Reference" "C?"
+		(property "Reference" "C5"
 			(at 107.95 59.69 90)
 			(effects
 				(font
@@ -5592,7 +5598,7 @@
 		(instances
 			(project "SUMEC_MK_IV"
 				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/7b93d7c5-db1a-415c-92e4-9ebec6cf195f"
-					(reference "C?")
+					(reference "C5")
 					(unit 1)
 				)
 			)
@@ -5607,7 +5613,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "c188a7eb-ecfa-49a2-99e2-0bd9593d56df")
-		(property "Reference" "C?"
+		(property "Reference" "C3"
 			(at -125.73 72.39 0)
 			(effects
 				(font
@@ -5665,7 +5671,7 @@
 		(instances
 			(project "SUMEC_MK_IV"
 				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/7b93d7c5-db1a-415c-92e4-9ebec6cf195f"
-					(reference "C?")
+					(reference "C3")
 					(unit 1)
 				)
 			)
@@ -5681,7 +5687,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c1fa0f3a-5f4e-417f-b0f1-a5872bb11be1")
-		(property "Reference" "D?"
+		(property "Reference" "D2"
 			(at -199.39 117.7925 90)
 			(effects
 				(font
@@ -5739,7 +5745,7 @@
 		(instances
 			(project "SUMEC_MK_IV"
 				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/7b93d7c5-db1a-415c-92e4-9ebec6cf195f"
-					(reference "D?")
+					(reference "D2")
 					(unit 1)
 				)
 			)
@@ -5754,7 +5760,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "d2f0ee4d-3aa0-44e5-acce-4cd4b6b5c3fe")
-		(property "Reference" "R?"
+		(property "Reference" "R2"
 			(at -200.66 127 0)
 			(effects
 				(font
@@ -5812,7 +5818,7 @@
 		(instances
 			(project "SUMEC_MK_IV"
 				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/7b93d7c5-db1a-415c-92e4-9ebec6cf195f"
-					(reference "R?")
+					(reference "R2")
 					(unit 1)
 				)
 			)
@@ -5967,7 +5973,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "fc17dff5-58a8-4781-b883-045d928cbbcb")
-		(property "Reference" "C?"
+		(property "Reference" "C6"
 			(at 107.95 68.58 90)
 			(effects
 				(font
@@ -6025,7 +6031,7 @@
 		(instances
 			(project "SUMEC_MK_IV"
 				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/7b93d7c5-db1a-415c-92e4-9ebec6cf195f"
-					(reference "C?")
+					(reference "C6")
 					(unit 1)
 				)
 			)
