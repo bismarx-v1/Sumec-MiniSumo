@@ -3537,24 +3537,6 @@
 		(at 189.23 101.6)
 		(uuid "0866c122-8f40-4403-97bb-61734a0a9d2f")
 	)
-	(bus_entry
-		(at -21.59 170.18)
-		(size 2.54 2.54)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4d932df8-0d5f-4569-a00c-454c8360bfae")
-	)
-	(bus_entry
-		(at 138.43 -12.7)
-		(size 2.54 2.54)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e13e14cb-e493-4531-88c5-ee16d668d786")
-	)
 	(wire
 		(pts
 			(xy 99.06 242.57) (xy 99.06 226.06)
@@ -3835,16 +3817,6 @@
 		)
 		(uuid "4b40df88-2104-485e-96f0-d74f1c577fea")
 	)
-	(polyline
-		(pts
-			(xy 122.555 64.135) (xy 135.255 64.135)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4cb8d5f7-9f74-4081-bf85-21d935d00bfe")
-	)
 	(wire
 		(pts
 			(xy 162.56 228.6) (xy 162.56 254)
@@ -3897,7 +3869,7 @@
 	)
 	(wire
 		(pts
-			(xy 104.14 45.72) (xy 113.03 45.72)
+			(xy 101.6 50.8) (xy 110.49 50.8)
 		)
 		(stroke
 			(width 0)
@@ -3917,7 +3889,7 @@
 	)
 	(wire
 		(pts
-			(xy 104.14 43.18) (xy 113.03 43.18)
+			(xy 101.6 48.26) (xy 110.49 48.26)
 		)
 		(stroke
 			(width 0)
@@ -4135,16 +4107,6 @@
 		)
 		(uuid "8a7bc8e2-9c58-496f-96ba-72d05a12c95d")
 	)
-	(polyline
-		(pts
-			(xy 135.255 64.135) (xy 135.255 76.835)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8ab871b7-ef66-424a-8705-c25c1c75c37f")
-	)
 	(wire
 		(pts
 			(xy 80.01 237.49) (xy 80.01 242.57)
@@ -4304,16 +4266,6 @@
 			(type default)
 		)
 		(uuid "ac7204fa-8f3d-4f61-9437-0441fbafb959")
-	)
-	(polyline
-		(pts
-			(xy 122.555 76.835) (xy 135.255 76.835)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ae86ab1b-2f75-48b5-b69b-03720d376603")
 	)
 	(wire
 		(pts
@@ -4587,7 +4539,7 @@
 	)
 	(wire
 		(pts
-			(xy 172.72 99.06) (xy 173.99 99.06)
+			(xy 168.91 99.06) (xy 173.99 99.06)
 		)
 		(stroke
 			(width 0)
@@ -4789,7 +4741,7 @@
 	)
 	(rectangle
 		(start 135.255 76.835)
-		(end 208.915 118.11)
+		(end 220.98 118.11)
 		(stroke
 			(width 0)
 			(type dash)
@@ -4798,10 +4750,10 @@
 		(fill
 			(type none)
 		)
-		(uuid cb6bb15d-efc3-403d-b992-80155fe6cb4a)
+		(uuid cb55555d-8887-466e-9970-e0909ca3a2e1)
 	)
 	(image
-		(at 142.24 304.165)
+		(at -95.25 160.02)
 		(scale 0.413747)
 		(uuid "14fb2ab7-edf0-4bd1-83b1-6b22450e73fb")
 		(data "iVBORw0KGgoAAAANSUhEUgAABd0AAAIvCAYAAACBVnJjAAAAAXNSR0IArs4c6QAAAARnQU1BAACx"
@@ -6031,7 +5983,7 @@
 		)
 	)
 	(image
-		(at -78.74 149.86)
+		(at -86.995 87.63)
 		(uuid "5a0dae5d-21ef-4553-9a1d-67c01927b993")
 		(data "iVBORw0KGgoAAAANSUhEUgAAA4oAAAFLCAYAAACQpnLAAAAAAXNSR0IArs4c6QAAAARnQU1BAACx"
 			"jwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAALOnSURBVHhe7N0HXBTH3wbw5w4OkCJSRMBesffe"
@@ -6845,7 +6797,7 @@
 		)
 	)
 	(image
-		(at -46.355 41.275)
+		(at -73.66 25.4)
 		(uuid "928ff0e1-90ca-4e3a-b6c7-33795ff36a00")
 		(data "R0lGODdhJQPKAYAAAP///wAAACwAAAAAJQPKAQAC/oSPqcvtD6OctNqLs968+w+G4kiW5omm6sq2"
 			"7gvH8kzX9o3n+s73/g8MCofEovGITCqXzKbzCY1Kp9Sq9YrNarfcrvcLDovH5LL5jE6r1+y2+w2P"
@@ -6945,6 +6897,31 @@
 			"75vqTQ/1US/1U0/1VW/1V4/1Wa/1W8/1Xe/1Xw/2YS/2Y0/2KlEAADs="
 		)
 	)
+	(text "SWITCHING SIMULATION - FALSTAD"
+		(exclude_from_sim no)
+		(at 154.305 61.595 0)
+		(effects
+			(font
+				(size 1.5 1.5)
+			)
+			(href "https://www.youtube.com/watch?v=lVDUcCuKls0")
+		)
+		(uuid "1c5ebaa3-d371-4b98-ad8a-3646caef62b0")
+	)
+	(text "USB POWER SWITCH"
+		(exclude_from_sim no)
+		(at 134.62 20.955 0)
+		(effects
+			(font
+				(size 5 5)
+				(thickness 1.2)
+				(bold yes)
+				(color 0 0 0 1)
+			)
+			(justify left)
+		)
+		(uuid "31c97156-b3d4-4019-bf6b-4740ac8cda7d")
+	)
 	(text "XT-30M"
 		(exclude_from_sim no)
 		(at 36.83 20.32 0)
@@ -6961,12 +6938,13 @@
 	)
 	(text "LOW Vf - DIODE \nLOW Rds - PMOS"
 		(exclude_from_sim no)
-		(at 207.645 33.02 0)
+		(at 137.795 36.195 0)
 		(effects
 			(font
-				(size 1.27 1.27)
+				(size 1.5 1.5)
 				(color 255 0 0 1)
 			)
+			(justify left)
 		)
 		(uuid "4e1dd636-06bc-4d21-b4fd-fcb0564d16d2")
 	)
@@ -6984,24 +6962,55 @@
 		)
 		(uuid "4f95246c-ccc6-4a2b-be71-faf3397f47e8")
 	)
-	(text "500SSP1S1M2REA - goldplated 5A\n500SSP1S1M2QEA - silverplated 2A, 5A"
+	(text "Power switching between \n5V VBUS - USB and \n5V Buck coverter - BATT"
 		(exclude_from_sim no)
-		(at 192.405 82.55 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-				(color 255 0 0 1)
-			)
-		)
-		(uuid "82d8367f-dced-4990-b367-8c7b7071dbf9")
-	)
-	(text "Main switch is at the top of the robot \nfor ease of access"
-		(exclude_from_sim no)
-		(at 137.16 83.185 0)
+		(at 137.795 32.385 0)
 		(effects
 			(font
 				(face "Bahnschrift")
-				(size 1.27 1.27)
+				(size 1.5 1.5)
+				(italic yes)
+				(color 0 0 0 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "587473a9-96c5-45a9-b506-c7de572a199c")
+	)
+	(text "MAIN SWITCH"
+		(exclude_from_sim no)
+		(at 134.62 74.93 0)
+		(effects
+			(font
+				(size 5 5)
+				(thickness 1.2)
+				(bold yes)
+				(color 0 0 0 1)
+			)
+			(justify left)
+		)
+		(uuid "5896813e-56c9-4028-9981-d11bd06d7f5f")
+	)
+	(text "500SSP1S1M2REA - goldplated 5A\n500SSP1S1M2QEA - silverplated 2A, 5A"
+		(exclude_from_sim no)
+		(at 137.795 89.535 0)
+		(effects
+			(font
+				(size 1.5 1.5)
+				(color 255 0 0 1)
+			)
+			(justify left)
+		)
+		(uuid "82d8367f-dced-4990-b367-8c7b7071dbf9")
+	)
+	(text "Main PCB slide switch\nGoldplated 5A\nSilverplated 2A, 5A"
+		(exclude_from_sim no)
+		(at 137.795 86.36 0)
+		(effects
+			(font
+				(face "Bahnschrift")
+				(size 1.5 1.5)
+				(italic yes)
+				(color 0 0 0 1)
 			)
 			(justify left bottom)
 		)
@@ -7018,19 +7027,68 @@
 		)
 		(uuid "8c328acf-0397-4c7b-a932-10bc2d5a3f7c")
 	)
+	(text "STEPDOWN CONVERTER"
+		(exclude_from_sim no)
+		(at 36.83 128.27 0)
+		(effects
+			(font
+				(size 5 5)
+				(thickness 1.2)
+				(bold yes)
+				(color 0 0 0 1)
+			)
+			(justify left)
+		)
+		(uuid "a15ad8a3-768e-4441-bbc7-c546e3343ef4")
+	)
+	(text "TPS62133 Step down converter\nInput: 3-17V\nOutput: 5V\nCurrent output: 3A\nSwitching freq.: 2.5MHz"
+		(exclude_from_sim no)
+		(at 40.005 144.78 0)
+		(effects
+			(font
+				(size 1.5 1.5)
+				(italic yes)
+				(color 0 0 0 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "cbc480cc-463e-49ea-954b-ad4fffd21b2d")
+	)
+	(text "USE LDO OR BUCK FOR 3V3"
+		(exclude_from_sim no)
+		(at 159.385 273.685 0)
+		(effects
+			(font
+				(size 3 3)
+				(color 255 0 0 1)
+			)
+		)
+		(uuid "d7d8d20c-c7d5-4874-b205-fdfc6cd4d14a")
+	)
 	(text "XT-30 Connector\n\nBattery connection\nConnector with 2mm bullet contacts for currents up to 30 A.\nGold-plated contacts\nNon-interchangeable polarity.\n\nBattery specs:\n- 2S/3S LiPo\n- 3.7V Cell voltage (nominal voltage)\n- 4,2V Cell voltage (fully charged)\n- 400mAh (may vary)"
 		(exclude_from_sim no)
-		(at 38.735 50.165 0)
+		(at 38.735 54.61 0)
 		(effects
 			(font
 				(face "Bahnschrift")
-				(size 1.27 1.27)
+				(size 1.5 1.5)
 				(italic yes)
 				(color 0 0 0 1)
 			)
 			(justify left bottom)
 		)
 		(uuid "dc5cb428-ac82-4b7b-9bb8-d6f0dd56b18a")
+	)
+	(text "USE LDO OR BUCK FOR 3V3"
+		(exclude_from_sim no)
+		(at 76.2 116.205 0)
+		(effects
+			(font
+				(size 3 3)
+				(color 255 0 0 1)
+			)
+		)
+		(uuid "e2159fc6-a222-41d8-ad65-242b572c252f")
 	)
 	(text "LM1084IS-3.3/NOPB\nLDO Voltage Regulator 3.3V/5A\nTO-263-3\nTab is output\nMax dropout voltage: 1.5V"
 		(exclude_from_sim no)
@@ -7129,8 +7187,32 @@
 		)
 	)
 	(global_label "VBATT"
+		(shape input)
+		(at 168.91 99.06 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(face "Bahnschrift")
+				(size 1 1)
+				(color 0 0 0 1)
+			)
+			(justify right)
+		)
+		(uuid "a63080e4-f852-4445-8e04-19ca355538aa")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 162.694 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "VBATT"
 		(shape output)
-		(at 113.03 43.18 0)
+		(at 110.49 48.26 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -7142,7 +7224,7 @@
 		)
 		(uuid "b4a52d8f-ce64-4219-bcce-0d2ccadc84a2")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 119.246 43.18 0)
+			(at 116.706 48.26 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7196,30 +7278,6 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "VBATT"
-		(shape input)
-		(at 172.72 99.06 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(face "Bahnschrift")
-				(size 1 1)
-				(color 0 0 0 1)
-			)
-			(justify right)
-		)
-		(uuid "efc05396-b0a5-476f-885a-5a5af5717b36")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 166.1941 99.06 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
 				(hide yes)
 			)
 		)
@@ -8388,7 +8446,7 @@
 	)
 	(symbol
 		(lib_id "sumec_sch_lib:XT30PW-M")
-		(at 100.33 43.18 0)
+		(at 97.79 48.26 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -8396,7 +8454,7 @@
 		(dnp no)
 		(uuid "7acfab56-49c4-4bfe-9232-9b2208e8bce5")
 		(property "Reference" "J1"
-			(at 96.52 35.56 0)
+			(at 93.98 40.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8404,7 +8462,7 @@
 			)
 		)
 		(property "Value" "XT30PW-M"
-			(at 96.52 38.1 0)
+			(at 93.98 43.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8412,7 +8470,7 @@
 			)
 		)
 		(property "Footprint" "XT30PW-M:AMASS_XT30PW-M"
-			(at 100.33 43.18 0)
+			(at 97.79 48.26 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8422,7 +8480,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 100.33 43.18 0)
+			(at 97.79 48.26 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8431,7 +8489,7 @@
 			)
 		)
 		(property "Description" "\nSocket; DC supply; XT30; male; PIN: 2; on PCBs; THT; Colour: yellow\n"
-			(at 100.33 43.18 0)
+			(at 97.79 48.26 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8441,7 +8499,7 @@
 			)
 		)
 		(property "MF" "AMASS"
-			(at 100.076 41.656 0)
+			(at 97.536 46.736 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8451,7 +8509,7 @@
 			)
 		)
 		(property "MAXIMUM_PACKAGE_HEIGHT" "5 mm"
-			(at 100.33 43.18 0)
+			(at 97.79 48.26 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8461,7 +8519,7 @@
 			)
 		)
 		(property "Package" "None"
-			(at 100.33 43.18 0)
+			(at 97.79 48.26 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8471,7 +8529,7 @@
 			)
 		)
 		(property "Price" "None"
-			(at 100.33 43.18 0)
+			(at 97.79 48.26 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8481,7 +8539,7 @@
 			)
 		)
 		(property "Check_prices" "https://www.snapeda.com/parts/XT30PW-M/AMASS/view-part/?ref=eda"
-			(at 100.33 43.18 0)
+			(at 97.79 48.26 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8491,7 +8549,7 @@
 			)
 		)
 		(property "STANDARD" "Manufacturer Recommendations"
-			(at 100.33 43.18 0)
+			(at 97.79 48.26 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8501,7 +8559,7 @@
 			)
 		)
 		(property "PARTREV" "1.2"
-			(at 100.33 43.18 0)
+			(at 97.79 48.26 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8511,7 +8569,7 @@
 			)
 		)
 		(property "SnapEDA_Link" "https://www.snapeda.com/parts/XT30PW-M/AMASS/view-part/?ref=snap"
-			(at 100.076 41.656 0)
+			(at 97.536 46.736 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8521,7 +8579,7 @@
 			)
 		)
 		(property "MP" "XT30PW-M"
-			(at 100.33 43.18 0)
+			(at 97.79 48.26 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8531,7 +8589,7 @@
 			)
 		)
 		(property "MANUFACTURER" "Amass"
-			(at 99.822 41.656 0)
+			(at 97.282 46.736 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8541,7 +8599,7 @@
 			)
 		)
 		(property "Availability" "Not in stock"
-			(at 100.33 43.18 0)
+			(at 97.79 48.26 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8551,7 +8609,7 @@
 			)
 		)
 		(property "SNAPEDA_PN" "XT30PW-M"
-			(at 100.33 43.18 0)
+			(at 97.79 48.26 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9351,7 +9409,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 113.03 45.72 0)
+		(at 110.49 50.8 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -9360,7 +9418,7 @@
 		(fields_autoplaced yes)
 		(uuid "a4b72893-3eba-483d-b61a-3f6f5148c653")
 		(property "Reference" "#PWR02"
-			(at 113.03 52.07 0)
+			(at 110.49 57.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9369,7 +9427,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 113.03 50.8 0)
+			(at 110.49 55.88 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9377,7 +9435,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 113.03 45.72 0)
+			(at 110.49 50.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9386,7 +9444,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 113.03 45.72 0)
+			(at 110.49 50.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9395,7 +9453,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 113.03 45.72 0)
+			(at 110.49 50.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9926,7 +9984,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "d1544b40-0ca6-4b4e-864b-12540c331e6f")
-		(property "Reference" "C?"
+		(property "Reference" "C13"
 			(at 113.665 96.52 0)
 			(effects
 				(font
@@ -9984,7 +10042,7 @@
 		(instances
 			(project "SUMEC_MK_IV"
 				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/db21c0bc-8410-4aca-be63-6c1a31675c37"
-					(reference "C?")
+					(reference "C13")
 					(unit 1)
 				)
 			)
