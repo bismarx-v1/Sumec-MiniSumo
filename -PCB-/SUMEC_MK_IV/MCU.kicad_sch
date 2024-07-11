@@ -2724,7 +2724,7 @@
 		(uuid "0b4f0128-9003-4ef3-acc8-8da3e45fc740")
 	)
 	(no_connect
-		(at 120.65 114.3)
+		(at 121.92 114.3)
 		(uuid "3610ffcf-c071-429b-9765-3e128a712734")
 	)
 	(no_connect
@@ -2748,7 +2748,7 @@
 		(uuid "8b677a0b-65f0-49cd-906d-79fea334d4c6")
 	)
 	(no_connect
-		(at 120.65 111.76)
+		(at 121.92 111.76)
 		(uuid "8c34ef08-5a10-4966-93b7-6ffed89d636b")
 	)
 	(no_connect
@@ -2790,6 +2790,10 @@
 	(no_connect
 		(at -74.93 83.82)
 		(uuid "ebd0eef7-a6a8-49e1-b633-9b988716cc42")
+	)
+	(no_connect
+		(at 86.36 86.36)
+		(uuid "ec0f917a-b99d-4986-8d25-3cda2dee2acc")
 	)
 	(no_connect
 		(at -74.93 81.28)
@@ -2907,6 +2911,16 @@
 	)
 	(wire
 		(pts
+			(xy 86.36 86.36) (xy 88.9 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "25883146-afdd-403f-a1f9-5bc701e96bac")
+	)
+	(wire
+		(pts
 			(xy 19.05 101.6) (xy 22.86 101.6)
 		)
 		(stroke
@@ -3017,13 +3031,13 @@
 	)
 	(wire
 		(pts
-			(xy 119.38 114.3) (xy 120.65 114.3)
+			(xy 119.38 114.3) (xy 121.92 114.3)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "4cc39663-9bcd-4f83-993c-fae91348710c")
+		(uuid "48b83f87-9b69-4f37-8fc9-abeb4b869589")
 	)
 	(wire
 		(pts
@@ -3144,16 +3158,6 @@
 			(type default)
 		)
 		(uuid "8c486c13-e087-4df0-a8fa-26b4a33d19e1")
-	)
-	(wire
-		(pts
-			(xy 119.38 111.76) (xy 120.65 111.76)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8cd0feed-a423-4db6-b131-3ed283c896f5")
 	)
 	(wire
 		(pts
@@ -3284,6 +3288,16 @@
 			(type default)
 		)
 		(uuid "be5696c8-bac3-4d7a-9212-e55af401ee98")
+	)
+	(wire
+		(pts
+			(xy 119.38 111.76) (xy 121.92 111.76)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c19a17d1-7f20-4596-8b65-e69c279a56d8")
 	)
 	(wire
 		(pts
@@ -3594,7 +3608,7 @@
 	)
 	(text_box "SP"
 		(exclude_from_sim no)
-		(at 123.19 110.49 90)
+		(at 124.46 110.49 90)
 		(size 3.81 5.08)
 		(stroke
 			(width 0)
@@ -3648,6 +3662,25 @@
 			)
 		)
 		(uuid "693a040b-5d1e-42ae-8994-fddf6feefab1")
+	)
+	(text_box "SP"
+		(exclude_from_sim no)
+		(at 81.28 85.09 90)
+		(size 3.81 2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(effects
+			(font
+				(face "Bahnschrift")
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "f2d230b5-f00a-4c40-b707-8a6bd6c67be4")
 	)
 	(text_box "USB"
 		(exclude_from_sim no)
@@ -3770,7 +3803,7 @@
 	)
 	(text "SPI voltage"
 		(exclude_from_sim no)
-		(at 128.27 111.76 0)
+		(at 128.905 111.76 0)
 		(effects
 			(font
 				(face "Bahnschrift")
@@ -3791,6 +3824,18 @@
 			(justify left bottom)
 		)
 		(uuid "8fcf5002-a94d-478e-8bfb-a1fcf697335a")
+	)
+	(text "JTAG mode"
+		(exclude_from_sim no)
+		(at 80.645 87.63 0)
+		(effects
+			(font
+				(face "Bahnschrift")
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "9ff5a77c-e5eb-4293-ba21-161a70d55a2c")
 	)
 	(text "ESP32-S3 Datasheet"
 		(exclude_from_sim no)
@@ -3845,7 +3890,7 @@
 	)
 	(text "BOOT mode"
 		(exclude_from_sim no)
-		(at 128.27 114.3 0)
+		(at 128.905 114.3 0)
 		(effects
 			(font
 				(face "Bahnschrift")
