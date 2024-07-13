@@ -1218,16 +1218,6 @@
 		(color 0 0 0 0)
 		(uuid "d4fc8a22-6d10-4c4d-ac14-1e53df2699ae")
 	)
-	(polyline
-		(pts
-			(xy 156.845 71.12) (xy 156.845 83.82)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "05d979f6-eb6b-46f1-ad10-e75663435f73")
-	)
 	(wire
 		(pts
 			(xy 144.78 50.8) (xy 149.86 50.8)
@@ -1457,16 +1447,6 @@
 			(type default)
 		)
 		(uuid "8faa7882-8246-418a-a4cf-8ee39bcec5eb")
-	)
-	(polyline
-		(pts
-			(xy 137.795 129.54) (xy 137.795 142.24)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9257dce5-1ce6-4f8f-b8d7-02dc7c7e0835")
 	)
 	(wire
 		(pts
