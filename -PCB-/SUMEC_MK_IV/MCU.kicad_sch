@@ -2690,19 +2690,19 @@
 		(uuid "03235198-1e14-494f-b3b9-e8d69eac87d8")
 	)
 	(junction
-		(at 104.14 64.77)
+		(at 114.3 67.31)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "5c05d70d-0631-422d-b05b-b07456a460b9")
 	)
 	(junction
-		(at 119.38 64.77)
+		(at 129.54 67.31)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "7190d4f3-d47a-4fc3-94d3-0bb174666ac4")
 	)
 	(junction
-		(at 104.14 55.88)
+		(at 114.3 58.42)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "af79c1e9-88a1-46cc-ad9e-5269ac67cfde")
@@ -2724,7 +2724,7 @@
 		(uuid "0b4f0128-9003-4ef3-acc8-8da3e45fc740")
 	)
 	(no_connect
-		(at 121.92 114.3)
+		(at 132.08 116.84)
 		(uuid "3610ffcf-c071-429b-9765-3e128a712734")
 	)
 	(no_connect
@@ -2748,7 +2748,7 @@
 		(uuid "8b677a0b-65f0-49cd-906d-79fea334d4c6")
 	)
 	(no_connect
-		(at 121.92 111.76)
+		(at 132.08 114.3)
 		(uuid "8c34ef08-5a10-4966-93b7-6ffed89d636b")
 	)
 	(no_connect
@@ -2792,7 +2792,7 @@
 		(uuid "ebd0eef7-a6a8-49e1-b633-9b988716cc42")
 	)
 	(no_connect
-		(at 86.36 86.36)
+		(at 96.52 88.9)
 		(uuid "ec0f917a-b99d-4986-8d25-3cda2dee2acc")
 	)
 	(no_connect
@@ -2821,7 +2821,7 @@
 	)
 	(wire
 		(pts
-			(xy 119.38 66.04) (xy 119.38 64.77)
+			(xy 129.54 68.58) (xy 129.54 67.31)
 		)
 		(stroke
 			(width 0)
@@ -2891,7 +2891,7 @@
 	)
 	(wire
 		(pts
-			(xy 104.14 52.07) (xy 104.14 55.88)
+			(xy 114.3 54.61) (xy 114.3 58.42)
 		)
 		(stroke
 			(width 0)
@@ -2911,7 +2911,7 @@
 	)
 	(wire
 		(pts
-			(xy 86.36 86.36) (xy 88.9 86.36)
+			(xy 96.52 88.9) (xy 99.06 88.9)
 		)
 		(stroke
 			(width 0)
@@ -3031,7 +3031,7 @@
 	)
 	(wire
 		(pts
-			(xy 119.38 114.3) (xy 121.92 114.3)
+			(xy 129.54 116.84) (xy 132.08 116.84)
 		)
 		(stroke
 			(width 0)
@@ -3091,7 +3091,7 @@
 	)
 	(wire
 		(pts
-			(xy 104.14 55.88) (xy 106.68 55.88)
+			(xy 114.3 58.42) (xy 116.84 58.42)
 		)
 		(stroke
 			(width 0)
@@ -3161,7 +3161,7 @@
 	)
 	(wire
 		(pts
-			(xy 120.65 83.82) (xy 119.38 83.82)
+			(xy 130.81 86.36) (xy 129.54 86.36)
 		)
 		(stroke
 			(width 0)
@@ -3291,7 +3291,7 @@
 	)
 	(wire
 		(pts
-			(xy 119.38 111.76) (xy 121.92 111.76)
+			(xy 129.54 114.3) (xy 132.08 114.3)
 		)
 		(stroke
 			(width 0)
@@ -3351,7 +3351,7 @@
 	)
 	(wire
 		(pts
-			(xy 104.14 55.88) (xy 104.14 64.77)
+			(xy 114.3 58.42) (xy 114.3 67.31)
 		)
 		(stroke
 			(width 0)
@@ -3361,7 +3361,7 @@
 	)
 	(wire
 		(pts
-			(xy 120.65 86.36) (xy 119.38 86.36)
+			(xy 130.81 88.9) (xy 129.54 88.9)
 		)
 		(stroke
 			(width 0)
@@ -3401,7 +3401,7 @@
 	)
 	(wire
 		(pts
-			(xy 106.68 64.77) (xy 104.14 64.77)
+			(xy 116.84 67.31) (xy 114.3 67.31)
 		)
 		(stroke
 			(width 0)
@@ -3421,7 +3421,7 @@
 	)
 	(wire
 		(pts
-			(xy 114.3 64.77) (xy 119.38 64.77)
+			(xy 124.46 67.31) (xy 129.54 67.31)
 		)
 		(stroke
 			(width 0)
@@ -3451,7 +3451,7 @@
 	)
 	(wire
 		(pts
-			(xy 119.38 55.88) (xy 119.38 64.77)
+			(xy 129.54 58.42) (xy 129.54 67.31)
 		)
 		(stroke
 			(width 0)
@@ -3481,7 +3481,7 @@
 	)
 	(wire
 		(pts
-			(xy 104.14 64.77) (xy 104.14 68.58)
+			(xy 114.3 67.31) (xy 114.3 71.12)
 		)
 		(stroke
 			(width 0)
@@ -3511,7 +3511,7 @@
 	)
 	(wire
 		(pts
-			(xy 114.3 55.88) (xy 119.38 55.88)
+			(xy 124.46 58.42) (xy 129.54 58.42)
 		)
 		(stroke
 			(width 0)
@@ -3589,7 +3589,7 @@
 	)
 	(text_box "USB"
 		(exclude_from_sim no)
-		(at 127 82.55 90)
+		(at 137.16 85.09 90)
 		(size 3.81 5.08)
 		(stroke
 			(width 0)
@@ -3608,7 +3608,7 @@
 	)
 	(text_box "SP"
 		(exclude_from_sim no)
-		(at 124.46 110.49 90)
+		(at 134.62 113.03 90)
 		(size 3.81 5.08)
 		(stroke
 			(width 0)
@@ -3665,7 +3665,7 @@
 	)
 	(text_box "SP"
 		(exclude_from_sim no)
-		(at 81.28 85.09 90)
+		(at 91.44 87.63 90)
 		(size 3.81 2.54)
 		(stroke
 			(width 0)
@@ -3739,7 +3739,7 @@
 	)
 	(text "working voltage for pins 47 and 48 is 1.8 (test it)"
 		(exclude_from_sim no)
-		(at 124.46 35.56 0)
+		(at 134.62 38.1 0)
 		(effects
 			(font
 				(size 2 2)
@@ -3803,7 +3803,7 @@
 	)
 	(text "SPI voltage"
 		(exclude_from_sim no)
-		(at 128.905 111.76 0)
+		(at 139.065 114.3 0)
 		(effects
 			(font
 				(face "Bahnschrift")
@@ -3827,7 +3827,7 @@
 	)
 	(text "JTAG mode"
 		(exclude_from_sim no)
-		(at 80.645 87.63 0)
+		(at 90.805 90.17 0)
 		(effects
 			(font
 				(face "Bahnschrift")
@@ -3890,7 +3890,7 @@
 	)
 	(text "BOOT mode"
 		(exclude_from_sim no)
-		(at 128.905 114.3 0)
+		(at 139.065 116.84 0)
 		(effects
 			(font
 				(face "Bahnschrift")
@@ -3964,7 +3964,7 @@
 	)
 	(global_label "D-"
 		(shape input)
-		(at 120.65 83.82 0)
+		(at 130.81 86.36 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -3976,7 +3976,7 @@
 		)
 		(uuid "098d07b5-a179-456d-9e97-a845e9c2971e")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 125.176 83.82 0)
+			(at 135.336 86.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4108,7 +4108,7 @@
 	)
 	(global_label "OUT 2B"
 		(shape input)
-		(at 218.44 48.26 180)
+		(at 154.94 95.25 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4120,7 +4120,7 @@
 		)
 		(uuid "2b87f230-a8f3-42c2-84b5-3657f15c2e14")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 211.7951 48.26 0)
+			(at 148.2951 95.25 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4132,7 +4132,7 @@
 	)
 	(global_label "OUT 2A"
 		(shape input)
-		(at 218.44 45.72 180)
+		(at 154.94 92.71 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4144,7 +4144,7 @@
 		)
 		(uuid "2ea22f28-b947-4212-8370-679f1e193033")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 211.7932 45.72 0)
+			(at 148.2932 92.71 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4300,7 +4300,7 @@
 	)
 	(global_label "D+"
 		(shape input)
-		(at 120.65 86.36 0)
+		(at 130.81 88.9 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4312,7 +4312,7 @@
 		)
 		(uuid "7b03fa4f-379b-4118-9ea4-650e4f808dd7")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 125.176 86.36 0)
+			(at 135.336 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4781,7 +4781,7 @@
 	)
 	(symbol
 		(lib_id "RF_Module:ESP32-S3-WROOM-1")
-		(at 104.14 96.52 0)
+		(at 114.3 99.06 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -4789,7 +4789,7 @@
 		(dnp no)
 		(uuid "15e87c40-fbb6-4d51-bf41-e1956d686c3b")
 		(property "Reference" "U3"
-			(at 81.28 123.19 0)
+			(at 91.44 125.73 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4798,7 +4798,7 @@
 			)
 		)
 		(property "Value" "ESP32-S3-WROOM-1"
-			(at 81.28 125.73 0)
+			(at 91.44 128.27 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4807,7 +4807,7 @@
 			)
 		)
 		(property "Footprint" "RF_Module:ESP32-S3-WROOM-1"
-			(at 104.14 93.98 0)
+			(at 114.3 96.52 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4816,7 +4816,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.espressif.com/sites/default/files/documentation/esp32-s3-wroom-1_wroom-1u_datasheet_en.pdf"
-			(at 104.14 96.52 0)
+			(at 114.3 99.06 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4825,7 +4825,7 @@
 			)
 		)
 		(property "Description" "RF Module, ESP32-S3 SoC, Wi-Fi 802.11b/g/n, Bluetooth, BLE, 32-bit, 3.3V, onboard antenna, SMD"
-			(at 104.14 96.52 0)
+			(at 114.3 99.06 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5471,7 +5471,7 @@
 	)
 	(symbol
 		(lib_id "Device:C_Polarized")
-		(at 110.49 55.88 90)
+		(at 120.65 58.42 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -5479,7 +5479,7 @@
 		(dnp no)
 		(uuid "bc5fe2df-b640-40b8-8f11-9687fa31378b")
 		(property "Reference" "C5"
-			(at 107.95 59.69 90)
+			(at 118.11 62.23 90)
 			(effects
 				(font
 					(face "Bahnschrift")
@@ -5489,7 +5489,7 @@
 			)
 		)
 		(property "Value" "10uF.mcu"
-			(at 116.84 59.69 90)
+			(at 127 62.23 90)
 			(effects
 				(font
 					(face "Bahnschrift")
@@ -5499,7 +5499,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_Tantalum_SMD:CP_EIA-3216-18_Kemet-A_Pad1.58x1.35mm_HandSolder"
-			(at 114.3 54.9148 0)
+			(at 124.46 57.4548 0)
 			(effects
 				(font
 					(face "Bahnschrift")
@@ -5509,7 +5509,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 110.49 55.88 0)
+			(at 120.65 58.42 0)
 			(effects
 				(font
 					(face "Bahnschrift")
@@ -5519,7 +5519,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 110.49 55.88 0)
+			(at 120.65 58.42 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5614,7 +5614,7 @@
 	)
 	(symbol
 		(lib_id "power:+3V3")
-		(at 104.14 52.07 0)
+		(at 114.3 54.61 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -5622,7 +5622,7 @@
 		(dnp no)
 		(uuid "c0153f86-d67f-439c-b1db-79697b339b98")
 		(property "Reference" "#PWR042"
-			(at 104.14 55.88 0)
+			(at 114.3 58.42 0)
 			(effects
 				(font
 					(face "Bahnschrift")
@@ -5632,7 +5632,7 @@
 			)
 		)
 		(property "Value" "+3V3"
-			(at 104.14 48.26 90)
+			(at 114.3 50.8 90)
 			(effects
 				(font
 					(face "Bahnschrift")
@@ -5642,7 +5642,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 104.14 52.07 0)
+			(at 114.3 54.61 0)
 			(effects
 				(font
 					(face "Bahnschrift")
@@ -5652,7 +5652,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 104.14 52.07 0)
+			(at 114.3 54.61 0)
 			(effects
 				(font
 					(face "Bahnschrift")
@@ -5662,7 +5662,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 104.14 52.07 0)
+			(at 114.3 54.61 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6090,7 +6090,7 @@
 	(symbol
 		(lib_name "GND_1")
 		(lib_id "power:GND")
-		(at 119.38 66.04 0)
+		(at 129.54 68.58 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -6099,7 +6099,7 @@
 		(fields_autoplaced yes)
 		(uuid "f943a7e0-ba41-45fb-bbe5-bac5ca3e6e2a")
 		(property "Reference" "#PWR09"
-			(at 119.38 72.39 0)
+			(at 129.54 74.93 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6108,7 +6108,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 119.38 71.12 0)
+			(at 129.54 73.66 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6117,7 +6117,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 119.38 66.04 0)
+			(at 129.54 68.58 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6126,7 +6126,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 119.38 66.04 0)
+			(at 129.54 68.58 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6135,7 +6135,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 119.38 66.04 0)
+			(at 129.54 68.58 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6157,7 +6157,7 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 110.49 64.77 90)
+		(at 120.65 67.31 90)
 		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
@@ -6166,7 +6166,7 @@
 		(dnp no)
 		(uuid "fc17dff5-58a8-4781-b883-045d928cbbcb")
 		(property "Reference" "C6"
-			(at 107.95 68.58 90)
+			(at 118.11 71.12 90)
 			(effects
 				(font
 					(face "Bahnschrift")
@@ -6176,7 +6176,7 @@
 			)
 		)
 		(property "Value" "100nF.mcu"
-			(at 116.84 68.58 90)
+			(at 127 71.12 90)
 			(effects
 				(font
 					(face "Bahnschrift")
@@ -6186,7 +6186,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
-			(at 114.3 65.7352 0)
+			(at 124.46 68.2752 0)
 			(effects
 				(font
 					(face "Bahnschrift")
@@ -6196,7 +6196,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 110.49 64.77 0)
+			(at 120.65 67.31 0)
 			(effects
 				(font
 					(face "Bahnschrift")
@@ -6206,7 +6206,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 110.49 64.77 0)
+			(at 120.65 67.31 0)
 			(effects
 				(font
 					(size 1.27 1.27)
