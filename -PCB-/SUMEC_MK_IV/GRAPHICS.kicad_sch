@@ -6,9 +6,13 @@
 	(paper "A4")
 	(title_block
 		(title "SUMEC_MK_IV")
-		(date "2024-07-01")
+		(date "2024-07-15")
+		(rev "v3.0.0")
 		(company "SPS NA PROSEKU")
-		(comment 1 "SAVVA POPOV")
+		(comment 1 "Made in Prague, Czech Republic")
+		(comment 2 "CONTACT: Savva Popov, menmenson09@gmail.com, +420 605 570 366")
+		(comment 3 "Made by Bismarx aka MenMenson")
+		(comment 4 "SUMEC MK IV aka SMD-V3 board")
 	)
 	(lib_symbols
 		(symbol "Device:R"
@@ -134,40 +138,40 @@
 		)
 	)
 	(no_connect
-		(at 148.59 87.63)
+		(at 156.21 102.87)
 		(uuid "23941296-0443-4323-9719-4fb68f93306e")
 	)
 	(no_connect
-		(at 148.59 74.93)
+		(at 156.21 90.17)
 		(uuid "4e589d23-396d-4fb0-b952-40c318c2578d")
 	)
 	(no_connect
-		(at 130.81 74.93)
+		(at 138.43 90.17)
 		(uuid "797f13dc-f350-4752-a461-fb4d990fdfef")
 	)
 	(no_connect
-		(at 148.59 81.28)
+		(at 156.21 96.52)
 		(uuid "81fd70b9-a761-4a98-ab10-f5338ebbdac0")
 	)
 	(no_connect
-		(at 148.59 93.98)
+		(at 156.21 109.22)
 		(uuid "8bd27ab6-e3f0-4acf-ae7d-7a8eb82a1a08")
 	)
 	(no_connect
-		(at 130.81 81.28)
+		(at 138.43 96.52)
 		(uuid "90e0def8-00e2-4bd5-a190-41aad897a9bf")
 	)
 	(no_connect
-		(at 130.81 87.63)
+		(at 138.43 102.87)
 		(uuid "99913c29-06c5-4bcc-aff2-e36fcb5658cf")
 	)
 	(no_connect
-		(at 130.81 93.98)
+		(at 138.43 109.22)
 		(uuid "e7be4802-4381-486e-8451-bba5b592e168")
 	)
 	(wire
 		(pts
-			(xy 130.81 87.63) (xy 135.89 87.63)
+			(xy 138.43 102.87) (xy 143.51 102.87)
 		)
 		(stroke
 			(width 0)
@@ -177,7 +181,7 @@
 	)
 	(wire
 		(pts
-			(xy 148.59 74.93) (xy 143.51 74.93)
+			(xy 156.21 90.17) (xy 151.13 90.17)
 		)
 		(stroke
 			(width 0)
@@ -187,7 +191,7 @@
 	)
 	(wire
 		(pts
-			(xy 148.59 87.63) (xy 143.51 87.63)
+			(xy 156.21 102.87) (xy 151.13 102.87)
 		)
 		(stroke
 			(width 0)
@@ -197,7 +201,7 @@
 	)
 	(wire
 		(pts
-			(xy 148.59 81.28) (xy 143.51 81.28)
+			(xy 156.21 96.52) (xy 151.13 96.52)
 		)
 		(stroke
 			(width 0)
@@ -207,7 +211,7 @@
 	)
 	(wire
 		(pts
-			(xy 148.59 93.98) (xy 143.51 93.98)
+			(xy 156.21 109.22) (xy 151.13 109.22)
 		)
 		(stroke
 			(width 0)
@@ -217,7 +221,7 @@
 	)
 	(wire
 		(pts
-			(xy 130.81 81.28) (xy 135.89 81.28)
+			(xy 138.43 96.52) (xy 143.51 96.52)
 		)
 		(stroke
 			(width 0)
@@ -227,7 +231,7 @@
 	)
 	(wire
 		(pts
-			(xy 130.81 74.93) (xy 135.89 74.93)
+			(xy 138.43 90.17) (xy 143.51 90.17)
 		)
 		(stroke
 			(width 0)
@@ -237,7 +241,7 @@
 	)
 	(wire
 		(pts
-			(xy 130.81 93.98) (xy 135.89 93.98)
+			(xy 138.43 109.22) (xy 143.51 109.22)
 		)
 		(stroke
 			(width 0)
@@ -246,8 +250,8 @@
 		(uuid "fe2c19a3-6f80-4b91-b84c-e538ada63da2")
 	)
 	(rectangle
-		(start 87.63 61.595)
-		(end 195.58 107.315)
+		(start 95.25 76.835)
+		(end 203.2 122.555)
 		(stroke
 			(width 0)
 			(type dash)
@@ -260,7 +264,7 @@
 	)
 	(text "ART"
 		(exclude_from_sim no)
-		(at 87.63 61.595 0)
+		(at 95.25 76.835 0)
 		(effects
 			(font
 				(face "Bahnschrift")
@@ -274,7 +278,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 139.7 74.93 90)
+		(at 147.32 90.17 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -282,8 +286,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "3497e8cc-b8aa-4ff1-b675-96520df83219")
-		(property "Reference" "R16"
-			(at 139.7 68.58 90)
+		(property "Reference" "R27"
+			(at 147.32 83.82 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -292,7 +296,7 @@
 			)
 		)
 		(property "Value" "R"
-			(at 139.7 71.12 90)
+			(at 147.32 86.36 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -301,7 +305,7 @@
 			)
 		)
 		(property "Footprint" "sumec-remote_library:purosidenegative"
-			(at 139.7 76.708 90)
+			(at 147.32 91.948 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -310,7 +314,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 139.7 74.93 0)
+			(at 147.32 90.17 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -319,7 +323,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 139.7 74.93 0)
+			(at 147.32 90.17 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -336,7 +340,7 @@
 		(instances
 			(project "SUMEC_MK_IV"
 				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/ebfdffb9-be38-48cc-bdc4-81d227bad184"
-					(reference "R16")
+					(reference "R27")
 					(unit 1)
 				)
 			)
@@ -344,7 +348,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 139.7 81.28 90)
+		(at 147.32 96.52 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -352,8 +356,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "544cdab8-185d-46f5-9b15-68257f9f7bfb")
-		(property "Reference" "R17"
-			(at 139.7 74.93 90)
+		(property "Reference" "R28"
+			(at 147.32 90.17 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -362,7 +366,7 @@
 			)
 		)
 		(property "Value" "R"
-			(at 139.7 77.47 90)
+			(at 147.32 92.71 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -371,7 +375,7 @@
 			)
 		)
 		(property "Footprint" "sumec-smdV2_library:SPS LOGO"
-			(at 139.7 83.058 90)
+			(at 147.32 98.298 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -380,7 +384,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 139.7 81.28 0)
+			(at 147.32 96.52 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -389,7 +393,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 139.7 81.28 0)
+			(at 147.32 96.52 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -406,7 +410,7 @@
 		(instances
 			(project "SUMEC_MK_IV"
 				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/ebfdffb9-be38-48cc-bdc4-81d227bad184"
-					(reference "R17")
+					(reference "R28")
 					(unit 1)
 				)
 			)
@@ -414,7 +418,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 139.7 87.63 90)
+		(at 147.32 102.87 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -422,8 +426,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "6a4b419a-2361-49ae-bfc4-b02ba7d7103a")
-		(property "Reference" "R18"
-			(at 139.7 81.28 90)
+		(property "Reference" "R29"
+			(at 147.32 96.52 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -432,7 +436,7 @@
 			)
 		)
 		(property "Value" "R"
-			(at 139.7 83.82 90)
+			(at 147.32 99.06 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -441,7 +445,7 @@
 			)
 		)
 		(property "Footprint" "sumec-remote_library:boi"
-			(at 139.7 89.408 90)
+			(at 147.32 104.648 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -450,7 +454,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 139.7 87.63 0)
+			(at 147.32 102.87 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -459,7 +463,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 139.7 87.63 0)
+			(at 147.32 102.87 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -476,7 +480,7 @@
 		(instances
 			(project "SUMEC_MK_IV"
 				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/ebfdffb9-be38-48cc-bdc4-81d227bad184"
-					(reference "R18")
+					(reference "R29")
 					(unit 1)
 				)
 			)
@@ -484,7 +488,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 139.7 93.98 90)
+		(at 147.32 109.22 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -492,8 +496,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e042a586-09e7-42d8-83cd-acdeda654e72")
-		(property "Reference" "R19"
-			(at 139.7 87.63 90)
+		(property "Reference" "R30"
+			(at 147.32 102.87 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -502,7 +506,7 @@
 			)
 		)
 		(property "Value" "R"
-			(at 139.7 90.17 90)
+			(at 147.32 105.41 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -511,7 +515,7 @@
 			)
 		)
 		(property "Footprint" "sumec-smdV2_library:Logo"
-			(at 139.7 95.758 90)
+			(at 147.32 110.998 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -520,7 +524,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 139.7 93.98 0)
+			(at 147.32 109.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -529,7 +533,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 139.7 93.98 0)
+			(at 147.32 109.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -546,7 +550,7 @@
 		(instances
 			(project "SUMEC_MK_IV"
 				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/ebfdffb9-be38-48cc-bdc4-81d227bad184"
-					(reference "R19")
+					(reference "R30")
 					(unit 1)
 				)
 			)

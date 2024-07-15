@@ -6,9 +6,13 @@
 	(paper "A4")
 	(title_block
 		(title "SUMEC_MK_IV")
-		(date "2024-07-01")
+		(date "2024-07-15")
+		(rev "v3.0.0")
 		(company "SPS NA PROSEKU")
-		(comment 1 "SAVVA POPOV")
+		(comment 1 "Made in Prague, Czech Republic")
+		(comment 2 "CONTACT: Savva Popov, menmenson09@gmail.com, +420 605 570 366")
+		(comment 3 "Made by Bismarx aka MenMenson")
+		(comment 4 "SUMEC MK IV aka SMD-V3 board")
 	)
 	(lib_symbols
 		(symbol "Device:C"
@@ -2667,126 +2671,6 @@
 				)
 			)
 		)
-		(symbol "power:+BATT"
-			(power)
-			(pin_names
-				(offset 0)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "#PWR"
-				(at 0 -3.81 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Value" "+BATT"
-				(at 0 3.556 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Power symbol creates a global label with name \"+BATT\""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "power-flag battery"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "+BATT_0_1"
-				(polyline
-					(pts
-						(xy -0.762 1.27) (xy 0 2.54)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 0) (xy 0 2.54)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 2.54) (xy 0.762 1.27)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "+BATT_1_1"
-				(pin power_in line
-					(at 0 0 90)
-					(length 0) hide
-					(name "+BATT"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-		)
 		(symbol "power:GND"
 			(power)
 			(pin_numbers hide)
@@ -4753,7 +4637,7 @@
 		(uuid cb55555d-8887-466e-9970-e0909ca3a2e1)
 	)
 	(image
-		(at -95.25 160.02)
+		(at 142.875 301.625)
 		(scale 0.413747)
 		(uuid "14fb2ab7-edf0-4bd1-83b1-6b22450e73fb")
 		(data "iVBORw0KGgoAAAANSUhEUgAABd0AAAIvCAYAAACBVnJjAAAAAXNSR0IArs4c6QAAAARnQU1BAACx"
@@ -5983,7 +5867,7 @@
 		)
 	)
 	(image
-		(at -86.995 87.63)
+		(at -86.995 163.195)
 		(uuid "5a0dae5d-21ef-4553-9a1d-67c01927b993")
 		(data "iVBORw0KGgoAAAANSUhEUgAAA4oAAAFLCAYAAACQpnLAAAAAAXNSR0IArs4c6QAAAARnQU1BAACx"
 			"jwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAALOnSURBVHhe7N0HXBTH3wbw5w4OkCJSRMBesffe"
@@ -6796,107 +6680,6 @@
 			"wWAwzGCGIoPBYDAYDAaDwWAwTAD+H1QgsfQ0/tNpAAAAAElFTkSuQmCC"
 		)
 	)
-	(image
-		(at -73.66 25.4)
-		(uuid "928ff0e1-90ca-4e3a-b6c7-33795ff36a00")
-		(data "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"
-		)
-	)
 	(text "SWITCHING SIMULATION - FALSTAD"
 		(exclude_from_sim no)
 		(at 168.275 65.405 0)
@@ -6907,6 +6690,17 @@
 			(href "https://www.youtube.com/watch?v=lVDUcCuKls0")
 		)
 		(uuid "1c5ebaa3-d371-4b98-ad8a-3646caef62b0")
+	)
+	(text "ask Ing Busek: was it 3V3 for the Bobik buck?"
+		(exclude_from_sim no)
+		(at 116.205 218.44 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(color 255 0 0 1)
+			)
+		)
+		(uuid "24656d03-98da-448f-903e-a2e32245c846")
 	)
 	(text "USB POWER SWITCH"
 		(exclude_from_sim no)
@@ -7291,7 +7085,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "077a269e-ed56-4a6b-8cf2-cbe11b0e6245")
-		(property "Reference" "#PWR024"
+		(property "Reference" "#PWR011"
 			(at 125.73 95.25 0)
 			(effects
 				(font
@@ -7346,7 +7140,7 @@
 		(instances
 			(project "SUMEC_MK_IV"
 				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/db21c0bc-8410-4aca-be63-6c1a31675c37"
-					(reference "#PWR024")
+					(reference "#PWR011")
 					(unit 1)
 				)
 			)
@@ -7361,7 +7155,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "157b84a7-c3bd-4dba-acb4-062a7f4c8ca0")
-		(property "Reference" "#PWR014"
+		(property "Reference" "#PWR08"
 			(at 116.84 187.96 0)
 			(effects
 				(font
@@ -7412,7 +7206,7 @@
 		(instances
 			(project "SUMEC_MK_IV"
 				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/db21c0bc-8410-4aca-be63-6c1a31675c37"
-					(reference "#PWR014")
+					(reference "#PWR08")
 					(unit 1)
 				)
 			)
@@ -7427,7 +7221,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "15ca73d9-a0a4-4d15-9443-7bd12c9d67df")
-		(property "Reference" "C1"
+		(property "Reference" "C5"
 			(at 104.14 142.24 90)
 			(effects
 				(font
@@ -7485,7 +7279,7 @@
 		(instances
 			(project "SUMEC_MK_IV"
 				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/db21c0bc-8410-4aca-be63-6c1a31675c37"
-					(reference "C1")
+					(reference "C5")
 					(unit 1)
 				)
 			)
@@ -7570,7 +7364,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "1aa169e2-a4a6-4928-9cfe-06ce6f2bda1e")
-		(property "Reference" "#PWR020"
+		(property "Reference" "#PWR09"
 			(at 120.65 278.13 0)
 			(effects
 				(font
@@ -7620,7 +7414,7 @@
 		(instances
 			(project "SUMEC_MK_IV"
 				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/db21c0bc-8410-4aca-be63-6c1a31675c37"
-					(reference "#PWR020")
+					(reference "#PWR09")
 					(unit 1)
 				)
 			)
@@ -7636,7 +7430,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "226455ca-007b-4c2f-9d8e-f3eaea8ab532")
-		(property "Reference" "U2"
+		(property "Reference" "U1"
 			(at 107.95 88.9 0)
 			(effects
 				(font
@@ -7696,7 +7490,7 @@
 		(instances
 			(project "SUMEC_MK_IV"
 				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/db21c0bc-8410-4aca-be63-6c1a31675c37"
-					(reference "U2")
+					(reference "U1")
 					(unit 1)
 				)
 			)
@@ -7712,7 +7506,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "2303f776-71fa-4c78-afa6-3a31f0b6f7a1")
-		(property "Reference" "C2"
+		(property "Reference" "C7"
 			(at 125.095 142.24 90)
 			(effects
 				(font
@@ -7770,7 +7564,7 @@
 		(instances
 			(project "SUMEC_MK_IV"
 				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/db21c0bc-8410-4aca-be63-6c1a31675c37"
-					(reference "C2")
+					(reference "C7")
 					(unit 1)
 				)
 			)
@@ -7785,7 +7579,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "2518759d-2a9f-4fec-afe7-bed2c1dc1501")
-		(property "Reference" "#PWR023"
+		(property "Reference" "#PWR06"
 			(at 107.95 118.11 0)
 			(effects
 				(font
@@ -7839,7 +7633,7 @@
 		(instances
 			(project "SUMEC_MK_IV"
 				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/db21c0bc-8410-4aca-be63-6c1a31675c37"
-					(reference "#PWR023")
+					(reference "#PWR06")
 					(unit 1)
 				)
 			)
@@ -7854,7 +7648,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "2d66aefc-7402-4667-905e-b17d66d5c08f")
-		(property "Reference" "C10"
+		(property "Reference" "C12"
 			(at 209.55 252.73 0)
 			(effects
 				(font
@@ -7917,7 +7711,7 @@
 		(instances
 			(project "SUMEC_MK_IV"
 				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/db21c0bc-8410-4aca-be63-6c1a31675c37"
-					(reference "C10")
+					(reference "C12")
 					(unit 1)
 				)
 			)
@@ -7932,7 +7726,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "3b6b8737-9332-43fc-992e-b1006e1b2e7f")
-		(property "Reference" "#PWR012"
+		(property "Reference" "#PWR03"
 			(at 90.17 171.45 0)
 			(effects
 				(font
@@ -7983,7 +7777,77 @@
 		(instances
 			(project "SUMEC_MK_IV"
 				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/db21c0bc-8410-4aca-be63-6c1a31675c37"
-					(reference "#PWR012")
+					(reference "#PWR03")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+5V")
+		(at 80.01 237.49 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "3c407487-3038-48f2-a8d1-a02ac6f1415b")
+		(property "Reference" "#PWR01"
+			(at 80.01 241.3 0)
+			(effects
+				(font
+					(face "Bahnschrift")
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V"
+			(at 82.55 234.95 90)
+			(effects
+				(font
+					(face "Bahnschrift")
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 80.01 237.49 0)
+			(effects
+				(font
+					(face "Bahnschrift")
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 80.01 237.49 0)
+			(effects
+				(font
+					(face "Bahnschrift")
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 80.01 237.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "43f67fea-1f64-444c-8ad9-dfd93d45eb98")
+		)
+		(instances
+			(project "SUMEC_MK_IV"
+				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/db21c0bc-8410-4aca-be63-6c1a31675c37"
+					(reference "#PWR01")
 					(unit 1)
 				)
 			)
@@ -7998,7 +7862,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "3f80ce40-27d2-422f-b33e-2d8a1d1fa5e9")
-		(property "Reference" "U1"
+		(property "Reference" "U2"
 			(at 105.41 180.34 0)
 			(effects
 				(font
@@ -8098,7 +7962,7 @@
 		(instances
 			(project ""
 				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/db21c0bc-8410-4aca-be63-6c1a31675c37"
-					(reference "U1")
+					(reference "U2")
 					(unit 1)
 				)
 			)
@@ -8114,7 +7978,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "48bc46d8-3175-4082-bae1-c2b0ce9acdc9")
-		(property "Reference" "#PWR021"
+		(property "Reference" "#PWR018"
 			(at 205.74 237.49 0)
 			(effects
 				(font
@@ -8164,7 +8028,7 @@
 		(instances
 			(project "SUMEC_MK_IV"
 				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/db21c0bc-8410-4aca-be63-6c1a31675c37"
-					(reference "#PWR021")
+					(reference "#PWR018")
 					(unit 1)
 				)
 			)
@@ -8179,7 +8043,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "4aa9b402-1f5e-4729-bb79-22798f54c843")
-		(property "Reference" "#PWR07"
+		(property "Reference" "#PWR019"
 			(at 215.9 54.61 0)
 			(effects
 				(font
@@ -8230,7 +8094,7 @@
 		(instances
 			(project "SUMEC_MK_IV"
 				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/db21c0bc-8410-4aca-be63-6c1a31675c37"
-					(reference "#PWR07")
+					(reference "#PWR019")
 					(unit 1)
 				)
 			)
@@ -8245,7 +8109,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "4bec9398-efdf-4932-a7cb-891fdf141456")
-		(property "Reference" "C11"
+		(property "Reference" "C3"
 			(at 82.55 100.33 0)
 			(effects
 				(font
@@ -8303,7 +8167,7 @@
 		(instances
 			(project "SUMEC_MK_IV"
 				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/db21c0bc-8410-4aca-be63-6c1a31675c37"
-					(reference "C11")
+					(reference "C3")
 					(unit 1)
 				)
 			)
@@ -8318,7 +8182,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "596660ad-705f-4a32-972e-c2d2f54e863d")
-		(property "Reference" "R5"
+		(property "Reference" "R3"
 			(at 146.05 165.1 0)
 			(effects
 				(font
@@ -8372,7 +8236,7 @@
 		(instances
 			(project ""
 				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/db21c0bc-8410-4aca-be63-6c1a31675c37"
-					(reference "R5")
+					(reference "R3")
 					(unit 1)
 				)
 			)
@@ -8387,7 +8251,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "63cc337f-e1e1-446e-a510-1e6ed842ff78")
-		(property "Reference" "#PWR06"
+		(property "Reference" "#PWR013"
 			(at 130.81 156.21 0)
 			(effects
 				(font
@@ -8438,7 +8302,7 @@
 		(instances
 			(project "SUMEC_MK_IV"
 				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/db21c0bc-8410-4aca-be63-6c1a31675c37"
-					(reference "#PWR06")
+					(reference "#PWR013")
 					(unit 1)
 				)
 			)
@@ -8643,7 +8507,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "7b0d33b9-03b4-4138-b0cd-167648286eeb")
-		(property "Reference" "R3"
+		(property "Reference" "R4"
 			(at 168.91 247.6499 0)
 			(effects
 				(font
@@ -8706,7 +8570,7 @@
 		(instances
 			(project "SUMEC_MK_IV"
 				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/db21c0bc-8410-4aca-be63-6c1a31675c37"
-					(reference "R3")
+					(reference "R4")
 					(unit 1)
 				)
 			)
@@ -8798,7 +8662,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "81cc4fa6-f443-4842-b408-3814c9c9405a")
-		(property "Reference" "#PWR022"
+		(property "Reference" "#PWR02"
 			(at 91.44 95.25 0)
 			(effects
 				(font
@@ -8853,7 +8717,7 @@
 		(instances
 			(project "SUMEC_MK_IV"
 				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/db21c0bc-8410-4aca-be63-6c1a31675c37"
-					(reference "#PWR022")
+					(reference "#PWR02")
 					(unit 1)
 				)
 			)
@@ -8868,7 +8732,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "84cc9034-a9ca-4cfb-9614-28cdedc0e141")
-		(property "Reference" "#PWR015"
+		(property "Reference" "#PWR012"
 			(at 129.54 181.61 0)
 			(effects
 				(font
@@ -8919,7 +8783,7 @@
 		(instances
 			(project "SUMEC_MK_IV"
 				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/db21c0bc-8410-4aca-be63-6c1a31675c37"
-					(reference "#PWR015")
+					(reference "#PWR012")
 					(unit 1)
 				)
 			)
@@ -8934,7 +8798,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "8c2722a6-bcd2-42bd-8649-09ca91b127e1")
-		(property "Reference" "C7"
+		(property "Reference" "C9"
 			(at 180.34 252.7299 0)
 			(effects
 				(font
@@ -8997,7 +8861,7 @@
 		(instances
 			(project "SUMEC_MK_IV"
 				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/db21c0bc-8410-4aca-be63-6c1a31675c37"
-					(reference "C7")
+					(reference "C9")
 					(unit 1)
 				)
 			)
@@ -9194,7 +9058,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "98b5bf15-d9dd-4ea1-9b7e-4cba45e6f107")
-		(property "Reference" "C9"
+		(property "Reference" "C11"
 			(at 200.66 252.73 0)
 			(effects
 				(font
@@ -9257,7 +9121,7 @@
 		(instances
 			(project "SUMEC_MK_IV"
 				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/db21c0bc-8410-4aca-be63-6c1a31675c37"
-					(reference "C9")
+					(reference "C11")
 					(unit 1)
 				)
 			)
@@ -9272,7 +9136,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "9df64bbf-6be0-43ad-8589-aa33d5fcdc32")
-		(property "Reference" "#PWR016"
+		(property "Reference" "#PWR014"
 			(at 153.67 179.07 0)
 			(effects
 				(font
@@ -9323,7 +9187,7 @@
 		(instances
 			(project "SUMEC_MK_IV"
 				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/db21c0bc-8410-4aca-be63-6c1a31675c37"
-					(reference "#PWR016")
+					(reference "#PWR014")
 					(unit 1)
 				)
 			)
@@ -9338,7 +9202,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "9e7efd75-beaa-4e14-b266-6579fde7b98e")
-		(property "Reference" "C4"
+		(property "Reference" "C2"
 			(at 93.98 255.2699 0)
 			(effects
 				(font
@@ -9401,7 +9265,7 @@
 		(instances
 			(project "SUMEC_MK_IV"
 				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/db21c0bc-8410-4aca-be63-6c1a31675c37"
-					(reference "C4")
+					(reference "C2")
 					(unit 1)
 				)
 			)
@@ -9417,7 +9281,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "a4b72893-3eba-483d-b61a-3f6f5148c653")
-		(property "Reference" "#PWR02"
+		(property "Reference" "#PWR010"
 			(at 124.46 60.96 0)
 			(effects
 				(font
@@ -9467,7 +9331,7 @@
 		(instances
 			(project ""
 				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/db21c0bc-8410-4aca-be63-6c1a31675c37"
-					(reference "#PWR02")
+					(reference "#PWR010")
 					(unit 1)
 				)
 			)
@@ -9550,7 +9414,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "ac890f37-7737-45d5-bf16-0d6f23189ee6")
-		(property "Reference" "#PWR010"
+		(property "Reference" "#PWR04"
 			(at 102.87 156.21 0)
 			(effects
 				(font
@@ -9601,7 +9465,7 @@
 		(instances
 			(project ""
 				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/db21c0bc-8410-4aca-be63-6c1a31675c37"
-					(reference "#PWR010")
+					(reference "#PWR04")
 					(unit 1)
 				)
 			)
@@ -9617,7 +9481,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "b3578485-b7c7-45a1-b61a-6c90ec05df42")
-		(property "Reference" "C12"
+		(property "Reference" "C4"
 			(at 97.155 158.75 90)
 			(effects
 				(font
@@ -9675,73 +9539,7 @@
 		(instances
 			(project "SUMEC_MK_IV"
 				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/db21c0bc-8410-4aca-be63-6c1a31675c37"
-					(reference "C12")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+BATT")
-		(at 80.01 237.49 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "b4ff1899-a93f-4dc1-aa50-3297c7877fc6")
-		(property "Reference" "#PWR019"
-			(at 80.01 241.3 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+BATT"
-			(at 80.01 232.41 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 80.01 237.49 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 80.01 237.49 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 80.01 237.49 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "ebe7af28-a180-41b0-b1b3-9296c565945f")
-		)
-		(instances
-			(project "SUMEC_MK_IV"
-				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/db21c0bc-8410-4aca-be63-6c1a31675c37"
-					(reference "#PWR019")
+					(reference "C4")
 					(unit 1)
 				)
 			)
@@ -9835,7 +9633,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c18cc857-af52-4521-a037-8ba69e43a044")
-		(property "Reference" "R4"
+		(property "Reference" "R5"
 			(at 168.91 257.8099 0)
 			(effects
 				(font
@@ -9898,7 +9696,77 @@
 		(instances
 			(project "SUMEC_MK_IV"
 				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/db21c0bc-8410-4aca-be63-6c1a31675c37"
-					(reference "R4")
+					(reference "R5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3V3")
+		(at 194.31 228.6 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "c28bdef8-c505-4ae6-a121-0f2219dc5885")
+		(property "Reference" "#PWR015"
+			(at 194.31 232.41 0)
+			(effects
+				(font
+					(face "Bahnschrift")
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 191.77 229.87 90)
+			(effects
+				(font
+					(face "Bahnschrift")
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 194.31 228.6 0)
+			(effects
+				(font
+					(face "Bahnschrift")
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 194.31 228.6 0)
+			(effects
+				(font
+					(face "Bahnschrift")
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 194.31 228.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "1ea069b1-48ae-412f-84c1-a9619a2e9328")
+		)
+		(instances
+			(project "SUMEC_MK_IV"
+				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/db21c0bc-8410-4aca-be63-6c1a31675c37"
+					(reference "#PWR015")
 					(unit 1)
 				)
 			)
@@ -9914,7 +9782,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c55c4089-3eeb-46ae-96b3-044a75c8dbeb")
-		(property "Reference" "#PWR05"
+		(property "Reference" "#PWR016"
 			(at 195.58 64.77 0)
 			(effects
 				(font
@@ -9969,7 +9837,7 @@
 		(instances
 			(project "SUMEC_MK_IV"
 				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/db21c0bc-8410-4aca-be63-6c1a31675c37"
-					(reference "#PWR05")
+					(reference "#PWR016")
 					(unit 1)
 				)
 			)
@@ -9984,7 +9852,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "d1544b40-0ca6-4b4e-864b-12540c331e6f")
-		(property "Reference" "C13"
+		(property "Reference" "C6"
 			(at 127.635 100.33 0)
 			(effects
 				(font
@@ -10042,7 +9910,7 @@
 		(instances
 			(project "SUMEC_MK_IV"
 				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/db21c0bc-8410-4aca-be63-6c1a31675c37"
-					(reference "C13")
+					(reference "C6")
 					(unit 1)
 				)
 			)
@@ -10057,7 +9925,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "d4297787-ddf6-44bd-a2c8-6560f1882e10")
-		(property "Reference" "C8"
+		(property "Reference" "C10"
 			(at 190.5 252.73 0)
 			(effects
 				(font
@@ -10120,7 +9988,7 @@
 		(instances
 			(project "SUMEC_MK_IV"
 				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/db21c0bc-8410-4aca-be63-6c1a31675c37"
-					(reference "C8")
+					(reference "C10")
 					(unit 1)
 				)
 			)
@@ -10135,7 +10003,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "d8820da4-3e58-4f51-819f-9e273b64653d")
-		(property "Reference" "#PWR013"
+		(property "Reference" "#PWR05"
 			(at 104.14 181.61 0)
 			(effects
 				(font
@@ -10186,7 +10054,7 @@
 		(instances
 			(project "SUMEC_MK_IV"
 				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/db21c0bc-8410-4aca-be63-6c1a31675c37"
-					(reference "#PWR013")
+					(reference "#PWR05")
 					(unit 1)
 				)
 			)
@@ -10201,7 +10069,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "da2120e7-936f-4a04-afd7-96426a4f89e7")
-		(property "Reference" "L2"
+		(property "Reference" "L1"
 			(at 130.81 157.48 90)
 			(effects
 				(font
@@ -10253,7 +10121,7 @@
 		(instances
 			(project ""
 				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/db21c0bc-8410-4aca-be63-6c1a31675c37"
-					(reference "L2")
+					(reference "L1")
 					(unit 1)
 				)
 			)
@@ -10269,7 +10137,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "db383d9e-9da7-4cb0-85e5-d62291a31f57")
-		(property "Reference" "L1"
+		(property "Reference" "L2"
 			(at 149.86 236.22 0)
 			(effects
 				(font
@@ -10423,7 +10291,7 @@
 		(instances
 			(project "SUMEC_MK_IV"
 				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/db21c0bc-8410-4aca-be63-6c1a31675c37"
-					(reference "L1")
+					(reference "L2")
 					(unit 1)
 				)
 			)
@@ -10522,7 +10390,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "dd420296-088d-477b-8bcc-bc0c9c2f9029")
-		(property "Reference" "C3"
+		(property "Reference" "C1"
 			(at 83.82 255.2699 0)
 			(effects
 				(font
@@ -10585,7 +10453,7 @@
 		(instances
 			(project "SUMEC_MK_IV"
 				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/db21c0bc-8410-4aca-be63-6c1a31675c37"
-					(reference "C3")
+					(reference "C1")
 					(unit 1)
 				)
 			)
@@ -10600,7 +10468,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "df4c43fa-aa3a-4e5f-9711-c0ab99164cdf")
-		(property "Reference" "C14"
+		(property "Reference" "C8"
 			(at 157.48 165.735 0)
 			(effects
 				(font
@@ -10654,7 +10522,7 @@
 		(instances
 			(project ""
 				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/db21c0bc-8410-4aca-be63-6c1a31675c37"
-					(reference "C14")
+					(reference "C8")
 					(unit 1)
 				)
 			)
@@ -10670,7 +10538,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e0228a49-bb3a-4652-95c1-150c8c26f564")
-		(property "Reference" "#PWR018"
+		(property "Reference" "#PWR017"
 			(at 198.12 100.33 0)
 			(effects
 				(font
@@ -10725,7 +10593,7 @@
 		(instances
 			(project "SUMEC_MK_IV"
 				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/db21c0bc-8410-4aca-be63-6c1a31675c37"
-					(reference "#PWR018")
+					(reference "#PWR017")
 					(unit 1)
 				)
 			)
@@ -10908,7 +10776,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "fc36efda-5fb7-4b36-af8a-11230ae7efa5")
-		(property "Reference" "#PWR08"
+		(property "Reference" "#PWR07"
 			(at 113.03 147.32 0)
 			(effects
 				(font
@@ -10958,7 +10826,7 @@
 		(instances
 			(project "SUMEC_MK_IV"
 				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/db21c0bc-8410-4aca-be63-6c1a31675c37"
-					(reference "#PWR08")
+					(reference "#PWR07")
 					(unit 1)
 				)
 			)
