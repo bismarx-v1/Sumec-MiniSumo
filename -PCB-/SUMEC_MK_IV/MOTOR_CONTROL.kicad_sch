@@ -5835,7 +5835,7 @@
 		(dnp no)
 		(uuid "0a23917c-bebe-41e8-9507-c413c39b134e")
 		(property "Reference" "C16"
-			(at 205.105 120.65 90)
+			(at 204.47 120.65 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5902,7 +5902,7 @@
 		(dnp no)
 		(uuid "18509f08-c611-4375-830e-e0bf2d6da378")
 		(property "Reference" "C13"
-			(at 205.105 66.04 90)
+			(at 204.47 66.04 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6596,7 +6596,7 @@
 		(dnp no)
 		(uuid "2f1e09f3-b419-4c2d-9e6d-9c1b911b5293")
 		(property "Reference" "R14"
-			(at 209.55 57.785 90)
+			(at 208.915 57.785 90)
 			(effects
 				(font
 					(face "Bahnschrift")
@@ -6605,7 +6605,7 @@
 			)
 		)
 		(property "Value" "0R"
-			(at 212.09 57.785 90)
+			(at 212.725 57.785 90)
 			(effects
 				(font
 					(face "Bahnschrift")
@@ -6739,7 +6739,7 @@
 		(dnp no)
 		(uuid "35c4215c-ce8f-466d-8183-50bc6ca4226d")
 		(property "Reference" "R12"
-			(at 151.13 116.205 90)
+			(at 150.495 116.205 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6878,7 +6878,7 @@
 		(dnp no)
 		(uuid "4032e99d-af08-4a6d-9d7e-02afac4fbc90")
 		(property "Reference" "C14"
-			(at 205.105 71.12 90)
+			(at 204.47 71.12 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7157,7 +7157,7 @@
 		(dnp no)
 		(uuid "6a38a25c-4014-44fc-b0fb-028be7d5352d")
 		(property "Reference" "R15"
-			(at 209.55 102.235 90)
+			(at 208.915 102.235 90)
 			(effects
 				(font
 					(face "Bahnschrift")
@@ -7166,7 +7166,7 @@
 			)
 		)
 		(property "Value" "0R"
-			(at 212.09 102.235 90)
+			(at 212.725 102.235 90)
 			(effects
 				(font
 					(face "Bahnschrift")
@@ -7300,7 +7300,7 @@
 		(dnp no)
 		(uuid "854ab7e6-6e77-4da0-b8ab-ae17ce54edd9")
 		(property "Reference" "R13"
-			(at 209.55 52.705 90)
+			(at 208.915 52.705 90)
 			(effects
 				(font
 					(face "Bahnschrift")
@@ -7309,7 +7309,7 @@
 			)
 		)
 		(property "Value" "0R"
-			(at 212.09 52.705 90)
+			(at 212.725 52.705 90)
 			(effects
 				(font
 					(face "Bahnschrift")
@@ -7587,7 +7587,7 @@
 		(dnp no)
 		(uuid "b8ec6946-73e7-42ef-88b4-79561df85dab")
 		(property "Reference" "R16"
-			(at 209.55 107.315 90)
+			(at 208.915 107.315 90)
 			(effects
 				(font
 					(face "Bahnschrift")
@@ -7596,7 +7596,7 @@
 			)
 		)
 		(property "Value" "0R"
-			(at 212.09 107.315 90)
+			(at 212.725 107.315 90)
 			(effects
 				(font
 					(face "Bahnschrift")
@@ -7658,7 +7658,7 @@
 		(dnp no)
 		(uuid "c129077d-44f3-4b4f-8e69-f61a65601109")
 		(property "Reference" "C15"
-			(at 205.105 115.57 90)
+			(at 204.47 115.57 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8215,7 +8215,7 @@
 		(dnp no)
 		(uuid "f5660929-d241-4a4b-a080-06c39b0006db")
 		(property "Reference" "R11"
-			(at 151.13 66.675 90)
+			(at 150.495 66.675 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8223,7 +8223,7 @@
 			)
 		)
 		(property "Value" "10k"
-			(at 153.67 66.675 90)
+			(at 154.305 66.675 90)
 			(effects
 				(font
 					(size 1.27 1.27)
