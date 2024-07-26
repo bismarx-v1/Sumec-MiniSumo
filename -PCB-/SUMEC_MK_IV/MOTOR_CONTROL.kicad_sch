@@ -5951,7 +5951,7 @@
 			(uuid "d0041f3e-7c99-4f6b-8977-1105c78b519e")
 		)
 		(instances
-			(project ""
+			(project "SUMEC_MK_IV"
 				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/7dd11b1d-8415-4d33-9ce7-bf4ef9848927"
 					(reference "C13")
 					(unit 1)
@@ -8264,7 +8264,7 @@
 			(uuid "526ae489-b3bd-4d9d-aa9c-48e883b12739")
 		)
 		(instances
-			(project ""
+			(project "SUMEC_MK_IV"
 				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/7dd11b1d-8415-4d33-9ce7-bf4ef9848927"
 					(reference "R11")
 					(unit 1)

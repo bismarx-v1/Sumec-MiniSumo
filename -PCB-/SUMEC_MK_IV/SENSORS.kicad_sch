@@ -12367,7 +12367,7 @@
 			(uuid "60a9b2bc-27ba-4d3f-8e6d-9f29e5851b54")
 		)
 		(instances
-			(project ""
+			(project "SUMEC_MK_IV"
 				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/a4783534-f11a-41d1-a455-2e16f5dc258a"
 					(reference "J8")
 					(unit 1)

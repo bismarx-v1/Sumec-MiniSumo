@@ -1336,12 +1336,6 @@
 		(color 0 0 0 0)
 		(uuid "d162a798-b60b-4711-8967-7a69902429dd")
 	)
-	(junction
-		(at 167.64 52.07)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "d4fc8a22-6d10-4c4d-ac14-1e53df2699ae")
-	)
 	(wire
 		(pts
 			(xy 144.78 50.8) (xy 149.86 50.8)
@@ -1484,16 +1478,6 @@
 	)
 	(wire
 		(pts
-			(xy 170.18 59.69) (xy 167.64 59.69)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5c08e782-6dc9-400e-9647-11da51424e89")
-	)
-	(wire
-		(pts
 			(xy 88.9 96.52) (xy 102.87 96.52)
 		)
 		(stroke
@@ -1591,6 +1575,16 @@
 			(type default)
 		)
 		(uuid "873afeb9-03b6-4cc8-9856-b7606a4aa7d6")
+	)
+	(wire
+		(pts
+			(xy 185.42 52.07) (xy 180.34 52.07)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "89495753-711c-4e5f-8e5f-47f6d3484e4d")
 	)
 	(polyline
 		(pts
@@ -1761,16 +1755,6 @@
 			(type default)
 		)
 		(uuid "f1157305-7565-458b-a048-1d7f65ddcc7c")
-	)
-	(wire
-		(pts
-			(xy 167.64 59.69) (xy 167.64 52.07)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f8e9f0ec-911e-49d5-ac09-f0b8f5142e86")
 	)
 	(wire
 		(pts
@@ -3157,7 +3141,31 @@
 			)
 		)
 	)
-	(global_label "TEST PROGRAM"
+	(global_label "TEST PROGRAM 2"
+		(shape input)
+		(at 185.42 52.07 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(face "Bahnschrift")
+				(size 1 1)
+				(color 0 0 0 1)
+			)
+			(justify left)
+		)
+		(uuid "4db01c39-1fcf-4e57-8cf7-16cd1ee87aef")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 198.5266 52.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "TEST PROGRAM 1"
 		(shape input)
 		(at 185.42 44.45 0)
 		(fields_autoplaced yes)
@@ -3171,7 +3179,7 @@
 		)
 		(uuid "57984107-7079-4d9d-ac68-4923a4444be5")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 198.8984 44.45 0)
+			(at 198.2687 44.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3207,7 +3215,7 @@
 	)
 	(global_label "IR MODULE"
 		(shape passive)
-		(at 160.02 114.3 180)
+		(at 139.7 118.11 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -3219,7 +3227,7 @@
 		)
 		(uuid "5bc8766e-8680-498a-b06a-277db54e00ac")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 151.6338 114.3 0)
+			(at 131.3138 118.11 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5172,78 +5180,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Switch:SW_Push")
-		(at 175.26 59.69 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "ee6a6277-330e-4965-a332-a080a692ad03")
-		(property "Reference" "SW6"
-			(at 175.26 55.245 0)
-			(effects
-				(font
-					(face "Bahnschrift")
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "SW_Push"
-			(at 175.26 55.88 0)
-			(effects
-				(font
-					(face "Bahnschrift")
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "Button_Switch_SMD:SW_SPST_B3U-1000P"
-			(at 175.26 54.61 0)
-			(effects
-				(font
-					(face "Bahnschrift")
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 175.26 54.61 0)
-			(effects
-				(font
-					(face "Bahnschrift")
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 175.26 59.69 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "c7f9701a-a6d7-4b28-ae8c-7dcd651a7838")
-		)
-		(pin "2"
-			(uuid "badb1860-777d-48dd-bcbb-f8e1f21c2690")
-		)
-		(instances
-			(project "SUMEC_MK_IV"
-				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/a907f0f2-2950-481d-8037-7b9f13f2e9c5"
-					(reference "SW6")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Connector:TestPoint")
 		(at 140.97 100.33 0)
 		(unit 1)
@@ -5383,7 +5319,7 @@
 			(uuid "14bf16cd-910d-4403-b29b-4778d0a5f494")
 		)
 		(instances
-			(project ""
+			(project "SUMEC_MK_IV"
 				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/a907f0f2-2950-481d-8037-7b9f13f2e9c5"
 					(reference "J13")
 					(unit 1)
