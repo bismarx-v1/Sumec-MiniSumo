@@ -4968,7 +4968,7 @@
 			)
 		)
 	)
-	(global_label "LED2"
+	(global_label "LED1"
 		(shape input)
 		(at 234.95 77.47 180)
 		(fields_autoplaced yes)
@@ -4982,7 +4982,7 @@
 		)
 		(uuid "4da5bfca-b73e-4e24-9f95-4d4729430458")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 229.4951 77.47 0)
+			(at 229.753 77.47 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5256,7 +5256,7 @@
 			)
 		)
 	)
-	(global_label "LED1"
+	(global_label "LED3"
 		(shape input)
 		(at 234.95 110.49 180)
 		(fields_autoplaced yes)
@@ -5270,7 +5270,7 @@
 		)
 		(uuid "a611aa26-8859-4fb0-86a1-539118df46e0")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 229.753 110.49 0)
+			(at 229.4853 110.49 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5996,6 +5996,77 @@
 			(project "SUMEC_MK_IV"
 				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/7b93d7c5-db1a-415c-92e4-9ebec6cf195f"
 					(reference "R19")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 156.21 119.38 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "b5187c9b-64db-4a2f-aa67-e7f969a5663a")
+		(property "Reference" "#PWR086"
+			(at 156.21 125.73 0)
+			(effects
+				(font
+					(face "Bahnschrift")
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 156.21 124.46 0)
+			(effects
+				(font
+					(face "Bahnschrift")
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" ""
+			(at 156.21 119.38 0)
+			(effects
+				(font
+					(face "Bahnschrift")
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 156.21 119.38 0)
+			(effects
+				(font
+					(face "Bahnschrift")
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 156.21 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "d14d50d0-c55a-4a42-ba35-a67b9ff0b4fc")
+		)
+		(instances
+			(project "SUMEC_MK_IV"
+				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/7b93d7c5-db1a-415c-92e4-9ebec6cf195f"
+					(reference "#PWR086")
 					(unit 1)
 				)
 			)

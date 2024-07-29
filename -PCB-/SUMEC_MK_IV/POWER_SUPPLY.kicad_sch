@@ -2926,6 +2926,12 @@
 		(uuid "4131d785-93bc-440b-9631-17f396e036f9")
 	)
 	(junction
+		(at 209.55 53.34)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "42504d81-8aa1-4704-a5ad-4aef2fb61351")
+	)
+	(junction
 		(at 252.73 96.52)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2948,12 +2954,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "6c36668a-0741-47f6-944d-d3e900ca7726")
-	)
-	(junction
-		(at 205.74 53.34)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "6f5d0a8e-88d2-462a-9814-99927e29c8da")
 	)
 	(junction
 		(at 162.56 142.24)
@@ -2996,6 +2996,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "a449a205-b9fd-4580-9e3d-940d13d1b90a")
+	)
+	(junction
+		(at 209.55 43.18)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "a577890a-ca13-46f5-9897-25556fefc094")
 	)
 	(junction
 		(at 242.57 96.52)
@@ -3203,16 +3209,6 @@
 	)
 	(wire
 		(pts
-			(xy 205.74 53.34) (xy 212.09 53.34)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3455ac7d-b698-429f-829b-4d86841a4abf")
-	)
-	(wire
-		(pts
 			(xy 191.77 54.61) (xy 190.5 54.61)
 		)
 		(stroke
@@ -3303,7 +3299,7 @@
 	)
 	(wire
 		(pts
-			(xy 212.09 44.45) (xy 212.09 43.18)
+			(xy 209.55 44.45) (xy 209.55 43.18)
 		)
 		(stroke
 			(width 0)
@@ -3473,6 +3469,16 @@
 	)
 	(wire
 		(pts
+			(xy 209.55 43.18) (xy 217.17 43.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "79ac905f-d65b-4f18-b3a2-423991d006c7")
+	)
+	(wire
+		(pts
 			(xy 199.39 53.34) (xy 199.39 52.07)
 		)
 		(stroke
@@ -3543,7 +3549,7 @@
 	)
 	(wire
 		(pts
-			(xy 199.39 53.34) (xy 205.74 53.34)
+			(xy 199.39 53.34) (xy 209.55 53.34)
 		)
 		(stroke
 			(width 0)
@@ -3883,7 +3889,7 @@
 	)
 	(wire
 		(pts
-			(xy 212.09 52.07) (xy 212.09 53.34)
+			(xy 209.55 52.07) (xy 209.55 53.34)
 		)
 		(stroke
 			(width 0)
@@ -3893,7 +3899,7 @@
 	)
 	(wire
 		(pts
-			(xy 199.39 43.18) (xy 212.09 43.18)
+			(xy 199.39 43.18) (xy 209.55 43.18)
 		)
 		(stroke
 			(width 0)
@@ -3973,7 +3979,7 @@
 	)
 	(wire
 		(pts
-			(xy 205.74 53.34) (xy 205.74 57.15)
+			(xy 209.55 53.34) (xy 209.55 57.15)
 		)
 		(stroke
 			(width 0)
@@ -5330,7 +5336,7 @@
 		)
 	)
 	(image
-		(at -83.82 41.91)
+		(at -87.63 33.655)
 		(scale 0.879456)
 		(uuid "5a0dae5d-21ef-4553-9a1d-67c01927b993")
 		(data "iVBORw0KGgoAAAANSUhEUgAAA4oAAAFLCAYAAACQpnLAAAAAAXNSR0IArs4c6QAAAARnQU1BAACx"
@@ -6857,84 +6863,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:C")
-		(at 199.39 48.26 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "099ceb53-5710-4ce6-b143-4c70a11c3a76")
-		(property "Reference" "C4"
-			(at 201.93 46.99 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "22uF.vin"
-			(at 201.93 49.53 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
-			(at 200.3552 52.07 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 199.39 48.26 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 199.39 48.26 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC" "C45783"
-			(at 199.39 48.26 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "a5142796-3387-4bc6-a196-5be8791ac3c9")
-		)
-		(pin "2"
-			(uuid "558cf5dc-3449-4792-aaff-889b4744c217")
-		)
-		(instances
-			(project "SUMEC_MK_IV"
-				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/db21c0bc-8410-4aca-be63-6c1a31675c37"
-					(reference "C4")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:R")
 		(at 152.4 45.72 0)
 		(unit 1)
@@ -7587,7 +7515,7 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 212.09 48.26 0)
+		(at 209.55 48.26 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -7595,7 +7523,7 @@
 		(dnp no)
 		(uuid "2aa85388-da7d-41c2-8597-783935f28d25")
 		(property "Reference" "C6"
-			(at 214.63 46.99 0)
+			(at 212.09 46.99 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7604,7 +7532,7 @@
 			)
 		)
 		(property "Value" "100nF.vin"
-			(at 214.63 49.53 0)
+			(at 212.09 49.53 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7613,7 +7541,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
-			(at 213.0552 52.07 0)
+			(at 210.5152 52.07 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7622,7 +7550,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 212.09 48.26 0)
+			(at 209.55 48.26 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7631,7 +7559,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 212.09 48.26 0)
+			(at 209.55 48.26 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7640,7 +7568,7 @@
 			)
 		)
 		(property "LCSC" "C49678"
-			(at 212.09 48.26 0)
+			(at 209.55 48.26 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8739,6 +8667,142 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 209.55 57.15 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "8056a177-dad9-461e-bc8e-421755715dac")
+		(property "Reference" "#PWR020"
+			(at 209.55 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 209.55 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" ""
+			(at 209.55 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 209.55 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 209.55 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "dba7145b-f3d8-4abd-a6e8-f8600f28d6f2")
+		)
+		(instances
+			(project "SUMEC_MK_IV"
+				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/db21c0bc-8410-4aca-be63-6c1a31675c37"
+					(reference "#PWR020")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Polarized")
+		(at 199.39 48.26 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "8154d5b6-f869-436d-b7be-b5a56776c698")
+		(property "Reference" "C4"
+			(at 201.93 46.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "22uF"
+			(at 201.93 49.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_Tantalum_SMD:CP_EIA-3528-21_Kemet-B_Pad1.50x2.35mm_HandSolder"
+			(at 200.3552 52.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 199.39 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Polarized capacitor"
+			(at 199.39 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "1d66388c-2ba8-4331-971a-558050f750e1")
+		)
+		(pin "1"
+			(uuid "aa1db1ac-2d2b-493a-b538-e869c8c88b22")
+		)
+		(instances
+			(project "SUMEC_MK_IV"
+				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/db21c0bc-8410-4aca-be63-6c1a31675c37"
+					(reference "C4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:+5V")
 		(at 157.48 142.24 90)
 		(unit 1)
@@ -9270,6 +9334,76 @@
 			(project "SUMEC_MK_IV"
 				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/db21c0bc-8410-4aca-be63-6c1a31675c37"
 					(reference "#PWR015")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+5V")
+		(at 217.17 43.18 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "b2993b89-f179-4778-9dd8-2f024e13c55d")
+		(property "Reference" "#PWR017"
+			(at 213.36 43.18 0)
+			(effects
+				(font
+					(face "Bahnschrift")
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V"
+			(at 220.345 45.085 90)
+			(effects
+				(font
+					(face "Bahnschrift")
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 217.17 43.18 0)
+			(effects
+				(font
+					(face "Bahnschrift")
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 217.17 43.18 0)
+			(effects
+				(font
+					(face "Bahnschrift")
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 217.17 43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "cad71b23-6935-48f7-b10b-cc845df63d51")
+		)
+		(instances
+			(project "SUMEC_MK_IV"
+				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/db21c0bc-8410-4aca-be63-6c1a31675c37"
+					(reference "#PWR017")
 					(unit 1)
 				)
 			)
@@ -10384,76 +10518,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+5V")
-		(at 205.74 57.15 180)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "e2e30511-ae3d-41bf-b97a-08f837efc625")
-		(property "Reference" "#PWR017"
-			(at 205.74 53.34 0)
-			(effects
-				(font
-					(face "Bahnschrift")
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+5V"
-			(at 201.295 58.42 0)
-			(effects
-				(font
-					(face "Bahnschrift")
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" ""
-			(at 205.74 57.15 0)
-			(effects
-				(font
-					(face "Bahnschrift")
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 205.74 57.15 0)
-			(effects
-				(font
-					(face "Bahnschrift")
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 205.74 57.15 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "fd98e56f-f064-485d-b6c8-ebcfbe2f27cb")
-		)
-		(instances
-			(project "SUMEC_MK_IV"
-				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/db21c0bc-8410-4aca-be63-6c1a31675c37"
-					(reference "#PWR017")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Simulation_SPICE:PMOS")
 		(at 69.85 149.86 0)
 		(mirror x)
@@ -10548,73 +10612,6 @@
 			(project "SUMEC_MK_IV"
 				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/db21c0bc-8410-4aca-be63-6c1a31675c37"
 					(reference "Q1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 226.06 57.15 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "f441e6a2-d02a-460c-8d25-2e8b8a9a42b0")
-		(property "Reference" "#PWR020"
-			(at 226.06 63.5 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 226.06 62.23 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Footprint" ""
-			(at 226.06 57.15 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 226.06 57.15 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 226.06 57.15 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "c791b439-45e4-4b75-8068-2db251789df6")
-		)
-		(instances
-			(project "SUMEC_MK_IV"
-				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/db21c0bc-8410-4aca-be63-6c1a31675c37"
-					(reference "#PWR020")
 					(unit 1)
 				)
 			)
