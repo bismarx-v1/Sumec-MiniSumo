@@ -9894,6 +9894,17 @@
 		)
 		(uuid "1dbbcee4-43b0-4de6-a0a2-70bf3f0b109a")
 	)
+	(text "qre signal visualisation? (update it on the qre miniboard itself)"
+		(exclude_from_sim no)
+		(at 180.34 64.77 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(color 255 0 0 1)
+			)
+		)
+		(uuid "2c45a437-cfe7-44e8-8176-b988ed4ecae5")
+	)
 	(text "OPTIONAL "
 		(exclude_from_sim no)
 		(at 213.995 98.425 0)
@@ -10081,6 +10092,17 @@
 			(justify left bottom)
 		)
 		(uuid "e4d19302-0f33-4577-b5a2-35989517088d")
+	)
+	(text "I2C signal visualisation? like etherent"
+		(exclude_from_sim no)
+		(at 92.075 101.6 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(color 255 0 0 1)
+			)
+		)
+		(uuid "e68863ab-508b-414f-9a31-0f7bdf39bea2")
 	)
 	(text "POLOLU SENSOR MANUAL"
 		(exclude_from_sim no)
