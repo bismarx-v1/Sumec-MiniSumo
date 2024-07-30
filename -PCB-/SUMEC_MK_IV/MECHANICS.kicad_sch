@@ -1418,16 +1418,6 @@
 	)
 	(wire
 		(pts
-			(xy 182.88 105.41) (xy 184.15 105.41)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "27e9f81f-7b5e-4077-ba1a-b2eaa6e8047c")
-	)
-	(wire
-		(pts
 			(xy 167.64 52.07) (xy 170.18 52.07)
 		)
 		(stroke
@@ -1475,6 +1465,16 @@
 			(type default)
 		)
 		(uuid "5a53ab19-8c3f-4b91-880c-a95639f59ce1")
+	)
+	(wire
+		(pts
+			(xy 172.72 99.06) (xy 172.72 105.41)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5ed8aa27-0197-40fd-93c5-43369499667c")
 	)
 	(wire
 		(pts
@@ -1555,6 +1555,16 @@
 			(type default)
 		)
 		(uuid "7df0e827-914b-4541-aa03-48fc554c60e7")
+	)
+	(wire
+		(pts
+			(xy 171.45 105.41) (xy 172.72 105.41)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "840f6bc6-792f-4bfa-833a-9bc36434d319")
 	)
 	(wire
 		(pts
@@ -1648,16 +1658,6 @@
 	)
 	(wire
 		(pts
-			(xy 171.45 105.41) (xy 172.72 105.41)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b39e8ffa-2e27-4eb6-af65-254c6128cdd7")
-	)
-	(wire
-		(pts
 			(xy 161.29 105.41) (xy 161.29 99.06)
 		)
 		(stroke
@@ -1745,26 +1745,6 @@
 			(type default)
 		)
 		(uuid "ef52e60c-d9ce-477e-af56-079326b74482")
-	)
-	(wire
-		(pts
-			(xy 184.15 105.41) (xy 184.15 99.06)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f1157305-7565-458b-a048-1d7f65ddcc7c")
-	)
-	(wire
-		(pts
-			(xy 172.72 105.41) (xy 172.72 99.06)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "fc0f2cd2-3da5-4906-a377-bce38f7e7f5e")
 	)
 	(wire
 		(pts
@@ -3106,33 +3086,9 @@
 			)
 		)
 	)
-	(global_label "D+"
-		(shape passive)
-		(at 182.88 105.41 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(face "Bahnschrift")
-				(size 1 1)
-				(color 0 0 0 1)
-			)
-			(justify right)
-		)
-		(uuid "3f3f72d0-eda7-4a6c-b6b3-eae57b7930da")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 179.9218 105.41 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-	)
 	(global_label "IR MODULE"
 		(shape passive)
-		(at 144.78 111.76 180)
+		(at 148.59 105.41 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -3144,7 +3100,7 @@
 		)
 		(uuid "4d695f3d-9d16-444b-8a93-82ad0ffd802e")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 136.3938 111.76 0)
+			(at 140.2038 105.41 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3217,6 +3173,30 @@
 		(uuid "5a8250b0-5add-4f7b-bb15-15407930a477")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 91.8838 161.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "OUT 1B"
+		(shape passive)
+		(at 171.45 105.41 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(face "Bahnschrift")
+				(size 1 1)
+				(color 0 0 0 1)
+			)
+			(justify right)
+		)
+		(uuid "776478dc-4d63-4fa8-9e8e-8cae5bd4ac4d")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 165.938 105.41 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3322,6 +3302,30 @@
 			)
 		)
 	)
+	(global_label "OUT 1A"
+		(shape passive)
+		(at 160.02 105.41 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(face "Bahnschrift")
+				(size 1 1)
+				(color 0 0 0 1)
+			)
+			(justify right)
+		)
+		(uuid "d3d6d9f7-0659-4726-845c-d4e7c4afdb68")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 154.5061 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "M2B"
 		(shape input)
 		(at 114.3 163.83 180)
@@ -3346,41 +3350,17 @@
 			)
 		)
 	)
-	(global_label "D-"
-		(shape passive)
-		(at 171.45 105.41 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(face "Bahnschrift")
-				(size 1 1)
-				(color 0 0 0 1)
-			)
-			(justify right)
-		)
-		(uuid "fa2133b2-4c32-4169-a87a-27495b9d0821")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 168.5602 105.41 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-	)
 	(symbol
 		(lib_id "Connector:TestPoint")
-		(at 184.15 99.06 0)
+		(at 172.72 99.06 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "05f6e94e-82ea-43a4-8fab-9a9515ff3b63")
-		(property "Reference" "TP6"
-			(at 185.928 94.488 0)
+		(uuid "019be144-2eb2-4921-bc93-b6e7a52e61b0")
+		(property "Reference" "TP5"
+			(at 174.498 94.488 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3389,7 +3369,7 @@
 			)
 		)
 		(property "Value" "TestPoint"
-			(at 185.928 97.028 0)
+			(at 174.498 97.028 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3397,8 +3377,8 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm"
-			(at 189.23 99.06 0)
+		(property "Footprint" "TestPoint:TestPoint_Pad_1.0x1.0mm"
+			(at 177.8 99.06 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3407,7 +3387,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 189.23 99.06 0)
+			(at 177.8 99.06 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3416,7 +3396,7 @@
 			)
 		)
 		(property "Description" "test point"
-			(at 184.15 99.06 0)
+			(at 172.72 99.06 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3425,12 +3405,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "b3f147f2-c5e6-4fce-b0ef-6148ee0d94b4")
+			(uuid "83af294e-82ea-4765-9d90-2fdc7973fe53")
 		)
 		(instances
 			(project "SUMEC_MK_IV"
 				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/a907f0f2-2950-481d-8037-7b9f13f2e9c5"
-					(reference "TP6")
+					(reference "TP5")
 					(unit 1)
 				)
 			)
@@ -3782,15 +3762,15 @@
 	)
 	(symbol
 		(lib_id "Connector:TestPoint")
-		(at 161.29 99.06 0)
+		(at 138.43 99.06 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "24a1628e-039d-49d6-9155-a417b688d3c0")
-		(property "Reference" "TP4"
-			(at 163.068 94.488 0)
+		(uuid "31482397-c0fc-411f-980c-b00fec6e8a17")
+		(property "Reference" "TP2"
+			(at 140.208 94.488 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3799,7 +3779,7 @@
 			)
 		)
 		(property "Value" "TestPoint"
-			(at 163.068 97.028 0)
+			(at 140.208 97.028 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3807,8 +3787,8 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm"
-			(at 166.37 99.06 0)
+		(property "Footprint" "TestPoint:TestPoint_Pad_1.0x1.0mm"
+			(at 143.51 99.06 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3817,7 +3797,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 166.37 99.06 0)
+			(at 143.51 99.06 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3826,7 +3806,7 @@
 			)
 		)
 		(property "Description" "test point"
-			(at 161.29 99.06 0)
+			(at 138.43 99.06 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3835,12 +3815,78 @@
 			)
 		)
 		(pin "1"
-			(uuid "4f68fc1c-e0a6-4e0f-85e4-59e4a8a68326")
+			(uuid "5b796f93-f313-46ee-b637-b05a38dd9fb9")
 		)
 		(instances
 			(project "SUMEC_MK_IV"
 				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/a907f0f2-2950-481d-8037-7b9f13f2e9c5"
-					(reference "TP4")
+					(reference "TP2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 127 99.06 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "3e758c93-c9f2-46f6-a8e8-dac048869aa8")
+		(property "Reference" "TP1"
+			(at 128.778 94.488 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 128.778 97.028 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_1.0x1.0mm"
+			(at 132.08 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 132.08 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 127 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "e6ed1237-6ebd-48d3-bcd5-82e7de3b4e9c")
+		)
+		(instances
+			(project "SUMEC_MK_IV"
+				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/a907f0f2-2950-481d-8037-7b9f13f2e9c5"
+					(reference "TP1")
 					(unit 1)
 				)
 			)
@@ -4269,72 +4315,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 172.72 99.06 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "7621f438-e256-44ba-b157-4549218cac48")
-		(property "Reference" "TP5"
-			(at 174.498 94.488 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "TestPoint"
-			(at 174.498 97.028 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm"
-			(at 177.8 99.06 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 177.8 99.06 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "test point"
-			(at 172.72 99.06 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "b5c38f69-827c-43ef-96f1-dd565e5a92b1")
-		)
-		(instances
-			(project "SUMEC_MK_IV"
-				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/a907f0f2-2950-481d-8037-7b9f13f2e9c5"
-					(reference "TP5")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:+3V3")
 		(at 96.52 166.37 90)
 		(unit 1)
@@ -4687,72 +4667,6 @@
 			(project "SUMEC_MK_IV"
 				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/a907f0f2-2950-481d-8037-7b9f13f2e9c5"
 					(reference "#PWR085")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 127 99.06 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "aababf4e-23ce-4baf-a31a-773a4932d98b")
-		(property "Reference" "TP1"
-			(at 128.778 94.488 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "TestPoint"
-			(at 128.778 97.028 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
-			(at 132.08 99.06 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 132.08 99.06 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "test point"
-			(at 127 99.06 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "5f7d6834-22e7-4e93-872d-3f3f54d5b29f")
-		)
-		(instances
-			(project "SUMEC_MK_IV"
-				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/a907f0f2-2950-481d-8037-7b9f13f2e9c5"
-					(reference "TP1")
 					(unit 1)
 				)
 			)
@@ -5170,15 +5084,15 @@
 	)
 	(symbol
 		(lib_id "Connector:TestPoint")
-		(at 138.43 99.06 0)
+		(at 161.29 99.06 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "f4313a59-42be-4962-b85e-0b721e8c0aa2")
-		(property "Reference" "TP2"
-			(at 140.208 94.488 0)
+		(uuid "f151c18b-fb84-40c1-b823-cbc475fab004")
+		(property "Reference" "TP4"
+			(at 163.068 94.488 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5187,7 +5101,7 @@
 			)
 		)
 		(property "Value" "TestPoint"
-			(at 140.208 97.028 0)
+			(at 163.068 97.028 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5195,8 +5109,8 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "TestPoint:TestPoint_Loop_D1.80mm_Drill1.0mm_Beaded"
-			(at 143.51 99.06 0)
+		(property "Footprint" "TestPoint:TestPoint_Pad_1.0x1.0mm"
+			(at 166.37 99.06 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5205,7 +5119,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 143.51 99.06 0)
+			(at 166.37 99.06 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5214,7 +5128,7 @@
 			)
 		)
 		(property "Description" "test point"
-			(at 138.43 99.06 0)
+			(at 161.29 99.06 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5223,12 +5137,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "9c7512c1-dd6d-4863-ac73-d47e6a08950c")
+			(uuid "f33ff401-f45f-4f8f-a213-ddf5293d70ca")
 		)
 		(instances
 			(project "SUMEC_MK_IV"
 				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/a907f0f2-2950-481d-8037-7b9f13f2e9c5"
-					(reference "TP2")
+					(reference "TP4")
 					(unit 1)
 				)
 			)
