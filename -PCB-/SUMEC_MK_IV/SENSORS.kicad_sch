@@ -11712,7 +11712,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "sumec-smdV2_library:TSOP"
+		(property "Footprint" "sumec_brd:TSOP"
 			(at 83.82 70.485 0)
 			(effects
 				(font

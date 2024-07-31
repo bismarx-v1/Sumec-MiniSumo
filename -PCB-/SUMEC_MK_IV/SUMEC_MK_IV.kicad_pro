@@ -127,7 +127,7 @@
         "min_silk_clearance": 0.0,
         "min_text_height": 0.1,
         "min_text_thickness": 0.01,
-        "min_through_hole_diameter": 0.508,
+        "min_through_hole_diameter": 0.3,
         "min_track_width": 0.0,
         "min_via_annular_width": 0.1,
         "min_via_diameter": 0.2,
@@ -179,13 +179,19 @@
       ],
       "track_widths": [
         0.0,
+        0.0,
         0.1,
         0.15,
         0.2,
         0.25,
+        0.3,
+        0.35,
+        0.4,
         0.45,
         0.5,
-        1.0
+        1.0,
+        2.0,
+        2.54
       ],
       "tuning_pattern_settings": {
         "diff_pair_defaults": {
@@ -224,11 +230,27 @@
         },
         {
           "diameter": 0.4,
+          "drill": 0.2
+        },
+        {
+          "diameter": 0.4,
           "drill": 0.3
         },
         {
           "diameter": 0.5,
           "drill": 0.3
+        },
+        {
+          "diameter": 0.6,
+          "drill": 0.3
+        },
+        {
+          "diameter": 0.8,
+          "drill": 0.4
+        },
+        {
+          "diameter": 1.0,
+          "drill": 0.5
         },
         {
           "diameter": 3.0,

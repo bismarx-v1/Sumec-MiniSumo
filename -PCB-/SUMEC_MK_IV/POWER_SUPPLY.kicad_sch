@@ -6554,7 +6554,7 @@
 	)
 	(text "USE LDO OR BUCK FOR 3V3"
 		(exclude_from_sim no)
-		(at 242.57 19.685 0)
+		(at 238.125 20.955 0)
 		(effects
 			(font
 				(size 3 3)
