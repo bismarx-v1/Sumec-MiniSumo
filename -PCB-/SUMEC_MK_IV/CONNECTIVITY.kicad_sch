@@ -6,8 +6,8 @@
 	(paper "A4")
 	(title_block
 		(title "SUMEC_MK_IV")
-		(date "2024-07-15")
-		(rev "v3.0.0")
+		(date "2024-08-05")
+		(rev "v3.0.9")
 		(company "SPS NA PROSEKU")
 		(comment 1 "Made in Prague, Czech Republic")
 		(comment 2 "CONTACT: Savva Popov, menmenson09@gmail.com, +420 605 570 366")
@@ -15,6 +15,166 @@
 		(comment 4 "SUMEC MK IV aka SMD-V3 board")
 	)
 	(lib_symbols
+		(symbol "Connector:Conn_01x02_Pin"
+			(pin_names
+				(offset 1.016) hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "J"
+				(at 0 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Conn_01x02_Pin"
+				(at 0 -5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Generic connector, single row, 01x02, script generated"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "connector"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "Connector*:*_1x??_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "Conn_01x02_Pin_1_1"
+				(polyline
+					(pts
+						(xy 1.27 -2.54) (xy 0.8636 -2.54)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 0) (xy 0.8636 0)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start 0.8636 -2.413)
+					(end 0 -2.667)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(rectangle
+					(start 0.8636 0.127)
+					(end 0 -0.127)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(pin passive line
+					(at 5.08 0 180)
+					(length 3.81)
+					(name "Pin_1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 -2.54 180)
+					(length 3.81)
+					(name "Pin_2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
 		(symbol "Device:C"
 			(pin_numbers hide)
 			(pin_names
@@ -2049,36 +2209,34 @@
 		)
 	)
 	(junction
-		(at 222.25 99.06)
+		(at 217.17 72.39)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "2987c45c-d255-4845-a210-ac343d11941b")
 	)
-	(junction
-		(at 118.11 109.22)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "414a2461-e65b-4093-b88b-ec8732e432e7")
+	(no_connect
+		(at 120.65 80.01)
+		(uuid "129e0372-2a66-41b2-8aec-a88aa23b6dd2")
 	)
 	(no_connect
-		(at 125.73 101.6)
+		(at 120.65 74.93)
 		(uuid "2fc5aa1b-9fac-4acd-b0d8-d7280504a110")
 	)
 	(no_connect
-		(at 162.56 93.98)
+		(at 157.48 67.31)
 		(uuid "49ff4ab3-01a0-43d0-9870-e9b8e2e3f977")
 	)
 	(no_connect
-		(at 125.73 93.98)
+		(at 120.65 67.31)
 		(uuid "93b62f91-657a-4076-8106-c780b6032991")
 	)
 	(no_connect
-		(at 162.56 101.6)
+		(at 157.48 74.93)
 		(uuid "98b09599-13e1-4b7d-afb1-c82bf9fc0591")
 	)
 	(wire
 		(pts
-			(xy 125.73 93.98) (xy 127 93.98)
+			(xy 120.65 67.31) (xy 121.92 67.31)
 		)
 		(stroke
 			(width 0)
@@ -2088,7 +2246,7 @@
 	)
 	(wire
 		(pts
-			(xy 170.18 111.76) (xy 171.45 111.76)
+			(xy 165.1 85.09) (xy 166.37 85.09)
 		)
 		(stroke
 			(width 0)
@@ -2098,7 +2256,7 @@
 	)
 	(wire
 		(pts
-			(xy 118.11 109.22) (xy 127 109.22)
+			(xy 115.57 82.55) (xy 121.92 82.55)
 		)
 		(stroke
 			(width 0)
@@ -2108,7 +2266,7 @@
 	)
 	(wire
 		(pts
-			(xy 125.73 96.52) (xy 127 96.52)
+			(xy 120.65 69.85) (xy 121.92 69.85)
 		)
 		(stroke
 			(width 0)
@@ -2118,17 +2276,7 @@
 	)
 	(wire
 		(pts
-			(xy 118.11 106.68) (xy 118.11 109.22)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "23713e16-fa79-4086-be10-41a4f47f2713")
-	)
-	(wire
-		(pts
-			(xy 222.25 99.06) (xy 220.98 99.06)
+			(xy 217.17 72.39) (xy 215.9 72.39)
 		)
 		(stroke
 			(width 0)
@@ -2138,7 +2286,7 @@
 	)
 	(wire
 		(pts
-			(xy 170.18 86.36) (xy 171.45 86.36)
+			(xy 165.1 59.69) (xy 166.37 59.69)
 		)
 		(stroke
 			(width 0)
@@ -2148,7 +2296,7 @@
 	)
 	(wire
 		(pts
-			(xy 179.07 111.76) (xy 180.34 111.76)
+			(xy 173.99 85.09) (xy 175.26 85.09)
 		)
 		(stroke
 			(width 0)
@@ -2158,7 +2306,7 @@
 	)
 	(wire
 		(pts
-			(xy 179.07 86.36) (xy 180.34 86.36)
+			(xy 173.99 59.69) (xy 175.26 59.69)
 		)
 		(stroke
 			(width 0)
@@ -2168,7 +2316,7 @@
 	)
 	(wire
 		(pts
-			(xy 179.07 99.06) (xy 180.34 99.06)
+			(xy 173.99 72.39) (xy 175.26 72.39)
 		)
 		(stroke
 			(width 0)
@@ -2178,7 +2326,7 @@
 	)
 	(wire
 		(pts
-			(xy 223.52 99.06) (xy 222.25 99.06)
+			(xy 218.44 72.39) (xy 217.17 72.39)
 		)
 		(stroke
 			(width 0)
@@ -2188,7 +2336,7 @@
 	)
 	(wire
 		(pts
-			(xy 163.83 99.06) (xy 162.56 99.06)
+			(xy 158.75 72.39) (xy 157.48 72.39)
 		)
 		(stroke
 			(width 0)
@@ -2198,7 +2346,7 @@
 	)
 	(wire
 		(pts
-			(xy 123.19 88.9) (xy 127 88.9)
+			(xy 118.11 62.23) (xy 121.92 62.23)
 		)
 		(stroke
 			(width 0)
@@ -2208,7 +2356,17 @@
 	)
 	(wire
 		(pts
-			(xy 163.83 96.52) (xy 162.56 96.52)
+			(xy 120.65 80.01) (xy 121.92 80.01)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6b00afc6-5bc9-431b-801a-acfa4624b55b")
+	)
+	(wire
+		(pts
+			(xy 158.75 69.85) (xy 157.48 69.85)
 		)
 		(stroke
 			(width 0)
@@ -2218,7 +2376,17 @@
 	)
 	(wire
 		(pts
-			(xy 125.73 101.6) (xy 127 101.6)
+			(xy 116.84 139.7) (xy 115.57 139.7)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "711b5520-a4d1-41b6-b3ce-b9351db322b1")
+	)
+	(wire
+		(pts
+			(xy 120.65 74.93) (xy 121.92 74.93)
 		)
 		(stroke
 			(width 0)
@@ -2228,7 +2396,7 @@
 	)
 	(wire
 		(pts
-			(xy 222.25 111.76) (xy 220.98 111.76)
+			(xy 217.17 85.09) (xy 215.9 85.09)
 		)
 		(stroke
 			(width 0)
@@ -2238,7 +2406,7 @@
 	)
 	(wire
 		(pts
-			(xy 220.98 86.36) (xy 222.25 86.36)
+			(xy 215.9 59.69) (xy 217.17 59.69)
 		)
 		(stroke
 			(width 0)
@@ -2248,7 +2416,7 @@
 	)
 	(wire
 		(pts
-			(xy 118.11 111.76) (xy 118.11 109.22)
+			(xy 115.57 85.09) (xy 115.57 82.55)
 		)
 		(stroke
 			(width 0)
@@ -2258,7 +2426,7 @@
 	)
 	(wire
 		(pts
-			(xy 111.76 88.9) (xy 115.57 88.9)
+			(xy 106.68 62.23) (xy 110.49 62.23)
 		)
 		(stroke
 			(width 0)
@@ -2268,7 +2436,7 @@
 	)
 	(wire
 		(pts
-			(xy 222.25 100.33) (xy 222.25 99.06)
+			(xy 217.17 73.66) (xy 217.17 72.39)
 		)
 		(stroke
 			(width 0)
@@ -2278,17 +2446,7 @@
 	)
 	(wire
 		(pts
-			(xy 118.11 106.68) (xy 119.38 106.68)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ab4976f9-7b1e-4cb7-bbfa-ccbbd0a61a93")
-	)
-	(wire
-		(pts
-			(xy 125.73 99.06) (xy 127 99.06)
+			(xy 120.65 72.39) (xy 121.92 72.39)
 		)
 		(stroke
 			(width 0)
@@ -2296,9 +2454,32 @@
 		)
 		(uuid "bacc0f78-db24-4fbd-8c20-05bf727c690d")
 	)
+	(wire
+		(pts
+			(xy 116.84 142.24) (xy 115.57 142.24)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d6888eb7-6e9f-46a3-a539-5e416cde6598")
+	)
 	(rectangle
-		(start 54.61 68.58)
-		(end 235.585 125.73)
+		(start 49.53 112.395)
+		(end 165.735 159.385)
+		(stroke
+			(width 0)
+			(type dash)
+			(color 0 0 0 1)
+		)
+		(fill
+			(type none)
+		)
+		(uuid 4500dec2-70ac-4cab-b83d-c2561cd67230)
+	)
+	(rectangle
+		(start 49.53 41.91)
+		(end 230.505 99.06)
 		(stroke
 			(width 0)
 			(type dash)
@@ -2311,7 +2492,7 @@
 	)
 	(text "VBUS Switch already has a Sch Diode\nsolder 0R resistor if not needed\n1206"
 		(exclude_from_sim no)
-		(at 126.365 80.01 0)
+		(at 121.285 53.34 0)
 		(effects
 			(font
 				(size 1.5 1.5)
@@ -2322,7 +2503,7 @@
 	)
 	(text "USB"
 		(exclude_from_sim no)
-		(at 53.975 66.04 0)
+		(at 48.895 39.37 0)
 		(effects
 			(font
 				(size 5 5)
@@ -2336,7 +2517,7 @@
 	)
 	(text "GPIO	USB\n20		D+ (green)\n19		D- (white)\nGND	GND (black)\nVBUS	+5V (red)"
 		(exclude_from_sim no)
-		(at 57.785 107.315 0)
+		(at 52.705 80.645 0)
 		(effects
 			(font
 				(face "Bahnschrift")
@@ -2349,7 +2530,7 @@
 	)
 	(text "USB CONNECTOR"
 		(exclude_from_sim no)
-		(at 132.08 114.3 0)
+		(at 127 87.63 0)
 		(effects
 			(font
 				(face "Bahnschrift")
@@ -2361,7 +2542,7 @@
 	)
 	(text "USB Type-C Connector\n\nData transfer USB connector connected\nto ESP32 using CDC method"
 		(exclude_from_sim no)
-		(at 57.785 84.455 0)
+		(at 52.705 57.785 0)
 		(effects
 			(font
 				(size 2 2)
@@ -2372,9 +2553,23 @@
 		)
 		(uuid "ba1792b7-b2b5-430d-9c14-ddca7ec3b53c")
 	)
+	(text "UART"
+		(exclude_from_sim no)
+		(at 49.53 110.49 0)
+		(effects
+			(font
+				(size 5 5)
+				(thickness 1.2)
+				(bold yes)
+				(color 0 0 0 1)
+			)
+			(justify left)
+		)
+		(uuid "bd131cd2-8ff1-4551-9d8e-69e72b634c8a")
+	)
 	(text "ESD PROTECTION"
 		(exclude_from_sim no)
-		(at 185.42 116.84 0)
+		(at 180.34 90.17 0)
 		(effects
 			(font
 				(face "Bahnschrift")
@@ -2384,9 +2579,33 @@
 		)
 		(uuid "dcbf812c-abe6-4ccc-bbb6-4bb626d52879")
 	)
+	(global_label "TX"
+		(shape output)
+		(at 116.84 139.7 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(face "Bahnschrift")
+				(size 1 1)
+				(color 0 0 0 1)
+			)
+			(justify left)
+		)
+		(uuid "1db4bace-4de0-43fc-bcc3-bb5874a30c6a")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 120.5247 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "D+ IN"
 		(shape output)
-		(at 163.83 96.52 0)
+		(at 158.75 69.85 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2398,7 +2617,7 @@
 		)
 		(uuid "20924748-2ab8-46f5-8d8f-c0e306211cc1")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 169.4032 96.52 0)
+			(at 164.3232 69.85 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2410,7 +2629,7 @@
 	)
 	(global_label "D- IN"
 		(shape input)
-		(at 170.18 111.76 180)
+		(at 165.1 85.09 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2422,7 +2641,7 @@
 		)
 		(uuid "2257b2b4-0ab6-4f42-864f-8a2742076487")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 163.3683 111.76 0)
+			(at 158.2883 85.09 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2434,7 +2653,7 @@
 	)
 	(global_label "VBUS 5V"
 		(shape output)
-		(at 111.76 88.9 180)
+		(at 106.68 62.23 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2446,7 +2665,7 @@
 		)
 		(uuid "304db748-11b1-4847-89a6-3f1ed216ea57")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 104.1626 88.9 0)
+			(at 99.0826 62.23 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2458,7 +2677,7 @@
 	)
 	(global_label "D+"
 		(shape output)
-		(at 222.25 86.36 0)
+		(at 217.17 59.69 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2470,7 +2689,7 @@
 		)
 		(uuid "346513a2-a58d-48b4-9bd3-36a72535ffd4")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 226.0832 86.36 0)
+			(at 221.0032 59.69 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2482,7 +2701,7 @@
 	)
 	(global_label "VBUS 5V"
 		(shape input)
-		(at 223.52 99.06 0)
+		(at 218.44 72.39 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2494,7 +2713,7 @@
 		)
 		(uuid "3ab88645-baad-461a-91d5-e1e97fc23162")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 232.2364 99.06 0)
+			(at 227.1564 72.39 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2506,7 +2725,7 @@
 	)
 	(global_label "D+ IN"
 		(shape input)
-		(at 170.18 86.36 180)
+		(at 165.1 59.69 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2518,7 +2737,7 @@
 		)
 		(uuid "3f1ef363-27b2-4fb4-a28b-058ab8edba15")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 163.3683 86.36 0)
+			(at 158.2883 59.69 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2530,7 +2749,7 @@
 	)
 	(global_label "D- IN"
 		(shape output)
-		(at 125.73 96.52 180)
+		(at 120.65 69.85 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2542,7 +2761,7 @@
 		)
 		(uuid "49e06cd4-41b0-4cc1-9077-f30cf18ed061")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 120.2252 96.52 0)
+			(at 115.1452 69.85 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2554,7 +2773,7 @@
 	)
 	(global_label "D- IN"
 		(shape output)
-		(at 163.83 99.06 0)
+		(at 158.75 72.39 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2566,7 +2785,7 @@
 		)
 		(uuid "ce0929ac-f50b-4953-951b-a8140f867bbf")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 169.3348 99.06 0)
+			(at 164.2548 72.39 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2578,7 +2797,7 @@
 	)
 	(global_label "D-"
 		(shape output)
-		(at 222.25 111.76 0)
+		(at 217.17 85.09 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2590,7 +2809,31 @@
 		)
 		(uuid "e4a8e306-f909-4d12-85f5-104152087751")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 226.0148 111.76 0)
+			(at 220.9348 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "RX"
+		(shape output)
+		(at 116.84 142.24 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(face "Bahnschrift")
+				(size 1 1)
+				(color 0 0 0 1)
+			)
+			(justify left)
+		)
+		(uuid "e51c6080-a93f-4e75-bc0b-e701db0b70af")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 120.722 142.24 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2602,7 +2845,7 @@
 	)
 	(global_label "D+ IN"
 		(shape output)
-		(at 125.73 99.06 180)
+		(at 120.65 72.39 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2614,7 +2857,7 @@
 		)
 		(uuid "ff31ba0f-ef4f-48e1-bb65-65724faa9f23")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 120.1568 99.06 0)
+			(at 115.0768 72.39 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2626,7 +2869,7 @@
 	)
 	(symbol
 		(lib_id "sumec_library:USBLC6-2SC6")
-		(at 200.66 99.06 0)
+		(at 195.58 72.39 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2634,8 +2877,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "02f14d0d-1d1e-4812-9440-80580efbfc96")
-		(property "Reference" "U5"
-			(at 200.66 80.01 0)
+		(property "Reference" "U4"
+			(at 195.58 53.34 0)
 			(effects
 				(font
 					(face "Bahnschrift")
@@ -2644,7 +2887,7 @@
 			)
 		)
 		(property "Value" "USBLC6-2SC6"
-			(at 200.66 82.55 0)
+			(at 195.58 55.88 0)
 			(effects
 				(font
 					(face "Bahnschrift")
@@ -2653,7 +2896,7 @@
 			)
 		)
 		(property "Footprint" "Package_TO_SOT_SMD:TSOT-23-6_HandSoldering"
-			(at 200.66 99.06 0)
+			(at 195.58 72.39 0)
 			(effects
 				(font
 					(face "Bahnschrift")
@@ -2664,7 +2907,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 200.66 99.06 0)
+			(at 195.58 72.39 0)
 			(effects
 				(font
 					(face "Bahnschrift")
@@ -2674,7 +2917,7 @@
 			)
 		)
 		(property "Description" "\n17V Clamp 5A (8/20µs) Ipp Tvs Diode Surface Mount SOT-23-6\n"
-			(at 208.28 99.06 0)
+			(at 203.2 72.39 0)
 			(effects
 				(font
 					(face "Bahnschrift")
@@ -2685,7 +2928,7 @@
 			)
 		)
 		(property "MF" "STMicroelectronics"
-			(at 200.66 99.06 0)
+			(at 195.58 72.39 0)
 			(effects
 				(font
 					(face "Bahnschrift")
@@ -2696,7 +2939,7 @@
 			)
 		)
 		(property "PURCHASE-URL" "https://pricing.snapeda.com/search/part/USBLC6-2SC6/?ref=eda"
-			(at 208.28 99.06 0)
+			(at 203.2 72.39 0)
 			(effects
 				(font
 					(face "Bahnschrift")
@@ -2707,7 +2950,7 @@
 			)
 		)
 		(property "PACKAGE" "SOT-23-6 STMicroelectronics"
-			(at 200.66 99.06 0)
+			(at 195.58 72.39 0)
 			(effects
 				(font
 					(face "Bahnschrift")
@@ -2718,7 +2961,7 @@
 			)
 		)
 		(property "PRICE" "None"
-			(at 200.66 99.06 0)
+			(at 195.58 72.39 0)
 			(effects
 				(font
 					(face "Bahnschrift")
@@ -2729,7 +2972,7 @@
 			)
 		)
 		(property "Package" "SOT-23-6 STMicroelectronics"
-			(at 200.66 99.06 0)
+			(at 195.58 72.39 0)
 			(effects
 				(font
 					(face "Bahnschrift")
@@ -2740,7 +2983,7 @@
 			)
 		)
 		(property "Check_prices" "https://www.snapeda.com/parts/USBLC6-2SC6/STMicroelectronics/view-part/?ref=eda"
-			(at 208.28 99.06 0)
+			(at 203.2 72.39 0)
 			(effects
 				(font
 					(face "Bahnschrift")
@@ -2751,7 +2994,7 @@
 			)
 		)
 		(property "Price" "None"
-			(at 200.66 99.06 0)
+			(at 195.58 72.39 0)
 			(effects
 				(font
 					(face "Bahnschrift")
@@ -2762,7 +3005,7 @@
 			)
 		)
 		(property "SnapEDA_Link" "https://www.snapeda.com/parts/USBLC6-2SC6/STMicroelectronics/view-part/?ref=snap"
-			(at 208.28 99.06 0)
+			(at 203.2 72.39 0)
 			(effects
 				(font
 					(face "Bahnschrift")
@@ -2773,7 +3016,7 @@
 			)
 		)
 		(property "MP" "USBLC6-2SC6"
-			(at 200.66 99.06 0)
+			(at 195.58 72.39 0)
 			(effects
 				(font
 					(face "Bahnschrift")
@@ -2784,7 +3027,7 @@
 			)
 		)
 		(property "Purchase-URL" "https://www.snapeda.com/api/url_track_click_mouser/?unipart_id=231887&manufacturer=STMicroelectronics&part_name=USBLC6-2SC6&search_term=None"
-			(at 208.28 99.06 0)
+			(at 203.2 72.39 0)
 			(effects
 				(font
 					(face "Bahnschrift")
@@ -2795,7 +3038,7 @@
 			)
 		)
 		(property "Availability" "In Stock"
-			(at 200.66 99.06 0)
+			(at 195.58 72.39 0)
 			(effects
 				(font
 					(face "Bahnschrift")
@@ -2806,7 +3049,7 @@
 			)
 		)
 		(property "AVAILABILITY" "In Stock"
-			(at 200.66 99.06 0)
+			(at 195.58 72.39 0)
 			(effects
 				(font
 					(face "Bahnschrift")
@@ -2817,7 +3060,7 @@
 			)
 		)
 		(property "DESCRIPTION" "17V Clamp 5A (8/20µs) Ipp Tvs Diode Surface Mount SOT-23-6"
-			(at 208.28 99.06 0)
+			(at 203.2 72.39 0)
 			(effects
 				(font
 					(face "Bahnschrift")
@@ -2848,7 +3091,7 @@
 		(instances
 			(project "SUMEC_MK_IV"
 				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/ce2ae977-07a3-41c1-b3e1-68b5a1d5517b"
-					(reference "U5")
+					(reference "U4")
 					(unit 1)
 				)
 			)
@@ -2856,15 +3099,15 @@
 	)
 	(symbol
 		(lib_id "Device:D_Schottky")
-		(at 119.38 88.9 0)
+		(at 114.3 62.23 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(uuid "2b606e8c-1a1a-4ea3-bb4d-35984218a463")
-		(property "Reference" "D8"
-			(at 119.38 83.185 0)
+		(property "Reference" "D7"
+			(at 114.3 56.515 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2872,7 +3115,7 @@
 			)
 		)
 		(property "Value" "D_Schottky"
-			(at 119.38 85.725 0)
+			(at 114.3 59.055 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2880,7 +3123,7 @@
 			)
 		)
 		(property "Footprint" "Diode_SMD:D_1206_3216Metric_Pad1.42x1.75mm_HandSolder"
-			(at 119.38 88.9 0)
+			(at 114.3 62.23 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2889,7 +3132,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 119.38 88.9 0)
+			(at 114.3 62.23 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2898,7 +3141,7 @@
 			)
 		)
 		(property "Description" "Schottky diode"
-			(at 119.38 88.9 0)
+			(at 114.3 62.23 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2915,7 +3158,7 @@
 		(instances
 			(project "SUMEC_MK_IV"
 				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/ce2ae977-07a3-41c1-b3e1-68b5a1d5517b"
-					(reference "D8")
+					(reference "D7")
 					(unit 1)
 				)
 			)
@@ -2923,15 +3166,15 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 175.26 111.76 90)
+		(at 170.18 85.09 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(uuid "2d02828a-fa1b-4270-95bf-ab39675ebb93")
-		(property "Reference" "R25"
-			(at 172.72 109.22 90)
+		(property "Reference" "R18"
+			(at 167.64 82.55 90)
 			(effects
 				(font
 					(face "Bahnschrift")
@@ -2941,7 +3184,7 @@
 			)
 		)
 		(property "Value" "15R"
-			(at 172.72 114.3 90)
+			(at 167.64 87.63 90)
 			(effects
 				(font
 					(face "Bahnschrift")
@@ -2951,7 +3194,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
-			(at 175.26 113.538 90)
+			(at 170.18 86.868 90)
 			(effects
 				(font
 					(face "Bahnschrift")
@@ -2961,7 +3204,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 175.26 111.76 0)
+			(at 170.18 85.09 0)
 			(effects
 				(font
 					(face "Bahnschrift")
@@ -2971,7 +3214,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 175.26 111.76 0)
+			(at 170.18 85.09 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2988,7 +3231,7 @@
 		(instances
 			(project "SUMEC_MK_IV"
 				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/ce2ae977-07a3-41c1-b3e1-68b5a1d5517b"
-					(reference "R25")
+					(reference "R18")
 					(unit 1)
 				)
 			)
@@ -2996,15 +3239,15 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 175.26 86.36 90)
+		(at 170.18 59.69 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(uuid "5452fd6b-8723-4ef9-b2ff-3a890afc48d0")
-		(property "Reference" "R24"
-			(at 172.72 83.82 90)
+		(property "Reference" "R17"
+			(at 167.64 57.15 90)
 			(effects
 				(font
 					(face "Bahnschrift")
@@ -3014,7 +3257,7 @@
 			)
 		)
 		(property "Value" "15R"
-			(at 172.72 88.9 90)
+			(at 167.64 62.23 90)
 			(effects
 				(font
 					(face "Bahnschrift")
@@ -3024,7 +3267,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
-			(at 175.26 88.138 90)
+			(at 170.18 61.468 90)
 			(effects
 				(font
 					(face "Bahnschrift")
@@ -3034,7 +3277,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 175.26 86.36 0)
+			(at 170.18 59.69 0)
 			(effects
 				(font
 					(face "Bahnschrift")
@@ -3044,7 +3287,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 175.26 86.36 0)
+			(at 170.18 59.69 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3061,7 +3304,7 @@
 		(instances
 			(project "SUMEC_MK_IV"
 				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/ce2ae977-07a3-41c1-b3e1-68b5a1d5517b"
-					(reference "R24")
+					(reference "R17")
 					(unit 1)
 				)
 			)
@@ -3069,7 +3312,7 @@
 	)
 	(symbol
 		(lib_id "sumec_library:TYPE-C-31-M-12")
-		(at 144.78 99.06 0)
+		(at 139.7 72.39 0)
 		(mirror y)
 		(unit 1)
 		(exclude_from_sim no)
@@ -3077,8 +3320,8 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "69832616-2114-47f2-9461-6382d0501413")
-		(property "Reference" "J12"
-			(at 144.78 82.55 0)
+		(property "Reference" "J13"
+			(at 139.7 55.88 0)
 			(effects
 				(font
 					(face "Bahnschrift")
@@ -3087,7 +3330,7 @@
 			)
 		)
 		(property "Value" "TYPE-C-31-M-12"
-			(at 144.78 85.09 0)
+			(at 139.7 58.42 0)
 			(effects
 				(font
 					(face "Bahnschrift")
@@ -3096,7 +3339,7 @@
 			)
 		)
 		(property "Footprint" "sumec-smdV2_library:USB_Type_C"
-			(at 144.78 99.06 0)
+			(at 139.7 72.39 0)
 			(effects
 				(font
 					(face "Bahnschrift")
@@ -3107,7 +3350,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 144.78 99.06 0)
+			(at 139.7 72.39 0)
 			(effects
 				(font
 					(face "Bahnschrift")
@@ -3117,7 +3360,7 @@
 			)
 		)
 		(property "Description" "\nUSB Connectors 24 Receptacle 1 8.94*7.3mm RoHS\n"
-			(at 144.78 99.06 0)
+			(at 139.7 72.39 0)
 			(effects
 				(font
 					(face "Bahnschrift")
@@ -3128,7 +3371,7 @@
 			)
 		)
 		(property "MF" "HRO Electronics Co., Ltd."
-			(at 144.78 99.06 0)
+			(at 139.7 72.39 0)
 			(effects
 				(font
 					(face "Bahnschrift")
@@ -3139,7 +3382,7 @@
 			)
 		)
 		(property "MAXIMUM_PACKAGE_HEIGHT" "3.26 mm"
-			(at 144.78 99.06 0)
+			(at 139.7 72.39 0)
 			(effects
 				(font
 					(face "Bahnschrift")
@@ -3150,7 +3393,7 @@
 			)
 		)
 		(property "Package" "Package"
-			(at 144.78 99.06 0)
+			(at 139.7 72.39 0)
 			(effects
 				(font
 					(face "Bahnschrift")
@@ -3161,7 +3404,7 @@
 			)
 		)
 		(property "Price" "None"
-			(at 144.78 99.06 0)
+			(at 139.7 72.39 0)
 			(effects
 				(font
 					(face "Bahnschrift")
@@ -3172,7 +3415,7 @@
 			)
 		)
 		(property "Check_prices" "https://www.snapeda.com/parts/TYPE-C-31-M-12/HRO+Electronics+Co.%252C+Ltd./view-part/?ref=eda"
-			(at 144.78 99.06 0)
+			(at 139.7 72.39 0)
 			(effects
 				(font
 					(face "Bahnschrift")
@@ -3183,7 +3426,7 @@
 			)
 		)
 		(property "STANDARD" "Manufacturer Recommendations"
-			(at 144.78 99.06 0)
+			(at 139.7 72.39 0)
 			(effects
 				(font
 					(face "Bahnschrift")
@@ -3194,7 +3437,7 @@
 			)
 		)
 		(property "PARTREV" "2020.12.08"
-			(at 144.78 99.06 0)
+			(at 139.7 72.39 0)
 			(effects
 				(font
 					(face "Bahnschrift")
@@ -3205,7 +3448,7 @@
 			)
 		)
 		(property "SnapEDA_Link" "https://www.snapeda.com/parts/TYPE-C-31-M-12/HRO+Electronics+Co.%252C+Ltd./view-part/?ref=snap"
-			(at 144.78 99.06 0)
+			(at 139.7 72.39 0)
 			(effects
 				(font
 					(face "Bahnschrift")
@@ -3216,7 +3459,7 @@
 			)
 		)
 		(property "MP" "TYPE-C-31-M-12"
-			(at 144.78 99.06 0)
+			(at 139.7 72.39 0)
 			(effects
 				(font
 					(face "Bahnschrift")
@@ -3227,7 +3470,7 @@
 			)
 		)
 		(property "SNAPEDA_PN" "TYPE-C-31-M-12"
-			(at 144.78 99.06 0)
+			(at 139.7 72.39 0)
 			(effects
 				(font
 					(face "Bahnschrift")
@@ -3238,7 +3481,7 @@
 			)
 		)
 		(property "Availability" "Not in stock"
-			(at 144.78 99.06 0)
+			(at 139.7 72.39 0)
 			(effects
 				(font
 					(face "Bahnschrift")
@@ -3249,7 +3492,7 @@
 			)
 		)
 		(property "MANUFACTURER" "HRO Electronics Co., Ltd."
-			(at 144.78 99.06 0)
+			(at 139.7 72.39 0)
 			(effects
 				(font
 					(face "Bahnschrift")
@@ -3310,7 +3553,7 @@
 		(instances
 			(project "SUMEC_MK_IV"
 				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/ce2ae977-07a3-41c1-b3e1-68b5a1d5517b"
-					(reference "J12")
+					(reference "J13")
 					(unit 1)
 				)
 			)
@@ -3318,7 +3561,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 222.25 107.95 0)
+		(at 217.17 81.28 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -3326,8 +3569,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "7759fdab-cbb1-4e87-be50-9ef0bc63ceb6")
-		(property "Reference" "#PWR074"
-			(at 222.25 114.3 0)
+		(property "Reference" "#PWR070"
+			(at 217.17 87.63 0)
 			(effects
 				(font
 					(face "Bahnschrift")
@@ -3337,7 +3580,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 221.615 111.76 90)
+			(at 216.535 85.09 90)
 			(effects
 				(font
 					(face "Bahnschrift")
@@ -3348,7 +3591,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 222.25 107.95 0)
+			(at 217.17 81.28 0)
 			(effects
 				(font
 					(face "Bahnschrift")
@@ -3358,7 +3601,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 222.25 107.95 0)
+			(at 217.17 81.28 0)
 			(effects
 				(font
 					(face "Bahnschrift")
@@ -3368,7 +3611,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 222.25 107.95 0)
+			(at 217.17 81.28 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3382,7 +3625,76 @@
 		(instances
 			(project "SUMEC_MK_IV"
 				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/ce2ae977-07a3-41c1-b3e1-68b5a1d5517b"
-					(reference "#PWR074")
+					(reference "#PWR070")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:Conn_01x02_Pin")
+		(at 110.49 139.7 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "988944b9-c43d-4bd8-80f7-2f1316ae1149")
+		(property "Reference" "J12"
+			(at 111.125 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Conn_01x02_Pin"
+			(at 111.125 137.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_2Pads_Pitch2.54mm_Drill0.8mm"
+			(at 110.49 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 110.49 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x02, script generated"
+			(at 110.49 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "bb658a12-cb73-427a-9f52-210ee9f2a65f")
+		)
+		(pin "2"
+			(uuid "25594b75-6052-4c1a-9248-e2d1515671bb")
+		)
+		(instances
+			(project ""
+				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/ce2ae977-07a3-41c1-b3e1-68b5a1d5517b"
+					(reference "J12")
 					(unit 1)
 				)
 			)
@@ -3390,15 +3702,15 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 222.25 104.14 0)
+		(at 217.17 77.47 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(uuid "a0832edc-9094-4b13-bfef-2e69cf5bed42")
-		(property "Reference" "C25"
-			(at 226.06 104.14 0)
+		(property "Reference" "C23"
+			(at 220.98 77.47 0)
 			(effects
 				(font
 					(face "Bahnschrift")
@@ -3408,7 +3720,7 @@
 			)
 		)
 		(property "Value" "100nF"
-			(at 226.06 106.68 0)
+			(at 220.98 80.01 0)
 			(effects
 				(font
 					(face "Bahnschrift")
@@ -3418,7 +3730,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
-			(at 223.2152 107.95 0)
+			(at 218.1352 81.28 0)
 			(effects
 				(font
 					(face "Bahnschrift")
@@ -3428,7 +3740,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 222.25 104.14 0)
+			(at 217.17 77.47 0)
 			(effects
 				(font
 					(face "Bahnschrift")
@@ -3438,7 +3750,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 222.25 104.14 0)
+			(at 217.17 77.47 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3455,78 +3767,7 @@
 		(instances
 			(project "SUMEC_MK_IV"
 				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/ce2ae977-07a3-41c1-b3e1-68b5a1d5517b"
-					(reference "C25")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 123.19 106.68 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "a401f64b-0bdb-4348-acf1-eb9eec5fc92a")
-		(property "Reference" "R23"
-			(at 121.92 104.14 90)
-			(effects
-				(font
-					(face "Bahnschrift")
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "0R"
-			(at 124.46 104.14 90)
-			(effects
-				(font
-					(face "Bahnschrift")
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
-			(at 123.19 104.902 90)
-			(effects
-				(font
-					(face "Bahnschrift")
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 123.19 106.68 0)
-			(effects
-				(font
-					(face "Bahnschrift")
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 123.19 106.68 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "97b27e93-cc30-4c40-942b-0a9a42f3ab7a")
-		)
-		(pin "2"
-			(uuid "602eb4b6-674b-4072-9698-a6c4519d338d")
-		)
-		(instances
-			(project "SUMEC_MK_IV"
-				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/ce2ae977-07a3-41c1-b3e1-68b5a1d5517b"
-					(reference "R23")
+					(reference "C23")
 					(unit 1)
 				)
 			)
@@ -3534,7 +3775,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 179.07 99.06 270)
+		(at 173.99 72.39 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -3542,8 +3783,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "cbdd9a63-4156-44af-940e-3d2a814aa458")
-		(property "Reference" "#PWR073"
-			(at 172.72 99.06 0)
+		(property "Reference" "#PWR069"
+			(at 167.64 72.39 0)
 			(effects
 				(font
 					(face "Bahnschrift")
@@ -3553,7 +3794,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 175.26 98.425 90)
+			(at 170.18 71.755 90)
 			(effects
 				(font
 					(face "Bahnschrift")
@@ -3564,7 +3805,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 179.07 99.06 0)
+			(at 173.99 72.39 0)
 			(effects
 				(font
 					(face "Bahnschrift")
@@ -3574,7 +3815,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 179.07 99.06 0)
+			(at 173.99 72.39 0)
 			(effects
 				(font
 					(face "Bahnschrift")
@@ -3584,7 +3825,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 179.07 99.06 0)
+			(at 173.99 72.39 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3598,7 +3839,7 @@
 		(instances
 			(project "SUMEC_MK_IV"
 				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/ce2ae977-07a3-41c1-b3e1-68b5a1d5517b"
-					(reference "#PWR073")
+					(reference "#PWR069")
 					(unit 1)
 				)
 			)
@@ -3606,7 +3847,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 118.11 111.76 0)
+		(at 115.57 85.09 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -3614,8 +3855,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "cd7eed79-7dad-4bf6-8a89-5b3322bb3c10")
-		(property "Reference" "#PWR072"
-			(at 118.11 118.11 0)
+		(property "Reference" "#PWR068"
+			(at 115.57 91.44 0)
 			(effects
 				(font
 					(face "Bahnschrift")
@@ -3625,7 +3866,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 117.475 115.57 90)
+			(at 114.935 88.9 90)
 			(effects
 				(font
 					(face "Bahnschrift")
@@ -3636,7 +3877,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 118.11 111.76 0)
+			(at 115.57 85.09 0)
 			(effects
 				(font
 					(face "Bahnschrift")
@@ -3646,7 +3887,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 118.11 111.76 0)
+			(at 115.57 85.09 0)
 			(effects
 				(font
 					(face "Bahnschrift")
@@ -3656,7 +3897,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 118.11 111.76 0)
+			(at 115.57 85.09 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3670,7 +3911,7 @@
 		(instances
 			(project "SUMEC_MK_IV"
 				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/ce2ae977-07a3-41c1-b3e1-68b5a1d5517b"
-					(reference "#PWR072")
+					(reference "#PWR068")
 					(unit 1)
 				)
 			)

@@ -6,8 +6,8 @@
 	(paper "A4")
 	(title_block
 		(title "SUMEC_MK_IV")
-		(date "2024-07-15")
-		(rev "v3.0.0")
+		(date "2024-08-05")
+		(rev "v3.0.9")
 		(company "SPS NA PROSEKU")
 		(comment 1 "Made in Prague, Czech Republic")
 		(comment 2 "CONTACT: Savva Popov, menmenson09@gmail.com, +420 605 570 366")
@@ -286,7 +286,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "3497e8cc-b8aa-4ff1-b675-96520df83219")
-		(property "Reference" "R27"
+		(property "Reference" "R20"
 			(at 147.32 83.82 90)
 			(effects
 				(font
@@ -340,7 +340,7 @@
 		(instances
 			(project "SUMEC_MK_IV"
 				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/ebfdffb9-be38-48cc-bdc4-81d227bad184"
-					(reference "R27")
+					(reference "R20")
 					(unit 1)
 				)
 			)
@@ -356,7 +356,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "544cdab8-185d-46f5-9b15-68257f9f7bfb")
-		(property "Reference" "R28"
+		(property "Reference" "R21"
 			(at 147.32 90.17 90)
 			(effects
 				(font
@@ -410,7 +410,7 @@
 		(instances
 			(project "SUMEC_MK_IV"
 				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/ebfdffb9-be38-48cc-bdc4-81d227bad184"
-					(reference "R28")
+					(reference "R21")
 					(unit 1)
 				)
 			)
@@ -426,7 +426,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "6a4b419a-2361-49ae-bfc4-b02ba7d7103a")
-		(property "Reference" "R29"
+		(property "Reference" "R22"
 			(at 147.32 96.52 90)
 			(effects
 				(font
@@ -480,7 +480,7 @@
 		(instances
 			(project "SUMEC_MK_IV"
 				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/ebfdffb9-be38-48cc-bdc4-81d227bad184"
-					(reference "R29")
+					(reference "R22")
 					(unit 1)
 				)
 			)
@@ -496,7 +496,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e042a586-09e7-42d8-83cd-acdeda654e72")
-		(property "Reference" "R30"
+		(property "Reference" "R23"
 			(at 147.32 102.87 90)
 			(effects
 				(font
@@ -550,7 +550,7 @@
 		(instances
 			(project "SUMEC_MK_IV"
 				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/ebfdffb9-be38-48cc-bdc4-81d227bad184"
-					(reference "R30")
+					(reference "R23")
 					(unit 1)
 				)
 			)
