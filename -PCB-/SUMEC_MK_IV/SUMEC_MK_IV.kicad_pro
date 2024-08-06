@@ -58,7 +58,16 @@
           "width": 0.0
         }
       ],
-      "drc_exclusions": [],
+      "drc_exclusions": [
+        "clearance|181835000|143985000|13f0b703-d8aa-4138-a516-ebaf59864d0f|534e4119-58fa-4cf2-ae71-aa411c633b56",
+        "clearance|181835000|144050000|13f0b703-d8aa-4138-a516-ebaf59864d0f|56c25bc7-300c-4010-a73c-d75005bc5dfc",
+        "clearance|182165000|142485000|894d3f0f-a48b-499e-8b14-8245f3e6d9d4|7d8ba9ba-1c96-4a3b-a580-3e2eac53d102",
+        "clearance|182165000|142485000|894d3f0f-a48b-499e-8b14-8245f3e6d9d4|a1dcd9e9-4f3d-4134-a9e9-e012e2ce884d",
+        "clearance|182165000|143985000|534e4119-58fa-4cf2-ae71-aa411c633b56|97dfd9ab-acd5-4fd0-b6ea-7db2a3fd2a55",
+        "clearance|182335000|143985000|534e4119-58fa-4cf2-ae71-aa411c633b56|b4541276-172d-4d63-96c3-681d9681895d",
+        "clearance|182665000|142485000|9497c59b-0271-4c98-b7b8-f3f964eb9e1f|894d3f0f-a48b-499e-8b14-8245f3e6d9d4",
+        "clearance|182665000|144050000|b4541276-172d-4d63-96c3-681d9681895d|56c25bc7-300c-4010-a73c-d75005bc5dfc"
+      ],
       "meta": {
         "version": 2
       },
@@ -116,20 +125,20 @@
       },
       "rules": {
         "max_error": 0.005,
-        "min_clearance": 0.01,
+        "min_clearance": 0.09,
         "min_connection": 0.01,
-        "min_copper_edge_clearance": 0.0,
-        "min_hole_clearance": 0.0,
-        "min_hole_to_hole": 0.0,
+        "min_copper_edge_clearance": 0.3,
+        "min_hole_clearance": 0.3,
+        "min_hole_to_hole": 0.5,
         "min_microvia_diameter": 0.2,
         "min_microvia_drill": 0.1,
-        "min_resolved_spokes": 2,
-        "min_silk_clearance": 0.0,
-        "min_text_height": 0.1,
-        "min_text_thickness": 0.01,
+        "min_resolved_spokes": 1,
+        "min_silk_clearance": 0.15,
+        "min_text_height": 0.7,
+        "min_text_thickness": 0.153,
         "min_through_hole_diameter": 0.1,
-        "min_track_width": 0.01,
-        "min_via_annular_width": 0.1,
+        "min_track_width": 0.09,
+        "min_via_annular_width": 0.13,
         "min_via_diameter": 0.2,
         "solder_mask_to_copper_clearance": 0.0,
         "use_height_for_length_calcs": true
@@ -179,18 +188,14 @@
       ],
       "track_widths": [
         0.0,
-        0.1,
-        0.15,
-        0.2,
         0.25,
-        0.3,
-        0.35,
         0.4,
         0.45,
         0.5,
         1.0,
         2.0,
-        2.54
+        2.54,
+        3.0
       ],
       "tuning_pattern_settings": {
         "diff_pair_defaults": {

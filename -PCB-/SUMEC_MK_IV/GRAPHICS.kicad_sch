@@ -15,24 +15,23 @@
 		(comment 4 "SUMEC MK IV aka SMD-V3 board")
 	)
 	(lib_symbols
-		(symbol "Device:R"
+		(symbol "Connector:TestPoint"
 			(pin_numbers hide)
 			(pin_names
-				(offset 0)
-			)
+				(offset 0.762) hide)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
-			(property "Reference" "R"
-				(at 2.032 0 90)
+			(property "Reference" "TP"
+				(at 0 6.858 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
 				)
 			)
-			(property "Value" "R"
-				(at 0 0 90)
+			(property "Value" "TestPoint"
+				(at 0 5.08 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -40,7 +39,7 @@
 				)
 			)
 			(property "Footprint" ""
-				(at -1.778 0 90)
+				(at 5.08 0 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -49,6 +48,15 @@
 				)
 			)
 			(property "Datasheet" "~"
+				(at 5.08 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "test point"
 				(at 0 0 0)
 				(effects
 					(font
@@ -57,7 +65,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "Resistor"
+			(property "ki_keywords" "test point tp"
 				(at 0 0 0)
 				(effects
 					(font
@@ -66,7 +74,7 @@
 					(hide yes)
 				)
 			)
-			(property "ki_keywords" "R res resistor"
+			(property "ki_fp_filters" "Pin* Test*"
 				(at 0 0 0)
 				(effects
 					(font
@@ -75,21 +83,12 @@
 					(hide yes)
 				)
 			)
-			(property "ki_fp_filters" "R_*"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "R_0_1"
-				(rectangle
-					(start -1.016 -2.54)
-					(end 1.016 2.54)
+			(symbol "TestPoint_0_1"
+				(circle
+					(center 0 3.302)
+					(radius 0.762)
 					(stroke
-						(width 0.254)
+						(width 0)
 						(type default)
 					)
 					(fill
@@ -97,11 +96,11 @@
 					)
 				)
 			)
-			(symbol "R_1_1"
+			(symbol "TestPoint_1_1"
 				(pin passive line
-					(at 0 3.81 270)
-					(length 1.27)
-					(name "~"
+					(at 0 0 90)
+					(length 2.54)
+					(name "1"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -116,138 +115,84 @@
 						)
 					)
 				)
-				(pin passive line
-					(at 0 -3.81 90)
-					(length 1.27)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
 			)
 		)
 	)
-	(no_connect
-		(at 156.21 102.87)
-		(uuid "23941296-0443-4323-9719-4fb68f93306e")
+	(junction
+		(at 133.35 97.79)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "0ab6904e-fdcd-413e-b354-af07aa330368")
+	)
+	(junction
+		(at 129.54 97.79)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "fd39c762-57bb-4eb9-b236-1ddeba7030d7")
 	)
 	(no_connect
-		(at 156.21 90.17)
-		(uuid "4e589d23-396d-4fb0-b952-40c318c2578d")
-	)
-	(no_connect
-		(at 138.43 90.17)
-		(uuid "797f13dc-f350-4752-a461-fb4d990fdfef")
-	)
-	(no_connect
-		(at 156.21 96.52)
-		(uuid "81fd70b9-a761-4a98-ab10-f5338ebbdac0")
-	)
-	(no_connect
-		(at 156.21 109.22)
-		(uuid "8bd27ab6-e3f0-4acf-ae7d-7a8eb82a1a08")
-	)
-	(no_connect
-		(at 138.43 96.52)
-		(uuid "90e0def8-00e2-4bd5-a190-41aad897a9bf")
-	)
-	(no_connect
-		(at 138.43 102.87)
-		(uuid "99913c29-06c5-4bcc-aff2-e36fcb5658cf")
-	)
-	(no_connect
-		(at 138.43 109.22)
-		(uuid "e7be4802-4381-486e-8451-bba5b592e168")
+		(at 129.54 101.6)
+		(uuid "e4f0d2b0-9c06-40e7-9d6b-63a95e596a95")
 	)
 	(wire
 		(pts
-			(xy 138.43 102.87) (xy 143.51 102.87)
+			(xy 129.54 97.79) (xy 129.54 101.6)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "04156ce3-9a41-40ff-95de-01a358ab6d52")
+		(uuid "02474a74-429b-431c-9bd0-81a037ae77b7")
 	)
 	(wire
 		(pts
-			(xy 156.21 90.17) (xy 151.13 90.17)
+			(xy 137.16 95.25) (xy 137.16 97.79)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "09c8f5d2-58da-40d8-812a-2c475d5c99d6")
+		(uuid "2b429f66-bc6a-4e46-bfa3-24a812a1818f")
 	)
 	(wire
 		(pts
-			(xy 156.21 102.87) (xy 151.13 102.87)
+			(xy 129.54 97.79) (xy 133.35 97.79)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "0c469741-89c3-4407-b223-8d4ae634dc21")
+		(uuid "703410e7-9497-450c-a9de-2e26a0c84365")
 	)
 	(wire
 		(pts
-			(xy 156.21 96.52) (xy 151.13 96.52)
+			(xy 133.35 97.79) (xy 137.16 97.79)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "24a240b4-de50-4446-aebc-ba520bbe35cc")
+		(uuid "9092cea8-5fc7-4fec-a9af-c0ca7c639cb8")
 	)
 	(wire
 		(pts
-			(xy 156.21 109.22) (xy 151.13 109.22)
+			(xy 129.54 95.25) (xy 129.54 97.79)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "8e7e64ed-271d-4ea2-bb59-d347c5a4bdca")
+		(uuid "cbbef181-9f5f-4665-8d00-d8666ac44749")
 	)
 	(wire
 		(pts
-			(xy 138.43 96.52) (xy 143.51 96.52)
+			(xy 133.35 97.79) (xy 133.35 95.25)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "95f96d6b-77a8-4961-8dfa-1fd0a5c94bc1")
-	)
-	(wire
-		(pts
-			(xy 138.43 90.17) (xy 143.51 90.17)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "aa41e7dc-6f2c-4818-ad04-fa68924cbb1d")
-	)
-	(wire
-		(pts
-			(xy 138.43 109.22) (xy 143.51 109.22)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "fe2c19a3-6f80-4b91-b84c-e538ada63da2")
+		(uuid "ea3c20b8-b5ff-4356-aef2-e12efda0647d")
 	)
 	(rectangle
 		(start 95.25 76.835)
@@ -277,35 +222,37 @@
 		(uuid "8b0181fa-7afd-4c6d-a687-8d4cb3ad04f4")
 	)
 	(symbol
-		(lib_id "Device:R")
-		(at 147.32 90.17 90)
+		(lib_id "Connector:TestPoint")
+		(at 133.35 95.25 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "3497e8cc-b8aa-4ff1-b675-96520df83219")
-		(property "Reference" "R20"
-			(at 147.32 83.82 90)
+		(uuid "d54c717e-0f76-4f71-a5a2-85162cb5a09a")
+		(property "Reference" "TP6"
+			(at 135.89 90.6779 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 				(hide yes)
 			)
 		)
-		(property "Value" "R"
-			(at 147.32 86.36 90)
+		(property "Value" "TestPoint"
+			(at 135.89 93.2179 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 				(hide yes)
 			)
 		)
-		(property "Footprint" "sumec-remote_library:purosidenegative"
-			(at 147.32 91.948 90)
+		(property "Footprint" "sumec_graphic:SUMEC_LOGO_IMG"
+			(at 138.43 95.25 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -314,7 +261,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 147.32 90.17 0)
+			(at 138.43 95.25 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -322,60 +269,59 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Resistor"
-			(at 147.32 90.17 0)
+		(property "Description" "test point"
+			(at 133.35 95.25 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(hide yes)
 			)
-		)
-		(pin "2"
-			(uuid "15fa2a94-9fc6-45ba-9c41-5512b129e808")
 		)
 		(pin "1"
-			(uuid "640def54-bfdf-4170-89ef-a6e30d8ff920")
+			(uuid "c3fc2cb5-a922-449e-8f73-585960cbf236")
 		)
 		(instances
 			(project "SUMEC_MK_IV"
 				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/ebfdffb9-be38-48cc-bdc4-81d227bad184"
-					(reference "R20")
+					(reference "TP6")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "Device:R")
-		(at 147.32 96.52 90)
+		(lib_id "Connector:TestPoint")
+		(at 129.54 95.25 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "544cdab8-185d-46f5-9b15-68257f9f7bfb")
-		(property "Reference" "R21"
-			(at 147.32 90.17 90)
+		(uuid "ec507462-a2b7-4be0-8de5-59fec7670766")
+		(property "Reference" "TP5"
+			(at 132.08 90.6779 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 				(hide yes)
 			)
 		)
-		(property "Value" "R"
-			(at 147.32 92.71 90)
+		(property "Value" "TestPoint"
+			(at 132.08 93.2179 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 				(hide yes)
 			)
 		)
-		(property "Footprint" "sumec-smdV2_library:SPS LOGO"
-			(at 147.32 98.298 90)
+		(property "Footprint" "sumec_graphic:SPS_LOGO_IMG"
+			(at 134.62 95.25 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -384,7 +330,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 147.32 96.52 0)
+			(at 134.62 95.25 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -392,60 +338,59 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Resistor"
-			(at 147.32 96.52 0)
+		(property "Description" "test point"
+			(at 129.54 95.25 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(hide yes)
 			)
-		)
-		(pin "2"
-			(uuid "40327a3f-68ef-45a0-9ba1-270afa091662")
 		)
 		(pin "1"
-			(uuid "a036e0af-9c7f-4646-80cb-77456a814514")
+			(uuid "ce80cc7f-515a-49b0-bfe1-41047f517926")
 		)
 		(instances
-			(project "SUMEC_MK_IV"
+			(project ""
 				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/ebfdffb9-be38-48cc-bdc4-81d227bad184"
-					(reference "R21")
+					(reference "TP5")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "Device:R")
-		(at 147.32 102.87 90)
+		(lib_id "Connector:TestPoint")
+		(at 137.16 95.25 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "6a4b419a-2361-49ae-bfc4-b02ba7d7103a")
-		(property "Reference" "R22"
-			(at 147.32 96.52 90)
+		(uuid "f033cf5e-32bf-4db4-873c-9e6bb86c732e")
+		(property "Reference" "TP7"
+			(at 139.7 90.6779 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 				(hide yes)
 			)
 		)
-		(property "Value" "R"
-			(at 147.32 99.06 90)
+		(property "Value" "TestPoint"
+			(at 139.7 93.2179 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 				(hide yes)
 			)
 		)
-		(property "Footprint" "sumec-remote_library:boi"
-			(at 147.32 104.648 90)
+		(property "Footprint" "sumec_graphic:ULTRAKILL_IMG"
+			(at 142.24 95.25 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -454,7 +399,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 147.32 102.87 0)
+			(at 142.24 95.25 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -462,95 +407,22 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Resistor"
-			(at 147.32 102.87 0)
+		(property "Description" "test point"
+			(at 137.16 95.25 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(hide yes)
 			)
-		)
-		(pin "2"
-			(uuid "119f4362-9cf0-4f1a-ad22-e291159463cf")
 		)
 		(pin "1"
-			(uuid "a39a1dae-984e-462e-add6-ab620a21d9c0")
+			(uuid "b7309a43-bc43-4f33-8d38-9b1ef9592527")
 		)
 		(instances
 			(project "SUMEC_MK_IV"
 				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/ebfdffb9-be38-48cc-bdc4-81d227bad184"
-					(reference "R22")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 147.32 109.22 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "e042a586-09e7-42d8-83cd-acdeda654e72")
-		(property "Reference" "R23"
-			(at 147.32 102.87 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "R"
-			(at 147.32 105.41 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "sumec-smdV2_library:Logo"
-			(at 147.32 110.998 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 147.32 109.22 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 147.32 109.22 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "77439e99-36ac-4069-b896-5ef442200478")
-		)
-		(pin "1"
-			(uuid "dd78af8b-6f9d-4878-b615-56366ed7b2a5")
-		)
-		(instances
-			(project "SUMEC_MK_IV"
-				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/ebfdffb9-be38-48cc-bdc4-81d227bad184"
-					(reference "R23")
+					(reference "TP7")
 					(unit 1)
 				)
 			)
