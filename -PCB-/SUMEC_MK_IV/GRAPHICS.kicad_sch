@@ -125,6 +125,12 @@
 		(uuid "0ab6904e-fdcd-413e-b354-af07aa330368")
 	)
 	(junction
+		(at 137.16 97.79)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "815121c7-1497-41b0-b457-30d1dd0e72dd")
+	)
+	(junction
 		(at 129.54 97.79)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -166,6 +172,16 @@
 	)
 	(wire
 		(pts
+			(xy 140.97 97.79) (xy 137.16 97.79)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "88aad9ea-d5c9-47a4-ae0b-311ac7021e15")
+	)
+	(wire
+		(pts
 			(xy 133.35 97.79) (xy 137.16 97.79)
 		)
 		(stroke
@@ -173,6 +189,16 @@
 			(type default)
 		)
 		(uuid "9092cea8-5fc7-4fec-a9af-c0ca7c639cb8")
+	)
+	(wire
+		(pts
+			(xy 140.97 95.25) (xy 140.97 97.79)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "af43843f-3ef2-4ecf-b1ea-08e6ec5077ea")
 	)
 	(wire
 		(pts
@@ -220,6 +246,75 @@
 			(justify left bottom)
 		)
 		(uuid "8b0181fa-7afd-4c6d-a687-8d4cb3ad04f4")
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 140.97 95.25 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "9a5cfb36-3e10-4bd8-8a2d-57c16ac1b12e")
+		(property "Reference" "TP8"
+			(at 143.51 90.6779 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 143.51 93.2179 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "sumec_graphic:ME_FR_IMG"
+			(at 146.05 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 146.05 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 140.97 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "1360775b-e9e4-4dcd-9a53-1f637344b24a")
+		)
+		(instances
+			(project "SUMEC_MK_IV"
+				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/ebfdffb9-be38-48cc-bdc4-81d227bad184"
+					(reference "TP8")
+					(unit 1)
+				)
+			)
+		)
 	)
 	(symbol
 		(lib_id "Connector:TestPoint")
