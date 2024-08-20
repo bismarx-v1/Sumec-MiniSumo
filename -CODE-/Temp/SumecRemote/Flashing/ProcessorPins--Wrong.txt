@@ -1,6 +1,0 @@
-processor pins
-- pc6 - reset; on connector, fine
-- vcc - 5V or 3V; on connector, fine
-- gnd - ground; on connector, fine
-- pd0(rxd)(30) - not connected; will have to use tweezers as makeshift pogo pins
-- pd1(txd)(31) - connected to a switch; will have to use tweezers as makeshift pogo pins
