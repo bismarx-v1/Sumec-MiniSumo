@@ -1,0 +1,526 @@
+<html style="font-family: consolas;">
+	<body>
+		<div>
+			<div style="font-size: 20px;">	<!--Title-->
+				Flashing the Sumec remote
+			</div>	<!--/Title-->
+			<div>	<!--Body-->
+				So you want to flash the remote using vscode and platformio. We found this method to work</br>
+				</br>
+				(You could follow all of these instructions or you could just download and run this in the project folder
+				<button onclick="download()">Download NatsSetup.bat</button> ;3. (it just creates the right platformio.ini and avrdude.conf files))
+				</br>
+				</br>
+				First you have to have a project.</br>
+				Doesn't matter what board you select because the platformio.ini file will be replaced</br>
+				</br>
+				Defaultly the file looks something like this:</br>
+				<textarea readonly rows="14" style="resize: vertical; width: 100%;">
+; PlatformIO Project Configuration File
+;
+;   Build options: build flags, source filter
+;   Upload options: custom upload port, speed and extra flags
+;   Library options: dependencies, extra library storages
+;   Advanced options: extra scripting
+;
+; Please visit documentation for the other options and examples
+; https://docs.platformio.org/page/projectconf.html
+
+[env:esp32dev]
+platform = espressif32
+board = esp32dev
+framework = arduino</textarea>
+				</br></br>
+				The code in the file needs to be replaced with this (the comments can stay)</br>
+				<textarea readonly rows="7" style="resize: vertical; width: 100%;" id="Textarea1">
+[env:program_via_ArduinoISP]
+platform = atmelavr
+board = 168pa16m
+board_build.f_cpu = 16000000L
+framework = arduino
+
+upload_command = avrdude -C${PROJECT_DIR}/avrdude.conf -v -pm168p -cstk500v1 -P$UPLOAD_PORT -b19200 -Uflash:w:$SOURCE:i -Ulfuse:w:0xde:m -Uhfuse:w:0xdf:m -Uefuse:w:0xf9:m
+</textarea>
+				<button onclick="copyButton('Textarea1')">Copy text</button>
+				</br></br>
+				Next you need to create a avrdude.conf (<button onclick="copyButton2('avrdude.conf')">Copy name</button>) file in the same folder as the platformio.ini, and paste this in it.
+				<!--original found at %USERPROFILE%\AppData\Local\Arduino15\packages\arduino\tools\avrdude\6.3.0-arduino17\etc-->
+				<textarea readonly rows="208" style="resize: vertical; width: 100%;" id="Textarea2">
+programmer
+  id    = "stk500v1";
+  desc  = "Atmel STK500 Version 1.x firmware";
+  type  = "stk500";
+  connection_type = serial;
+;
+
+#------------------------------------------------------------
+# ATmega168
+#------------------------------------------------------------
+
+part
+    id              = "m168";
+    desc            = "ATmega168";
+     has_debugwire = yes;
+     flash_instr   = 0xB6, 0x01, 0x11;
+     eeprom_instr  = 0xBD, 0xF2, 0xBD, 0xE1, 0xBB, 0xCF, 0xB4, 0x00,
+	             0xBE, 0x01, 0xB6, 0x01, 0xBC, 0x00, 0xBB, 0xBF,
+	             0x99, 0xF9, 0xBB, 0xAF;
+    stk500_devcode  = 0x86;
+    # avr910_devcode = 0x;
+    signature       = 0x1e 0x94 0x06;
+    pagel           = 0xd7;
+    bs2             = 0xc2;
+    chip_erase_delay = 9000;
+    pgm_enable       = "1 0 1 0 1 1 0 0 0 1 0 1 0 0 1 1",
+                       "x x x x x x x x x x x x x x x x";
+
+    chip_erase       = "1 0 1 0 1 1 0 0 1 0 0 x x x x x",
+                       "x x x x x x x x x x x x x x x x";
+
+    timeout         = 200;
+    stabdelay       = 100;
+    cmdexedelay     = 25;
+    synchloops      = 32;
+    bytedelay       = 0;
+    pollindex       = 3;
+    pollvalue       = 0x53;
+    predelay        = 1;
+    postdelay       = 1;
+    pollmethod      = 1;
+
+    pp_controlstack     =
+	0x0E, 0x1E, 0x0F, 0x1F, 0x2E, 0x3E, 0x2F, 0x3F,
+	0x4E, 0x5E, 0x4F, 0x5F, 0x6E, 0x7E, 0x6F, 0x7F,
+	0x66, 0x76, 0x67, 0x77, 0x6A, 0x7A, 0x6B, 0x7B,
+	0xBE, 0xFD, 0x00, 0x01, 0x00, 0x00, 0x00, 0x00;
+    hventerstabdelay    = 100;
+    progmodedelay       = 0;
+    latchcycles         = 5;
+    togglevtg           = 1;
+    poweroffdelay       = 15;
+    resetdelayms        = 1;
+    resetdelayus        = 0;
+    hvleavestabdelay    = 15;
+    resetdelay          = 15;
+    chiperasepulsewidth = 0;
+    chiperasepolltimeout = 10;
+    programfusepulsewidth = 0;
+    programfusepolltimeout = 5;
+    programlockpulsewidth = 0;
+    programlockpolltimeout = 5;
+
+    ocdrev              = 1;
+
+    memory "eeprom"
+        paged           = no;
+        page_size       = 4;
+        size            = 512;
+        min_write_delay = 3600;
+        max_write_delay = 3600;
+        readback_p1     = 0xff;
+        readback_p2     = 0xff;
+        read            = " 1 0 1 0 0 0 0 0",
+                          " 0 0 0 x x x x a8",
+                          " a7 a6 a5 a4 a3 a2 a1 a0",
+                          " o o o o o o o o";
+    
+        write           = " 1 1 0 0 0 0 0 0",
+                          " 0 0 0 x x x x a8",
+                          " a7 a6 a5 a4 a3 a2 a1 a0",
+                          " i i i i i i i i";
+
+	loadpage_lo	= "  1   1   0   0      0   0   0   1",
+			  "  0   0   0   0      0   0   0   0",
+			  "  0   0   0   0      0   0  a1  a0",
+			  "  i   i   i   i      i   i   i   i";
+
+	writepage	= "  1   1   0   0      0   0   1   0",
+			  "  0   0   x   x      x   x   x  a8",
+			  " a7  a6  a5  a4     a3  a2   0   0",
+			  "  x   x   x   x      x   x   x   x";
+
+	mode		= 0x41;
+	delay		= 20;
+	blocksize	= 4;
+	readsize	= 256;
+        ;
+
+    memory "flash"
+        paged           = yes;
+        size            = 16384;
+        page_size       = 128;
+        num_pages       = 128;
+        min_write_delay = 4500;
+        max_write_delay = 4500;
+        readback_p1     = 0xff;
+        readback_p2     = 0xff;
+        read_lo         = " 0 0 1 0 0 0 0 0",
+                          " 0 0 0 a12 a11 a10 a9 a8",
+                          " a7 a6 a5 a4 a3 a2 a1 a0",
+                          " o o o o o o o o";
+        
+        read_hi          = " 0 0 1 0 1 0 0 0",
+                           " 0 0 0 a12 a11 a10 a9 a8",
+                           " a7 a6 a5 a4 a3 a2 a1 a0",
+                           " o o o o o o o o";
+        
+        loadpage_lo     = " 0 1 0 0 0 0 0 0",
+                          " 0 0 0 x x x x x",
+                          " x x a5 a4 a3 a2 a1 a0",
+                          " i i i i i i i i";
+        
+        loadpage_hi     = " 0 1 0 0 1 0 0 0",
+                          " 0 0 0 x x x x x",
+                          " x x a5 a4 a3 a2 a1 a0",
+                          " i i i i i i i i";
+        
+        writepage       = " 0 1 0 0 1 1 0 0",
+                          " 0 0 0 a12 a11 a10 a9 a8",
+                          " a7 a6 x x x x x x",
+                          " x x x x x x x x";
+
+        mode        = 0x41;
+        delay       = 6;
+        blocksize   = 128;
+        readsize    = 256;
+
+        ;
+        
+    memory "lfuse"
+        size            = 1;
+        min_write_delay = 4500;
+        max_write_delay = 4500;
+        read            = "0 1 0 1 0 0 0 0 0 0 0 0 0 0 0 0",
+                          "x x x x x x x x o o o o o o o o";
+        
+        write           = "1 0 1 0 1 1 0 0 1 0 1 0 0 0 0 0",
+                          "x x x x x x x x i i i i i i i i";
+        ;
+    
+    memory "hfuse"
+        size            = 1;
+        min_write_delay = 4500;
+        max_write_delay = 4500;
+        read            = "0 1 0 1 1 0 0 0 0 0 0 0 1 0 0 0",
+                          "x x x x x x x x o o o o o o o o";
+        
+        write           = "1 0 1 0 1 1 0 0 1 0 1 0 1 0 0 0",
+                          "x x x x x x x x i i i i i i i i";
+        ;
+    
+    memory "efuse"
+        size            = 1;
+        min_write_delay = 4500;
+        max_write_delay = 4500;
+        read            = "0 1 0 1 0 0 0 0 0 0 0 0 1 0 0 0",
+                          "x x x x x x x x o o o o o o o o";
+        
+        write           = "1 0 1 0 1 1 0 0 1 0 1 0 0 1 0 0",
+                          "x x x x x x x x x x x x x i i i";
+        ;
+    
+    memory "lock"
+        size            = 1;
+        min_write_delay = 4500;
+        max_write_delay = 4500;
+        read            = "0 1 0 1 1 0 0 0 0 0 0 0 0 0 0 0",
+                          "x x x x x x x x x x o o o o o o";
+        
+        write           = "1 0 1 0 1 1 0 0 1 1 1 x x x x x",
+                          "x x x x x x x x 1 1 i i i i i i";
+        ;
+    
+    memory "calibration"
+        size            = 1;
+        read            = "0 0 1 1 1 0 0 0 0 0 0 x x x x x",
+                          "0 0 0 0 0 0 0 0 o o o o o o o o";
+        ;
+    
+    memory "signature"
+        size            = 3;
+        read            = "0 0 1 1 0 0 0 0 0 0 0 x x x x x",
+                          "x x x x x x a1 a0 o o o o o o o o";
+        ;
+;
+
+#------------------------------------------------------------
+# ATmega168P
+#------------------------------------------------------------
+
+part parent "m168"
+    id              = "m168p";
+    desc            = "ATmega168P";
+    signature       = 0x1e 0x94 0x0b;
+
+    ocdrev              = 1;
+;
+</textarea>
+				<button onclick="copyButton('Textarea2')">Copy text</button>
+				</br></br>
+				And that's it. Flashing/uploading should now work for the remote.</br>
+				- ms. Natani :3
+				</div>		<!--/Body-->
+		</div>
+	</body>
+	<script>
+		function copyButton(name) {
+			// Get the text field
+			var copyText = document.getElementById(name);
+
+			// Select the text field
+			copyText.select();
+			copyText.setSelectionRange(0, 99999); // For mobile devices
+			
+			// Copy the text inside the text field
+			navigator.clipboard.writeText(copyText.value);
+			
+			// Deselect
+			copyText.select(0);
+			copyText.setSelectionRange(0, 0);
+
+			// Notif
+			alert("Copied!");
+		}
+		
+		function copyButton2(text) {
+			// Paste to clipboard
+			navigator.clipboard.writeText(text);
+
+			// Notif
+			alert("Copied!");
+		}
+		
+		let text1 = '@echo off\n' +
+'\n' +
+'echo [env:program_via_ArduinoISP]>.\\\platformio.ini\n' +
+'echo platform = atmelavr>>.\\\platformio.ini\n' +
+'echo board = 168pa16m>>.\\\platformio.ini\n' +
+'echo board_build.f_cpu = 16000000L>>.\\\platformio.ini\n' +
+'echo framework = arduino>>.\\\platformio.ini\n' +
+'echo.>>.\\\platformio.ini\n' +
+'echo.>>.\\\platformio.ini\n' +
+'echo upload_command = avrdude -C${PROJECT_DIR}/avrdude.conf -v -pm168p -cstk500v1 -P$UPLOAD_PORT -b19200 -Uflash:w:$SOURCE:i -Ulfuse:w:0xde:m -Uhfuse:w:0xdf:m -Uefuse:w:0xf9:m>>.\\\platformio.ini\n' +
+'\n' +
+'echo programmer>.\\\avrdude.conf\n' +
+'echo   id    = "stk500v1";>>.\\\avrdude.conf\n' +
+'echo   desc  = "Atmel STK500 Version 1.x firmware";>>.\\\avrdude.conf\n' +
+'echo   type  = "stk500";>>.\\\avrdude.conf\n' +
+'echo   connection_type = serial;>>.\\\avrdude.conf\n' +
+'echo ;>>.\\\avrdude.conf\n' +
+'echo.>>.\\\avrdude.conf\n' +
+'echo #------------------------------------------------------------>>.\\\avrdude.conf\n' +
+'echo # ATmega168>>.\\\avrdude.conf\n' +
+'echo #------------------------------------------------------------>>.\\\avrdude.conf\n' +
+'echo.>>.\\avrdude.conf\n' +
+'echo part>>.\\avrdude.conf\n' +
+'echo     id              = "m168";>>.\\avrdude.conf\n' +
+'echo     desc            = "ATmega168";>>.\\avrdude.conf\n' +
+'echo      has_debugwire = yes;>>.\\avrdude.conf\n' +
+'echo      flash_instr   = 0xB6, 0x01, 0x11;>>.\\avrdude.conf\n' +
+'echo      eeprom_instr  = 0xBD, 0xF2, 0xBD, 0xE1, 0xBB, 0xCF, 0xB4, 0x00,>>.\\avrdude.conf\n' +
+'echo 	             0xBE, 0x01, 0xB6, 0x01, 0xBC, 0x00, 0xBB, 0xBF,>>.\\avrdude.conf\n' +
+'echo 	             0x99, 0xF9, 0xBB, 0xAF;>>.\\avrdude.conf\n' +
+'echo     stk500_devcode  = 0x86;>>.\\avrdude.conf\n' +
+'echo     # avr910_devcode = 0x;>>.\\avrdude.conf\n' +
+'echo     signature       = 0x1e 0x94 0x06;>>.\\avrdude.conf\n' +
+'echo     pagel           = 0xd7;>>.\\avrdude.conf\n' +
+'echo     bs2             = 0xc2;>>.\\avrdude.conf\n' +
+'echo     chip_erase_delay = 9000;>>.\\avrdude.conf\n' +
+'echo     pgm_enable       = "1 0 1 0 1 1 0 0 0 1 0 1 0 0 1 1",>>.\\avrdude.conf\n' +
+'echo                        "x x x x x x x x x x x x x x x x";>>.\\avrdude.conf\n' +
+'echo.>>.\\avrdude.conf\n' +
+'echo     chip_erase       = "1 0 1 0 1 1 0 0 1 0 0 x x x x x",>>.\\avrdude.conf\n' +
+'echo                        "x x x x x x x x x x x x x x x x";>>.\\avrdude.conf\n' +
+'echo.>>.\\avrdude.conf\n' +
+'echo     timeout         = 200;>>.\\avrdude.conf\n' +
+'echo     stabdelay       = 100;>>.\\avrdude.conf\n' +
+'echo     cmdexedelay     = 25;>>.\\avrdude.conf\n' +
+'echo     synchloops      = 32;>>.\\avrdude.conf\n' +
+'echo     bytedelay       = 0;>>.\\avrdude.conf\n' +
+'echo     pollindex       = 3;>>.\\avrdude.conf\n' +
+'echo     pollvalue       = 0x53;>>.\\avrdude.conf\n' +
+'echo     predelay        = 1;>>.\\avrdude.conf\n' +
+'echo     postdelay       = 1;>>.\\avrdude.conf\n' +
+'echo     pollmethod      = 1;>>.\\avrdude.conf\n' +
+'echo.>>.\\avrdude.conf\n' +
+'echo     pp_controlstack     =>>.\\avrdude.conf\n' +
+'echo 	0x0E, 0x1E, 0x0F, 0x1F, 0x2E, 0x3E, 0x2F, 0x3F,>>.\\avrdude.conf\n' +
+'echo 	0x4E, 0x5E, 0x4F, 0x5F, 0x6E, 0x7E, 0x6F, 0x7F,>>.\\avrdude.conf\n' +
+'echo 	0x66, 0x76, 0x67, 0x77, 0x6A, 0x7A, 0x6B, 0x7B,>>.\\avrdude.conf\n' +
+'echo 	0xBE, 0xFD, 0x00, 0x01, 0x00, 0x00, 0x00, 0x00;>>.\\avrdude.conf\n' +
+'echo     hventerstabdelay    = 100;>>.\\avrdude.conf\n' +
+'echo     progmodedelay       = 0;>>.\\avrdude.conf\n' +
+'echo     latchcycles         = 5;>>.\\avrdude.conf\n' +
+'echo     togglevtg           = 1;>>.\\avrdude.conf\n' +
+'echo     poweroffdelay       = 15;>>.\\avrdude.conf\n' +
+'echo     resetdelayms        = 1;>>.\\avrdude.conf\n' +
+'echo     resetdelayus        = 0;>>.\\avrdude.conf\n' +
+'echo     hvleavestabdelay    = 15;>>.\\avrdude.conf\n' +
+'echo     resetdelay          = 15;>>.\\avrdude.conf\n' +
+'echo     chiperasepulsewidth = 0;>>.\\avrdude.conf\n' +
+'echo     chiperasepolltimeout = 10;>>.\\avrdude.conf\n' +
+'echo     programfusepulsewidth = 0;>>.\\avrdude.conf\n' +
+'echo     programfusepolltimeout = 5;>>.\\avrdude.conf\n' +
+'echo     programlockpulsewidth = 0;>>.\\avrdude.conf\n' +
+'echo     programlockpolltimeout = 5;>>.\\avrdude.conf\n' +
+'echo.>>.\\avrdude.conf\n' +
+'echo     ocdrev              = 1;>>.\\avrdude.conf\n' +
+'echo.>>.\\avrdude.conf\n' +
+'echo     memory "eeprom">>.\\avrdude.conf\n' +
+'echo         paged           = no;>>.\\avrdude.conf\n' +
+'echo         page_size       = 4;>>.\\avrdude.conf\n' +
+'echo         size            = 512;>>.\\avrdude.conf\n' +
+'echo         min_write_delay = 3600;>>.\\avrdude.conf\n' +
+'echo         max_write_delay = 3600;>>.\\avrdude.conf\n' +
+'echo         readback_p1     = 0xff;>>.\\avrdude.conf\n' +
+'echo         readback_p2     = 0xff;>>.\\avrdude.conf\n' +
+'echo         read            = " 1 0 1 0 0 0 0 0",>>.\\avrdude.conf\n' +
+'echo                           " 0 0 0 x x x x a8",>>.\\avrdude.conf\n' +
+'echo                           " a7 a6 a5 a4 a3 a2 a1 a0",>>.\\avrdude.conf\n' +
+'echo                           " o o o o o o o o";>>.\\avrdude.conf\n' +
+'echo     >>.\\avrdude.conf\n' +
+'echo         write           = " 1 1 0 0 0 0 0 0",>>.\\avrdude.conf\n' +
+'echo                           " 0 0 0 x x x x a8",>>.\\avrdude.conf\n' +
+'echo                           " a7 a6 a5 a4 a3 a2 a1 a0",>>.\\avrdude.conf\n' +
+'echo                           " i i i i i i i i";>>.\\avrdude.conf\n' +
+'echo.>>.\\avrdude.conf\n' +
+'echo 	loadpage_lo	= "  1   1   0   0      0   0   0   1",>>.\\avrdude.conf\n' +
+'echo 			  "  0   0   0   0      0   0   0   0",>>.\\avrdude.conf\n' +
+'echo 			  "  0   0   0   0      0   0  a1  a0",>>.\\avrdude.conf\n' +
+'echo 			  "  i   i   i   i      i   i   i   i";>>.\\avrdude.conf\n' +
+'echo.>>.\\avrdude.conf\n' +
+'echo 	writepage	= "  1   1   0   0      0   0   1   0",>>.\\avrdude.conf\n' +
+'echo 			  "  0   0   x   x      x   x   x  a8",>>.\\avrdude.conf\n' +
+'echo 			  " a7  a6  a5  a4     a3  a2   0   0",>>.\\avrdude.conf\n' +
+'echo 			  "  x   x   x   x      x   x   x   x";>>.\\avrdude.conf\n' +
+'echo.>>.\\avrdude.conf\n' +
+'echo 	mode		= 0x41;>>.\\avrdude.conf\n' +
+'echo 	delay		= 20;>>.\\avrdude.conf\n' +
+'echo 	blocksize	= 4;>>.\\avrdude.conf\n' +
+'echo 	readsize	= 256;>>.\\avrdude.conf\n' +
+'echo         ;>>.\\avrdude.conf\n' +
+'echo.>>.\\avrdude.conf\n' +
+'echo     memory "flash">>.\\avrdude.conf\n' +
+'echo         paged           = yes;>>.\\avrdude.conf\n' +
+'echo         size            = 16384;>>.\\avrdude.conf\n' +
+'echo         page_size       = 128;>>.\\avrdude.conf\n' +
+'echo         num_pages       = 128;>>.\\avrdude.conf\n' +
+'echo         min_write_delay = 4500;>>.\\avrdude.conf\n' +
+'echo         max_write_delay = 4500;>>.\\avrdude.conf\n' +
+'echo         readback_p1     = 0xff;>>.\\avrdude.conf\n' +
+'echo         readback_p2     = 0xff;>>.\\avrdude.conf\n' +
+'echo         read_lo         = " 0 0 1 0 0 0 0 0",>>.\\avrdude.conf\n' +
+'echo                           " 0 0 0 a12 a11 a10 a9 a8",>>.\\avrdude.conf\n' +
+'echo                           " a7 a6 a5 a4 a3 a2 a1 a0",>>.\\avrdude.conf\n' +
+'echo                           " o o o o o o o o";>>.\\avrdude.conf\n' +
+'echo         >>.\\avrdude.conf\n' +
+'echo         read_hi          = " 0 0 1 0 1 0 0 0",>>.\\avrdude.conf\n' +
+'echo                            " 0 0 0 a12 a11 a10 a9 a8",>>.\\avrdude.conf\n' +
+'echo                            " a7 a6 a5 a4 a3 a2 a1 a0",>>.\\avrdude.conf\n' +
+'echo                            " o o o o o o o o";>>.\\avrdude.conf\n' +
+'echo         >>.\\avrdude.conf\n' +
+'echo         loadpage_lo     = " 0 1 0 0 0 0 0 0",>>.\\avrdude.conf\n' +
+'echo                           " 0 0 0 x x x x x",>>.\\avrdude.conf\n' +
+'echo                           " x x a5 a4 a3 a2 a1 a0",>>.\\avrdude.conf\n' +
+'echo                           " i i i i i i i i";>>.\\avrdude.conf\n' +
+'echo         >>.\\avrdude.conf\n' +
+'echo         loadpage_hi     = " 0 1 0 0 1 0 0 0",>>.\\avrdude.conf\n' +
+'echo                           " 0 0 0 x x x x x",>>.\\avrdude.conf\n' +
+'echo                           " x x a5 a4 a3 a2 a1 a0",>>.\\avrdude.conf\n' +
+'echo                           " i i i i i i i i";>>.\\avrdude.conf\n' +
+'echo         >>.\\avrdude.conf\n' +
+'echo         writepage       = " 0 1 0 0 1 1 0 0",>>.\\avrdude.conf\n' +
+'echo                           " 0 0 0 a12 a11 a10 a9 a8",>>.\\avrdude.conf\n' +
+'echo                           " a7 a6 x x x x x x",>>.\\avrdude.conf\n' +
+'echo                           " x x x x x x x x";>>.\\avrdude.conf\n' +
+'echo.>>.\\avrdude.conf\n' +
+'echo         mode        = 0x41;>>.\\avrdude.conf\n' +
+'echo         delay       = 6;>>.\\avrdude.conf\n' +
+'echo         blocksize   = 128;>>.\\avrdude.conf\n' +
+'echo         readsize    = 256;>>.\\avrdude.conf\n' +
+'echo.>>.\\avrdude.conf\n' +
+'echo         ;>>.\\avrdude.conf\n' +
+'echo         >>.\\avrdude.conf\n' +
+'echo     memory "lfuse">>.\\avrdude.conf\n' +
+'echo         size            = 1;>>.\\avrdude.conf\n' +
+'echo         min_write_delay = 4500;>>.\\avrdude.conf\n' +
+'echo         max_write_delay = 4500;>>.\\avrdude.conf\n' +
+'echo         read            = "0 1 0 1 0 0 0 0 0 0 0 0 0 0 0 0",>>.\\avrdude.conf\n' +
+'echo                           "x x x x x x x x o o o o o o o o";>>.\\avrdude.conf\n' +
+'echo         >>.\\avrdude.conf\n' +
+'echo         write           = "1 0 1 0 1 1 0 0 1 0 1 0 0 0 0 0",>>.\\avrdude.conf\n' +
+'echo                           "x x x x x x x x i i i i i i i i";>>.\\avrdude.conf\n' +
+'echo         ;>>.\\avrdude.conf\n' +
+'echo     >>.\\avrdude.conf\n' +
+'echo     memory "hfuse">>.\\avrdude.conf\n' +
+'echo         size            = 1;>>.\\avrdude.conf\n' +
+'echo         min_write_delay = 4500;>>.\\avrdude.conf\n' +
+'echo         max_write_delay = 4500;>>.\\avrdude.conf\n' +
+'echo         read            = "0 1 0 1 1 0 0 0 0 0 0 0 1 0 0 0",>>.\\avrdude.conf\n' +
+'echo                           "x x x x x x x x o o o o o o o o";>>.\\avrdude.conf\n' +
+'echo         >>.\\avrdude.conf\n' +
+'echo         write           = "1 0 1 0 1 1 0 0 1 0 1 0 1 0 0 0",>>.\\avrdude.conf\n' +
+'echo                           "x x x x x x x x i i i i i i i i";>>.\\avrdude.conf\n' +
+'echo         ;>>.\\avrdude.conf\n' +
+'echo     >>.\\avrdude.conf\n' +
+'echo     memory "efuse">>.\\avrdude.conf\n' +
+'echo         size            = 1;>>.\\avrdude.conf\n' +
+'echo         min_write_delay = 4500;>>.\\avrdude.conf\n' +
+'echo         max_write_delay = 4500;>>.\\avrdude.conf\n' +
+'echo         read            = "0 1 0 1 0 0 0 0 0 0 0 0 1 0 0 0",>>.\\avrdude.conf\n' +
+'echo                           "x x x x x x x x o o o o o o o o";>>.\\avrdude.conf\n' +
+'echo         >>.\\avrdude.conf\n' +
+'echo         write           = "1 0 1 0 1 1 0 0 1 0 1 0 0 1 0 0",>>.\\avrdude.conf\n' +
+'echo                           "x x x x x x x x x x x x x i i i";>>.\\avrdude.conf\n' +
+'echo         ;>>.\\avrdude.conf\n' +
+'echo     >>.\\avrdude.conf\n' +
+'echo     memory "lock">>.\\avrdude.conf\n' +
+'echo         size            = 1;>>.\\avrdude.conf\n' +
+'echo         min_write_delay = 4500;>>.\\avrdude.conf\n' +
+'echo         max_write_delay = 4500;>>.\\avrdude.conf\n' +
+'echo         read            = "0 1 0 1 1 0 0 0 0 0 0 0 0 0 0 0",>>.\\avrdude.conf\n' +
+'echo                           "x x x x x x x x x x o o o o o o";>>.\\avrdude.conf\n' +
+'echo         >>.\\avrdude.conf\n' +
+'echo         write           = "1 0 1 0 1 1 0 0 1 1 1 x x x x x",>>.\\avrdude.conf\n' +
+'echo                           "x x x x x x x x 1 1 i i i i i i";>>.\\avrdude.conf\n' +
+'echo         ;>>.\\avrdude.conf\n' +
+'echo     >>.\\avrdude.conf\n' +
+'echo     memory "calibration">>.\\avrdude.conf\n' +
+'echo         size            = 1;>>.\\avrdude.conf\n' +
+'echo         read            = "0 0 1 1 1 0 0 0 0 0 0 x x x x x",>>.\\avrdude.conf\n' +
+'echo                           "0 0 0 0 0 0 0 0 o o o o o o o o";>>.\\avrdude.conf\n' +
+'echo         ;>>.\\avrdude.conf\n' +
+'echo     >>.\\avrdude.conf\n' +
+'echo     memory "signature">>.\\avrdude.conf\n' +
+'echo         size            = 3;>>.\\avrdude.conf\n' +
+'echo         read            = "0 0 1 1 0 0 0 0 0 0 0 x x x x x",>>.\\avrdude.conf\n' +
+'echo                           "x x x x x x a1 a0 o o o o o o o o";>>.\\avrdude.conf\n' +
+'echo         ;>>.\\avrdude.conf\n' +
+'echo ;>>.\\avrdude.conf\n' +
+'echo.>>.\\avrdude.conf\n' +
+'echo #------------------------------------------------------------>>.\\avrdude.conf\n' +
+'echo # ATmega168P>>.\\avrdude.conf\n' +
+'echo #------------------------------------------------------------>>.\\avrdude.conf\n' +
+'echo.>>.\\avrdude.conf\n' +
+'echo part parent "m168">>.\\avrdude.conf\n' +
+'echo     id              = "m168p";>>.\\avrdude.conf\n' +
+'echo     desc            = "ATmega168P";>>.\\avrdude.conf\n' +
+'echo     signature       = 0x1e 0x94 0x0b;>>.\\avrdude.conf\n' +
+'echo.>>.\\avrdude.conf\n' +
+'echo     ocdrev              = 1;>>.\\avrdude.conf\n' +
+'echo ;>>.\\avrdude.conf\n'
+		
+		function download() {
+			var element = document.createElement('a');
+			element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text1));
+			element.setAttribute('download', "NatsSetup.bat");
+			
+			element.style.display = 'none';
+			document.body.appendChild(element);
+			
+			element.click();
+			
+			document.body.removeChild(element);
+		}
+	</script>
+</html>
