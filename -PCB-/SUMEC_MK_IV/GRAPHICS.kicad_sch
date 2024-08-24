@@ -329,7 +329,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "sumec_graphic:SUMEC_INST_IMG"
+		(property "Footprint" "sumec_graphic:SUMEC_QR_IMG"
 			(at 149.86 95.25 0)
 			(effects
 				(font
