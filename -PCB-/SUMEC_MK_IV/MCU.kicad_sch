@@ -4820,30 +4820,6 @@
 			)
 		)
 	)
-	(global_label "IPROPI_ADC"
-		(shape input)
-		(at 176.53 88.9 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(face "Bahnschrift")
-				(size 1 1)
-				(color 0 0 0 1)
-			)
-			(justify left)
-		)
-		(uuid "1f95849d-286c-41d6-994b-19e379f8ac6f")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 186.2377 88.9 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
 	(global_label "PWM2"
 		(shape output)
 		(at 176.53 96.52 0)
