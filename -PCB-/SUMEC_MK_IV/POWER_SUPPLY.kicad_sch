@@ -6045,16 +6045,6 @@
 		)
 		(uuid "5896813e-56c9-4028-9981-d11bd06d7f5f")
 	)
-	(text "voltage divider for VBATT?"
-		(exclude_from_sim no)
-		(at 147.32 -33.655 90)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "5dd71611-8cbc-470f-b7dc-1cd08debe2fb")
-	)
 	(text "500SSP1S1M2REA - goldplated 5A\n500SSP1S1M2QEA - silverplated 2A, 5A"
 		(exclude_from_sim no)
 		(at 27.305 91.44 0)

@@ -1351,12 +1351,6 @@
 		(uuid "254790d2-f0a4-497f-88ff-c872806380b9")
 	)
 	(junction
-		(at 130.81 74.93)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "2cf381a2-df2c-4597-be17-d939a5a68a82")
-	)
-	(junction
 		(at 218.44 71.12)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1416,6 +1410,12 @@
 		(color 0 0 0 0)
 		(uuid "e6227cde-54b5-462e-90c3-d595fd5343d4")
 	)
+	(junction
+		(at 130.81 73.66)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "eaa05aee-b5b8-4c14-8d97-ea5dbba44e29")
+	)
 	(wire
 		(pts
 			(xy 154.94 115.57) (xy 156.21 115.57)
@@ -1438,7 +1438,7 @@
 	)
 	(wire
 		(pts
-			(xy 133.35 74.93) (xy 130.81 74.93)
+			(xy 130.81 73.66) (xy 134.62 73.66)
 		)
 		(stroke
 			(width 0)
@@ -1768,16 +1768,6 @@
 	)
 	(wire
 		(pts
-			(xy 133.35 73.66) (xy 134.62 73.66)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "881d695c-4ce1-4e70-9452-0e1157fcf4ed")
-	)
-	(wire
-		(pts
 			(xy 218.44 82.55) (xy 218.44 81.28)
 		)
 		(stroke
@@ -1828,13 +1818,23 @@
 	)
 	(wire
 		(pts
-			(xy 130.81 71.12) (xy 130.81 74.93)
+			(xy 130.81 71.12) (xy 130.81 73.66)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "af85ef51-2124-45a6-9fff-ee443e9ab07d")
+	)
+	(wire
+		(pts
+			(xy 130.81 73.66) (xy 130.81 74.93)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b0bb5253-5507-4522-9dfe-98d7a6c70737")
 	)
 	(wire
 		(pts
@@ -2065,16 +2065,6 @@
 			(type default)
 		)
 		(uuid "f4232e6d-1588-4d57-9dfb-d525c63c1a5c")
-	)
-	(wire
-		(pts
-			(xy 133.35 73.66) (xy 133.35 74.93)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f5599182-eff5-48d6-83b3-4d61e58d5ff0")
 	)
 	(wire
 		(pts
@@ -4941,9 +4931,9 @@
 		)
 		(uuid "85d75c63-59f9-4799-895a-91b302828098")
 	)
-	(text "	THERE WERE 2 OR RESISTORS, ONE FOR VCC THE OTHER IS FOR GND, PURPOSE: \nCHOICE BETWEEEN GND AND VCC FOR TWO MODES"
+	(text "	THERE WERE 2 0 Ohm RESISTORS, ONE FOR VCC THE OTHER IS FOR GND, PURPOSE: \nCHOICE BETWEEEN GND AND VCC FOR TWO MODES"
 		(exclude_from_sim no)
-		(at 195.58 48.26 0)
+		(at 182.88 43.815 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5670,7 +5660,7 @@
 		(dnp no)
 		(uuid "21d51097-1147-4cdd-9da7-c6dd92e4c2d3")
 		(property "Reference" "R6"
-			(at 134.62 75.565 90)
+			(at 133.985 73.025 90)
 			(effects
 				(font
 					(size 1 1)
@@ -5678,7 +5668,7 @@
 			)
 		)
 		(property "Value" "0R/R-Imode"
-			(at 140.335 75.565 90)
+			(at 143.51 73.025 90)
 			(effects
 				(font
 					(size 1 1)
@@ -6147,7 +6137,7 @@
 		(dnp no)
 		(uuid "2e612a0c-96b1-49f6-9a74-750959b655c3")
 		(property "Reference" "R5"
-			(at 142.875 69.85 90)
+			(at 142.875 70.485 90)
 			(effects
 				(font
 					(size 1 1)
@@ -6155,7 +6145,7 @@
 			)
 		)
 		(property "Value" "0R/R-Ipropi"
-			(at 152.4 69.85 90)
+			(at 152.4 70.485 90)
 			(effects
 				(font
 					(size 1 1)

@@ -1671,18 +1671,6 @@
 			)
 			(polyline
 				(pts
-					(xy -13.97 -16.51) (xy -12.7 -16.51) (xy -12.7 -6.35) (xy -13.97 -6.35)
-				)
-				(stroke
-					(width 0)
-					(type default)
-				)
-				(fill
-					(type none)
-				)
-			)
-			(polyline
-				(pts
 					(xy -13.97 8.89) (xy -12.7 8.89) (xy -12.7 11.43) (xy -13.97 11.43)
 				)
 				(stroke
@@ -1823,14 +1811,6 @@
 					)
 				)
 			)
-			(text "CLK"
-				(at -13.97 -12.7 900)
-				(effects
-					(font
-						(size 0.8 0.8)
-					)
-				)
-			)
 			(text "D+"
 				(at 6.096 10.414 900)
 				(effects
@@ -1852,22 +1832,6 @@
 				(effects
 					(font
 						(size 1.27 1.27)
-					)
-				)
-			)
-			(text "MISO"
-				(at -13.462 -14.986 900)
-				(effects
-					(font
-						(size 0.8 0.8)
-					)
-				)
-			)
-			(text "MOSI"
-				(at -13.462 -10.414 900)
-				(effects
-					(font
-						(size 0.8 0.8)
 					)
 				)
 			)
@@ -1895,14 +1859,6 @@
 					)
 				)
 			)
-			(text "SPI"
-				(at -11.43 -11.684 900)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
 			(text "UART"
 				(at 6.604 21.844 900)
 				(effects
@@ -1916,14 +1872,6 @@
 				(effects
 					(font
 						(size 1.27 1.27)
-					)
-				)
-			)
-			(text "~{CS}"
-				(at -13.97 -7.874 900)
-				(effects
-					(font
-						(size 0.8 0.8)
 					)
 				)
 			)
