@@ -1,7 +1,7 @@
 # MiniSumo "SUMEC" Robot Project
 
 ## Description
-This GitHub repository contains the code and documentation about student-built MiniSumo robot "SUMEC". MiniSumo robots are small autonomous robots designed to compete in MiniSumo competitions, where they attempt to push their opponents out of a ring.
+This GitHub repository contains the code and documentation about student-built MiniSumo robot "SUMEC". MiniSumo robots are small autonomous robots designed to compete in MiniSumo competitions, where they attempt to push their opponents out of a ring. Our other repository "Sumec-Remote" is a forked repo from p1rse, created for our own MiniSumo start remote, PCB is ours, schematic was copied from "p1rse/robot-sumo-start-module".
 ## Contents
 - **-3D-** Provides CAD files for the mechanical components of the robot, such as the chassis and sensor mounts.
   
