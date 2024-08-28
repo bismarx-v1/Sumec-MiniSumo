@@ -1,4 +1,0 @@
-(sym_lib_table
-  (version 7)
-  (lib (name "SUMEC")(type "KiCad")(uri "${KIPRJMOD}/SUMEC.kicad_sym")(options "")(descr ""))
-)
