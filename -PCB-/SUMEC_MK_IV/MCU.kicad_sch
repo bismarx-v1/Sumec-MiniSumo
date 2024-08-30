@@ -1053,7 +1053,7 @@
 					(justify left)
 				)
 			)
-			(property "Footprint" "RF_Module:ESP32-S3-WROOM-1"
+			(property "Footprint" "PCM_Espressif:ESP32-S3-WROOM-1"
 				(at -2.794 43.434 0)
 				(effects
 					(font
@@ -5565,6 +5565,193 @@
 		)
 	)
 	(symbol
+		(lib_id "sumec_sch_lib:ESP32-S3-WROOM-1_CUSTOM_made_by_bismarx")
+		(at 160.02 91.44 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "0010d3dd-c3b4-4adc-a7a8-5c811e29bdcf")
+		(property "Reference" "U3"
+			(at 158.4341 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "ESP32-S3-WROOM-1"
+			(at 158.4341 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "PCM_Espressif:ESP32-S3-WROOM-1"
+			(at 157.226 48.006 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.espressif.com/sites/default/files/documentation/esp32-s3-wroom-1_wroom-1u_datasheet_en.pdf"
+			(at 156.464 54.102 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "RF Module, ESP32-S3 SoC, Wi-Fi 802.11b/g/n, Bluetooth, BLE, 32-bit, 3.3V, onboard antenna, SMD"
+			(at 157.48 51.054 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "12"
+			(uuid "ef6cfc3a-de04-475b-bb5b-8cbad8950455")
+		)
+		(pin "1"
+			(uuid "a9c7368f-bc01-4ff6-927c-863784950933")
+		)
+		(pin "10"
+			(uuid "e96f056f-d067-40a2-be4f-168a4b7b36f0")
+		)
+		(pin "11"
+			(uuid "b71fe13e-d894-4607-9b4b-7bee53573458")
+		)
+		(pin "26"
+			(uuid "f010daab-54ae-4dc4-8e82-5103d705d425")
+		)
+		(pin "6"
+			(uuid "e7ffbfc2-97bf-480d-b8ff-f62d9d19d9c7")
+		)
+		(pin "9"
+			(uuid "f0b38f6b-a615-4721-9bb7-04e81d214305")
+		)
+		(pin "13"
+			(uuid "ee59bd37-80d4-4d73-9256-ebea8ddd3ccc")
+		)
+		(pin "18"
+			(uuid "3c1dfa81-f0fd-4d53-a014-d7f3a0759a6c")
+		)
+		(pin "20"
+			(uuid "0fbd6eaf-b341-4147-9e51-f05e69096e2f")
+		)
+		(pin "21"
+			(uuid "b73bfc39-bbff-49a0-ad97-78458c97d585")
+		)
+		(pin "24"
+			(uuid "bf3ad217-ef52-4bf6-92a0-ee4cff0772c7")
+		)
+		(pin "17"
+			(uuid "b30461b0-0fce-46d6-bb52-a9542c4b630e")
+		)
+		(pin "34"
+			(uuid "0efd47a4-9b31-475e-ba39-a7f9337dc402")
+		)
+		(pin "7"
+			(uuid "ef4085ae-7e4e-445f-b543-64fbf3a84e1f")
+		)
+		(pin "23"
+			(uuid "b85507db-b47d-4e5b-9ff6-d6e3825d6fc8")
+		)
+		(pin "38"
+			(uuid "9c76e4e7-d80d-433a-8f8a-55ebfc71b0d5")
+		)
+		(pin "8"
+			(uuid "0c845508-fa89-4093-b5bd-19c78ad03bd1")
+		)
+		(pin "39"
+			(uuid "089f45be-055c-4097-9d08-97b7d3621a48")
+		)
+		(pin "30"
+			(uuid "d61db850-a27d-46c4-8253-6e36c8477abd")
+		)
+		(pin "22"
+			(uuid "754b6ab4-10a4-4e3c-a784-ed8b067c0155")
+		)
+		(pin "16"
+			(uuid "dc53ff17-641f-426d-899b-7c8f17ebd79c")
+		)
+		(pin "2"
+			(uuid "ce3a3d56-450b-4095-94ae-a6289d995805")
+		)
+		(pin "31"
+			(uuid "8f1ef8de-56e0-478e-bb55-b26d989002f9")
+		)
+		(pin "29"
+			(uuid "37e0feb5-aa76-4b36-b06e-feffdd6f8d45")
+		)
+		(pin "14"
+			(uuid "b1e256d5-0849-46c4-82b3-4b3f2afd483c")
+		)
+		(pin "32"
+			(uuid "338a2794-47f7-4d7b-81d8-0acb09d209eb")
+		)
+		(pin "15"
+			(uuid "1c0618e2-ddb5-4e42-b416-307e327b0266")
+		)
+		(pin "33"
+			(uuid "f2f33309-0c48-43c0-8e8a-19975477ed53")
+		)
+		(pin "19"
+			(uuid "362ad1b3-8fce-4579-814e-c745ed972dc5")
+		)
+		(pin "35"
+			(uuid "9d80a9fe-751c-4c5c-a0f6-2cc9e2bfb5d7")
+		)
+		(pin "36"
+			(uuid "a4ecd84d-f306-4079-a66f-7ab7a8ac3e35")
+		)
+		(pin "37"
+			(uuid "53a7efaa-5425-4e80-b92f-3bd1e76a5ffa")
+		)
+		(pin "3"
+			(uuid "b8967019-a797-45a0-a226-dd689c22f756")
+		)
+		(pin "4"
+			(uuid "e79f96d5-7bd1-4092-82db-4c60f1ff659b")
+		)
+		(pin "40"
+			(uuid "0ce05333-5a45-4dc0-b85e-e7d8a8f2e6d3")
+		)
+		(pin "27"
+			(uuid "e5767187-a436-43ab-9acf-7e66d2b5254d")
+		)
+		(pin "41"
+			(uuid "8b6da3d0-4927-43bc-b4d9-ad3d4884eecf")
+		)
+		(pin "25"
+			(uuid "8262365c-0cf8-41aa-84c8-acaa6c39688c")
+		)
+		(pin "28"
+			(uuid "2134da27-81a2-4a54-b3a6-53a7b8277e2e")
+		)
+		(pin "5"
+			(uuid "f266cb30-3ea8-4830-b61c-d4415d84fa55")
+		)
+		(instances
+			(project ""
+				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/7b93d7c5-db1a-415c-92e4-9ebec6cf195f"
+					(reference "U3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R")
 		(at 254 110.49 90)
 		(unit 1)
@@ -6634,192 +6821,6 @@
 			(project "SUMEC_MK_IV"
 				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/7b93d7c5-db1a-415c-92e4-9ebec6cf195f"
 					(reference "#PWR067")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "sumec_sch_lib:ESP32-S3-WROOM-1_CUSTOM_made_by_bismarx")
-		(at 160.02 91.44 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "f84c7223-b09b-4f40-ac6a-81aa30c19960")
-		(property "Reference" "U3"
-			(at 133.35 118.11 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "ESP32-S3-WROOM-1"
-			(at 133.35 120.65 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "PCM_Espressif:ESP32-S3-WROOM-1"
-			(at 157.226 48.006 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.espressif.com/sites/default/files/documentation/esp32-s3-wroom-1_wroom-1u_datasheet_en.pdf"
-			(at 156.464 54.102 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "RF Module, ESP32-S3 SoC, Wi-Fi 802.11b/g/n, Bluetooth, BLE, 32-bit, 3.3V, onboard antenna, SMD"
-			(at 157.48 51.054 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "23"
-			(uuid "5fbd00c8-4e2d-428f-8186-8b66e98e39ea")
-		)
-		(pin "40"
-			(uuid "dbeabd6d-a790-4cf4-a5d4-716e1ccc6b74")
-		)
-		(pin "18"
-			(uuid "ea588d41-6c84-4023-80aa-f3835cf709c5")
-		)
-		(pin "20"
-			(uuid "decb3277-fc49-4f1e-87e1-d068d88e60fc")
-		)
-		(pin "35"
-			(uuid "d0a670fd-5e3e-4cca-85a9-a2a3915fb478")
-		)
-		(pin "16"
-			(uuid "cc435e4a-de36-4a10-aee9-e660b719f093")
-		)
-		(pin "41"
-			(uuid "64289afe-be38-43ca-b718-0f9d2463c036")
-		)
-		(pin "11"
-			(uuid "7227bbef-9953-4798-b348-0e8f7d7c67a3")
-		)
-		(pin "22"
-			(uuid "ccdfecbe-647d-4574-895f-c38debadc3cd")
-		)
-		(pin "32"
-			(uuid "e2746c80-f71b-4a1f-909c-905984ac37f8")
-		)
-		(pin "37"
-			(uuid "e6758c6e-cf69-46a2-ba7c-8d0b72dbbb60")
-		)
-		(pin "15"
-			(uuid "d43f5005-a73c-4380-ae08-340649e6912f")
-		)
-		(pin "28"
-			(uuid "af09c757-c59e-4e9b-bbc7-1745f27e1860")
-		)
-		(pin "5"
-			(uuid "80806bd7-7bce-450c-96f6-dac58663a252")
-		)
-		(pin "2"
-			(uuid "a85b628b-87fe-4548-83e7-aa094f150a3f")
-		)
-		(pin "14"
-			(uuid "cc3c25c1-a78a-42ca-b2cc-38f6eb6f33c2")
-		)
-		(pin "21"
-			(uuid "538904e9-4652-4f85-8301-2ed3fa4541a5")
-		)
-		(pin "25"
-			(uuid "38040e1d-d457-458c-840f-502a87e6ba78")
-		)
-		(pin "3"
-			(uuid "0da02a5f-b82f-4130-85e0-0d1f8de22529")
-		)
-		(pin "26"
-			(uuid "6f2ec189-b249-429e-b16c-e62551c16a99")
-		)
-		(pin "10"
-			(uuid "afb56f81-ed1a-4bc5-826d-d2610c84fb80")
-		)
-		(pin "27"
-			(uuid "120a0745-3d38-4b3d-bd18-3d4c37465a32")
-		)
-		(pin "39"
-			(uuid "602d0394-0c51-4519-8ba8-fb2e2e531101")
-		)
-		(pin "29"
-			(uuid "53cf77ce-e842-4207-8c24-f39337343d6a")
-		)
-		(pin "1"
-			(uuid "011ae524-f86c-4ffb-b7c3-96831755e24d")
-		)
-		(pin "30"
-			(uuid "adcffa2b-449a-48db-8d11-b82c886b6d71")
-		)
-		(pin "7"
-			(uuid "38dc2a09-97b4-4de1-92b9-b11cbb8430c3")
-		)
-		(pin "13"
-			(uuid "8e27f0a4-0556-42aa-bbb0-3b12ec4d6c21")
-		)
-		(pin "17"
-			(uuid "ea1287eb-50ae-4fa6-b71d-2f5d91da4522")
-		)
-		(pin "31"
-			(uuid "948fad66-ef51-4b76-8944-97868d6e63e3")
-		)
-		(pin "6"
-			(uuid "8f2a4df6-bbaa-4afb-b0e0-a1b5b64adaea")
-		)
-		(pin "24"
-			(uuid "86f621b6-0b54-4f44-9a3c-d8698f121ee5")
-		)
-		(pin "34"
-			(uuid "f1c440a5-432a-4b2d-97f4-d89159eb66d1")
-		)
-		(pin "36"
-			(uuid "23c6bb79-79c0-42a0-ae48-763351e166a2")
-		)
-		(pin "12"
-			(uuid "ab58e4f4-b2fd-4d5c-8453-da710c595bb7")
-		)
-		(pin "9"
-			(uuid "499c4bb6-242f-4f4f-b547-0e30c2a1dbd7")
-		)
-		(pin "8"
-			(uuid "e52119cf-bbca-434c-8630-686c049cc894")
-		)
-		(pin "19"
-			(uuid "041c8430-bf51-4beb-ba6b-4fdf965b26ac")
-		)
-		(pin "33"
-			(uuid "abf7f5a1-17e1-4da8-b1e5-aff6467a17b0")
-		)
-		(pin "4"
-			(uuid "4281bf8b-912b-4a8c-a097-a32d736fb4ef")
-		)
-		(pin "38"
-			(uuid "080a4dda-7de1-49fe-bb98-0712bd26f122")
-		)
-		(instances
-			(project "SUMEC_MK_IV"
-				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/7b93d7c5-db1a-415c-92e4-9ebec6cf195f"
-					(reference "U3")
 					(unit 1)
 				)
 			)

@@ -1373,26 +1373,26 @@
 				)
 			)
 		)
-		(symbol "Interface_Optical:TSOP382xx"
+		(symbol "TSOP382xx_1"
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
-			(property "Reference" "U5"
-				(at -7.62 7.62 0)
+			(property "Reference" "U"
+				(at -10.16 7.62 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify right)
+					(justify left)
 				)
 			)
 			(property "Value" "TSOP382xx"
-				(at 5.08 7.62 0)
+				(at -10.16 -7.62 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify right)
+					(justify left)
 				)
 			)
 			(property "Footprint" "OptoDevice:Vishay_MINICAST-3Pin"
@@ -1440,7 +1440,7 @@
 					(hide yes)
 				)
 			)
-			(symbol "TSOP382xx_0_0"
+			(symbol "TSOP382xx_1_0_0"
 				(arc
 					(start -10.287 1.397)
 					(mid -11.0899 -0.1852)
@@ -1486,7 +1486,7 @@
 					)
 				)
 			)
-			(symbol "TSOP382xx_0_1"
+			(symbol "TSOP382xx_1_0_1"
 				(rectangle
 					(start -6.096 5.588)
 					(end 0.127 -5.588)
@@ -1737,9 +1737,9 @@
 					)
 				)
 			)
-			(symbol "TSOP382xx_1_1"
+			(symbol "TSOP382xx_1_1_1"
 				(pin output line
-					(at 10.16 5.08 180)
+					(at 10.16 0 180)
 					(length 2.54)
 					(name "OUT"
 						(effects
@@ -1757,7 +1757,7 @@
 					)
 				)
 				(pin power_in line
-					(at 10.16 0 180)
+					(at 10.16 -5.08 180)
 					(length 2.54)
 					(name "GND"
 						(effects
@@ -1775,7 +1775,7 @@
 					)
 				)
 				(pin power_in line
-					(at 10.16 -5.08 180)
+					(at 10.16 5.08 180)
 					(length 2.54)
 					(name "Vs"
 						(effects
@@ -2219,7 +2219,7 @@
 	)
 	(wire
 		(pts
-			(xy 95.25 60.96) (xy 101.6 60.96)
+			(xy 91.44 66.04) (xy 97.79 66.04)
 		)
 		(stroke
 			(width 0)
@@ -2249,7 +2249,7 @@
 	)
 	(wire
 		(pts
-			(xy 100.33 66.04) (xy 95.25 66.04)
+			(xy 96.52 55.88) (xy 91.44 55.88)
 		)
 		(stroke
 			(width 0)
@@ -2386,6 +2386,16 @@
 			(type default)
 		)
 		(uuid "58e6c914-6ed3-4939-9a78-96f3b476cc23")
+	)
+	(wire
+		(pts
+			(xy 91.44 60.96) (xy 97.79 60.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "63b5b000-7f82-42c6-bbf6-f5e4c2478613")
 	)
 	(wire
 		(pts
@@ -2766,16 +2776,6 @@
 			(type default)
 		)
 		(uuid "de91f742-cdef-4985-8196-ca39f1cdf5ed")
-	)
-	(wire
-		(pts
-			(xy 100.33 55.88) (xy 95.25 55.88)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "def085d0-38f3-43ba-8d51-1e8cb5afabd1")
 	)
 	(wire
 		(pts
@@ -10228,30 +10228,6 @@
 			)
 		)
 	)
-	(global_label "IR MODULE"
-		(shape output)
-		(at 100.33 55.88 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(face "Bahnschrift")
-				(size 1 1)
-				(color 0 0 0 1)
-			)
-			(justify left)
-		)
-		(uuid "5a2c174a-9f69-4fc1-b009-8da2cd272341")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 109.5912 55.88 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
 	(global_label "SDA"
 		(shape bidirectional)
 		(at 41.91 119.38 180)
@@ -10272,6 +10248,30 @@
 					(size 1.27 1.27)
 				)
 				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "IR MODULE"
+		(shape output)
+		(at 97.79 60.96 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(face "Bahnschrift")
+				(size 1 1)
+				(color 0 0 0 1)
+			)
+			(justify left)
+		)
+		(uuid "9c5fe4ce-6bed-4ac0-8af7-5009a9f73ab0")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 107.0512 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
 				(hide yes)
 			)
 		)
@@ -10489,6 +10489,77 @@
 				)
 				(justify left)
 				(hide yes)
+			)
+		)
+	)
+	(symbol
+		(lib_name "TSOP382xx_1")
+		(lib_id "Interface_Optical:TSOP382xx")
+		(at 81.28 60.96 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "17a276db-2f54-4853-899d-a71dd0d0516d")
+		(property "Reference" "U2"
+			(at 79.545 49.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TSOP382xx"
+			(at 79.545 52.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "OptoDevice:Vishay_MINICAST-3Pin"
+			(at 80.01 70.485 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://www.vishay.com/docs/82491/tsop382.pdf"
+			(at 97.79 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Photo Modules for PCM Remote Control Systems"
+			(at 81.28 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "78dcb18e-9dce-4a0f-94f2-a040a54711b1")
+		)
+		(pin "1"
+			(uuid "850cb32b-4cbe-4acf-b843-ff536c82dcb4")
+		)
+		(pin "3"
+			(uuid "68937b7c-dd6c-4d32-9661-f7c51e80b3f3")
+		)
+		(instances
+			(project ""
+				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/a4783534-f11a-41d1-a455-2e16f5dc258a"
+					(reference "U2")
+					(unit 1)
+				)
 			)
 		)
 	)
@@ -11531,7 +11602,7 @@
 	(symbol
 		(lib_name "+3V3_1")
 		(lib_id "power:+3V3")
-		(at 100.33 66.04 270)
+		(at 96.52 55.88 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -11539,7 +11610,7 @@
 		(dnp no)
 		(uuid "73098de6-02f8-4c72-9474-e8f1e53d7857")
 		(property "Reference" "#PWR047"
-			(at 96.52 66.04 0)
+			(at 92.71 55.88 0)
 			(effects
 				(font
 					(face "Bahnschrift")
@@ -11549,7 +11620,7 @@
 			)
 		)
 		(property "Value" "+3V3"
-			(at 105.41 66.04 90)
+			(at 101.6 55.88 90)
 			(effects
 				(font
 					(face "Bahnschrift")
@@ -11558,7 +11629,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 100.33 66.04 0)
+			(at 96.52 55.88 0)
 			(effects
 				(font
 					(face "Bahnschrift")
@@ -11568,7 +11639,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 100.33 66.04 0)
+			(at 96.52 55.88 0)
 			(effects
 				(font
 					(face "Bahnschrift")
@@ -11578,7 +11649,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 100.33 66.04 0)
+			(at 96.52 55.88 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11678,82 +11749,6 @@
 			(project "SUMEC_MK_IV"
 				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/a4783534-f11a-41d1-a455-2e16f5dc258a"
 					(reference "J6")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Interface_Optical:TSOP382xx")
-		(at 85.09 60.96 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "7745b7e8-2f28-4593-8bc2-9ef4f0c84869")
-		(property "Reference" "U2"
-			(at 77.47 53.34 0)
-			(effects
-				(font
-					(face "Bahnschrift")
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "TSOP382xx"
-			(at 90.17 53.34 0)
-			(effects
-				(font
-					(face "Bahnschrift")
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "sumec_brd:TSOP"
-			(at 83.82 70.485 0)
-			(effects
-				(font
-					(face "Bahnschrift")
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "http://www.vishay.com/docs/82491/tsop382.pdf"
-			(at 101.6 53.34 0)
-			(effects
-				(font
-					(face "Bahnschrift")
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 85.09 60.96 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "7db58764-2389-485b-aa74-093eb42a0d2c")
-		)
-		(pin "2"
-			(uuid "aae55b32-f6f8-4b97-a788-3041fdcc9612")
-		)
-		(pin "3"
-			(uuid "f534cfc8-f926-4418-a3cc-5fc1b456be91")
-		)
-		(instances
-			(project "SUMEC_MK_IV"
-				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/a4783534-f11a-41d1-a455-2e16f5dc258a"
-					(reference "U2")
 					(unit 1)
 				)
 			)
@@ -11903,7 +11898,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 101.6 60.96 90)
+		(at 97.79 66.04 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -11912,7 +11907,7 @@
 		(fields_autoplaced yes)
 		(uuid "8f63a38e-7f03-4a98-8fa1-97fa77caee03")
 		(property "Reference" "#PWR049"
-			(at 107.95 60.96 0)
+			(at 104.14 66.04 0)
 			(effects
 				(font
 					(face "Bahnschrift")
@@ -11922,7 +11917,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 105.41 60.9599 90)
+			(at 101.6 66.0399 90)
 			(effects
 				(font
 					(face "Bahnschrift")
@@ -11933,7 +11928,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 101.6 60.96 0)
+			(at 97.79 66.04 0)
 			(effects
 				(font
 					(face "Bahnschrift")
@@ -11943,7 +11938,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 101.6 60.96 0)
+			(at 97.79 66.04 0)
 			(effects
 				(font
 					(face "Bahnschrift")
@@ -11953,7 +11948,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 101.6 60.96 0)
+			(at 97.79 66.04 0)
 			(effects
 				(font
 					(size 1.27 1.27)

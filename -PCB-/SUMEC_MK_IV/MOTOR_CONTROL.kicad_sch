@@ -902,7 +902,7 @@
 				)
 			)
 		)
-		(symbol "sumec_library:DRV8874PWPR"
+		(symbol "sumec_sch_lib:DRV8874PWPR"
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -924,7 +924,7 @@
 					(justify left top)
 				)
 			)
-			(property "Footprint" "SOP65P640X120-17N"
+			(property "Footprint" "sumec_brd:DRV8874"
 				(at 31.75 -94.92 0)
 				(effects
 					(font
@@ -5860,202 +5860,6 @@
 		)
 	)
 	(symbol
-		(lib_id "sumec_library:DRV8874PWPR")
-		(at 156.21 58.42 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "25e02ac4-0f10-4862-8c99-f0223c6c23d6")
-		(property "Reference" "IC2"
-			(at 173.99 52.07 0)
-			(effects
-				(font
-					(face "Bahnschrift")
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "DRV8874PWPR"
-			(at 173.99 54.61 0)
-			(effects
-				(font
-					(face "Bahnschrift")
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "sumec-smdV2_library:DRV8874"
-			(at 187.96 153.34 0)
-			(effects
-				(font
-					(face "Bahnschrift")
-					(size 1.27 1.27)
-				)
-				(justify left top)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.ti.com/lit/gpn/DRV8874"
-			(at 187.96 253.34 0)
-			(effects
-				(font
-					(face "Bahnschrift")
-					(size 1.27 1.27)
-				)
-				(justify left top)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 156.21 58.42 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Height" "1.2"
-			(at 187.96 453.34 0)
-			(effects
-				(font
-					(face "Bahnschrift")
-					(size 1.27 1.27)
-				)
-				(justify left top)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer_Name" "Texas Instruments"
-			(at 187.96 553.34 0)
-			(effects
-				(font
-					(face "Bahnschrift")
-					(size 1.27 1.27)
-				)
-				(justify left top)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer_Part_Number" "DRV8874PWPR"
-			(at 187.96 653.34 0)
-			(effects
-				(font
-					(face "Bahnschrift")
-					(size 1.27 1.27)
-				)
-				(justify left top)
-				(hide yes)
-			)
-		)
-		(property "Mouser Part Number" "595-DRV8874PWPR"
-			(at 187.96 753.34 0)
-			(effects
-				(font
-					(face "Bahnschrift")
-					(size 1.27 1.27)
-				)
-				(justify left top)
-				(hide yes)
-			)
-		)
-		(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Texas-Instruments/DRV8874PWPR?qs=mAH9sUMRCtvh%2FSU15ywmDA%3D%3D"
-			(at 187.96 853.34 0)
-			(effects
-				(font
-					(face "Bahnschrift")
-					(size 1.27 1.27)
-				)
-				(justify left top)
-				(hide yes)
-			)
-		)
-		(property "Arrow Part Number" "DRV8874PWPR"
-			(at 187.96 953.34 0)
-			(effects
-				(font
-					(face "Bahnschrift")
-					(size 1.27 1.27)
-				)
-				(justify left top)
-				(hide yes)
-			)
-		)
-		(property "Arrow Price/Stock" "https://www.arrow.com/en/products/drv8874pwpr/texas-instruments?region=nac"
-			(at 187.96 1053.34 0)
-			(effects
-				(font
-					(face "Bahnschrift")
-					(size 1.27 1.27)
-				)
-				(justify left top)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "c6c3ad8d-4c77-42ab-af1c-27178bf20ae1")
-		)
-		(pin "10"
-			(uuid "00981591-c041-4712-a9cd-b5db7585fb09")
-		)
-		(pin "11"
-			(uuid "637d474c-bccf-4b70-906f-9a2c2e6d21eb")
-		)
-		(pin "12"
-			(uuid "b12efe35-262e-4fba-afea-b20de1c7dd1f")
-		)
-		(pin "13"
-			(uuid "460ec859-8dcb-4ac5-96d6-c0b6d9dbfa00")
-		)
-		(pin "14"
-			(uuid "1144a85a-b2a4-4cbe-9921-4f9a7fd989ba")
-		)
-		(pin "15"
-			(uuid "eef3ad28-47f1-4359-b33c-9cc75ba41a6e")
-		)
-		(pin "16"
-			(uuid "0a1924a5-b527-42f3-bf6a-8ce80704d784")
-		)
-		(pin "17"
-			(uuid "3e581769-9af8-4074-8182-95ba42a4b56a")
-		)
-		(pin "2"
-			(uuid "bda09f3e-43dd-4260-8ec7-fad99c3f1be4")
-		)
-		(pin "3"
-			(uuid "a663ecee-3966-4f62-a954-96ff465690f0")
-		)
-		(pin "4"
-			(uuid "61831464-4e3d-48aa-afee-00d997b7bd61")
-		)
-		(pin "5"
-			(uuid "f6347825-4d55-4fba-b2ba-3e11e72228ed")
-		)
-		(pin "6"
-			(uuid "f0866baf-171a-427b-bfc5-f04b9c12428d")
-		)
-		(pin "7"
-			(uuid "870fa20b-b265-45e4-8a26-780fcfe891e9")
-		)
-		(pin "8"
-			(uuid "29202aa5-7245-4095-8d69-5de83c24164c")
-		)
-		(pin "9"
-			(uuid "36d80ed5-b0b0-421d-b106-b5003907771c")
-		)
-		(instances
-			(project "SUMEC_MK_IV"
-				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/7dd11b1d-8415-4d33-9ce7-bf4ef9848927"
-					(reference "IC2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GND")
 		(at 207.01 107.95 90)
 		(unit 1)
@@ -6343,6 +6147,191 @@
 		)
 	)
 	(symbol
+		(lib_id "sumec_sch_lib:DRV8874PWPR")
+		(at 156.21 58.42 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "3899fe2f-9b2c-4c02-b426-176f92a92f9c")
+		(property "Reference" "IC2"
+			(at 173.99 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "DRV8874PWPR"
+			(at 173.99 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "sumec_brd:DRV8874"
+			(at 187.96 153.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.ti.com/lit/gpn/DRV8874"
+			(at 187.96 253.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Description" "H-Bridge Motor Driver With Integrated Current Sense and Regulation"
+			(at 156.21 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Height" "1.2"
+			(at 187.96 453.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Name" "Texas Instruments"
+			(at 187.96 553.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Part_Number" "DRV8874PWPR"
+			(at 187.96 653.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "595-DRV8874PWPR"
+			(at 187.96 753.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Texas-Instruments/DRV8874PWPR?qs=mAH9sUMRCtvh%2FSU15ywmDA%3D%3D"
+			(at 187.96 853.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Arrow Part Number" "DRV8874PWPR"
+			(at 187.96 953.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Arrow Price/Stock" "https://www.arrow.com/en/products/drv8874pwpr/texas-instruments?region=nac"
+			(at 187.96 1053.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(pin "6"
+			(uuid "001da2cb-22a0-4358-8031-ef6ce97e9024")
+		)
+		(pin "12"
+			(uuid "ef6f4200-af52-4c8b-af90-f861ee7ea21c")
+		)
+		(pin "4"
+			(uuid "85ff134a-cd8e-4a3b-aaa1-3566bfb7a73a")
+		)
+		(pin "10"
+			(uuid "48977983-7e1a-4f34-9d76-d458bc189ef0")
+		)
+		(pin "13"
+			(uuid "280b1a31-3e80-41fa-bf80-195d49546656")
+		)
+		(pin "16"
+			(uuid "48925de7-f39b-4e2a-bfc4-e42e51821b9b")
+		)
+		(pin "11"
+			(uuid "da4d6a73-9729-4f39-b037-0987b32b2ba8")
+		)
+		(pin "5"
+			(uuid "c30e62d8-caa3-4b3b-9e27-f8e1b7a8a28a")
+		)
+		(pin "2"
+			(uuid "e9475f13-d015-4c7a-ad01-a8e0df77f7d1")
+		)
+		(pin "1"
+			(uuid "d38d5312-23fc-4a5e-afcc-e5fd19bca135")
+		)
+		(pin "15"
+			(uuid "6e352bb2-0cd4-448b-8350-f31651b35b0f")
+		)
+		(pin "17"
+			(uuid "ce8efd68-bd96-4808-9d10-71dae0eb4340")
+		)
+		(pin "8"
+			(uuid "96064344-d970-4a9e-bcdf-510277a90370")
+		)
+		(pin "9"
+			(uuid "895337e4-b542-482a-8ece-2b120f0e0720")
+		)
+		(pin "14"
+			(uuid "1965c934-5199-44ad-9858-3e9c9a7d808b")
+		)
+		(pin "7"
+			(uuid "16f5bde9-1a1e-4daa-bbb2-6dfa1935e730")
+		)
+		(pin "3"
+			(uuid "8e2b4a2f-516f-4e94-9ff5-4ce0dffe3eca")
+		)
+		(instances
+			(project ""
+				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/7dd11b1d-8415-4d33-9ce7-bf4ef9848927"
+					(reference "IC2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 173.99 139.7 0)
 		(unit 1)
@@ -6548,6 +6537,191 @@
 			(project "SUMEC_MK_IV"
 				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/7dd11b1d-8415-4d33-9ce7-bf4ef9848927"
 					(reference "#PWR028")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "sumec_sch_lib:DRV8874PWPR")
+		(at 156.21 107.95 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "5e34def0-b1d9-4b0d-98c3-33d56a4be431")
+		(property "Reference" "IC3"
+			(at 173.99 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "DRV8874PWPR"
+			(at 173.99 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "sumec_brd:DRV8874"
+			(at 187.96 202.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.ti.com/lit/gpn/DRV8874"
+			(at 187.96 302.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Description" "H-Bridge Motor Driver With Integrated Current Sense and Regulation"
+			(at 156.21 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Height" "1.2"
+			(at 187.96 502.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Name" "Texas Instruments"
+			(at 187.96 602.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Part_Number" "DRV8874PWPR"
+			(at 187.96 702.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "595-DRV8874PWPR"
+			(at 187.96 802.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Texas-Instruments/DRV8874PWPR?qs=mAH9sUMRCtvh%2FSU15ywmDA%3D%3D"
+			(at 187.96 902.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Arrow Part Number" "DRV8874PWPR"
+			(at 187.96 1002.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Arrow Price/Stock" "https://www.arrow.com/en/products/drv8874pwpr/texas-instruments?region=nac"
+			(at 187.96 1102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(pin "6"
+			(uuid "b19dca6c-6d1c-4414-aafb-c8b16b784812")
+		)
+		(pin "12"
+			(uuid "d900a8b3-afe1-4aa2-bf5d-ae4894cfb33f")
+		)
+		(pin "4"
+			(uuid "d3425a50-09da-4acf-ace5-4160e727ee58")
+		)
+		(pin "10"
+			(uuid "8db69bce-a5c1-426b-9b32-3f4f6b06ed1f")
+		)
+		(pin "13"
+			(uuid "0164343d-977c-453c-b2b3-dc06817851e6")
+		)
+		(pin "16"
+			(uuid "ae22b275-22e6-4590-a415-f9e92b7a1f8c")
+		)
+		(pin "11"
+			(uuid "271b5fd5-d40e-48e4-8376-5c1b429dad79")
+		)
+		(pin "5"
+			(uuid "e5677eea-9de5-445d-a669-e1c567cec347")
+		)
+		(pin "2"
+			(uuid "3f9c388d-3ee8-46b5-a5ef-9e916a52c2b7")
+		)
+		(pin "1"
+			(uuid "93c21fb5-bb31-4083-9374-70703b754926")
+		)
+		(pin "15"
+			(uuid "6e34c5b8-4697-4a61-83d5-b100d4cd1fe1")
+		)
+		(pin "17"
+			(uuid "9570f4ef-8aae-43db-80ef-5ad536a7f372")
+		)
+		(pin "8"
+			(uuid "5ff91fb2-b4f4-48dd-9608-52e989d65ae3")
+		)
+		(pin "9"
+			(uuid "25a276d0-a7d8-4de5-b489-7c7c3663bdec")
+		)
+		(pin "14"
+			(uuid "980d74ff-1e29-448b-88fd-abf99bec8435")
+		)
+		(pin "7"
+			(uuid "c45876f2-4045-4287-81a7-faea1ce88608")
+		)
+		(pin "3"
+			(uuid "146d6b3d-913a-47fd-a2fd-39e04f75a938")
+		)
+		(instances
+			(project "SUMEC_MK_IV"
+				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/7dd11b1d-8415-4d33-9ce7-bf4ef9848927"
+					(reference "IC3")
 					(unit 1)
 				)
 			)
@@ -7534,202 +7708,6 @@
 			(project "SUMEC_MK_IV"
 				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/7dd11b1d-8415-4d33-9ce7-bf4ef9848927"
 					(reference "C18")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "sumec_library:DRV8874PWPR")
-		(at 156.21 107.95 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "fca4c21f-7572-4140-948c-52f982a30efc")
-		(property "Reference" "IC3"
-			(at 173.99 101.6 0)
-			(effects
-				(font
-					(face "Bahnschrift")
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "DRV8874PWPR"
-			(at 173.99 104.14 0)
-			(effects
-				(font
-					(face "Bahnschrift")
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "sumec-smdV2_library:DRV8874"
-			(at 187.96 202.87 0)
-			(effects
-				(font
-					(face "Bahnschrift")
-					(size 1.27 1.27)
-				)
-				(justify left top)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.ti.com/lit/gpn/DRV8874"
-			(at 187.96 302.87 0)
-			(effects
-				(font
-					(face "Bahnschrift")
-					(size 1.27 1.27)
-				)
-				(justify left top)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 156.21 107.95 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Height" "1.2"
-			(at 187.96 502.87 0)
-			(effects
-				(font
-					(face "Bahnschrift")
-					(size 1.27 1.27)
-				)
-				(justify left top)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer_Name" "Texas Instruments"
-			(at 187.96 602.87 0)
-			(effects
-				(font
-					(face "Bahnschrift")
-					(size 1.27 1.27)
-				)
-				(justify left top)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer_Part_Number" "DRV8874PWPR"
-			(at 187.96 702.87 0)
-			(effects
-				(font
-					(face "Bahnschrift")
-					(size 1.27 1.27)
-				)
-				(justify left top)
-				(hide yes)
-			)
-		)
-		(property "Mouser Part Number" "595-DRV8874PWPR"
-			(at 187.96 802.87 0)
-			(effects
-				(font
-					(face "Bahnschrift")
-					(size 1.27 1.27)
-				)
-				(justify left top)
-				(hide yes)
-			)
-		)
-		(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Texas-Instruments/DRV8874PWPR?qs=mAH9sUMRCtvh%2FSU15ywmDA%3D%3D"
-			(at 187.96 902.87 0)
-			(effects
-				(font
-					(face "Bahnschrift")
-					(size 1.27 1.27)
-				)
-				(justify left top)
-				(hide yes)
-			)
-		)
-		(property "Arrow Part Number" "DRV8874PWPR"
-			(at 187.96 1002.87 0)
-			(effects
-				(font
-					(face "Bahnschrift")
-					(size 1.27 1.27)
-				)
-				(justify left top)
-				(hide yes)
-			)
-		)
-		(property "Arrow Price/Stock" "https://www.arrow.com/en/products/drv8874pwpr/texas-instruments?region=nac"
-			(at 187.96 1102.87 0)
-			(effects
-				(font
-					(face "Bahnschrift")
-					(size 1.27 1.27)
-				)
-				(justify left top)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "b08dc691-0f79-4804-bfbb-45b14ee94da8")
-		)
-		(pin "10"
-			(uuid "4759f482-44de-499f-bc93-b5f244731e8d")
-		)
-		(pin "11"
-			(uuid "60aa6864-fc66-40a1-a1b7-a320b528bae0")
-		)
-		(pin "12"
-			(uuid "88c573ac-db41-4335-988c-5e0d4dd220e3")
-		)
-		(pin "13"
-			(uuid "6ae6599e-6451-4f93-ae60-8f5429fcea40")
-		)
-		(pin "14"
-			(uuid "ec0ad1d4-ebba-4f0b-bada-500e80ebc1ac")
-		)
-		(pin "15"
-			(uuid "ae2e5aee-10f7-43fe-9a65-50ffbc4b531e")
-		)
-		(pin "16"
-			(uuid "59f54385-5ca3-4692-a16b-59323c23f89c")
-		)
-		(pin "17"
-			(uuid "0d25cba1-803e-4d79-b6f7-7430c99627df")
-		)
-		(pin "2"
-			(uuid "ad03be06-9aa7-4bd4-9588-04e57451fca0")
-		)
-		(pin "3"
-			(uuid "2341e06e-c16d-442d-a840-efa8c8b0a45e")
-		)
-		(pin "4"
-			(uuid "037b3a90-d643-43e7-a525-4315b60a4bfc")
-		)
-		(pin "5"
-			(uuid "c80adf37-5dd4-4b62-a5d1-36194a6e4a4d")
-		)
-		(pin "6"
-			(uuid "d36470da-a31c-4f35-b15b-ccd8d5635bcd")
-		)
-		(pin "7"
-			(uuid "dc159247-8769-4148-99f8-d4af05658452")
-		)
-		(pin "8"
-			(uuid "de1665ad-ece9-46b9-9519-2fa169163099")
-		)
-		(pin "9"
-			(uuid "8de6f4f5-a0aa-4b70-be56-da7889294699")
-		)
-		(instances
-			(project "SUMEC_MK_IV"
-				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/7dd11b1d-8415-4d33-9ce7-bf4ef9848927"
-					(reference "IC3")
 					(unit 1)
 				)
 			)

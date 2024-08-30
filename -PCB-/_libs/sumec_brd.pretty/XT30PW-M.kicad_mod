@@ -123,8 +123,8 @@
 		(uuid "9bc7f470-53a9-4b36-b241-d138c62e3921")
 	)
 	(fp_line
-		(start -3 12.25)
-		(end -2 12.25)
+		(start -3 7.5)
+		(end -2 7.5)
 		(stroke
 			(width 0.127)
 			(type solid)
@@ -133,8 +133,8 @@
 		(uuid "2f1a4e68-fb5a-4c74-a5d0-ada87c302f3d")
 	)
 	(fp_line
-		(start -2.5 12.75)
-		(end -2.5 11.75)
+		(start -2.5 8)
+		(end -2.5 7)
 		(stroke
 			(width 0.127)
 			(type solid)
@@ -143,8 +143,8 @@
 		(uuid "181e8b0e-b8c0-451d-bf36-73a1865cff66")
 	)
 	(fp_line
-		(start 2 12.25)
-		(end 3 12.25)
+		(start 2 7.5)
+		(end 3 7.5)
 		(stroke
 			(width 0.127)
 			(type solid)
@@ -313,8 +313,8 @@
 		(uuid "2af181fc-e554-41a0-916e-99ea27ed896e")
 	)
 	(fp_line
-		(start -3 12.25)
-		(end -2 12.25)
+		(start -3 7.5)
+		(end -2 7.5)
 		(stroke
 			(width 0.127)
 			(type solid)
@@ -323,24 +323,14 @@
 		(uuid "71f5cf5e-3075-48e5-a011-4c288747bb5a")
 	)
 	(fp_line
-		(start -2.5 12.75)
-		(end -2.5 11.75)
+		(start -2.5 8)
+		(end -2.5 7)
 		(stroke
 			(width 0.127)
 			(type solid)
 		)
 		(layer "F.Fab")
 		(uuid "4befb0b2-d8ae-470e-b90d-4fb0c4639e49")
-	)
-	(fp_line
-		(start 2 12.25)
-		(end 3 12.25)
-		(stroke
-			(width 0.127)
-			(type solid)
-		)
-		(layer "F.Fab")
-		(uuid "11fdd38f-f850-43bc-97d0-9e8fb96a8ea9")
 	)
 	(fp_line
 		(start 4.95 -2.95)
@@ -438,7 +428,7 @@
 		(solder_mask_margin 0.102)
 		(uuid "dca31047-f2fa-4a81-a262-6e5e55602273")
 	)
-	(model "C:/Users/MenMe/GitHub/RoboCop/- PCB -/SUMEC SMD-V2/libs/3D/XT30PW-M.step"
+	(model "C:/Users/MenMe/GitHub/Sumec-MiniSumo/-PCB-/_libs/sumec_3d/XT30PW-M.step"
 		(offset
 			(xyz 0 0 0)
 		)

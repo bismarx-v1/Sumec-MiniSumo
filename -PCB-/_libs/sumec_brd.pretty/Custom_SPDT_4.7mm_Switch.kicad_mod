@@ -126,19 +126,6 @@
 		(layer "F.Fab")
 		(uuid "9c94ccd5-5d90-4cb6-a6a3-d06d37e654da")
 	)
-	(fp_text user "IN"
-		(at 5.75 0.42 90)
-		(unlocked yes)
-		(layer "F.SilkS")
-		(uuid "943a8aac-c12b-4969-964d-dc90d7106759")
-		(effects
-			(font
-				(size 1 1)
-				(thickness 0.15)
-			)
-			(justify left bottom)
-		)
-	)
 	(pad "1" thru_hole rect
 		(at 0 -4.7)
 		(size 3.4 2.2)
@@ -165,7 +152,7 @@
 		(roundrect_rratio 0.25)
 		(uuid "a016c942-256b-4df4-9cc8-1c62f1d321b5")
 	)
-	(model "C:/Users/MenMe/GitHub/RoboCop/- PCB -/SUMEC SMD-V2/libs/3D/SPDT_Switch_piano.stp"
+	(model "C:/Users/MenMe/GitHub/Sumec-MiniSumo/-PCB-/_libs/sumec_3d/SPDT_Switch_piano_noHoles.stp"
 		(offset
 			(xyz 0 0 0)
 		)
@@ -173,7 +160,7 @@
 			(xyz 1 1 1)
 		)
 		(rotate
-			(xyz 0 0 -90)
+			(xyz 0 0 90)
 		)
 	)
 )
