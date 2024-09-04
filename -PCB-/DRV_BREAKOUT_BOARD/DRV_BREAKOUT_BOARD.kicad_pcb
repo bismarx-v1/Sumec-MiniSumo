@@ -81,13 +81,13 @@
 		(pad_to_mask_clearance 0)
 		(allow_soldermask_bridges_in_footprints no)
 		(pcbplotparams
-			(layerselection 0x00010fc_ffffffff)
-			(plot_on_all_layers_selection 0x0000000_00000000)
+			(layerselection 0x0000000_fffffffe)
+			(plot_on_all_layers_selection 0x0001000_80000000)
 			(disableapertmacros no)
 			(usegerberextensions no)
 			(usegerberattributes yes)
 			(usegerberadvancedattributes yes)
-			(creategerberjobfile yes)
+			(creategerberjobfile no)
 			(dashed_line_dash_ratio 12.000000)
 			(dashed_line_gap_ratio 3.000000)
 			(svgprecision 4)
@@ -103,17 +103,17 @@
 			(dxfpolygonmode yes)
 			(dxfimperialunits yes)
 			(dxfusepcbnewfont yes)
-			(psnegative no)
+			(psnegative yes)
 			(psa4output no)
-			(plotreference yes)
-			(plotvalue yes)
-			(plotfptext yes)
+			(plotreference no)
+			(plotvalue no)
+			(plotfptext no)
 			(plotinvisibletext no)
-			(sketchpadsonfab no)
+			(sketchpadsonfab yes)
 			(subtractmaskfromsilk no)
-			(outputformat 1)
+			(outputformat 4)
 			(mirror no)
-			(drillshape 1)
+			(drillshape 2)
 			(scaleselection 1)
 			(outputdirectory "")
 		)
@@ -157,6 +157,7 @@
 		(property "Value" "Conn_01x08_Pin"
 			(at 0 20.11 180)
 			(layer "F.Fab")
+			(hide yes)
 			(uuid "dbbd6ebe-481d-445f-acae-50b0daadfe84")
 			(effects
 				(font
@@ -174,6 +175,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -186,6 +188,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -198,6 +201,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -356,17 +360,6 @@
 			(layer "F.Fab")
 			(uuid "86d9bedd-e798-45b4-9a72-0212040e7c55")
 		)
-		(fp_text user "${REFERENCE}"
-			(at 0 8.89 270)
-			(layer "F.Fab")
-			(uuid "71a65ef6-2ea8-43dd-b6a8-4040b18d5626")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
 		(pad "1" thru_hole rect
 			(at 0 0 180)
 			(size 1.7 1.7)
@@ -488,6 +481,7 @@
 		(property "Value" "Conn_01x08_Pin"
 			(at 0 20.11 180)
 			(layer "F.Fab")
+			(hide yes)
 			(uuid "7de29b61-b39f-4812-856b-bcb1a08223e3")
 			(effects
 				(font
@@ -505,6 +499,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -517,6 +512,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -529,6 +525,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -687,17 +684,6 @@
 			(layer "F.Fab")
 			(uuid "49e667cd-faab-4a69-8725-95e27de810f6")
 		)
-		(fp_text user "${REFERENCE}"
-			(at 0 8.89 270)
-			(layer "F.Fab")
-			(uuid "27f7dd4b-3257-4df7-b9d8-8a73535a1c18")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
 		(pad "1" thru_hole rect
 			(at 0 0 180)
 			(size 1.7 1.7)
@@ -805,7 +791,7 @@
 		(descr "HTSSOP_16-")
 		(tags "Integrated Circuit")
 		(property "Reference" "IC1"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "B.SilkS")
 			(hide yes)
 			(uuid "9dcd8699-9157-47c9-b2a9-14aea4e96b43")
@@ -818,7 +804,7 @@
 			)
 		)
 		(property "Value" "DRV8874PWPR"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "B.SilkS")
 			(hide yes)
 			(uuid "e1b1984f-081c-4894-ae3f-a77f73385b4d")
@@ -839,6 +825,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 				(justify mirror)
 			)
@@ -852,6 +839,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 				(justify mirror)
 			)
@@ -865,6 +853,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 				(justify mirror)
 			)
@@ -1071,18 +1060,6 @@
 			(layer "B.Fab")
 			(uuid "a5335a57-5e83-4156-be0f-1b8a42a32617")
 		)
-		(fp_text user "${REFERENCE}"
-			(at 0 0 360)
-			(layer "B.Fab")
-			(uuid "4e297437-838f-4bdb-90dd-fce493959183")
-			(effects
-				(font
-					(size 1.27 1.27)
-					(thickness 0.254)
-				)
-				(justify mirror)
-			)
-		)
 		(pad "1" smd rect
 			(at -2.938 2.275 270)
 			(size 0.45 1.475)
@@ -1247,6 +1224,17 @@
 				(xyz 0 0 0)
 			)
 		)
+	)
+	(gr_rect
+		(start 156.188 77.986)
+		(end 175.028 99.336)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(fill none)
+		(layer "Edge.Cuts")
+		(uuid "8f14c222-3d33-4634-8fc4-03736d6b5761")
 	)
 	(segment
 		(start 168.546 88.986)
@@ -1567,31 +1555,5 @@
 		(layer "B.Cu")
 		(net 17)
 		(uuid "fee6de97-71c4-4139-9a5d-a4ab6ce83829")
-	)
-	(group ""
-		(uuid "97482b5a-619d-4fc8-a7b7-7d878678a1fd")
-		(members "001e4ccf-74f4-4538-8ef4-5cc470287589" "017815aa-0013-4b01-ad2a-a18367e038fd"
-			"02306289-b01d-482a-b844-c719e2bdca0f" "05327300-8d51-41a5-845a-2229080ecefd"
-			"0f2aedff-81df-4efd-b384-e6f018730aaa" "1f7307ad-9bc5-4df9-897f-d48906758423"
-			"20acb30d-39a1-4a04-affe-067edd53c874" "2167dd95-97eb-426b-9006-a4014b9fc390"
-			"28acbca5-fa05-4d44-a7b9-21564e7b020e" "327325c9-7b8f-486f-9cc2-47884d6c4f70"
-			"348df95b-2b5b-4d46-889a-50417ab22888" "3a561030-cc19-461b-a16e-d5ded5cbb359"
-			"3a6e1a1a-78ac-44e0-93f5-506f4ea614f1" "4aa67a0f-f3a6-4413-b43b-b779e8e45d9c"
-			"4b4dfdb2-15d9-4613-b0ca-fb6bdeb1a22f" "53c70e36-6ced-4d8a-beb6-b4816af0da2f"
-			"58f9521f-e42d-40ad-94cf-d4c24c3beeb8" "6032fc0d-f47e-4237-9b6a-6e713ba93bdf"
-			"61048ccd-8c12-4faf-9aa0-58d39e572639" "683215d8-94fb-403a-ad07-c23ec23812eb"
-			"6f58d186-7313-4c7e-bd2c-6db51ad70355" "73dd3a22-c0dc-4c62-bce2-1f6f05b269ec"
-			"75df9b8c-c944-495f-9f68-07bd9b13c550" "807b675c-face-4de7-aac9-31ec9c7ff900"
-			"86cf9ac3-4d28-44ef-aae0-1be1d08fc45a" "8b4d917b-8368-47e9-830f-b4fcc97de82a"
-			"8ca31ce5-ca80-43c9-8c9d-e9a42d32cae8" "9bf24817-95fd-45f9-9021-a872dfa3ec72"
-			"9bfac26b-6b1f-4a3d-92c9-3ea40460a25d" "a347f498-9df3-45ba-898f-3bc79778949c"
-			"a48f202c-3676-49a9-8635-58b45fc7b940" "aaefd882-4916-4434-b669-55cf9f2e89e7"
-			"b35f99bf-3d20-4bb6-a601-539e5b3eacf2" "b9baad6c-17b0-452c-9c9f-f37599b59830"
-			"c572e426-8dd6-4500-9b87-0edfa1412a68" "cd0d4694-5ae3-40c6-812d-8752fde3ca43"
-			"d22a1689-2e0e-45be-84db-6c8e7d3b323c" "d2d8ef0d-d24b-4d1c-a824-2744b1af9875"
-			"d69f5931-e07d-4484-b3e2-893747ef3e9d" "e53bbe30-768d-45bb-bcdd-179f546ef5be"
-			"efb74b85-0f0c-4cf7-b2f1-1aeb683f0d69" "fe66be36-f017-4127-a3de-3ae148ae5c9d"
-			"fee6de97-71c4-4139-9a5d-a4ab6ce83829"
-		)
 	)
 )
