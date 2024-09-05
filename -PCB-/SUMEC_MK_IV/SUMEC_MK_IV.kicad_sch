@@ -601,6 +601,17 @@
 			)
 		)
 	)
+	(text "If you see schematic in wierd different fonts: my default font is set as BAHNSCHRIFT"
+		(exclude_from_sim no)
+		(at 147.32 41.91 0)
+		(effects
+			(font
+				(size 2 2)
+				(color 0 0 0 1)
+			)
+		)
+		(uuid "2b661820-40a6-4036-9fa2-2666061c2d3a")
+	)
 	(symbol
 		(lib_id "sumec_sch_lib:LOGO SMALL")
 		(at 142.24 30.48 0)

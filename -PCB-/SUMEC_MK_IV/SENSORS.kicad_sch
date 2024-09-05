@@ -9870,17 +9870,6 @@
 		)
 		(uuid "11589ab2-0dda-4d4d-a085-9d2123fe1ccc")
 	)
-	(text "OPTIONAL "
-		(exclude_from_sim no)
-		(at 87.63 106.045 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-				(color 255 0 0 1)
-			)
-		)
-		(uuid "11f59536-31b9-463d-a897-4acc97f06187")
-	)
 	(text "When pin 5 is connected to ground, TF-Luna enters I2C mode, \nthen its pin 2 is used as SDA data and\npin 3 is the SCL clock sending data.\n\nAddresses are saved using Natani's wonderful and magical code."
 		(exclude_from_sim no)
 		(at 31.75 103.505 0)
@@ -9950,6 +9939,7 @@
 		(at 29.845 28.575 0)
 		(effects
 			(font
+				(face "Bahnschrift")
 				(size 5 5)
 				(thickness 1.2)
 				(bold yes)
@@ -9978,6 +9968,7 @@
 		(at 128.27 28.575 0)
 		(effects
 			(font
+				(face "Bahnschrift")
 				(size 5 5)
 				(thickness 1.2)
 				(bold yes)
@@ -10057,17 +10048,6 @@
 		)
 		(uuid "bac4667e-8346-4227-88db-f6d3328a15d3")
 	)
-	(text "OPTIONAL "
-		(exclude_from_sim no)
-		(at 66.675 106.045 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-				(color 255 0 0 1)
-			)
-		)
-		(uuid "cddd9c8d-1d9a-4e2b-ab74-6e225404d496")
-	)
 	(text "( Better manual in -DOCS- )"
 		(exclude_from_sim no)
 		(at 93.345 97.155 0)
@@ -10092,17 +10072,6 @@
 			(justify left bottom)
 		)
 		(uuid "e4d19302-0f33-4577-b5a2-35989517088d")
-	)
-	(text "I2C signal visualisation? like etherent\nanother  pin configuration?"
-		(exclude_from_sim no)
-		(at 92.075 100.33 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-				(color 255 0 0 1)
-			)
-		)
-		(uuid "e68863ab-508b-414f-9a31-0f7bdf39bea2")
 	)
 	(text "POLOLU SENSOR MANUAL"
 		(exclude_from_sim no)
