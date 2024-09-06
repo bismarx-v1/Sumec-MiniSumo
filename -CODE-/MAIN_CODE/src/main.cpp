@@ -1,3 +1,9 @@
+
+/*
+*   Name: MAIN_CODE
+*   Last change: 6.9.2024
+*/
+
 #include <Pins.h>
 #include <Motor.h>
 #include <Motion.h>
@@ -35,8 +41,8 @@ void setup()
 {
 
     // logic settings:
-    Tick_QRE.tickTime = 10;
-    Tick_Sharp.tickTime = 10;
+    Tick_QRE.tickTime = 10;         //this replaces delay
+    Tick_Sharp.tickTime = 10;       //this replaces delay
 
     // hardware settings:
     TfL_Setup();
@@ -47,226 +53,213 @@ void setup()
 
 void loop()
 {
-
-    // controling led flashing time and   
-    LEDRed.update();
-    LEDOrange.update();
+ 
+    LEDRed.update();            //updates the red led
+    LEDOrange.update();         //updates the orange led
     Remote.update();
 
-    // start with button
-    if(digitalRead(button) == 1)
+
+    //=========================Writeing value from sensors to variables=============
+
+    // Line sonzors
+    QREleft = qreLeft.get();
+    QREright = qreRight.get();
+    QREback = qreBack.get();
+
+    // Length senzors
+    LUNAleft = TfL_Get(TfL_Addr1);
+    LUNAright = TfL_Get(TfL_Addr3);
+    LUNAmiddle = TfL_Get(TfL_Addr2);
+
+    // side sonzors
+    SHARPleft = sharpLeft.get();
+    SHARPright = sharpRight.get();
+
+    // Writeing value to TICK
+    Tick_managing(Tick_QRE.tickTime, Tick_QRE.tickNumber, Tick_QRE.lastTick, &Tick_QRE.lastTick, &Tick_QRE.tickNumber);
+    Tick_managing(Tick_Sharp.tickTime, Tick_Sharp.tickNumber, Tick_Sharp.lastTick, &Tick_Sharp.lastTick, &Tick_Sharp.tickNumber);
+
+    //=========================Writeing value from sensors to variables=============
+
+
+    //==========================Out of line Process==============================
+
+    switch (LINEstate)
     {
-        if(digitalRead(button) == 1)
-        {
-            LEDRed.setOn();
-            LEDOrange.setOn();
-        }
-        isStarted = 1;
-        StartTime = millis();
+        case 0:     //QRE
+
+            if((QREleft || QREright || QREback) && Remote.isStarted())
+            {
+                saveState = state;   //saved last state
+                state = 001;
+                LINEstate++;
+
+                Tick_QRE.lastTick = millis();
+                Tick_QRE.tickNumber = 0;
+            }
+
+            break;
+        case 1:     //STOP
+
+            Move.stop();
+
+            if(QREleft || QREright)
+            {
+                LINEstate++;
+            }
+            else if(QREback)
+            {
+                LINEstate = 4;
+            }
+
+            break;
+        case 2:     //Go backward
+
+            if(Tick_QRE.tickNumber < 10)
+            {
+                Move.goBackward(1.0);
+            }
+            else
+            {
+                LINEstate = 3;
+            }
+
+            break;
+        case 3:     //STOP after backward
+
+            Move.stop();
+
+            state = saveState;
+            LINEstate = 0;
+
+            break;
+        case 4:     //Go forward
+
+            if(Tick_QRE.tickNumber < 10)
+            {
+                Move.goForward(1.0);
+            }
+            else
+            {
+                LINEstate = 3;
+            }
+
+            break;
+
     }
 
-        //=========================Writeing value from sensors to variables=============
+    //==========================Out of line Process==============================
+    
 
-        // Line sonzors
-        QREleft = qreLeft.get();
-        QREright = qreRight.get();
-        QREback = qreBack.get();
+    //===========================Normal process===============================
 
-        // Length senzors
-        LUNAleft = TfL_Get(TfL_Addr1);
-        LUNAright = TfL_Get(TfL_Addr3);
-        LUNAmiddle = TfL_Get(TfL_Addr2);
+    switch (state)
+    {
+    case 000:       // INIT 
 
-        // side sonzors
-        SHARPleft = sharpLeft.get();
-        SHARPright = sharpRight.get();
+        if (Remote.hasDohyoID() && !Remote.isStarted())
+        LEDRed.blink(500, 100);
 
-        // Writeing value to TICK
-        Tick_managing(Tick_QRE.tickTime, Tick_QRE.tickNumber, Tick_QRE.lastTick, &Tick_QRE.lastTick, &Tick_QRE.tickNumber);
-        Tick_managing(Tick_Sharp.tickTime, Tick_Sharp.tickNumber, Tick_Sharp.lastTick, &Tick_Sharp.lastTick, &Tick_Sharp.tickNumber);
-
-        //==========================Out of line Process==============================
-
-
-        switch (LINEstate)
+        // after start comand, running this main code
+        if (Remote.isStarted())
         {
-            case 0:     //QRE
+            state = 230;
+        }
 
-                if((QREleft || QREright || QREback) && Remote.isStarted())
-                {
-                   saveState = state;   //saved last state
-                   state = 001;
-                   LINEstate++;
+        LINEstate = 0;
+        
+        break;
+    case 001:       // IDLE
+        
+        //nothing - program is stopped
+        
+        break;
+    case 230: // Turn Right 
 
-                    Tick_QRE.lastTick = millis();
-                    Tick_QRE.tickNumber = 0;
-                }
+        Move.turnRight(1.0);
+        
+        if(LUNAleft < Range)
+            state = 260;
 
-                break;
-            case 1:     //STOP
+        if(LUNAmiddle < Range)
+            state = 290;
 
-                Move.stop();
 
-                if(QREleft || QREright)
-                {
-                    LINEstate++;
-                }
-                else if(QREback)
-                {
-                    LINEstate = 4;
-                }
+        if(SHARPleft || SHARPright)
+            state = 300;
 
-                break;
-            case 2:     //Go backward
 
-                if(Tick_QRE.tickNumber < 10)
-                {
-                    Move.goBackward(1.0);
-                }
-                else
-                {
-                    LINEstate = 3;
-                }
+        break;
+    case 260: // Turn Left
 
-                break;
-            case 3:     //STOP after backward
+        Move.turnLeft(1.0);
 
-                Move.stop();
+        if(LUNAleft > Range)    
+            state = 230;
+        
+        if(LUNAmiddle < Range)
+            state = 290;
+        
+        break;
+    case 290: // Go Forward
 
-                state = saveState;
-                LINEstate = 0;
+        Move.goForward(1.0);
 
-                break;
-            case 4:     //Go forward
+        if(LUNAmiddle > Range)    
+            state = 230;
+        
 
-                if(Tick_QRE.tickNumber < 10)
-                {
-                    Move.goForward(1.0);
-                }
-                else
-                {
-                    LINEstate = 3;
-                }
+        break;
+    case 300: // Sharp 
 
-                break;
+        Tick_Sharp.lastTick = millis();
+        Tick_Sharp.tickNumber = 0;
 
+        if(SHARPleft)
+            state = 330;
+        else if(SHARPright)
+            state = 360;
+        
+        break;
+    case 330: // Turn Right diagonaly and Turn Right 
+
+        if (Tick_Sharp.tickNumber < 20)
+        {
+            Move.turnRight(0.7, 0.55);
+        }
+        else if (Tick_Sharp.tickNumber < 50)
+        {
+            Move.turnRight(0.7, 0.55);
+        }
+        else if (LUNAmiddle > Range && LUNAright > Range && LUNAleft > Range)
+        {
+            Move.turnRight(1.0);
+        }
+        else
+        {
+            state = 230; // Sharp - End
+        }
+
+        break;
+    case 360: // Turn Left diagonaly and Turn Left 
+
+        if (Tick_Sharp.tickNumber < 20)
+        {
+            Move.turnLeft(0.7, 0.55);
+        }
+        else if (Tick_Sharp.tickNumber < 50)
+        {
+            Move.turnLeft(0.7, 0.55);
+        }
+        else if (LUNAmiddle > Range && LUNAright > Range && LUNAleft > Range)
+        {
+            Move.turnLeft(1.0);
+        }
+        else
+        {
+            state = 230; // Sharp - End
         }
         
-        //===========================Normal process===============================
-
-        Serial.println(state);
-
-        switch (state)
-        {
-        case 000:       // INIT 
-
-            if (Remote.hasDohyoID() && !Remote.isStarted())
-            LEDRed.blink(500, 100);
-
-            // after start comand, running this main code
-            if (Remote.isStarted())
-            {
-                state = 230;
-            }
-
-            LINEstate = 0;
-            
-            break;
-        case 001:       // IDLE
-            
-            //nothing - program is stopped
-            
-            break;
-        case 230: // Turn Right 
-
-            Move.turnRight(1.0);
-            
-            if(LUNAleft < Range)
-                state = 260;
-
-            if(LUNAmiddle < Range)
-                state = 290;
-
-
-            if(SHARPleft || SHARPright)
-                state = 300;
-    
-
-            break;
-        case 260: // Turn Left
-
-            Move.turnLeft(1.0);
-
-            if(LUNAleft > Range)    
-                state = 230;
-            
-            if(LUNAmiddle < Range)
-                state = 290;
-            
-            break;
-        case 290: // Go Forward
-
-            Move.goForward(1.0);
-
-            if(LUNAmiddle > Range)    
-                state = 230;
-            
-
-            break;
-        case 300: // Sharp 
-
-            Tick_Sharp.lastTick = millis();
-            Tick_Sharp.tickNumber = 0;
-
-            if(SHARPleft)
-                state = 330;
-            else if(SHARPright)
-                state = 360;
-            //else
-                //state = 230;
-            
-            break;
-        case 330: // Turn Right diagonaly and Turn Right 
- 
-            if (Tick_Sharp.tickNumber < 20)
-            {
-                Move.turnRight(0.7, 0.55);
-            }
-            else if (Tick_Sharp.tickNumber < 50)
-            {
-                Move.turnRight(0.7, 0.55);
-            }
-            else if (LUNAmiddle > Range && LUNAright > Range && LUNAleft > Range)
-            {
-                Move.turnRight(1.0);
-            }
-            else
-            {
-                state = 230; // Sharp - End
-            }
-
-            break;
-        case 360: // Turn Left diagonaly and Turn Left 
-
-            if (Tick_Sharp.tickNumber < 20)
-            {
-                Move.turnLeft(0.7, 0.55);
-            }
-            else if (Tick_Sharp.tickNumber < 50)
-            {
-                Move.turnLeft(0.7, 0.55);
-            }
-            else if (LUNAmiddle > Range && LUNAright > Range && LUNAleft > Range)
-            {
-                Move.turnLeft(1.0);
-            }
-            else
-            {
-                state = 230; // Sharp - End
-            }
-            
-
-            break;
-        }
-    
+        break;
+    }    
 }
