@@ -768,46 +768,6 @@
 		)
 	)
 	(sheet
-		(at 187.96 48.895)
-		(size 59.69 30.48)
-		(stroke
-			(width 0.1524)
-			(type solid)
-			(color 0 0 0 1)
-		)
-		(fill
-			(color 255 255 255 1.0000)
-		)
-		(uuid "a4783534-f11a-41d1-a455-2e16f5dc258a")
-		(property "Sheetname" "SENSORS"
-			(at 205.74 66.04 0)
-			(effects
-				(font
-					(size 4 4)
-					(color 0 0 0 1)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Sheetfile" "SENSORS.kicad_sch"
-			(at 187.96 79.9596 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(color 0 0 0 1)
-				)
-				(justify left top)
-			)
-		)
-		(instances
-			(project "SUMEC_MK_IV"
-				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046"
-					(page "4")
-				)
-			)
-		)
-	)
-	(sheet
 		(at 187.96 88.9)
 		(size 59.69 30.48)
 		(stroke
