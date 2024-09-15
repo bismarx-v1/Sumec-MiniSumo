@@ -10,8 +10,8 @@
 		(rev "v3.0.9")
 		(company "SPS NA PROSEKU")
 		(comment 1 "Made in Prague, Czech Republic")
-		(comment 2 "CONTACT: Savva Popov, menmenson09@gmail.com, +420 605 570 366")
-		(comment 3 "Made by Bismarx aka MenMenson")
+		(comment 2 "CONTACT: Savva Popov, savva.popov.sp@gmail.com, +420 605 570 366")
+		(comment 3 "Made by bismarx-v1")
 		(comment 4 "SUMEC MK IV aka SMD-V3 board")
 	)
 	(lib_symbols

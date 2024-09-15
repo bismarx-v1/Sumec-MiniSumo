@@ -523,7 +523,7 @@
 				)
 			)
 			(text "PSRAM"
-				(at 6.604 2.794 900)
+				(at 5.08 2.54 900)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -594,7 +594,7 @@
 			)
 			(polyline
 				(pts
-					(xy 6.35 8.89) (xy 5.08 8.89) (xy 5.08 13.97) (xy 6.35 13.97)
+					(xy 4.826 8.89) (xy 3.556 8.89) (xy 3.556 13.97) (xy 4.826 13.97)
 				)
 				(stroke
 					(width 0)
@@ -606,7 +606,43 @@
 			)
 			(polyline
 				(pts
-					(xy 6.35 13.97) (xy 5.08 13.97) (xy 5.08 19.05) (xy 6.35 19.05)
+					(xy 4.826 13.97) (xy 3.556 13.97) (xy 3.556 19.05) (xy 4.826 19.05)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 7.366 -1.524) (xy 6.096 -1.524) (xy 6.096 6.096) (xy 7.366 6.096)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 7.366 8.89) (xy 6.096 8.89) (xy 6.096 19.05) (xy 7.366 19.05)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 7.366 19.05) (xy 6.096 19.05) (xy 6.096 24.13) (xy 7.366 24.13)
 				)
 				(stroke
 					(width 0)
@@ -631,42 +667,6 @@
 			(polyline
 				(pts
 					(xy 7.62 -19.05) (xy 6.35 -19.05) (xy 6.35 -13.97) (xy 7.62 -13.97)
-				)
-				(stroke
-					(width 0)
-					(type default)
-				)
-				(fill
-					(type none)
-				)
-			)
-			(polyline
-				(pts
-					(xy 8.89 -1.27) (xy 7.62 -1.27) (xy 7.62 6.35) (xy 8.89 6.35)
-				)
-				(stroke
-					(width 0)
-					(type default)
-				)
-				(fill
-					(type none)
-				)
-			)
-			(polyline
-				(pts
-					(xy 8.89 8.89) (xy 7.62 8.89) (xy 7.62 19.05) (xy 8.89 19.05)
-				)
-				(stroke
-					(width 0)
-					(type default)
-				)
-				(fill
-					(type none)
-				)
-			)
-			(polyline
-				(pts
-					(xy 8.89 19.05) (xy 7.62 19.05) (xy 7.62 24.13) (xy 8.89 24.13)
 				)
 				(stroke
 					(width 0)
@@ -703,7 +703,7 @@
 				)
 			)
 			(text "ADC2"
-				(at 6.604 16.51 900)
+				(at 5.08 16.51 900)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -714,12 +714,12 @@
 				(at -13.97 -12.7 900)
 				(effects
 					(font
-						(size 0.8 0.8)
+						(size 0.7 0.7)
 					)
 				)
 			)
 			(text "D+"
-				(at 6.096 10.414 900)
+				(at 4.572 10.414 900)
 				(effects
 					(font
 						(size 1 1)
@@ -727,7 +727,7 @@
 				)
 			)
 			(text "D-"
-				(at 6.096 12.7 900)
+				(at 4.572 12.7 900)
 				(effects
 					(font
 						(size 1 1)
@@ -735,7 +735,7 @@
 				)
 			)
 			(text "DAC"
-				(at 4.064 16.764 900)
+				(at 2.54 16.764 900)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -746,7 +746,7 @@
 				(at -13.462 -14.986 900)
 				(effects
 					(font
-						(size 0.8 0.8)
+						(size 0.7 0.7)
 					)
 				)
 			)
@@ -754,7 +754,7 @@
 				(at -13.462 -10.414 900)
 				(effects
 					(font
-						(size 0.8 0.8)
+						(size 0.7 0.7)
 					)
 				)
 			)
@@ -791,7 +791,7 @@
 				)
 			)
 			(text "UART"
-				(at 6.604 21.844 900)
+				(at 5.08 21.844 900)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -799,7 +799,7 @@
 				)
 			)
 			(text "USB"
-				(at 4.064 11.43 900)
+				(at 2.54 11.43 900)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -810,7 +810,7 @@
 				(at -13.97 -7.874 900)
 				(effects
 					(font
-						(size 0.8 0.8)
+						(size 0.7 0.7)
 					)
 				)
 			)
