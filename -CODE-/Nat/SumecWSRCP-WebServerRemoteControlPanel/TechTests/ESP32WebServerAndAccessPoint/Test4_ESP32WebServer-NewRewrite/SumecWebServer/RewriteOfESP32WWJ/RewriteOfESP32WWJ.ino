@@ -1,3 +1,6 @@
+/**
+ * WWJ means Webserver websocket json
+*/
 #include <WiFi.h>
 #include <WebServer.h>
 #include <WebSocketsServer.h>
