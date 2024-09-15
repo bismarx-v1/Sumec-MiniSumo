@@ -6005,10 +6005,9 @@
 			)
 		)
 		(property "Value" "10uF.pvin"
-			(at 203.2 82.55 90)
+			(at 202.438 82.55 90)
 			(effects
 				(font
-					(face "Bahnschrift")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -6208,7 +6207,6 @@
 			(at 225.425 80.01 90)
 			(effects
 				(font
-					(face "Bahnschrift")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -6218,7 +6216,6 @@
 			(at 231.14 82.55 90)
 			(effects
 				(font
-					(face "Bahnschrift")
 					(size 1.27 1.27)
 				)
 				(justify left)
