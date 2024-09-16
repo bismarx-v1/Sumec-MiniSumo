@@ -299,6 +299,20 @@
 		)
 		(uuid "8b0181fa-7afd-4c6d-a687-8d4cb3ad04f4")
 	)
+	(text "SUMEC LOGO"
+		(exclude_from_sim no)
+		(at 121.92 85.725 0)
+		(effects
+			(font
+				(face "Bahnschrift")
+				(size 1 1)
+				(italic yes)
+				(color 0 0 0 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "9f2e6779-865b-47b0-9c5d-ed86ad9c1746")
+	)
 	(symbol
 		(lib_id "Connector:TestPoint")
 		(at 144.78 95.25 0)

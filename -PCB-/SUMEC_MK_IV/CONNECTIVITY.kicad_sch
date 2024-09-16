@@ -2462,7 +2462,7 @@
 		)
 	)
 	(junction
-		(at 198.12 90.17)
+		(at 200.66 96.52)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "295dc350-6b8b-4860-96fc-a9091350f52a")
@@ -2480,7 +2480,7 @@
 		(uuid "3b07a72d-14ee-4f20-a5ef-d5b055a93ab4")
 	)
 	(junction
-		(at 198.12 82.55)
+		(at 200.66 88.9)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "58a1cc01-dcaf-4268-901b-ab0e2c1d506b")
@@ -2498,7 +2498,7 @@
 		(uuid "92331d63-2307-44b3-9e04-78371f5d4372")
 	)
 	(junction
-		(at 240.03 82.55)
+		(at 242.57 88.9)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "948db3f3-423e-4277-aef1-8f960bb0b7ad")
@@ -2510,7 +2510,7 @@
 		(uuid "a2080944-fc6a-43bc-9103-9cf2ade2b67c")
 	)
 	(junction
-		(at 240.03 90.17)
+		(at 242.57 96.52)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "ce17ec17-c3da-4e0c-b715-e71707b7ef79")
@@ -2529,7 +2529,7 @@
 	)
 	(wire
 		(pts
-			(xy 189.23 90.17) (xy 198.12 90.17)
+			(xy 191.77 96.52) (xy 200.66 96.52)
 		)
 		(stroke
 			(width 0)
@@ -2549,7 +2549,7 @@
 	)
 	(wire
 		(pts
-			(xy 198.12 82.55) (xy 208.28 82.55)
+			(xy 200.66 88.9) (xy 210.82 88.9)
 		)
 		(stroke
 			(width 0)
@@ -2569,7 +2569,7 @@
 	)
 	(wire
 		(pts
-			(xy 194.31 80.01) (xy 189.23 80.01)
+			(xy 196.85 86.36) (xy 191.77 86.36)
 		)
 		(stroke
 			(width 0)
@@ -2589,7 +2589,7 @@
 	)
 	(wire
 		(pts
-			(xy 189.23 90.17) (xy 189.23 85.09)
+			(xy 191.77 96.52) (xy 191.77 91.44)
 		)
 		(stroke
 			(width 0)
@@ -2649,7 +2649,7 @@
 	)
 	(wire
 		(pts
-			(xy 240.03 90.17) (xy 246.38 90.17)
+			(xy 242.57 96.52) (xy 248.92 96.52)
 		)
 		(stroke
 			(width 0)
@@ -2719,7 +2719,7 @@
 	)
 	(wire
 		(pts
-			(xy 189.23 82.55) (xy 198.12 82.55)
+			(xy 191.77 88.9) (xy 200.66 88.9)
 		)
 		(stroke
 			(width 0)
@@ -2739,7 +2739,7 @@
 	)
 	(wire
 		(pts
-			(xy 228.6 90.17) (xy 228.6 85.09)
+			(xy 231.14 96.52) (xy 231.14 91.44)
 		)
 		(stroke
 			(width 0)
@@ -2779,7 +2779,7 @@
 	)
 	(wire
 		(pts
-			(xy 236.22 133.35) (xy 229.235 133.35)
+			(xy 215.9 137.16) (xy 208.915 137.16)
 		)
 		(stroke
 			(width 0)
@@ -2819,7 +2819,7 @@
 	)
 	(wire
 		(pts
-			(xy 229.235 123.19) (xy 236.22 123.19)
+			(xy 208.915 127) (xy 215.9 127)
 		)
 		(stroke
 			(width 0)
@@ -2869,7 +2869,7 @@
 	)
 	(wire
 		(pts
-			(xy 233.68 80.01) (xy 228.6 80.01)
+			(xy 236.22 86.36) (xy 231.14 86.36)
 		)
 		(stroke
 			(width 0)
@@ -2919,7 +2919,7 @@
 	)
 	(wire
 		(pts
-			(xy 198.12 90.17) (xy 207.01 90.17)
+			(xy 200.66 96.52) (xy 209.55 96.52)
 		)
 		(stroke
 			(width 0)
@@ -2959,7 +2959,7 @@
 	)
 	(wire
 		(pts
-			(xy 228.6 82.55) (xy 240.03 82.55)
+			(xy 231.14 88.9) (xy 242.57 88.9)
 		)
 		(stroke
 			(width 0)
@@ -3059,7 +3059,7 @@
 	)
 	(wire
 		(pts
-			(xy 240.03 82.55) (xy 247.65 82.55)
+			(xy 242.57 88.9) (xy 250.19 88.9)
 		)
 		(stroke
 			(width 0)
@@ -3129,7 +3129,7 @@
 	)
 	(wire
 		(pts
-			(xy 228.6 90.17) (xy 240.03 90.17)
+			(xy 231.14 96.52) (xy 242.57 96.52)
 		)
 		(stroke
 			(width 0)
@@ -3209,7 +3209,7 @@
 	)
 	(wire
 		(pts
-			(xy 236.22 128.27) (xy 231.775 128.27)
+			(xy 215.9 132.08) (xy 211.455 132.08)
 		)
 		(stroke
 			(width 0)
@@ -10587,9 +10587,9 @@
 		)
 		(uuid "15aa006a-0461-4054-9788-1e6ee10e525c")
 	)
-	(text "IR LED Reciver module\n\nOperating voltage: 2.7V to 5.5V\nFrequency: 38kHz \nHigh immunity against ambient light. \nFor more than 1 input use - Hexadecimal code\n\nUsed as a main program starter\n"
+	(text "IR LED Reciver module\n\nOperating voltage: 2.7V to 5.5V\nFrequency: 38kHz \n"
 		(exclude_from_sim no)
-		(at 175.895 133.35 0)
+		(at 175.895 123.825 0)
 		(effects
 			(font
 				(face "Bahnschrift")
@@ -10615,21 +10615,7 @@
 		)
 		(uuid "2398a38d-a3b4-427d-9a2f-9a6869c073a4")
 	)
-	(text "Time-of-Flight(ToF)\nlaser-ranging module - TF-Luna\nCOMMUNICATION PROTOCOL: I²C \n"
-		(exclude_from_sim no)
-		(at 22.225 120.015 0)
-		(effects
-			(font
-				(face "Bahnschrift")
-				(size 1.5 1.5)
-				(italic yes)
-				(color 0 0 0 1)
-			)
-			(justify left bottom)
-		)
-		(uuid "2b6959b8-11ba-4653-91e6-47134400d87b")
-	)
-	(text "6-pin JST SH-style male connector\nVCC 2.7 V to 18 V encoder operating voltage"
+	(text "6-PIN JST SH-Style male connector\nVCC 2.7 V to 18 V encoder operating voltage"
 		(exclude_from_sim no)
 		(at 175.895 27.94 0)
 		(effects
@@ -10651,6 +10637,7 @@
 				(thickness 0.254)
 				(bold yes)
 				(italic yes)
+				(color 0 0 255 1)
 			)
 			(justify left bottom)
 			(href "https://www.waveshare.com/wiki/TF-Luna_LiDAR_Range_Sensor")
@@ -10670,6 +10657,33 @@
 		)
 		(uuid "42be9260-b612-43d3-92c9-3f5a595e6e51")
 	)
+	(text "Miniature Reflective\nObject Sensor - QRE1113\n\nIR reflectance sensor is comprised of two parts - an IR emitting LED and an IR sensitive phototransistor.\n\nAnalog output\nA 100Ω resistor is placed in series with the LED to limit current. A 10kΩ resistor pulls the output pin high, \nbut when the light from the LED is reflected back onto the phototransistor the output will begin to go lower.\n\n2 front sensors will be connected to the \"QRE MiniBoard\", rear sensor will be connected using \nthe same connector."
+		(exclude_from_sim no)
+		(at -93.98 53.975 0)
+		(effects
+			(font
+				(face "Bahnschrift")
+				(size 1.5 1.5)
+				(italic yes)
+				(color 0 0 0 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "53da59c0-d902-43dd-99c3-da27e34d23b9")
+	)
+	(text "Time-of-Flight(ToF)\nlaser-ranging module - TF-Luna\nCOMMUNICATION PROTOCOL: I²C \n\nWhen pin 5 is connected to ground, TF-Luna enters I2C mode, \nthen its pin 2 is used as SDA data and\npin 3 is the SCL clock sending data.\n\nAddresses are saved using Natani's wonderful and magical code."
+		(exclude_from_sim no)
+		(at -40.64 127 0)
+		(effects
+			(font
+				(face "Bahnschrift")
+				(size 1 1)
+				(color 0 0 0 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "540a7f84-f608-4c5b-b784-1f5b00e58301")
+	)
 	(text "OBJECT DETECTING SENSORS"
 		(exclude_from_sim no)
 		(at 19.685 69.85 0)
@@ -10686,7 +10700,7 @@
 	)
 	(text "Digital distance sensor - Sharp GP2Y0D810Z0F\n\nSensor detects objects between 2 cm and 10 cm\nLow when detecting an object, high otherwise.\nFrequency - 390 Hz\nOperating voltage 2.7V - 6.2V"
 		(exclude_from_sim no)
-		(at 268.605 93.345 0)
+		(at 292.735 93.98 0)
 		(effects
 			(font
 				(face "Bahnschrift")
@@ -10696,17 +10710,6 @@
 			(justify left bottom)
 		)
 		(uuid "79af59d6-c94b-4b63-8447-bac6985ace95")
-	)
-	(text "qre signal visualisation? (update it on the qre miniboard itself)"
-		(exclude_from_sim no)
-		(at 77.47 55.88 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-				(color 255 0 0 1)
-			)
-		)
-		(uuid "97a7af86-5384-449e-961c-7fea35a88a3e")
 	)
 	(text "MOTORS"
 		(exclude_from_sim no)
@@ -10753,9 +10756,9 @@
 		)
 		(uuid "a42fbd27-95ee-4186-9670-c3ccb5e74347")
 	)
-	(text "When pin 5 is connected to ground, TF-Luna enters I2C mode, \nthen its pin 2 is used as SDA data and\npin 3 is the SCL clock sending data.\n\nAddresses are saved using Natani's wonderful and magical code."
+	(text "Time-of-Flight(ToF)\nlaser-ranging module - TF-Luna\nCOMMUNICATION PROTOCOL: I²C \n\nWhen pin 5 is connected to ground, TF-Luna enters I2C mode, \nthen its pin 2 is used as SDA data and\npin 3 is the SCL clock sending data.\n\nAddresses are saved using Natani's wonderful and magical code."
 		(exclude_from_sim no)
-		(at 22.225 130.175 0)
+		(at 21.59 127.635 0)
 		(effects
 			(font
 				(face "Bahnschrift")
@@ -10808,6 +10811,20 @@
 		)
 		(uuid "d1422ab8-b5be-4b7b-b8d1-79168c059c8c")
 	)
+	(text "Pololu Distance Sensor with Pulse Width Output/Digital Output\n\nSmall lidar based sensor can report presnece/distance of \nobjects up to (TOTAL MAX 200cm-Digital, 300cm - PWM)\n\nDistance is chosen by configurating the jumpers with 0R resistors"
+		(exclude_from_sim no)
+		(at -64.135 87.63 0)
+		(effects
+			(font
+				(face "Bahnschrift")
+				(size 1.5 1.5)
+				(italic yes)
+				(color 0 0 0 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "d2271da4-7559-4357-97a9-4caaba6d9f58")
+	)
 	(text "M1"
 		(exclude_from_sim no)
 		(at 230.505 33.02 0)
@@ -10822,6 +10839,33 @@
 			(justify right bottom)
 		)
 		(uuid "d7ff93ea-39e4-418b-88b1-d9d17015a35f")
+	)
+	(text "IR LED Reciver module\n\nOperating voltage: 2.7V to 5.5V\nFrequency: 38kHz \nHigh immunity against ambient light. \nFor more than 1 input use - Hexadecimal code\n\nUsed as a main program starter\n"
+		(exclude_from_sim no)
+		(at 299.72 139.7 0)
+		(effects
+			(font
+				(face "Bahnschrift")
+				(size 1.5 1.5)
+				(italic yes)
+				(color 0 0 0 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "e35309b6-855c-4233-b524-05be28645550")
+	)
+	(text "Digital distance sensor - Sharp GP2Y0D810Z0F\n\nSensor detects objects between 2 cm and 10 cm\nLow when detecting an object, high otherwise.\nOperating voltage 2.7V - 6.2V"
+		(exclude_from_sim no)
+		(at 175.895 81.28 0)
+		(effects
+			(font
+				(face "Bahnschrift")
+				(size 1.27 1.27)
+				(color 0 0 0 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "e613b278-af98-493b-b27b-eb42a9a98c9c")
 	)
 	(global_label "OUT 2B"
 		(shape output)
@@ -10897,7 +10941,7 @@
 	)
 	(global_label "SHARP 2"
 		(shape output)
-		(at 233.68 80.01 0)
+		(at 236.22 86.36 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -10909,7 +10953,7 @@
 		)
 		(uuid "24d4f964-4727-4ba0-b6a9-862a251606e9")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 241.4269 80.01 0)
+			(at 243.9669 86.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11089,7 +11133,7 @@
 	)
 	(global_label "SHARP 1"
 		(shape output)
-		(at 194.31 80.01 0)
+		(at 196.85 86.36 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -11101,7 +11145,7 @@
 		)
 		(uuid "6a3a2c28-9611-4ef8-aee8-5643b9eab1c6")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 201.799 80.01 0)
+			(at 204.339 86.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11113,7 +11157,7 @@
 	)
 	(global_label "IR MODULE"
 		(shape output)
-		(at 231.775 128.27 180)
+		(at 211.455 132.08 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -11125,7 +11169,7 @@
 		)
 		(uuid "727768ff-b797-4dfd-81fa-2dac6d7182c1")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 222.5138 128.27 0)
+			(at 202.1938 132.08 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11443,7 +11487,7 @@
 	)
 	(symbol
 		(lib_id "Device:C_Polarized")
-		(at 198.12 86.36 0)
+		(at 200.66 92.71 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -11451,7 +11495,7 @@
 		(dnp no)
 		(uuid "059878f1-9808-4d83-a54d-94de3878082f")
 		(property "Reference" "C22"
-			(at 200.66 85.09 0)
+			(at 203.2 91.44 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11460,7 +11504,7 @@
 			)
 		)
 		(property "Value" "10uF"
-			(at 200.66 86.995 0)
+			(at 203.2 93.345 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11469,7 +11513,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_Tantalum_SMD:CP_EIA-3216-18_Kemet-A_Pad1.58x1.35mm_HandSolder"
-			(at 199.0852 90.17 0)
+			(at 201.6252 96.52 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11478,7 +11522,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 198.12 86.36 0)
+			(at 200.66 92.71 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11487,7 +11531,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 198.12 86.36 0)
+			(at 200.66 92.71 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11513,7 +11557,7 @@
 	(symbol
 		(lib_name "TSOP382xx_1")
 		(lib_id "Interface_Optical:TSOP382xx")
-		(at 246.38 128.27 0)
+		(at 226.06 132.08 0)
 		(mirror y)
 		(unit 1)
 		(exclude_from_sim no)
@@ -11522,7 +11566,7 @@
 		(dnp no)
 		(uuid "07293f34-d270-45f4-8464-9693ab548282")
 		(property "Reference" "U4"
-			(at 248.115 116.84 0)
+			(at 227.795 120.65 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11530,7 +11574,7 @@
 			)
 		)
 		(property "Value" "TSOP382xx"
-			(at 248.115 119.38 0)
+			(at 227.795 123.19 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11538,7 +11582,7 @@
 			)
 		)
 		(property "Footprint" "OptoDevice:Vishay_MINICAST-3Pin"
-			(at 247.65 137.795 0)
+			(at 227.33 141.605 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11547,7 +11591,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.vishay.com/docs/82491/tsop382.pdf"
-			(at 229.87 120.65 0)
+			(at 209.55 124.46 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11556,7 +11600,7 @@
 			)
 		)
 		(property "Description" "Photo Modules for PCM Remote Control Systems"
-			(at 246.38 128.27 0)
+			(at 226.06 132.08 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12328,7 +12372,7 @@
 	(symbol
 		(lib_name "+3V3_1")
 		(lib_id "power:+3V3")
-		(at 208.28 82.55 270)
+		(at 210.82 88.9 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -12336,7 +12380,7 @@
 		(dnp no)
 		(uuid "42c6751d-52f6-4c6d-a74a-09041be26cd8")
 		(property "Reference" "#PWR066"
-			(at 204.47 82.55 0)
+			(at 207.01 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12345,7 +12389,7 @@
 			)
 		)
 		(property "Value" "+3V3"
-			(at 213.995 82.55 90)
+			(at 216.535 88.9 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12353,7 +12397,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 208.28 82.55 0)
+			(at 210.82 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12362,7 +12406,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 208.28 82.55 0)
+			(at 210.82 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12371,7 +12415,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 208.28 82.55 0)
+			(at 210.82 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12618,7 +12662,7 @@
 	(symbol
 		(lib_name "+3V3_1")
 		(lib_id "power:+3V3")
-		(at 229.235 123.19 90)
+		(at 208.915 127 90)
 		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
@@ -12627,7 +12671,7 @@
 		(dnp no)
 		(uuid "697e7118-1383-4559-b114-dc2180fdeec7")
 		(property "Reference" "#PWR067"
-			(at 233.045 123.19 0)
+			(at 212.725 127 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12636,7 +12680,7 @@
 			)
 		)
 		(property "Value" "+3V3"
-			(at 223.52 123.19 90)
+			(at 203.2 127 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12644,7 +12688,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 229.235 123.19 0)
+			(at 208.915 127 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12653,7 +12697,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 229.235 123.19 0)
+			(at 208.915 127 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12662,7 +12706,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 229.235 123.19 0)
+			(at 208.915 127 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12684,7 +12728,7 @@
 	)
 	(symbol
 		(lib_id "Connector:Conn_01x03_Pin")
-		(at 223.52 82.55 0)
+		(at 226.06 88.9 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -12692,7 +12736,7 @@
 		(dnp no)
 		(uuid "6fe2f1ff-818c-4d6b-afc0-6b2c2f9c05e3")
 		(property "Reference" "J12"
-			(at 223.52 86.995 0)
+			(at 226.06 93.345 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12700,7 +12744,7 @@
 			)
 		)
 		(property "Value" "Conn_01x03_Pin"
-			(at 224.79 87.63 0)
+			(at 227.33 93.98 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12709,7 +12753,7 @@
 			)
 		)
 		(property "Footprint" "Connector_Molex:Molex_PicoBlade_53398-0371_1x03-1MP_P1.25mm_Vertical"
-			(at 223.52 82.55 0)
+			(at 226.06 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12718,7 +12762,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 223.52 82.55 0)
+			(at 226.06 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12727,7 +12771,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 223.52 82.55 0)
+			(at 226.06 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13021,7 +13065,7 @@
 	(symbol
 		(lib_name "GND_2")
 		(lib_id "power:GND")
-		(at 207.01 90.17 90)
+		(at 209.55 96.52 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -13029,7 +13073,7 @@
 		(dnp no)
 		(uuid "9e2963c6-565f-4ef6-b378-7698ea06bc7a")
 		(property "Reference" "#PWR065"
-			(at 213.36 90.17 0)
+			(at 215.9 96.52 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13038,7 +13082,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 207.01 92.71 90)
+			(at 209.55 99.06 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13048,7 +13092,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 207.01 90.17 0)
+			(at 209.55 96.52 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13057,7 +13101,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 207.01 90.17 0)
+			(at 209.55 96.52 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13066,7 +13110,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 207.01 90.17 0)
+			(at 209.55 96.52 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13523,7 +13567,7 @@
 	)
 	(symbol
 		(lib_id "Device:C_Polarized")
-		(at 240.03 86.36 0)
+		(at 242.57 92.71 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -13531,7 +13575,7 @@
 		(dnp no)
 		(uuid "d0550a59-aa84-47de-b8f1-f15762da0e15")
 		(property "Reference" "C23"
-			(at 242.57 85.09 0)
+			(at 245.11 91.44 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13540,7 +13584,7 @@
 			)
 		)
 		(property "Value" "10uF"
-			(at 242.57 86.995 0)
+			(at 245.11 93.345 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13549,7 +13593,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_Tantalum_SMD:CP_EIA-3216-18_Kemet-A_Pad1.58x1.35mm_HandSolder"
-			(at 240.9952 90.17 0)
+			(at 243.5352 96.52 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13558,7 +13602,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 240.03 86.36 0)
+			(at 242.57 92.71 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13567,7 +13611,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 240.03 86.36 0)
+			(at 242.57 92.71 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13731,7 +13775,7 @@
 	(symbol
 		(lib_name "GND_2")
 		(lib_id "power:GND")
-		(at 246.38 90.17 90)
+		(at 248.92 96.52 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -13739,7 +13783,7 @@
 		(dnp no)
 		(uuid "d834dbda-24b6-48d7-89ab-ba165d98153c")
 		(property "Reference" "#PWR071"
-			(at 252.73 90.17 0)
+			(at 255.27 96.52 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13748,7 +13792,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 246.38 92.71 90)
+			(at 248.92 99.06 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13758,7 +13802,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 246.38 90.17 0)
+			(at 248.92 96.52 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13767,7 +13811,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 246.38 90.17 0)
+			(at 248.92 96.52 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13776,7 +13820,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 246.38 90.17 0)
+			(at 248.92 96.52 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13799,7 +13843,7 @@
 	(symbol
 		(lib_name "+3V3_1")
 		(lib_id "power:+3V3")
-		(at 247.65 82.55 270)
+		(at 250.19 88.9 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -13807,7 +13851,7 @@
 		(dnp no)
 		(uuid "dcc4db59-b4a9-4b76-a6e7-7f69b30f109d")
 		(property "Reference" "#PWR072"
-			(at 243.84 82.55 0)
+			(at 246.38 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13816,7 +13860,7 @@
 			)
 		)
 		(property "Value" "+3V3"
-			(at 253.365 82.55 90)
+			(at 255.905 88.9 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13824,7 +13868,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 247.65 82.55 0)
+			(at 250.19 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13833,7 +13877,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 247.65 82.55 0)
+			(at 250.19 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13842,7 +13886,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 247.65 82.55 0)
+			(at 250.19 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13864,7 +13908,7 @@
 	)
 	(symbol
 		(lib_id "Connector:Conn_01x03_Pin")
-		(at 184.15 82.55 0)
+		(at 186.69 88.9 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -13872,7 +13916,7 @@
 		(dnp no)
 		(uuid "dce4020a-68e9-4703-b506-50ecc3058001")
 		(property "Reference" "J11"
-			(at 184.15 86.995 0)
+			(at 186.69 93.345 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13880,7 +13924,7 @@
 			)
 		)
 		(property "Value" "Conn_01x03_Pin"
-			(at 185.42 87.63 0)
+			(at 187.96 93.98 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13889,7 +13933,7 @@
 			)
 		)
 		(property "Footprint" "Connector_Molex:Molex_PicoBlade_53398-0371_1x03-1MP_P1.25mm_Vertical"
-			(at 184.15 82.55 0)
+			(at 186.69 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13898,7 +13942,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 184.15 82.55 0)
+			(at 186.69 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13907,7 +13951,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 184.15 82.55 0)
+			(at 186.69 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14304,7 +14348,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 229.235 133.35 270)
+		(at 208.915 137.16 270)
 		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
@@ -14314,7 +14358,7 @@
 		(fields_autoplaced yes)
 		(uuid "fe9cfcc1-a290-4cd1-9876-ceb3efe66841")
 		(property "Reference" "#PWR068"
-			(at 222.885 133.35 0)
+			(at 202.565 137.16 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14323,7 +14367,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 225.425 133.3499 90)
+			(at 205.105 137.1599 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14333,7 +14377,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 229.235 133.35 0)
+			(at 208.915 137.16 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14342,7 +14386,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 229.235 133.35 0)
+			(at 208.915 137.16 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14351,7 +14395,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 229.235 133.35 0)
+			(at 208.915 137.16 0)
 			(effects
 				(font
 					(size 1.27 1.27)

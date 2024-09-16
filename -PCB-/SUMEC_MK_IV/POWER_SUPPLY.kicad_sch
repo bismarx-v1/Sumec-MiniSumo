@@ -5894,20 +5894,6 @@
 			"AACgY24rAwAAAOiYcAgAAACgY8IhAAAAgI4JhwAAAAC69fDwv4lmXubxB8E3AAAAAElFTkSuQmCC"
 		)
 	)
-	(text "Inductor \nInductance: 2.2uH\nMax. current: "
-		(exclude_from_sim no)
-		(at 118.745 100.965 0)
-		(effects
-			(font
-				(face "Bahnschrift")
-				(size 1.5 1.5)
-				(italic yes)
-				(color 0 0 0 1)
-			)
-			(justify left bottom)
-		)
-		(uuid "01e0ae94-6546-43ab-b60c-cd5a9d46a9ed")
-	)
 	(text "SWITCHING SIMULATION - FALSTAD"
 		(exclude_from_sim no)
 		(at 46.99 114.935 0)
@@ -6066,9 +6052,9 @@
 		)
 		(uuid "a2fcdc38-c171-4e8a-ab66-de62f2d40a26")
 	)
-	(text "TPS62133 Step down converter\nInput: 3-17V\nOutput: 5V\nCurrent output: 3A\nSwitching freq.: 2.5MHz"
+	(text "TPS62133 Step down converter\nInput: 3-17V\nOutput: 5V\nCurrent output: 3A\nSwitching freq.: 2.5MHz\n\nInductor \nInductance: 2.2uH\nMax. current: "
 		(exclude_from_sim no)
-		(at 118.11 92.075 0)
+		(at 118.11 101.6 0)
 		(effects
 			(font
 				(face "Bahnschrift")
