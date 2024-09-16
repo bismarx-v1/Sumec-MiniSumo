@@ -4772,7 +4772,7 @@
 		)
 		(uuid "143335b5-481a-41d1-8a34-a7ede95d1b24")
 	)
-	(text "working voltage for pins 47 and 48 is 1.8 (test it)\nCheck pins with datasheet, ADC, SP, USB etc\nCheck encoder connection\nUART connection?"
+	(text "\nCheck pins with datasheet, ADC, SP, USB etc\nCheck encoder connection"
 		(exclude_from_sim no)
 		(at 66.04 147.32 0)
 		(effects
