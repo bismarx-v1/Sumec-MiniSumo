@@ -10,8 +10,8 @@
 		(rev "v3.0.9")
 		(company "SPS NA PROSEKU")
 		(comment 1 "Made in Prague, Czech Republic")
-		(comment 2 "CONTACT: Savva Popov, menmenson09@gmail.com, +420 605 570 366")
-		(comment 3 "Made by Bismarx aka MenMenson")
+		(comment 2 "CONTACT: Savva Popov, savva.popov.sp@gmail.com, +420 605 570 366")
+		(comment 3 "Made by bismarx-v1")
 		(comment 4 "SUMEC MK IV aka SMD-V3 board")
 	)
 	(lib_symbols
@@ -601,20 +601,9 @@
 			)
 		)
 	)
-	(text "If you see schematic in wierd different fonts: my default font is set as BAHNSCHRIFT"
-		(exclude_from_sim no)
-		(at 147.32 41.91 0)
-		(effects
-			(font
-				(size 2 2)
-				(color 0 0 0 1)
-			)
-		)
-		(uuid "2b661820-40a6-4036-9fa2-2666061c2d3a")
-	)
 	(symbol
 		(lib_id "sumec_sch_lib:LOGO SMALL")
-		(at 142.24 30.48 0)
+		(at 140.97 48.26 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -623,7 +612,7 @@
 		(fields_autoplaced yes)
 		(uuid "78b85a50-bc97-4c5b-90ab-4c1122073621")
 		(property "Reference" "#G1"
-			(at 142.24 19.8543 0)
+			(at 140.97 37.6343 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -632,7 +621,7 @@
 			)
 		)
 		(property "Value" "LOGO SMALL"
-			(at 142.24 41.1057 0)
+			(at 140.97 58.8857 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -641,7 +630,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 142.24 30.48 0)
+			(at 140.97 48.26 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -650,7 +639,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 142.24 30.48 0)
+			(at 140.97 48.26 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -659,7 +648,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 142.24 30.48 0)
+			(at 140.97 48.26 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -677,7 +666,7 @@
 		)
 	)
 	(sheet
-		(at 48.895 88.9)
+		(at 187.96 66.04)
 		(size 59.69 30.48)
 		(stroke
 			(width 0.1524)
@@ -689,7 +678,7 @@
 		)
 		(uuid "7b93d7c5-db1a-415c-92e4-9ebec6cf195f")
 		(property "Sheetname" "MCU"
-			(at 72.39 106.68 0)
+			(at 211.455 83.82 0)
 			(effects
 				(font
 					(face "Bahnschrift")
@@ -700,7 +689,7 @@
 			)
 		)
 		(property "Sheetfile" "MCU.kicad_sch"
-			(at 48.895 119.9646 0)
+			(at 187.96 97.1046 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -710,7 +699,7 @@
 			)
 		)
 		(property "Field2" ""
-			(at 48.895 88.9 0)
+			(at 187.96 66.04 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -727,7 +716,7 @@
 		)
 	)
 	(sheet
-		(at 119.38 48.895)
+		(at 119.38 66.04)
 		(size 59.69 30.48)
 		(stroke
 			(width 0.1524)
@@ -739,7 +728,7 @@
 		)
 		(uuid "7dd11b1d-8415-4d33-9ce7-bf4ef9848927")
 		(property "Sheetname" "MOTOR_CONTROL"
-			(at 128.27 66.675 0)
+			(at 128.27 83.82 0)
 			(effects
 				(font
 					(face "Bahnschrift")
@@ -750,7 +739,7 @@
 			)
 		)
 		(property "Sheetfile" "MOTOR_CONTROL.kicad_sch"
-			(at 119.38 79.9596 0)
+			(at 119.38 97.1046 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -768,47 +757,7 @@
 		)
 	)
 	(sheet
-		(at 187.96 48.895)
-		(size 59.69 30.48)
-		(stroke
-			(width 0.1524)
-			(type solid)
-			(color 0 0 0 1)
-		)
-		(fill
-			(color 255 255 255 1.0000)
-		)
-		(uuid "a4783534-f11a-41d1-a455-2e16f5dc258a")
-		(property "Sheetname" "SENSORS"
-			(at 205.74 66.04 0)
-			(effects
-				(font
-					(size 4 4)
-					(color 0 0 0 1)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Sheetfile" "SENSORS.kicad_sch"
-			(at 187.96 79.9596 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(color 0 0 0 1)
-				)
-				(justify left top)
-			)
-		)
-		(instances
-			(project "SUMEC_MK_IV"
-				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046"
-					(page "4")
-				)
-			)
-		)
-	)
-	(sheet
-		(at 187.96 88.9)
+		(at 119.38 106.045)
 		(size 59.69 30.48)
 		(stroke
 			(width 0.1524)
@@ -820,9 +769,10 @@
 		)
 		(uuid "a907f0f2-2950-481d-8037-7b9f13f2e9c5")
 		(property "Sheetname" "MECHANICS"
-			(at 201.93 106.68 0)
+			(at 133.35 123.825 0)
 			(effects
 				(font
+					(face "Bahnschrift")
 					(size 4 4)
 					(color 0 0 0 1)
 				)
@@ -830,7 +780,7 @@
 			)
 		)
 		(property "Sheetfile" "MECHANICS.kicad_sch"
-			(at 187.96 119.9646 0)
+			(at 119.38 137.1096 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -848,7 +798,7 @@
 		)
 	)
 	(sheet
-		(at 119.38 88.9)
+		(at 48.895 106.045)
 		(size 59.69 30.48)
 		(stroke
 			(width 0.1524)
@@ -860,7 +810,7 @@
 		)
 		(uuid "ce2ae977-07a3-41c1-b3e1-68b5a1d5517b")
 		(property "Sheetname" "CONNECTIVITY"
-			(at 129.54 106.68 0)
+			(at 59.055 123.825 0)
 			(effects
 				(font
 					(face "Bahnschrift")
@@ -871,7 +821,7 @@
 			)
 		)
 		(property "Sheetfile" "CONNECTIVITY.kicad_sch"
-			(at 119.38 119.9646 0)
+			(at 48.895 137.1096 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -881,7 +831,7 @@
 			)
 		)
 		(property "Field2" ""
-			(at 119.38 88.9 0)
+			(at 48.895 106.045 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -898,7 +848,7 @@
 		)
 	)
 	(sheet
-		(at 48.895 48.895)
+		(at 48.895 66.04)
 		(size 59.69 30.48)
 		(stroke
 			(width 0.1524)
@@ -910,9 +860,10 @@
 		)
 		(uuid "db21c0bc-8410-4aca-be63-6c1a31675c37")
 		(property "Sheetname" "POWER_SUPPLY"
-			(at 57.785 66.04 0)
+			(at 57.785 83.185 0)
 			(effects
 				(font
+					(face "Bahnschrift")
 					(size 4 4)
 					(color 0 0 0 1)
 				)
@@ -920,7 +871,7 @@
 			)
 		)
 		(property "Sheetfile" "POWER_SUPPLY.kicad_sch"
-			(at 48.895 79.9596 0)
+			(at 48.895 97.1046 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -938,7 +889,7 @@
 		)
 	)
 	(sheet
-		(at 48.895 128.905)
+		(at 187.96 106.045)
 		(size 59.69 30.48)
 		(stroke
 			(width 0.1524)
@@ -950,9 +901,10 @@
 		)
 		(uuid "ebfdffb9-be38-48cc-bdc4-81d227bad184")
 		(property "Sheetname" "GRAPHICS"
-			(at 66.04 146.05 0)
+			(at 205.105 123.19 0)
 			(effects
 				(font
+					(face "Bahnschrift")
 					(size 4 4)
 					(color 0 0 0 1)
 				)
@@ -960,7 +912,7 @@
 			)
 		)
 		(property "Sheetfile" "GRAPHICS.kicad_sch"
-			(at 48.895 159.9696 0)
+			(at 187.96 137.1096 0)
 			(effects
 				(font
 					(size 1.27 1.27)

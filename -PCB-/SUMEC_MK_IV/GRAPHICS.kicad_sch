@@ -10,8 +10,8 @@
 		(rev "v3.0.9")
 		(company "SPS NA PROSEKU")
 		(comment 1 "Made in Prague, Czech Republic")
-		(comment 2 "CONTACT: Savva Popov, menmenson09@gmail.com, +420 605 570 366")
-		(comment 3 "Made by Bismarx aka MenMenson")
+		(comment 2 "CONTACT: Savva Popov, savva.popov.sp@gmail.com, +420 605 570 366")
+		(comment 3 "Made by bismarx-v1")
 		(comment 4 "SUMEC MK IV aka SMD-V3 board")
 	)
 	(lib_symbols
@@ -298,6 +298,20 @@
 			(justify left bottom)
 		)
 		(uuid "8b0181fa-7afd-4c6d-a687-8d4cb3ad04f4")
+	)
+	(text "SUMEC LOGO"
+		(exclude_from_sim no)
+		(at 121.92 85.725 0)
+		(effects
+			(font
+				(face "Bahnschrift")
+				(size 1 1)
+				(italic yes)
+				(color 0 0 0 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "9f2e6779-865b-47b0-9c5d-ed86ad9c1746")
 	)
 	(symbol
 		(lib_id "Connector:TestPoint")
