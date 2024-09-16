@@ -1,0 +1,127 @@
+(footprint "Custom_SPDT_2.5_Switch"
+	(version 20240108)
+	(generator "pcbnew")
+	(generator_version "8.0")
+	(layer "F.Cu")
+	(descr "Through hole straight pin header, 1x03, 2.54mm pitch, single row")
+	(tags "Through hole pin header THT 1x03 2.54mm single row")
+	(property "Reference" "SW4"
+		(at -5.25 1.17 90)
+		(layer "F.SilkS")
+		(uuid "85bfae17-9151-4347-bac8-036158b877a6")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "SW_DPDT_x2"
+		(at 0.5 11.25 180)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "d1fe1353-5f98-4a6e-8754-ce19ced00bbd")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Footprint" ""
+		(at 0 1.25 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "bb774da4-8b8c-451c-a559-bcadaedf2aa5")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 1.25 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "4b8a448f-a9fe-4d08-a015-7850333c9f63")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" "Switch, dual pole double throw, separate symbols"
+		(at 0.5 7.5 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "8c8b71e9-6eab-40cc-9416-3e9c72017e83")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr through_hole)
+	(fp_rect
+		(start -2.05 -5.8)
+		(end 2.05 5.8)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(fill none)
+		(layer "F.SilkS")
+		(uuid "49e93455-eac8-48ea-b7c4-88731c5917c4")
+	)
+	(fp_rect
+		(start -2 -5.75)
+		(end 2 5.75)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(fill none)
+		(layer "F.CrtYd")
+		(uuid "33db6828-a2ae-4f49-89b3-37f6cdbaa359")
+	)
+	(pad "1" thru_hole rect
+		(at 0 -2.5)
+		(size 1 1)
+		(drill 0.6)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "9d3b9236-62f6-4d31-8a03-ae50d18437ad")
+	)
+	(pad "2" thru_hole roundrect
+		(at 0 0)
+		(size 1 1)
+		(drill 0.6)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(roundrect_rratio 0.25)
+		(uuid "8a3d3eb6-754d-43c9-b120-e25d8acaa3a2")
+	)
+	(pad "3" thru_hole roundrect
+		(at 0 2.5)
+		(size 1 1)
+		(drill 0.6)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(roundrect_rratio 0.25)
+		(uuid "a016c942-256b-4df4-9cc8-1c62f1d321b5")
+	)
+	(model "C:/Users/MenMe/GitHub/Sumec-MiniSumo/-PCB-/_libs/sumec_3d/SPDT slide switch SS12D00.step"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 90)
+		)
+	)
+)
