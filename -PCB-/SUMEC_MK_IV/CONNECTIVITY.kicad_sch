@@ -10630,7 +10630,7 @@
 	)
 	(text "TF-LUNA MANUAL"
 		(exclude_from_sim no)
-		(at 24.13 137.16 0)
+		(at 24.13 139.065 0)
 		(effects
 			(font
 				(size 2 2)
@@ -10756,19 +10756,6 @@
 		)
 		(uuid "a42fbd27-95ee-4186-9670-c3ccb5e74347")
 	)
-	(text "Time-of-Flight(ToF)\nlaser-ranging module - TF-Luna\nCOMMUNICATION PROTOCOL: I²C \n\nWhen pin 5 is connected to ground, TF-Luna enters I2C mode, \nthen its pin 2 is used as SDA data and\npin 3 is the SCL clock sending data.\n\nAddresses are saved using Natani's wonderful and magical code."
-		(exclude_from_sim no)
-		(at 21.59 127.635 0)
-		(effects
-			(font
-				(face "Bahnschrift")
-				(size 1 1)
-				(color 0 0 0 1)
-			)
-			(justify left bottom)
-		)
-		(uuid "b0b9c81e-cece-4cea-9ffc-4957af6ec24d")
-	)
 	(text "POLOLU SENSOR MANUAL"
 		(exclude_from_sim no)
 		(at 25.4 97.155 0)
@@ -10787,7 +10774,7 @@
 	)
 	(text "( Better manual in -DOCS- )"
 		(exclude_from_sim no)
-		(at 36.83 138.43 0)
+		(at 36.83 140.335 0)
 		(effects
 			(font
 				(size 1 1)
@@ -10824,6 +10811,19 @@
 			(justify left bottom)
 		)
 		(uuid "d2271da4-7559-4357-97a9-4caaba6d9f58")
+	)
+	(text "Time-of-Flight(ToF)\nlaser-ranging module - TF-Luna\nCOMMUNICATION PROTOCOL: I²C \n\nWhen pin 5 is connected to ground, \nTF-Luna enters I2C mode, \nthen its pin 2 is used as SDA data and\npin 3 is the SCL clock sending data."
+		(exclude_from_sim no)
+		(at 22.86 133.35 0)
+		(effects
+			(font
+				(face "Bahnschrift")
+				(size 1.5 1.5)
+				(color 0 0 0 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "d4c6964c-f301-4069-a6ac-34c4fbc02398")
 	)
 	(text "M1"
 		(exclude_from_sim no)
