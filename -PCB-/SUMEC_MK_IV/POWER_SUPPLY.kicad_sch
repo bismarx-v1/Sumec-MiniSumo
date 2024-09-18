@@ -3558,7 +3558,7 @@
 	)
 	(wire
 		(pts
-			(xy 80.01 153.67) (xy 88.9 153.67)
+			(xy 80.01 153.67) (xy 87.63 153.67)
 		)
 		(stroke
 			(width 0)
@@ -6128,19 +6128,6 @@
 			"AACgY24rAwAAAOiYcAgAAACgY8IhAAAAgI4JhwAAAAC69fDwv4lmXubxB8E3AAAAAElFTkSuQmCC"
 		)
 	)
-	(text "Digital distance sensor - Sharp GP2Y0D810Z0F\n\nSensor detects objects between 2 cm and 10 cm\nLow when detecting an object, high otherwise.\nOperating voltage 2.7V - 6.2V"
-		(exclude_from_sim no)
-		(at 90.805 258.445 0)
-		(effects
-			(font
-				(face "Bahnschrift")
-				(size 1.5 1.5)
-				(color 0 0 0 1)
-			)
-			(justify left bottom)
-		)
-		(uuid "0de0ae55-8b23-4d2a-bc69-07042a909a87")
-	)
 	(text "SWITCHING SIMULATION - FALSTAD"
 		(exclude_from_sim no)
 		(at 46.99 114.935 0)
@@ -8149,7 +8136,7 @@
 	)
 	(symbol
 		(lib_id "power:+12V")
-		(at 88.9 153.67 270)
+		(at 87.63 153.67 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -8157,7 +8144,7 @@
 		(dnp no)
 		(uuid "6e7ac65b-86ce-41cc-a650-d9292d0f1f92")
 		(property "Reference" "#PWR09"
-			(at 85.09 153.67 0)
+			(at 83.82 153.67 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8166,7 +8153,7 @@
 			)
 		)
 		(property "Value" "+12V"
-			(at 92.075 153.67 90)
+			(at 90.805 153.67 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8175,7 +8162,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 88.9 153.67 0)
+			(at 87.63 153.67 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8184,7 +8171,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 88.9 153.67 0)
+			(at 87.63 153.67 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8193,7 +8180,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 88.9 153.67 0)
+			(at 87.63 153.67 0)
 			(effects
 				(font
 					(size 1.27 1.27)
