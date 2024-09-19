@@ -623,6 +623,152 @@
 				)
 			)
 		)
+		(symbol "Device:Polyfuse"
+			(pin_numbers hide)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "F"
+				(at -2.54 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Polyfuse"
+				(at 2.54 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 1.27 -5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Resettable fuse, polymeric positive temperature coefficient"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "resettable fuse PTC PPTC polyfuse polyswitch"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "*polyfuse* *PTC*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "Polyfuse_0_1"
+				(rectangle
+					(start -0.762 2.54)
+					(end 0.762 -2.54)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 2.54) (xy 0 -2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.524 2.54) (xy -1.524 1.524) (xy 1.524 -1.524) (xy 1.524 -2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "Polyfuse_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 1.27)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 1.27)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
 		(symbol "Device:R"
 			(pin_numbers hide)
 			(pin_names
@@ -3857,19 +4003,19 @@
 		(uuid "1b3722c1-dff2-41a3-afd8-e68343c2c82f")
 	)
 	(no_connect
-		(at 95.25 40.64)
+		(at 100.33 40.64)
 		(uuid "4bbe1716-ad43-4934-8c77-eb1bdac685b1")
 	)
 	(no_connect
-		(at 132.08 40.64)
+		(at 137.16 40.64)
 		(uuid "947f0fb8-a880-4d29-b7d1-71d5bac61c97")
 	)
 	(no_connect
-		(at 95.25 53.34)
+		(at 100.33 53.34)
 		(uuid "97d5c54f-68f2-433e-8b2a-6772308d5ec7")
 	)
 	(no_connect
-		(at 132.08 48.26)
+		(at 137.16 48.26)
 		(uuid "ac7ea489-6561-41ba-9817-849be3736f28")
 	)
 	(no_connect
@@ -3885,7 +4031,7 @@
 		(uuid "d64feee9-13ca-4966-8533-b5a9b95e4c63")
 	)
 	(no_connect
-		(at 95.25 48.26)
+		(at 100.33 48.26)
 		(uuid "edebcaa5-201f-437c-b7f8-8933c96c77cb")
 	)
 	(wire
@@ -3940,7 +4086,7 @@
 	)
 	(wire
 		(pts
-			(xy 95.25 40.64) (xy 96.52 40.64)
+			(xy 100.33 40.64) (xy 101.6 40.64)
 		)
 		(stroke
 			(width 0)
@@ -3950,7 +4096,7 @@
 	)
 	(wire
 		(pts
-			(xy 133.35 43.18) (xy 132.08 43.18)
+			(xy 138.43 43.18) (xy 137.16 43.18)
 		)
 		(stroke
 			(width 0)
@@ -3980,7 +4126,7 @@
 	)
 	(wire
 		(pts
-			(xy 95.25 53.34) (xy 96.52 53.34)
+			(xy 100.33 53.34) (xy 101.6 53.34)
 		)
 		(stroke
 			(width 0)
@@ -4140,7 +4286,7 @@
 	)
 	(wire
 		(pts
-			(xy 95.25 43.18) (xy 96.52 43.18)
+			(xy 100.33 43.18) (xy 101.6 43.18)
 		)
 		(stroke
 			(width 0)
@@ -4180,7 +4326,7 @@
 	)
 	(wire
 		(pts
-			(xy 90.17 55.88) (xy 96.52 55.88)
+			(xy 95.25 55.88) (xy 101.6 55.88)
 		)
 		(stroke
 			(width 0)
@@ -4340,16 +4486,6 @@
 	)
 	(wire
 		(pts
-			(xy 86.36 35.56) (xy 87.63 35.56)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9f648f30-cad1-4ebe-a0e5-17e6c77b76ff")
-	)
-	(wire
-		(pts
 			(xy 243.84 38.1) (xy 247.65 38.1)
 		)
 		(stroke
@@ -4430,7 +4566,7 @@
 	)
 	(wire
 		(pts
-			(xy 95.25 45.72) (xy 96.52 45.72)
+			(xy 100.33 45.72) (xy 101.6 45.72)
 		)
 		(stroke
 			(width 0)
@@ -4447,16 +4583,6 @@
 			(type default)
 		)
 		(uuid "c970021e-214d-4987-acdb-9dbef3e85d36")
-	)
-	(wire
-		(pts
-			(xy 133.35 45.72) (xy 132.08 45.72)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "cd8be795-e676-4d26-aaed-8c1e496c6bd3")
 	)
 	(wire
 		(pts
@@ -4530,16 +4656,6 @@
 	)
 	(wire
 		(pts
-			(xy 95.25 35.56) (xy 96.52 35.56)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d8dd441f-41ec-4c5d-961c-239bbfa88696")
-	)
-	(wire
-		(pts
 			(xy 143.51 142.24) (xy 144.78 142.24)
 		)
 		(stroke
@@ -4610,7 +4726,17 @@
 	)
 	(wire
 		(pts
-			(xy 90.17 58.42) (xy 90.17 55.88)
+			(xy 138.43 45.72) (xy 137.16 45.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e877d0ef-183a-4e0e-a8ae-7f58424ea5cf")
+	)
+	(wire
+		(pts
+			(xy 95.25 58.42) (xy 95.25 55.88)
 		)
 		(stroke
 			(width 0)
@@ -4650,7 +4776,7 @@
 	)
 	(wire
 		(pts
-			(xy 95.25 48.26) (xy 96.52 48.26)
+			(xy 100.33 48.26) (xy 101.6 48.26)
 		)
 		(stroke
 			(width 0)
@@ -4811,7 +4937,7 @@
 	)
 	(text "USB CONNECTOR"
 		(exclude_from_sim no)
-		(at 101.6 60.96 0)
+		(at 106.68 60.96 0)
 		(effects
 			(font
 				(face "Bahnschrift")
@@ -4934,10 +5060,10 @@
 	)
 	(text "VBUS Switch already has a Sch Diode\nsolder 1206 0R resistor if not needed"
 		(exclude_from_sim no)
-		(at 83.185 26.67 0)
+		(at 76.2 41.91 0)
 		(effects
 			(font
-				(size 1.5 1.5)
+				(size 1 1)
 				(color 255 0 0 1)
 			)
 		)
@@ -5283,7 +5409,7 @@
 	)
 	(global_label "D+ IN"
 		(shape output)
-		(at 95.25 45.72 180)
+		(at 100.33 45.72 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5295,7 +5421,7 @@
 		)
 		(uuid "54ededa8-726d-48b9-87e7-7699780415c8")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 89.6768 45.72 0)
+			(at 94.7568 45.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5427,7 +5553,7 @@
 	)
 	(global_label "D- IN"
 		(shape output)
-		(at 133.35 45.72 0)
+		(at 138.43 45.72 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5439,7 +5565,7 @@
 		)
 		(uuid "7a0b4e7c-64ce-4ae5-a629-1895ddd57d55")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 138.8548 45.72 0)
+			(at 143.9348 45.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5643,7 +5769,7 @@
 	)
 	(global_label "D- IN"
 		(shape output)
-		(at 95.25 43.18 180)
+		(at 100.33 43.18 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5655,7 +5781,7 @@
 		)
 		(uuid "acfefd90-3fce-4618-a3d5-14583fe62704")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 89.7452 43.18 0)
+			(at 94.8252 43.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5691,7 +5817,7 @@
 	)
 	(global_label "D+ IN"
 		(shape output)
-		(at 133.35 43.18 0)
+		(at 138.43 43.18 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5703,7 +5829,7 @@
 		)
 		(uuid "b168f23a-b227-47d1-84a3-5df20ea7d063")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 138.9232 43.18 0)
+			(at 144.0032 43.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6445,7 +6571,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 90.17 58.42 0)
+		(at 95.25 58.42 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -6454,7 +6580,7 @@
 		(fields_autoplaced yes)
 		(uuid "13b470b8-af65-4436-8495-9bb7cd1d7dde")
 		(property "Reference" "#PWR044"
-			(at 90.17 64.77 0)
+			(at 95.25 64.77 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6463,7 +6589,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 89.535 62.23 90)
+			(at 94.615 62.23 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6473,7 +6599,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 90.17 58.42 0)
+			(at 95.25 58.42 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6482,7 +6608,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 90.17 58.42 0)
+			(at 95.25 58.42 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6491,7 +6617,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 90.17 58.42 0)
+			(at 95.25 58.42 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6708,6 +6834,74 @@
 			(project "SUMEC_MK_IV"
 				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/7b93d7c5-db1a-415c-92e4-9ebec6cf195f"
 					(reference "R16")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:Polyfuse")
+		(at 90.17 35.56 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "2d18a07c-5f82-4d74-a0ce-9a4307aba579")
+		(property "Reference" "F1"
+			(at 89.535 30.48 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Polyfuse/50R"
+			(at 89.535 32.385 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Fuse:Fuse_1206_3216Metric_Pad1.42x1.75mm_HandSolder"
+			(at 95.25 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 90.17 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resettable fuse, polymeric positive temperature coefficient"
+			(at 90.17 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "cd5f9e04-93d4-4b27-9858-2871a0b91b6f")
+		)
+		(pin "2"
+			(uuid "772ee8b0-0812-4dad-9d7b-d013aef845d2")
+		)
+		(instances
+			(project ""
+				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/7b93d7c5-db1a-415c-92e4-9ebec6cf195f"
+					(reference "F1")
 					(unit 1)
 				)
 			)
@@ -7188,7 +7382,7 @@
 	)
 	(symbol
 		(lib_id "Device:D_Schottky")
-		(at 91.44 35.56 0)
+		(at 97.79 35.56 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -7196,7 +7390,7 @@
 		(dnp no)
 		(uuid "b6e219ff-5197-4109-ba5c-ec97b1e9cdfa")
 		(property "Reference" "D3"
-			(at 91.44 32.385 0)
+			(at 99.06 33.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7204,7 +7398,7 @@
 			)
 		)
 		(property "Value" "D_Schottky"
-			(at 91.44 32.385 0)
+			(at 97.79 32.385 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7213,7 +7407,7 @@
 			)
 		)
 		(property "Footprint" "Diode_SMD:D_1206_3216Metric_Pad1.42x1.75mm_HandSolder"
-			(at 91.44 35.56 0)
+			(at 97.79 35.56 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7222,7 +7416,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 91.44 35.56 0)
+			(at 97.79 35.56 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7231,7 +7425,7 @@
 			)
 		)
 		(property "Description" "Schottky diode"
-			(at 91.44 35.56 0)
+			(at 97.79 35.56 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7457,7 +7651,7 @@
 	)
 	(symbol
 		(lib_id "sumec_sch_lib:USB_TypeC")
-		(at 114.3 45.72 0)
+		(at 119.38 45.72 0)
 		(mirror y)
 		(unit 1)
 		(exclude_from_sim no)
@@ -7466,7 +7660,7 @@
 		(dnp no)
 		(uuid "dfe06531-f5d8-4aa9-ab99-19ebc12dee2d")
 		(property "Reference" "J2"
-			(at 114.3 28.575 0)
+			(at 119.38 28.575 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7474,7 +7668,7 @@
 			)
 		)
 		(property "Value" "USB_TypeC"
-			(at 114.3 31.115 0)
+			(at 119.38 31.115 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7482,7 +7676,7 @@
 			)
 		)
 		(property "Footprint" "sumec_brd:USB_Type_C"
-			(at 114.3 45.72 0)
+			(at 119.38 45.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7492,7 +7686,7 @@
 			)
 		)
 		(property "Datasheet" "TYPE-C-31-M-12"
-			(at 114.3 45.72 0)
+			(at 119.38 45.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7501,7 +7695,7 @@
 			)
 		)
 		(property "Description" "USB Connectors 24 Receptacle 1 8.94*7.3mm RoHS"
-			(at 114.3 45.72 0)
+			(at 119.38 45.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7511,7 +7705,7 @@
 			)
 		)
 		(property "MF" "HRO Electronics Co., Ltd."
-			(at 114.3 45.72 0)
+			(at 119.38 45.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7521,7 +7715,7 @@
 			)
 		)
 		(property "MAXIMUM_PACKAGE_HEIGHT" "3.26 mm"
-			(at 114.3 45.72 0)
+			(at 119.38 45.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7531,7 +7725,7 @@
 			)
 		)
 		(property "Package" "Package"
-			(at 114.3 45.72 0)
+			(at 119.38 45.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7541,7 +7735,7 @@
 			)
 		)
 		(property "Price" "None"
-			(at 114.3 45.72 0)
+			(at 119.38 45.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7551,7 +7745,7 @@
 			)
 		)
 		(property "Check_prices" "https://www.snapeda.com/parts/TYPE-C-31-M-12/HRO+Electronics+Co.%252C+Ltd./view-part/?ref=eda"
-			(at 111.76 45.72 0)
+			(at 116.84 45.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7561,7 +7755,7 @@
 			)
 		)
 		(property "STANDARD" "Manufacturer Recommendations"
-			(at 114.3 45.72 0)
+			(at 119.38 45.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7571,7 +7765,7 @@
 			)
 		)
 		(property "PARTREV" "2020.12.08"
-			(at 114.3 45.72 0)
+			(at 119.38 45.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7581,7 +7775,7 @@
 			)
 		)
 		(property "SnapEDA_Link" "https://www.snapeda.com/parts/TYPE-C-31-M-12/HRO+Electronics+Co.%252C+Ltd./view-part/?ref=snap"
-			(at 114.3 45.72 0)
+			(at 119.38 45.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7591,7 +7785,7 @@
 			)
 		)
 		(property "MP" "TYPE-C-31-M-12"
-			(at 114.3 45.72 0)
+			(at 119.38 45.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7601,7 +7795,7 @@
 			)
 		)
 		(property "SNAPEDA_PN" "TYPE-C-31-M-12"
-			(at 114.3 45.72 0)
+			(at 119.38 45.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7611,7 +7805,7 @@
 			)
 		)
 		(property "Availability" "Not in stock"
-			(at 114.3 45.72 0)
+			(at 119.38 45.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7621,7 +7815,7 @@
 			)
 		)
 		(property "MANUFACTURER" "HRO Electronics Co., Ltd."
-			(at 114.3 45.72 0)
+			(at 119.38 45.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
