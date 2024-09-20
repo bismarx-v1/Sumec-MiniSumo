@@ -615,7 +615,7 @@
       "plot": "",
       "pos_files": "",
       "specctra_dsn": "",
-      "step": "",
+      "step": "SUMEC_MK_IV.step",
       "svg": "",
       "vrml": ""
     },
