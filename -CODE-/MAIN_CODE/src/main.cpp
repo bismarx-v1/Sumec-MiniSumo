@@ -50,6 +50,7 @@ void setup()
     pinMode(button, INPUT);
     Serial.begin(115200);
     LEDRed.blink(1000);
+    UDP_Setup();
 }
 
 void loop()
@@ -91,6 +92,7 @@ void loop()
 
             if((QREleft || QREright || QREback) && Remote.isStarted())
             {
+                UDP_SendUdpToAll("QRE", 1);
                 saveState = state;   //saved last state
                 state = 001;
                 LINEstate++;
@@ -145,6 +147,7 @@ void loop()
                 LINEstate = 3;
             }
 
+            UDP_SendUdpToAll("QRE_END", 1);
             break;
 
     }
@@ -159,12 +162,22 @@ void loop()
     case 000:       // INIT 
 
         if (Remote.hasDohyoID() && !Remote.isStarted())
-        LEDRed.blink(500, 100);
+        {
+            LEDRed.blink(500, 100);
+            Tick_Sharp.lastTick = millis();
+            Tick_Sharp.tickNumber = 0;
+        }
 
         // after start comand, running this main code
         if (Remote.isStarted())
         {
-            state = 230;
+            if (Tick_Sharp.tickNumber < 10)
+            {
+                UDP_SendUdpToAll("======================", 1);
+                state = 230;
+                UDP_SendUdpToAll("Start", 1);
+                UDP_SendUdpToAll("state_230", 1);
+            }
         }
 
         LINEstate = 0;
@@ -173,33 +186,45 @@ void loop()
     case 001:       // IDLE
         
         //nothing - program is stopped
-        
+
         break;
     case 230: // Turn Right 
 
         Move.turnRight(1.0);
         
         if(LUNAleft < Range)
+        {
+            UDP_SendUdpToAll("state_260", 1);
             state = 260;
-
+        }
         if(LUNAmiddle < Range)
+        {
+            UDP_SendUdpToAll("state_290", 1);
             state = 290;
-
+        }
 
         if(SHARPleft || SHARPright)
+        {
+            UDP_SendUdpToAll("state_300", 1);
             state = 300;
-
+        }
 
         break;
     case 260: // Turn Left
 
         Move.turnLeft(1.0);
 
-        if(LUNAleft > Range)    
+        if(LUNAleft > Range) 
+        {   
+            UDP_SendUdpToAll("state_230", 1);
             state = 230;
-        
+        }
+
         if(LUNAmiddle < Range)
+        {
+            UDP_SendUdpToAll("state_290", 1);
             state = 290;
+        }
         
         break;
     case 290: // Go Forward
@@ -207,8 +232,10 @@ void loop()
         Move.goForward(1.0);
 
         if(LUNAmiddle > Range)    
+        {
+            UDP_SendUdpToAll("state_230", 1);
             state = 230;
-        
+        }
 
         break;
     case 300: // Sharp 
@@ -217,10 +244,15 @@ void loop()
         Tick_Sharp.tickNumber = 0;
 
         if(SHARPleft)
+        {
+            UDP_SendUdpToAll("state_330", 1);
             state = 330;
+        }
         else if(SHARPright)
+        {
+            UDP_SendUdpToAll("state_360", 1);
             state = 360;
-        
+        }
         break;
     case 330: // Turn Right diagonaly and Turn Right 
 
@@ -238,6 +270,7 @@ void loop()
         }
         else
         {
+            UDP_SendUdpToAll("state_230", 1);
             state = 230; // Sharp - End
         }
 
@@ -258,6 +291,7 @@ void loop()
         }
         else
         {
+            UDP_SendUdpToAll("state_230", 1);
             state = 230; // Sharp - End
         }
         

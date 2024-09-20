@@ -4,6 +4,7 @@
 #define RAW_BUFFER_LENGTH                               100
 #define TOLERANCE_FOR_DECODERS_MARK_OR_SPACE_MATCHING   30
 #include <IRremote.hpp>
+#include <UDPStuff.h>
 
 
 #define DECODE_RC5
@@ -46,6 +47,8 @@ void DohyoIR::update() {
             IrReceiver.printIRResultShort(&Serial);
             mAddress = IrReceiver.decodedIRData.address;
             mCommand = IrReceiver.decodedIRData.command;
+            UDP_SendUdpToAll("Adress: " + String(mAddress), 1);
+            UDP_SendUdpToAll("Comand: " + String(mCommand), 1);
 
             switch (mAddress) {
                 case 0x0B:
