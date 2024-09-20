@@ -1,5 +1,5 @@
 #include <Arduino.h>
-#include "UDPStuff.h"
+#include "UDPStuff.cpp"
 
 uint8_t ReturnSize;	// munber of bytes recieved
 char ReturnMessage[bufferLen];	// recieved message
