@@ -1,5 +1,5 @@
 #include <Arduino.h>
-#include "WiFiAPStuff.h"
+#include "WiFiAPStuff.cpp"
 
 WiFiAPStuff APObject;	// Create the object
 

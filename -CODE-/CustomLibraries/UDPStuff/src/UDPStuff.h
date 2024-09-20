@@ -4,7 +4,7 @@
 #include <Arduino.h>
 #include <WiFiUdp.h>
 #include <esp_wifi.h>
-#include "WiFiAPStuff.h"
+#include "WiFiAPStuff.cpp"
 
 #define _UDP_DEBUG 0
 
