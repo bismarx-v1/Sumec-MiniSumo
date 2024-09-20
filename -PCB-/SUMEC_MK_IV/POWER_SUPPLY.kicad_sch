@@ -7467,8 +7467,8 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "4759de21-fb8e-4534-9536-820ba1e3a0e2")
-		(property "Reference" "Q3"
-			(at 90.17 46.9901 0)
+		(property "Reference" "Q2"
+			(at 88.265 46.99 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7477,7 +7477,7 @@
 			)
 		)
 		(property "Value" "Q_PMOS_GSD"
-			(at 90.17 44.4501 0)
+			(at 88.265 44.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7524,7 +7524,7 @@
 		(instances
 			(project ""
 				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/db21c0bc-8410-4aca-be63-6c1a31675c37"
-					(reference "Q3")
+					(reference "Q2")
 					(unit 1)
 				)
 			)

@@ -2099,6 +2099,151 @@
 				)
 			)
 		)
+		(symbol "Switch:SW_Push"
+			(pin_numbers hide)
+			(pin_names
+				(offset 1.016) hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "SW"
+				(at 1.27 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "SW_Push"
+				(at 0 -1.524 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Push button switch, generic, two pins"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "switch normally-open pushbutton push-button"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "SW_Push_0_1"
+				(circle
+					(center -2.032 0)
+					(radius 0.508)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 1.27) (xy 0 3.048)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 1.27) (xy -2.54 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 2.032 0)
+					(radius 0.508)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at -5.08 0 0)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 0 180)
+					(length 2.54)
+					(name "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
 		(symbol "power:+12V"
 			(power)
 			(pin_names
@@ -3971,6 +4116,12 @@
 		)
 	)
 	(junction
+		(at 232.41 143.51)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "00d6bc2f-2fe0-4efb-8bcd-07c8ce70c0c9")
+	)
+	(junction
 		(at 163.83 86.36)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3983,16 +4134,40 @@
 		(uuid "5a3c6ce8-00e2-4363-be0b-13be019aced0")
 	)
 	(junction
+		(at 238.76 127)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "66521bac-07d5-4147-8496-76d37527309d")
+	)
+	(junction
 		(at 179.07 92.71)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "7cae09a4-a6f9-4c60-bf3c-6d3de0431c1d")
 	)
 	(junction
+		(at 248.92 127)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "ce0bda3f-48d2-46a0-8ca6-6d35f39a4d12")
+	)
+	(junction
 		(at 191.77 44.45)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "cee82cc9-1f52-47c5-a784-cf038f218aa8")
+	)
+	(junction
+		(at 261.62 120.65)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "ea9153c5-4d5f-4fbd-a635-e868ce869704")
+	)
+	(junction
+		(at 226.06 120.65)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "ed5e294f-d23e-45f4-9b54-551dd2967916")
 	)
 	(no_connect
 		(at 185.42 121.92)
@@ -4036,6 +4211,46 @@
 	)
 	(wire
 		(pts
+			(xy 238.76 120.65) (xy 237.49 120.65)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "01039139-acec-4de8-817f-d4256e2d5efb")
+	)
+	(wire
+		(pts
+			(xy 248.92 129.54) (xy 248.92 127)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "100953a3-b6a9-4c2c-8d8b-89037f97a253")
+	)
+	(wire
+		(pts
+			(xy 248.92 127) (xy 251.46 127)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "11752578-aed9-4366-a763-b483d80644af")
+	)
+	(wire
+		(pts
+			(xy 245.11 143.51) (xy 250.19 143.51)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "13a91722-120b-4e85-9a19-2a386baaced3")
+	)
+	(wire
+		(pts
 			(xy 184.15 124.46) (xy 182.88 124.46)
 		)
 		(stroke
@@ -4066,6 +4281,16 @@
 	)
 	(wire
 		(pts
+			(xy 226.06 109.22) (xy 226.06 107.95)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1b5f30f1-2099-4421-9cc9-92f61e89ea34")
+	)
+	(wire
+		(pts
 			(xy 255.27 48.26) (xy 261.62 48.26)
 		)
 		(stroke
@@ -4076,6 +4301,16 @@
 	)
 	(wire
 		(pts
+			(xy 226.06 120.65) (xy 227.33 120.65)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2ebf45da-3277-466c-a170-49cb8edf3e45")
+	)
+	(wire
+		(pts
 			(xy 232.41 29.21) (xy 236.22 29.21)
 		)
 		(stroke
@@ -4083,6 +4318,26 @@
 			(type default)
 		)
 		(uuid "2edd1d21-13f7-4bd4-9c4a-78deb8ca3270")
+	)
+	(wire
+		(pts
+			(xy 238.76 127) (xy 236.22 127)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2f2bd455-c98f-4865-bdee-48d8632a9f14")
+	)
+	(wire
+		(pts
+			(xy 232.41 151.13) (xy 234.95 151.13)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "329e379e-2526-4efa-97d1-65930c211892")
 	)
 	(wire
 		(pts
@@ -4236,6 +4491,16 @@
 	)
 	(wire
 		(pts
+			(xy 261.62 120.65) (xy 266.7 120.65)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "54bbb3b2-3ffa-484b-892e-cd02e8cbbc8a")
+	)
+	(wire
+		(pts
 			(xy 139.7 57.15) (xy 140.97 57.15)
 		)
 		(stroke
@@ -4316,6 +4581,16 @@
 	)
 	(wire
 		(pts
+			(xy 261.62 120.65) (xy 261.62 127)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7115345e-c599-465e-8014-983bc831167f")
+	)
+	(wire
+		(pts
 			(xy 185.42 139.7) (xy 182.88 139.7)
 		)
 		(stroke
@@ -4323,6 +4598,16 @@
 			(type default)
 		)
 		(uuid "71610fc6-2ef4-4f31-b0f0-0cc51cf15d05")
+	)
+	(wire
+		(pts
+			(xy 219.71 120.65) (xy 226.06 120.65)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "71ced992-b8f2-4745-b2f7-875c48d6b2c1")
 	)
 	(wire
 		(pts
@@ -4436,6 +4721,16 @@
 	)
 	(wire
 		(pts
+			(xy 261.62 120.65) (xy 260.35 120.65)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "93f50e0b-cb9c-4dd8-af12-0ddce6fbe512")
+	)
+	(wire
+		(pts
 			(xy 143.51 124.46) (xy 144.78 124.46)
 		)
 		(stroke
@@ -4463,6 +4758,16 @@
 			(type default)
 		)
 		(uuid "9651878d-9373-4637-af19-e54b996cbba1")
+	)
+	(wire
+		(pts
+			(xy 232.41 143.51) (xy 232.41 151.13)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "98a1f79e-18b4-4120-ae54-ece3be16aa70")
 	)
 	(wire
 		(pts
@@ -4526,6 +4831,16 @@
 	)
 	(wire
 		(pts
+			(xy 226.06 116.84) (xy 226.06 120.65)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a8da22ee-57b1-4f44-a3d7-3cb007f6771d")
+	)
+	(wire
+		(pts
 			(xy 184.15 119.38) (xy 182.88 119.38)
 		)
 		(stroke
@@ -4556,6 +4871,16 @@
 	)
 	(wire
 		(pts
+			(xy 231.14 143.51) (xy 232.41 143.51)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "afa9138a-0632-4c8c-a8b4-683088b988ec")
+	)
+	(wire
+		(pts
 			(xy 243.84 48.26) (xy 247.65 48.26)
 		)
 		(stroke
@@ -4563,6 +4888,26 @@
 			(type default)
 		)
 		(uuid "b590402d-b956-4a98-862b-850eb852c7e9")
+	)
+	(wire
+		(pts
+			(xy 232.41 143.51) (xy 234.95 143.51)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "be9e4343-aedb-4f35-8461-103bc16560a6")
+	)
+	(wire
+		(pts
+			(xy 238.76 129.54) (xy 238.76 127)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bf24dc9f-f050-464a-9b69-7609c1c0afc0")
 	)
 	(wire
 		(pts
@@ -4583,6 +4928,16 @@
 			(type default)
 		)
 		(uuid "c970021e-214d-4987-acdb-9dbef3e85d36")
+	)
+	(wire
+		(pts
+			(xy 248.92 120.65) (xy 250.19 120.65)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cc0e0e78-dc37-4f29-a04e-f28071356c8c")
 	)
 	(wire
 		(pts
@@ -4676,6 +5031,16 @@
 	)
 	(wire
 		(pts
+			(xy 238.76 120.65) (xy 238.76 127)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dccd1fd0-1e28-4c57-b1f0-af2026bb732f")
+	)
+	(wire
+		(pts
 			(xy 185.42 121.92) (xy 182.88 121.92)
 		)
 		(stroke
@@ -4736,6 +5101,16 @@
 	)
 	(wire
 		(pts
+			(xy 228.6 127) (xy 226.06 127)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ebf2bd59-b74e-423e-81e9-9fa18b390fc6")
+	)
+	(wire
+		(pts
 			(xy 95.25 58.42) (xy 95.25 55.88)
 		)
 		(stroke
@@ -4746,6 +5121,16 @@
 	)
 	(wire
 		(pts
+			(xy 250.19 151.13) (xy 245.11 151.13)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f182f7d2-0072-461a-aec3-6b10af99d783")
+	)
+	(wire
+		(pts
 			(xy 184.15 137.16) (xy 182.88 137.16)
 		)
 		(stroke
@@ -4753,6 +5138,16 @@
 			(type default)
 		)
 		(uuid "f55ebb69-95d7-46d2-86bb-fe882d273a2f")
+	)
+	(wire
+		(pts
+			(xy 226.06 120.65) (xy 226.06 127)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f5cf6323-b7f4-4cb6-ad6c-317f8b30682b")
 	)
 	(wire
 		(pts
@@ -4786,6 +5181,26 @@
 	)
 	(wire
 		(pts
+			(xy 248.92 120.65) (xy 248.92 127)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fbe2ffa7-1e3f-4605-aadc-a84b908c37c3")
+	)
+	(wire
+		(pts
+			(xy 259.08 127) (xy 261.62 127)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fc6dcd26-cd02-4595-a578-5de6f7ee7efb")
+	)
+	(wire
+		(pts
 			(xy 184.15 106.68) (xy 182.88 106.68)
 		)
 		(stroke
@@ -4806,6 +5221,19 @@
 			(type none)
 		)
 		(uuid a15e7ee3-9565-46cb-861f-a55a5c9a8e0b)
+	)
+	(rectangle
+		(start 211.455 74.93)
+		(end 275.59 160.02)
+		(stroke
+			(width 0)
+			(type dash)
+			(color 0 0 0 1)
+		)
+		(fill
+			(type none)
+		)
+		(uuid c642f0ef-95fd-411d-9e07-4f72f40dbf9e)
 	)
 	(rectangle
 		(start 22.225 74.93)
@@ -5001,6 +5429,49 @@
 		)
 		(uuid "5b23b815-0da0-44a5-9897-f7ff25d7f77a")
 	)
+	(text "EN=RESET, BOOT=bootloader mode\n\nEnable (EN) is the 3.3V regulator's enable pin. It's\npulled up, so connect to ground to disable the 3.3V\nregulator. This means that you can use this pin\nconnected to a pushbutton to restart your ESP32, for\nexample."
+		(exclude_from_sim no)
+		(at 295.275 132.08 0)
+		(effects
+			(font
+				(face "Bahnschrift")
+				(size 1.5 1.5)
+				(italic yes)
+				(color 0 0 0 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "5b418c00-5d6b-4996-92d8-2d98c90b8ead")
+	)
+	(text "ENABLE"
+		(exclude_from_sim no)
+		(at 236.855 114.3 0)
+		(effects
+			(font
+				(face "Bahnschrift")
+				(size 1.5 1.5)
+				(thickness 0.254)
+				(bold yes)
+				(color 0 0 0 1)
+			)
+			(justify right bottom)
+		)
+		(uuid "679cf9f8-7f74-4b10-8910-83709849eef7")
+	)
+	(text "BOOT"
+		(exclude_from_sim no)
+		(at 252.73 114.3 0)
+		(effects
+			(font
+				(face "Bahnschrift")
+				(size 1.5 1.5)
+				(bold yes)
+				(color 0 0 0 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "6f8d01d9-7422-4122-b189-002f1b1f11ed")
+	)
 	(text "USB"
 		(exclude_from_sim no)
 		(at 22.225 19.685 0)
@@ -5016,6 +5487,20 @@
 		)
 		(uuid "6f95915f-5e5a-444a-9c36-6a264c932048")
 	)
+	(text "Buttons for BOOT and ENABLE functions.\n\nIf the device does not support the auto download mode,\nyou need to get into the download mode manually. \nTo do so, press and hold the BOOT button and then press \nthe RESET button once. After that release the BOOT button."
+		(exclude_from_sim no)
+		(at 295.91 111.125 0)
+		(effects
+			(font
+				(face "Bahnschrift")
+				(size 1.5 1.5)
+				(italic yes)
+				(color 0 0 0 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "7f23ee0e-673f-444b-9d29-71e470fb12da")
+	)
 	(text "Status LED2"
 		(exclude_from_sim no)
 		(at 231.14 46.355 0)
@@ -5028,6 +5513,20 @@
 			(justify right bottom)
 		)
 		(uuid "8fcf5002-a94d-478e-8bfb-a1fcf697335a")
+	)
+	(text "PUSH BUTTONS"
+		(exclude_from_sim no)
+		(at 211.455 75.565 0)
+		(effects
+			(font
+				(face "Bahnschrift")
+				(size 5 5)
+				(bold yes)
+				(color 0 0 0 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "91e8ff71-2103-46b8-8871-28ff7c74939b")
 	)
 	(text "ESP32-S3 Datasheet"
 		(exclude_from_sim no)
@@ -5215,6 +5714,30 @@
 			)
 		)
 	)
+	(global_label "TEST PROGRAM 1"
+		(shape input)
+		(at 250.19 143.51 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(face "Bahnschrift")
+				(size 1 1)
+				(color 0 0 0 1)
+			)
+			(justify left)
+		)
+		(uuid "1ca93cd9-2365-488d-bd9e-9a4863783672")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 263.0387 143.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "D-"
 		(shape output)
 		(at 191.77 57.15 0)
@@ -5331,6 +5854,30 @@
 					(size 1.27 1.27)
 				)
 				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "TEST PROGRAM 2"
+		(shape input)
+		(at 250.19 151.13 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(face "Bahnschrift")
+				(size 1 1)
+				(color 0 0 0 1)
+			)
+			(justify left)
+		)
+		(uuid "39e0a03e-56d5-4aac-abb4-392451f64045")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 263.2966 151.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
 				(hide yes)
 			)
 		)
@@ -5619,6 +6166,30 @@
 					(size 1.27 1.27)
 				)
 				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "BOOT"
+		(shape input)
+		(at 266.7 120.65 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(face "Bahnschrift")
+				(size 1 1)
+				(color 0 0 0 1)
+			)
+			(justify left)
+		)
+		(uuid "7ffd63fc-17ad-400f-b126-04ade1081f32")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 272.845 120.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
 				(hide yes)
 			)
 		)
@@ -6103,6 +6674,30 @@
 			)
 		)
 	)
+	(global_label "EN"
+		(shape input)
+		(at 219.71 120.65 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(face "Bahnschrift")
+				(size 1 1)
+				(color 0 0 0 1)
+			)
+			(justify right)
+		)
+		(uuid "eeb9a92a-d4c7-4d1b-9d2a-7e4ca08ef2f5")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 215.4697 120.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "RX"
 		(shape output)
 		(at 184.15 104.14 0)
@@ -6184,7 +6779,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "0300c0ff-ed69-4a61-b6a9-c171158a87e3")
-		(property "Reference" "R17"
+		(property "Reference" "R18"
 			(at 253.365 53.975 90)
 			(effects
 				(font
@@ -6238,7 +6833,79 @@
 		(instances
 			(project "SUMEC_MK_IV"
 				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/7b93d7c5-db1a-415c-92e4-9ebec6cf195f"
-					(reference "R17")
+					(reference "R18")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Switch:SW_Push")
+		(at 240.03 143.51 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "081dd62d-95ff-4fb1-9aef-531d1563da67")
+		(property "Reference" "SW3"
+			(at 240.03 139.065 0)
+			(effects
+				(font
+					(face "Bahnschrift")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "SW_Push"
+			(at 240.03 139.7 0)
+			(effects
+				(font
+					(face "Bahnschrift")
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Button_Switch_SMD:SW_SPST_EVQPE1"
+			(at 240.03 138.43 0)
+			(effects
+				(font
+					(face "Bahnschrift")
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 240.03 138.43 0)
+			(effects
+				(font
+					(face "Bahnschrift")
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 240.03 143.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "d279a57f-701c-4e1f-9893-3d7a9d135228")
+		)
+		(pin "2"
+			(uuid "fd998337-0144-4cd0-98dc-c87bac771965")
+		)
+		(instances
+			(project "SUMEC_MK_IV"
+				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/7b93d7c5-db1a-415c-92e4-9ebec6cf195f"
+					(reference "SW3")
 					(unit 1)
 				)
 			)
@@ -6638,6 +7305,78 @@
 		)
 	)
 	(symbol
+		(lib_id "Switch:SW_Push")
+		(at 240.03 151.13 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "17a95569-3f5b-421f-befd-c28de50f2e0c")
+		(property "Reference" "SW4"
+			(at 240.03 146.685 0)
+			(effects
+				(font
+					(face "Bahnschrift")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "SW_Push"
+			(at 240.03 147.32 0)
+			(effects
+				(font
+					(face "Bahnschrift")
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Button_Switch_SMD:SW_SPST_EVQPE1"
+			(at 240.03 146.05 0)
+			(effects
+				(font
+					(face "Bahnschrift")
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 240.03 146.05 0)
+			(effects
+				(font
+					(face "Bahnschrift")
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 240.03 151.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "bf5e4a55-a6dd-44a1-ab6a-d829bdec5299")
+		)
+		(pin "2"
+			(uuid "5ef78e4d-0b28-468a-8959-b0ff575bc463")
+		)
+		(instances
+			(project "SUMEC_MK_IV"
+				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/7b93d7c5-db1a-415c-92e4-9ebec6cf195f"
+					(reference "SW4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 191.77 52.07 0)
 		(unit 1)
@@ -6706,6 +7445,76 @@
 		)
 	)
 	(symbol
+		(lib_id "power:+3V3")
+		(at 231.14 143.51 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "224b835f-4865-410c-8aa5-ddd0d8422f5f")
+		(property "Reference" "#PWR051"
+			(at 234.95 143.51 0)
+			(effects
+				(font
+					(face "Bahnschrift")
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 227.33 143.51 90)
+			(effects
+				(font
+					(face "Bahnschrift")
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 231.14 143.51 0)
+			(effects
+				(font
+					(face "Bahnschrift")
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 231.14 143.51 0)
+			(effects
+				(font
+					(face "Bahnschrift")
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 231.14 143.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "cc02de30-6a50-4dfd-8ee6-a1500d8158a4")
+		)
+		(instances
+			(project "SUMEC_MK_IV"
+				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/7b93d7c5-db1a-415c-92e4-9ebec6cf195f"
+					(reference "#PWR051")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 261.62 29.21 0)
 		(unit 1)
@@ -6714,7 +7523,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "22bcc77c-fdb5-4c35-af57-95a862b2fa10")
-		(property "Reference" "#PWR051"
+		(property "Reference" "#PWR055"
 			(at 261.62 35.56 0)
 			(effects
 				(font
@@ -6764,7 +7573,7 @@
 		(instances
 			(project "SUMEC_MK_IV"
 				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/7b93d7c5-db1a-415c-92e4-9ebec6cf195f"
-					(reference "#PWR051")
+					(reference "#PWR055")
 					(unit 1)
 				)
 			)
@@ -6779,7 +7588,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "238ce824-2f3d-49ad-ba2b-d5d37c95fcb6")
-		(property "Reference" "R16"
+		(property "Reference" "R17"
 			(at 253.365 43.815 90)
 			(effects
 				(font
@@ -6833,7 +7642,7 @@
 		(instances
 			(project "SUMEC_MK_IV"
 				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/7b93d7c5-db1a-415c-92e4-9ebec6cf195f"
-					(reference "R16")
+					(reference "R17")
 					(unit 1)
 				)
 			)
@@ -6909,6 +7718,76 @@
 	)
 	(symbol
 		(lib_id "power:GND")
+		(at 238.76 129.54 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "31cbbb28-afd3-4502-9822-fc8dddd715fe")
+		(property "Reference" "#PWR053"
+			(at 238.76 135.89 0)
+			(effects
+				(font
+					(face "Bahnschrift")
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 238.76 133.35 0)
+			(effects
+				(font
+					(face "Bahnschrift")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 238.76 129.54 0)
+			(effects
+				(font
+					(face "Bahnschrift")
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 238.76 129.54 0)
+			(effects
+				(font
+					(face "Bahnschrift")
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 238.76 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "99c540fc-9e18-4a49-932f-56208a3f6315")
+		)
+		(instances
+			(project "SUMEC_MK_IV"
+				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/7b93d7c5-db1a-415c-92e4-9ebec6cf195f"
+					(reference "#PWR053")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
 		(at 148.59 44.45 270)
 		(unit 1)
 		(exclude_from_sim no)
@@ -6970,6 +7849,290 @@
 			(project "SUMEC_MK_IV"
 				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/7b93d7c5-db1a-415c-92e4-9ebec6cf195f"
 					(reference "#PWR045")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3V3")
+		(at 226.06 107.95 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "3f0270bd-971d-47c8-9f09-f092e498bc56")
+		(property "Reference" "#PWR050"
+			(at 226.06 111.76 0)
+			(effects
+				(font
+					(face "Bahnschrift")
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 227.965 106.68 0)
+			(effects
+				(font
+					(face "Bahnschrift")
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 226.06 107.95 0)
+			(effects
+				(font
+					(face "Bahnschrift")
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 226.06 107.95 0)
+			(effects
+				(font
+					(face "Bahnschrift")
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 226.06 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "51330151-6064-43cb-afca-5d8708833fc2")
+		)
+		(instances
+			(project "SUMEC_MK_IV"
+				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/7b93d7c5-db1a-415c-92e4-9ebec6cf195f"
+					(reference "#PWR050")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 248.92 129.54 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "44fa4093-0caa-42bc-b4c2-65b10676f7e8")
+		(property "Reference" "#PWR054"
+			(at 248.92 135.89 0)
+			(effects
+				(font
+					(face "Bahnschrift")
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 248.92 133.35 0)
+			(effects
+				(font
+					(face "Bahnschrift")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 248.92 129.54 0)
+			(effects
+				(font
+					(face "Bahnschrift")
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 248.92 129.54 0)
+			(effects
+				(font
+					(face "Bahnschrift")
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 248.92 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "baa8e52f-350f-4131-9c34-4b965ee736a2")
+		)
+		(instances
+			(project "SUMEC_MK_IV"
+				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/7b93d7c5-db1a-415c-92e4-9ebec6cf195f"
+					(reference "#PWR054")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Switch:SW_Push")
+		(at 255.27 120.65 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "512121c7-7a2e-444d-905a-68948973e567")
+		(property "Reference" "SW5"
+			(at 255.27 116.205 0)
+			(effects
+				(font
+					(face "Bahnschrift")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "SW_Push"
+			(at 255.27 116.84 0)
+			(effects
+				(font
+					(face "Bahnschrift")
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Button_Switch_SMD:SW_SPST_EVQPE1"
+			(at 255.27 115.57 0)
+			(effects
+				(font
+					(face "Bahnschrift")
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 255.27 115.57 0)
+			(effects
+				(font
+					(face "Bahnschrift")
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 255.27 120.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "997366b2-1677-481f-bb05-b1cec7ae641e")
+		)
+		(pin "2"
+			(uuid "27811c6f-ca30-41d9-bb26-a69bb136c703")
+		)
+		(instances
+			(project "SUMEC_MK_IV"
+				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/7b93d7c5-db1a-415c-92e4-9ebec6cf195f"
+					(reference "SW5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Switch:SW_Push")
+		(at 232.41 120.65 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "59be6c73-5507-4410-8130-ca9a91e70a12")
+		(property "Reference" "SW2"
+			(at 232.41 116.205 0)
+			(effects
+				(font
+					(face "Bahnschrift")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "SW_Push"
+			(at 232.41 116.84 0)
+			(effects
+				(font
+					(face "Bahnschrift")
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Button_Switch_SMD:SW_SPST_EVQPE1"
+			(at 232.41 115.57 0)
+			(effects
+				(font
+					(face "Bahnschrift")
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://cz.mouser.com/ProductDetail/Panasonic/EVQ-PE104K?qs=wX5mvoJE4NGLiYsCBZAptQ%3D%3D"
+			(at 232.41 115.57 0)
+			(effects
+				(font
+					(face "Bahnschrift")
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 232.41 120.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "36c01c6b-c18b-450f-8c9d-3d054bf8cfd7")
+		)
+		(pin "2"
+			(uuid "26266d6f-fbdc-485c-9238-a9bc9d034a42")
+		)
+		(instances
+			(project "SUMEC_MK_IV"
+				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/7b93d7c5-db1a-415c-92e4-9ebec6cf195f"
+					(reference "SW2")
 					(unit 1)
 				)
 			)
@@ -7053,7 +8216,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "80b06d63-4499-4da7-8c85-341fa4987316")
-		(property "Reference" "#PWR052"
+		(property "Reference" "#PWR056"
 			(at 261.62 44.45 0)
 			(effects
 				(font
@@ -7103,7 +8266,81 @@
 		(instances
 			(project "SUMEC_MK_IV"
 				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/7b93d7c5-db1a-415c-92e4-9ebec6cf195f"
-					(reference "#PWR052")
+					(reference "#PWR056")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 255.27 127 270)
+		(mirror x)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "88de9335-c98e-4207-9cd3-e8b8534c83d2")
+		(property "Reference" "C23"
+			(at 252.095 130.81 90)
+			(effects
+				(font
+					(face "Bahnschrift")
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100nF"
+			(at 255.905 130.81 90)
+			(effects
+				(font
+					(face "Bahnschrift")
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
+			(at 251.46 126.0348 0)
+			(effects
+				(font
+					(face "Bahnschrift")
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 255.27 127 0)
+			(effects
+				(font
+					(face "Bahnschrift")
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 255.27 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "def05489-7b81-4ba9-9510-f7aa99d910a2")
+		)
+		(pin "2"
+			(uuid "581fabde-8f37-4c36-8f3a-5bb90755bae1")
+		)
+		(instances
+			(project "SUMEC_MK_IV"
+				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/7b93d7c5-db1a-415c-92e4-9ebec6cf195f"
+					(reference "C23")
 					(unit 1)
 				)
 			)
@@ -7118,7 +8355,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "89900f1c-80a9-4982-aec4-d20c70b66462")
-		(property "Reference" "R14"
+		(property "Reference" "R15"
 			(at 253.365 24.765 90)
 			(effects
 				(font
@@ -7172,7 +8409,7 @@
 		(instances
 			(project "SUMEC_MK_IV"
 				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/7b93d7c5-db1a-415c-92e4-9ebec6cf195f"
-					(reference "R14")
+					(reference "R15")
 					(unit 1)
 				)
 			)
@@ -7324,7 +8561,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "b5631bc4-9dc8-4321-81c8-f3f66b0cca73")
-		(property "Reference" "#PWR050"
+		(property "Reference" "#PWR052"
 			(at 236.22 29.21 0)
 			(effects
 				(font
@@ -7374,7 +8611,7 @@
 		(instances
 			(project "SUMEC_MK_IV"
 				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/7b93d7c5-db1a-415c-92e4-9ebec6cf195f"
-					(reference "#PWR050")
+					(reference "#PWR052")
 					(unit 1)
 				)
 			)
@@ -7593,7 +8830,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "cfbc57b2-07a1-446c-8c85-e6d2a51ae9a4")
-		(property "Reference" "#PWR053"
+		(property "Reference" "#PWR057"
 			(at 261.62 54.61 0)
 			(effects
 				(font
@@ -7643,7 +8880,80 @@
 		(instances
 			(project "SUMEC_MK_IV"
 				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/7b93d7c5-db1a-415c-92e4-9ebec6cf195f"
-					(reference "#PWR053")
+					(reference "#PWR057")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 232.41 127 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "d49f3243-ad6a-4125-96b6-924f8683f957")
+		(property "Reference" "C22"
+			(at 231.14 130.81 90)
+			(effects
+				(font
+					(face "Bahnschrift")
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100nF"
+			(at 236.22 130.81 90)
+			(effects
+				(font
+					(face "Bahnschrift")
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
+			(at 236.22 126.0348 0)
+			(effects
+				(font
+					(face "Bahnschrift")
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 232.41 127 0)
+			(effects
+				(font
+					(face "Bahnschrift")
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 232.41 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "8f8940e5-61ac-46ba-99f5-c95c5f51e199")
+		)
+		(pin "2"
+			(uuid "4722db54-faa2-4428-beb3-35cd40c3ba22")
+		)
+		(instances
+			(project "SUMEC_MK_IV"
+				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/7b93d7c5-db1a-415c-92e4-9ebec6cf195f"
+					(reference "C22")
 					(unit 1)
 				)
 			)
@@ -7890,7 +9200,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "e5d60132-0069-440a-aa46-acdb0d0e68b8")
-		(property "Reference" "R15"
+		(property "Reference" "R16"
 			(at 253.365 33.655 90)
 			(effects
 				(font
@@ -7944,7 +9254,78 @@
 		(instances
 			(project "SUMEC_MK_IV"
 				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/7b93d7c5-db1a-415c-92e4-9ebec6cf195f"
-					(reference "R15")
+					(reference "R16")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 226.06 113.03 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "ea80e608-4330-4a26-9904-1ebfd059c3e6")
+		(property "Reference" "R14"
+			(at 222.885 111.76 0)
+			(effects
+				(font
+					(face "Bahnschrift")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "10k"
+			(at 222.885 113.665 0)
+			(effects
+				(font
+					(face "Bahnschrift")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+			(at 227.838 113.03 90)
+			(effects
+				(font
+					(face "Bahnschrift")
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 226.06 113.03 0)
+			(effects
+				(font
+					(face "Bahnschrift")
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 226.06 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "cac0b7a4-1d8d-46ab-af15-3bacf8f871c3")
+		)
+		(pin "2"
+			(uuid "d09a2689-531b-45c0-b7d0-048e0f867ed7")
+		)
+		(instances
+			(project "SUMEC_MK_IV"
+				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/7b93d7c5-db1a-415c-92e4-9ebec6cf195f"
+					(reference "R14")
 					(unit 1)
 				)
 			)
@@ -8028,7 +9409,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "f645ae59-7748-4466-9d83-9a5c0b8bf05d")
-		(property "Reference" "#PWR054"
+		(property "Reference" "#PWR058"
 			(at 261.62 64.77 0)
 			(effects
 				(font
@@ -8078,7 +9459,7 @@
 		(instances
 			(project "SUMEC_MK_IV"
 				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/7b93d7c5-db1a-415c-92e4-9ebec6cf195f"
-					(reference "#PWR054")
+					(reference "#PWR058")
 					(unit 1)
 				)
 			)

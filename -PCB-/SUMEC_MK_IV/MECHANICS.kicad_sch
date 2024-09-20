@@ -820,7 +820,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "114ee392-e1a3-46ee-a6f6-c3de3b2d2658")
-		(property "Reference" "#PWR082"
+		(property "Reference" "#PWR086"
 			(at 161.29 92.71 0)
 			(effects
 				(font
@@ -871,7 +871,7 @@
 		(instances
 			(project "SUMEC_MK_IV"
 				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/a907f0f2-2950-481d-8037-7b9f13f2e9c5"
-					(reference "#PWR082")
+					(reference "#PWR086")
 					(unit 1)
 				)
 			)
@@ -1214,7 +1214,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "b0f81543-aeff-479d-ab86-fa1cc9a594ff")
-		(property "Reference" "#PWR081"
+		(property "Reference" "#PWR085"
 			(at 116.84 110.49 0)
 			(effects
 				(font
@@ -1264,7 +1264,7 @@
 		(instances
 			(project "SUMEC_MK_IV"
 				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/a907f0f2-2950-481d-8037-7b9f13f2e9c5"
-					(reference "#PWR081")
+					(reference "#PWR085")
 					(unit 1)
 				)
 			)
