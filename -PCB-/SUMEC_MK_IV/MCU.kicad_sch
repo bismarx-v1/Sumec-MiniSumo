@@ -7023,7 +7023,7 @@
 			(uuid "47f60610-6d7f-4614-9cc0-2db190a58e3d")
 		)
 		(instances
-			(project ""
+			(project "SUMEC_MK_IV"
 				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/7b93d7c5-db1a-415c-92e4-9ebec6cf195f"
 					(reference "U2")
 					(unit 1)
@@ -7572,7 +7572,7 @@
 			(uuid "772ee8b0-0812-4dad-9d7b-d013aef845d2")
 		)
 		(instances
-			(project ""
+			(project "SUMEC_MK_IV"
 				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/7b93d7c5-db1a-415c-92e4-9ebec6cf195f"
 					(reference "F1")
 					(unit 1)

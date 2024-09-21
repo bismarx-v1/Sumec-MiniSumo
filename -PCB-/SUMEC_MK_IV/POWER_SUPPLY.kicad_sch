@@ -6240,19 +6240,6 @@
 		)
 		(uuid "5896813e-56c9-4028-9981-d11bd06d7f5f")
 	)
-	(text "500SSP1S1M2REA - goldplated 5A\n500SSP1S1M2QEA - silverplated 2A, 5A"
-		(exclude_from_sim no)
-		(at 27.305 36.83 0)
-		(effects
-			(font
-				(face "Bahnschrift")
-				(size 1.5 1.5)
-				(color 255 0 0 1)
-			)
-			(justify left)
-		)
-		(uuid "82d8367f-dced-4990-b367-8c7b7071dbf9")
-	)
 	(text "Main PCB slide switch\nGoldplated 5A\nSilverplated 2A, 5A"
 		(exclude_from_sim no)
 		(at 27.305 33.02 0)
@@ -7522,7 +7509,7 @@
 			(uuid "9dbaa0d6-524b-4a46-92ba-d1d47e878f7e")
 		)
 		(instances
-			(project ""
+			(project "SUMEC_MK_IV"
 				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/db21c0bc-8410-4aca-be63-6c1a31675c37"
 					(reference "Q2")
 					(unit 1)
@@ -8595,7 +8582,7 @@
 			(uuid "adc1657a-c053-4cbb-83aa-87983d8e9925")
 		)
 		(instances
-			(project ""
+			(project "SUMEC_MK_IV"
 				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/db21c0bc-8410-4aca-be63-6c1a31675c37"
 					(reference "L1")
 					(unit 1)
@@ -8660,7 +8647,7 @@
 			(uuid "e8f8486c-3d0f-43ff-87a0-42c019223e5f")
 		)
 		(instances
-			(project ""
+			(project "SUMEC_MK_IV"
 				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/db21c0bc-8410-4aca-be63-6c1a31675c37"
 					(reference "#PWR03")
 					(unit 1)
@@ -9875,7 +9862,7 @@
 			(uuid "047b575f-4714-4f7a-a674-0a6cf2ea07b6")
 		)
 		(instances
-			(project ""
+			(project "SUMEC_MK_IV"
 				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/db21c0bc-8410-4aca-be63-6c1a31675c37"
 					(reference "Q1")
 					(unit 1)

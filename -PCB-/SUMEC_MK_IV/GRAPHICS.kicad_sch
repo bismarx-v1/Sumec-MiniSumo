@@ -720,7 +720,7 @@
 			(uuid "ce80cc7f-515a-49b0-bfe1-41047f517926")
 		)
 		(instances
-			(project ""
+			(project "SUMEC_MK_IV"
 				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/ebfdffb9-be38-48cc-bdc4-81d227bad184"
 					(reference "TP5")
 					(unit 1)

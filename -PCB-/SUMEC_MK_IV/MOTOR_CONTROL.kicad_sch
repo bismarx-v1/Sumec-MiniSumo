@@ -6234,7 +6234,7 @@
 			(uuid "8e2b4a2f-516f-4e94-9ff5-4ce0dffe3eca")
 		)
 		(instances
-			(project ""
+			(project "SUMEC_MK_IV"
 				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/7dd11b1d-8415-4d33-9ce7-bf4ef9848927"
 					(reference "IC2")
 					(unit 1)
