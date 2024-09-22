@@ -119,16 +119,16 @@
 		)
 	)
 	(junction
-		(at 152.4 105.41)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "004a67ec-2dff-479a-825e-d424f5b8643f")
-	)
-	(junction
 		(at 144.78 105.41)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "0ab6904e-fdcd-413e-b354-af07aa330368")
+	)
+	(junction
+		(at 152.4 105.41)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "0c0b503a-076d-4921-a79d-7032febd3f80")
 	)
 	(junction
 		(at 156.21 105.41)
@@ -184,7 +184,7 @@
 	)
 	(wire
 		(pts
-			(xy 156.21 102.87) (xy 156.21 105.41)
+			(xy 152.4 102.87) (xy 152.4 105.41)
 		)
 		(stroke
 			(width 0)
@@ -204,7 +204,7 @@
 	)
 	(wire
 		(pts
-			(xy 152.4 105.41) (xy 148.59 105.41)
+			(xy 148.59 105.41) (xy 152.4 105.41)
 		)
 		(stroke
 			(width 0)
@@ -224,17 +224,7 @@
 	)
 	(wire
 		(pts
-			(xy 156.21 105.41) (xy 152.4 105.41)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a5ad500a-287e-408a-b3da-c2d2437a2481")
-	)
-	(wire
-		(pts
-			(xy 152.4 102.87) (xy 152.4 105.41)
+			(xy 160.02 102.87) (xy 160.02 105.41)
 		)
 		(stroke
 			(width 0)
@@ -244,7 +234,7 @@
 	)
 	(wire
 		(pts
-			(xy 160.02 105.41) (xy 160.02 102.87)
+			(xy 156.21 105.41) (xy 156.21 102.87)
 		)
 		(stroke
 			(width 0)
@@ -261,6 +251,16 @@
 			(type default)
 		)
 		(uuid "cbbef181-9f5f-4665-8d00-d8666ac44749")
+	)
+	(wire
+		(pts
+			(xy 152.4 105.41) (xy 156.21 105.41)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e1c4bb10-6777-4620-b8d7-80d70c5d8159")
 	)
 	(wire
 		(pts
@@ -343,7 +343,7 @@
 	)
 	(text "FREEFALL PANEL"
 		(exclude_from_sim no)
-		(at 160.655 97.79 90)
+		(at 156.845 97.79 90)
 		(effects
 			(font
 				(face "Bahnschrift")
@@ -357,7 +357,7 @@
 	)
 	(text "SUMEC LINKTREE"
 		(exclude_from_sim no)
-		(at 156.845 97.79 90)
+		(at 153.035 97.79 90)
 		(effects
 			(font
 				(face "Bahnschrift")
@@ -371,7 +371,7 @@
 	)
 	(text "ME FR"
 		(exclude_from_sim no)
-		(at 153.035 97.79 90)
+		(at 160.655 97.79 90)
 		(effects
 			(font
 				(face "Bahnschrift")
@@ -385,7 +385,7 @@
 	)
 	(symbol
 		(lib_id "Connector:TestPoint")
-		(at 156.21 102.87 0)
+		(at 152.4 102.87 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -394,6 +394,75 @@
 		(fields_autoplaced yes)
 		(uuid "34a138bf-7fcb-4f9e-88bb-87626c36bf53")
 		(property "Reference" "TP9"
+			(at 154.94 98.2979 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 154.94 100.8379 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "sumec_graphic:SUMEC_QR_IMG"
+			(at 157.48 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 157.48 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 152.4 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "5b649e87-7f01-44c5-8b46-0478e7a862dc")
+		)
+		(instances
+			(project "SUMEC_MK_IV"
+				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/ebfdffb9-be38-48cc-bdc4-81d227bad184"
+					(reference "TP9")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 156.21 102.87 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "9870dd72-ee50-4263-9dfc-ed44d6b588e1")
+		(property "Reference" "TP10"
 			(at 158.75 98.2979 0)
 			(effects
 				(font
@@ -413,7 +482,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "sumec_graphic:SUMEC_QR_IMG"
+		(property "Footprint" "sumec_graphic:FREFALL_COMIC_IMG"
 			(at 161.29 102.87 0)
 			(effects
 				(font
@@ -441,12 +510,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "5b649e87-7f01-44c5-8b46-0478e7a862dc")
+			(uuid "d9608ed6-7430-47d5-b900-af8889c1577a")
 		)
 		(instances
 			(project "SUMEC_MK_IV"
 				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/ebfdffb9-be38-48cc-bdc4-81d227bad184"
-					(reference "TP9")
+					(reference "TP10")
 					(unit 1)
 				)
 			)
@@ -461,8 +530,8 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "9870dd72-ee50-4263-9dfc-ed44d6b588e1")
-		(property "Reference" "TP10"
+		(uuid "9a5cfb36-3e10-4bd8-8a2d-57c16ac1b12e")
+		(property "Reference" "TP8"
 			(at 162.56 98.2979 0)
 			(effects
 				(font
@@ -482,7 +551,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "sumec_graphic:FREFALL_COMIC_IMG"
+		(property "Footprint" "sumec_graphic:ME_FR_IMG"
 			(at 165.1 102.87 0)
 			(effects
 				(font
@@ -502,75 +571,6 @@
 		)
 		(property "Description" "test point"
 			(at 160.02 102.87 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "d9608ed6-7430-47d5-b900-af8889c1577a")
-		)
-		(instances
-			(project "SUMEC_MK_IV"
-				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/ebfdffb9-be38-48cc-bdc4-81d227bad184"
-					(reference "TP10")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 152.4 102.87 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "9a5cfb36-3e10-4bd8-8a2d-57c16ac1b12e")
-		(property "Reference" "TP8"
-			(at 154.94 98.2979 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Value" "TestPoint"
-			(at 154.94 100.8379 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "sumec_graphic:ME_FR_IMG"
-			(at 157.48 102.87 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 157.48 102.87 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "test point"
-			(at 152.4 102.87 0)
 			(effects
 				(font
 					(size 1.27 1.27)

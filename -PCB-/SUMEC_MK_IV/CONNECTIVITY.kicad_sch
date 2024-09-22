@@ -11581,7 +11581,7 @@
 				)
 			)
 		)
-		(property "Footprint" "OptoDevice:Vishay_MINICAST-3Pin"
+		(property "Footprint" "sumec_brd:Vishay_TSOP382"
 			(at 233.68 141.605 0)
 			(effects
 				(font
