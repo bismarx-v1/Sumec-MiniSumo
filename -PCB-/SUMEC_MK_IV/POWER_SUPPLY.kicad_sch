@@ -6172,17 +6172,6 @@
 		)
 		(uuid "2422133a-9d98-41b1-ad02-6c75656b4596")
 	)
-	(text "double check the pinout"
-		(exclude_from_sim no)
-		(at 40.005 107.95 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-				(color 255 0 0 1)
-			)
-		)
-		(uuid "2febcc5b-6438-48c8-800e-41e3e78c3c16")
-	)
 	(text "USB POWER SWITCH"
 		(exclude_from_sim no)
 		(at 24.765 74.93 0)
@@ -6241,17 +6230,6 @@
 			(justify left)
 		)
 		(uuid "830cc56e-db92-427b-8bb4-7cb4da90a390")
-	)
-	(text "double check the pinout"
-		(exclude_from_sim no)
-		(at 57.785 60.96 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-				(color 255 0 0 1)
-			)
-		)
-		(uuid "9f8d66bb-d183-403f-bee4-9e4ddcac3616")
 	)
 	(text "STEPDOWN CONVERTER 5V"
 		(exclude_from_sim no)
