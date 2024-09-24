@@ -157,6 +157,12 @@ void loop()
 
     //===========================Normal process===============================
 
+    if(Remote.isStopped()) 
+    {
+        state = 0;
+        Move.stop();
+    }
+
     switch (state)
     {
     case 000:       // INIT 
