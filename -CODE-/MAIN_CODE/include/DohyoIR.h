@@ -58,6 +58,7 @@ void DohyoIR::update() {
                 case 0x07:
                     if ((mCommand & 0xFE) == mDohyoID) {
                         mStart = mCommand & 0x01;
+                        mGotDohyoID = 0;
                     }
                     break;
             }

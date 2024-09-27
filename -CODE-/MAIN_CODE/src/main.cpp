@@ -161,6 +161,7 @@ void loop()
     {
         state = 0;
         Move.stop();
+        LEDRed.blink(1000);
     }
 
     switch (state)
@@ -169,6 +170,7 @@ void loop()
 
         if (Remote.hasDohyoID() && !Remote.isStarted())
         {
+            
             LEDRed.blink(500, 100);
             Tick_Sharp.lastTick = millis();
             Tick_Sharp.tickNumber = 0;
