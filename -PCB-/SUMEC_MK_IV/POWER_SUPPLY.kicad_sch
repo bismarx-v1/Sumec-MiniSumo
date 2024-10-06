@@ -2877,7 +2877,7 @@
 		)
 	)
 	(junction
-		(at 76.2 45.72)
+		(at 81.28 46.99)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "079c47f5-839e-4838-b924-60606f4a1ce0")
@@ -3003,7 +3003,7 @@
 		(uuid "fc6c9d1a-5a24-4faf-845a-42f966aadb06")
 	)
 	(no_connect
-		(at 57.15 50.8)
+		(at 60.96 52.07)
 		(uuid "0866c122-8f40-4403-97bb-61734a0a9d2f")
 	)
 	(wire
@@ -3048,7 +3048,7 @@
 	)
 	(wire
 		(pts
-			(xy 62.23 45.72) (xy 52.07 45.72)
+			(xy 67.31 46.99) (xy 57.15 46.99)
 		)
 		(stroke
 			(width 0)
@@ -3118,7 +3118,7 @@
 	)
 	(wire
 		(pts
-			(xy 69.85 45.72) (xy 76.2 45.72)
+			(xy 74.93 46.99) (xy 81.28 46.99)
 		)
 		(stroke
 			(width 0)
@@ -3248,7 +3248,7 @@
 	)
 	(wire
 		(pts
-			(xy 76.2 45.72) (xy 78.74 45.72)
+			(xy 81.28 46.99) (xy 83.82 46.99)
 		)
 		(stroke
 			(width 0)
@@ -3488,7 +3488,7 @@
 	)
 	(wire
 		(pts
-			(xy 86.36 36.83) (xy 86.36 40.64)
+			(xy 91.44 38.1) (xy 91.44 41.91)
 		)
 		(stroke
 			(width 0)
@@ -3518,7 +3518,7 @@
 	)
 	(wire
 		(pts
-			(xy 76.2 43.18) (xy 76.2 45.72)
+			(xy 81.28 44.45) (xy 81.28 46.99)
 		)
 		(stroke
 			(width 0)
@@ -3568,7 +3568,7 @@
 	)
 	(wire
 		(pts
-			(xy 86.36 54.61) (xy 86.36 50.8)
+			(xy 91.44 55.88) (xy 91.44 52.07)
 		)
 		(stroke
 			(width 0)
@@ -3598,7 +3598,7 @@
 	)
 	(wire
 		(pts
-			(xy 57.15 50.8) (xy 52.07 50.8)
+			(xy 60.96 52.07) (xy 57.15 52.07)
 		)
 		(stroke
 			(width 0)
@@ -3668,7 +3668,7 @@
 	)
 	(wire
 		(pts
-			(xy 76.2 34.29) (xy 76.2 35.56)
+			(xy 81.28 35.56) (xy 81.28 36.83)
 		)
 		(stroke
 			(width 0)
@@ -3678,7 +3678,7 @@
 	)
 	(wire
 		(pts
-			(xy 36.83 48.26) (xy 41.91 48.26)
+			(xy 41.91 49.53) (xy 46.99 49.53)
 		)
 		(stroke
 			(width 0)
@@ -6143,7 +6143,7 @@
 		)
 		(uuid "1c5ebaa3-d371-4b98-ad8a-3646caef62b0")
 	)
-	(text "TPS62133 Step down converter\nInput: 3-17V\nOutput: 5V\nCurrent output: 3A\nSwitching freq.: 2.5MHz\n\nInductor \nInductance: 2.2uH\nMax. current: "
+	(text "TPS62133 Step down converter\nInput: 3-17V\nOutput: 5V\nCurrent output: 3A\nSwitching freq.: 2.5MHz\n\nInductor \nInductance: 2.2uH\nMax. current: 4.7A"
 		(exclude_from_sim no)
 		(at 118.11 47.625 0)
 		(effects
@@ -6172,17 +6172,6 @@
 		)
 		(uuid "2422133a-9d98-41b1-ad02-6c75656b4596")
 	)
-	(text "double check the pinout"
-		(exclude_from_sim no)
-		(at 90.17 88.265 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-				(color 255 0 0 1)
-			)
-		)
-		(uuid "2febcc5b-6438-48c8-800e-41e3e78c3c16")
-	)
 	(text "USB POWER SWITCH"
 		(exclude_from_sim no)
 		(at 24.765 74.93 0)
@@ -6198,22 +6187,9 @@
 		)
 		(uuid "31c97156-b3d4-4019-bf6b-4740ac8cda7d")
 	)
-	(text "LOW Vf - DIODE \nLOW Rds - PMOS"
+	(text "Power switching between \n5V VBUS - USB \nand \n5V Buck converter - BATT"
 		(exclude_from_sim no)
-		(at 27.305 90.17 0)
-		(effects
-			(font
-				(face "Bahnschrift")
-				(size 1.5 1.5)
-				(color 255 0 0 1)
-			)
-			(justify left)
-		)
-		(uuid "4e1dd636-06bc-4d21-b4fd-fcb0564d16d2")
-	)
-	(text "Power switching between \n5V VBUS - USB and \n5V Buck coverter - BATT"
-		(exclude_from_sim no)
-		(at 27.305 86.36 0)
+		(at 27.305 88.265 0)
 		(effects
 			(font
 				(face "Bahnschrift")
@@ -6240,33 +6216,6 @@
 		)
 		(uuid "5896813e-56c9-4028-9981-d11bd06d7f5f")
 	)
-	(text "500SSP1S1M2REA - goldplated 5A\n500SSP1S1M2QEA - silverplated 2A, 5A"
-		(exclude_from_sim no)
-		(at 27.305 36.83 0)
-		(effects
-			(font
-				(face "Bahnschrift")
-				(size 1.5 1.5)
-				(color 255 0 0 1)
-			)
-			(justify left)
-		)
-		(uuid "82d8367f-dced-4990-b367-8c7b7071dbf9")
-	)
-	(text "Main PCB slide switch\nGoldplated 5A\nSilverplated 2A, 5A"
-		(exclude_from_sim no)
-		(at 27.305 33.02 0)
-		(effects
-			(font
-				(face "Bahnschrift")
-				(size 1.5 1.5)
-				(italic yes)
-				(color 0 0 0 1)
-			)
-			(justify left bottom)
-		)
-		(uuid "82eda5cc-9358-44d3-80a2-0e4cba9569df")
-	)
 	(text "STEPDOWN CONVERTER 3.3V"
 		(exclude_from_sim no)
 		(at 116.205 21.59 0)
@@ -6281,17 +6230,6 @@
 			(justify left)
 		)
 		(uuid "830cc56e-db92-427b-8bb4-7cb4da90a390")
-	)
-	(text "double check the pinout\nReverse polarity protection?"
-		(exclude_from_sim no)
-		(at 52.705 59.69 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-				(color 255 0 0 1)
-			)
-		)
-		(uuid "9f8d66bb-d183-403f-bee4-9e4ddcac3616")
 	)
 	(text "STEPDOWN CONVERTER 5V"
 		(exclude_from_sim no)
@@ -6308,6 +6246,34 @@
 		)
 		(uuid "a15ad8a3-768e-4441-bbc7-c546e3343ef4")
 	)
+	(text "Rds On = 22.7 mOhms\nVds = 30 V\nVgs = - 20 V, + 16 V\nVgs th = 2.2 V"
+		(exclude_from_sim no)
+		(at 27.305 100.33 0)
+		(effects
+			(font
+				(face "Bahnschrift")
+				(size 1.5 1.5)
+				(italic yes)
+				(color 0 0 0 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "b97e16bf-f638-4095-ba14-2755b94f795a")
+	)
+	(text "Rds On = 22.7 mOhms\nVds = 30 V\nVgs = - 20 V, + 16 V\nVgs th = 2.2 V"
+		(exclude_from_sim no)
+		(at 27.305 35.56 0)
+		(effects
+			(font
+				(face "Bahnschrift")
+				(size 1.5 1.5)
+				(italic yes)
+				(color 0 0 0 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "cba58ce3-a9c2-41e6-a091-db6ec6e05280")
+	)
 	(text "- 2S/3S LiPo \n- 3.7V Cell voltage (nominal voltage)\n- 4,2V Cell voltage (fully charged)\n- 400mAh (may vary)"
 		(exclude_from_sim no)
 		(at 27.94 141.605 0)
@@ -6322,7 +6288,7 @@
 		)
 		(uuid "cba8278a-e0c4-4b4b-8676-63749c2a6885")
 	)
-	(text "TPS62133 Step down converter\nInput: 3-17V\nOutput: 5V\nCurrent output: 3A\nSwitching freq.: 2.5MHz\n\nInductor \nInductance: 2.2uH\nMax. current: "
+	(text "TPS62133 Step down converter\nInput: 3-17V\nOutput: 5V\nCurrent output: 3A\nSwitching freq.: 2.5MHz\n\nInductor \nInductance: 2.2uH\nMax. current: 3.8A"
 		(exclude_from_sim no)
 		(at 118.11 101.6 0)
 		(effects
@@ -6516,7 +6482,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 36.83 48.26 0)
+		(at 41.91 49.53 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -6524,7 +6490,7 @@
 		(dnp no)
 		(uuid "062d5352-98a8-4189-9c92-62ba9e20c24a")
 		(property "Reference" "#PWR01"
-			(at 36.83 54.61 0)
+			(at 41.91 55.88 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6533,7 +6499,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 36.83 52.07 0)
+			(at 41.91 53.34 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6541,7 +6507,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 36.83 48.26 0)
+			(at 41.91 49.53 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6550,7 +6516,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 36.83 48.26 0)
+			(at 41.91 49.53 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6559,7 +6525,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 36.83 48.26 0)
+			(at 41.91 49.53 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6581,7 +6547,7 @@
 	)
 	(symbol
 		(lib_id "power:+12V")
-		(at 76.2 34.29 0)
+		(at 81.28 35.56 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -6589,7 +6555,7 @@
 		(dnp no)
 		(uuid "0e81eab5-0d89-484e-8c53-1c8014f121f7")
 		(property "Reference" "#PWR05"
-			(at 76.2 38.1 0)
+			(at 81.28 39.37 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6598,7 +6564,7 @@
 			)
 		)
 		(property "Value" "+12V"
-			(at 69.85 32.385 0)
+			(at 74.93 33.655 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6607,7 +6573,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 76.2 34.29 0)
+			(at 81.28 35.56 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6616,7 +6582,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 76.2 34.29 0)
+			(at 81.28 35.56 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6625,7 +6591,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 76.2 34.29 0)
+			(at 81.28 35.56 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7074,7 +7040,7 @@
 		(dnp no)
 		(uuid "2aa85388-da7d-41c2-8597-783935f28d25")
 		(property "Reference" "C4"
-			(at 201.93 45.085 0)
+			(at 201.93 46.355 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7083,7 +7049,7 @@
 			)
 		)
 		(property "Value" "100nF"
-			(at 201.93 46.99 0)
+			(at 200.025 48.26 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7458,79 +7424,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:Q_PMOS_GSD")
-		(at 83.82 45.72 0)
-		(mirror x)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "4759de21-fb8e-4534-9536-820ba1e3a0e2")
-		(property "Reference" "Q2"
-			(at 88.265 46.99 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "Q_PMOS_GSD"
-			(at 88.265 44.45 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
-			(at 88.9 48.26 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 83.82 45.72 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "P-MOSFET transistor, gate/source/drain"
-			(at 83.82 45.72 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "7bfee77d-5c60-4408-8a98-5b16ecd264e2")
-		)
-		(pin "1"
-			(uuid "63200dc5-bd64-4ada-83d1-3a48379253bc")
-		)
-		(pin "3"
-			(uuid "9dbaa0d6-524b-4a46-92ba-d1d47e878f7e")
-		)
-		(instances
-			(project ""
-				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/db21c0bc-8410-4aca-be63-6c1a31675c37"
-					(reference "Q2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:+5V")
 		(at 81.28 101.6 0)
 		(unit 1)
@@ -7795,6 +7688,79 @@
 			(project "SUMEC_MK_IV"
 				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/db21c0bc-8410-4aca-be63-6c1a31675c37"
 					(reference "C7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:Q_PMOS_GSD")
+		(at 88.9 46.99 0)
+		(mirror x)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "5fcb278d-cc70-4cf2-ad75-c1d974239ebd")
+		(property "Reference" "Q2"
+			(at 93.98 45.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Q_PMOS"
+			(at 93.98 47.625 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23-3"
+			(at 93.98 49.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://cz.mouser.com/ProductDetail/Vishay-Semiconductors/SI2393DS-T1-GE3?qs=BJlw7L4Cy7%2FUF13oxTStOQ%3D%3D"
+			(at 88.9 46.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "P-MOSFET transistor, gate/source/drain"
+			(at 88.9 46.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "3"
+			(uuid "186f3e64-cc22-45ac-b047-aee85581a6a6")
+		)
+		(pin "2"
+			(uuid "ceb88403-7546-4a25-96be-1c4a9e90b171")
+		)
+		(pin "1"
+			(uuid "fb674c34-f500-410a-8fd5-9598179debe4")
+		)
+		(instances
+			(project "SUMEC_MK_IV"
+				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/db21c0bc-8410-4aca-be63-6c1a31675c37"
+					(reference "Q2")
 					(unit 1)
 				)
 			)
@@ -8202,7 +8168,7 @@
 	)
 	(symbol
 		(lib_id "power:+12V")
-		(at 86.36 36.83 0)
+		(at 91.44 38.1 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -8210,7 +8176,7 @@
 		(dnp no)
 		(uuid "73399767-2a4c-49da-92fd-0df483eb2ab0")
 		(property "Reference" "#PWR07"
-			(at 86.36 40.64 0)
+			(at 91.44 41.91 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8219,7 +8185,7 @@
 			)
 		)
 		(property "Value" "+12V"
-			(at 86.995 34.925 0)
+			(at 92.075 36.195 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8228,7 +8194,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 86.36 36.83 0)
+			(at 91.44 38.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8237,7 +8203,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 86.36 36.83 0)
+			(at 91.44 38.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8246,7 +8212,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 86.36 36.83 0)
+			(at 91.44 38.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8343,7 +8309,7 @@
 		(dnp no)
 		(uuid "8154d5b6-f869-436d-b7be-b5a56776c698")
 		(property "Reference" "C2"
-			(at 191.77 45.085 0)
+			(at 191.77 46.355 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8352,7 +8318,7 @@
 			)
 		)
 		(property "Value" "22uF"
-			(at 191.77 46.99 0)
+			(at 189.865 48.26 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8595,7 +8561,7 @@
 			(uuid "adc1657a-c053-4cbb-83aa-87983d8e9925")
 		)
 		(instances
-			(project ""
+			(project "SUMEC_MK_IV"
 				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/db21c0bc-8410-4aca-be63-6c1a31675c37"
 					(reference "L1")
 					(unit 1)
@@ -8605,7 +8571,7 @@
 	)
 	(symbol
 		(lib_id "power:GNDPWR")
-		(at 62.23 45.72 0)
+		(at 67.31 46.99 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -8613,7 +8579,7 @@
 		(dnp no)
 		(uuid "96c17973-bff0-45ea-bfea-69febc7913ce")
 		(property "Reference" "#PWR03"
-			(at 62.23 50.8 0)
+			(at 67.31 52.07 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8622,7 +8588,7 @@
 			)
 		)
 		(property "Value" "GNDPWR"
-			(at 66.04 49.53 0)
+			(at 71.12 50.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8630,7 +8596,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 62.23 46.99 0)
+			(at 67.31 48.26 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8639,7 +8605,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 62.23 46.99 0)
+			(at 67.31 48.26 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8648,7 +8614,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GNDPWR\" , global ground"
-			(at 62.23 45.72 0)
+			(at 67.31 46.99 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8660,7 +8626,7 @@
 			(uuid "e8f8486c-3d0f-43ff-87a0-42c019223e5f")
 		)
 		(instances
-			(project ""
+			(project "SUMEC_MK_IV"
 				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/db21c0bc-8410-4aca-be63-6c1a31675c37"
 					(reference "#PWR03")
 					(unit 1)
@@ -9585,7 +9551,7 @@
 	)
 	(symbol
 		(lib_id "Switch:SW_DPDT_x2")
-		(at 46.99 48.26 0)
+		(at 52.07 49.53 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -9593,7 +9559,7 @@
 		(dnp no)
 		(uuid "dc5e8ccd-beb2-45f6-830f-c890cf160696")
 		(property "Reference" "SW1"
-			(at 46.99 53.34 0)
+			(at 52.07 54.61 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9601,7 +9567,7 @@
 			)
 		)
 		(property "Value" "SW_DPDT_x2"
-			(at 46.99 43.18 0)
+			(at 52.07 44.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9610,7 +9576,7 @@
 			)
 		)
 		(property "Footprint" "sumec_brd:Custom_SPDT_2.5_Switch"
-			(at 46.99 48.26 0)
+			(at 52.07 49.53 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9619,7 +9585,7 @@
 			)
 		)
 		(property "Datasheet" "https://cz.mouser.com/ProductDetail/Same-Sky/SLW-116641-5A-S-D?qs=IKkN%2F947nfBZSdW8n5Vqgw%3D%3D"
-			(at 46.99 48.26 0)
+			(at 52.07 49.53 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9628,7 +9594,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 46.99 48.26 0)
+			(at 52.07 49.53 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9875,7 +9841,7 @@
 			(uuid "047b575f-4714-4f7a-a674-0a6cf2ea07b6")
 		)
 		(instances
-			(project ""
+			(project "SUMEC_MK_IV"
 				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/db21c0bc-8410-4aca-be63-6c1a31675c37"
 					(reference "Q1")
 					(unit 1)
@@ -9885,7 +9851,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 86.36 54.61 0)
+		(at 91.44 55.88 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -9894,7 +9860,7 @@
 		(fields_autoplaced yes)
 		(uuid "e651dc14-3b22-493c-9252-0ac629b63185")
 		(property "Reference" "#PWR08"
-			(at 86.36 60.96 0)
+			(at 91.44 62.23 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9903,7 +9869,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 86.36 59.69 0)
+			(at 91.44 60.96 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9912,7 +9878,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 86.36 54.61 0)
+			(at 91.44 55.88 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9921,7 +9887,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 86.36 54.61 0)
+			(at 91.44 55.88 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9930,7 +9896,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 86.36 54.61 0)
+			(at 91.44 55.88 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10019,7 +9985,7 @@
 	)
 	(symbol
 		(lib_id "power:GNDPWR")
-		(at 69.85 45.72 0)
+		(at 74.93 46.99 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -10027,7 +9993,7 @@
 		(dnp no)
 		(uuid "f63c4676-f61e-490a-bb2f-7208dc5ec233")
 		(property "Reference" "#PWR04"
-			(at 69.85 50.8 0)
+			(at 74.93 52.07 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10036,7 +10002,7 @@
 			)
 		)
 		(property "Value" "GNDPWR"
-			(at 73.66 49.53 0)
+			(at 78.74 50.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10045,7 +10011,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 69.85 46.99 0)
+			(at 74.93 48.26 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10054,7 +10020,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 69.85 46.99 0)
+			(at 74.93 48.26 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10063,7 +10029,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GNDPWR\" , global ground"
-			(at 69.85 45.72 0)
+			(at 74.93 46.99 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10287,7 +10253,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 76.2 39.37 0)
+		(at 81.28 40.64 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -10295,7 +10261,7 @@
 		(dnp no)
 		(uuid "fcc81a18-b30c-4e12-a501-30b2b896fd96")
 		(property "Reference" "R2"
-			(at 77.47 38.1 0)
+			(at 82.55 39.37 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10304,7 +10270,7 @@
 			)
 		)
 		(property "Value" "10k"
-			(at 77.47 40.005 0)
+			(at 82.55 41.275 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10313,7 +10279,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
-			(at 74.422 39.37 90)
+			(at 79.502 40.64 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10322,7 +10288,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 76.2 39.37 0)
+			(at 81.28 40.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10331,7 +10297,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 76.2 39.37 0)
+			(at 81.28 40.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)

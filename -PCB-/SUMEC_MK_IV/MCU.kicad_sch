@@ -5306,7 +5306,7 @@
 	)
 	(text "EN=RESET, BOOT=bootloader mode\n\nEnable (EN) is the 3.3V regulator's enable pin. It's\npulled up, so connect to ground to disable the 3.3V\nregulator. This means that you can use this pin\nconnected to a pushbutton to restart your ESP32, for\nexample."
 		(exclude_from_sim no)
-		(at 295.275 132.08 0)
+		(at 293.37 140.335 0)
 		(effects
 			(font
 				(face "Bahnschrift")
@@ -5364,7 +5364,7 @@
 	)
 	(text "Buttons for BOOT and ENABLE functions.\n\nIf the device does not support the auto download mode,\nyou need to get into the download mode manually. \nTo do so, press and hold the BOOT button and then press \nthe RESET button once. After that release the BOOT button."
 		(exclude_from_sim no)
-		(at 295.91 111.125 0)
+		(at 294.005 119.38 0)
 		(effects
 			(font
 				(face "Bahnschrift")
@@ -7023,7 +7023,7 @@
 			(uuid "47f60610-6d7f-4614-9cc0-2db190a58e3d")
 		)
 		(instances
-			(project ""
+			(project "SUMEC_MK_IV"
 				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/7b93d7c5-db1a-415c-92e4-9ebec6cf195f"
 					(reference "U2")
 					(unit 1)
@@ -7537,7 +7537,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Fuse:Fuse_1206_3216Metric_Pad1.42x1.75mm_HandSolder"
+		(property "Footprint" "Fuse:Fuse_0805_2012Metric"
 			(at 99.06 34.29 0)
 			(effects
 				(font
@@ -7547,7 +7547,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" "https://cz.mouser.com/ProductDetail/Littelfuse/0805L020-16YR?qs=HoCaDK9Nz5e9OjGjdp4q0Q%3D%3D"
 			(at 93.98 35.56 0)
 			(effects
 				(font
@@ -7572,7 +7572,7 @@
 			(uuid "772ee8b0-0812-4dad-9d7b-d013aef845d2")
 		)
 		(instances
-			(project ""
+			(project "SUMEC_MK_IV"
 				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/7b93d7c5-db1a-415c-92e4-9ebec6cf195f"
 					(reference "F1")
 					(unit 1)

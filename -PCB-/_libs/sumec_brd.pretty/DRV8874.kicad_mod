@@ -278,7 +278,7 @@
 		(layers "F.Cu" "F.Paste" "F.Mask")
 		(uuid "ec264827-ccca-4fc9-87e6-8240cec62416")
 	)
-	(model "C:/Users/MenMe/GitHub/Sumec-MiniSumo/-PCB-/_libs/sumec_3d/DRV8874.stp"
+	(model "$(KIPRJMOD)/../_libs/sumec_3d/DRV8874.stp"
 		(offset
 			(xyz 0 0 0)
 		)
