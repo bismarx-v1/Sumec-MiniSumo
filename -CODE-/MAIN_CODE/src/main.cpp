@@ -177,12 +177,12 @@ void loop()
         }
 
         // after start comand, running this main code
-        if (Remote.isStarted() && Start(QREleft, QREright, QREback, &Move))
+        if (Remote.isStarted())
         {
             if (Tick_Sharp.tickNumber < 10)                                     // to test whats doing this
             {
                 UDP_SendUdpToAll("======================", 1);
-                state = 230;
+                state = 002;
                 UDP_SendUdpToAll("Start", 1);
                 UDP_SendUdpToAll("state_230", 1);
             }
@@ -195,6 +195,11 @@ void loop()
         
         //nothing - program is stopped
 
+        break;
+    case 002:
+
+        if(Start(QREleft, QREright, QREback, &Move)) state = 230;
+        UDP_SendUdpToAll("state_002->Start_function", 1);
         break;
     case 230: // Turn Right 
 

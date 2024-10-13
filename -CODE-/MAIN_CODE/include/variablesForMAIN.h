@@ -74,7 +74,11 @@ bool Start(bool QRE_L, bool QRE_R, bool QRE_B, Motion *MotorsStart)
 {
     Tick_Start.tickTime = 10;
     LINEstate = 0;
-    uint8_t startState = QRE_L + QRE_R*3 + QRE_B*5;
+
+    uint8_t startState;
+    if(startState < (QRE_L + QRE_R*3 + QRE_B*5)) startState = QRE_L + QRE_R*3 + QRE_B*5;
+    else if(startState != 0);
+    else startState = 0;
 
     Tick_managing(Tick_Start.tickTime, Tick_Start.tickNumber, Tick_Start.lastTick, &Tick_Start.lastTick, &Tick_Start.tickNumber);
     
