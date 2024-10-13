@@ -60,6 +60,13 @@ void loop()
     LEDOrange.update();         //updates the orange led
     Remote.update();
 
+    if(Remote.isStopped()) 
+    {
+        state = 0;
+        Move.stop();
+        LEDRed.blink(1000);
+    }
+
 
     //=========================Writeing value from sensors to variables=============
 
@@ -157,13 +164,6 @@ void loop()
 
     //===========================Normal process===============================
 
-    if(Remote.isStopped()) 
-    {
-        state = 0;
-        Move.stop();
-        LEDRed.blink(1000);
-    }
-
     switch (state)
     {
     case 000:       // INIT 
@@ -177,9 +177,9 @@ void loop()
         }
 
         // after start comand, running this main code
-        if (Remote.isStarted())
+        if (Remote.isStarted() && Start(QREleft, QREright, QREback, &Move))
         {
-            if (Tick_Sharp.tickNumber < 10)
+            if (Tick_Sharp.tickNumber < 10)                                     // to test whats doing this
             {
                 UDP_SendUdpToAll("======================", 1);
                 state = 230;

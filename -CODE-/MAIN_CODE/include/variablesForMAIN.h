@@ -1,3 +1,4 @@
+#include <Motion.h>
 #include <Arduino.h>
 
 //============================= PROGRAM VARIABLES ===============================
@@ -64,3 +65,80 @@ void Tick_managing(int time, uint32_t value, uint32_t last, uint32_t *return_las
 
 TICK Tick_QRE;
 TICK Tick_Sharp;
+TICK Tick_Start;
+
+
+//============================= PROGRAM VARIABLES ===============================
+
+bool Start(bool QRE_L, bool QRE_R, bool QRE_B, Motion *MotorsStart)
+{
+    Tick_Start.tickTime = 10;
+    LINEstate = 0;
+    uint8_t startState = QRE_L + QRE_R*3 + QRE_B*5;
+
+    Tick_managing(Tick_Start.tickTime, Tick_Start.tickNumber, Tick_Start.lastTick, &Tick_Start.lastTick, &Tick_Start.tickNumber);
+    
+    switch (startState)
+    {
+    case 1:
+
+        if(Tick_Start.tickNumber < 15)
+        {
+            MotorsStart->turnRight(1.0);
+        }
+        else if(Tick_Start.tickNumber < 35)
+        {
+            MotorsStart->goForward(1.0);
+        }
+        else
+        {
+            return 1;   
+        }
+        break;
+
+    case 3:
+
+        if(Tick_Start.tickNumber < 15)
+        {
+            MotorsStart->turnLeft(1.0);
+        }
+        else if(Tick_Start.tickNumber < 35)
+        {
+            MotorsStart->goForward(1.0);
+        }
+        else
+        {
+            return 1;   
+        }
+        break;
+
+    case 5:
+
+        if(Tick_Start.tickNumber < 20)
+        {
+            MotorsStart->goForward(1.0);
+        }
+        else
+        {
+            return 1;
+        }
+        break;
+
+    case 4:
+
+        if(Tick_Start.tickNumber < 20)
+        {
+            MotorsStart->goBackward(1.0);
+        }
+        else
+        {
+            return 1;
+        }
+        break;
+
+    default:
+
+        return 1;   //ATANTION
+        break;
+    }
+}
