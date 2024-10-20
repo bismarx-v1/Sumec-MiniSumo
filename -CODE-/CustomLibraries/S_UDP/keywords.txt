@@ -6,25 +6,16 @@
 # Datatypes (KEYWORD1)
 #######################################
 
-UDP	KEYWORD1
+S_UDP	KEYWORD1
 
 #######################################
 # Methods and Functions (KEYWORD2)
 #######################################
 
-init KEYWORD2
-
-# examples
-#begin	KEYWORD2
-#beginTransmission	KEYWORD2
-#endTransmission	KEYWORD2
-#requestFrom	KEYWORD2
-#send	KEYWORD2
-#receive	KEYWORD2
-#onReceive	KEYWORD2
-#onRequest	KEYWORD2
+udpSetup	KEYWORD2
+udpSendToMultiple	KEYWORD2
+updGetOneNewPacket	KEYWORD2
 
 #######################################
 # Constants (LITERAL1)
 #######################################
-

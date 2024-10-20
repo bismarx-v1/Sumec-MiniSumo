@@ -1,8 +1,8 @@
 /**
  * Lib made for sending and receiving UDP packets on the Sumec robot.
  * 
- * Yell at ms. Natani using email simacma22@sps-prosek.cz or ms.natani.sim@gmail.com
- *  - ms. Natani
+ * Yell at ms. Natani using email simacma22@sps-prosek.cz or ms.natani.sim@gmail.com, nya.
+ *  - ms. Natani :3
 */
 
 #ifndef S_DUP_h
