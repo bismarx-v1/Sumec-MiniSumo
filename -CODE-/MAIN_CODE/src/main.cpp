@@ -45,7 +45,7 @@ void setup()
     Tick_QRE.tickTime = 10;         //this replaces delay
     Tick_Sharp.tickTime = 10;       //this replaces delay
 
-    // hardware settings:
+    // hardware settings (Setup's):
     TfL_Setup();
     pinMode(button, INPUT);
     Serial.begin(115200);
@@ -88,7 +88,7 @@ void loop()
     Tick_managing(Tick_QRE.tickTime, Tick_QRE.tickNumber, Tick_QRE.lastTick, &Tick_QRE.lastTick, &Tick_QRE.tickNumber);
     Tick_managing(Tick_Sharp.tickTime, Tick_Sharp.tickNumber, Tick_Sharp.lastTick, &Tick_Sharp.lastTick, &Tick_Sharp.tickNumber);
 
-    //=========================Writeing value from sensors to variables=============
+
 
 
     //==========================Out of line Process==============================
@@ -160,12 +160,9 @@ void loop()
 
     }
 
-    //==========================Out of line Process==============================
     
 
     //===========================Normal process===============================
-
-    Serial.println(state);
 
     switch (state)
     {
@@ -179,18 +176,14 @@ void loop()
             Tick_Sharp.tickNumber = 0;
         }
 
-        // after start comand, running this main code
+        // after start comand, main code will start running
         if (Remote.isStarted())
         {
-            if (Tick_Sharp.tickNumber < 10)                                    // to test whats doing this
-            {
-                UDP_SendUdpToAll("======================", 1);
-                state = 002;
-                Tick_Start.tickNumber = 0;
-                LINEstate = 0;
-                UDP_SendUdpToAll("Start", 1);
-                UDP_SendUdpToAll("state_230", 1);
-            }
+            UDP_SendUdpToAll("======================", 1);
+            state = 002;
+            Tick_Start.tickNumber = 0;
+            LINEstate = 0;
+            UDP_SendUdpToAll("Start", 1);
         }
 
         LINEstate = 0;
@@ -201,14 +194,12 @@ void loop()
         //nothing - program is stopped
 
         break;
-    case 002:
+    case 002:                                                                // Starting
 
-        Serial.println("state_002->Start_function");
         if(Start(QREleft, QREright, QREback, &Move)) state = 230;
-
-        UDP_SendUdpToAll("state_002->Start_function", 1);
+        UDP_SendUdpToAll("state_002->Start_function", 1);        
         break;
-    case 230: // Turn Right 
+    case 230:                                                                // Turn Right 
 
         Move.turnRight(1.0);
         
