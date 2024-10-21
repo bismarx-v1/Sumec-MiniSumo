@@ -73,7 +73,7 @@ TICK Tick_Start;
 
 //============================= PROGRAM VARIABLES ===============================
 
-bool Start(bool QRE_L, bool QRE_R, bool QRE_B, Motion *MotorsStart)
+/*bool Start(bool QRE_L, bool QRE_R, bool QRE_B, Motion *MotorsStart)
 {
     //variables for start function
     bool returningValue;
@@ -163,4 +163,4 @@ bool Start(bool QRE_L, bool QRE_R, bool QRE_B, Motion *MotorsStart)
     }
 
     return returningValue;          
-}
+}*/

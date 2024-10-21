@@ -44,6 +44,7 @@ void setup()
     // logic settings:
     Tick_QRE.tickTime = 10;         //this replaces delay
     Tick_Sharp.tickTime = 10;       //this replaces delay
+    Tick_Start.tickTime = 10;       //this replaces delay
 
     // hardware settings (Setup's):
     TfL_Setup();
@@ -87,7 +88,7 @@ void loop()
     // Writeing value to TICK
     Tick_managing(Tick_QRE.tickTime, Tick_QRE.tickNumber, Tick_QRE.lastTick, &Tick_QRE.lastTick, &Tick_QRE.tickNumber);
     Tick_managing(Tick_Sharp.tickTime, Tick_Sharp.tickNumber, Tick_Sharp.lastTick, &Tick_Sharp.lastTick, &Tick_Sharp.tickNumber);
-
+    Tick_managing(Tick_Start.tickTime, Tick_Start.tickNumber, Tick_Start.lastTick, &Tick_Start.lastTick, &Tick_Start.tickNumber);
 
 
 
@@ -163,6 +164,7 @@ void loop()
     
 
     //===========================Normal process===============================
+    Serial.println(state);
 
     switch (state)
     {
@@ -194,12 +196,91 @@ void loop()
         //nothing - program is stopped
 
         break;
-    case 002:                                                                // Starting
 
-        if(Start(QREleft, QREright, QREback, &Move)) state = 230;
-        UDP_SendUdpToAll("state_002->Start_function", 1);        
+    /*====================================BEGIN OF START FUNCTION====================================*/
+
+    case 002:
+
+        UDP_SendUdpToAll("state_002->Start_function", 1);
+        LINEstate = 0;
+
+        if(back_on_line)                                                                //protect in back on line start
+        {
+            QREleft = 0;
+            QREright = 0;
+        }
+
+        if(startState == 0) startState = QREleft*1 + QREright*3 + back_on_line*5;       //setting startState only in one time
+        
+
+
+        switch (startState)
+        {
+        case 1:                                                                         //Sumec's left side starting on the line
+
+            if(Tick_Start.tickNumber < 30)
+            {
+                Move.turnRight(1.0);
+            }
+            else if(Tick_Start.tickNumber < 55)
+            {
+                Move.goForward(1.0);
+            }
+            else
+            {
+                state = 230;   
+            }
+            break;
+
+        case 3:                                                                         //Sumec's right side starting on the line
+
+            if(Tick_Start.tickNumber < 25)
+            {
+                Move.turnLeft(1.0);
+            }
+            else if(Tick_Start.tickNumber < 45)
+            {
+                Move.goForward(1.0);
+            }
+            else
+            {
+                state = 230;
+            }
+            break;
+
+        case 5:                                                                         //Sumec's back side starting on the line
+
+            if(Tick_Start.tickNumber < 40)
+            {
+                Move.goForward(1.0);
+            }
+            else
+            {
+                state = 230;
+            }
+            break;
+
+        case 4:                                                                         //Sumec's front side starting on the line
+
+            if(Tick_Start.tickNumber < 20)
+            {
+                Move.goBackward(1.0);
+            }
+            else
+            {
+                state = 230;
+            }
+
+        default:                                                                         //Sumec starting inside the ring
+
+            state = 230;   
+            break;
+        }      
         break;
-    case 230:                                                                // Turn Right 
+
+    /*====================================END OF START FUNCTION====================================*/
+
+    case 230:                                                                           // Turn Right 
 
         Move.turnRight(1.0);
         
@@ -221,7 +302,7 @@ void loop()
         }
 
         break;
-    case 260: // Turn Left
+    case 260:                                                                           // Turn Left
 
         Move.turnLeft(1.0);
 
@@ -238,7 +319,7 @@ void loop()
         }
         
         break;
-    case 290: // Go Forward
+    case 290:                                                                           // Go Forward
 
         Move.goForward(1.0);
 
@@ -249,7 +330,7 @@ void loop()
         }
 
         break;
-    case 300: // Sharp 
+    case 300:                                                                           // Sharp 
 
         Tick_Sharp.lastTick = millis();
         Tick_Sharp.tickNumber = 0;
@@ -265,7 +346,7 @@ void loop()
             state = 360;
         }
         break;
-    case 330: // Turn Right diagonaly and Turn Right 
+    case 330:                                                                           // Turn Right diagonaly and Turn Right 
 
         if (Tick_Sharp.tickNumber < 20)
         {
@@ -286,7 +367,7 @@ void loop()
         }
 
         break;
-    case 360: // Turn Left diagonaly and Turn Left 
+    case 360:                                                                           // Turn Left diagonaly and Turn Left 
 
         if (Tick_Sharp.tickNumber < 20)
         {
