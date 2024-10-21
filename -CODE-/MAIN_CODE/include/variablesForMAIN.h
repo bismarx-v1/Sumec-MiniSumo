@@ -4,17 +4,20 @@
 //============================= PROGRAM VARIABLES ===============================
 
 // Logic variables:
-int Range = 20;     // Length senzor range for decision, is enybodey there?
+#define back_on_line 0          //0 = normal state, 1 = Sumec's back starting on line  
 
-uint16_t state = 0;      // variable who decides, what is in progress
+
+int Range = 20;                 // Length senzor range for decision, is enybodey there?
+
+uint16_t state = 0;             // variable who decides, what is in progress
 uint16_t LINEstate = 0;
+uint8_t startState;
 uint16_t saveState;
 
 float rotate_coeficient = 0;    // wariable for rotating, how much is having rotating 
-//bool start = 0;     // this variable determines if the start is in progress 
-bool isStarted = 0;     // variable for starting with button
-bool sharpON_OFF = 1;      // rafinering parameter for side sonzors, Is side sonzor on or off
-bool lunaON_OFF = 1;       // rafinering parameter for Length senzor, Is Length senzor on or off
+bool isStarted = 0;             // variable for starting with button
+bool sharpON_OFF = 1;           // rafinering parameter for side sonzors, Is side sonzor on or off
+bool lunaON_OFF = 1;            // rafinering parameter for Length senzor, Is Length senzor on or off
 bool QRE_left_started = 0;
 
 
@@ -72,77 +75,92 @@ TICK Tick_Start;
 
 bool Start(bool QRE_L, bool QRE_R, bool QRE_B, Motion *MotorsStart)
 {
+    //variables for start function
+    bool returningValue;
     Tick_Start.tickTime = 10;
     LINEstate = 0;
 
-    uint8_t startState;
-    if(startState < (QRE_L + QRE_R*3 + QRE_B*5)) startState = QRE_L + QRE_R*3 + QRE_B*5;
-    else if(startState != 0);
-    else startState = 0;
-
     Tick_managing(Tick_Start.tickTime, Tick_Start.tickNumber, Tick_Start.lastTick, &Tick_Start.lastTick, &Tick_Start.tickNumber);
+
+
+    if(back_on_line)                                                                //protect in back on line start
+    {
+        QRE_L = 0;
+        QRE_R = 0;
+    }
+
+    if(startState == 0) startState = QRE_L*1 + QRE_R*3 + back_on_line*5;            //setting startState only in one time
     
+
+
     switch (startState)
     {
-    case 1:
+    case 1:                                                                         //Sumec's left side starting on the line
 
-        if(Tick_Start.tickNumber < 15)
+        if(Tick_Start.tickNumber < 30)
         {
             MotorsStart->turnRight(1.0);
+            returningValue = 0;
         }
-        else if(Tick_Start.tickNumber < 35)
+        else if(Tick_Start.tickNumber < 55)
         {
             MotorsStart->goForward(1.0);
+            returningValue = 0;
         }
         else
         {
-            return 1;   
+            returningValue = 1;   
         }
         break;
 
-    case 3:
+    case 3:                                                                         //Sumec's right side starting on the line
 
-        if(Tick_Start.tickNumber < 15)
+        if(Tick_Start.tickNumber < 25)
         {
             MotorsStart->turnLeft(1.0);
+            returningValue = 0;
         }
-        else if(Tick_Start.tickNumber < 35)
+        else if(Tick_Start.tickNumber < 45)
         {
             MotorsStart->goForward(1.0);
+            returningValue = 0;
         }
         else
         {
-            return 1;   
+            returningValue = 1;   
         }
         break;
 
-    case 5:
+    case 5:                                                                         //Sumec's back side starting on the line
 
-        if(Tick_Start.tickNumber < 20)
+        if(Tick_Start.tickNumber < 40)
         {
             MotorsStart->goForward(1.0);
+            returningValue = 0;
         }
         else
         {
-            return 1;
+           returningValue = 1;
         }
         break;
 
-    case 4:
+    case 4:                                                                         //Sumec's front side starting on the line
 
         if(Tick_Start.tickNumber < 20)
         {
             MotorsStart->goBackward(1.0);
+            returningValue = 0;
         }
         else
         {
-            return 1;
+            returningValue = 1;
         }
-        break;
 
-    default:
+    default:                                                                         //Sumec starting inside the ring
 
-        return 1;   //ATANTION
+        returningValue = 1;   
         break;
     }
+
+    return returningValue;          
 }

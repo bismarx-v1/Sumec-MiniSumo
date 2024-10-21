@@ -93,11 +93,12 @@ void loop()
 
     //==========================Out of line Process==============================
 
+
     switch (LINEstate)
     {
         case 0:     //QRE
 
-            if((QREleft || QREright || QREback) && Remote.isStarted())
+            if((QREleft || QREright || QREback) && state != 0 && state != 2)
             {
                 UDP_SendUdpToAll("QRE", 1);
                 saveState = state;   //saved last state
@@ -164,6 +165,8 @@ void loop()
 
     //===========================Normal process===============================
 
+    Serial.println(state);
+
     switch (state)
     {
     case 000:       // INIT 
@@ -179,10 +182,12 @@ void loop()
         // after start comand, running this main code
         if (Remote.isStarted())
         {
-            if (Tick_Sharp.tickNumber < 10)                                     // to test whats doing this
+            if (Tick_Sharp.tickNumber < 10)                                    // to test whats doing this
             {
                 UDP_SendUdpToAll("======================", 1);
                 state = 002;
+                Tick_Start.tickNumber = 0;
+                LINEstate = 0;
                 UDP_SendUdpToAll("Start", 1);
                 UDP_SendUdpToAll("state_230", 1);
             }
@@ -198,7 +203,9 @@ void loop()
         break;
     case 002:
 
+        Serial.println("state_002->Start_function");
         if(Start(QREleft, QREright, QREback, &Move)) state = 230;
+
         UDP_SendUdpToAll("state_002->Start_function", 1);
         break;
     case 230: // Turn Right 
