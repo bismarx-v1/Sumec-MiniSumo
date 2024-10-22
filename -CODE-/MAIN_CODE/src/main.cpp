@@ -2,7 +2,7 @@
 /*
 *   Project Name: Sumec
 *   Name: MAIN_CODE
-*   Last change: 6.9.2024
+*   Last change: 22.10.2024
 */
 
 #include <Pins.h>
@@ -44,6 +44,7 @@ void setup()
     // logic settings:
     Tick_QRE.tickTime = 10;         //this replaces delay
     Tick_Sharp.tickTime = 10;       //this replaces delay
+    Tick_Start.tickTime = 10;       //this replaces delay
     Tick_Start.tickTime = 10;       //this replaces delay
 
     // hardware settings (Setup's):
@@ -89,6 +90,7 @@ void loop()
     Tick_managing(Tick_QRE.tickTime, Tick_QRE.tickNumber, Tick_QRE.lastTick, &Tick_QRE.lastTick, &Tick_QRE.tickNumber);
     Tick_managing(Tick_Sharp.tickTime, Tick_Sharp.tickNumber, Tick_Sharp.lastTick, &Tick_Sharp.lastTick, &Tick_Sharp.tickNumber);
     Tick_managing(Tick_Start.tickTime, Tick_Start.tickNumber, Tick_Start.lastTick, &Tick_Start.lastTick, &Tick_Start.tickNumber);
+    Tick_managing(Tick_free.tickTime, Tick_free.tickNumber, Tick_free.lastTick, &Tick_free.lastTick, &Tick_free.tickNumber);
 
 
 
@@ -197,12 +199,12 @@ void loop()
 
         break;
 
-    /*====================================BEGIN OF START FUNCTION====================================*/
+    /*=============BEGIN OF START FUNCTION=============*/
 
     case 002:
 
         UDP_SendUdpToAll("state_002->Start_function", 1);
-        LINEstate = 0;
+        LINEstate = 0;                                                                  //Out of line disabled
 
         if(back_on_line)                                                                //protect in back on line start
         {
@@ -228,7 +230,7 @@ void loop()
             }
             else
             {
-                state = 230;   
+                state = tipe_of_strategy;   
             }
             break;
 
@@ -244,7 +246,7 @@ void loop()
             }
             else
             {
-                state = 230;
+                state = tipe_of_strategy;
             }
             break;
 
@@ -256,7 +258,7 @@ void loop()
             }
             else
             {
-                state = 230;
+                state = tipe_of_strategy;
             }
             break;
 
@@ -268,17 +270,17 @@ void loop()
             }
             else
             {
-                state = 230;
+                state = tipe_of_strategy;
             }
 
         default:                                                                         //Sumec starting inside the ring
 
-            state = 230;   
+            state = tipe_of_strategy;   
             break;
         }      
         break;
 
-    /*====================================END OF START FUNCTION====================================*/
+    /*=============END OF START FUNCTION=============*/
 
     case 230:                                                                           // Turn Right 
 
@@ -327,6 +329,32 @@ void loop()
         {
             UDP_SendUdpToAll("state_230", 1);
             state = 230;
+        }
+
+        break;
+    case 235:
+
+        Move.stop();
+
+        if(LUNAmiddle <= 20) 
+        {
+            state = 265;
+            Tick_free.tickNumber = 0;
+        }
+        if(LUNAmiddle > 20)
+        {
+            state = 230;
+            Range = 12;                                                                 // Atantion Range is changing!
+        }
+        break;
+    case 265:
+
+        Move.goBackward(1.0);
+
+        if(LUNAmiddle > 20 || Tick_free.tickNumber > 30)
+        {
+            state = 230;
+            Range = 12; 
         }
 
         break;
