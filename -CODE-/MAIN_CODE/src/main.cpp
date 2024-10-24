@@ -45,7 +45,7 @@ void setup()
     Tick_QRE.tickTime = 10;         //this replaces delay
     Tick_Sharp.tickTime = 10;       //this replaces delay
     Tick_Start.tickTime = 10;       //this replaces delay
-    Tick_Start.tickTime = 10;       //this replaces delay
+    Tick_free.tickTime = 1;       //this replaces delay
 
     // hardware settings (Setup's):
     TfL_Setup();
@@ -332,32 +332,63 @@ void loop()
         }
 
         break;
-    case 235:
+    /*=============Begin of pasive strategy=============*/
+    case 231:
+
+        if(LUNAmiddle <= 200)
+        {
+            state = 292;
+            Tick_free.tickNumber = 0;
+        }
+        else if(LUNAmiddle > 200 && LUNAmiddle < Range)
+        {
+            state = 293;
+        }
+
+        Move.turnRight(1.0);
+
+        break;
+    case 292:
+
+        if(LUNAmiddle > 20 || Tick_free.tickNumber > 300) state = 293;
+        Move.goBackward(1.0);
+
+        break;
+    case 293:
+
+        if(LUNAmiddle < 120) state = 294;
+        else if(LUNAleft < Range) state = 261;
+        else if(LUNAright < Range) state = 232;
 
         Move.stop();
 
-        if(LUNAmiddle <= 20) 
-        {
-            state = 265;
-            Tick_free.tickNumber = 0;
-        }
-        if(LUNAmiddle > 20)
-        {
-            state = 230;
-            Range = 12;                                                                 // Atantion Range is changing!
-        }
         break;
-    case 265:
+    case 294:
 
-        Move.goBackward(1.0);
+        if(LUNAmiddle > 120) state = 293;
+        else if(LUNAleft < Range) state = 261;
+        else if(LUNAright < Range) state = 232;
 
-        if(LUNAmiddle > 20 || Tick_free.tickNumber > 30)
-        {
-            state = 230;
-            Range = 12; 
-        }
+        Move.goForward(1.0);
 
         break;
+    case 261:
+
+        if(LUNAmiddle > 120) state = 293;
+        else if(LUNAmiddle < 120) state = 294;
+
+        Move.turnLeft(1.0);
+
+        break;
+    case 232:
+
+        if(LUNAmiddle > 120) state = 293;
+        else if(LUNAmiddle < 120) state = 294;
+
+        Move.turnRight(1.0);
+
+        break;
+    /*=============End of pasive strategy=============*/
     case 300:                                                                           // Sharp 
 
         Tick_Sharp.lastTick = millis();
