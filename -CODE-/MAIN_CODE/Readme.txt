@@ -2,9 +2,14 @@ last change: 22.10.2024
 
 
 - Location's:
-	- location of main code is: src
-	- location of header files is: include 
-	- test's program located in test folder 
+	- variables or macro's:
+		- variable who set starting from edge or back of sumec is starting on the line, is located in 			  variablesForMAIN.h.
+		- variable Range who declared distance for confirm oponent detection. This variable located in 			  variablesForMAIN.h.
+
+	- file's:
+		- location of main code is: src
+		- location of header files is: include 
+		- test's program located in test folder 
 
 
 -LED signalization:
