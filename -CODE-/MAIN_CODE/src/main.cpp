@@ -353,7 +353,7 @@ void loop()
     case 292:
 
         if(LUNAmiddle > 20 || Tick_free.tickNumber > 300) state = 293;
-        Move.goBackward(1.0);
+        //Move.goBackward(1.0);
 
         break;
     case 293:
