@@ -337,23 +337,28 @@ void loop()
 
         Move.turnRight(1.0);
 
-        if(LUNAmiddle <= 20)
+        if(LUNAmiddle < 20)
         {
             state = 292;
             Move.stop();
             Tick_free.tickNumber = 0;
         }
-        else if(LUNAmiddle > 20 && LUNAmiddle < 35)
+        /*if(LUNAmiddle >= 12 && LUNAmiddle < 20)
         {
             state = 293;
             Move.stop();
-        }
+        }*/
 
         break;
     case 292:
 
-        if(LUNAmiddle > 20 || Tick_free.tickNumber > 300) state = 293;
-        //Move.goBackward(1.0);
+        Move.goBackward(1.0);
+
+        if(Tick_free.tickNumber < 100)
+        {
+            Move.goBackward(1.0);
+        }
+        else if(LUNAmiddle > 20 || Tick_free.tickNumber > 300) state = 293;
 
         break;
     case 293:
@@ -376,16 +381,16 @@ void loop()
         break;
     case 261:
 
-        if(LUNAmiddle > 12) state = 293;
-        else if(LUNAmiddle < 12) state = 294;
+        if(LUNAmiddle > 6) state = 293;
+        else if(LUNAmiddle < 6) state = 294;
 
         Move.turnLeft(1.0);
 
         break;
     case 232:
 
-        if(LUNAmiddle > 12) state = 293;
-        else if(LUNAmiddle < 12) state = 294;
+        if(LUNAmiddle > 6) state = 293;
+        else if(LUNAmiddle < 6) state = 294;
 
         Move.turnRight(1.0);
 

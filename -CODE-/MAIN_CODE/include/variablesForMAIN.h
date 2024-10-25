@@ -8,7 +8,7 @@
 #define tipe_of_strategy 231 
 
 
-int Range = 20;                 // Length senzor range[cm] for decision, is enybodey there?
+int Range = 30;                 // Length senzor range[cm] for decision, is enybodey there?
 
 uint16_t state = 0;             // variable who decides, what is in progress
 uint16_t LINEstate = 0;
