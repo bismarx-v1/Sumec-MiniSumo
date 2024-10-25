@@ -4,10 +4,11 @@
 //============================= PROGRAM VARIABLES ===============================
 
 // Logic variables:
-#define back_on_line 0          //0 = normal state, 1 = Sumec's back starting on line  
+#define back_on_line 0          //0 = normal state, 1 = Sumec's back starting on line 
+#define tipe_of_strategy 231 
 
 
-int Range = 20;                 // Length senzor range for decision, is enybodey there?
+int Range = 20;                 // Length senzor range[cm] for decision, is enybodey there?
 
 uint16_t state = 0;             // variable who decides, what is in progress
 uint16_t LINEstate = 0;
@@ -69,9 +70,9 @@ void Tick_managing(int time, uint32_t value, uint32_t last, uint32_t *return_las
 TICK Tick_QRE;
 TICK Tick_Sharp;
 TICK Tick_Start;
+TICK Tick_free;
 
 
-//============================= PROGRAM VARIABLES ===============================
 
 /*bool Start(bool QRE_L, bool QRE_R, bool QRE_B, Motion *MotorsStart)
 {

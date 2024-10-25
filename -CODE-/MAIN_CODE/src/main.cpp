@@ -335,17 +335,19 @@ void loop()
     /*=============Begin of pasive strategy=============*/
     case 231:
 
-        if(LUNAmiddle <= 200)
+        Move.turnRight(1.0);
+
+        if(LUNAmiddle <= 20)
         {
             state = 292;
+            Move.stop();
             Tick_free.tickNumber = 0;
         }
-        else if(LUNAmiddle > 200 && LUNAmiddle < Range)
+        else if(LUNAmiddle > 20 && LUNAmiddle < 35)
         {
             state = 293;
+            Move.stop();
         }
-
-        Move.turnRight(1.0);
 
         break;
     case 292:
@@ -356,34 +358,34 @@ void loop()
         break;
     case 293:
 
-        if(LUNAmiddle < 120) state = 294;
-        else if(LUNAleft < Range) state = 261;
-        else if(LUNAright < Range) state = 232;
+        if(LUNAmiddle < 12) state = 294;
+        else if(LUNAleft < Range && LUNAmiddle > Range) state = 261;
+        else if(LUNAright < Range && LUNAmiddle > Range) state = 232;
 
         Move.stop();
 
         break;
     case 294:
 
-        if(LUNAmiddle > 120) state = 293;
-        else if(LUNAleft < Range) state = 261;
-        else if(LUNAright < Range) state = 232;
+        if(LUNAmiddle > 12) state = 293;
+        else if(LUNAleft < Range && LUNAmiddle > Range) state = 261;
+        else if(LUNAright < Range && LUNAmiddle > Range) state = 232;
 
         Move.goForward(1.0);
 
         break;
     case 261:
 
-        if(LUNAmiddle > 120) state = 293;
-        else if(LUNAmiddle < 120) state = 294;
+        if(LUNAmiddle > 12) state = 293;
+        else if(LUNAmiddle < 12) state = 294;
 
         Move.turnLeft(1.0);
 
         break;
     case 232:
 
-        if(LUNAmiddle > 120) state = 293;
-        else if(LUNAmiddle < 120) state = 294;
+        if(LUNAmiddle > 12) state = 293;
+        else if(LUNAmiddle < 12) state = 294;
 
         Move.turnRight(1.0);
 
