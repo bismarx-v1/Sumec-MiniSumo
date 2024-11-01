@@ -335,15 +335,21 @@ void loop()
     /*=============Begin of pasive strategy=============*/
     case 231:
 
-        Move.turnRight(1.0);
+        UDP_SendUdpToAll("tocimDoprava", 1);
 
         if(LUNAmiddle < 20)
         {
+            UDP_SendUdpToAll("vidim->jduDo-292", 1);
             state = 292;
             Move.stop();
             Tick_free.tickNumber = 0;
         }
-        /*if(LUNAmiddle >= 12 && LUNAmiddle < 20)
+        else
+        {
+            Move.turnRight(1.0);
+        }
+
+        /*if(LUNAmiddle >= 20 && LUNAmiddle < 20)
         {
             state = 293;
             Move.stop();
@@ -352,13 +358,14 @@ void loop()
         break;
     case 292:
 
-        Move.goBackward(1.0);
 
         if(Tick_free.tickNumber < 100)
         {
-            Move.goBackward(1.0);
+            UDP_SendUdpToAll("jeduDozadu", 1);
+            Move.stop();
         }
-        else if(LUNAmiddle > 20 || Tick_free.tickNumber > 300) state = 293;
+        else if((LUNAmiddle > 20 && LUNAright > 20 && LUNAleft > 20) || Tick_free.tickNumber > 500) state = 293;
+        else Move.goBackward(1.0);
 
         break;
     case 293:
