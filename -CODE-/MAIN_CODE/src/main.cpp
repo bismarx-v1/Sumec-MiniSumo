@@ -359,7 +359,7 @@ void loop()
     case 292:
 
 
-        if(Tick_free.tickNumber < 100)
+        if(Tick_free.tickNumber < 40)
         {
             UDP_SendUdpToAll("jeduDozadu", 1);
             Move.stop();
@@ -370,7 +370,7 @@ void loop()
         break;
     case 293:
 
-        if(LUNAmiddle < 12) state = 294;
+        if(LUNAmiddle < 12) state = 294;        //try change 12 to Range
         else if(LUNAleft < Range && LUNAmiddle > Range) state = 261;
         else if(LUNAright < Range && LUNAmiddle > Range) state = 232;
 
@@ -379,7 +379,7 @@ void loop()
         break;
     case 294:
 
-        if(LUNAmiddle > 12) state = 293;
+        if(LUNAmiddle > 12) state = 293;        //try change 12 to Range
         else if(LUNAleft < Range && LUNAmiddle > Range) state = 261;
         else if(LUNAright < Range && LUNAmiddle > Range) state = 232;
 
