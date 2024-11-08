@@ -30,6 +30,7 @@ uint8_t QREright;
 uint8_t QREback;
 
 // Value of length sonzors
+uint16_t Lunas[3];
 int LUNAleft;
 int LUNAright;
 int LUNAmiddle;
@@ -73,95 +74,35 @@ TICK Tick_Start;
 TICK Tick_free;
 
 
+// distance changing variables
+#define mesureArrayNumber 6
+#define timeMesuring 20
+#define dividingValue 2
 
-/*bool Start(bool QRE_L, bool QRE_R, bool QRE_B, Motion *MotorsStart)
+
+uint16_t measuredValues[mesureArrayNumber];
+
+
+
+bool Mesuring(int LunaN)
 {
-    //variables for start function
-    bool returningValue;
-    Tick_Start.tickTime = 10;
-    LINEstate = 0;
+    static int risingValues;
+    static long disMe = Tick_free.tickNumber;
+    static int Amesure = 1;
 
-    Tick_managing(Tick_Start.tickTime, Tick_Start.tickNumber, Tick_Start.lastTick, &Tick_Start.lastTick, &Tick_Start.tickNumber);
-
-
-    if(back_on_line)                                                                //protect in back on line start
+    if(((Tick_free.tickNumber - disMe) > Amesure*timeMesuring) && Amesure <= mesureArrayNumber)
     {
-        QRE_L = 0;
-        QRE_R = 0;
+        measuredValues[Amesure-1] = Lunas[LunaN];
+        Amesure++;
     }
 
-    if(startState == 0) startState = QRE_L*1 + QRE_R*3 + back_on_line*5;            //setting startState only in one time
-    
 
-
-    switch (startState)
+    for(int i = 0; i < (mesureArrayNumber-1); i++)
     {
-    case 1:                                                                         //Sumec's left side starting on the line
-
-        if(Tick_Start.tickNumber < 30)
-        {
-            MotorsStart->turnRight(1.0);
-            returningValue = 0;
-        }
-        else if(Tick_Start.tickNumber < 55)
-        {
-            MotorsStart->goForward(1.0);
-            returningValue = 0;
-        }
-        else
-        {
-            returningValue = 1;   
-        }
-        break;
-
-    case 3:                                                                         //Sumec's right side starting on the line
-
-        if(Tick_Start.tickNumber < 25)
-        {
-            MotorsStart->turnLeft(1.0);
-            returningValue = 0;
-        }
-        else if(Tick_Start.tickNumber < 45)
-        {
-            MotorsStart->goForward(1.0);
-            returningValue = 0;
-        }
-        else
-        {
-            returningValue = 1;   
-        }
-        break;
-
-    case 5:                                                                         //Sumec's back side starting on the line
-
-        if(Tick_Start.tickNumber < 40)
-        {
-            MotorsStart->goForward(1.0);
-            returningValue = 0;
-        }
-        else
-        {
-           returningValue = 1;
-        }
-        break;
-
-    case 4:                                                                         //Sumec's front side starting on the line
-
-        if(Tick_Start.tickNumber < 20)
-        {
-            MotorsStart->goBackward(1.0);
-            returningValue = 0;
-        }
-        else
-        {
-            returningValue = 1;
-        }
-
-    default:                                                                         //Sumec starting inside the ring
-
-        returningValue = 1;   
-        break;
+        if(measuredValues[i] < measuredValues[i+1]) risingValues++;
     }
 
-    return returningValue;          
-}*/
+
+    if((mesureArrayNumber/dividingValue) < risingValues) return 1;
+    else return 0;
+}

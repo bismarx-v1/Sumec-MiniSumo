@@ -82,6 +82,10 @@ void loop()
     LUNAright = TfL_Get(TfL_Addr3);
     LUNAmiddle = TfL_Get(TfL_Addr2);
 
+    Lunas[0] = LUNAright; 
+    Lunas[1] = LUNAmiddle;
+    Lunas[2] = LUNAleft;
+
     // side sonzors
     SHARPleft = sharpLeft.get();
     SHARPright = sharpRight.get();
@@ -166,8 +170,8 @@ void loop()
     
 
     //===========================Normal process===============================
-    Serial.println(state);
-
+    Serial.println(Mesuring(1));
+    
     switch (state)
     {
     case 000:       // INIT 
@@ -370,18 +374,19 @@ void loop()
         break;
     case 293:
 
-        if(LUNAmiddle < 12) state = 294;        //try change 12 to Range
-        else if(LUNAleft < Range && LUNAmiddle > Range) state = 261;
-        else if(LUNAright < Range && LUNAmiddle > Range) state = 232;
+        if(LUNAmiddle < 12 || Mesuring(1) == 1) state = 294;        //try change 12 to Range
+        else if((LUNAleft < Range && LUNAmiddle > Range) || Mesuring(3) == 1) state = 261;
+        else if((LUNAright < Range && LUNAmiddle > Range) || Mesuring(0) == 1) state = 232;
 
         Move.stop();
 
         break;
     case 294:
 
+
         if(LUNAmiddle > 12) state = 293;        //try change 12 to Range
-        else if(LUNAleft < Range && LUNAmiddle > Range) state = 261;
-        else if(LUNAright < Range && LUNAmiddle > Range) state = 232;
+        else if((LUNAleft < Range && LUNAmiddle > Range) || Mesuring(3) == 1) state = 261;
+        else if((LUNAright < Range && LUNAmiddle > Range) || Mesuring(0) == 1) state = 232;
 
         Move.goForward(1.0);
 
