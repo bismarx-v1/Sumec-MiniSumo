@@ -5164,7 +5164,7 @@
 	)
 	(text "Status LED3"
 		(exclude_from_sim no)
-		(at 231.14 36.195 0)
+		(at 230.505 56.515 0)
 		(effects
 			(font
 				(face "Bahnschrift")
@@ -5421,7 +5421,7 @@
 	)
 	(text "Status LED1"
 		(exclude_from_sim no)
-		(at 231.14 56.515 0)
+		(at 224.79 38.735 0)
 		(effects
 			(font
 				(face "Bahnschrift")
