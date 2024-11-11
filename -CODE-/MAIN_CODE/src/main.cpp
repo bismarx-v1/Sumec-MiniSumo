@@ -52,7 +52,7 @@ void setup()
     pinMode(button, INPUT);
     Serial.begin(115200);
     LEDRed.blink(1000);
-    UDP_Setup();
+    //UDP_Setup();
 }
 
 void loop()
@@ -107,7 +107,7 @@ void loop()
 
             if((QREleft || QREright || QREback) && state != 0 && state != 2)
             {
-                UDP_SendUdpToAll("QRE", 1);
+                //UDP_SendUdpToAll("QRE", 1);
                 saveState = state;   //saved last state
                 state = 001;
                 LINEstate++;
@@ -162,7 +162,7 @@ void loop()
                 LINEstate = 3;
             }
 
-            UDP_SendUdpToAll("QRE_END", 1);
+            //UDP_SendUdpToAll("QRE_END", 1);
             break;
 
     }
@@ -170,7 +170,7 @@ void loop()
     
 
     //===========================Normal process===============================
-    Serial.println(Mesuring(1));
+    Serial.println(Mesuring(LUNAmiddle));
     
     switch (state)
     {
@@ -187,11 +187,11 @@ void loop()
         // after start comand, main code will start running
         if (Remote.isStarted())
         {
-            UDP_SendUdpToAll("======================", 1);
+            //UDP_SendUdpToAll("======================", 1);
             state = 002;
             Tick_Start.tickNumber = 0;
             LINEstate = 0;
-            UDP_SendUdpToAll("Start", 1);
+            //UDP_SendUdpToAll("Start", 1);
         }
 
         LINEstate = 0;
@@ -207,7 +207,7 @@ void loop()
 
     case 002:
 
-        UDP_SendUdpToAll("state_002->Start_function", 1);
+        //UDP_SendUdpToAll("state_002->Start_function", 1);
         LINEstate = 0;                                                                  //Out of line disabled
 
         if(back_on_line)                                                                //protect in back on line start
@@ -292,18 +292,18 @@ void loop()
         
         if(LUNAleft < Range)
         {
-            UDP_SendUdpToAll("state_260", 1);
+            //UDP_SendUdpToAll("state_260", 1);
             state = 260;
         }
         if(LUNAmiddle < Range)
         {
-            UDP_SendUdpToAll("state_290", 1);
+            //UDP_SendUdpToAll("state_290", 1);
             state = 290;
         }
 
         if(SHARPleft || SHARPright)
         {
-            UDP_SendUdpToAll("state_300", 1);
+            //UDP_SendUdpToAll("state_300", 1);
             state = 300;
         }
 
@@ -314,13 +314,13 @@ void loop()
 
         if(LUNAleft > Range) 
         {   
-            UDP_SendUdpToAll("state_230", 1);
+            //UDP_SendUdpToAll("state_230", 1);
             state = 230;
         }
 
         if(LUNAmiddle < Range)
         {
-            UDP_SendUdpToAll("state_290", 1);
+            //UDP_SendUdpToAll("state_290", 1);
             state = 290;
         }
         
@@ -331,7 +331,7 @@ void loop()
 
         if(LUNAmiddle > Range)    
         {
-            UDP_SendUdpToAll("state_230", 1);
+            //UDP_SendUdpToAll("state_230", 1);
             state = 230;
         }
 
@@ -339,11 +339,11 @@ void loop()
     /*=============Begin of pasive strategy=============*/
     case 231:
 
-        UDP_SendUdpToAll("tocimDoprava", 1);
+        //UDP_SendUdpToAll("tocimDoprava", 1);
 
         if(LUNAmiddle < 20)
         {
-            UDP_SendUdpToAll("vidim->jduDo-292", 1);
+            //UDP_SendUdpToAll("vidim->jduDo-292", 1);
             state = 292;
             Move.stop();
             Tick_free.tickNumber = 0;
@@ -365,7 +365,7 @@ void loop()
 
         if(Tick_free.tickNumber < 40)
         {
-            UDP_SendUdpToAll("jeduDozadu", 1);
+            //UDP_SendUdpToAll("jeduDozadu", 1);
             Move.stop();
         }
         else if((LUNAmiddle > 20 && LUNAright > 20 && LUNAleft > 20) || Tick_free.tickNumber > 500) state = 293;
@@ -374,9 +374,11 @@ void loop()
         break;
     case 293:
 
-        if(LUNAmiddle < 12 || Mesuring(1) == 1) state = 294;        //try change 12 to Range
-        else if((LUNAleft < Range && LUNAmiddle > Range) || Mesuring(3) == 1) state = 261;
-        else if((LUNAright < Range && LUNAmiddle > Range) || Mesuring(0) == 1) state = 232;
+        //Serial.println(Mesuring(1));
+
+        if(LUNAmiddle < 12 || Mesuring(LUNAmiddle) == 1) state = 294;        //try change 12 to Range
+        else if((LUNAleft < Range && LUNAmiddle > Range) || Mesuring(LUNAmiddle) == 1) state = 261;
+        else if((LUNAright < Range && LUNAmiddle > Range) || Mesuring(LUNAmiddle) == 1) state = 232;
 
         Move.stop();
 
@@ -385,8 +387,8 @@ void loop()
 
 
         if(LUNAmiddle > 12) state = 293;        //try change 12 to Range
-        else if((LUNAleft < Range && LUNAmiddle > Range) || Mesuring(3) == 1) state = 261;
-        else if((LUNAright < Range && LUNAmiddle > Range) || Mesuring(0) == 1) state = 232;
+        else if((LUNAleft < Range && LUNAmiddle > Range) || Mesuring(LUNAmiddle) == 1) state = 261;
+        else if((LUNAright < Range && LUNAmiddle > Range) || Mesuring(LUNAmiddle) == 1) state = 232;
 
         Move.goForward(1.0);
 
@@ -415,12 +417,12 @@ void loop()
 
         if(SHARPleft)
         {
-            UDP_SendUdpToAll("state_330", 1);
+            //UDP_SendUdpToAll("state_330", 1);
             state = 330;
         }
         else if(SHARPright)
         {
-            UDP_SendUdpToAll("state_360", 1);
+            //UDP_SendUdpToAll("state_360", 1);
             state = 360;
         }
         break;
@@ -440,7 +442,7 @@ void loop()
         }
         else
         {
-            UDP_SendUdpToAll("state_230", 1);
+            //UDP_SendUdpToAll("state_230", 1);
             state = 230; // Sharp - End
         }
 
@@ -461,7 +463,7 @@ void loop()
         }
         else
         {
-            UDP_SendUdpToAll("state_230", 1);
+            //UDP_SendUdpToAll("state_230", 1);
             state = 230; // Sharp - End
         }
         

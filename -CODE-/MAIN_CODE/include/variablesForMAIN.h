@@ -30,7 +30,7 @@ uint8_t QREright;
 uint8_t QREback;
 
 // Value of length sonzors
-uint16_t Lunas[3];
+long Lunas[3] = {0, 1, 2};
 int LUNAleft;
 int LUNAright;
 int LUNAmiddle;
@@ -75,34 +75,40 @@ TICK Tick_free;
 
 
 // distance changing variables
-#define mesureArrayNumber 6
-#define timeMesuring 20
+#define mesureArrayNumber 10
+#define timeMesuring 100
 #define dividingValue 2
+#define deviation 2 //[cm]
+
+long measuredValues[mesureArrayNumber];
+unsigned long disMe = millis();
+int Amesure = 1;
+int risingValues;
 
 
-uint16_t measuredValues[mesureArrayNumber];
-
-
-
-bool Mesuring(int LunaN)
+bool Mesuring(int distanc)
 {
-    static int risingValues;
-    static long disMe = Tick_free.tickNumber;
-    static int Amesure = 1;
 
-    if(((Tick_free.tickNumber - disMe) > Amesure*timeMesuring) && Amesure <= mesureArrayNumber)
+
+    if(((millis() - disMe) > timeMesuring) && (Amesure % (mesureArrayNumber + 1)) <= mesureArrayNumber)
     {
-        measuredValues[Amesure-1] = Lunas[LunaN];
+        //Serial.println(Amesure % mesureArrayNumber);
+        Serial.print(distanc);
+        Serial.print(" ");
+
+        measuredValues[(Amesure % mesureArrayNumber)-1] = distanc;
         Amesure++;
+      	disMe = Tick_free.tickNumber;
+      	
     }
+    
 
-
-    for(int i = 0; i < (mesureArrayNumber-1); i++)
+    for(int i = 0; i < (mesureArrayNumber-2); i++)
     {
-        if(measuredValues[i] < measuredValues[i+1]) risingValues++;
+        if((measuredValues[i] + deviation) < (measuredValues[i+1] - deviation)) risingValues++;
     }
 
-
+    
     if((mesureArrayNumber/dividingValue) < risingValues) return 1;
     else return 0;
 }
