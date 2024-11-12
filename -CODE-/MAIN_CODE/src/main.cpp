@@ -170,7 +170,8 @@ void loop()
     
 
     //===========================Normal process===============================
-    Serial.println(Mesuring(LUNAmiddle));
+    //Serial.println(Mesuring(LUNAmiddle));
+    if(Mesuring(LUNAmiddle) == 1) Serial.println("===================================================");
     
     switch (state)
     {

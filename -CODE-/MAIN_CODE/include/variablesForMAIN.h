@@ -77,8 +77,8 @@ TICK Tick_free;
 // distance changing variables
 #define mesureArrayNumber 10
 #define timeMesuring 100
-#define dividingValue 2
-#define deviation 2 //[cm]
+#define dividingValue 5
+#define deviation 0 //[cm]
 
 long measuredValues[mesureArrayNumber];
 unsigned long disMe = millis();
@@ -93,8 +93,8 @@ bool Mesuring(int distanc)
     if(((millis() - disMe) > timeMesuring) && (Amesure % (mesureArrayNumber + 1)) <= mesureArrayNumber)
     {
         //Serial.println(Amesure % mesureArrayNumber);
-        Serial.print(distanc);
-        Serial.print(" ");
+        //Serial.print(distanc);
+        //Serial.print(" ");
 
         measuredValues[(Amesure % mesureArrayNumber)-1] = distanc;
         Amesure++;
@@ -102,13 +102,25 @@ bool Mesuring(int distanc)
       	
     }
     
-
-    for(int i = 0; i < (mesureArrayNumber-2); i++)
+    if((Amesure % (mesureArrayNumber + 1)) > 8)             //must be edited
     {
-        if((measuredValues[i] + deviation) < (measuredValues[i+1] - deviation)) risingValues++;
+
+
+        for(int i = 0; i < (mesureArrayNumber-2); i++)
+        {
+            if((measuredValues[i] + deviation) < (measuredValues[i+1] - deviation)) risingValues++;
+        }
+
+        if(risingValues > mesureArrayNumber) risingValues = 0;
     }
+    //Serial.print(risingValues);
+    //Serial.println(" ");
 
     
     if((mesureArrayNumber/dividingValue) < risingValues) return 1;
-    else return 0;
+    else
+    {
+        risingValues = 0;
+        return 0;
+    } 
 }
