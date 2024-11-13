@@ -8,7 +8,7 @@
 #define tipe_of_strategy 231 
 
 
-int Range = 30;                 // Length senzor range[cm] for decision, is enybodey there?
+int Range = 15;                 // Length senzor range[cm] for decision, is enybodey there?
 
 uint16_t state = 0;             // variable who decides, what is in progress
 uint16_t LINEstate = 0;
@@ -76,8 +76,8 @@ TICK Tick_free;
 
 // distance changing variables
 #define mesureArrayNumber 10
-#define timeMesuring 100
-#define dividingValue 5
+#define timeMesuring 70
+#define dividingValue 2
 #define deviation 0 //[cm]
 
 long measuredValues[mesureArrayNumber];
@@ -92,32 +92,32 @@ bool Mesuring(int distanc)
 
     if(((millis() - disMe) > timeMesuring) && (Amesure % (mesureArrayNumber + 1)) <= mesureArrayNumber)
     {
-        //Serial.println(Amesure % mesureArrayNumber);
-        //Serial.print(distanc);
+        //Serial.print(millis());
         //Serial.print(" ");
 
         measuredValues[(Amesure % mesureArrayNumber)-1] = distanc;
         Amesure++;
-      	disMe = Tick_free.tickNumber;
+      	disMe = millis();
       	
     }
     
-    if((Amesure % (mesureArrayNumber + 1)) > 8)             //must be edited
+    if((Amesure % (mesureArrayNumber + 1)) > (mesureArrayNumber - 2))             //must be edited
     {
-
-
-        for(int i = 0; i < (mesureArrayNumber-2); i++)
+        for(int i = 0; i < (mesureArrayNumber - 2); i++)
         {
             if((measuredValues[i] + deviation) < (measuredValues[i+1] - deviation)) risingValues++;
+            Serial.print(measuredValues[i]);
+            Serial.print(" ");
         }
 
         if(risingValues > mesureArrayNumber) risingValues = 0;
+        
+        //Serial.print(millis());
+        //Serial.print(" ");
     }
-    //Serial.print(risingValues);
-    //Serial.println(" ");
 
     
-    if((mesureArrayNumber/dividingValue) < risingValues) return 1;
+    if((mesureArrayNumber/dividingValue) <= risingValues) return 1;
     else
     {
         risingValues = 0;

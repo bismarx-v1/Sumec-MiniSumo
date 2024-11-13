@@ -170,8 +170,11 @@ void loop()
     
 
     //===========================Normal process===============================
-    //Serial.println(Mesuring(LUNAmiddle));
-    if(Mesuring(LUNAmiddle) == 1) Serial.println("===================================================");
+
+    //Serial.print(LUNAmiddle);
+    //Serial.print(" ");
+    Serial.println(Mesuring(LUNAmiddle));
+    
     
     switch (state)
     {
@@ -342,7 +345,7 @@ void loop()
 
         //UDP_SendUdpToAll("tocimDoprava", 1);
 
-        if(LUNAmiddle < 20)
+        if(LUNAmiddle < Range)
         {
             //UDP_SendUdpToAll("vidim->jduDo-292", 1);
             state = 292;
@@ -369,7 +372,7 @@ void loop()
             //UDP_SendUdpToAll("jeduDozadu", 1);
             Move.stop();
         }
-        else if((LUNAmiddle > 20 && LUNAright > 20 && LUNAleft > 20) || Tick_free.tickNumber > 500) state = 293;
+        else if((LUNAmiddle > Range && LUNAright > Range && LUNAleft > Range) || Tick_free.tickNumber > 500) state = 293;
         else Move.goBackward(1.0);
 
         break;
@@ -378,8 +381,8 @@ void loop()
         //Serial.println(Mesuring(1));
 
         if(LUNAmiddle < 12 || Mesuring(LUNAmiddle) == 1) state = 294;        //try change 12 to Range
-        else if((LUNAleft < Range && LUNAmiddle > Range) || Mesuring(LUNAmiddle) == 1) state = 261;
-        else if((LUNAright < Range && LUNAmiddle > Range) || Mesuring(LUNAmiddle) == 1) state = 232;
+        else if((LUNAleft < Range && LUNAmiddle > Range) || Mesuring(LUNAleft) == 1) state = 261;
+        else if((LUNAright < Range && LUNAmiddle > Range) || Mesuring(LUNAright) == 1) state = 232;
 
         Move.stop();
 
@@ -387,9 +390,9 @@ void loop()
     case 294:
 
 
-        if(LUNAmiddle > 12) state = 293;        //try change 12 to Range
-        else if((LUNAleft < Range && LUNAmiddle > Range) || Mesuring(LUNAmiddle) == 1) state = 261;
-        else if((LUNAright < Range && LUNAmiddle > Range) || Mesuring(LUNAmiddle) == 1) state = 232;
+        if((LUNAmiddle > 12) && Mesuring(LUNAmiddle) != 1) state = 293;        //try change 12 to Range
+        else if((LUNAleft < Range && LUNAmiddle > Range) /*|| Mesuring(LUNAleft) == 1*/) state = 261;
+        else if((LUNAright < Range && LUNAmiddle > Range) /*|| Mesuring(LUNAright) == 1*/) state = 232;
 
         Move.goForward(1.0);
 
