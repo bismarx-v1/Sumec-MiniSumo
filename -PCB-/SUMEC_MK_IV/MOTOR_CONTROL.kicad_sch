@@ -4881,6 +4881,16 @@
 		)
 		(uuid "3537d544-4e3b-4f68-9211-aa2e5fa5ae6d")
 	)
+	(text "EN-IN1"
+		(exclude_from_sim no)
+		(at 146.05 99.695 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "540ae6ad-b417-407a-bb08-4857a4838cba")
+	)
 	(text "DRV8874 - Motor driver, H-Bridge\n\nRecommended Operating Conditions\nVM = 4.5V - 37V	      VM\nVIN = 0V - 5v			I/PMODE, nSlEEP, EN/IN1, PH/IN2\nfPWM = 0Hz - 100kHz	EN/IN1, PH/IN2\nVref = 0V - 3.6V 		VREF\n\nBlock Diagram:"
 		(exclude_from_sim no)
 		(at 50.165 68.58 0)
@@ -4952,6 +4962,16 @@
 			)
 		)
 		(uuid "ec3b8eca-7862-4b01-b44f-dec942428873")
+	)
+	(text "PH-IN2\n"
+		(exclude_from_sim no)
+		(at 146.05 102.235 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "ff546cc3-87c3-47f4-9e54-d0853b727b45")
 	)
 	(global_label "M1B"
 		(shape input)
