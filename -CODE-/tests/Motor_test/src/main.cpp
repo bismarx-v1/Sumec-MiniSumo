@@ -93,45 +93,46 @@ void Motor::setSpeed(float speed) {
 //====================================CLASS=====================================================
 
 
-Motor MotorLeft(PIN_MOTOR_LEFT_NSLEEP,
-                PIN_MOTOR_LEFT_ENABLE,
-                PIN_MOTOR_LEFT_PHASE,
-                MOTOR_LEFT_CHANNEL);
-Motor MotorRight(PIN_MOTOR_RIGHT_NSLEEP,
-                 PIN_MOTOR_RIGHT_ENABLE,
-                 PIN_MOTOR_RIGHT_PHASE,
-                 MOTOR_RIGHT_CHANNEL);
+#define PIN_MOTOR_LEFT_NSLEEP 26
+#define PIN_MOTOR_LEFT_ENABLE 25
+#define PIN_MOTOR_LEFT_PHASE 27
+#define MOTOR_LEFT_CHANNEL 1
 
+Motor MotorLeft(PIN_MOTOR_LEFT_NSLEEP, PIN_MOTOR_LEFT_ENABLE, PIN_MOTOR_LEFT_PHASE, MOTOR_LEFT_CHANNEL);
 
-void setup() 
-{
+//#define PIN_MOTOR_RIGHT_NSLEEP 
+//#define PIN_MOTOR_RIGHT_ENABLE 
+//#define PIN_MOTOR_RIGHT_PHASE 
+//#define MOTOR_RIGHT_CHANNEL 
 
+//Motor MotorRight(PIN_MOTOR_RIGHT_NSLEEP, PIN_MOTOR_RIGHT_ENABLE, PIN_MOTOR_RIGHT_PHASE, MOTOR_RIGHT_CHANNEL);
+
+void setup() {
 }
 
-void loop() 
-{
-  MotorLeft.goForward();
-    MotorLeft.setSpeed(0.5);
-    MotorRight.goBackward();
-    MotorRight.setSpeed(0.5);
+void loop() {
+	MotorLeft.goForward();
+	MotorLeft.setSpeed(0.5);
+	//MotorRight.goBackward();
+	//MotorRight.setSpeed(0.5);
 
-    delay(2000);
+	delay(2000);
 
-    MotorLeft.stop();
-    MotorRight.stop();
+	MotorLeft.stop();
+	//MotorRight.stop();
 
-    delay(2000);
+	delay(2000);
 
-    MotorLeft.goBackward();
-    MotorLeft.setSpeed(0.5);
-    MotorRight.goForward();
-    MotorRight.setSpeed(0.5);
+	MotorLeft.goBackward();
+	MotorLeft.setSpeed(0.5);
+	//MotorRight.goForward();
+	//MotorRight.setSpeed(0.5);
 
-    delay(2000);
+	delay(2000);
 
-    MotorLeft.stop();
-    MotorRight.stop();
+	MotorLeft.stop();
+	//MotorRight.stop();
 
-    delay(2000);
+	delay(2000);
 }
 
