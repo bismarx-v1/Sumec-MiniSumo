@@ -1,6 +1,4 @@
-#include <Arduino.h>
-
-
+#include <Arduino.h> 
 
 //====================================CLASS=====================================================
 
@@ -23,6 +21,15 @@
 
 #define PWM_RESOLUTION	8
 #define PWM_FREQUENCY	5000
+
+int PIN_MOTOR_LEFT_NSLEEP;
+int PIN_MOTOR_LEFT_ENABLE;
+int PIN_MOTOR_LEFT_PHASE;
+int MOTOR_LEFT_CHANNEL;
+int PIN_MOTOR_RIGHT_NSLEEP;
+int PIN_MOTOR_RIGHT_ENABLE;
+int PIN_MOTOR_RIGHT_PHASE;
+int MOTOR_RIGHT_CHANNEL;
 
 class Motor {
 
