@@ -51,7 +51,6 @@ void setup()
     TfL_Setup();
     pinMode(button, INPUT);
     Serial.begin(115200);
-    LEDRed.blink(1000);
     //UDP_Setup();
 }
 
@@ -72,6 +71,9 @@ void loop()
 
     //=========================Writeing value from sensors to variables=============
 
+    // Button
+    bootonOld = digitalRead(button);
+
     // Line sonzors
     QREleft = qreLeft.get();
     QREright = qreRight.get();
@@ -82,9 +84,6 @@ void loop()
     LUNAright = TfL_Get(TfL_Addr3);
     LUNAmiddle = TfL_Get(TfL_Addr2);
 
-    Lunas[0] = LUNAright; 
-    Lunas[1] = LUNAmiddle;
-    Lunas[2] = LUNAleft;
 
     // side sonzors
     SHARPleft = sharpLeft.get();
@@ -171,19 +170,36 @@ void loop()
 
     //===========================Normal process===============================
 
-    //Serial.print(LUNAmiddle);
-    //Serial.print(" ");
-    Serial.println(Mesuring(LUNAmiddle));
-    
+    Serial.print(LUNAleft);
+    Serial.print(" ");
+    Serial.print(LUNAmiddle);
+    Serial.print(" ");
+    Serial.println(LUNAright);
     
     switch (state)
     {
-    case 000:       // INIT 
+    case 000:       // INIT
+
+        if(bootonOld < digitalRead(button)) count++;
+
+        if(count%2 == 0)
+        {
+            LEDRed.blink(1000);
+            LEDOrange.setOff();
+            tipe_of_strategy = 230;
+        }
+        else
+        {
+            LEDOrange.blink(1000);
+            LEDRed.setOff();
+            tipe_of_strategy = 231;
+        }
 
         if (Remote.hasDohyoID() && !Remote.isStarted())
         {
-            
-            LEDRed.blink(500, 100);
+            if(count%2 == 0) LEDRed.blink(500, 100);
+            else LEDOrange.blink(500, 100);
+
             Tick_Sharp.lastTick = millis();
             Tick_Sharp.tickNumber = 0;
         }
@@ -381,8 +397,8 @@ void loop()
         //Serial.println(Mesuring(1));
 
         if(LUNAmiddle < 12 || Mesuring(LUNAmiddle) == 1) state = 294;        //try change 12 to Range
-        else if((LUNAleft < Range && LUNAmiddle > Range) || Mesuring(LUNAleft) == 1) state = 261;
-        else if((LUNAright < Range && LUNAmiddle > Range) || Mesuring(LUNAright) == 1) state = 232;
+        else if((LUNAleft < Range && LUNAmiddle > Range)/* || Mesuring(LUNAleft) == 1*/) state = 261;
+        else if((LUNAright < Range && LUNAmiddle > Range)/* || Mesuring(LUNAright) == 1*/) state = 232;
 
         Move.stop();
 

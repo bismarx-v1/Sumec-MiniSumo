@@ -4,12 +4,12 @@
 //============================= PROGRAM VARIABLES ===============================
 
 // Logic variables:
-#define back_on_line 0          //0 = normal state, 1 = Sumec's back starting on line 
-#define tipe_of_strategy 231 
+#define back_on_line 0          //0 = normal state, 1 = Sumec's back starting on line  
 
 
 int Range = 15;                 // Length senzor range[cm] for decision, is enybodey there?
 
+int tipe_of_strategy = 230;
 uint16_t state = 0;             // variable who decides, what is in progress
 uint16_t LINEstate = 0;
 uint8_t startState;
@@ -30,7 +30,6 @@ uint8_t QREright;
 uint8_t QREback;
 
 // Value of length sonzors
-long Lunas[3] = {0, 1, 2};
 int LUNAleft;
 int LUNAright;
 int LUNAmiddle;
@@ -40,7 +39,8 @@ bool SHARPleft;
 bool SHARPright;
 
 // Start time
-int StartTime;
+bool bootonOld;
+int count;
 
 //============================= PROGRAM VARIABLES ===============================
 
@@ -76,7 +76,7 @@ TICK Tick_free;
 
 // distance changing variables
 #define mesureArrayNumber 10
-#define timeMesuring 70
+#define timeMesuring 40
 #define dividingValue 2
 #define deviation 0 //[cm]
 
@@ -101,19 +101,20 @@ bool Mesuring(int distanc)
       	
     }
     
-    if((Amesure % (mesureArrayNumber + 1)) > (mesureArrayNumber - 2))             //must be edited
+    if((Amesure % (mesureArrayNumber + 1)) > (mesureArrayNumber - 1))             //must be edited
     {
         for(int i = 0; i < (mesureArrayNumber - 2); i++)
         {
             if((measuredValues[i] + deviation) < (measuredValues[i+1] - deviation)) risingValues++;
-            Serial.print(measuredValues[i]);
-            Serial.print(" ");
+            //Serial.print(measuredValues[i]);
+            //Serial.print(" ");
         }
+      	Serial.print((Amesure % (mesureArrayNumber + 1)));
+        Serial.print(" ");
 
         if(risingValues > mesureArrayNumber) risingValues = 0;
         
-        //Serial.print(millis());
-        //Serial.print(" ");
+        Amesure = 0;
     }
 
     
