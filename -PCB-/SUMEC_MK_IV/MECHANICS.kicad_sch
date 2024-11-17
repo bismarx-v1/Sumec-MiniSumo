@@ -339,6 +339,126 @@
 				)
 			)
 		)
+		(symbol "power:+5V"
+			(power)
+			(pin_numbers hide)
+			(pin_names
+				(offset 0) hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "#PWR"
+				(at 0 -3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" "+5V"
+				(at 0 3.556 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Power symbol creates a global label with name \"+5V\""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "global power"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "+5V_0_1"
+				(polyline
+					(pts
+						(xy -0.762 1.27) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 2.54) (xy 0.762 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "+5V_1_1"
+				(pin power_in line
+					(at 0 0 90)
+					(length 0)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
 		(symbol "power:GND"
 			(power)
 			(pin_names
@@ -486,7 +606,7 @@
 	)
 	(wire
 		(pts
-			(xy 161.29 96.52) (xy 161.29 92.71)
+			(xy 172.72 97.79) (xy 172.72 93.98)
 		)
 		(stroke
 			(width 0)
@@ -496,7 +616,7 @@
 	)
 	(wire
 		(pts
-			(xy 185.42 99.06) (xy 186.69 99.06)
+			(xy 196.85 100.33) (xy 198.12 100.33)
 		)
 		(stroke
 			(width 0)
@@ -516,7 +636,7 @@
 	)
 	(wire
 		(pts
-			(xy 199.39 92.71) (xy 199.39 99.06)
+			(xy 210.82 93.98) (xy 210.82 100.33)
 		)
 		(stroke
 			(width 0)
@@ -546,6 +666,16 @@
 	)
 	(wire
 		(pts
+			(xy 160.02 97.79) (xy 160.02 93.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8009d0c5-76e5-401d-b017-a78db1539bbe")
+	)
+	(wire
+		(pts
 			(xy 102.87 90.17) (xy 116.84 90.17)
 		)
 		(stroke
@@ -556,7 +686,7 @@
 	)
 	(wire
 		(pts
-			(xy 186.69 99.06) (xy 186.69 92.71)
+			(xy 198.12 100.33) (xy 198.12 93.98)
 		)
 		(stroke
 			(width 0)
@@ -566,7 +696,7 @@
 	)
 	(wire
 		(pts
-			(xy 172.72 99.06) (xy 173.99 99.06)
+			(xy 184.15 100.33) (xy 185.42 100.33)
 		)
 		(stroke
 			(width 0)
@@ -586,7 +716,7 @@
 	)
 	(wire
 		(pts
-			(xy 198.12 99.06) (xy 199.39 99.06)
+			(xy 209.55 100.33) (xy 210.82 100.33)
 		)
 		(stroke
 			(width 0)
@@ -596,7 +726,7 @@
 	)
 	(wire
 		(pts
-			(xy 173.99 99.06) (xy 173.99 92.71)
+			(xy 185.42 100.33) (xy 185.42 93.98)
 		)
 		(stroke
 			(width 0)
@@ -606,7 +736,7 @@
 	)
 	(rectangle
 		(start 151.13 76.2)
-		(end 212.09 113.03)
+		(end 224.155 113.03)
 		(stroke
 			(width 0)
 			(type dash)
@@ -675,7 +805,7 @@
 	)
 	(global_label "OUT 2A"
 		(shape passive)
-		(at 172.72 99.06 180)
+		(at 184.15 100.33 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -687,7 +817,7 @@
 		)
 		(uuid "3c66a224-1293-45fa-9474-abdbe1846e1a")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 166.9482 99.06 0)
+			(at 178.3782 100.33 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -699,7 +829,7 @@
 	)
 	(global_label "OUT 2B"
 		(shape passive)
-		(at 185.42 99.06 180)
+		(at 196.85 100.33 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -711,7 +841,7 @@
 		)
 		(uuid "948d8bbc-3978-4ceb-b37d-c229ced2ae9c")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 179.6501 99.06 0)
+			(at 191.0801 100.33 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -723,7 +853,7 @@
 	)
 	(global_label "IR MODULE"
 		(shape passive)
-		(at 198.12 99.06 180)
+		(at 209.55 100.33 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -735,7 +865,7 @@
 		)
 		(uuid "d6ee175e-ed2c-4e56-b2c2-05f5f3a95c79")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 189.7338 99.06 0)
+			(at 201.1638 100.33 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -747,15 +877,15 @@
 	)
 	(symbol
 		(lib_id "Connector:TestPoint")
-		(at 173.99 92.71 0)
+		(at 185.42 93.98 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(uuid "0cc5a882-8bd4-4ff0-85f3-a8115a325262")
-		(property "Reference" "TP2"
-			(at 175.768 88.138 0)
+		(property "Reference" "TP3"
+			(at 187.198 89.408 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -764,7 +894,7 @@
 			)
 		)
 		(property "Value" "TestPoint"
-			(at 175.768 90.678 0)
+			(at 187.198 91.948 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -773,7 +903,7 @@
 			)
 		)
 		(property "Footprint" "TestPoint:TestPoint_Pad_1.0x1.0mm"
-			(at 179.07 92.71 0)
+			(at 190.5 93.98 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -782,7 +912,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 179.07 92.71 0)
+			(at 190.5 93.98 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -791,7 +921,7 @@
 			)
 		)
 		(property "Description" "test point"
-			(at 173.99 92.71 0)
+			(at 185.42 93.98 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -805,7 +935,7 @@
 		(instances
 			(project "SUMEC_MK_IV"
 				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/a907f0f2-2950-481d-8037-7b9f13f2e9c5"
-					(reference "TP2")
+					(reference "TP3")
 					(unit 1)
 				)
 			)
@@ -813,7 +943,7 @@
 	)
 	(symbol
 		(lib_id "power:+3V3")
-		(at 161.29 96.52 180)
+		(at 172.72 97.79 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -821,7 +951,7 @@
 		(dnp no)
 		(uuid "114ee392-e1a3-46ee-a6f6-c3de3b2d2658")
 		(property "Reference" "#PWR083"
-			(at 161.29 92.71 0)
+			(at 172.72 93.98 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -830,7 +960,7 @@
 			)
 		)
 		(property "Value" "+3V3"
-			(at 160.02 98.425 0)
+			(at 171.45 99.695 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -839,7 +969,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 161.29 96.52 0)
+			(at 172.72 97.79 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -848,7 +978,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 161.29 96.52 0)
+			(at 172.72 97.79 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -857,7 +987,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 161.29 96.52 0)
+			(at 172.72 97.79 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -879,15 +1009,15 @@
 	)
 	(symbol
 		(lib_id "Connector:TestPoint")
-		(at 199.39 92.71 0)
+		(at 210.82 93.98 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(uuid "36c2a07c-6e02-4898-acb5-7a31611ff9b6")
-		(property "Reference" "TP4"
-			(at 201.168 88.138 0)
+		(property "Reference" "TP5"
+			(at 212.598 89.408 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -896,7 +1026,7 @@
 			)
 		)
 		(property "Value" "TestPoint"
-			(at 201.168 90.678 0)
+			(at 212.598 91.948 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -905,7 +1035,7 @@
 			)
 		)
 		(property "Footprint" "TestPoint:TestPoint_Pad_1.0x1.0mm"
-			(at 204.47 92.71 0)
+			(at 215.9 93.98 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -914,7 +1044,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 204.47 92.71 0)
+			(at 215.9 93.98 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -923,7 +1053,7 @@
 			)
 		)
 		(property "Description" "test point"
-			(at 199.39 92.71 0)
+			(at 210.82 93.98 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -937,7 +1067,7 @@
 		(instances
 			(project "SUMEC_MK_IV"
 				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/a907f0f2-2950-481d-8037-7b9f13f2e9c5"
-					(reference "TP4")
+					(reference "TP5")
 					(unit 1)
 				)
 			)
@@ -1010,15 +1140,15 @@
 	)
 	(symbol
 		(lib_id "Connector:TestPoint")
-		(at 186.69 92.71 0)
+		(at 198.12 93.98 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(uuid "4a1ee403-16d6-4eb5-a635-90248029809a")
-		(property "Reference" "TP3"
-			(at 188.468 88.138 0)
+		(property "Reference" "TP4"
+			(at 199.898 89.408 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1027,7 +1157,7 @@
 			)
 		)
 		(property "Value" "TestPoint"
-			(at 188.468 90.678 0)
+			(at 199.898 91.948 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1036,7 +1166,7 @@
 			)
 		)
 		(property "Footprint" "TestPoint:TestPoint_Pad_1.0x1.0mm"
-			(at 191.77 92.71 0)
+			(at 203.2 93.98 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1045,7 +1175,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 191.77 92.71 0)
+			(at 203.2 93.98 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1054,7 +1184,7 @@
 			)
 		)
 		(property "Description" "test point"
-			(at 186.69 92.71 0)
+			(at 198.12 93.98 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1068,7 +1198,7 @@
 		(instances
 			(project "SUMEC_MK_IV"
 				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/a907f0f2-2950-481d-8037-7b9f13f2e9c5"
-					(reference "TP3")
+					(reference "TP4")
 					(unit 1)
 				)
 			)
@@ -1141,15 +1271,15 @@
 	)
 	(symbol
 		(lib_id "Connector:TestPoint")
-		(at 161.29 92.71 0)
+		(at 172.72 93.98 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(uuid "8ce15fc3-a0d9-4d7b-9e4c-f00db806059e")
-		(property "Reference" "TP1"
-			(at 163.068 88.138 0)
+		(property "Reference" "TP2"
+			(at 174.498 89.408 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1158,7 +1288,7 @@
 			)
 		)
 		(property "Value" "TestPoint"
-			(at 163.068 90.678 0)
+			(at 174.498 91.948 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1167,7 +1297,7 @@
 			)
 		)
 		(property "Footprint" "TestPoint:TestPoint_Pad_1.0x1.0mm"
-			(at 166.37 92.71 0)
+			(at 177.8 93.98 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1176,7 +1306,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 166.37 92.71 0)
+			(at 177.8 93.98 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1185,7 +1315,7 @@
 			)
 		)
 		(property "Description" "test point"
-			(at 161.29 92.71 0)
+			(at 172.72 93.98 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1199,7 +1329,7 @@
 		(instances
 			(project "SUMEC_MK_IV"
 				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/a907f0f2-2950-481d-8037-7b9f13f2e9c5"
-					(reference "TP1")
+					(reference "TP2")
 					(unit 1)
 				)
 			)
@@ -1214,7 +1344,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "b0f81543-aeff-479d-ab86-fa1cc9a594ff")
-		(property "Reference" "#PWR082"
+		(property "Reference" "#PWR081"
 			(at 116.84 110.49 0)
 			(effects
 				(font
@@ -1264,7 +1394,7 @@
 		(instances
 			(project "SUMEC_MK_IV"
 				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/a907f0f2-2950-481d-8037-7b9f13f2e9c5"
-					(reference "#PWR082")
+					(reference "#PWR081")
 					(unit 1)
 				)
 			)
@@ -1395,6 +1525,137 @@
 			(project "SUMEC_MK_IV"
 				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/a907f0f2-2950-481d-8037-7b9f13f2e9c5"
 					(reference "H1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 160.02 93.98 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "be5a3858-67cf-410d-9663-5f6a3c86f642")
+		(property "Reference" "TP1"
+			(at 161.798 89.408 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 161.798 91.948 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_1.0x1.0mm"
+			(at 165.1 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 165.1 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 160.02 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "5f1cee1f-9614-47ca-8dd4-045ca5861f99")
+		)
+		(instances
+			(project "SUMEC_MK_IV"
+				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/a907f0f2-2950-481d-8037-7b9f13f2e9c5"
+					(reference "TP1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+5V")
+		(at 160.02 97.79 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "e639288f-71dd-481d-bc04-bf7c60cd4c0c")
+		(property "Reference" "#PWR082"
+			(at 160.02 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V"
+			(at 156.845 99.695 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 160.02 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 160.02 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
+			(at 160.02 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "ae8c32a2-8e2e-4fc3-b375-ae471d6fe0a2")
+		)
+		(instances
+			(project ""
+				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/a907f0f2-2950-481d-8037-7b9f13f2e9c5"
+					(reference "#PWR082")
 					(unit 1)
 				)
 			)

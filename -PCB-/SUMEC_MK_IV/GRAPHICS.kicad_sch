@@ -393,7 +393,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "34a138bf-7fcb-4f9e-88bb-87626c36bf53")
-		(property "Reference" "TP8"
+		(property "Reference" "TP9"
 			(at 154.94 98.2979 0)
 			(effects
 				(font
@@ -446,7 +446,7 @@
 		(instances
 			(project "SUMEC_MK_IV"
 				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/ebfdffb9-be38-48cc-bdc4-81d227bad184"
-					(reference "TP8")
+					(reference "TP9")
 					(unit 1)
 				)
 			)
@@ -462,7 +462,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "9870dd72-ee50-4263-9dfc-ed44d6b588e1")
-		(property "Reference" "TP9"
+		(property "Reference" "TP10"
 			(at 158.75 98.2979 0)
 			(effects
 				(font
@@ -515,7 +515,7 @@
 		(instances
 			(project "SUMEC_MK_IV"
 				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/ebfdffb9-be38-48cc-bdc4-81d227bad184"
-					(reference "TP9")
+					(reference "TP10")
 					(unit 1)
 				)
 			)
@@ -531,7 +531,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "9a5cfb36-3e10-4bd8-8a2d-57c16ac1b12e")
-		(property "Reference" "TP10"
+		(property "Reference" "TP11"
 			(at 162.56 98.2979 0)
 			(effects
 				(font
@@ -584,7 +584,7 @@
 		(instances
 			(project "SUMEC_MK_IV"
 				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/ebfdffb9-be38-48cc-bdc4-81d227bad184"
-					(reference "TP10")
+					(reference "TP11")
 					(unit 1)
 				)
 			)
@@ -600,7 +600,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "d54c717e-0f76-4f71-a5a2-85162cb5a09a")
-		(property "Reference" "TP6"
+		(property "Reference" "TP7"
 			(at 147.32 98.2979 0)
 			(effects
 				(font
@@ -653,7 +653,7 @@
 		(instances
 			(project "SUMEC_MK_IV"
 				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/ebfdffb9-be38-48cc-bdc4-81d227bad184"
-					(reference "TP6")
+					(reference "TP7")
 					(unit 1)
 				)
 			)
@@ -669,7 +669,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "ec507462-a2b7-4be0-8de5-59fec7670766")
-		(property "Reference" "TP5"
+		(property "Reference" "TP6"
 			(at 143.51 98.2979 0)
 			(effects
 				(font
@@ -722,7 +722,7 @@
 		(instances
 			(project "SUMEC_MK_IV"
 				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/ebfdffb9-be38-48cc-bdc4-81d227bad184"
-					(reference "TP5")
+					(reference "TP6")
 					(unit 1)
 				)
 			)
@@ -738,7 +738,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "f033cf5e-32bf-4db4-873c-9e6bb86c732e")
-		(property "Reference" "TP7"
+		(property "Reference" "TP8"
 			(at 151.13 98.2979 0)
 			(effects
 				(font
@@ -791,7 +791,7 @@
 		(instances
 			(project "SUMEC_MK_IV"
 				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/ebfdffb9-be38-48cc-bdc4-81d227bad184"
-					(reference "TP7")
+					(reference "TP8")
 					(unit 1)
 				)
 			)
