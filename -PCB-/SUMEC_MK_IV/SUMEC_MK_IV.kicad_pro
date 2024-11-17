@@ -68,7 +68,7 @@
         "silk_text_thickness": 0.15,
         "silk_text_upright": false,
         "zones": {
-          "min_clearance": 0.1
+          "min_clearance": 0.5
         }
       },
       "diff_pair_dimensions": [
@@ -89,8 +89,6 @@
         "clearance|134915000|111550000|b4541276-172d-4d63-96c3-681d9681895d|56c25bc7-300c-4010-a73c-d75005bc5dfc",
         "silk_edge_clearance|102250000|107400000|33b436d7-f33b-47c2-94cc-7e58cffe002b|777467bd-fef0-430c-be72-3f1b66fdda67",
         "silk_edge_clearance|102250000|107400000|33b436d7-f33b-47c2-94cc-7e58cffe002b|bf325dd0-8d89-4a4a-ae5d-7b2c1d489a94",
-        "silk_edge_clearance|102250000|109030000|33b436d7-f33b-47c2-94cc-7e58cffe002b|9e31a4de-6fab-489a-9177-ea7f9cc30ace",
-        "silk_edge_clearance|102250000|117970000|33b436d7-f33b-47c2-94cc-7e58cffe002b|4df05cfe-3352-4142-a266-08cb5e5612a4",
         "silk_edge_clearance|102250000|89400000|33b436d7-f33b-47c2-94cc-7e58cffe002b|e21b8817-3600-4f70-90b4-f03618dea100",
         "silk_edge_clearance|163050000|126250000|6f76696c-d9a2-4651-b68c-3e68f758a323|98ef4c15-7583-479a-b171-de89499f1146",
         "silk_edge_clearance|172950000|126250000|6f76696c-d9a2-4651-b68c-3e68f758a323|aca5639c-270a-4ea5-a89d-51ff17fb3705",

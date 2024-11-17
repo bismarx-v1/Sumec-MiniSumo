@@ -5198,7 +5198,7 @@
 	)
 	(text "Status LED3"
 		(exclude_from_sim no)
-		(at 230.505 56.515 0)
+		(at 231.14 57.15 0)
 		(effects
 			(font
 				(face "Bahnschrift")
@@ -5412,7 +5412,7 @@
 	)
 	(text "Status LED2"
 		(exclude_from_sim no)
-		(at 231.14 46.355 0)
+		(at 231.14 46.99 0)
 		(effects
 			(font
 				(face "Bahnschrift")
@@ -5455,7 +5455,7 @@
 	)
 	(text "Status LED1"
 		(exclude_from_sim no)
-		(at 224.79 38.735 0)
+		(at 231.14 36.83 0)
 		(effects
 			(font
 				(face "Bahnschrift")
@@ -5527,9 +5527,9 @@
 			)
 		)
 	)
-	(global_label "LED2"
+	(global_label "LED_IO_13"
 		(shape output)
-		(at 143.51 142.24 180)
+		(at 232.41 58.42 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5539,9 +5539,9 @@
 			)
 			(justify right)
 		)
-		(uuid "09c2887e-b2bc-4ab2-9974-24896f7fd4e6")
+		(uuid "09985d22-c1d8-4a72-8f2f-110a053b1e3e")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 138.0551 142.24 0)
+			(at 223.9655 58.42 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5551,7 +5551,7 @@
 			)
 		)
 	)
-	(global_label "TEST PROGRAM 2"
+	(global_label "BUTTON_IO_47"
 		(shape input)
 		(at 184.15 144.78 0)
 		(fields_autoplaced yes)
@@ -5565,7 +5565,7 @@
 		)
 		(uuid "0a4270e6-88f6-4f21-a84e-fd50d98f4fb7")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 197.2566 144.78 0)
+			(at 195.455 144.78 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5599,6 +5599,30 @@
 			)
 		)
 	)
+	(global_label "LED_IO_14"
+		(shape output)
+		(at 143.51 142.24 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(face "Bahnschrift")
+				(size 1 1)
+				(color 0 0 0 1)
+			)
+			(justify right)
+		)
+		(uuid "15a9f1f3-f2d5-44f2-b6e5-75b4fc1e2b72")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 135.0089 142.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "OUT 1A"
 		(shape input)
 		(at 143.51 129.54 180)
@@ -5619,30 +5643,6 @@
 					(size 1.27 1.27)
 				)
 				(justify right)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "TEST PROGRAM 1"
-		(shape input)
-		(at 250.19 143.51 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(face "Bahnschrift")
-				(size 1 1)
-				(color 0 0 0 1)
-			)
-			(justify left)
-		)
-		(uuid "1ca93cd9-2365-488d-bd9e-9a4863783672")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 263.0387 143.51 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
 				(hide yes)
 			)
 		)
@@ -5695,9 +5695,9 @@
 			)
 		)
 	)
-	(global_label "LED3"
-		(shape output)
-		(at 143.51 139.7 180)
+	(global_label "BUTTON_IO_48"
+		(shape input)
+		(at 184.15 147.32 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5705,16 +5705,16 @@
 				(size 1 1)
 				(color 0 0 0 1)
 			)
-			(justify right)
+			(justify left)
 		)
-		(uuid "22407c6f-3b50-4e15-a7fa-09515ae0698b")
+		(uuid "2b8ec8ff-75ca-430f-87a8-1e94e5c04c36")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 138.0453 139.7 0)
+			(at 195.5381 147.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
+				(justify left)
 				(hide yes)
 			)
 		)
@@ -5767,7 +5767,7 @@
 			)
 		)
 	)
-	(global_label "TEST PROGRAM 2"
+	(global_label "BUTTON_IO_47"
 		(shape input)
 		(at 250.19 151.13 0)
 		(fields_autoplaced yes)
@@ -5779,9 +5779,9 @@
 			)
 			(justify left)
 		)
-		(uuid "39e0a03e-56d5-4aac-abb4-392451f64045")
+		(uuid "461d3683-be8a-4d5c-b75f-8574c855fb5e")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 263.2966 151.13 0)
+			(at 261.495 151.13 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5806,30 +5806,6 @@
 		(uuid "47ce2d7a-d77f-4321-bfc5-29a88e371915")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 135.2912 111.76 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "LED1"
-		(shape input)
-		(at 232.41 38.1 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(face "Bahnschrift")
-				(size 1 1)
-				(color 0 0 0 1)
-			)
-			(justify right)
-		)
-		(uuid "4da5bfca-b73e-4e24-9f95-4d4729430458")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 227.213 38.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6007,6 +5983,30 @@
 			)
 		)
 	)
+	(global_label "LED_IO_13"
+		(shape output)
+		(at 143.51 139.7 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(face "Bahnschrift")
+				(size 1 1)
+				(color 0 0 0 1)
+			)
+			(justify right)
+		)
+		(uuid "68749d8e-4068-4aa1-9684-a6bbe9bd4f9f")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 135.0655 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "D- IN"
 		(shape output)
 		(at 138.43 45.72 0)
@@ -6103,7 +6103,7 @@
 			)
 		)
 	)
-	(global_label "LED1"
+	(global_label "LED_IO_21"
 		(shape output)
 		(at 184.15 116.84 0)
 		(fields_autoplaced yes)
@@ -6117,7 +6117,7 @@
 		)
 		(uuid "80062ac5-f9f5-452e-a65b-54b9d1f3231a")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 189.347 116.84 0)
+			(at 192.5779 116.84 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6199,30 +6199,6 @@
 			)
 		)
 	)
-	(global_label "LED3"
-		(shape input)
-		(at 232.41 58.42 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(face "Bahnschrift")
-				(size 1 1)
-				(color 0 0 0 1)
-			)
-			(justify right)
-		)
-		(uuid "a611aa26-8859-4fb0-86a1-539118df46e0")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 226.9453 58.42 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-	)
 	(global_label "D- IN"
 		(shape input)
 		(at 139.7 57.15 180)
@@ -6267,30 +6243,6 @@
 					(size 1.27 1.27)
 				)
 				(justify right)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "TEST PROGRAM 1"
-		(shape input)
-		(at 184.15 147.32 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(face "Bahnschrift")
-				(size 1 1)
-				(color 0 0 0 1)
-			)
-			(justify left)
-		)
-		(uuid "af942ce8-d5a7-431d-8ff9-b9a215426469")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 196.9987 147.32 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
 				(hide yes)
 			)
 		)
@@ -6439,6 +6391,30 @@
 			)
 		)
 	)
+	(global_label "BUTTON_IO_48"
+		(shape input)
+		(at 250.19 143.51 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(face "Bahnschrift")
+				(size 1 1)
+				(color 0 0 0 1)
+			)
+			(justify left)
+		)
+		(uuid "bb0d933a-bc13-4dcf-8e5c-76f9e846b50d")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 261.5781 143.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "SHARP 2"
 		(shape input)
 		(at 143.51 116.84 180)
@@ -6487,8 +6463,8 @@
 			)
 		)
 	)
-	(global_label "LED2"
-		(shape input)
+	(global_label "LED_IO_14"
+		(shape output)
 		(at 232.41 48.26 180)
 		(fields_autoplaced yes)
 		(effects
@@ -6499,9 +6475,9 @@
 			)
 			(justify right)
 		)
-		(uuid "e203f341-3290-4ab8-9f3e-75995a78f799")
+		(uuid "dc277112-9dc1-4b3c-8c80-ed7ded29fe1f")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 226.9551 48.26 0)
+			(at 223.9089 48.26 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6598,6 +6574,30 @@
 		(uuid "eeb9a92a-d4c7-4d1b-9d2a-7e4ca08ef2f5")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 215.4697 120.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "LED_IO_21"
+		(shape output)
+		(at 232.41 38.1 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(face "Bahnschrift")
+				(size 1 1)
+				(color 0 0 0 1)
+			)
+			(justify right)
+		)
+		(uuid "ef1365e1-0fd9-4c29-944c-58834137305c")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 223.9821 38.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
