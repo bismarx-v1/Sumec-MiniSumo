@@ -7,7 +7,8 @@
 #define back_on_line 0          //0 = normal state, 1 = Sumec's back starting on line  
 
 
-int Range = 15;                 // Length senzor range[cm] for decision, is enybodey there?
+int Range = 20;                 // Length senzor range[cm] for decision, is enybodey there?
+int PasivRange = 12;
 
 int tipe_of_strategy = 230;
 uint16_t state = 0;             // variable who decides, what is in progress
@@ -75,10 +76,10 @@ TICK Tick_free;
 
 
 // distance changing variables
-#define mesureArrayNumber 10
-#define timeMesuring 40
+#define mesureArrayNumber 5
+#define timeMesuring 30
 #define dividingValue 2
-#define deviation 0 //[cm]
+#define deviation 1 //[cm]
 
 long measuredValues[mesureArrayNumber];
 unsigned long disMe = millis();
@@ -105,7 +106,7 @@ bool Mesuring(int distanc)
     {
         for(int i = 0; i < (mesureArrayNumber - 2); i++)
         {
-            if((measuredValues[i] + deviation) < (measuredValues[i+1] - deviation)) risingValues++;
+            if((measuredValues[i] + deviation) < (measuredValues[i+1])) risingValues++;
             //Serial.print(measuredValues[i]);
             //Serial.print(" ");
         }

@@ -170,11 +170,11 @@ void loop()
 
     //===========================Normal process===============================
 
-    Serial.print(LUNAleft);
+    /*Serial.print(LUNAleft);
+    Serial.print(" ");*/
+    Serial.print(SHARPright);
     Serial.print(" ");
-    Serial.print(LUNAmiddle);
-    Serial.print(" ");
-    Serial.println(LUNAright);
+    Serial.println(SHARPleft);
     
     switch (state)
     {
@@ -361,7 +361,7 @@ void loop()
 
         //UDP_SendUdpToAll("tocimDoprava", 1);
 
-        if(LUNAmiddle < Range)
+        if(LUNAmiddle < PasivRange)
         {
             //UDP_SendUdpToAll("vidim->jduDo-292", 1);
             state = 292;
@@ -370,14 +370,14 @@ void loop()
         }
         else
         {
-            Move.turnRight(1.0);
+            Move.turnRight(0.8);
         }
 
-        /*if(LUNAmiddle >= 20 && LUNAmiddle < 20)
+        if(LUNAmiddle >= 25 && LUNAmiddle < 25)
         {
             state = 293;
             Move.stop();
-        }*/
+        }
 
         break;
     case 292:
@@ -396,9 +396,12 @@ void loop()
 
         //Serial.println(Mesuring(1));
 
-        if(LUNAmiddle < 12 || Mesuring(LUNAmiddle) == 1) state = 294;        //try change 12 to Range
+        if(LUNAmiddle < PasivRange || Mesuring(LUNAmiddle) == 1) state = 294;        //try change 12 to Range
         else if((LUNAleft < Range && LUNAmiddle > Range)/* || Mesuring(LUNAleft) == 1*/) state = 261;
         else if((LUNAright < Range && LUNAmiddle > Range)/* || Mesuring(LUNAright) == 1*/) state = 232;
+
+        if(SHARPleft) state = 301;
+        if(SHARPright) state = 302;
 
         Move.stop();
 
@@ -406,7 +409,7 @@ void loop()
     case 294:
 
 
-        if((LUNAmiddle > 12) && Mesuring(LUNAmiddle) != 1) state = 293;        //try change 12 to Range
+        if((LUNAmiddle > PasivRange) && Mesuring(LUNAmiddle) != 1) state = 293;        //try change 12 to Range
         else if((LUNAleft < Range && LUNAmiddle > Range) /*|| Mesuring(LUNAleft) == 1*/) state = 261;
         else if((LUNAright < Range && LUNAmiddle > Range) /*|| Mesuring(LUNAright) == 1*/) state = 232;
 
@@ -421,6 +424,21 @@ void loop()
         Move.turnLeft(1.0);
 
         break;
+    case 301:                       //left
+
+        if(LUNAmiddle < Range) state = 294;
+
+        Move.turnRight(1.0);
+
+        break;
+    case 302:                       //right
+
+        if(LUNAmiddle < Range) state = 294;
+
+        Move.turnLeft(1.0);
+
+        break;
+
     case 232:
 
         if(LUNAmiddle > 6) state = 293;
