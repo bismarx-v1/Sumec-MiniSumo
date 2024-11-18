@@ -397,8 +397,8 @@ void loop()
         //Serial.println(Mesuring(1));
 
         if(LUNAmiddle < PasivRange || Mesuring(LUNAmiddle) == 1) state = 294;        //try change 12 to Range
-        else if((LUNAleft < Range && LUNAmiddle > Range)/* || Mesuring(LUNAleft) == 1*/) state = 261;
-        else if((LUNAright < Range && LUNAmiddle > Range)/* || Mesuring(LUNAright) == 1*/) state = 232;
+        else if((LUNAleft < Range && LUNAmiddle > Range)) state = 261;
+        else if((LUNAright < Range && LUNAmiddle > Range)) state = 232;
 
         if(SHARPleft) state = 301;
         if(SHARPright) state = 302;
@@ -410,8 +410,8 @@ void loop()
 
 
         if((LUNAmiddle > PasivRange) && Mesuring(LUNAmiddle) != 1) state = 293;        //try change 12 to Range
-        else if((LUNAleft < Range && LUNAmiddle > Range) /*|| Mesuring(LUNAleft) == 1*/) state = 261;
-        else if((LUNAright < Range && LUNAmiddle > Range) /*|| Mesuring(LUNAright) == 1*/) state = 232;
+        else if((LUNAleft < Range && LUNAmiddle > Range)) state = 261;
+        else if((LUNAright < Range && LUNAmiddle > Range)) state = 232;
 
         Move.goForward(1.0);
 

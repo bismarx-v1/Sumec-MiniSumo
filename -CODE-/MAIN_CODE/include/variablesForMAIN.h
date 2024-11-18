@@ -76,7 +76,7 @@ TICK Tick_free;
 
 
 // distance changing variables
-#define mesureArrayNumber 5
+#define mesureArrayNumber 10
 #define timeMesuring 30
 #define dividingValue 2
 #define deviation 1 //[cm]
