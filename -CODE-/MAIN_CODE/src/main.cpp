@@ -170,11 +170,11 @@ void loop()
 
     //===========================Normal process===============================
 
-    /*Serial.print(LUNAleft);
-    Serial.print(" ");*/
-    Serial.print(SHARPright);
+    Serial.print(LUNAleft);
     Serial.print(" ");
-    Serial.println(SHARPleft);
+    Serial.print(LUNAmiddle);
+    Serial.print(" ");
+    Serial.println(LUNAright);
     
     switch (state)
     {
@@ -368,27 +368,26 @@ void loop()
             Move.stop();
             Tick_free.tickNumber = 0;
         }
-        else
-        {
-            Move.turnRight(0.8);
-        }
-
-        if(LUNAmiddle >= 25 && LUNAmiddle < 25)
+        else if(LUNAmiddle < largeRange)
         {
             state = 293;
             Move.stop();
+        }
+        else
+        {
+            Move.turnRight(0.8);
         }
 
         break;
     case 292:
 
 
-        if(Tick_free.tickNumber < 40)
+        if(Tick_free.tickNumber < 100)
         {
             //UDP_SendUdpToAll("jeduDozadu", 1);
             Move.stop();
         }
-        else if((LUNAmiddle > Range && LUNAright > Range && LUNAleft > Range) || Tick_free.tickNumber > 500) state = 293;
+        else if((LUNAmiddle > Range && LUNAright > Range && LUNAleft > Range) || Tick_free.tickNumber > 350) state = 293;
         else Move.goBackward(1.0);
 
         break;
