@@ -1,71 +1,55 @@
+/**
+ * a
+ */
+
 #include <Arduino.h>
-#include <pmw_out.h>
-#include <driver/rmt.h>
+#include "esp32-rmt-pwm-reader.h"
 
-#define PWM_PIN 4                    // GPIO pin pro čtení PWM
-#define RMT_RX_CHANNEL RMT_CHANNEL_0 // RMT kanál pro příjem
-#define RMT_CLK_DIV 80               // Dělič hodin RMT (1 tick = 1 µs)
-#define PULSE_MAX_VALID 2300
-#define IDLE_TRESHOLD (PULSE_MAX_VALID + 500) 
+#define PWM_OUT_PIN        17  // GPIO pin for PWM output
+#define PWM_IN_PIN         18  // GPIO pin for PWM input
+#define PWM_OUT_CHANNEL    1   // LEDC channel (0-15)
+#define PWM_OUT_FREQ       50  // Frequency in Hz
+#define PWM_OUT_RESOLUTION 8   // Resolution in bits (0-255 for 8-bit)
 
-void setup()
-{
-  // PWM output initialization
-  pwmTask_Init();
+volatile uint8_t dutyCycle = 50;  // Initial duty cycle (50%)
 
-  Serial.begin(115200);
-  Serial.println("Initialized!");
 
-  // Nastavení RMT pro příjem
-  rmt_config_t rmt_rx;
-  rmt_rx.channel = RMT_RX_CHANNEL;
-  rmt_rx.gpio_num = (gpio_num_t)PWM_PIN;
-  rmt_rx.clk_div = RMT_CLK_DIV; // Frekvence hodin (APB_CLK / 80 = 1 MHz -> 1 tick = 1 µs)
-  rmt_rx.mem_block_num = 1;
-  rmt_rx.rmt_mode = RMT_MODE_RX;
-  rmt_rx.rx_config.filter_en = true;
-  rmt_rx.rx_config.filter_ticks_thresh = 100; // Filtr pro pulzy kratší než 100 µs
-  rmt_rx.rx_config.idle_threshold = IDLE_TRESHOLD;     // Idle threshold (v mikrosekundách)
+#define SENSOR_SIM_TASK_SIZE 2000
+TaskHandle_t sensorSimTaskHandle;
+/**
+ * @brief task that simulates the sensour output by going through pwm duty cycles from ~1/20 to ~1/10
+ */
+void sensorSimFunc(void* parameter) {
+  const uint8_t dutyCycleSweepLimits[2] = {13, 26};  // (255/20|255/10)  - (1ms pulse|2ms pulse)
+  uint8_t       dutyCycle               = dutyCycleSweepLimits[0];
+  int8_t        dutyCycleSweepDirection = 1;
 
-  // Inicializace RMT a spuštění driveru
-  rmt_config(&rmt_rx);
-  rmt_driver_install(rmt_rx.channel, 1000, 0);
+  // Initialize LEDC for hardware PWM
+  ledcSetup(PWM_OUT_CHANNEL, PWM_OUT_FREQ, PWM_OUT_RESOLUTION);
+  ledcAttachPin(PWM_OUT_PIN, PWM_OUT_CHANNEL);
 
-  // Aktivace příjmu RMT
-  rmt_rx_start(RMT_RX_CHANNEL, true);
+  // Set an initial duty cycle
+  ledcWrite(PWM_OUT_CHANNEL, dutyCycle);
+  while(1) {
+    dutyCycle = dutyCycle + dutyCycleSweepDirection;
+    if(dutyCycle < dutyCycleSweepLimits[0]) {
+      dutyCycleSweepDirection = -1;
+    } else if(dutyCycle > dutyCycleSweepLimits[1]) {
+      dutyCycleSweepDirection = 1;
+    }
+
+    ledcWrite(PWM_OUT_CHANNEL, dutyCycle);
+    vTaskDelay(100);
+  }
 }
 
-void loop()
-{
 
-  // Buffer pro uložení pulzů
-  RingbufHandle_t rb = NULL; // RMT využívá ring buffer pro uložení přijatých pulzů
-  rmt_get_ringbuf_handle(RMT_RX_CHANNEL, &rb);
+void setup() {
+  // Driver task  |Task func  |Name  |Stack size  |Parameter of the task  |Priority  |Task handle  |Core
+  xTaskCreatePinnedToCore(sensorSimFunc, "sensorSimTask", SENSOR_SIM_TASK_SIZE, NULL, 1, &sensorSimTaskHandle, 1);
+}
 
-  if (rb)
-  {
-    // Čtení položek z ring bufferu
-    size_t numItems = 0;
-    rmt_item32_t *items = (rmt_item32_t *)xRingbufferReceive(rb, &numItems, 1000);
-        if (items)
-        {
-          // Ověření, že máme alespoň dvě položky (jednu HIGH a jednu LOW)
-          if (numItems >= 2)
-          {
-            uint32_t high_time = items[0].duration0; // Délka pulzu HIGH
-            uint32_t low_time = items[1].duration0;  // Délka pulzu LOW
-            uint32_t period = high_time + low_time;  // Celková perioda PWM signálu
 
-            // Výpočet střídavého poměru PWM signálu
-            float duty_cycle = (high_time * 100.0) / period;
-
-            Serial.println(duty_cycle);
-          }
-
-          // Uvolnění bufferu
-          vRingbufferReturnItem(rb, (void *)items);
-        }
-  }
-
-  //delay(500);
+void loop() {
+  taskYIELD();
 }
