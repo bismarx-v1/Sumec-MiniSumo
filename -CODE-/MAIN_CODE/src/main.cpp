@@ -368,11 +368,11 @@ void loop()
             Move.stop();
             Tick_free.tickNumber = 0;
         }
-        else if(LUNAmiddle < largeRange)
+        /*else if(LUNAmiddle < largeRange)
         {
             state = 293;
             Move.stop();
-        }
+        }*/
         else
         {
             Move.turnRight(0.8);
@@ -387,7 +387,7 @@ void loop()
             //UDP_SendUdpToAll("jeduDozadu", 1);
             Move.stop();
         }
-        else if((LUNAmiddle > Range && LUNAright > Range && LUNAleft > Range) || Tick_free.tickNumber > 350) state = 293;
+        else if((LUNAmiddle > middleRange && LUNAright > middleRange && LUNAleft > middleRange) || Tick_free.tickNumber > 200) state = 293;
         else Move.goBackward(1.0);
 
         break;
@@ -396,8 +396,8 @@ void loop()
         //Serial.println(Mesuring(1));
 
         if(LUNAmiddle < PasivRange || Mesuring(LUNAmiddle) == 1) state = 294;        //try change 12 to Range
-        else if((LUNAleft < Range && LUNAmiddle > Range)) state = 261;
-        else if((LUNAright < Range && LUNAmiddle > Range)) state = 232;
+        else if((LUNAleft < largeRange && LUNAmiddle > largeRange)) state = 261;
+        else if((LUNAright < largeRange && LUNAmiddle > largeRange)) state = 232;
 
         if(SHARPleft) state = 301;
         if(SHARPright) state = 302;

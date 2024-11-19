@@ -10,7 +10,8 @@
 int Range = 20;                 // Length senzor range[cm] for decision, is enybodey there?
 //passive Ranges
 int PasivRange = 12;
-int largeRange = 25; 
+int largeRange = 35;
+int middleRange = 15; 
 
 int tipe_of_strategy = 230;
 uint16_t state = 0;             // variable who decides, what is in progress
