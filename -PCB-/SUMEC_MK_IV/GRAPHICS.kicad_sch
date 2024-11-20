@@ -482,7 +482,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "sumec_graphic:FREFALL_COMIC_IMG"
+		(property "Footprint" "sumec_graphic:FREEFALL2_IMG"
 			(at 161.29 102.87 0)
 			(effects
 				(font
