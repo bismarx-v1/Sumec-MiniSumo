@@ -6,13 +6,15 @@
 #include "esp32-rmt-pwm-reader.h"
 
 #define PWM_IN_PIN 18  // GPIO pin for PWM input
+#define OUTPUT_PWM 0
 
-#define PWM_OUT_PIN        17  // GPIO pin for PWM output
-#define PWM_OUT_CHANNEL    1   // LEDC channel (0-15)
-#define PWM_OUT_FREQ       50  // Frequency in Hz
-#define PWM_OUT_RESOLUTION 8   // Resolution in bits (0-255 for 8-bit)
+#if OUTPUT_PWM
+  #define PWM_OUT_PIN        17  // GPIO pin for PWM output
+  #define PWM_OUT_CHANNEL    1   // LEDC channel (0-15)
+  #define PWM_OUT_FREQ       50  // Frequency in Hz
+  #define PWM_OUT_RESOLUTION 8   // Resolution in bits (0-255 for 8-bit)
 
-#define SENSOR_SIM_TASK_SIZE 2000
+  #define SENSOR_SIM_TASK_SIZE 2000
 TaskHandle_t sensorSimTaskHandle;
 /**
  * @brief task that simulates the sensour output by going through pwm duty cycles from ~1/20 to ~1/10
@@ -38,18 +40,19 @@ void sensorSimFunc(void* parameter) {
 
     ledcWrite(PWM_OUT_CHANNEL, dutyCycle);
 
-#if 1
+  #if 1
     // Position the cursor at the desired position (row, col)
     Serial.print("\033[");  // Begin of escape sequence
     Serial.print(2);        // row number (begins with 1)
     Serial.print(";");
     Serial.print(1);  // column (begins with 1)
     Serial.print("H");
-#endif
+  #endif
     Serial.printf("set dc = %04i\n", dutyCycle);
     vTaskDelay(1000);
   }
 }
+#endif
 
 hw_timer_t* pwmRecFuncTimerHandle;
 uint64_t    temp1 = 0;
@@ -97,6 +100,7 @@ void pwmRecFunc(void* parameter) {
     }
 
     Serial.printf("pulse len %04i[us]\n", temp1);
+    Serial.printf("distance %03i[cm]\n", ((temp1 - 1000) * 3 / 4) / 10);
     Serial.printf("still alive %c", loadingAnimCharSet[loadingAnimCharPos]);
     vTaskDelay(100);
   }
@@ -106,8 +110,10 @@ void pwmRecFunc(void* parameter) {
 void setup() {
   Serial.begin(115200);
 
+#if OUTPUT_PWM
   // Driver task  |Task func  |Name  |Stack size  |Parameter of the task  |Priority  |Task handle  |Core
   xTaskCreatePinnedToCore(sensorSimFunc, "sensorSimTask", SENSOR_SIM_TASK_SIZE, NULL, 1, &sensorSimTaskHandle, 1);
+#endif
 
   // Reciever task  |Task func  |Name  |Stack size  |Parameter of the task  |Priority  |Task handle  |Core
   xTaskCreatePinnedToCore(pwmRecFunc, "pwmRecTask", PWM_RECORDER_TASK_SIZE, NULL, 1, &pwmRecFuncHandle, 1);
