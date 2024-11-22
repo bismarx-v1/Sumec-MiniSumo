@@ -99,7 +99,7 @@ void pwmRecFunc(void* parameter) {
     }
 
     Serial.printf("pulse len %04i[us]\n", temp1);
-    Serial.printf("distance %03i[cm]\n", ((temp1 - 1000) * 3 / 8) / 10);
+    Serial.printf("distance %03i[cm]\n", ((temp1 - 1000) * 3 / 2) / 10);
     Serial.printf("still alive %c", loadingAnimCharSet[loadingAnimCharPos]);
     vTaskDelay(100);
   }
