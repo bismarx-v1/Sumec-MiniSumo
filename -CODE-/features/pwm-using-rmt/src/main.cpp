@@ -3,9 +3,8 @@
  */
 
 #include <Arduino.h>
-#include "esp32-rmt-pwm-reader.h"
 
-#define PWM_IN_PIN 18  // GPIO pin for PWM input
+#define PWM_IN_PIN 5  // GPIO pin for PWM input
 #define OUTPUT_PWM 0
 
 #if OUTPUT_PWM
@@ -100,7 +99,7 @@ void pwmRecFunc(void* parameter) {
     }
 
     Serial.printf("pulse len %04i[us]\n", temp1);
-    Serial.printf("distance %03i[cm]\n", ((temp1 - 1000) * 3 / 4) / 10);
+    Serial.printf("distance %03i[cm]\n", ((temp1 - 1000) * 3 / 8) / 10);
     Serial.printf("still alive %c", loadingAnimCharSet[loadingAnimCharPos]);
     vTaskDelay(100);
   }
