@@ -51,7 +51,7 @@ void setup()
     TfL_Setup();
     pinMode(button, INPUT);
     Serial.begin(115200);
-    //UDP_Setup();
+    UDP_Setup();
 }
 
 void loop()
@@ -363,19 +363,20 @@ void loop()
 
         if(LUNAmiddle < PasivRange)
         {
-            //UDP_SendUdpToAll("vidim->jduDo-292", 1);
+            //UDP_SendUdpToAll("292", 1);
             state = 292;
             Move.stop();
             Tick_free.tickNumber = 0;
         }
-        /*else if(LUNAmiddle < largeRange)
+        else if(LUNAmiddle < largeRange)
         {
-            state = 293;
+            //UDP_SendUdpToAll("293", 1);
             Move.stop();
-        }*/
+        }
         else
         {
-            Move.turnRight(0.8);
+            //UDP_SendUdpToAll("turning", 1);
+            Move.turnRight(0.5);
         }
 
         break;

@@ -7,10 +7,10 @@
 #define back_on_line 0          //0 = normal state, 1 = Sumec's back starting on line  
 
 
-int Range = 20;                 // Length senzor range[cm] for decision, is enybodey there?
+int Range = 12;                 // Length senzor range[cm] for decision, is enybodey there?
 //passive Ranges
 int PasivRange = 12;
-int largeRange = 35;
+int largeRange = 30;
 int middleRange = 15; 
 
 int tipe_of_strategy = 230;
