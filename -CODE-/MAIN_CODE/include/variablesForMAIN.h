@@ -7,8 +7,13 @@
 #define back_on_line 0          //0 = normal state, 1 = Sumec's back starting on line  
 
 
-int Range = 20;                 // Length senzor range for decision, is enybodey there?
+int Range = 12;                 // Length senzor range[cm] for decision, is enybodey there?
+//passive Ranges
+int PasivRange = 12;
+int largeRange = 30;
+int middleRange = 15; 
 
+int tipe_of_strategy = 230;
 uint16_t state = 0;             // variable who decides, what is in progress
 uint16_t LINEstate = 0;
 uint8_t startState;
@@ -38,7 +43,8 @@ bool SHARPleft;
 bool SHARPright;
 
 // Start time
-int StartTime;
+bool bootonOld;
+int count;
 
 //============================= PROGRAM VARIABLES ===============================
 
@@ -69,98 +75,57 @@ void Tick_managing(int time, uint32_t value, uint32_t last, uint32_t *return_las
 TICK Tick_QRE;
 TICK Tick_Sharp;
 TICK Tick_Start;
+TICK Tick_free;
 
 
-//============================= PROGRAM VARIABLES ===============================
+// distance changing variables
+#define mesureArrayNumber 10
+#define timeMesuring 30
+#define dividingValue 2
+#define deviation 1 //[cm]
 
-/*bool Start(bool QRE_L, bool QRE_R, bool QRE_B, Motion *MotorsStart)
+long measuredValues[mesureArrayNumber];
+unsigned long disMe = millis();
+int Amesure = 1;
+int risingValues;
+
+
+bool Mesuring(int distanc)
 {
-    //variables for start function
-    bool returningValue;
-    Tick_Start.tickTime = 10;
-    LINEstate = 0;
-
-    Tick_managing(Tick_Start.tickTime, Tick_Start.tickNumber, Tick_Start.lastTick, &Tick_Start.lastTick, &Tick_Start.tickNumber);
 
 
-    if(back_on_line)                                                                //protect in back on line start
+    if(((millis() - disMe) > timeMesuring) && (Amesure % (mesureArrayNumber + 1)) <= mesureArrayNumber)
     {
-        QRE_L = 0;
-        QRE_R = 0;
-    }
+        //Serial.print(millis());
+        //Serial.print(" ");
 
-    if(startState == 0) startState = QRE_L*1 + QRE_R*3 + back_on_line*5;            //setting startState only in one time
+        measuredValues[(Amesure % mesureArrayNumber)-1] = distanc;
+        Amesure++;
+      	disMe = millis();
+      	
+    }
     
-
-
-    switch (startState)
+    if((Amesure % (mesureArrayNumber + 1)) > (mesureArrayNumber - 1))             //must be edited
     {
-    case 1:                                                                         //Sumec's left side starting on the line
+        for(int i = 0; i < (mesureArrayNumber - 2); i++)
+        {
+            if((measuredValues[i] + deviation) < (measuredValues[i+1])) risingValues++;
+            //Serial.print(measuredValues[i]);
+            //Serial.print(" ");
+        }
+      	Serial.print((Amesure % (mesureArrayNumber + 1)));
+        Serial.print(" ");
 
-        if(Tick_Start.tickNumber < 30)
-        {
-            MotorsStart->turnRight(1.0);
-            returningValue = 0;
-        }
-        else if(Tick_Start.tickNumber < 55)
-        {
-            MotorsStart->goForward(1.0);
-            returningValue = 0;
-        }
-        else
-        {
-            returningValue = 1;   
-        }
-        break;
-
-    case 3:                                                                         //Sumec's right side starting on the line
-
-        if(Tick_Start.tickNumber < 25)
-        {
-            MotorsStart->turnLeft(1.0);
-            returningValue = 0;
-        }
-        else if(Tick_Start.tickNumber < 45)
-        {
-            MotorsStart->goForward(1.0);
-            returningValue = 0;
-        }
-        else
-        {
-            returningValue = 1;   
-        }
-        break;
-
-    case 5:                                                                         //Sumec's back side starting on the line
-
-        if(Tick_Start.tickNumber < 40)
-        {
-            MotorsStart->goForward(1.0);
-            returningValue = 0;
-        }
-        else
-        {
-           returningValue = 1;
-        }
-        break;
-
-    case 4:                                                                         //Sumec's front side starting on the line
-
-        if(Tick_Start.tickNumber < 20)
-        {
-            MotorsStart->goBackward(1.0);
-            returningValue = 0;
-        }
-        else
-        {
-            returningValue = 1;
-        }
-
-    default:                                                                         //Sumec starting inside the ring
-
-        returningValue = 1;   
-        break;
+        if(risingValues > mesureArrayNumber) risingValues = 0;
+        
+        Amesure = 0;
     }
 
-    return returningValue;          
-}*/
+    
+    if((mesureArrayNumber/dividingValue) <= risingValues) return 1;
+    else
+    {
+        risingValues = 0;
+        return 0;
+    } 
+}

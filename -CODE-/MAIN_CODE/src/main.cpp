@@ -2,7 +2,7 @@
 /*
 *   Project Name: Sumec
 *   Name: MAIN_CODE
-*   Last change: 6.9.2024
+*   Last change: 22.10.2024
 */
 
 #include <Pins.h>
@@ -45,12 +45,12 @@ void setup()
     Tick_QRE.tickTime = 10;         //this replaces delay
     Tick_Sharp.tickTime = 10;       //this replaces delay
     Tick_Start.tickTime = 10;       //this replaces delay
+    Tick_free.tickTime = 1;       //this replaces delay
 
     // hardware settings (Setup's):
     TfL_Setup();
     pinMode(button, INPUT);
     Serial.begin(115200);
-    LEDRed.blink(1000);
     UDP_Setup();
 }
 
@@ -71,6 +71,9 @@ void loop()
 
     //=========================Writeing value from sensors to variables=============
 
+    // Button
+    bootonOld = digitalRead(button);
+
     // Line sonzors
     QREleft = qreLeft.get();
     QREright = qreRight.get();
@@ -81,6 +84,7 @@ void loop()
     LUNAright = TfL_Get(TfL_Addr3);
     LUNAmiddle = TfL_Get(TfL_Addr2);
 
+
     // side sonzors
     SHARPleft = sharpLeft.get();
     SHARPright = sharpRight.get();
@@ -89,6 +93,7 @@ void loop()
     Tick_managing(Tick_QRE.tickTime, Tick_QRE.tickNumber, Tick_QRE.lastTick, &Tick_QRE.lastTick, &Tick_QRE.tickNumber);
     Tick_managing(Tick_Sharp.tickTime, Tick_Sharp.tickNumber, Tick_Sharp.lastTick, &Tick_Sharp.lastTick, &Tick_Sharp.tickNumber);
     Tick_managing(Tick_Start.tickTime, Tick_Start.tickNumber, Tick_Start.lastTick, &Tick_Start.lastTick, &Tick_Start.tickNumber);
+    Tick_managing(Tick_free.tickTime, Tick_free.tickNumber, Tick_free.lastTick, &Tick_free.lastTick, &Tick_free.tickNumber);
 
 
 
@@ -101,7 +106,7 @@ void loop()
 
             if((QREleft || QREright || QREback) && state != 0 && state != 2)
             {
-                UDP_SendUdpToAll("QRE", 1);
+                //UDP_SendUdpToAll("QRE", 1);
                 saveState = state;   //saved last state
                 state = 001;
                 LINEstate++;
@@ -156,7 +161,7 @@ void loop()
                 LINEstate = 3;
             }
 
-            UDP_SendUdpToAll("QRE_END", 1);
+            //UDP_SendUdpToAll("QRE_END", 1);
             break;
 
     }
@@ -164,16 +169,37 @@ void loop()
     
 
     //===========================Normal process===============================
-    Serial.println(state);
 
+    Serial.print(LUNAleft);
+    Serial.print(" ");
+    Serial.print(LUNAmiddle);
+    Serial.print(" ");
+    Serial.println(LUNAright);
+    
     switch (state)
     {
-    case 000:       // INIT 
+    case 000:       // INIT
+
+        if(bootonOld < digitalRead(button)) count++;
+
+        if(count%2 == 0)
+        {
+            LEDRed.blink(1000);
+            LEDOrange.setOff();
+            tipe_of_strategy = 230;
+        }
+        else
+        {
+            LEDOrange.blink(1000);
+            LEDRed.setOff();
+            tipe_of_strategy = 231;
+        }
 
         if (Remote.hasDohyoID() && !Remote.isStarted())
         {
-            
-            LEDRed.blink(500, 100);
+            if(count%2 == 0) LEDRed.blink(500, 100);
+            else LEDOrange.blink(500, 100);
+
             Tick_Sharp.lastTick = millis();
             Tick_Sharp.tickNumber = 0;
         }
@@ -181,11 +207,11 @@ void loop()
         // after start comand, main code will start running
         if (Remote.isStarted())
         {
-            UDP_SendUdpToAll("======================", 1);
+            //UDP_SendUdpToAll("======================", 1);
             state = 002;
             Tick_Start.tickNumber = 0;
             LINEstate = 0;
-            UDP_SendUdpToAll("Start", 1);
+            //UDP_SendUdpToAll("Start", 1);
         }
 
         LINEstate = 0;
@@ -197,12 +223,12 @@ void loop()
 
         break;
 
-    /*====================================BEGIN OF START FUNCTION====================================*/
+    /*=============BEGIN OF START FUNCTION=============*/
 
     case 002:
 
-        UDP_SendUdpToAll("state_002->Start_function", 1);
-        LINEstate = 0;
+        //UDP_SendUdpToAll("state_002->Start_function", 1);
+        LINEstate = 0;                                                                  //Out of line disabled
 
         if(back_on_line)                                                                //protect in back on line start
         {
@@ -228,7 +254,7 @@ void loop()
             }
             else
             {
-                state = 230;   
+                state = tipe_of_strategy;   
             }
             break;
 
@@ -244,7 +270,7 @@ void loop()
             }
             else
             {
-                state = 230;
+                state = tipe_of_strategy;
             }
             break;
 
@@ -256,7 +282,7 @@ void loop()
             }
             else
             {
-                state = 230;
+                state = tipe_of_strategy;
             }
             break;
 
@@ -268,17 +294,17 @@ void loop()
             }
             else
             {
-                state = 230;
+                state = tipe_of_strategy;
             }
 
         default:                                                                         //Sumec starting inside the ring
 
-            state = 230;   
+            state = tipe_of_strategy;   
             break;
         }      
         break;
 
-    /*====================================END OF START FUNCTION====================================*/
+    /*=============END OF START FUNCTION=============*/
 
     case 230:                                                                           // Turn Right 
 
@@ -286,18 +312,18 @@ void loop()
         
         if(LUNAleft < Range)
         {
-            UDP_SendUdpToAll("state_260", 1);
+            //UDP_SendUdpToAll("state_260", 1);
             state = 260;
         }
         if(LUNAmiddle < Range)
         {
-            UDP_SendUdpToAll("state_290", 1);
+            //UDP_SendUdpToAll("state_290", 1);
             state = 290;
         }
 
         if(SHARPleft || SHARPright)
         {
-            UDP_SendUdpToAll("state_300", 1);
+            //UDP_SendUdpToAll("state_300", 1);
             state = 300;
         }
 
@@ -308,13 +334,13 @@ void loop()
 
         if(LUNAleft > Range) 
         {   
-            UDP_SendUdpToAll("state_230", 1);
+            //UDP_SendUdpToAll("state_230", 1);
             state = 230;
         }
 
         if(LUNAmiddle < Range)
         {
-            UDP_SendUdpToAll("state_290", 1);
+            //UDP_SendUdpToAll("state_290", 1);
             state = 290;
         }
         
@@ -325,11 +351,103 @@ void loop()
 
         if(LUNAmiddle > Range)    
         {
-            UDP_SendUdpToAll("state_230", 1);
+            //UDP_SendUdpToAll("state_230", 1);
             state = 230;
         }
 
         break;
+    /*=============Begin of pasive strategy=============*/
+    case 231:
+
+        //UDP_SendUdpToAll("tocimDoprava", 1);
+
+        if(LUNAmiddle < PasivRange)
+        {
+            //UDP_SendUdpToAll("292", 1);
+            state = 292;
+            Move.stop();
+            Tick_free.tickNumber = 0;
+        }
+        else if(LUNAmiddle < largeRange)
+        {
+            //UDP_SendUdpToAll("293", 1);
+            Move.stop();
+        }
+        else
+        {
+            //UDP_SendUdpToAll("turning", 1);
+            Move.turnRight(0.5);
+        }
+
+        break;
+    case 292:
+
+
+        if(Tick_free.tickNumber < 100)
+        {
+            //UDP_SendUdpToAll("jeduDozadu", 1);
+            Move.stop();
+        }
+        else if((LUNAmiddle > middleRange && LUNAright > middleRange && LUNAleft > middleRange) || Tick_free.tickNumber > 200) state = 293;
+        else Move.goBackward(1.0);
+
+        break;
+    case 293:
+
+        //Serial.println(Mesuring(1));
+
+        if(LUNAmiddle < PasivRange || Mesuring(LUNAmiddle) == 1) state = 294;        //try change 12 to Range
+        else if((LUNAleft < largeRange && LUNAmiddle > largeRange)) state = 261;
+        else if((LUNAright < largeRange && LUNAmiddle > largeRange)) state = 232;
+
+        if(SHARPleft) state = 301;
+        if(SHARPright) state = 302;
+
+        Move.stop();
+
+        break;
+    case 294:
+
+
+        if((LUNAmiddle > PasivRange) && Mesuring(LUNAmiddle) != 1) state = 293;        //try change 12 to Range
+        else if((LUNAleft < Range && LUNAmiddle > Range)) state = 261;
+        else if((LUNAright < Range && LUNAmiddle > Range)) state = 232;
+
+        Move.goForward(1.0);
+
+        break;
+    case 261:
+
+        if(LUNAmiddle > 6) state = 293;
+        else if(LUNAmiddle < 6) state = 294;
+
+        Move.turnLeft(1.0);
+
+        break;
+    case 301:                       //left
+
+        if(LUNAmiddle < Range) state = 294;
+
+        Move.turnRight(1.0);
+
+        break;
+    case 302:                       //right
+
+        if(LUNAmiddle < Range) state = 294;
+
+        Move.turnLeft(1.0);
+
+        break;
+
+    case 232:
+
+        if(LUNAmiddle > 6) state = 293;
+        else if(LUNAmiddle < 6) state = 294;
+
+        Move.turnRight(1.0);
+
+        break;
+    /*=============End of pasive strategy=============*/
     case 300:                                                                           // Sharp 
 
         Tick_Sharp.lastTick = millis();
@@ -337,12 +455,12 @@ void loop()
 
         if(SHARPleft)
         {
-            UDP_SendUdpToAll("state_330", 1);
+            //UDP_SendUdpToAll("state_330", 1);
             state = 330;
         }
         else if(SHARPright)
         {
-            UDP_SendUdpToAll("state_360", 1);
+            //UDP_SendUdpToAll("state_360", 1);
             state = 360;
         }
         break;
@@ -362,7 +480,7 @@ void loop()
         }
         else
         {
-            UDP_SendUdpToAll("state_230", 1);
+            //UDP_SendUdpToAll("state_230", 1);
             state = 230; // Sharp - End
         }
 
@@ -383,7 +501,7 @@ void loop()
         }
         else
         {
-            UDP_SendUdpToAll("state_230", 1);
+            //UDP_SendUdpToAll("state_230", 1);
             state = 230; // Sharp - End
         }
         
