@@ -5762,7 +5762,7 @@
 			)
 		)
 	)
-	(global_label "POL 3"
+	(global_label "IO16_POL_L"
 		(shape input)
 		(at 143.51 147.32 180)
 		(fields_autoplaced yes)
@@ -5776,7 +5776,7 @@
 		)
 		(uuid "35ae6005-c66b-4f4e-8862-fd54efce20ef")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 137.6701 147.32 0)
+			(at 134.2918 147.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6098,7 +6098,7 @@
 			)
 		)
 	)
-	(global_label "POL 2"
+	(global_label "IO15_POL_M"
 		(shape input)
 		(at 143.51 144.78 180)
 		(fields_autoplaced yes)
@@ -6112,7 +6112,7 @@
 		)
 		(uuid "7b116ed4-8bef-4343-b321-53ace43f510a")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 137.6867 144.78 0)
+			(at 133.9596 144.78 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6214,6 +6214,30 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "IO05_POL_R"
+		(shape input)
+		(at 143.51 119.38 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(face "Bahnschrift")
+				(size 1 1)
+				(color 0 0 0 1)
+			)
+			(justify right)
+		)
+		(uuid "959ad382-1189-4e7a-9746-18b480d23b22")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 133.858 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
 				(hide yes)
 			)
 		)
@@ -6593,30 +6617,6 @@
 		(uuid "e987558d-df0f-4b90-a39f-c8317f3a91f6")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 78.7626 35.56 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "POL 1"
-		(shape input)
-		(at 143.51 119.38 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(face "Bahnschrift")
-				(size 1 1)
-				(color 0 0 0 1)
-			)
-			(justify right)
-		)
-		(uuid "eb4e3a2b-7c5e-47fa-a1a0-813e5cc520b3")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 137.9447 119.38 0)
 			(effects
 				(font
 					(size 1.27 1.27)
