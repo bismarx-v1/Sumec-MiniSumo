@@ -56,6 +56,7 @@ void setup()
 
 void loop()
 {
+    //Serial.println("halo");
 
     LEDRed.update();            //updates the red led
     LEDOrange.update();         //updates the orange led
@@ -169,7 +170,7 @@ void loop()
 
     Serial.print(qreLeft.getRaw());
     Serial.print(" ");
-    Serial.println(qreRight.getRaw());
+    Serial.println(analogRead(PIN_QRE_RIGHT));
     //Serial.print(" ");
     //Serial.println(LUNAright);
     
