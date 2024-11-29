@@ -110,9 +110,6 @@ void loop()
                 saveState = state;   //saved last state
                 state = 001;
                 LINEstate++;
-
-                Tick_QRE.lastTick = millis();
-                Tick_QRE.tickNumber = 0;
             }
 
             break;
@@ -120,14 +117,14 @@ void loop()
 
             Move.stop();
 
-            if(QREleft || QREright)
+            if((QREleft || QREright) && (LUNAmiddle > Range && LUNAright > Range && LUNAleft > Range))
             {
                 LINEstate++;
+
+                Tick_QRE.lastTick = millis();
+                Tick_QRE.tickNumber = 0;
             }
-            else if(QREback)
-            {
-                LINEstate = 4;
-            }
+
 
             break;
         case 2:     //Go backward
