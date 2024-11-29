@@ -56,7 +56,7 @@ void setup()
 
 void loop()
 {
- 
+
     LEDRed.update();            //updates the red led
     LEDOrange.update();         //updates the orange led
     Remote.update();
@@ -167,11 +167,11 @@ void loop()
 
     //===========================Normal process===============================
 
-    Serial.print(LUNAleft);
+    Serial.print(qreLeft.getRaw());
     Serial.print(" ");
-    Serial.print(LUNAmiddle);
-    Serial.print(" ");
-    Serial.println(LUNAright);
+    Serial.println(qreRight.getRaw());
+    //Serial.print(" ");
+    //Serial.println(LUNAright);
     
     switch (state)
     {

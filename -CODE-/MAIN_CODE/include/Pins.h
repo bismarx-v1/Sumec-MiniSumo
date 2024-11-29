@@ -12,9 +12,9 @@
 
 // QRE sensor pins
 
-#define PIN_QRE_LEFT            10
-#define PIN_QRE_RIGHT           9
-#define PIN_QRE_REAR            8
+#define PIN_QRE_LEFT            7
+#define PIN_QRE_RIGHT           6   
+#define PIN_QRE_REAR            2
 
 // side Sharp sensor pins
 
