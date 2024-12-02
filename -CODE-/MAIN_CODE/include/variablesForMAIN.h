@@ -4,12 +4,13 @@
 //============================= PROGRAM VARIABLES ===============================
 
 // Logic variables:
-#define back_on_line 0          //0 = normal state, 1 = Sumec's back starting on line  
+#define back_on_line 0          //0 = normal state, 1 = Sumec's back starting on line
+#define Measuring 0   
 
 
-int Range = 12;                 // Length senzor range[cm] for decision, is enybodey there?
+int Range = 30;                 // Length senzor range[cm] for decision, is enybodey there?
 //passive Ranges
-int PasivRange = 12;
+int PasivRange = 20;
 int largeRange = 30;
 int middleRange = 15; 
 

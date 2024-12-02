@@ -365,15 +365,16 @@ void loop()
             Move.stop();
             Tick_free.tickNumber = 0;
         }
-        else if(LUNAmiddle < largeRange)
+        /*else if(LUNAmiddle < largeRange)
         {
             //UDP_SendUdpToAll("293", 1);
+            state = 293;
             Move.stop();
-        }
+        }*/
         else
         {
             //UDP_SendUdpToAll("turning", 1);
-            Move.turnRight(0.5);
+            Move.turnRight(0.8);
         }
 
         break;
@@ -385,17 +386,27 @@ void loop()
             //UDP_SendUdpToAll("jeduDozadu", 1);
             Move.stop();
         }
-        else if((LUNAmiddle > middleRange && LUNAright > middleRange && LUNAleft > middleRange) || Tick_free.tickNumber > 200) state = 293;
+        else if((LUNAmiddle > middleRange && LUNAright > middleRange && LUNAleft > middleRange)/* || Tick_free.tickNumber > 400*/) state = 293;
         else Move.goBackward(1.0);
 
         break;
     case 293:
 
         //Serial.println(Mesuring(1));
+        if(Measuring)
+        {
+            if(LUNAmiddle < PasivRange || Mesuring(LUNAmiddle) == 1) state = 294;        //try change 12 to Range
+            else if((LUNAleft < largeRange && LUNAmiddle > largeRange)) state = 261;
+            else if((LUNAright < largeRange && LUNAmiddle > largeRange)) state = 232;
+        }
 
-        if(LUNAmiddle < PasivRange || Mesuring(LUNAmiddle) == 1) state = 294;        //try change 12 to Range
-        else if((LUNAleft < largeRange && LUNAmiddle > largeRange)) state = 261;
-        else if((LUNAright < largeRange && LUNAmiddle > largeRange)) state = 232;
+
+        if(!Measuring)
+        {
+            if(LUNAmiddle < PasivRange) state = 294;        //try change 12 to Range
+            else if((LUNAleft < largeRange && LUNAmiddle > largeRange)) state = 261;
+            else if((LUNAright < largeRange && LUNAmiddle > largeRange)) state = 232;
+        }
 
         if(SHARPleft) state = 301;
         if(SHARPright) state = 302;
@@ -405,10 +416,20 @@ void loop()
         break;
     case 294:
 
+        if(Measuring)
+        {
+            if((LUNAmiddle > PasivRange) && Mesuring(LUNAmiddle) != 1) state = 293;        //try change 12 to Range
+            else if((LUNAleft < Range && LUNAmiddle > Range)) state = 261;
+            else if((LUNAright < Range && LUNAmiddle > Range)) state = 232;
+        }
+        
 
-        if((LUNAmiddle > PasivRange) && Mesuring(LUNAmiddle) != 1) state = 293;        //try change 12 to Range
-        else if((LUNAleft < Range && LUNAmiddle > Range)) state = 261;
-        else if((LUNAright < Range && LUNAmiddle > Range)) state = 232;
+        if(!Measuring)
+        {
+            if((LUNAmiddle > PasivRange)) state = 293;        //try change 12 to Range
+            else if((LUNAleft < Range && LUNAmiddle > Range)) state = 261;
+            else if((LUNAright < Range && LUNAmiddle > Range)) state = 232;
+        }
 
         Move.goForward(1.0);
 
