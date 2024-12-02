@@ -6,7 +6,7 @@ int TfL_Succ = 0;
 
 int16_t TfL_Addr1 = 0x11;	//TfL Lib - first address (usualy left sensor)
 int16_t TfL_Addr2 = 0x10;	//TfL Lib - second address (usualy mid sensor)
-int16_t TfL_Addr3 = 0x13;	//TfL Lib - third address (usualy right sensor)
+int16_t TfL_Addr3 = 0x12;	//TfL Lib - third address (usualy right sensor)
 int16_t TfL_AddrDefault = 0x10;
 
 void TfL_Setup() {
@@ -17,7 +17,7 @@ void TfL_Setup() {
 	
 	pinMode(15, OUTPUT);
 	
-    Wire.begin(18,17,400000);
+    Wire.begin(17,18,400000);
 }
 
 int TfL_Get(int TfLAddr) {
