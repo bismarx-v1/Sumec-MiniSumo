@@ -117,7 +117,7 @@ void loop()
 
             Move.stop();
 
-            if((QREleft || QREright) && (LUNAmiddle > Range && LUNAright > Range && LUNAleft > Range))
+            if((QREleft || QREright) && (LUNAmiddle > Range))
             {
                 LINEstate++;
 
