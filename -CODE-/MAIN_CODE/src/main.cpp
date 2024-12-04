@@ -104,28 +104,31 @@ void loop()
     {
         case 0:     //QRE
 
-            if((QREleft || QREright || QREback) && state != 0 && state != 2)
+            if((QREleft || QREright) && state != 0 && state != 2)
             {
                 //UDP_SendUdpToAll("QRE", 1);
                 saveState = state;   //saved last state
                 state = 001;
-                LINEstate++;
+                LINEstate = LINEstate+2;
+
+                Tick_QRE.lastTick = millis();
+                Tick_QRE.tickNumber = 0;
+                Move.stop();
             }
 
             break;
         case 1:     //STOP
-
+            /*
             Move.stop();
 
-            if((QREleft || QREright)/* && (LUNAmiddle > Range)*/)
+            if((QREleft || QREright))
             {
                 LINEstate++;
 
-                Tick_QRE.lastTick = millis();
-                Tick_QRE.tickNumber = 0;
+                
             }
 
-
+            */
             break;
         case 2:     //Go backward
 
@@ -166,13 +169,15 @@ void loop()
     
 
     //===========================Normal process===============================
-
+    /*
     Serial.print(LUNAleft);
     Serial.print(" ");
     Serial.print(LUNAmiddle);
     Serial.print(" ");
     Serial.println(LUNAright);
-    
+    */
+    //Serial.println(state);
+
     switch (state)
     {
     case 000:       // INIT
@@ -334,12 +339,7 @@ void loop()
             //UDP_SendUdpToAll("state_230", 1);
             state = 230;
         }
-
-        if(LUNAmiddle < Range)
-        {
-            //UDP_SendUdpToAll("state_290", 1);
-            state = 290;
-        }
+        
         
         break;
     case 290:                                                                           // Go Forward
