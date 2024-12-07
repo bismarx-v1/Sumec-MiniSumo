@@ -1,7 +1,7 @@
 #ifndef DOHYO_H
 #define DOHYO_H
 
-#define RAW_BUFFER_LENGTH                               100
+#define RAW_BUFFER_LENGTH                               3000
 #define TOLERANCE_FOR_DECODERS_MARK_OR_SPACE_MATCHING   30
 #include <IRremote.hpp>
 #include <UDPStuff.h>
@@ -67,6 +67,8 @@ void DohyoIR::update() {
             IrReceiver.printIRResultShort(&Serial);
         }
 
+        IrReceiver.resume();
+        IrReceiver.printIRResultShort(&Serial);
     }
 }
 

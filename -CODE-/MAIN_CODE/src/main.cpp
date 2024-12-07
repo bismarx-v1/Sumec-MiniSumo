@@ -50,6 +50,7 @@ void setup()
     // hardware settings (Setup's):
     TfL_Setup();
     pinMode(button, INPUT);
+    pinMode(PIN_Start, INPUT);
     Serial.begin(115200);
     UDP_Setup();
 }
@@ -59,9 +60,11 @@ void loop()
  
     LEDRed.update();            //updates the red led
     LEDOrange.update();         //updates the orange led
-    Remote.update();
+    //Remote.update();
 
-    if(Remote.isStopped()) 
+    int START = digitalRead(PIN_Start);
+
+    if(!START) 
     {
         state = 0;
         Move.stop();
@@ -176,7 +179,7 @@ void loop()
     Serial.print(" ");
     Serial.println(LUNAright);
     */
-    //Serial.println(state);
+    Serial.println(START);
 
     switch (state)
     {
@@ -197,6 +200,9 @@ void loop()
             tipe_of_strategy = 231;
         }
 
+
+
+        /*
         if (Remote.hasDohyoID() && !Remote.isStarted())
         {
             if(count%2 == 0) LEDRed.blink(500, 100);
@@ -205,9 +211,11 @@ void loop()
             Tick_Sharp.lastTick = millis();
             Tick_Sharp.tickNumber = 0;
         }
+        */
+
 
         // after start comand, main code will start running
-        if (Remote.isStarted())
+        if (START)
         {
             //UDP_SendUdpToAll("======================", 1);
             state = 002;
