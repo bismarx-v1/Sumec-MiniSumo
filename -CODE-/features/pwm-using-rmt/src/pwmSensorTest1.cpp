@@ -10,7 +10,6 @@
 const uint8_t pwmSensorPinArray_var[pwmSensorPinArrayLen_var] = {5, 16};  // Sensor pins (pcb_v.4 left = 5, right = 16).
 uint8_t measuredDistanceArray_var[pwmSensorPinArrayLen_var];  // Array that stores the measured distances.
 
-pwmSensor pwmSensorObj(pwmSensorPinArray_var, pwmSensorPinArrayLen_var, measuredDistanceArray_var); // Object constructor.
 
 /**
  * @brief Set serial prints' cursor.
@@ -27,6 +26,7 @@ void serialSetCursorPos(uint16_t row, uint16_t col) {
 
 void setup() {
   Serial.begin();
+  pwmSensor(pwmSensorPinArray_var, pwmSensorPinArrayLen_var, measuredDistanceArray_var);
 }
 
 void loop () {
