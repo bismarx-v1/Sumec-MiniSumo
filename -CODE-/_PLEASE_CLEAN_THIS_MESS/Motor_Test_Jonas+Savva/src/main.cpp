@@ -7,8 +7,8 @@ void setup() {
 	DRV8874PWPR_Obj.LedcChannelLeft = 0;	// Add a ledc channel 
 	DRV8874PWPR_Obj.LedcChannelRight = 1;	// Add a ledc channel 
 
-  DRV8874PWPR_Obj.right(255);
-  DRV8874PWPR_Obj.left(255);
+  DRV8874PWPR_Obj.right(-150);
+  DRV8874PWPR_Obj.left(-150);
 }
 
 void loop() {
