@@ -5265,17 +5265,6 @@
 		)
 		(uuid "143335b5-481a-41d1-8a34-a7ede95d1b24")
 	)
-	(text "\nCheck pins with datasheet, ADC, SP, USB etc\nCheck encoder connection"
-		(exclude_from_sim no)
-		(at 71.12 148.59 0)
-		(effects
-			(font
-				(size 2 2)
-				(color 255 0 0 1)
-			)
-		)
-		(uuid "18d1e791-5577-4430-ba87-dffc29085be7")
-	)
 	(text "ESP32-S3-WROOM1-N4"
 		(exclude_from_sim no)
 		(at 21.59 76.2 0)

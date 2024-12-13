@@ -10657,33 +10657,6 @@
 		)
 		(uuid "42be9260-b612-43d3-92c9-3f5a595e6e51")
 	)
-	(text "Miniature Reflective\nObject Sensor - QRE1113\n\nIR reflectance sensor is comprised of two parts - an IR emitting LED and an IR sensitive phototransistor.\n\nAnalog output\nA 100Ω resistor is placed in series with the LED to limit current. A 10kΩ resistor pulls the output pin high, \nbut when the light from the LED is reflected back onto the phototransistor the output will begin to go lower.\n\n2 front sensors will be connected to the \"QRE MiniBoard\", rear sensor will be connected using \nthe same connector."
-		(exclude_from_sim no)
-		(at -93.98 53.975 0)
-		(effects
-			(font
-				(face "Bahnschrift")
-				(size 1.5 1.5)
-				(italic yes)
-				(color 0 0 0 1)
-			)
-			(justify left bottom)
-		)
-		(uuid "53da59c0-d902-43dd-99c3-da27e34d23b9")
-	)
-	(text "Time-of-Flight(ToF)\nlaser-ranging module - TF-Luna\nCOMMUNICATION PROTOCOL: I²C \n\nWhen pin 5 is connected to ground, TF-Luna enters I2C mode, \nthen its pin 2 is used as SDA data and\npin 3 is the SCL clock sending data.\n\nAddresses are saved using Natani's wonderful and magical code."
-		(exclude_from_sim no)
-		(at -40.64 127 0)
-		(effects
-			(font
-				(face "Bahnschrift")
-				(size 1 1)
-				(color 0 0 0 1)
-			)
-			(justify left bottom)
-		)
-		(uuid "540a7f84-f608-4c5b-b784-1f5b00e58301")
-	)
 	(text "OBJECT DETECTING SENSORS"
 		(exclude_from_sim no)
 		(at 26.035 69.85 0)
@@ -10700,7 +10673,7 @@
 	)
 	(text "Digital distance sensor - Sharp GP2Y0D810Z0F\n\nSensor detects objects between 2 cm and 10 cm\nLow when detecting an object, high otherwise.\nFrequency - 390 Hz\nOperating voltage 2.7V - 6.2V"
 		(exclude_from_sim no)
-		(at 292.735 93.98 0)
+		(at 305.435 94.615 0)
 		(effects
 			(font
 				(face "Bahnschrift")
@@ -10798,20 +10771,6 @@
 		)
 		(uuid "d1422ab8-b5be-4b7b-b8d1-79168c059c8c")
 	)
-	(text "Pololu Distance Sensor with Pulse Width Output/Digital Output\n\nSmall lidar based sensor can report presnece/distance of \nobjects up to (TOTAL MAX 200cm-Digital, 300cm - PWM)\n\nDistance is chosen by configurating the jumpers with 0R resistors"
-		(exclude_from_sim no)
-		(at -64.135 87.63 0)
-		(effects
-			(font
-				(face "Bahnschrift")
-				(size 1.5 1.5)
-				(italic yes)
-				(color 0 0 0 1)
-			)
-			(justify left bottom)
-		)
-		(uuid "d2271da4-7559-4357-97a9-4caaba6d9f58")
-	)
 	(text "Time-of-Flight(ToF)\nlaser-ranging module - TF-Luna\nCOMMUNICATION PROTOCOL: I²C \n\nWhen pin 5 is connected to ground, \nTF-Luna enters I2C mode, \nthen its pin 2 is used as SDA data and\npin 3 is the SCL clock sending data."
 		(exclude_from_sim no)
 		(at 29.21 133.35 0)
@@ -10842,7 +10801,7 @@
 	)
 	(text "IR LED Reciver module\n\nOperating voltage: 2.7V to 5.5V\nFrequency: 38kHz \nHigh immunity against ambient light. \nFor more than 1 input use - Hexadecimal code\n\nUsed as a main program starter\n"
 		(exclude_from_sim no)
-		(at 299.72 139.7 0)
+		(at 307.975 132.715 0)
 		(effects
 			(font
 				(face "Bahnschrift")
