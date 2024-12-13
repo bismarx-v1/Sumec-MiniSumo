@@ -286,7 +286,7 @@ void loop()
 
         case 5:                                                                         //Sumec's back side starting on the line
 
-            if(Tick_Start.tickNumber < (back_forward/10))
+            if(Tick_Start.tickNumber < 40)
             {
                 Move.goForward(1.0);
             }
