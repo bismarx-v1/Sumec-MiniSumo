@@ -60,7 +60,7 @@ void loop()
  
     LEDRed.update();            //updates the red led
     LEDOrange.update();         //updates the orange led
-    //Remote.update();
+    Remote.update();
 
     int START = digitalRead(PIN_Start);
 
@@ -179,7 +179,7 @@ void loop()
     Serial.print(" ");
     Serial.println(LUNAright);
     */
-    Serial.println(START);
+    Serial.println(calibration(qreLeft.getRaw()));
 
     switch (state)
     {
@@ -202,7 +202,7 @@ void loop()
 
 
 
-        /*
+        
         if (Remote.hasDohyoID() && !Remote.isStarted())
         {
             if(count%2 == 0) LEDRed.blink(500, 100);
@@ -211,11 +211,11 @@ void loop()
             Tick_Sharp.lastTick = millis();
             Tick_Sharp.tickNumber = 0;
         }
-        */
+        
 
 
         // after start comand, main code will start running
-        if (START)
+        if (Remote.isStarted())
         {
             //UDP_SendUdpToAll("======================", 1);
             state = 002;
@@ -318,9 +318,9 @@ void loop()
 
     case 230:                                                                           // Turn Right 
 
-        Move.turnRight(1.0);
+        Move.turnRight(0.8);
         
-        if(LUNAleft < Range)
+        if(LUNAleft < Range && LUNAmiddle > Range)
         {
             //UDP_SendUdpToAll("state_260", 1);
             state = 260;
@@ -340,9 +340,9 @@ void loop()
         break;
     case 260:                                                                           // Turn Left
 
-        Move.turnLeft(1.0);
+        Move.turnLeft(0.8);
 
-        if(LUNAleft > Range) 
+        if(LUNAleft > Range && (LUNAright < Range || LUNAmiddle < Range)) 
         {   
             //UDP_SendUdpToAll("state_230", 1);
             state = 230;
@@ -354,7 +354,7 @@ void loop()
 
         Move.goForward(1.0);
 
-        if(LUNAmiddle > Range)    
+        if(LUNAmiddle > (Range+5))    
         {
             //UDP_SendUdpToAll("state_230", 1);
             state = 230;
@@ -492,6 +492,10 @@ void loop()
         break;
     case 330:                                                                           // Turn Right diagonaly and Turn Right 
 
+        if(LUNAmiddle < Range) state = 230;
+
+        Move.turnRight(1.0);
+        /*
         if (Tick_Sharp.tickNumber < 20)
         {
             Move.turnRight(0.7, 0.55);
@@ -509,11 +513,15 @@ void loop()
             //UDP_SendUdpToAll("state_230", 1);
             state = 230; // Sharp - End
         }
+        */
 
         break;
     case 360:                                                                           // Turn Left diagonaly and Turn Left 
 
-        if (Tick_Sharp.tickNumber < 20)
+        if(LUNAmiddle < Range) state = 230;
+
+        Move.turnLeft(1.0);
+        /*if (Tick_Sharp.tickNumber < 20)
         {
             Move.turnLeft(0.7, 0.55);
         }
@@ -529,7 +537,7 @@ void loop()
         {
             //UDP_SendUdpToAll("state_230", 1);
             state = 230; // Sharp - End
-        }
+        }*/
         
         break;
     }    

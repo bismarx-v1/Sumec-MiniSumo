@@ -4,11 +4,11 @@
 //============================= PROGRAM VARIABLES ===============================
 
 // Logic variables:
-#define back_on_line 1          //0 = normal state, 1 = Sumec's back starting on line
+#define back_on_line 0          //0 = normal state, 1 = Sumec's back starting on line
 #define Measuring 0   
 
 
-int Range = 40;                 // Length senzor range[cm] for decision, is enybodey there?
+int Range = 30;                 // Length senzor range[cm] for decision, is enybodey there?
 //passive Ranges
 int PasivRange = 12;
 int largeRange = 20;
@@ -129,4 +129,39 @@ bool Mesuring(int distanc)
         risingValues = 0;
         return 0;
     } 
+}
+
+#define many 100
+
+uint16_t Mval[many];
+int Mcount = 0;
+uint16_t minB = 2000;
+uint16_t maxB = 2001;
+
+float calibration(uint16_t volue)
+{
+    Mval[Mcount] = volue;
+    float returnValue;
+    
+    if(Mcount >= 998)
+    {
+        for(int i; i < many; i++)
+        {
+            if(Mval[i] < minB)
+            {
+                minB = Mval[i];
+            } 
+            else if(Mval[i] > maxB)
+            {
+                maxB = Mval[i];
+            } 
+        }
+    }
+
+    returnValue = minB + ((maxB - minB)/2.0);
+
+
+    if(Mcount >= 998) Mcount = 0;
+    else Mcount++;
+    return returnValue;
 }
