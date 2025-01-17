@@ -1,4 +1,6 @@
 #include <Arduino.h>
+#include <EEPROM.h>
+
 
 //Function for saveing data
 
@@ -32,6 +34,7 @@ class Black_box
     public:
         Black_box();
         void DataRecorder(uint16_t parameter, bool R_line, bool L_line, int L_distance, int M_distance, int R_distance);
+        void DataPrint();
 };
 
 
@@ -65,3 +68,32 @@ void Black_box::DataRecorder(uint16_t parameter, bool R_line, bool L_line, int L
         previousParameter = parameter;
     }
 }
+
+
+void Black_box::DataPrint()
+{
+    Serial.println("miliseconds / seconds / minutes / Left_QRE / Right_QRE / Left_Luna / Middle_Luna / Right_Luna");
+    Serial.println();
+
+    for(unsigned long i = 0; i < dataNumber; i++)
+    {
+        Serial.printf("%lu ms  ", datasArray[i].miliseconds);
+        Serial.printf("%lu s  ", datasArray[i].seconds);
+        Serial.printf("%lu min  ", datasArray[i].minutes);
+        Serial.printf("%d y/n  ", datasArray[i].lineL);
+        Serial.printf("%d y/n  ", datasArray[i].lineR);
+        Serial.printf("%d cm  ", datasArray[i].distanceL);
+        Serial.printf("%d cm  ", datasArray[i].distanceM);
+        Serial.printf("%d cm  ", datasArray[i].distanceR);
+        Serial.println();
+    }
+
+    Serial.println("==============================================");
+}
+
+
+
+
+Black_box *RecordArray[4];
+int adressRecords[4];
+int freeRecorders;

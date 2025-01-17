@@ -37,6 +37,9 @@ QRE qreBack('B');
 Sharp sharpLeft('R');
 Sharp sharpRight('L');
 
+// creating black box
+Black_box Record;
+
 //=================== DECLARING OBJECTs ===================
 
 void setup()
@@ -98,7 +101,6 @@ void loop()
     Tick_managing(Tick_Sharp.tickTime, Tick_Sharp.tickNumber, Tick_Sharp.lastTick, &Tick_Sharp.lastTick, &Tick_Sharp.tickNumber);
     Tick_managing(Tick_Start.tickTime, Tick_Start.tickNumber, Tick_Start.lastTick, &Tick_Start.lastTick, &Tick_Start.tickNumber);
     Tick_managing(Tick_free.tickTime, Tick_free.tickNumber, Tick_free.lastTick, &Tick_free.lastTick, &Tick_free.tickNumber);
-
 
 
     //==========================Out of line Process==============================
