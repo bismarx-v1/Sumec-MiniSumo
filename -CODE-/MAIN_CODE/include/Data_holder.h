@@ -1,0 +1,67 @@
+#include <Arduino.h>
+
+//Function for saveing data
+
+struct Data
+{
+    //save state
+    uint16_t value;
+    //time
+    unsigned long miliseconds;
+    unsigned long seconds;
+    unsigned long minutes;
+    //Line senzors
+    bool lineL;
+    bool lineR;
+    //Distance senzors
+    int distanceL;
+    int distanceM;
+    int distanceR;
+};
+
+
+
+
+class Black_box
+{
+    private:
+        uint16_t previousParameter;
+        long dataNumber = 0;
+        Data *datasArray;
+
+    public:
+        Black_box();
+        void DataRecorder(uint16_t parameter, bool R_line, bool L_line, int L_distance, int M_distance, int R_distance);
+};
+
+
+Black_box::Black_box()
+{
+   datasArray = (Data*)malloc(sizeof(Data)*dataNumber); 
+}
+
+
+
+void Black_box::DataRecorder(uint16_t parameter, bool R_line, bool L_line, int L_distance, int M_distance, int R_distance)
+{
+    if(parameter != previousParameter)
+    {
+        unsigned long actual_time = millis();
+
+        dataNumber++;
+        datasArray = (Data*)realloc(0, dataNumber*sizeof(Data));
+
+        datasArray[dataNumber-1].value = parameter;
+        datasArray[dataNumber-1].miliseconds = actual_time%1000;
+        datasArray[dataNumber-1].seconds = (actual_time - datasArray[dataNumber-1].miliseconds)%60000;
+        datasArray[dataNumber-1].minutes = (actual_time -(datasArray[dataNumber-1].miliseconds + datasArray[dataNumber-1].seconds))/60000;
+        datasArray[dataNumber-1].lineL = L_line;
+        datasArray[dataNumber-1].lineR = R_line;
+        datasArray[dataNumber-1].distanceL = L_distance;
+        datasArray[dataNumber-1].distanceM = M_distance;
+        datasArray[dataNumber-1].distanceR = R_distance;
+
+
+        previousParameter = parameter;
+    }
+}

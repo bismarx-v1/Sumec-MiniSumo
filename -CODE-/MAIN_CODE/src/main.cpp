@@ -5,6 +5,7 @@
 *   Last change: 22.10.2024
 */
 
+#include <Data_holder.h>
 #include <Pins.h>
 #include <Motor.h>
 #include <Motion.h>
@@ -153,7 +154,7 @@ void loop()
             LINEstate = 0;
 
             break;
-        case 4:     //Go forward
+        case 4:     //Go forward    -   I dont know, what it doing -> delete this
 
             if(Tick_QRE.tickNumber < 10)
             {

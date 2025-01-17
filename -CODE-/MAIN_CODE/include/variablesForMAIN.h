@@ -79,6 +79,12 @@ TICK Tick_Start;
 TICK Tick_free;
 
 
+
+
+
+
+
+
 // distance changing variables
 #define mesureArrayNumber 10
 #define timeMesuring 30
