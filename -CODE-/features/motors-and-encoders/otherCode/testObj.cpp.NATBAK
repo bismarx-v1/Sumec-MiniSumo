@@ -1,6 +1,139 @@
-#ifndef MOTORS_AND_ENCODERS_H
-#define MOTORS_AND_ENCODERS_H
+/**
+ * TODO:
+ * - add the rotate whole robot func.
+ * FIX:
+ * - replace ENC_STEPS_PER_ROTATION with the array eqivalent.
+ * - replace MV_GET_CONST with MV_CONST_GET.
+ * CHECK:
+ * - //DEBUG
+ * 
+ * M1_A 9
+ * M1_B 10
+ * M2_A 12
+ * M2_B 11
+ */
+
 #include <Arduino.h>
+#include "motorsAndEncders.h"
+
+
+/**
+ * @param MVGC_ARRAY The motor variables array.
+ * @param MVGC_CONSTS The constants block containing the desired constant.
+ * @param MVGC_CONSTS_SEGMENT The constatnt segment offset.
+ * @returns Value of the constant.
+ * @brief Extracts a constant from a motor variables array
+ */
+#define MV_CONST_GET(MVCG_ARRAY, MVCG_CONSTS, MVCG_CONSTS_SEGMENT)                                                             \
+  ((((uint32_t*)MVCG_ARRAY)[MVCG_CONSTS] >> (8 * MVCG_CONSTS_SEGMENT)) & 0xff)
+
+
+/**
+ * @param MVGC_ARRAY The motor variables array.
+ * @param MVGC_CONSTS The constants block containing the desired constant.
+ * @param MVGC_CONSTS_SEGMENT The constatnt segment offset.
+ * @param MVGS_VALUE Value to set to.
+ * @returns Value of the constant.
+ * @brief Extracts a constant from a motor variables array
+ */
+#define MV_CONST_SET(MVCS_ARRAY, MVCS_CONSTS, MVCS_CONSTS_SEGMENT, MVCS_VALUE)                                                 \
+  ((((uint32_t*)MVCS_ARRAY)[MVCS_CONSTS] =                                                                                     \
+    ((MVCS_VALUE & 0xff) << (8 * MVCS_CONSTS_SEGMENT)) |                                                                       \
+    (((uint32_t*)MVCS_ARRAY)[MVCS_CONSTS] & (0xffffffff ^ ((uint32_t)(0xff << (8 * MVCS_CONSTS_SEGMENT)))))));
+
+
+// Settings
+#ifndef PWM_RESOLUTION
+  #define PWM_RESOLUTION 8
+#endif
+#ifndef PWM_FREQUENCY
+  #define PWM_FREQUENCY 8000
+#endif
+#ifndef N_OF_MOTORS
+  #define N_OF_MOTORS 2  // Number of motors.
+#endif
+// Left motor.
+#define PIN_ENCODER_1_A                9    // Encoder pin a.
+#define PIN_ENCODER_1_B                10   // Encoder pin b.
+#define PIN_MOTOR_1_NSLEEP             38   // NSleep.
+#define PIN_MOTOR_1_EN                 42   // Speed, pwm.
+#define PIN_MOTOR_1_PH                 40   // Direction.
+#define MOTOR_1_CHANNEL                1    // Ledc channel.
+#define MOTOR_1_ENC_STEPS_PER_ROTATION 154  // Encoder steps per rotation.
+#define MOTOR_1_WHEEL_CIRCUMFERENCE    100  // Wheel circumference. Wrong bcos i dunno.
+// Right motor.
+#define PIN_ENCODER_2_A                12   // Encoder pin a.
+#define PIN_ENCODER_2_B                11   // Encoder pin b.
+#define PIN_MOTOR_2_NSLEEP             38   // NSleep.
+#define PIN_MOTOR_2_EN                 39   // Speed, pwm.
+#define PIN_MOTOR_2_PH                 41   // Direction.
+#define MOTOR_2_CHANNEL                2    // Ledc channel.
+#define MOTOR_2_ENC_STEPS_PER_ROTATION 154  // Encoder steps per rotation.
+#define MOTOR_2_WHEEL_CIRCUMFERENCE    100  // Wheel circumference. Wrong bcos i dunno.
+
+#define MAX_SPEED ((1 << PWM_RESOLUTION) - 1)  // Max speed of the motor.
+
+
+/**
+ * Pos - Value
+ * 0(0-7)   - PH pin.              --const
+ * 0(8-15)  - Ledc channel.        --const
+ * 0(16-23) - EM pin.              --const
+ * 0(24-31) - NSleep pin.          --const
+ * 1(0-7)   - Encoder A pin.       --const
+ * 1(8-15)  - Encoder B pin.       --const
+ * 1(16-23) - Steps per rotation.  --const
+ * 1(24-31) - Wheel circumference. --const
+ * 2        - Steps var.
+ * 3        - Target steps.
+ * 4        - Error.
+ */
+//
+#define MV_ARRAY_LEN                       5  // Number of 32bit values in the array.
+#define MV_ARRAY_CONSTANTS_LEN             8  // Number of 8bit constants in the array.
+#define MV_CONSTS_M                        0
+#define MV_CONSTS_M_OFFSET_PH              0  // 8bit.
+#define MV_CONSTS_M_OFFSET_LEDC_CHANNEL    1  // 8bit.
+#define MV_CONSTS_M_OFFSET_EN              2  // 8bit.
+#define MV_CONSTS_M_OFFSET_NSLEEP          3  // 8bit.
+#define MV_CONSTS_H                        1
+#define MV_CONSTS_H_ENC_A                  0  // 8bit.
+#define MV_CONSTS_H_ENC_B                  1  // 8bit.
+#define MV_CONSTS_H_ENC_STEPS_PER_ROTATION 2  // 8bit.
+#define MV_CONSTS_H_WHEEL_CIRCUMFERENCE    3  // 8bit.
+#define MV_STEPS                           2  // 32bit.
+#define MV_TARGET_STEPS                    3  // 32bit.
+#define MV_ERR                             4  // 32bit.
+
+
+class motors {
+private:
+  static void encoderInterrupt(void* motorVars);  // Callback on encoder A interrupt.
+public:
+  typedef uint8_t motorErr;
+  const motorErr  noErr = 0;  // Not set.
+  const motorErr  oki   = 1;  // Success.
+
+  typedef uint8_t motorN;
+  const motorN    LEFT  = 0;
+  const motorN    RIGHT = 1;
+
+  typedef uint8_t motorDir;
+  const motorDir  CW  = 0;
+  const motorDir  CCW = 1;
+
+
+  uint32_t mvArrayAll[N_OF_MOTORS][MV_ARRAY_LEN] = {0};  // I should have just used a struct. Array storing all motor variables for all motors.
+
+  motors();
+  motors(uint8_t** customMotorPinsArrays);
+  void setup();
+  void rotateSet(void* motorVars, motorErr* err, uint8_t speed, motorDir dir);
+  void rotateSteps(void* motorVars, motorErr* err, uint8_t speed, motorDir dir, uint32_t stepsTarget);
+  void rotateDegrees(void* motorVars, motorErr* err, uint8_t speed, motorDir dir, uint32_t degreesTarget);
+  void rotateDistance(void* motorVars, motorErr* err, uint8_t speed, motorDir dir, uint16_t distanceTarget);
+};
+
 
 /**
  * @brief Motors constructor. Defines pins and stuff.
@@ -34,7 +167,8 @@ MV_CONST_SET(mvArrayAll[RIGHT], MV_CONSTS_H, MV_CONSTS_H_WHEEL_CIRCUMFERENCE, MO
 motors::motors(uint8_t** customMotorPinsArray) {
   for(uint8_t motorI = 0; motorI < N_OF_MOTORS; motorI++) {  // Go through all motor sets.
     for(uint8_t mvArrayI = 0; mvArrayI < MV_ARRAY_CONSTANTS_LEN; mvArrayI++) {
-      MV_CONST_SET(mvArrayAll[motorI], (mvArrayI - mvArrayI % 4) / 4, mvArrayI % 4, customMotorPinsArray[motorI][mvArrayI])
+      MV_CONST_SET(mvArrayAll[motorI], (mvArrayI - mvArrayI % 4) / 4, mvArrayI % 4,
+                   customMotorPinsArray[motorI][mvArrayI])
     }
   }
 }
@@ -52,7 +186,8 @@ void motors::setup() {
     pinMode(MV_CONST_GET(mvArrayAll[motorI], MV_CONSTS_M, MV_CONSTS_M_OFFSET_PH), OUTPUT);
     pinMode(MV_CONST_GET(mvArrayAll[motorI], MV_CONSTS_M, MV_CONSTS_M_OFFSET_NSLEEP), OUTPUT);
     // Ledc.
-    ledcSetup(MV_CONST_GET(mvArrayAll[motorI], MV_CONSTS_M, MV_CONSTS_M_OFFSET_LEDC_CHANNEL), PWM_FREQUENCY, PWM_RESOLUTION);
+    ledcSetup(MV_CONST_GET(mvArrayAll[motorI], MV_CONSTS_M, MV_CONSTS_M_OFFSET_LEDC_CHANNEL), PWM_FREQUENCY,
+              PWM_RESOLUTION);
     ledcAttachPin(MV_CONST_GET(mvArrayAll[motorI], MV_CONSTS_M, MV_CONSTS_M_OFFSET_EN),
                   MV_CONST_GET(mvArrayAll[motorI], MV_CONSTS_M, MV_CONSTS_M_OFFSET_LEDC_CHANNEL));
     // Encoder interrupt.
@@ -170,4 +305,63 @@ void motors::rotateDistance(void* motorVars, motorErr* err, uint8_t speed, motor
 }
 
 
+// ================================ /DEFINITIONS ================================
+// ================================     CODE     ================================
+
+
+#if 0  // Use custom pins?
+// Array of arrays for each motor, defined as {PH_pin, ledc_channel, EN_pin, nsleep_pin, encoder_a_pin, encoder_b_pin, encoder_steps, wheel_circumference}.
+uint8_t customPins[N_OF_MOTORS][MV_ARRAY_CONSTANTS_LEN] = {{40, 1, 42, 38, 9, 10, 154, 100}, {41, 2, 39, 38, 12, 11, 154, 100}};
+// Constructor with custom values.
+motors motorsObj = motors((uint8_t**)customPins);
+#else
+motors motorsObj = motors();
 #endif
+
+
+void setup() {
+  Serial.begin(115200);
+  delay(2000);
+
+  motorsObj.setup();
+
+  uint8_t mErr;  // Error var. Stores an output of the motor functions.
+
+  mErr = 0;  // Reset error var.
+  // Set the left motor to rotate counterclockwise at 20% speed.
+  motorsObj.rotateSet(motorsObj.mvArrayAll[motorsObj.LEFT], &mErr, 0.2 * MAX_SPEED, motorsObj.CCW);
+  delay(1000);
+  motorsObj.rotateSet(motorsObj.mvArrayAll[motorsObj.LEFT], &mErr, 0, motorsObj.CW);
+  delay(100);
+  
+
+  mErr = 0;  // Reset error var.
+  // Set the left motor to rotate by 154 steps counterclockwise at 20% speed.
+  motorsObj.rotateSteps(motorsObj.mvArrayAll[motorsObj.LEFT], &mErr, 0.2 * MAX_SPEED, motorsObj.CCW, 154);
+  while(mErr == motorsObj.noErr) {  // Wait for the motor to finnish or fail.
+    delay(10);
+  }
+  delay(100);
+
+
+  mErr = 0;  // Reset error var.
+  // Set the left motor to rotate by 360 degrees counterclockwise at 20% speed.
+  motorsObj.rotateDegrees(motorsObj.mvArrayAll[motorsObj.LEFT], &mErr, 0.2 * MAX_SPEED, motorsObj.CCW, 360);
+  while(mErr == motorsObj.noErr) {  // Wait for the motor to finnish or fail.
+    delay(10);
+  }
+  delay(100);
+
+  mErr = 0;  // Reset error var.
+  // Set the left motor to travel 100mm counterclockwise at 20% speed.
+  motorsObj.rotateDistance(motorsObj.mvArrayAll[motorsObj.LEFT], &mErr, 0.2 * MAX_SPEED, motorsObj.CCW, 100);
+  while(mErr == motorsObj.noErr) {  // Wait for the motor to finnish or fail.
+    delay(10);
+  }
+  delay(100);
+}
+
+
+void loop() {
+  delay(1000);
+}

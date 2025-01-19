@@ -1,8 +1,9 @@
 /**
  * TODO:
+ * - add the rotate whole robot func.
  * FIX:
  * CHECK:
- *  - //DEBUG
+ * - //DEBUG
  * 
  * M1_A 9
  * M1_B 10
@@ -40,6 +41,9 @@
 #define PIN_MOTOR_2_PH_DIR   41  // Direction.
 #define MOTOR_2_CHANNEL      2   // Ledc channel.
 
+#define ENC_STEPS_PER_ROTATION 154  // Encoder steps per rotation.
+#define MOTOR_WHEEL_CIRCUMFERENCE 100 // Wheel circumference. Wrong bcos i dunno.
+
 
 #define N_OF_MOTORS                   2
 #define MV_CONSTS                     0
@@ -65,8 +69,6 @@ uint32_t motorValuesAllMotors[N_OF_MOTORS][3] = {
 {PIN_MOTOR_2_PH_DIR << 8 * MV_CONSTS_OFFSET_PH | MOTOR_2_CHANNEL << 8 * MV_CONSTS_OFFSET_LEDC_CHANNEL |
  PIN_MOTOR_2_EN_SPEED << 8 * MV_CONSTS_OFFSET_EN | PIN_MOTOR_2_NSLEEP << 8 * MV_CONSTS_OFFSET_NSLEEP,
  0, 0}};
-
-#define ENC_STEPS_PER_ROTATION 154  // Encoder steps per rotation.
 
 typedef uint8_t motorN;
 const motorN    LEFT  = 0;
@@ -110,7 +112,7 @@ IRAM_ATTR void encoderInterrupt(void* motorVars) {
  * @brief Starts rotating the motor in a set direction with a set speed.
  * @note Direction is measured from the direction looking at the motor from the axel side.
  */
-void motorSet(void* motorVars, motorDir dir, uint8_t speed) {
+void motorRotateSet(void* motorVars, motorDir dir, uint8_t speed) {
   if(dir != CW && dir != CCW) {  // Wrong direction. Return.
     log_e("WRONG!");
     return;
@@ -125,13 +127,15 @@ void motorSet(void* motorVars, motorDir dir, uint8_t speed) {
 
 /**
  * @param motorVars Motor data array.
- * @param stepsTarget Steps the motor should do.
- * @param dir direction (CW|CCW) - (clockwise|counterclockwise).
+ * @param err A return val (0|1) - (Empty|Move done).
  * @param speed Speed to rotate at (0-255).
+ * @param dir direction (CW|CCW) - (clockwise|counterclockwise).
+ * @param stepsTarget Steps the motor should do.
  * @brief Rotates the motor by set steps in a set direction and with set speed.
  * @note Direction is measured from the direction looking at the motor from the axel side.
  */
-void motorRotateSteps(void* motorVars, uint32_t stepsTarget, motorDir dir, uint8_t speed) {
+void motorRotateSteps(void* motorVars, uint8_t* err, uint8_t speed, motorDir dir, uint32_t stepsTarget) {
+  err[0] = 0; // Reset err.
   if(dir != CW && dir != CCW) {  // Wrong direction. Return.
     log_e("WRONG!");
     return;
@@ -146,20 +150,44 @@ void motorRotateSteps(void* motorVars, uint32_t stepsTarget, motorDir dir, uint8
 
 /**
  * @param motorVars Motor data array.
- * @param degreesTarget Degrees the motor should do.
- * @param dir direction (CW|CCW) - (clockwise|counterclockwise).
+ * @param err A return val (0|1) - (Empty|Move done).
  * @param speed Speed to rotate at (0-255).
+ * @param dir direction (CW|CCW) - (clockwise|counterclockwise).
+ * @param degreesTarget Degrees the motor should rotate.
+ * @param stepsPerRotation Number of steps per rotation of the encoder.
  * @brief Rotates the motor by set degrees in a set direction and with set speed.
  * @note Direction is measured from the direction looking at the motor from the axel side.
  */
-void motorRotateDegrees(void* motorVars, uint32_t degreesTarget, motorDir dir, uint8_t speed, uint16_t stepsPerRotation) {
+void motorRotateDegrees(void* motorVars, uint8_t* err, uint8_t speed, motorDir dir, uint32_t degreesTarget, uint16_t stepsPerRotation) {
+  err[0] = 0; // Reset err. Not needed here.
   if(dir != CW && dir != CCW) {  // Wrong direction. Return.
     log_e("WRONG!");
     return;
   }
 
-  Serial.println(degreesTarget / 360.0 * stepsPerRotation);  //DEBUG
-  motorRotateSteps(motorVars, degreesTarget / 360.0 * stepsPerRotation, dir, speed);
+  motorRotateSteps(motorVars, err, speed, dir, degreesTarget / 360.0 * stepsPerRotation);
+}
+
+
+/**
+ * @param motorVars Motor data array.
+ * @param err A return val (0|1) - (Empty|Move done).
+ * @param speed Speed to rotate at (0-255).
+ * @param dir direction (CW|CCW) - (clockwise|counterclockwise).
+ * @param distanceTarget Distance the motor should travel in mm.
+ * @param stepsPerRotation Number of steps per rotation of the encoder.
+ * @param wheelCirc Circumference of the wheel in mm.
+ * @brief Makes the motor travel a set distance in a set direction and with set speed.
+ * @note Direction is measured from the direction looking at the motor from the axel side.
+ */
+void motorRotateDistance(void* motorVars, uint8_t* err, uint8_t speed, motorDir dir, uint16_t distanceTarget, uint16_t stepsPerRotation, uint16_t wheelCirc) {
+  err[0] = 0; // Reset err. Not needed here.
+  if(dir != CW && dir != CCW) {  // Wrong direction. Return.
+    log_e("WRONG!");
+    return;
+  }
+
+  motorRotateSteps(motorVars, err, speed, dir, (distanceTarget / wheelCirc) / 360.0 * stepsPerRotation);
 }
 
 
@@ -200,7 +228,11 @@ void setup() {
   //motorRotateSteps(motorValuesAllMotors[LEFT], ENC_STEPS_PER_ROTATION, CCW, 0.2 * MAX_SPEED);  // Encoder has 154 steps.
   //motorRotateSteps(motorValuesAllMotors[RIGHT], ENC_STEPS_PER_ROTATION, CW, 0.2*MAX_SPEED);  // Too low speed causes the motor to just beep (~0.1).
 
-  motorRotateDegrees(motorValuesAllMotors[LEFT], 90, CCW, 0.2 * MAX_SPEED, ENC_STEPS_PER_ROTATION);
+  uint8_t mErr = 0;
+  //motorRotateSet(motorValuesAllMotors[LEFT], CCW, 0.2 * MAX_SPEED); // Set the left motor to rotate counterclockwise at 20% speed.
+  //motorRotateSteps(motorValuesAllMotors[LEFT], &mErr, 0.2 * MAX_SPEED, CCW, 154);  // Set the left motor to rotate by 154 steps counterclockwise at 20% speed.
+  //motorRotateDegrees(motorValuesAllMotors[LEFT], &mErr, 0.2 * MAX_SPEED, CCW, 360, ENC_STEPS_PER_ROTATION); // Set the left motor to rotate by 360 degrees counterclockwise at 20% speed.
+  motorRotateDistance(motorValuesAllMotors[LEFT], &mErr, 0.2 * MAX_SPEED, CCW, 100, ENC_STEPS_PER_ROTATION, MOTOR_WHEEL_CIRCUMFERENCE); // Set the left motor to travel 100mm counterclockwise at 20% speed.
 }
 
 
