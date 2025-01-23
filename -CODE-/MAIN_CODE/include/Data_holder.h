@@ -33,6 +33,7 @@ class Black_box
 
     public:
         Black_box();
+        ~Black_box();
         void DataRecorder(uint16_t parameter, bool R_line, bool L_line, int L_distance, int M_distance, int R_distance);
         void DataPrint();
 };
@@ -40,10 +41,15 @@ class Black_box
 
 Black_box::Black_box()
 {
-   datasArray = (Data*)malloc(sizeof(Data)*dataNumber); 
+    datasArray = (Data*)malloc(sizeof(Data)*dataNumber); 
+    //EEPROM.begin(4096);
 }
 
-
+Black_box::~Black_box()
+{
+    // must be edited for all
+   free(datasArray); 
+}
 
 void Black_box::DataRecorder(uint16_t parameter, bool R_line, bool L_line, int L_distance, int M_distance, int R_distance)
 {
@@ -94,6 +100,21 @@ void Black_box::DataPrint()
 
 
 
-Black_box *RecordArray[4];
-int adressRecords[4];
-int freeRecorders;
+
+int adressRecords[4] {4, 5, 6, 7};
+int freeRecorders = 7;
+
+
+void recordManaging(Black_box new_Record)
+{
+
+
+    EEPROM.put(freeRecorders, new_Record);
+
+}
+
+
+/*void saveRecord(Black_box saving_Record)
+{
+
+}*/
