@@ -28,10 +28,10 @@ class Black_box
 {
     private:
         uint16_t previousParameter;
-        long dataNumber = 0;
         Data *datasArray;
 
     public:
+        unsigned long dataNumber = 0;
         Black_box();
         ~Black_box();
         void DataRecorder(uint16_t parameter, bool R_line, bool L_line, int L_distance, int M_distance, int R_distance);

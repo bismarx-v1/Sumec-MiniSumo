@@ -102,8 +102,11 @@ void loop()
     Tick_managing(Tick_Start.tickTime, Tick_Start.tickNumber, Tick_Start.lastTick, &Tick_Start.lastTick, &Tick_Start.tickNumber);
     Tick_managing(Tick_free.tickTime, Tick_free.tickNumber, Tick_free.lastTick, &Tick_free.lastTick, &Tick_free.tickNumber);
 
-    //if(enableSaveing) EEPROM.put(freeRecorders, Record);
-
+    if(enableSaveing) 
+    {
+        Record.DataRecorder(state, QREright, QREleft, LUNAleft, LUNAmiddle, LUNAright);
+        EEPROM.put(freeRecorders, Record);
+    }
     //==========================Out of line Process==============================
 
 
@@ -184,6 +187,7 @@ void loop()
     Serial.println(LUNAright);
     */
     //Serial.println(calibration(qreLeft.getRaw()));
+    //Serial.println(Record.dataNumber);
 
     switch (state)
     {
@@ -191,17 +195,24 @@ void loop()
 
         if(bootonOld < digitalRead(button)) count++;
 
-        if(count%2 == 0)
+        if(count%3 == 0)
         {
             LEDRed.blink(1000);
             LEDOrange.setOff();
             tipe_of_strategy = 230;
         }
-        else if(count%2 == 1)
+        else if(count%3 == 1)
         {
             LEDOrange.blink(1000);
             LEDRed.setOff();
             tipe_of_strategy = 231;
+        }
+        else if(count%3 == 2)
+        {
+            LEDRed.setOn();
+            LEDOrange.setOn();
+
+            tipe_of_strategy = 003;
         }
 
         
@@ -316,12 +327,19 @@ void loop()
         }      
         break;
 
+    case 003:
+
+        
+        EEPROM.get(freeRecorders, Record).DataPrint();
+        state = 001;
+        break;
+
     /*=============END OF START FUNCTION=============*/
 
     case 230:                                                                           // Turn Right 
 
         Move.turnRight(0.8);
-        //enableSaveing = 1;
+        enableSaveing = 1;
         
         if(LUNAleft < Range && LUNAmiddle > Range)
         {
@@ -388,8 +406,7 @@ void loop()
     /*=============Begin of pasive strategy=============*/
     case 231:
 
-        //UDP_SendUdpToAll("tocimDoprava", 1);
-        //enableSaveing = 1;
+        enableSaveing = 1;
 
         if(LUNAmiddle < PasivRange)
         {
