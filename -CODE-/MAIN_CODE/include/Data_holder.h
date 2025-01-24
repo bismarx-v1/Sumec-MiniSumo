@@ -103,6 +103,7 @@ void Black_box::DataPrint()
 
 int adressRecords[4] {4, 5, 6, 7};
 int freeRecorders = 7;
+bool enableSaveing = 0;
 
 
 void recordManaging(Black_box new_Record)
