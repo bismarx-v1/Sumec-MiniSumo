@@ -102,7 +102,7 @@ void loop()
     Tick_managing(Tick_Start.tickTime, Tick_Start.tickNumber, Tick_Start.lastTick, &Tick_Start.lastTick, &Tick_Start.tickNumber);
     Tick_managing(Tick_free.tickTime, Tick_free.tickNumber, Tick_free.lastTick, &Tick_free.lastTick, &Tick_free.tickNumber);
 
-    if(enableSaveing) EEPROM.put(freeRecorders, Record);
+    //if(enableSaveing) EEPROM.put(freeRecorders, Record);
 
     //==========================Out of line Process==============================
 
@@ -183,7 +183,7 @@ void loop()
     Serial.print(" ");
     Serial.println(LUNAright);
     */
-    Serial.println(calibration(qreLeft.getRaw()));
+    //Serial.println(calibration(qreLeft.getRaw()));
 
     switch (state)
     {
@@ -191,21 +191,17 @@ void loop()
 
         if(bootonOld < digitalRead(button)) count++;
 
-        if(count%3 == 0)
+        if(count%2 == 0)
         {
             LEDRed.blink(1000);
             LEDOrange.setOff();
             tipe_of_strategy = 230;
         }
-        else if(count%3 == 1)
+        else if(count%2 == 1)
         {
             LEDOrange.blink(1000);
             LEDRed.setOff();
             tipe_of_strategy = 231;
-        }
-        else
-        {
-            EEPROM.get(freeRecorders,);
         }
 
         
@@ -325,7 +321,7 @@ void loop()
     case 230:                                                                           // Turn Right 
 
         Move.turnRight(0.8);
-        enableSaveing = 1;
+        //enableSaveing = 1;
         
         if(LUNAleft < Range && LUNAmiddle > Range)
         {
@@ -336,6 +332,9 @@ void loop()
         {
             //UDP_SendUdpToAll("state_290", 1);
             state = 290;
+
+            Tick_free.lastTick = millis();
+            Tick_free.tickNumber = 0;
         }
 
         if(SHARPleft || SHARPright)
@@ -359,12 +358,30 @@ void loop()
         break;
     case 290:                                                                           // Go Forward
 
-        Move.goForward(1.0);
-
         if(LUNAmiddle > (Range+5))    
         {
             //UDP_SendUdpToAll("state_230", 1);
             state = 230;
+        }
+
+        if(Tick_free.tickNumber >= 5000)
+        {
+            if(Tick_free.tickNumber < 5200)
+            {
+                Move.turnRight(1.0);
+            }
+            else if(Tick_free.tickNumber < 5400)
+            {
+                Move.turnLeft(1.0);
+            }
+            else
+            {
+                Tick_free.tickNumber = 5000;
+            }
+        }
+        else
+        {
+            Move.goForward(1.0);
         }
 
         break;
@@ -372,7 +389,7 @@ void loop()
     case 231:
 
         //UDP_SendUdpToAll("tocimDoprava", 1);
-        enableSaveing = 1;
+        //enableSaveing = 1;
 
         if(LUNAmiddle < PasivRange)
         {
