@@ -38,7 +38,7 @@ Sharp sharpLeft('R');
 Sharp sharpRight('L');
 
 // creating black box
-Black_box Record;
+//Black_box Record;
 
 //=================== DECLARING OBJECTs ===================
 
@@ -57,6 +57,9 @@ void setup()
     pinMode(PIN_Start, INPUT);
     Serial.begin(115200);
     UDP_Setup();
+
+    qreLeft.Threshold = 3000;
+    qreRight.Threshold = 3000;
 }
 
 void loop()
@@ -66,13 +69,15 @@ void loop()
     LEDOrange.update();         //updates the orange led
     Remote.update();
 
-    int START = digitalRead(PIN_Start);
-
-    if(!START) 
+    if(!digitalRead(button) && !START) 
     {
         state = 0;
         Move.stop();
         LEDRed.blink(1000);
+    }
+    else
+    {
+        START = 1;
     }
 
 
@@ -102,11 +107,11 @@ void loop()
     Tick_managing(Tick_Start.tickTime, Tick_Start.tickNumber, Tick_Start.lastTick, &Tick_Start.lastTick, &Tick_Start.tickNumber);
     Tick_managing(Tick_free.tickTime, Tick_free.tickNumber, Tick_free.lastTick, &Tick_free.lastTick, &Tick_free.tickNumber);
 
-    if(enableSaveing) 
+    /*if(enableSaveing) 
     {
         Record.DataRecorder(state, QREright, QREleft, LUNAleft, LUNAmiddle, LUNAright);
         EEPROM.put(freeRecorders, Record);
-    }
+    }*/
     //==========================Out of line Process==============================
 
 
@@ -186,34 +191,33 @@ void loop()
     Serial.print(" ");
     Serial.println(LUNAright);
     */
-    //Serial.println(calibration(qreLeft.getRaw()));
-    //Serial.println(Record.dataNumber);
+
 
     switch (state)
     {
     case 000:       // INIT
-
+        /*
         if(bootonOld < digitalRead(button)) count++;
 
-        if(count%3 == 0)
+        if(count%2 == 0)
         {
             LEDRed.blink(1000);
             LEDOrange.setOff();
             tipe_of_strategy = 230;
         }
-        else if(count%3 == 1)
+        else if(count%2 == 1)
         {
             LEDOrange.blink(1000);
             LEDRed.setOff();
             tipe_of_strategy = 231;
         }
-        else if(count%3 == 2)
+        /*else if(count%3 == 2)
         {
             LEDRed.setOn();
             LEDOrange.setOn();
 
             tipe_of_strategy = 003;
-        }
+        }*/
 
         
         if (Remote.hasDohyoID() && !Remote.isStarted())
@@ -228,9 +232,10 @@ void loop()
 
 
         // after start comand, main code will start running
-        if (Remote.isStarted())
+        if (/*Remote.isStarted()*/START)
         {
             //UDP_SendUdpToAll("======================", 1);
+            delay(5000);
             state = 002;
             Tick_Start.tickNumber = 0;
             LINEstate = 0;
@@ -327,19 +332,19 @@ void loop()
         }      
         break;
 
-    case 003:
+    /*case 003:
 
         
         EEPROM.get(freeRecorders, Record).DataPrint();
         state = 001;
-        break;
+        break;*/
 
     /*=============END OF START FUNCTION=============*/
 
     case 230:                                                                           // Turn Right 
 
         Move.turnRight(0.8);
-        enableSaveing = 1;
+        //enableSaveing = 1;
         
         if(LUNAleft < Range && LUNAmiddle > Range)
         {
@@ -382,19 +387,19 @@ void loop()
             state = 230;
         }
 
-        if(Tick_free.tickNumber >= 5000)
+        if(Tick_free.tickNumber >= 2000)
         {
-            if(Tick_free.tickNumber < 5200)
+            if(Tick_free.tickNumber < 2200)
             {
                 Move.turnRight(1.0);
             }
-            else if(Tick_free.tickNumber < 5400)
+            else if(Tick_free.tickNumber < 2400)
             {
                 Move.turnLeft(1.0);
             }
             else
             {
-                Tick_free.tickNumber = 5000;
+                Tick_free.tickNumber = 2000;
             }
         }
         else
@@ -406,7 +411,7 @@ void loop()
     /*=============Begin of pasive strategy=============*/
     case 231:
 
-        enableSaveing = 1;
+        //enableSaveing = 1;
 
         if(LUNAmiddle < PasivRange)
         {

@@ -25,6 +25,7 @@ bool isStarted = 0;             // variable for starting with button
 bool sharpON_OFF = 1;           // rafinering parameter for side sonzors, Is side sonzor on or off
 bool lunaON_OFF = 1;            // rafinering parameter for Length senzor, Is Length senzor on or off
 bool QRE_left_started = 0;
+int START = 0; 
 
 
 // sensors:
@@ -136,6 +137,8 @@ bool Mesuring(int distanc)
         return 0;
     } 
 }
+
+
 
 #define many 100
 
