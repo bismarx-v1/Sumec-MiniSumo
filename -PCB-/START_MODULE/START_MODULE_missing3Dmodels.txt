@@ -1,0 +1,10 @@
+### Missing 3D models - created on 2025-02-02 19:13
+### Printed by checking_3D_models plugin
+Board file: C:\Users\MenMe\GitHub\Sumec-MiniSumo\-PCB-\START_MODULE\START_MODULE.kicad_pcb
+3D missing models written to:
+C:\Users\MenMe\GitHub\Sumec-MiniSumo\-PCB-\START_MODULE\START_MODULE_missing3Dmodels.txt
+-------
+('U1', 'C:\\Users\\MenMe\\KiCad\\share\\kicad\\3dmodels\\Package_SO.3dshapes\\SOIC-8W_5.3x5.3mm_P1.27mm.wrl')
+-------
+NUM of 3D missing models:1
+checked extensions ['.stp', '.step', '.stpZ']

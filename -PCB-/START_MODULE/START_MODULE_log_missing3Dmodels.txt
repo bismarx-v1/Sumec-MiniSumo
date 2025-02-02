@@ -1,0 +1,1 @@
+[('U1', 'C:\\Users\\MenMe\\KiCad\\share\\kicad\\3dmodels\\Package_SO.3dshapes\\SOIC-8W_5.3x5.3mm_P1.27mm.wrl')]
