@@ -29,7 +29,7 @@ We would like to thank our school SPŠ na Proseku, our teachers, our principle, 
 If you have any questions, suggestions, or issues regarding this project, please feel free to contact us: 
 
 Email - savvapopov1804@gmail.com
-LinkedIn - www.linkedin.com/in/popovsavvaprosek/
+LinkedIn] - www.linkedin.com/in/savva-popov
 
 And follow us on the social media! 
 Instagram - @sumec_minisumo_bot
