@@ -8,7 +8,7 @@
 #define Measuring 0   
 
 
-int Range = 30;                 // Length senzor range[cm] for decision, is enybodey there?
+int Range = 50;                 // Length senzor range[cm] for decision, is enybodey there?
 //passive Ranges
 int PasivRange = 12;
 int largeRange = 20;

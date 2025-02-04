@@ -184,14 +184,14 @@ void loop()
     
 
     //===========================Normal process===============================
-    /*
+    
     Serial.print(LUNAleft);
     Serial.print(" ");
     Serial.print(LUNAmiddle);
     Serial.print(" ");
-    Serial.println(LUNAright);
-    */
-
+    Serial.print(LUNAright);
+    Serial.print("    ");
+    Serial.println(state);
 
     switch (state)
     {
@@ -539,7 +539,7 @@ void loop()
         break;
     case 330:                                                                           // Turn Right diagonaly and Turn Right 
 
-        if(LUNAmiddle < Range) state = 230;
+        if(LUNAmiddle < Range || LUNAleft < Range || LUNAright < Range) state = 230;
 
         Move.turnRight(1.0);
         /*
@@ -565,7 +565,7 @@ void loop()
         break;
     case 360:                                                                           // Turn Left diagonaly and Turn Left 
 
-        if(LUNAmiddle < Range) state = 230;
+        if(LUNAmiddle < Range || LUNAleft < Range || LUNAright < Range) state = 230;
 
         Move.turnLeft(1.0);
         /*if (Tick_Sharp.tickNumber < 20)
