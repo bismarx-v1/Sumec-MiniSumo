@@ -9,10 +9,7 @@
 
 
 int Range = 50;                 // Length senzor range[cm] for decision, is enybodey there?
-//passive Ranges
-int PasivRange = 12;
-int largeRange = 20;
-int middleRange = 15; 
+
 
 int tipe_of_strategy = 230;
 uint16_t state = 0;             // variable who decides, what is in progress
@@ -85,58 +82,6 @@ TICK Tick_free;
 
 
 
-
-// distance changing variables
-#define mesureArrayNumber 10
-#define timeMesuring 30
-#define dividingValue 2
-#define deviation 1 //[cm]
-
-long measuredValues[mesureArrayNumber];
-unsigned long disMe = millis();
-int Amesure = 1;
-int risingValues;
-
-
-bool Mesuring(int distanc)
-{
-
-
-    if(((millis() - disMe) > timeMesuring) && (Amesure % (mesureArrayNumber + 1)) <= mesureArrayNumber)
-    {
-        //Serial.print(millis());
-        //Serial.print(" ");
-
-        measuredValues[(Amesure % mesureArrayNumber)-1] = distanc;
-        Amesure++;
-      	disMe = millis();
-      	
-    }
-    
-    if((Amesure % (mesureArrayNumber + 1)) > (mesureArrayNumber - 1))             //must be edited
-    {
-        for(int i = 0; i < (mesureArrayNumber - 2); i++)
-        {
-            if((measuredValues[i] + deviation) < (measuredValues[i+1])) risingValues++;
-            //Serial.print(measuredValues[i]);
-            //Serial.print(" ");
-        }
-      	Serial.print((Amesure % (mesureArrayNumber + 1)));
-        Serial.print(" ");
-
-        if(risingValues > mesureArrayNumber) risingValues = 0;
-        
-        Amesure = 0;
-    }
-
-    
-    if((mesureArrayNumber/dividingValue) <= risingValues) return 1;
-    else
-    {
-        risingValues = 0;
-        return 0;
-    } 
-}
 
 
 

@@ -69,17 +69,13 @@ void loop()
     LEDOrange.update();         //updates the orange led
     Remote.update();
 
-    if(!digitalRead(button) && !START) 
+
+    if(Remote.isStopped()) 
     {
         state = 0;
         Move.stop();
-        LEDRed.blink(1000);
+        LEDRed.blink(500);
     }
-    else
-    {
-        START = 1;
-    }
-
 
     //=========================Writeing value from sensors to variables=============
 
@@ -107,11 +103,7 @@ void loop()
     Tick_managing(Tick_Start.tickTime, Tick_Start.tickNumber, Tick_Start.lastTick, &Tick_Start.lastTick, &Tick_Start.tickNumber);
     Tick_managing(Tick_free.tickTime, Tick_free.tickNumber, Tick_free.lastTick, &Tick_free.lastTick, &Tick_free.tickNumber);
 
-    /*if(enableSaveing) 
-    {
-        Record.DataRecorder(state, QREright, QREleft, LUNAleft, LUNAmiddle, LUNAright);
-        EEPROM.put(freeRecorders, Record);
-    }*/
+
     //==========================Out of line Process==============================
 
 
@@ -209,15 +201,9 @@ void loop()
         {
             LEDOrange.blink(1000);
             LEDRed.setOff();
-            tipe_of_strategy = 231;
+            tipe_of_strategy = 230;
         }
-        /*else if(count%3 == 2)
-        {
-            LEDRed.setOn();
-            LEDOrange.setOn();
-
-            tipe_of_strategy = 003;
-        }*/
+        */
 
         
         if (Remote.hasDohyoID() && !Remote.isStarted())
@@ -227,15 +213,15 @@ void loop()
 
             Tick_Sharp.lastTick = millis();
             Tick_Sharp.tickNumber = 0;
+        } else
+        {
+            LEDRed.blink(500);
         }
-        
-
 
         // after start comand, main code will start running
-        if (/*Remote.isStarted()*/START)
+        if (Remote.isStarted())
         {
             //UDP_SendUdpToAll("======================", 1);
-            delay(5000);
             state = 002;
             Tick_Start.tickNumber = 0;
             LINEstate = 0;
@@ -332,12 +318,6 @@ void loop()
         }      
         break;
 
-    /*case 003:
-
-        
-        EEPROM.get(freeRecorders, Record).DataPrint();
-        state = 001;
-        break;*/
 
     /*=============END OF START FUNCTION=============*/
 
@@ -362,8 +342,19 @@ void loop()
 
         if(SHARPleft || SHARPright)
         {
-            //UDP_SendUdpToAll("state_300", 1);
-            state = 300;
+            Tick_Sharp.lastTick = millis();
+            Tick_Sharp.tickNumber = 0;
+
+            if(SHARPleft)
+            {
+                //UDP_SendUdpToAll("state_330", 1);
+                state = 330;
+            }
+            else if(SHARPright)
+            {
+                //UDP_SendUdpToAll("state_360", 1);
+                state = 360;
+            }
         }
 
         break;
@@ -408,159 +399,16 @@ void loop()
         }
 
         break;
-    /*=============Begin of pasive strategy=============*/
-    case 231:
-
-        //enableSaveing = 1;
-
-        if(LUNAmiddle < PasivRange)
-        {
-            //UDP_SendUdpToAll("292", 1);
-            state = 292;
-            Move.stop();
-            Tick_free.tickNumber = 0;
-        }
-        /*else if(LUNAmiddle < largeRange)
-        {
-            //UDP_SendUdpToAll("293", 1);
-            state = 293;
-            Move.stop();
-        }*/
-        else
-        {
-            //UDP_SendUdpToAll("turning", 1);
-            Move.turnRight(0.8);
-        }
-
-        break;
-    case 292:
 
 
-        if(Tick_free.tickNumber < 100)
-        {
-            //UDP_SendUdpToAll("jeduDozadu", 1);
-            Move.stop();
-        }
-        else if((LUNAmiddle > middleRange && LUNAright > middleRange && LUNAleft > middleRange)/* || Tick_free.tickNumber > 400*/) state = 293;
-        else Move.goBackward(1.0);
+    /*=============Sharps=============*/
 
-        break;
-    case 293:
-
-        //Serial.println(Mesuring(1));
-        if(Measuring)
-        {
-            if(LUNAmiddle < PasivRange || Mesuring(LUNAmiddle) == 1) state = 294;        //try change 12 to Range
-            else if((LUNAleft < largeRange && LUNAmiddle > largeRange)) state = 261;
-            else if((LUNAright < largeRange && LUNAmiddle > largeRange)) state = 232;
-        }
-
-
-        if(!Measuring)
-        {
-            if(LUNAmiddle < PasivRange) state = 294;        //try change 12 to Range
-            else if((LUNAleft < largeRange && LUNAmiddle > largeRange)) state = 261;
-            else if((LUNAright < largeRange && LUNAmiddle > largeRange)) state = 232;
-        }
-
-        if(SHARPleft) state = 301;
-        if(SHARPright) state = 302;
-
-        Move.stop();
-
-        break;
-    case 294:
-
-        if(Measuring)
-        {
-            if((LUNAmiddle > PasivRange) && Mesuring(LUNAmiddle) != 1) state = 293;        //try change 12 to Range
-            else if((LUNAleft < Range && LUNAmiddle > Range)) state = 261;
-            else if((LUNAright < Range && LUNAmiddle > Range)) state = 232;
-        }
-        
-
-        if(!Measuring)
-        {
-            if((LUNAmiddle > PasivRange)) state = 293;        //try change 12 to Range
-            else if((LUNAleft < Range && LUNAmiddle > Range)) state = 261;
-            else if((LUNAright < Range && LUNAmiddle > Range)) state = 232;
-        }
-
-        Move.goForward(1.0);
-
-        break;
-    case 261:
-
-        if(LUNAmiddle > 6) state = 293;
-        else if(LUNAmiddle < 6) state = 294;
-
-        Move.turnLeft(1.0);
-
-        break;
-    case 301:                       //left
-
-        if(LUNAmiddle < Range) state = 294;
-
-        Move.turnRight(1.0);
-
-        break;
-    case 302:                       //right
-
-        if(LUNAmiddle < Range) state = 294;
-
-        Move.turnLeft(1.0);
-
-        break;
-
-    case 232:
-
-        if(LUNAmiddle > 6) state = 293;
-        else if(LUNAmiddle < 6) state = 294;
-
-        Move.turnRight(1.0);
-
-        break;
-    /*=============End of pasive strategy=============*/
-    case 300:                                                                           // Sharp 
-
-        Tick_Sharp.lastTick = millis();
-        Tick_Sharp.tickNumber = 0;
-
-        if(SHARPleft)
-        {
-            //UDP_SendUdpToAll("state_330", 1);
-            state = 330;
-        }
-        else if(SHARPright)
-        {
-            //UDP_SendUdpToAll("state_360", 1);
-            state = 360;
-        }
-        break;
     case 330:                                                                           // Turn Right diagonaly and Turn Right 
 
         if(LUNAmiddle < Range || LUNAleft < Range || LUNAright < Range) state = 230;
 
         Move.turnRight(1.0);
-        /*
-        if (Tick_Sharp.tickNumber < 20)
-        {
-            Move.turnRight(0.7, 0.55);
-        }
-        else if (Tick_Sharp.tickNumber < 50)
-        {
-            Move.turnRight(0.7, 0.55);
-        }
-        else if (LUNAmiddle > Range && LUNAright > Range && LUNAleft > Range)
-        {
-            Move.turnRight(1.0);
-        }
-        else
-        {
-            //UDP_SendUdpToAll("state_230", 1);
-            state = 230; // Sharp - End
-        }
-        */
+        
 
         break;
     case 360:                                                                           // Turn Left diagonaly and Turn Left 
@@ -568,23 +416,7 @@ void loop()
         if(LUNAmiddle < Range || LUNAleft < Range || LUNAright < Range) state = 230;
 
         Move.turnLeft(1.0);
-        /*if (Tick_Sharp.tickNumber < 20)
-        {
-            Move.turnLeft(0.7, 0.55);
-        }
-        else if (Tick_Sharp.tickNumber < 50)
-        {
-            Move.turnLeft(0.7, 0.55);
-        }
-        else if (LUNAmiddle > Range && LUNAright > Range && LUNAleft > Range)
-        {
-            Move.turnLeft(1.0);
-        }
-        else
-        {
-            //UDP_SendUdpToAll("state_230", 1);
-            state = 230; // Sharp - End
-        }*/
+        
         
         break;
     }    
