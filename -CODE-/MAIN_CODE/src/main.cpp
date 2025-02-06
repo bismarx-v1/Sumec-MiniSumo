@@ -72,7 +72,7 @@ void loop()
 
     if(Remote.isStopped()) 
     {
-        state = 0;
+        if(state != 0 && state != 3)state = 0;
         Move.stop();
         LEDRed.blink(500);
     }
@@ -111,7 +111,7 @@ void loop()
     {
         case 0:     //QRE
 
-            if((QREleft || QREright) && state != 0 && state != 2)
+            if((QREleft || QREright) && state != 0 && state != 2 && state != 3)
             {
                 //UDP_SendUdpToAll("QRE", 1);
                 saveState = state;   //saved last state
@@ -176,7 +176,7 @@ void loop()
     
 
     //===========================Normal process===============================
-    
+/*  
     Serial.print(LUNAleft);
     Serial.print(" ");
     Serial.print(LUNAmiddle);
@@ -184,32 +184,18 @@ void loop()
     Serial.print(LUNAright);
     Serial.print("    ");
     Serial.println(state);
+*/
 
     switch (state)
     {
     case 000:       // INIT
-        /*
-        if(bootonOld < digitalRead(button)) count++;
-
-        if(count%2 == 0)
-        {
-            LEDRed.blink(1000);
-            LEDOrange.setOff();
-            tipe_of_strategy = 230;
-        }
-        else if(count%2 == 1)
-        {
-            LEDOrange.blink(1000);
-            LEDRed.setOff();
-            tipe_of_strategy = 230;
-        }
-        */
+        
+        if(bootonOld < digitalRead(button)) state = 003;
 
         
         if (Remote.hasDohyoID() && !Remote.isStarted())
         {
-            if(count%2 == 0) LEDRed.blink(500, 100);
-            else LEDOrange.blink(500, 100);
+            LEDRed.blink(500, 100);
 
             Tick_Sharp.lastTick = millis();
             Tick_Sharp.tickNumber = 0;
@@ -318,6 +304,38 @@ void loop()
         }      
         break;
 
+    case 003:
+ 
+        LINEstate = 0;
+        LEDRed.setOff();
+
+        if(digitalRead(button) && count == 0)
+        {
+            B = 0;
+            A = analogRead(10);
+            Serial.print("A: ");
+            Serial.println(A);
+            count = 1;
+        }
+        else if(count == 1 && !digitalRead(button))
+        {
+            count = 2;
+        }
+        else if(digitalRead(button) && count ==2)
+        {
+            B = analogRead(10);
+            Serial.print("B: ");
+            Serial.println(B);
+            count = 3;
+        }
+        else if(count == 3 && !digitalRead(button))
+        {
+            Serial.println(calibration(A, B));
+            
+            count = 0;
+            state = 000;
+        }
+        break;
 
     /*=============END OF START FUNCTION=============*/
 

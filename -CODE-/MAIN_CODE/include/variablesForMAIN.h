@@ -8,7 +8,7 @@
 #define Measuring 0   
 
 
-int Range = 50;                 // Length senzor range[cm] for decision, is enybodey there?
+int Range = 30;                 // Length senzor range[cm] for decision, is enybodey there?
 
 
 int tipe_of_strategy = 230;
@@ -43,7 +43,7 @@ bool SHARPright;
 
 // Start time
 bool bootonOld;
-int count;
+
 
 //============================= PROGRAM VARIABLES ===============================
 
@@ -80,42 +80,18 @@ TICK Tick_free;
 
 
 
+// calibrator
 
+float A = 0;
+float B = 0;
+int count;
 
-
-
-
-#define many 100
-
-uint16_t Mval[many];
-int Mcount = 0;
-uint16_t minB = 2000;
-uint16_t maxB = 2001;
-
-float calibration(uint16_t volue)
+float calibration(float volueA, float volueB)
 {
-    Mval[Mcount] = volue;
-    float returnValue;
-    
-    if(Mcount >= 998)
-    {
-        for(int i; i < many; i++)
-        {
-            if(Mval[i] < minB)
-            {
-                minB = Mval[i];
-            } 
-            else if(Mval[i] > maxB)
-            {
-                maxB = Mval[i];
-            } 
-        }
-    }
+  float sum;
 
-    returnValue = minB + ((maxB - minB)/2.0);
+  if(volueA > volueB) sum = volueB;
+  else sum = volueA;
 
-
-    if(Mcount >= 998) Mcount = 0;
-    else Mcount++;
-    return returnValue;
+  return abs((volueA - volueB)/2)+sum;
 }
