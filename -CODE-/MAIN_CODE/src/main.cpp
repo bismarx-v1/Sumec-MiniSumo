@@ -390,29 +390,38 @@ void loop()
         break;
     case 290:                                                                           // Go Forward
 
-        if(LUNAmiddle > (Range+5))    
-        {
-            //UDP_SendUdpToAll("state_230", 1);
-            state = 230;
-        }
 
         if(Tick_free.tickNumber >= 2000)
         {
-            if(Tick_free.tickNumber < 2200)
+            if(Tick_free.tickNumber < 2025)
             {
                 Move.turnRight(1.0);
             }
-            else if(Tick_free.tickNumber < 2400)
+            else if(Tick_free.tickNumber < 2050)
             {
                 Move.turnLeft(1.0);
             }
             else
             {
+
+                if(LUNAmiddle > (Range+5))    
+                {
+                    //UDP_SendUdpToAll("state_230", 1);
+                    state = 230;
+                }
+
                 Tick_free.tickNumber = 2000;
             }
         }
         else
         {
+
+            if(LUNAmiddle > (Range+5))    
+            {
+                //UDP_SendUdpToAll("state_230", 1);
+                state = 230;
+            }
+
             Move.goForward(1.0);
         }
 
