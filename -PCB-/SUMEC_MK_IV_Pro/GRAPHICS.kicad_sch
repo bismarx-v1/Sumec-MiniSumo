@@ -1,0 +1,800 @@
+(kicad_sch
+	(version 20231120)
+	(generator "eeschema")
+	(generator_version "8.0")
+	(uuid "a35bb982-e162-4589-8fbb-31c9c17b2833")
+	(paper "A4")
+	(title_block
+		(title "SUMEC_MK_IV")
+		(date "2024-08-05")
+		(rev "v3.0.9")
+		(company "SPS NA PROSEKU")
+		(comment 1 "Made in Prague, Czech Republic")
+		(comment 2 "CONTACT: Savva Popov, savva.popov.sp@gmail.com, +420 605 570 366")
+		(comment 3 "Made by bismarx-v1")
+		(comment 4 "SUMEC MK IV aka SMD-V3 board")
+	)
+	(lib_symbols
+		(symbol "Connector:TestPoint"
+			(pin_numbers hide)
+			(pin_names
+				(offset 0.762) hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "TP"
+				(at 0 6.858 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "TestPoint"
+				(at 0 5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 5.08 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 5.08 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "test point"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "test point tp"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "Pin* Test*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "TestPoint_0_1"
+				(circle
+					(center 0 3.302)
+					(radius 0.762)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "TestPoint_1_1"
+				(pin passive line
+					(at 0 0 90)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+	)
+	(junction
+		(at 144.78 105.41)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "0ab6904e-fdcd-413e-b354-af07aa330368")
+	)
+	(junction
+		(at 152.4 105.41)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "0c0b503a-076d-4921-a79d-7032febd3f80")
+	)
+	(junction
+		(at 156.21 105.41)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "4149fff2-8725-418f-91b1-f42fe46d8fa8")
+	)
+	(junction
+		(at 148.59 105.41)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "815121c7-1497-41b0-b457-30d1dd0e72dd")
+	)
+	(junction
+		(at 140.97 105.41)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "fd39c762-57bb-4eb9-b236-1ddeba7030d7")
+	)
+	(no_connect
+		(at 140.97 109.22)
+		(uuid "e4f0d2b0-9c06-40e7-9d6b-63a95e596a95")
+	)
+	(wire
+		(pts
+			(xy 140.97 105.41) (xy 140.97 109.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "02474a74-429b-431c-9bd0-81a037ae77b7")
+	)
+	(wire
+		(pts
+			(xy 156.21 105.41) (xy 160.02 105.41)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0ea54568-b7e3-4c5d-ab6f-ed3688c2a83d")
+	)
+	(wire
+		(pts
+			(xy 148.59 102.87) (xy 148.59 105.41)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2b429f66-bc6a-4e46-bfa3-24a812a1818f")
+	)
+	(wire
+		(pts
+			(xy 152.4 102.87) (xy 152.4 105.41)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "659b81d7-1736-4b44-9026-8bcfad3acbbb")
+	)
+	(wire
+		(pts
+			(xy 140.97 105.41) (xy 144.78 105.41)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "703410e7-9497-450c-a9de-2e26a0c84365")
+	)
+	(wire
+		(pts
+			(xy 148.59 105.41) (xy 152.4 105.41)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "88aad9ea-d5c9-47a4-ae0b-311ac7021e15")
+	)
+	(wire
+		(pts
+			(xy 144.78 105.41) (xy 148.59 105.41)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9092cea8-5fc7-4fec-a9af-c0ca7c639cb8")
+	)
+	(wire
+		(pts
+			(xy 160.02 102.87) (xy 160.02 105.41)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "af43843f-3ef2-4ecf-b1ea-08e6ec5077ea")
+	)
+	(wire
+		(pts
+			(xy 156.21 105.41) (xy 156.21 102.87)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b2958557-8590-429c-9a2a-829bf92b558c")
+	)
+	(wire
+		(pts
+			(xy 140.97 102.87) (xy 140.97 105.41)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cbbef181-9f5f-4665-8d00-d8666ac44749")
+	)
+	(wire
+		(pts
+			(xy 152.4 105.41) (xy 156.21 105.41)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e1c4bb10-6777-4620-b8d7-80d70c5d8159")
+	)
+	(wire
+		(pts
+			(xy 144.78 105.41) (xy 144.78 102.87)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ea3c20b8-b5ff-4356-aef2-e12efda0647d")
+	)
+	(rectangle
+		(start 95.25 76.835)
+		(end 203.2 122.555)
+		(stroke
+			(width 0)
+			(type dash)
+			(color 0 0 0 1)
+		)
+		(fill
+			(type none)
+		)
+		(uuid f51fe4ec-fb9d-4e85-ba34-a7f83f33082f)
+	)
+	(text "ULTRAKILL V1"
+		(exclude_from_sim no)
+		(at 149.225 97.79 90)
+		(effects
+			(font
+				(face "Bahnschrift")
+				(size 1 1)
+				(italic yes)
+				(color 0 0 0 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "2a1edca1-7f68-4dd0-a0d1-d250e11e99c3")
+	)
+	(text "SPS LOGO"
+		(exclude_from_sim no)
+		(at 141.605 97.79 90)
+		(effects
+			(font
+				(face "Bahnschrift")
+				(size 1 1)
+				(italic yes)
+				(color 0 0 0 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "58da8d66-cb19-4b76-8a6a-fd504c904a58")
+	)
+	(text "ART"
+		(exclude_from_sim no)
+		(at 95.25 76.835 0)
+		(effects
+			(font
+				(face "Bahnschrift")
+				(size 5 5)
+				(bold yes)
+				(color 0 0 0 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "8b0181fa-7afd-4c6d-a687-8d4cb3ad04f4")
+	)
+	(text "SUMEC LOGO"
+		(exclude_from_sim no)
+		(at 145.415 97.79 90)
+		(effects
+			(font
+				(face "Bahnschrift")
+				(size 1 1)
+				(italic yes)
+				(color 0 0 0 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "9f2e6779-865b-47b0-9c5d-ed86ad9c1746")
+	)
+	(text "FREEFALL PANEL"
+		(exclude_from_sim no)
+		(at 156.845 97.79 90)
+		(effects
+			(font
+				(face "Bahnschrift")
+				(size 1 1)
+				(italic yes)
+				(color 0 0 0 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "a641c702-7cea-4400-b732-ff2b45388d03")
+	)
+	(text "SUMEC LINKTREE"
+		(exclude_from_sim no)
+		(at 153.035 97.79 90)
+		(effects
+			(font
+				(face "Bahnschrift")
+				(size 1 1)
+				(italic yes)
+				(color 0 0 0 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "dfa08a95-75bb-4bc7-ad16-03f0538be1a1")
+	)
+	(text "ME FR"
+		(exclude_from_sim no)
+		(at 160.655 97.79 90)
+		(effects
+			(font
+				(face "Bahnschrift")
+				(size 1 1)
+				(italic yes)
+				(color 0 0 0 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "e454df29-da45-4b7a-ba2f-8000e0725014")
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 152.4 102.87 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "34a138bf-7fcb-4f9e-88bb-87626c36bf53")
+		(property "Reference" "TP9"
+			(at 154.94 98.2979 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 154.94 100.8379 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "sumec_graphic:SUMEC_QR_IMG"
+			(at 157.48 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 157.48 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 152.4 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "5b649e87-7f01-44c5-8b46-0478e7a862dc")
+		)
+		(instances
+			(project "SUMEC_MK_IV_Pro"
+				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/ebfdffb9-be38-48cc-bdc4-81d227bad184"
+					(reference "TP9")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 156.21 102.87 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "9870dd72-ee50-4263-9dfc-ed44d6b588e1")
+		(property "Reference" "TP10"
+			(at 158.75 98.2979 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 158.75 100.8379 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "sumec_graphic:FREEFALL2_IMG"
+			(at 161.29 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 161.29 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 156.21 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "d9608ed6-7430-47d5-b900-af8889c1577a")
+		)
+		(instances
+			(project "SUMEC_MK_IV_Pro"
+				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/ebfdffb9-be38-48cc-bdc4-81d227bad184"
+					(reference "TP10")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 160.02 102.87 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "9a5cfb36-3e10-4bd8-8a2d-57c16ac1b12e")
+		(property "Reference" "TP11"
+			(at 162.56 98.2979 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 162.56 100.8379 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "sumec_graphic:ME_FR_IMG"
+			(at 165.1 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 165.1 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 160.02 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "1360775b-e9e4-4dcd-9a53-1f637344b24a")
+		)
+		(instances
+			(project "SUMEC_MK_IV_Pro"
+				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/ebfdffb9-be38-48cc-bdc4-81d227bad184"
+					(reference "TP11")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 144.78 102.87 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d54c717e-0f76-4f71-a5a2-85162cb5a09a")
+		(property "Reference" "TP7"
+			(at 147.32 98.2979 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 147.32 100.8379 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "sumec_graphic:SUMEC_LOGO_IMG"
+			(at 149.86 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 149.86 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 144.78 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "c3fc2cb5-a922-449e-8f73-585960cbf236")
+		)
+		(instances
+			(project "SUMEC_MK_IV_Pro"
+				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/ebfdffb9-be38-48cc-bdc4-81d227bad184"
+					(reference "TP7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 140.97 102.87 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "ec507462-a2b7-4be0-8de5-59fec7670766")
+		(property "Reference" "TP6"
+			(at 143.51 98.2979 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 143.51 100.8379 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "sumec_graphic:SPS_LOGO_IMG"
+			(at 146.05 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 146.05 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 140.97 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "ce80cc7f-515a-49b0-bfe1-41047f517926")
+		)
+		(instances
+			(project "SUMEC_MK_IV_Pro"
+				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/ebfdffb9-be38-48cc-bdc4-81d227bad184"
+					(reference "TP6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 148.59 102.87 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "f033cf5e-32bf-4db4-873c-9e6bb86c732e")
+		(property "Reference" "TP8"
+			(at 151.13 98.2979 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 151.13 100.8379 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "sumec_graphic:ULTRAKILL_IMG"
+			(at 153.67 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 153.67 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 148.59 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "b7309a43-bc43-4f33-8d38-9b1ef9592527")
+		)
+		(instances
+			(project "SUMEC_MK_IV_Pro"
+				(path "/900bd7ac-cdf9-4a2f-8b1f-2c21e3760046/ebfdffb9-be38-48cc-bdc4-81d227bad184"
+					(reference "TP8")
+					(unit 1)
+				)
+			)
+		)
+	)
+)
