@@ -72,7 +72,7 @@ void loop()
 
     if(Remote.isStopped()) 
     {
-        if(state != 0 && state != 3)state = 0;
+        state = 0;
         Move.stop();
         LEDRed.blink(500);
     }
