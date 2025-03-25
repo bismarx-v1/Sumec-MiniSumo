@@ -25,7 +25,7 @@ void serialSetCursorPos(uint16_t row, uint16_t col) {
 }
 
 void setup() {
-  Serial.begin();
+  Serial.begin(115200);
   pwmSensor(pwmSensorPinArray_var, pwmSensorPinArrayLen_var, measuredDistanceArray_var);
 }
 
@@ -37,5 +37,5 @@ void loop () {
   Serial.println(measuredDistanceArray_var[1]);
   Serial.print("Millis: ");
   Serial.println(millis());
-  
+  delay(100);
 }
