@@ -1,3 +1,6 @@
+# THIS IS REPO IS OLD, FOR NEWEST REALESES VISIT: [Updated repo](https://github.com/bismarx-v1/Sumec-Minisumo-main)
+
+
 # MiniSumo "SUMEC" Robot Project
 
 ## Description
